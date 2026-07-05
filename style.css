@@ -1,0 +1,230 @@
+/* ===== 過去問アプリ ===== */
+:root {
+  --accent: #5b4fb5;        /* 過去問=紫系（他アプリと区別） */
+  --accent-dark: #423a8c;
+  --bg: #f4f4fa;
+  --card-bg: #ffffff;
+  --text: #262b3f;
+  --muted: #7a7f99;
+  --line: #dfe0ec;
+  --sansu: #2f6fbf;
+  --shakai: #c77b2f;
+  --rika: #2f9e5f;
+  --kokugo: #b5455f;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Segoe UI", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---- ヘッダー ---- */
+#app-header {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 12px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+}
+#app-title {
+  font-size: 19px; margin: 0; font-weight: 700; flex: 1;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.back-btn {
+  background: rgba(255,255,255,.18); color: #fff; border: none;
+  font-size: 15px; padding: 7px 12px; border-radius: 8px; cursor: pointer;
+}
+.back-btn:active { background: rgba(255,255,255,.32); }
+.portal-nav { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.portal-link {
+  color: #fff; font-size: 12px; font-weight: 600; text-decoration: none; white-space: nowrap;
+  background: rgba(255,255,255,.18); border-radius: 999px; padding: 6px 12px;
+}
+.portal-link:active { background: rgba(255,255,255,.32); }
+
+/* ---- 画面共通 ---- */
+.screen { padding: 16px; max-width: 1100px; margin: 0 auto; }
+.loading { color: var(--muted); text-align: center; padding: 40px 0; }
+.screen-title { font-size: 18px; margin: 2px 0 14px; }
+
+/* ---- 学校一覧 ---- */
+.school-grid {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+.school-card {
+  background: var(--card-bg); border: 1px solid var(--line); border-radius: 12px;
+  padding: 18px; cursor: pointer; transition: transform .08s, box-shadow .12s;
+  display: flex; align-items: center; gap: 14px;
+  border-left: 5px solid var(--accent);
+}
+.school-card:active { transform: scale(.98); }
+.school-card:hover { box-shadow: 0 3px 10px rgba(0,0,0,.08); }
+.school-icon { font-size: 28px; }
+.school-name { font-size: 16px; font-weight: 700; }
+.school-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+
+/* ---- 学校トップ（年度・回一覧） ---- */
+.year-group { margin-bottom: 22px; }
+.year-head {
+  font-size: 16px; font-weight: 700; color: var(--accent-dark);
+  border-left: 5px solid var(--accent); padding-left: 10px; margin: 6px 0 12px;
+}
+.exam-grid {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.exam-card {
+  background: var(--card-bg); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; cursor: pointer; transition: transform .08s, box-shadow .12s;
+}
+.exam-card:active { transform: scale(.98); }
+.exam-card:hover { box-shadow: 0 3px 10px rgba(0,0,0,.08); }
+.exam-name { font-size: 15px; font-weight: 700; }
+.exam-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.exam-card.info-card { border-left: 5px solid #888fb0; display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+
+/* ---- 教科タブ ---- */
+.subject-tabs { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.subject-tab {
+  background: #fff; border: 1.5px solid var(--line); color: var(--text);
+  font-size: 15px; padding: 9px 20px; border-radius: 9px; cursor: pointer; font-weight: 700;
+}
+.subject-tab.on-sansu  { background: var(--sansu);  color: #fff; border-color: var(--sansu); }
+.subject-tab.on-shakai { background: var(--shakai); color: #fff; border-color: var(--shakai); }
+.subject-tab.on-rika   { background: var(--rika);   color: #fff; border-color: var(--rika); }
+.subject-tab.on-kokugo { background: var(--kokugo); color: #fff; border-color: var(--kokugo); }
+
+/* ---- 詳細：ツールバー ---- */
+.detail-bar {
+  position: sticky; top: 56px; z-index: 15; background: var(--bg);
+  padding: 6px 0 10px; border-bottom: 1px solid var(--line); margin-bottom: 12px;
+}
+.tabs { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.tab {
+  background: #fff; border: 1px solid var(--line); color: var(--text);
+  font-size: 15px; padding: 9px 18px; border-radius: 9px; cursor: pointer; font-weight: 600;
+}
+.tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.print-group { margin-left: auto; display: flex; gap: 8px; }
+.print-btn {
+  background: #fff; border: 1px solid var(--line);
+  font-size: 13px; padding: 9px 12px; border-radius: 9px; cursor: pointer;
+}
+.print-btn:active { background: #eef0f8; }
+.view-note { color: var(--muted); font-size: 13px; margin: 0 0 10px; }
+
+/* ---- ページ画像 ---- */
+.page-stack { display: flex; flex-direction: column; gap: 18px; align-items: center; }
+.page-item {
+  width: 100%; max-width: 880px; background: #fff;
+  border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.page-item img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+.page-label {
+  font-size: 12px; color: var(--muted); padding: 6px 10px;
+  border-top: 1px solid var(--line); background: #fafbfd;
+}
+.section-head {
+  width: 100%; max-width: 880px; font-size: 15px; font-weight: 700;
+  color: var(--accent-dark); border-left: 5px solid var(--accent);
+  padding-left: 10px; margin: 8px 0 0;
+}
+
+/* ---- ○×表（小問×3回＋合計点） ---- */
+.grading {
+  width: 100%; max-width: 880px; background: #fff;
+  border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.grading-head {
+  font-size: 15px; font-weight: 700; color: var(--accent-dark);
+  display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none;
+}
+.grading-head .toggle-mark { margin-left: auto; font-size: 13px; color: var(--muted); }
+.grade-table-wrap { overflow-x: auto; margin-top: 10px; }
+table.grade-table { border-collapse: collapse; width: 100%; }
+.grade-table th, .grade-table td {
+  border: 1px solid var(--line); padding: 6px 8px; text-align: center; font-size: 14px;
+}
+.grade-table th { background: #f2f3fa; font-weight: 700; white-space: nowrap; }
+.grade-table td.q-label { font-weight: 600; white-space: nowrap; text-align: left; background: #fafbfd; }
+.mark-btn {
+  width: 40px; height: 34px; font-size: 17px; font-weight: 700;
+  border: 1.5px solid var(--line); background: #fff; color: #c3c8da;
+  border-radius: 7px; cursor: pointer;
+}
+.mark-btn.o { background: #e8f1ff; border-color: #2f6fbf; color: #2f6fbf; }
+.mark-btn.x { background: #ffecec; border-color: #e05656; color: #e05656; }
+.mark-btn:active { transform: scale(.94); }
+.grade-count { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.score-input {
+  width: 64px; font-size: 15px; font-weight: 700; text-align: center;
+  padding: 6px 4px; border: 1.5px solid var(--line); border-radius: 7px;
+}
+.score-input:focus { outline: none; border-color: var(--accent); }
+
+/* ---- ライトボックス ---- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100; background: rgba(20,28,40,.94);
+  display: flex; flex-direction: column;
+}
+.lightbox-close {
+  align-self: flex-end; margin: 12px; background: rgba(255,255,255,.16);
+  color: #fff; border: none; font-size: 16px; padding: 10px 16px; border-radius: 9px; cursor: pointer;
+}
+.lightbox-scroll { flex: 1; overflow: auto; -webkit-overflow-scrolling: touch; text-align: center; }
+.lightbox-scroll img { max-width: none; }
+
+/* ---- 印刷 ---- */
+#print-container { display: none; }
+@media screen { #print-container { display: none !important; } }
+
+@media (max-width: 480px) {
+  #app-title { font-size: 16px; }
+  .portal-link { font-size: 11px; }
+  .detail-bar { top: 50px; }
+  .tab { padding: 9px 14px; }
+}
+
+@media print {
+  #app-header, #home, #school, #info, #detail, #lightbox { display: none !important; }
+  /* ★物理mm + block（vh/flex禁止）: iOS Safariで1画像=1枚を安定させる */
+  #print-container { display: block !important; }
+  .print-page {
+    display: block;
+    width: 100%;
+    page-break-after: always;
+    break-after: page;
+    font-size: 0; /* inline-block間の隙間除去 */
+  }
+  .print-page:last-child { page-break-after: auto; break-after: auto; }
+  /* B4横 2面付け（B5×2）。左右の並び順はDOM順で制御する */
+  .print-page.duo { text-align: center; }
+  .print-page.duo.align-left  { text-align: left; }
+  .print-page.duo.align-right { text-align: right; }
+  .print-page.duo img {
+    display: inline-block;
+    max-width: 174mm;   /* B4横348mm÷2 */
+    max-height: 241mm;  /* 257-余白16 */
+    width: auto; height: auto;
+    vertical-align: top;
+  }
+  /* B4縦 1面（解答用紙のB5→B4拡大） */
+  .print-page.solo { text-align: center; }
+  .print-page.solo img {
+    display: inline-block;
+    width: 241mm;       /* B4縦の印刷可能幅いっぱいに拡大 */
+    max-height: 348mm;
+    height: auto;
+    vertical-align: top;
+  }
+  /* @page size はJSが #print-page-style に動的注入する（B4 landscape / B4 portrait） */
+}
