@@ -13,11 +13,12 @@ const state = {
 const $ = (sel) => document.querySelector(sel);
 
 // 画像repoのベースURL（ローカル開発時は隣のディレクトリを参照）
+const IMG_V = 2; // 画像を全差し替えしたら+1（キャッシュ破棄用）
 function imgBase(school) {
   const local = ['localhost', '127.0.0.1'].includes(location.hostname);
   return local ? school.imgBaseLocal : school.imgBaseProd;
 }
-function imgUrl(p) { return `${imgBase(state.school)}/${p}`; }
+function imgUrl(p) { return `${imgBase(state.school)}/${p}?v=${IMG_V}`; }
 
 // ---- 初期化 ----
 async function init() {
