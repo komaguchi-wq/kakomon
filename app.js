@@ -214,9 +214,15 @@ function gradeKey() {
 function loadGrades() {
   try {
     const g = JSON.parse(localStorage.getItem(gradeKey()));
-    if (g && Array.isArray(g.attempts) && g.attempts.length === 3) return g;
+    if (g && Array.isArray(g.attempts) && g.attempts.length === 3) {
+      g.attempts.forEach((a) => { if (a.date === undefined) a.date = ''; });
+      return g;
+    }
   } catch (e) {}
-  return { attempts: [{ marks: {}, score: '' }, { marks: {}, score: '' }, { marks: {}, score: '' }] };
+  return { attempts: [
+    { marks: {}, score: '', date: '' },
+    { marks: {}, score: '', date: '' },
+    { marks: {}, score: '', date: '' }] };
 }
 function saveGrades(g) {
   try { localStorage.setItem(gradeKey(), JSON.stringify(g)); } catch (e) {}
@@ -240,6 +246,10 @@ function renderGrading() {
     }
     rows += '</tr>';
   }
+  let dateCells = '';
+  for (let t = 0; t < 3; t++) {
+    dateCells += `<td><input class="date-input" type="date" data-t="${t}" value="${g.attempts[t].date || ''}"></td>`;
+  }
   let scoreCells = '';
   for (let t = 0; t < 3; t++) {
     scoreCells += `<td><input class="score-input" type="number" inputmode="numeric" data-t="${t}" value="${g.attempts[t].score}" placeholder="点"></td>`;
@@ -256,6 +266,7 @@ function renderGrading() {
         <table class="grade-table">
           <thead><tr><th>問題</th><th>1回目</th><th>2回目</th><th>3回目</th></tr></thead>
           <tbody>
+            <tr><td class="q-label">取り組んだ日</td>${dateCells}</tr>
             ${rows}
             <tr><td class="q-label">合計点${state.subject.maxScore ? `（/${state.subject.maxScore}）` : ''}</td>${scoreCells}</tr>
           </tbody>
@@ -296,6 +307,13 @@ function bindGrading() {
     inp.addEventListener('change', () => {
       const g = loadGrades();
       g.attempts[inp.dataset.t].score = inp.value;
+      saveGrades(g);
+    });
+  });
+  document.querySelectorAll('.date-input').forEach((inp) => {
+    inp.addEventListener('change', () => {
+      const g = loadGrades();
+      g.attempts[inp.dataset.t].date = inp.value;
       saveGrades(g);
     });
   });

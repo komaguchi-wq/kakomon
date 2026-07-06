@@ -170,6 +170,13 @@ table.grade-table { border-collapse: collapse; width: 100%; }
   padding: 6px 4px; border: 1.5px solid var(--line); border-radius: 7px;
 }
 .score-input:focus { outline: none; border-color: var(--accent); }
+.date-input {
+  font-size: 13px; padding: 5px 4px; text-align: center;
+  border: 1.5px solid var(--line); border-radius: 7px;
+  font-family: inherit; color: var(--text); background: #fff;
+  max-width: 130px;
+}
+.date-input:focus { outline: none; border-color: var(--accent); }
 
 /* ---- ライトボックス ---- */
 .lightbox {
