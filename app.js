@@ -93,6 +93,8 @@ async function openSchool(id) {
   }
   const byYear = {};
   for (const ex of data.exams) (byYear[ex.year] || (byYear[ex.year] = [])).push(ex);
+  const roundOrder = (r) => ({ '1': 1, '2': 2, '3': 3 }[String(r)] || 9);
+  for (const y in byYear) byYear[y].sort((a, b) => roundOrder(a.round) - roundOrder(b.round));
   const years = Object.keys(byYear).sort().reverse();
   for (const y of years) {
     html += `<section class="year-group"><h3 class="year-head">${y}年度</h3><div class="exam-grid">`;
@@ -184,7 +186,9 @@ function renderDetail() {
       html += sub.sheetPages.map((p, i) => pageImg(p, i, '解答用紙')).join('');
     }
   } else {
-    note.textContent = `${sub.name}の解答解説です。画像タップで拡大。`;
+    note.textContent = state.exam.ansOnly
+      ? `${sub.name}の解答です（この回は解答のみ収録・全教科分をまとめて表示しています）。`
+      : `${sub.name}の解答解説です。画像タップで拡大。`;
     html += sub.explPages.map((p, i) => pageImg(p, i, '解説')).join('');
   }
   stack.innerHTML = html;

@@ -1,0 +1,3425 @@
+{
+ "id": "hiroo",
+ "name": "広尾学園中学校",
+ "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo",
+ "imgBaseLocal": "../kakomon-img-hiroo",
+ "info": {
+  "pages": [
+   {
+    "full": "info/p01.jpg",
+    "small": "info/p01_small.jpg"
+   },
+   {
+    "full": "info/p02.jpg",
+    "small": "info/p02_small.jpg"
+   },
+   {
+    "full": "info/p03.jpg",
+    "small": "info/p03_small.jpg"
+   },
+   {
+    "full": "info/p04.jpg",
+    "small": "info/p04_small.jpg"
+   },
+   {
+    "full": "info/p05.jpg",
+    "small": "info/p05_small.jpg"
+   },
+   {
+    "full": "info/p06.jpg",
+    "small": "info/p06_small.jpg"
+   },
+   {
+    "full": "info/p07.jpg",
+    "small": "info/p07_small.jpg"
+   },
+   {
+    "full": "info/p08.jpg",
+    "small": "info/p08_small.jpg"
+   },
+   {
+    "full": "info/p09.jpg",
+    "small": "info/p09_small.jpg"
+   }
+  ]
+ },
+ "exams": [
+  {
+   "id": "2026-ms",
+   "year": 2026,
+   "round": "ms",
+   "label": "2026年度 医進・サイエンス回",
+   "roundNote": "",
+   "ansOnly": false,
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-ms/sansu/q_01.jpg",
+       "small": "2026-ms/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2026-ms/sansu/q_02.jpg",
+       "small": "2026-ms/sansu/q_02_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-ms/sansu/sheet_1.jpg",
+       "small": "2026-ms/sansu/sheet_1_small.jpg"
+      },
+      {
+       "full": "2026-ms/sansu/sheet_2.jpg",
+       "small": "2026-ms/sansu/sheet_2_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-ms/sansu/e_01.jpg",
+       "small": "2026-ms/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2026-ms/sansu/e_02.jpg",
+       "small": "2026-ms/sansu/e_02_small.jpg"
+      },
+      {
+       "full": "2026-ms/sansu/e_03.jpg",
+       "small": "2026-ms/sansu/e_03_small.jpg"
+      },
+      {
+       "full": "2026-ms/sansu/e_04.jpg",
+       "small": "2026-ms/sansu/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "2(1)",
+      "2(2)",
+      "2(3)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "4(1)",
+      "4(2)",
+      "4(3)"
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-ms/shakai/q_01.jpg",
+       "small": "2026-ms/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_02.jpg",
+       "small": "2026-ms/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_03.jpg",
+       "small": "2026-ms/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_04.jpg",
+       "small": "2026-ms/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_05.jpg",
+       "small": "2026-ms/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_06.jpg",
+       "small": "2026-ms/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_07.jpg",
+       "small": "2026-ms/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_08.jpg",
+       "small": "2026-ms/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_09.jpg",
+       "small": "2026-ms/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_10.jpg",
+       "small": "2026-ms/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_11.jpg",
+       "small": "2026-ms/shakai/q_11_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_12.jpg",
+       "small": "2026-ms/shakai/q_12_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/q_13.jpg",
+       "small": "2026-ms/shakai/q_13_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-ms/shakai/sheet_1.jpg",
+       "small": "2026-ms/shakai/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-ms/shakai/e_01.jpg",
+       "small": "2026-ms/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/e_02.jpg",
+       "small": "2026-ms/shakai/e_02_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/e_03.jpg",
+       "small": "2026-ms/shakai/e_03_small.jpg"
+      },
+      {
+       "full": "2026-ms/shakai/e_04.jpg",
+       "small": "2026-ms/shakai/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "4 Ⅰ",
+      "4 Ⅱ"
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-ms/rika/q_01.jpg",
+       "small": "2026-ms/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_02.jpg",
+       "small": "2026-ms/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_03.jpg",
+       "small": "2026-ms/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_04.jpg",
+       "small": "2026-ms/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_05.jpg",
+       "small": "2026-ms/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_06.jpg",
+       "small": "2026-ms/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_07.jpg",
+       "small": "2026-ms/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_08.jpg",
+       "small": "2026-ms/rika/q_08_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_09.jpg",
+       "small": "2026-ms/rika/q_09_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_10.jpg",
+       "small": "2026-ms/rika/q_10_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_11.jpg",
+       "small": "2026-ms/rika/q_11_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_12.jpg",
+       "small": "2026-ms/rika/q_12_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_13.jpg",
+       "small": "2026-ms/rika/q_13_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_14.jpg",
+       "small": "2026-ms/rika/q_14_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_15.jpg",
+       "small": "2026-ms/rika/q_15_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_16.jpg",
+       "small": "2026-ms/rika/q_16_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/q_17.jpg",
+       "small": "2026-ms/rika/q_17_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-ms/rika/sheet_1.jpg",
+       "small": "2026-ms/rika/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-ms/rika/e_01.jpg",
+       "small": "2026-ms/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/e_02.jpg",
+       "small": "2026-ms/rika/e_02_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/e_03.jpg",
+       "small": "2026-ms/rika/e_03_small.jpg"
+      },
+      {
+       "full": "2026-ms/rika/e_04.jpg",
+       "small": "2026-ms/rika/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "1 問7",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "3 問8",
+      "4 問1",
+      "4 問2",
+      "4 問3",
+      "4 問4",
+      "4 問5"
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2026-ms/kokugo/q_01.jpg",
+       "small": "2026-ms/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2026-ms/kokugo/q_02.jpg",
+       "small": "2026-ms/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2026-ms/kokugo/q_03.jpg",
+       "small": "2026-ms/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2026-ms/kokugo/q_04.jpg",
+       "small": "2026-ms/kokugo/q_04_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-ms/kokugo/sheet_1.jpg",
+       "small": "2026-ms/kokugo/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-ms/kokugo/e_01.jpg",
+       "small": "2026-ms/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2026-ms/kokugo/e_02.jpg",
+       "small": "2026-ms/kokugo/e_02_small.jpg"
+      },
+      {
+       "full": "2026-ms/kokugo/e_03.jpg",
+       "small": "2026-ms/kokugo/e_03_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 1",
+      "一 2",
+      "一 3",
+      "一 4",
+      "一 5",
+      "一 6",
+      "一 7",
+      "一 8",
+      "一 9",
+      "一 10",
+      "二 1",
+      "二 2",
+      "二 3",
+      "二 4",
+      "二 5",
+      "三 問1",
+      "三 問2",
+      "三 問3",
+      "三 問4",
+      "三 問5",
+      "三 問6"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2026-2",
+   "year": 2026,
+   "round": "2",
+   "label": "2026年度 第2回",
+   "roundNote": "",
+   "ansOnly": false,
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-2/sansu/q_01.jpg",
+       "small": "2026-2/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2026-2/sansu/q_02.jpg",
+       "small": "2026-2/sansu/q_02_small.jpg"
+      },
+      {
+       "full": "2026-2/sansu/q_03.jpg",
+       "small": "2026-2/sansu/q_03_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-2/sansu/sheet_1.jpg",
+       "small": "2026-2/sansu/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-2/sansu/e_01.jpg",
+       "small": "2026-2/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2026-2/sansu/e_02.jpg",
+       "small": "2026-2/sansu/e_02_small.jpg"
+      },
+      {
+       "full": "2026-2/sansu/e_03.jpg",
+       "small": "2026-2/sansu/e_03_small.jpg"
+      },
+      {
+       "full": "2026-2/sansu/e_04.jpg",
+       "small": "2026-2/sansu/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "1(4)",
+      "1(5)",
+      "1(6)",
+      "2(1)",
+      "2(2)",
+      "2(3)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "4(1)",
+      "4(2)",
+      "4(3)",
+      "5(1)",
+      "5(2)"
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-2/shakai/q_01.jpg",
+       "small": "2026-2/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_02.jpg",
+       "small": "2026-2/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_03.jpg",
+       "small": "2026-2/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_04.jpg",
+       "small": "2026-2/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_05.jpg",
+       "small": "2026-2/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_06.jpg",
+       "small": "2026-2/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_07.jpg",
+       "small": "2026-2/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_08.jpg",
+       "small": "2026-2/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_09.jpg",
+       "small": "2026-2/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_10.jpg",
+       "small": "2026-2/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_11.jpg",
+       "small": "2026-2/shakai/q_11_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_12.jpg",
+       "small": "2026-2/shakai/q_12_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/q_13.jpg",
+       "small": "2026-2/shakai/q_13_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-2/shakai/sheet_1.jpg",
+       "small": "2026-2/shakai/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-2/shakai/e_01.jpg",
+       "small": "2026-2/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/e_02.jpg",
+       "small": "2026-2/shakai/e_02_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/e_03.jpg",
+       "small": "2026-2/shakai/e_03_small.jpg"
+      },
+      {
+       "full": "2026-2/shakai/e_04.jpg",
+       "small": "2026-2/shakai/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "1 問7",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "2 問8",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "4 Ⅰ",
+      "4 Ⅱ"
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-2/rika/q_01.jpg",
+       "small": "2026-2/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/q_02.jpg",
+       "small": "2026-2/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/q_03.jpg",
+       "small": "2026-2/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/q_04.jpg",
+       "small": "2026-2/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/q_05.jpg",
+       "small": "2026-2/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/q_06.jpg",
+       "small": "2026-2/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/q_07.jpg",
+       "small": "2026-2/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/q_08.jpg",
+       "small": "2026-2/rika/q_08_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/q_09.jpg",
+       "small": "2026-2/rika/q_09_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/q_10.jpg",
+       "small": "2026-2/rika/q_10_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-2/rika/sheet_1.jpg",
+       "small": "2026-2/rika/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-2/rika/e_01.jpg",
+       "small": "2026-2/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/e_02.jpg",
+       "small": "2026-2/rika/e_02_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/e_03.jpg",
+       "small": "2026-2/rika/e_03_small.jpg"
+      },
+      {
+       "full": "2026-2/rika/e_04.jpg",
+       "small": "2026-2/rika/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "4 問1",
+      "4 問2",
+      "4 問3",
+      "4 問4",
+      "4 問5"
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2026-2/kokugo/q_01.jpg",
+       "small": "2026-2/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/q_02.jpg",
+       "small": "2026-2/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/q_03.jpg",
+       "small": "2026-2/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/q_04.jpg",
+       "small": "2026-2/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/q_05.jpg",
+       "small": "2026-2/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/q_06.jpg",
+       "small": "2026-2/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/q_07.jpg",
+       "small": "2026-2/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/q_08.jpg",
+       "small": "2026-2/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/q_09.jpg",
+       "small": "2026-2/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/q_10.jpg",
+       "small": "2026-2/kokugo/q_10_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-2/kokugo/sheet_1.jpg",
+       "small": "2026-2/kokugo/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-2/kokugo/e_01.jpg",
+       "small": "2026-2/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/e_02.jpg",
+       "small": "2026-2/kokugo/e_02_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/e_03.jpg",
+       "small": "2026-2/kokugo/e_03_small.jpg"
+      },
+      {
+       "full": "2026-2/kokugo/e_04.jpg",
+       "small": "2026-2/kokugo/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 1",
+      "一 2",
+      "一 3",
+      "一 4",
+      "一 5",
+      "一 6",
+      "一 7",
+      "一 8",
+      "一 9",
+      "一 10",
+      "二 1",
+      "二 2",
+      "二 3",
+      "二 4",
+      "二 5",
+      "三 問1",
+      "三 問2",
+      "三 問3",
+      "三 問4",
+      "三 問5",
+      "三 問6",
+      "三 問7",
+      "三 問8",
+      "四 問1",
+      "四 問2",
+      "四 問3",
+      "四 問4",
+      "四 問5",
+      "四 問6",
+      "四 問7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2026-1",
+   "year": 2026,
+   "round": "1",
+   "label": "2026年度 第1回",
+   "roundNote": "",
+   "ansOnly": true,
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-1/sansu/q_01.jpg",
+       "small": "2026-1/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2026-1/sansu/q_02.jpg",
+       "small": "2026-1/sansu/q_02_small.jpg"
+      },
+      {
+       "full": "2026-1/sansu/q_03.jpg",
+       "small": "2026-1/sansu/q_03_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-1/sansu/sheet_1.jpg",
+       "small": "2026-1/sansu/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-1/sansu/e_01.jpg",
+       "small": "2026-1/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2026-1/sansu/e_02.jpg",
+       "small": "2026-1/sansu/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "1(4)",
+      "1(5)",
+      "1(6)",
+      "2(1)",
+      "2(2)",
+      "2(3)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "4(1)",
+      "4(2)",
+      "4(3)",
+      "5(1)①",
+      "5(1)②",
+      "5(2)"
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-1/shakai/q_01.jpg",
+       "small": "2026-1/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_02.jpg",
+       "small": "2026-1/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_03.jpg",
+       "small": "2026-1/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_04.jpg",
+       "small": "2026-1/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_05.jpg",
+       "small": "2026-1/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_06.jpg",
+       "small": "2026-1/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_07.jpg",
+       "small": "2026-1/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_08.jpg",
+       "small": "2026-1/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_09.jpg",
+       "small": "2026-1/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_10.jpg",
+       "small": "2026-1/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/q_11.jpg",
+       "small": "2026-1/shakai/q_11_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-1/shakai/sheet_1.jpg",
+       "small": "2026-1/shakai/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-1/shakai/e_01.jpg",
+       "small": "2026-1/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2026-1/shakai/e_02.jpg",
+       "small": "2026-1/shakai/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "2 問8",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "3 問8",
+      "4 Ⅰ",
+      "4 Ⅱ"
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-1/rika/q_01.jpg",
+       "small": "2026-1/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2026-1/rika/q_02.jpg",
+       "small": "2026-1/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2026-1/rika/q_03.jpg",
+       "small": "2026-1/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2026-1/rika/q_04.jpg",
+       "small": "2026-1/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2026-1/rika/q_05.jpg",
+       "small": "2026-1/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2026-1/rika/q_06.jpg",
+       "small": "2026-1/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2026-1/rika/q_07.jpg",
+       "small": "2026-1/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2026-1/rika/q_08.jpg",
+       "small": "2026-1/rika/q_08_small.jpg"
+      },
+      {
+       "full": "2026-1/rika/q_09.jpg",
+       "small": "2026-1/rika/q_09_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-1/rika/sheet_1.jpg",
+       "small": "2026-1/rika/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-1/rika/e_01.jpg",
+       "small": "2026-1/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2026-1/rika/e_02.jpg",
+       "small": "2026-1/rika/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "4 問1",
+      "4 問2",
+      "4 問3",
+      "4 問4",
+      "4 問5",
+      "4 問6"
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2026-1/kokugo/q_01.jpg",
+       "small": "2026-1/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_02.jpg",
+       "small": "2026-1/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_03.jpg",
+       "small": "2026-1/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_04.jpg",
+       "small": "2026-1/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_05.jpg",
+       "small": "2026-1/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_06.jpg",
+       "small": "2026-1/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_07.jpg",
+       "small": "2026-1/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_08.jpg",
+       "small": "2026-1/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_09.jpg",
+       "small": "2026-1/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_10.jpg",
+       "small": "2026-1/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_11.jpg",
+       "small": "2026-1/kokugo/q_11_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/q_12.jpg",
+       "small": "2026-1/kokugo/q_12_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2026-1/kokugo/sheet_1.jpg",
+       "small": "2026-1/kokugo/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2026-1/kokugo/e_01.jpg",
+       "small": "2026-1/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2026-1/kokugo/e_02.jpg",
+       "small": "2026-1/kokugo/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 1",
+      "一 2",
+      "一 3",
+      "一 4",
+      "一 5",
+      "一 6",
+      "一 7",
+      "一 8",
+      "一 9",
+      "一 10",
+      "二 1",
+      "二 2",
+      "二 3",
+      "二 4",
+      "二 5",
+      "三 問1",
+      "三 問2",
+      "三 問3",
+      "三 問4",
+      "三 問5",
+      "三 問6",
+      "三 問7",
+      "四 問1",
+      "四 問2",
+      "四 問3",
+      "四 問4",
+      "四 問5",
+      "四 問6",
+      "四 問7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2025-ms",
+   "year": 2025,
+   "round": "ms",
+   "label": "2025年度 医進・サイエンス回",
+   "roundNote": "",
+   "ansOnly": false,
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2025-ms/sansu/q_01.jpg",
+       "small": "2025-ms/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2025-ms/sansu/q_02.jpg",
+       "small": "2025-ms/sansu/q_02_small.jpg"
+      },
+      {
+       "full": "2025-ms/sansu/q_03.jpg",
+       "small": "2025-ms/sansu/q_03_small.jpg"
+      },
+      {
+       "full": "2025-ms/sansu/q_04.jpg",
+       "small": "2025-ms/sansu/q_04_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-ms/sansu/sheet_1.jpg",
+       "small": "2025-ms/sansu/sheet_1_small.jpg"
+      },
+      {
+       "full": "2025-ms/sansu/sheet_2.jpg",
+       "small": "2025-ms/sansu/sheet_2_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-ms/sansu/e_01.jpg",
+       "small": "2025-ms/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2025-ms/sansu/e_02.jpg",
+       "small": "2025-ms/sansu/e_02_small.jpg"
+      },
+      {
+       "full": "2025-ms/sansu/e_03.jpg",
+       "small": "2025-ms/sansu/e_03_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "2(1)",
+      "2(2)",
+      "2(3)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "4(1)",
+      "4(2)①",
+      "4(2)②",
+      "4(2)③",
+      "4(3)"
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2025-ms/shakai/q_01.jpg",
+       "small": "2025-ms/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_02.jpg",
+       "small": "2025-ms/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_03.jpg",
+       "small": "2025-ms/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_04.jpg",
+       "small": "2025-ms/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_05.jpg",
+       "small": "2025-ms/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_06.jpg",
+       "small": "2025-ms/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_07.jpg",
+       "small": "2025-ms/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_08.jpg",
+       "small": "2025-ms/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_09.jpg",
+       "small": "2025-ms/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_10.jpg",
+       "small": "2025-ms/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_11.jpg",
+       "small": "2025-ms/shakai/q_11_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/q_12.jpg",
+       "small": "2025-ms/shakai/q_12_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-ms/shakai/sheet_1.jpg",
+       "small": "2025-ms/shakai/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-ms/shakai/e_01.jpg",
+       "small": "2025-ms/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/e_02.jpg",
+       "small": "2025-ms/shakai/e_02_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/e_03.jpg",
+       "small": "2025-ms/shakai/e_03_small.jpg"
+      },
+      {
+       "full": "2025-ms/shakai/e_04.jpg",
+       "small": "2025-ms/shakai/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1Ⅰ 問1",
+      "1Ⅰ 問2",
+      "1Ⅰ 問3",
+      "1Ⅰ 問4",
+      "1Ⅱ 問1",
+      "1Ⅱ 問2",
+      "1Ⅱ 問3",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "2 問8",
+      "2 問9",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "4 Ⅰ",
+      "4Ⅱ 問1",
+      "4Ⅱ 問2"
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2025-ms/rika/q_01.jpg",
+       "small": "2025-ms/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_02.jpg",
+       "small": "2025-ms/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_03.jpg",
+       "small": "2025-ms/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_04.jpg",
+       "small": "2025-ms/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_05.jpg",
+       "small": "2025-ms/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_06.jpg",
+       "small": "2025-ms/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_07.jpg",
+       "small": "2025-ms/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_08.jpg",
+       "small": "2025-ms/rika/q_08_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_09.jpg",
+       "small": "2025-ms/rika/q_09_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_10.jpg",
+       "small": "2025-ms/rika/q_10_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_11.jpg",
+       "small": "2025-ms/rika/q_11_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_12.jpg",
+       "small": "2025-ms/rika/q_12_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_13.jpg",
+       "small": "2025-ms/rika/q_13_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_14.jpg",
+       "small": "2025-ms/rika/q_14_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/q_15.jpg",
+       "small": "2025-ms/rika/q_15_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-ms/rika/sheet_1.jpg",
+       "small": "2025-ms/rika/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-ms/rika/e_01.jpg",
+       "small": "2025-ms/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/e_02.jpg",
+       "small": "2025-ms/rika/e_02_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/e_03.jpg",
+       "small": "2025-ms/rika/e_03_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/e_04.jpg",
+       "small": "2025-ms/rika/e_04_small.jpg"
+      },
+      {
+       "full": "2025-ms/rika/e_05.jpg",
+       "small": "2025-ms/rika/e_05_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "4 問1",
+      "4 問2",
+      "4 問3",
+      "4 問4",
+      "4 問5",
+      "4 問6"
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2025-ms/kokugo/q_01.jpg",
+       "small": "2025-ms/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2025-ms/kokugo/q_02.jpg",
+       "small": "2025-ms/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2025-ms/kokugo/q_03.jpg",
+       "small": "2025-ms/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2025-ms/kokugo/q_04.jpg",
+       "small": "2025-ms/kokugo/q_04_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-ms/kokugo/sheet_1.jpg",
+       "small": "2025-ms/kokugo/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-ms/kokugo/e_01.jpg",
+       "small": "2025-ms/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2025-ms/kokugo/e_02.jpg",
+       "small": "2025-ms/kokugo/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 1",
+      "一 2",
+      "一 3",
+      "一 4",
+      "一 5",
+      "一 6",
+      "一 7",
+      "一 8",
+      "一 9",
+      "一 10",
+      "二 1",
+      "二 2",
+      "二 3",
+      "二 4",
+      "二 5",
+      "三 問1",
+      "三 問2",
+      "三 問3",
+      "三 問4",
+      "三 問5",
+      "三 問6",
+      "三 問7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2025-2",
+   "year": 2025,
+   "round": "2",
+   "label": "2025年度 第2回",
+   "roundNote": "",
+   "ansOnly": false,
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2025-2/sansu/q_01.jpg",
+       "small": "2025-2/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2025-2/sansu/q_02.jpg",
+       "small": "2025-2/sansu/q_02_small.jpg"
+      },
+      {
+       "full": "2025-2/sansu/q_03.jpg",
+       "small": "2025-2/sansu/q_03_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-2/sansu/sheet_1.jpg",
+       "small": "2025-2/sansu/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-2/sansu/e_01.jpg",
+       "small": "2025-2/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2025-2/sansu/e_02.jpg",
+       "small": "2025-2/sansu/e_02_small.jpg"
+      },
+      {
+       "full": "2025-2/sansu/e_03.jpg",
+       "small": "2025-2/sansu/e_03_small.jpg"
+      },
+      {
+       "full": "2025-2/sansu/e_04.jpg",
+       "small": "2025-2/sansu/e_04_small.jpg"
+      },
+      {
+       "full": "2025-2/sansu/e_05.jpg",
+       "small": "2025-2/sansu/e_05_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "1(4)",
+      "1(5)",
+      "1(6)",
+      "2(1)",
+      "2(2)",
+      "2(3)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "4(1)",
+      "4(2)",
+      "4(3)",
+      "5(1)",
+      "5(2)①",
+      "5(2)②"
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2025-2/shakai/q_01.jpg",
+       "small": "2025-2/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_02.jpg",
+       "small": "2025-2/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_03.jpg",
+       "small": "2025-2/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_04.jpg",
+       "small": "2025-2/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_05.jpg",
+       "small": "2025-2/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_06.jpg",
+       "small": "2025-2/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_07.jpg",
+       "small": "2025-2/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_08.jpg",
+       "small": "2025-2/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_09.jpg",
+       "small": "2025-2/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_10.jpg",
+       "small": "2025-2/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_11.jpg",
+       "small": "2025-2/shakai/q_11_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_12.jpg",
+       "small": "2025-2/shakai/q_12_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_13.jpg",
+       "small": "2025-2/shakai/q_13_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/q_14.jpg",
+       "small": "2025-2/shakai/q_14_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-2/shakai/sheet_1.jpg",
+       "small": "2025-2/shakai/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-2/shakai/e_01.jpg",
+       "small": "2025-2/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/e_02.jpg",
+       "small": "2025-2/shakai/e_02_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/e_03.jpg",
+       "small": "2025-2/shakai/e_03_small.jpg"
+      },
+      {
+       "full": "2025-2/shakai/e_04.jpg",
+       "small": "2025-2/shakai/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "3 問8",
+      "3 問9",
+      "4Ⅰ 問1",
+      "4Ⅰ 問2",
+      "4 Ⅱ"
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2025-2/rika/q_01.jpg",
+       "small": "2025-2/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/q_02.jpg",
+       "small": "2025-2/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/q_03.jpg",
+       "small": "2025-2/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/q_04.jpg",
+       "small": "2025-2/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/q_05.jpg",
+       "small": "2025-2/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/q_06.jpg",
+       "small": "2025-2/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/q_07.jpg",
+       "small": "2025-2/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/q_08.jpg",
+       "small": "2025-2/rika/q_08_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/q_09.jpg",
+       "small": "2025-2/rika/q_09_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-2/rika/sheet_1.jpg",
+       "small": "2025-2/rika/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-2/rika/e_01.jpg",
+       "small": "2025-2/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/e_02.jpg",
+       "small": "2025-2/rika/e_02_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/e_03.jpg",
+       "small": "2025-2/rika/e_03_small.jpg"
+      },
+      {
+       "full": "2025-2/rika/e_04.jpg",
+       "small": "2025-2/rika/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "1 問7",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "4 問1",
+      "4 問2",
+      "4 問3",
+      "4 問4",
+      "4 問5"
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2025-2/kokugo/q_01.jpg",
+       "small": "2025-2/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_02.jpg",
+       "small": "2025-2/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_03.jpg",
+       "small": "2025-2/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_04.jpg",
+       "small": "2025-2/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_05.jpg",
+       "small": "2025-2/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_06.jpg",
+       "small": "2025-2/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_07.jpg",
+       "small": "2025-2/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_08.jpg",
+       "small": "2025-2/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_09.jpg",
+       "small": "2025-2/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_10.jpg",
+       "small": "2025-2/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_11.jpg",
+       "small": "2025-2/kokugo/q_11_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/q_12.jpg",
+       "small": "2025-2/kokugo/q_12_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-2/kokugo/sheet_1.jpg",
+       "small": "2025-2/kokugo/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-2/kokugo/e_01.jpg",
+       "small": "2025-2/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/e_02.jpg",
+       "small": "2025-2/kokugo/e_02_small.jpg"
+      },
+      {
+       "full": "2025-2/kokugo/e_03.jpg",
+       "small": "2025-2/kokugo/e_03_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 1",
+      "一 2",
+      "一 3",
+      "一 4",
+      "一 5",
+      "一 6",
+      "一 7",
+      "一 8",
+      "一 9",
+      "一 10",
+      "二 1",
+      "二 2",
+      "二 3",
+      "二 4",
+      "二 5",
+      "三 問1",
+      "三 問2",
+      "三 問3",
+      "三 問4",
+      "三 問5",
+      "三 問6",
+      "三 問7",
+      "四 問1",
+      "四 問2",
+      "四 問3",
+      "四 問4",
+      "四 問5",
+      "四 問6",
+      "四 問7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2025-1",
+   "year": 2025,
+   "round": "1",
+   "label": "2025年度 第1回",
+   "roundNote": "",
+   "ansOnly": true,
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2025-1/sansu/q_01.jpg",
+       "small": "2025-1/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2025-1/sansu/q_02.jpg",
+       "small": "2025-1/sansu/q_02_small.jpg"
+      },
+      {
+       "full": "2025-1/sansu/q_03.jpg",
+       "small": "2025-1/sansu/q_03_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-1/sansu/sheet_1.jpg",
+       "small": "2025-1/sansu/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-1/sansu/e_01.jpg",
+       "small": "2025-1/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2025-1/sansu/e_02.jpg",
+       "small": "2025-1/sansu/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "1(4)",
+      "1(5)",
+      "1(6)",
+      "2(1)",
+      "2(2)",
+      "2(3)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "4(1)",
+      "4(2)",
+      "4(3)",
+      "5(1)",
+      "5(2)",
+      "5(3)"
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2025-1/shakai/q_01.jpg",
+       "small": "2025-1/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_02.jpg",
+       "small": "2025-1/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_03.jpg",
+       "small": "2025-1/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_04.jpg",
+       "small": "2025-1/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_05.jpg",
+       "small": "2025-1/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_06.jpg",
+       "small": "2025-1/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_07.jpg",
+       "small": "2025-1/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_08.jpg",
+       "small": "2025-1/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_09.jpg",
+       "small": "2025-1/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_10.jpg",
+       "small": "2025-1/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_11.jpg",
+       "small": "2025-1/shakai/q_11_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/q_12.jpg",
+       "small": "2025-1/shakai/q_12_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-1/shakai/sheet_1.jpg",
+       "small": "2025-1/shakai/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-1/shakai/e_01.jpg",
+       "small": "2025-1/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2025-1/shakai/e_02.jpg",
+       "small": "2025-1/shakai/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "2 問8",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "3 問8",
+      "4 Ⅰ",
+      "4 Ⅱ"
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2025-1/rika/q_01.jpg",
+       "small": "2025-1/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2025-1/rika/q_02.jpg",
+       "small": "2025-1/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2025-1/rika/q_03.jpg",
+       "small": "2025-1/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2025-1/rika/q_04.jpg",
+       "small": "2025-1/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2025-1/rika/q_05.jpg",
+       "small": "2025-1/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2025-1/rika/q_06.jpg",
+       "small": "2025-1/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2025-1/rika/q_07.jpg",
+       "small": "2025-1/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2025-1/rika/q_08.jpg",
+       "small": "2025-1/rika/q_08_small.jpg"
+      },
+      {
+       "full": "2025-1/rika/q_09.jpg",
+       "small": "2025-1/rika/q_09_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-1/rika/sheet_1.jpg",
+       "small": "2025-1/rika/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-1/rika/e_01.jpg",
+       "small": "2025-1/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2025-1/rika/e_02.jpg",
+       "small": "2025-1/rika/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "4 問1",
+      "4 問2",
+      "4 問3",
+      "4 問4",
+      "4 問5"
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2025-1/kokugo/q_01.jpg",
+       "small": "2025-1/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_02.jpg",
+       "small": "2025-1/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_03.jpg",
+       "small": "2025-1/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_04.jpg",
+       "small": "2025-1/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_05.jpg",
+       "small": "2025-1/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_06.jpg",
+       "small": "2025-1/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_07.jpg",
+       "small": "2025-1/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_08.jpg",
+       "small": "2025-1/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_09.jpg",
+       "small": "2025-1/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_10.jpg",
+       "small": "2025-1/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_11.jpg",
+       "small": "2025-1/kokugo/q_11_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_12.jpg",
+       "small": "2025-1/kokugo/q_12_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/q_13.jpg",
+       "small": "2025-1/kokugo/q_13_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2025-1/kokugo/sheet_1.jpg",
+       "small": "2025-1/kokugo/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2025-1/kokugo/e_01.jpg",
+       "small": "2025-1/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2025-1/kokugo/e_02.jpg",
+       "small": "2025-1/kokugo/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 1",
+      "一 2",
+      "一 3",
+      "一 4",
+      "一 5",
+      "一 6",
+      "一 7",
+      "一 8",
+      "一 9",
+      "一 10",
+      "二 1",
+      "二 2",
+      "二 3",
+      "二 4",
+      "二 5",
+      "三 問1",
+      "三 問2",
+      "三 問3",
+      "三 問4",
+      "三 問5",
+      "三 問6",
+      "三 問7",
+      "四 問1",
+      "四 問2",
+      "四 問3",
+      "四 問4",
+      "四 問5",
+      "四 問6",
+      "四 問7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2024-ms",
+   "year": 2024,
+   "round": "ms",
+   "label": "2024年度 医進・サイエンス回",
+   "roundNote": "",
+   "ansOnly": false,
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2024-ms/sansu/q_01.jpg",
+       "small": "2024-ms/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2024-ms/sansu/q_02.jpg",
+       "small": "2024-ms/sansu/q_02_small.jpg"
+      },
+      {
+       "full": "2024-ms/sansu/q_03.jpg",
+       "small": "2024-ms/sansu/q_03_small.jpg"
+      },
+      {
+       "full": "2024-ms/sansu/q_04.jpg",
+       "small": "2024-ms/sansu/q_04_small.jpg"
+      },
+      {
+       "full": "2024-ms/sansu/q_05.jpg",
+       "small": "2024-ms/sansu/q_05_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-ms/sansu/sheet_1.jpg",
+       "small": "2024-ms/sansu/sheet_1_small.jpg"
+      },
+      {
+       "full": "2024-ms/sansu/sheet_2.jpg",
+       "small": "2024-ms/sansu/sheet_2_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-ms/sansu/e_01.jpg",
+       "small": "2024-ms/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2024-ms/sansu/e_02.jpg",
+       "small": "2024-ms/sansu/e_02_small.jpg"
+      },
+      {
+       "full": "2024-ms/sansu/e_03.jpg",
+       "small": "2024-ms/sansu/e_03_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "2(1)",
+      "2(2)",
+      "2(3)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "4(1)",
+      "4(2)",
+      "4(3)"
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2024-ms/shakai/q_01.jpg",
+       "small": "2024-ms/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_02.jpg",
+       "small": "2024-ms/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_03.jpg",
+       "small": "2024-ms/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_04.jpg",
+       "small": "2024-ms/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_05.jpg",
+       "small": "2024-ms/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_06.jpg",
+       "small": "2024-ms/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_07.jpg",
+       "small": "2024-ms/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_08.jpg",
+       "small": "2024-ms/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_09.jpg",
+       "small": "2024-ms/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_10.jpg",
+       "small": "2024-ms/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_11.jpg",
+       "small": "2024-ms/shakai/q_11_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_12.jpg",
+       "small": "2024-ms/shakai/q_12_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_13.jpg",
+       "small": "2024-ms/shakai/q_13_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/q_14.jpg",
+       "small": "2024-ms/shakai/q_14_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-ms/shakai/sheet_1.jpg",
+       "small": "2024-ms/shakai/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-ms/shakai/e_01.jpg",
+       "small": "2024-ms/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/e_02.jpg",
+       "small": "2024-ms/shakai/e_02_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/e_03.jpg",
+       "small": "2024-ms/shakai/e_03_small.jpg"
+      },
+      {
+       "full": "2024-ms/shakai/e_04.jpg",
+       "small": "2024-ms/shakai/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "1 問7",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "2 問8",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "3 問8",
+      "4 Ⅰ",
+      "4 Ⅱ"
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2024-ms/rika/q_01.jpg",
+       "small": "2024-ms/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_02.jpg",
+       "small": "2024-ms/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_03.jpg",
+       "small": "2024-ms/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_04.jpg",
+       "small": "2024-ms/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_05.jpg",
+       "small": "2024-ms/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_06.jpg",
+       "small": "2024-ms/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_07.jpg",
+       "small": "2024-ms/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_08.jpg",
+       "small": "2024-ms/rika/q_08_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_09.jpg",
+       "small": "2024-ms/rika/q_09_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_10.jpg",
+       "small": "2024-ms/rika/q_10_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_11.jpg",
+       "small": "2024-ms/rika/q_11_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_12.jpg",
+       "small": "2024-ms/rika/q_12_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_13.jpg",
+       "small": "2024-ms/rika/q_13_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/q_14.jpg",
+       "small": "2024-ms/rika/q_14_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-ms/rika/sheet_1.jpg",
+       "small": "2024-ms/rika/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-ms/rika/e_01.jpg",
+       "small": "2024-ms/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/e_02.jpg",
+       "small": "2024-ms/rika/e_02_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/e_03.jpg",
+       "small": "2024-ms/rika/e_03_small.jpg"
+      },
+      {
+       "full": "2024-ms/rika/e_04.jpg",
+       "small": "2024-ms/rika/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "1 問7",
+      "1 問8",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "4 問1",
+      "4 問2",
+      "4 問3",
+      "4 問4",
+      "4 問5",
+      "4 問6",
+      "4 問7",
+      "4 問8"
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2024-ms/kokugo/q_01.jpg",
+       "small": "2024-ms/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2024-ms/kokugo/q_02.jpg",
+       "small": "2024-ms/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2024-ms/kokugo/q_03.jpg",
+       "small": "2024-ms/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2024-ms/kokugo/q_04.jpg",
+       "small": "2024-ms/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2024-ms/kokugo/q_05.jpg",
+       "small": "2024-ms/kokugo/q_05_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-ms/kokugo/sheet_1.jpg",
+       "small": "2024-ms/kokugo/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-ms/kokugo/e_01.jpg",
+       "small": "2024-ms/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2024-ms/kokugo/e_02.jpg",
+       "small": "2024-ms/kokugo/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 1",
+      "一 2",
+      "一 3",
+      "一 4",
+      "一 5",
+      "一 6",
+      "一 7",
+      "一 8",
+      "一 9",
+      "一 10",
+      "二 1",
+      "二 2",
+      "二 3",
+      "二 4",
+      "二 5",
+      "三 問1",
+      "三 問2",
+      "三 問3",
+      "三 問4",
+      "三 問5",
+      "三 問6",
+      "三 問7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2024-2",
+   "year": 2024,
+   "round": "2",
+   "label": "2024年度 第2回",
+   "roundNote": "",
+   "ansOnly": false,
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2024-2/sansu/q_01.jpg",
+       "small": "2024-2/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2024-2/sansu/q_02.jpg",
+       "small": "2024-2/sansu/q_02_small.jpg"
+      },
+      {
+       "full": "2024-2/sansu/q_03.jpg",
+       "small": "2024-2/sansu/q_03_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-2/sansu/sheet_1.jpg",
+       "small": "2024-2/sansu/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-2/sansu/e_01.jpg",
+       "small": "2024-2/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2024-2/sansu/e_02.jpg",
+       "small": "2024-2/sansu/e_02_small.jpg"
+      },
+      {
+       "full": "2024-2/sansu/e_03.jpg",
+       "small": "2024-2/sansu/e_03_small.jpg"
+      },
+      {
+       "full": "2024-2/sansu/e_04.jpg",
+       "small": "2024-2/sansu/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "1(4)",
+      "1(5)",
+      "1(6)",
+      "2(1)",
+      "2(2)",
+      "2(3)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "4(1)",
+      "4(2)",
+      "4(3)",
+      "5(1)",
+      "5(2)①",
+      "5(2)②"
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2024-2/shakai/q_01.jpg",
+       "small": "2024-2/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_02.jpg",
+       "small": "2024-2/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_03.jpg",
+       "small": "2024-2/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_04.jpg",
+       "small": "2024-2/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_05.jpg",
+       "small": "2024-2/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_06.jpg",
+       "small": "2024-2/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_07.jpg",
+       "small": "2024-2/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_08.jpg",
+       "small": "2024-2/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_09.jpg",
+       "small": "2024-2/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_10.jpg",
+       "small": "2024-2/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_11.jpg",
+       "small": "2024-2/shakai/q_11_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_12.jpg",
+       "small": "2024-2/shakai/q_12_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_13.jpg",
+       "small": "2024-2/shakai/q_13_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_14.jpg",
+       "small": "2024-2/shakai/q_14_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_15.jpg",
+       "small": "2024-2/shakai/q_15_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_16.jpg",
+       "small": "2024-2/shakai/q_16_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/q_17.jpg",
+       "small": "2024-2/shakai/q_17_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-2/shakai/sheet_1.jpg",
+       "small": "2024-2/shakai/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-2/shakai/e_01.jpg",
+       "small": "2024-2/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/e_02.jpg",
+       "small": "2024-2/shakai/e_02_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/e_03.jpg",
+       "small": "2024-2/shakai/e_03_small.jpg"
+      },
+      {
+       "full": "2024-2/shakai/e_04.jpg",
+       "small": "2024-2/shakai/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "3 問8",
+      "4 Ⅰ",
+      "4Ⅱ 問1",
+      "4Ⅱ 問2"
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2024-2/rika/q_01.jpg",
+       "small": "2024-2/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_02.jpg",
+       "small": "2024-2/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_03.jpg",
+       "small": "2024-2/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_04.jpg",
+       "small": "2024-2/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_05.jpg",
+       "small": "2024-2/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_06.jpg",
+       "small": "2024-2/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_07.jpg",
+       "small": "2024-2/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_08.jpg",
+       "small": "2024-2/rika/q_08_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_09.jpg",
+       "small": "2024-2/rika/q_09_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_10.jpg",
+       "small": "2024-2/rika/q_10_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/q_11.jpg",
+       "small": "2024-2/rika/q_11_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-2/rika/sheet_1.jpg",
+       "small": "2024-2/rika/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-2/rika/e_01.jpg",
+       "small": "2024-2/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/e_02.jpg",
+       "small": "2024-2/rika/e_02_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/e_03.jpg",
+       "small": "2024-2/rika/e_03_small.jpg"
+      },
+      {
+       "full": "2024-2/rika/e_04.jpg",
+       "small": "2024-2/rika/e_04_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "4 問1",
+      "4 問2",
+      "4 問3",
+      "4 問4",
+      "4 問5"
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2024-2/kokugo/q_01.jpg",
+       "small": "2024-2/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_02.jpg",
+       "small": "2024-2/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_03.jpg",
+       "small": "2024-2/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_04.jpg",
+       "small": "2024-2/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_05.jpg",
+       "small": "2024-2/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_06.jpg",
+       "small": "2024-2/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_07.jpg",
+       "small": "2024-2/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_08.jpg",
+       "small": "2024-2/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_09.jpg",
+       "small": "2024-2/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_10.jpg",
+       "small": "2024-2/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/q_11.jpg",
+       "small": "2024-2/kokugo/q_11_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-2/kokugo/sheet_1.jpg",
+       "small": "2024-2/kokugo/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-2/kokugo/e_01.jpg",
+       "small": "2024-2/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/e_02.jpg",
+       "small": "2024-2/kokugo/e_02_small.jpg"
+      },
+      {
+       "full": "2024-2/kokugo/e_03.jpg",
+       "small": "2024-2/kokugo/e_03_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 1",
+      "一 2",
+      "一 3",
+      "一 4",
+      "一 5",
+      "一 6",
+      "一 7",
+      "一 8",
+      "一 9",
+      "一 10",
+      "二 1",
+      "二 2",
+      "二 3",
+      "二 4",
+      "二 5",
+      "三 問1",
+      "三 問2",
+      "三 問3",
+      "三 問4",
+      "三 問5",
+      "三 問6",
+      "三 問7",
+      "四 問1",
+      "四 問2",
+      "四 問3",
+      "四 問4",
+      "四 問5",
+      "四 問6",
+      "四 問7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2024-1",
+   "year": 2024,
+   "round": "1",
+   "label": "2024年度 第1回",
+   "roundNote": "",
+   "ansOnly": true,
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2024-1/sansu/q_01.jpg",
+       "small": "2024-1/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2024-1/sansu/q_02.jpg",
+       "small": "2024-1/sansu/q_02_small.jpg"
+      },
+      {
+       "full": "2024-1/sansu/q_03.jpg",
+       "small": "2024-1/sansu/q_03_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-1/sansu/sheet_1.jpg",
+       "small": "2024-1/sansu/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-1/sansu/e_01.jpg",
+       "small": "2024-1/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2024-1/sansu/e_02.jpg",
+       "small": "2024-1/sansu/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "1(4)",
+      "1(5)",
+      "1(6)",
+      "2(1)",
+      "2(2)",
+      "2(3)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "4(1)",
+      "4(2)",
+      "4(3)",
+      "5(1)①",
+      "5(1)②",
+      "5(2)"
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2024-1/shakai/q_01.jpg",
+       "small": "2024-1/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_02.jpg",
+       "small": "2024-1/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_03.jpg",
+       "small": "2024-1/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_04.jpg",
+       "small": "2024-1/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_05.jpg",
+       "small": "2024-1/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_06.jpg",
+       "small": "2024-1/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_07.jpg",
+       "small": "2024-1/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_08.jpg",
+       "small": "2024-1/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_09.jpg",
+       "small": "2024-1/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_10.jpg",
+       "small": "2024-1/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_11.jpg",
+       "small": "2024-1/shakai/q_11_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_12.jpg",
+       "small": "2024-1/shakai/q_12_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_13.jpg",
+       "small": "2024-1/shakai/q_13_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_14.jpg",
+       "small": "2024-1/shakai/q_14_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_15.jpg",
+       "small": "2024-1/shakai/q_15_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_16.jpg",
+       "small": "2024-1/shakai/q_16_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/q_17.jpg",
+       "small": "2024-1/shakai/q_17_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-1/shakai/sheet_1.jpg",
+       "small": "2024-1/shakai/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-1/shakai/e_01.jpg",
+       "small": "2024-1/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2024-1/shakai/e_02.jpg",
+       "small": "2024-1/shakai/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "2 問8",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "3 問7",
+      "3 問8",
+      "4 Ⅰ",
+      "4 Ⅱ"
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 30,
+     "maxScore": 50,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2024-1/rika/q_01.jpg",
+       "small": "2024-1/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2024-1/rika/q_02.jpg",
+       "small": "2024-1/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2024-1/rika/q_03.jpg",
+       "small": "2024-1/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2024-1/rika/q_04.jpg",
+       "small": "2024-1/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2024-1/rika/q_05.jpg",
+       "small": "2024-1/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2024-1/rika/q_06.jpg",
+       "small": "2024-1/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2024-1/rika/q_07.jpg",
+       "small": "2024-1/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2024-1/rika/q_08.jpg",
+       "small": "2024-1/rika/q_08_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-1/rika/sheet_1.jpg",
+       "small": "2024-1/rika/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-1/rika/e_01.jpg",
+       "small": "2024-1/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2024-1/rika/e_02.jpg",
+       "small": "2024-1/rika/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6",
+      "4 問1",
+      "4 問2",
+      "4 問3",
+      "4 問4"
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2024-1/kokugo/q_01.jpg",
+       "small": "2024-1/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/q_02.jpg",
+       "small": "2024-1/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/q_03.jpg",
+       "small": "2024-1/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/q_04.jpg",
+       "small": "2024-1/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/q_05.jpg",
+       "small": "2024-1/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/q_06.jpg",
+       "small": "2024-1/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/q_07.jpg",
+       "small": "2024-1/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/q_08.jpg",
+       "small": "2024-1/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/q_09.jpg",
+       "small": "2024-1/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/q_10.jpg",
+       "small": "2024-1/kokugo/q_10_small.jpg"
+      }
+     ],
+     "sheetPages": [
+      {
+       "full": "2024-1/kokugo/sheet_1.jpg",
+       "small": "2024-1/kokugo/sheet_1_small.jpg"
+      }
+     ],
+     "explPages": [
+      {
+       "full": "2024-1/kokugo/e_01.jpg",
+       "small": "2024-1/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2024-1/kokugo/e_02.jpg",
+       "small": "2024-1/kokugo/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 1",
+      "一 2",
+      "一 3",
+      "一 4",
+      "一 5",
+      "一 6",
+      "一 7",
+      "一 8",
+      "一 9",
+      "一 10",
+      "二 1",
+      "二 2",
+      "二 3",
+      "二 4",
+      "二 5",
+      "三 問1",
+      "三 問2",
+      "三 問3",
+      "三 問4",
+      "三 問5",
+      "三 問6",
+      "三 問7",
+      "四 問1",
+      "四 問2",
+      "四 問3",
+      "四 問4",
+      "四 問5",
+      "四 問6",
+      "四 問7"
+     ]
+    }
+   ]
+  }
+ ]
+}
