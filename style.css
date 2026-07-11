@@ -213,13 +213,11 @@ table.grade-table { border-collapse: collapse; width: 100%; }
     font-size: 0; /* inline-block間の隙間除去 */
   }
   .print-page:last-child { page-break-after: auto; break-after: auto; }
-  /* B4横 2面付け（B5×2）。左右の並び順はDOM順で制御する */
+  /* B4横 2面付け: 2ページはJSがcanvasで1枚のB4横画像に事前合成済み（iPad対策） */
   .print-page.duo { text-align: center; }
-  .print-page.duo.align-left  { text-align: left; }
-  .print-page.duo.align-right { text-align: right; }
   .print-page.duo img {
     display: inline-block;
-    max-width: 174mm;   /* B4横348mm÷2 */
+    max-width: 348mm;   /* B4横の印刷可能幅（364-余白16） */
     max-height: 241mm;  /* 257-余白16 */
     width: auto; height: auto;
     vertical-align: top;

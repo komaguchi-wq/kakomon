@@ -203,11 +203,11 @@ function renderPrintButtons() {
     g.innerHTML = `
       <button class="print-btn" id="pr-q">🖨 問題（B4横 2面）</button>
       <button class="print-btn" id="pr-s">🖨 解答用紙（B4拡大）</button>`;
-    $('#pr-q').addEventListener('click', () => printDuo(state.subject.questionPages, state.subject.rtl));
+    $('#pr-q').addEventListener('click', (e) => printDuo(state.subject.questionPages, state.subject.rtl, e.currentTarget));
     $('#pr-s').addEventListener('click', () => printSheets(state.subject.sheetPages));
   } else {
     g.innerHTML = `<button class="print-btn" id="pr-e">🖨 解説（B4横 2面）</button>`;
-    $('#pr-e').addEventListener('click', () => printDuo(state.subject.explPages, false));
+    $('#pr-e').addEventListener('click', (e) => printDuo(state.subject.explPages, false, e.currentTarget));
   }
 }
 
@@ -356,22 +356,65 @@ async function firePrint(container) {
   setTimeout(() => window.print(), 100);
 }
 
-// B4横に2面付け。rtl=true（国語）はペア内で右→左に配置
-function printDuo(pages, rtl) {
+// 画像1枚をロード
+function loadImage(src) {
+  return new Promise((resolve, reject) => {
+    const im = new Image();
+    im.onload = () => resolve(im);
+    im.onerror = reject;
+    im.src = src;
+  });
+}
+
+// B5×2ページを1枚のB4横画像にcanvas合成する（iPad印刷対策:
+// 2枚並びのCSSレイアウトはiOSが余白/@pageを無視して折り返すため、
+// アプリ側で合成して「1画像=1ページ」の実績ある方式で刷る）
+async function composePair(pair, rtl) {
+  const imgs = [];
+  for (const p of pair) imgs.push(await loadImage(imgUrl(p.full)));
+  const ordered = rtl ? imgs.slice().reverse() : imgs;
+  const h = Math.max(...ordered.map((im) => im.naturalHeight));
+  const widths = ordered.map((im) => Math.round(im.naturalWidth * h / im.naturalHeight));
+  const fullW = pair.length === 1 ? widths[0] * 2 : widths.reduce((a, b) => a + b, 0);
+  const canvas = document.createElement('canvas');
+  canvas.width = fullW;
+  canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, fullW, h);
+  // 1枚だけ余った場合: 読み進む側（LTR=左, RTL=右）に寄せ、他方は白のまま
+  let x = (pair.length === 1 && rtl) ? fullW - widths[0] : 0;
+  ordered.forEach((im, i) => {
+    ctx.drawImage(im, x, 0, widths[i], h);
+    x += widths[i];
+  });
+  const url = canvas.toDataURL('image/jpeg', 0.9);
+  canvas.width = 0; canvas.height = 0;  // iOSのcanvasメモリを早めに解放
+  return url;
+}
+
+// B4横に2面付け（事前合成方式）。rtl=true（国語）はペア内で右→左に配置
+async function printDuo(pages, rtl, btn) {
   if (!pages || !pages.length) return;
-  setPageStyle('@media print { @page { size: B4 landscape; margin: 8mm; } }');
-  const container = $('#print-container');
-  let html = '';
-  for (let i = 0; i < pages.length; i += 2) {
-    const pair = pages.slice(i, i + 2);
-    // DOMは左→右に並ぶ。RTLはペアを逆順にして [2枚目, 1枚目] と置くと 1枚目が右になる
-    const ordered = rtl ? pair.slice().reverse() : pair;
-    const align = pair.length === 1 ? (rtl ? 'align-right' : 'align-left') : '';
-    html += `<div class="print-page duo ${align}">` +
-      ordered.map((p) => `<img src="${imgUrl(p.full)}">`).join('') + '</div>';
+  const label = btn ? btn.textContent : '';
+  try {
+    setPageStyle('@media print { @page { size: B4 landscape; margin: 8mm; } }');
+    const container = $('#print-container');
+    container.innerHTML = '';
+    for (let i = 0; i < pages.length; i += 2) {
+      if (btn) btn.textContent = `準備中… ${Math.min(i + 2, pages.length)}/${pages.length}`;
+      const url = await composePair(pages.slice(i, i + 2), rtl);
+      const div = document.createElement('div');
+      div.className = 'print-page duo';
+      const im = document.createElement('img');
+      im.src = url;
+      div.appendChild(im);
+      container.appendChild(div);
+    }
+    await firePrint(container);
+  } finally {
+    if (btn) btn.textContent = label;
   }
-  container.innerHTML = html;
-  firePrint(container);
 }
 
 // 解答用紙: B4縦にB5→B4拡大で1面ずつ
@@ -386,7 +429,7 @@ function printSheets(pages) {
 }
 
 function printInfo() {
-  printDuo(state.school.info.pages, false);
+  printDuo(state.school.info.pages, false, $('#info-print-btn'));
 }
 
 init();
