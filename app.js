@@ -8,23 +8,30 @@ const state = {
   exam: null,         // 現在の試験（年度・回）
   subject: null,      // 現在の教科
   view: 'question',   // 'question' | 'expl'
+  homeScroll: 0,      // トップの離脱時スクロール位置（もどる時に復元）
 };
 
 const $ = (sel) => document.querySelector(sel);
 
 // 画像repoのベースURL（ローカル開発時は隣のディレクトリを参照）
+// 有名中など大きい学校は試験（=学校）単位のimgBaseで画像repoを分割できる
 const IMG_V = 2; // 画像を全差し替えしたら+1（キャッシュ破棄用）
-function imgBase(school) {
+function imgBase(school, exam) {
   const local = ['localhost', '127.0.0.1'].includes(location.hostname);
+  if (exam && exam.imgBaseProd) return local ? exam.imgBaseLocal : exam.imgBaseProd;
   return local ? school.imgBaseLocal : school.imgBaseProd;
 }
-function imgUrl(p) { return `${imgBase(state.school)}/${p}?v=${IMG_V}`; }
+function imgUrl(p) { return `${imgBase(state.school, state.exam)}/${p}?v=${IMG_V}`; }
 
 // ---- 初期化 ----
 async function init() {
   try {
     const res = await fetch('schools.json', { cache: 'no-store' });
     state.schools = await res.json();
+    // 全学校のデータを並列に読み、トップに試験一覧まで展開する
+    const datas = await Promise.all(state.schools.map((s) =>
+      fetch(`data/${s.id}.json`, { cache: 'no-store' }).then((r) => r.json())));
+    state.schools.forEach((s, i) => { state.schoolCache[s.id] = datas[i]; });
     renderHome();
   } catch (e) {
     $('#school-list').innerHTML = '<p class="loading">学校一覧の読み込みに失敗しました。</p>';
@@ -39,86 +46,103 @@ async function init() {
 
 // ---- 画面遷移 ----
 function showScreen(id) {
-  for (const s of ['home', 'school', 'info', 'detail']) $('#' + s).hidden = (s !== id);
+  for (const s of ['home', 'info', 'detail']) $('#' + s).hidden = (s !== id);
   $('#back-btn').hidden = (id === 'home');
-  window.scrollTo(0, 0);
+  if (id === 'home') {
+    window.scrollTo(0, state.homeScroll);
+  } else {
+    window.scrollTo(0, 0);
+  }
 }
+function leaveHome() { state.homeScroll = window.scrollY; }
 function goBack() {
-  if (!$('#detail').hidden || !$('#info').hidden) { showScreen('school'); return; }
   state.school = null;
+  state.exam = null;
   showScreen('home');
 }
 
-// ---- 学校一覧 ----
+// ---- 試験グループ分け（年度 or 編） ----
+function examGroupsOf(data) {
+  if (data.exams.some((e) => e.group)) {
+    // 有名中形式: exam.group（男子校編など）で出現順にグループ化
+    const groups = [];
+    const byLabel = {};
+    for (const ex of data.exams) {
+      const g = ex.group || 'その他';
+      if (!byLabel[g]) { byLabel[g] = { label: g, exams: [] }; groups.push(byLabel[g]); }
+      byLabel[g].exams.push(ex);
+    }
+    return groups;
+  }
+  // 通常: 年度降順×回順
+  const byYear = {};
+  for (const ex of data.exams) (byYear[ex.year] || (byYear[ex.year] = [])).push(ex);
+  const roundOrder = (r) => ({ '1': 1, '2': 2, '3': 3 }[String(r)] || 9);
+  for (const y in byYear) byYear[y].sort((a, b) => roundOrder(a.round) - roundOrder(b.round));
+  return Object.keys(byYear).sort().reverse()
+    .map((y) => ({ label: y + '年度', exams: byYear[y] }));
+}
+
+// ---- トップ: 学校セクション×試験一覧 ----
 function renderHome() {
   if (!state.schools.length) {
     $('#school-list').innerHTML = '<p class="loading">まだ学校がありません。</p>';
     return;
   }
-  const html = '<div class="school-grid">' + state.schools.map((s) => `
-    <div class="school-card" data-id="${s.id}">
-      <span class="school-icon">🏫</span>
-      <div>
-        <div class="school-name">${s.name}</div>
-        <div class="school-sub">${s.yearsLabel || ''}</div>
-      </div>
-    </div>`).join('') + '</div>';
-  const list = $('#school-list');
-  list.innerHTML = html;
-  list.querySelectorAll('.school-card').forEach((c) =>
-    c.addEventListener('click', () => openSchool(c.dataset.id)));
-}
-
-// ---- 学校トップ ----
-async function openSchool(id) {
-  let data = state.schoolCache[id];
-  if (!data) {
-    const res = await fetch(`data/${id}.json`, { cache: 'no-store' });
-    data = await res.json();
-    state.schoolCache[id] = data;
-  }
-  state.school = data;
-  $('#school-title').textContent = `🏫 ${data.name}`;
-  // 学校情報カード + 年度グループ
   let html = '';
-  if (data.info && data.info.pages.length) {
+  for (const s of state.schools) {
+    const data = state.schoolCache[s.id];
+    if (!data) continue;
     html += `
-      <div class="exam-card info-card" id="open-info">
-        <span class="school-icon">📋</span>
+    <section class="school-section" data-school="${s.id}">
+      <h2 class="school-head">
+        <span class="school-icon">🏫</span>
+        <span class="school-head-name">${s.name}</span>
+        <span class="school-head-sub">${s.yearsLabel || ''}</span>
+      </h2>`;
+    if (data.info && data.info.pages.length) {
+      html += `
+      <div class="exam-card info-card" data-info="${s.id}">
+        <span class="info-icon">📋</span>
         <div>
           <div class="exam-name">学校情報・出題傾向&対策</div>
           <div class="exam-sub">受験情報・教科別の出題分析</div>
         </div>
       </div>`;
-  }
-  const byYear = {};
-  for (const ex of data.exams) (byYear[ex.year] || (byYear[ex.year] = [])).push(ex);
-  const roundOrder = (r) => ({ '1': 1, '2': 2, '3': 3 }[String(r)] || 9);
-  for (const y in byYear) byYear[y].sort((a, b) => roundOrder(a.round) - roundOrder(b.round));
-  const years = Object.keys(byYear).sort().reverse();
-  for (const y of years) {
-    html += `<section class="year-group"><h3 class="year-head">${y}年度</h3><div class="exam-grid">`;
-    for (const ex of byYear[y]) {
-      const subs = ex.subjects.map((s) => s.name).join('・');
-      html += `
-        <div class="exam-card" data-id="${ex.id}">
-          <div class="exam-name">${ex.label}</div>
-          <div class="exam-sub">${ex.roundNote ? ex.roundNote + '／' : ''}${subs}</div>
-        </div>`;
     }
-    html += '</div></section>';
+    for (const g of examGroupsOf(data)) {
+      html += `<div class="year-group"><h3 class="year-head">${g.label}</h3><div class="exam-grid">`;
+      for (const ex of g.exams) {
+        const subs = ex.subjects.map((sub) => sub.name).join('・');
+        html += `
+          <div class="exam-card" data-school="${s.id}" data-id="${ex.id}">
+            <div class="exam-name">${ex.label}</div>
+            <div class="exam-sub">${ex.roundNote ? ex.roundNote + '／' : ''}${subs}</div>
+          </div>`;
+      }
+      html += '</div></div>';
+    }
+    html += '</section>';
   }
-  const list = $('#exam-list');
+  const list = $('#school-list');
   list.innerHTML = html;
-  const infoCard = $('#open-info');
-  if (infoCard) infoCard.addEventListener('click', openInfo);
+  list.querySelectorAll('.exam-card[data-info]').forEach((c) =>
+    c.addEventListener('click', () => {
+      leaveHome();
+      state.school = state.schoolCache[c.dataset.info];
+      openInfo();
+    }));
   list.querySelectorAll('.exam-card[data-id]').forEach((c) =>
-    c.addEventListener('click', () => openExam(c.dataset.id)));
-  showScreen('school');
+    c.addEventListener('click', () => {
+      leaveHome();
+      state.school = state.schoolCache[c.dataset.school];
+      openExam(c.dataset.id);
+    }));
 }
 
 // ---- 学校情報・出題傾向 ----
 function openInfo() {
+  state.exam = null;  // 学校レベルのimgBaseを使う（試験単位imgBase上書きの解除）
   $('#info-title').textContent = `📋 ${state.school.name} 学校情報・出題傾向&対策`;
   $('#info-stack').innerHTML = state.school.info.pages.map((p, i) => `
     <div class="page-item">
@@ -133,7 +157,8 @@ function openExam(examId) {
   state.exam = state.school.exams.find((e) => e.id === examId);
   state.subject = state.exam.subjects[0];
   state.view = 'question';
-  $('#detail-title').textContent = `${state.school.name} ${state.exam.label}${state.exam.roundNote ? '（' + state.exam.roundNote + '）' : ''}`;
+  const schoolLabel = state.school.shortName || state.school.name;
+  $('#detail-title').textContent = `${schoolLabel} ${state.exam.label}${state.exam.roundNote ? '（' + state.exam.roundNote + '）' : ''}`;
   renderSubjectTabs();
   syncViewTabs();
   showScreen('detail');
@@ -178,7 +203,8 @@ function renderDetail() {
   const stack = $('#page-stack');
   let html = renderGrading();
   if (state.view === 'question') {
-    note.textContent = `${sub.name}（${sub.minutes ? sub.minutes + '分' : ''}${sub.maxScore ? '・満点' + sub.maxScore + '点' : ''}）問題と解答用紙です。画像タップで拡大。`;
+    const specs = [sub.minutes ? sub.minutes + '分' : '', sub.maxScore ? '満点' + sub.maxScore + '点' : ''].filter(Boolean);
+    note.textContent = `${sub.name}${specs.length ? '（' + specs.join('・') + '）' : ''}問題と解答用紙です。画像タップで拡大。`;
     html += `<h3 class="section-head">問題</h3>`;
     html += sub.questionPages.map((p, i) => pageImg(p, i, '問題')).join('');
     if (sub.sheetPages && sub.sheetPages.length) {

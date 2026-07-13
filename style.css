@@ -53,24 +53,19 @@ html, body {
 .loading { color: var(--muted); text-align: center; padding: 40px 0; }
 .screen-title { font-size: 18px; margin: 2px 0 14px; }
 
-/* ---- 学校一覧 ---- */
-.school-grid {
-  display: grid; gap: 12px;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+/* ---- トップ: 学校セクション ---- */
+.school-section { margin-bottom: 34px; }
+.school-head {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  background: var(--accent); color: #fff;
+  border-radius: 12px; padding: 13px 16px; margin: 0 0 14px;
 }
-.school-card {
-  background: var(--card-bg); border: 1px solid var(--line); border-radius: 12px;
-  padding: 18px; cursor: pointer; transition: transform .08s, box-shadow .12s;
-  display: flex; align-items: center; gap: 14px;
-  border-left: 5px solid var(--accent);
-}
-.school-card:active { transform: scale(.98); }
-.school-card:hover { box-shadow: 0 3px 10px rgba(0,0,0,.08); }
-.school-icon { font-size: 28px; }
-.school-name { font-size: 16px; font-weight: 700; }
-.school-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.school-head .school-icon { font-size: 22px; align-self: center; }
+.school-head-name { font-size: 18px; font-weight: 700; }
+.school-head-sub { font-size: 12px; opacity: .85; }
+.info-icon { font-size: 24px; }
 
-/* ---- 学校トップ（年度・回一覧） ---- */
+/* ---- 試験一覧（年度・編グループ） ---- */
 .year-group { margin-bottom: 22px; }
 .year-head {
   font-size: 16px; font-weight: 700; color: var(--accent-dark);
@@ -202,7 +197,7 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 }
 
 @media print {
-  #app-header, #home, #school, #info, #detail, #lightbox { display: none !important; }
+  #app-header, #home, #info, #detail, #lightbox { display: none !important; }
   /* ★物理mm + block（vh/flex禁止）: iOS Safariで1画像=1枚を安定させる */
   #print-container { display: block !important; }
   .print-page {
