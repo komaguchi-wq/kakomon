@@ -15,7 +15,7 @@ const $ = (sel) => document.querySelector(sel);
 
 // 画像repoのベースURL（ローカル開発時は隣のディレクトリを参照）
 // 有名中など大きい学校は試験（=学校）単位のimgBaseで画像repoを分割できる
-const IMG_V = 3; // 画像を全差し替えしたら+1（キャッシュ破棄用）
+const IMG_V = 4; // 画像を全差し替えしたら+1（キャッシュ破棄用）
 function imgBase(school, exam) {
   const local = ['localhost', '127.0.0.1'].includes(location.hostname);
   if (exam && exam.imgBaseProd) return local ? exam.imgBaseLocal : exam.imgBaseProd;
