@@ -4,14 +4,31 @@
  "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-yumeichu-01",
  "imgBaseLocal": "../kakomon-img-yumeichu-01",
  "info": {
+  "title": "夏期講習提出内容一覧",
+  "subtitle": "理科・社会の対応表／取り組み方／提出表",
   "pages": [
    {
-    "full": "info/p01.jpg",
-    "small": "info/p01_small.jpg"
+    "full": "info/natsu01.jpg",
+    "small": "info/natsu01_small.jpg",
+    "landscape": true
    },
    {
-    "full": "info/p02.jpg",
-    "small": "info/p02_small.jpg"
+    "full": "info/natsu02.jpg",
+    "small": "info/natsu02_small.jpg",
+    "landscape": true
+   },
+   {
+    "full": "info/natsu03.jpg",
+    "small": "info/natsu03_small.jpg"
+   },
+   {
+    "full": "info/natsu04.jpg",
+    "small": "info/natsu04_small.jpg",
+    "landscape": true
+   },
+   {
+    "full": "info/natsu05.jpg",
+    "small": "info/natsu05_small.jpg"
    }
   ]
  },

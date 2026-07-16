@@ -105,8 +105,8 @@ function renderHome() {
       <div class="exam-card info-card" data-info="${s.id}">
         <span class="info-icon">📋</span>
         <div>
-          <div class="exam-name">学校情報・出題傾向&対策</div>
-          <div class="exam-sub">受験情報・教科別の出題分析</div>
+          <div class="exam-name">${data.info.title || '学校情報・出題傾向&対策'}</div>
+          <div class="exam-sub">${data.info.subtitle || '受験情報・教科別の出題分析'}</div>
         </div>
       </div>`;
     }
@@ -143,7 +143,7 @@ function renderHome() {
 // ---- 学校情報・出題傾向 ----
 function openInfo() {
   state.exam = null;  // 学校レベルのimgBaseを使う（試験単位imgBase上書きの解除）
-  $('#info-title').textContent = `📋 ${state.school.name} 学校情報・出題傾向&対策`;
+  $('#info-title').textContent = `📋 ${state.school.name} ${state.school.info.title || '学校情報・出題傾向&対策'}`;
   $('#info-stack').innerHTML = state.school.info.pages.map((p, i) => `
     <div class="page-item">
       <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" alt="ページ${i + 1}" loading="lazy">
@@ -454,8 +454,40 @@ function printSheets(pages) {
   firePrint(container);
 }
 
-function printInfo() {
-  printDuo(state.school.info.pages, false, $('#info-print-btn'));
+// 学校情報の印刷: 縦長ページはB4横2面付け、横長ページ（landscape:true）は1枚で1面
+async function printInfo() {
+  const pages = state.school.info.pages;
+  if (!pages || !pages.length) return;
+  const btn = $('#info-print-btn');
+  const label = btn.textContent;
+  try {
+    setPageStyle('@media print { @page { size: B4 landscape; margin: 8mm; } }');
+    const container = $('#print-container');
+    container.innerHTML = '';
+    let i = 0;
+    while (i < pages.length) {
+      btn.textContent = `準備中… ${i + 1}/${pages.length}`;
+      let src;
+      if (pages[i].landscape) {
+        src = imgUrl(pages[i].full);
+        i += 1;
+      } else {
+        const pair = (i + 1 < pages.length && !pages[i + 1].landscape)
+          ? pages.slice(i, i + 2) : pages.slice(i, i + 1);
+        src = await composePair(pair, false);
+        i += pair.length;
+      }
+      const div = document.createElement('div');
+      div.className = 'print-page duo';
+      const im = document.createElement('img');
+      im.src = src;
+      div.appendChild(im);
+      container.appendChild(div);
+    }
+    await firePrint(container);
+  } finally {
+    btn.textContent = label;
+  }
 }
 
 init();
