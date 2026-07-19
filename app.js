@@ -242,7 +242,7 @@ function renderPrintButtons() {
 // ---- 家族共有クラウド同期（○×表を端末非依存にする） ----
 // GAS（grade-sync.gs）を「アクセス: 全員」でデプロイし、/exec URL を下の "" に入れると有効になる。
 // 未設定の間は従来通り端末内保存のみ。データはキー単位で「更新時刻が新しい方」を採用してマージ。
-const GRADE_SYNC_URL = localStorage.getItem('grade-sync-url') || '';
+const GRADE_SYNC_URL = localStorage.getItem('grade-sync-url') || 'https://script.google.com/macros/s/AKfycbwvfaMQjYIL56_EodEPWsTU27IRHz4FIkkU9GKt2wwSI1bRNEcK5M1tia3VGGwEQVmy/exec';
 const GRADE_SYNC_APP = 'kakomon';
 const GRADE_SYNC_PREFIXES = ['kakomon:'];
 const GRADE_SYNC_META = 'kakomon-sync-t';   // キーごとの最終更新時刻(ms)
