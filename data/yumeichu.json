@@ -833,10 +833,6 @@
       {
        "full": "komatoho/sansu/q_03.jpg",
        "small": "komatoho/sansu/q_03_small.jpg"
-      },
-      {
-       "full": "komatoho/sansu/q_04.jpg",
-       "small": "komatoho/sansu/q_04_small.jpg"
       }
      ],
      "sheetPages": [
@@ -911,6 +907,10 @@
       {
        "full": "komatoho/kokugo/q_11.jpg",
        "small": "komatoho/kokugo/q_11_small.jpg"
+      },
+      {
+       "full": "komatoho/kokugo/q_12.jpg",
+       "small": "komatoho/kokugo/q_12_small.jpg"
       }
      ],
      "sheetPages": [
@@ -1971,6 +1971,10 @@
       {
        "full": "seiko/rika/q_10.jpg",
        "small": "seiko/rika/q_10_small.jpg"
+      },
+      {
+       "full": "seiko/rika/q_11.jpg",
+       "small": "seiko/rika/q_11_small.jpg"
       }
      ],
      "sheetPages": [
@@ -2061,10 +2065,6 @@
       {
        "full": "seiko/kokugo/q_13.jpg",
        "small": "seiko/kokugo/q_13_small.jpg"
-      },
-      {
-       "full": "seiko/kokugo/q_14.jpg",
-       "small": "seiko/kokugo/q_14_small.jpg"
       }
      ],
      "sheetPages": [
@@ -2567,10 +2567,6 @@
       {
        "full": "rikkyo-niiza/rika/q_08.jpg",
        "small": "rikkyo-niiza/rika/q_08_small.jpg"
-      },
-      {
-       "full": "rikkyo-niiza/rika/q_09.jpg",
-       "small": "rikkyo-niiza/rika/q_09_small.jpg"
       }
      ],
      "sheetPages": [
@@ -2633,6 +2629,10 @@
       {
        "full": "rikkyo-niiza/kokugo/q_07.jpg",
        "small": "rikkyo-niiza/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "rikkyo-niiza/kokugo/q_08.jpg",
+       "small": "rikkyo-niiza/kokugo/q_08_small.jpg"
       }
      ],
      "sheetPages": [
@@ -4905,10 +4905,6 @@
       {
        "full": "keio-chutobu/rika/q_06.jpg",
        "small": "keio-chutobu/rika/q_06_small.jpg"
-      },
-      {
-       "full": "keio-chutobu/rika/q_07.jpg",
-       "small": "keio-chutobu/rika/q_07_small.jpg"
       }
      ],
      "sheetPages": [
@@ -4971,6 +4967,10 @@
       {
        "full": "keio-chutobu/kokugo/q_08.jpg",
        "small": "keio-chutobu/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "keio-chutobu/kokugo/q_09.jpg",
+       "small": "keio-chutobu/kokugo/q_09_small.jpg"
       }
      ],
      "sheetPages": [
@@ -7503,10 +7503,6 @@
       {
        "full": "futaba/rika/q_06.jpg",
        "small": "futaba/rika/q_06_small.jpg"
-      },
-      {
-       "full": "futaba/rika/q_07.jpg",
-       "small": "futaba/rika/q_07_small.jpg"
       }
      ],
      "sheetPages": [
@@ -7569,6 +7565,10 @@
       {
        "full": "futaba/kokugo/q_07.jpg",
        "small": "futaba/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "futaba/kokugo/q_08.jpg",
+       "small": "futaba/kokugo/q_08_small.jpg"
       }
      ],
      "sheetPages": [
@@ -9943,10 +9943,6 @@
       {
        "full": "toyoeiwa/rika/q_09.jpg",
        "small": "toyoeiwa/rika/q_09_small.jpg"
-      },
-      {
-       "full": "toyoeiwa/rika/q_10.jpg",
-       "small": "toyoeiwa/rika/q_10_small.jpg"
       }
      ],
      "sheetPages": [
@@ -10017,6 +10013,10 @@
       {
        "full": "toyoeiwa/kokugo/q_10.jpg",
        "small": "toyoeiwa/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "toyoeiwa/kokugo/q_11.jpg",
+       "small": "toyoeiwa/kokugo/q_11_small.jpg"
       }
      ],
      "sheetPages": [
