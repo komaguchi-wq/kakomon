@@ -43,7 +43,7 @@ async function init() {
   $('#lightbox-close').addEventListener('click', closeLightbox);
   $('#info-print-btn').addEventListener('click', () => printInfo());
   // ○×表のクラウド同期（表示中の教科があれば取り込み後に再描画）
-  gradeSyncInit(() => { if (state.subject) renderDetail(); });
+  gradeSyncInit(() => { if (state.subject) renderDetail(); else renderHome(); });   // 同期取り込み後は棒グラフも更新
 }
 
 // ---- 画面遷移 ----
@@ -60,6 +60,7 @@ function leaveHome() { state.homeScroll = window.scrollY; }
 function goBack() {
   state.school = null;
   state.exam = null;
+  renderHome();   // 採点後の棒グラフを反映
   showScreen('home');
 }
 
@@ -83,6 +84,52 @@ function examGroupsOf(data) {
   for (const y in byYear) byYear[y].sort((a, b) => roundOrder(a.round) - roundOrder(b.round));
   return Object.keys(byYear).sort().reverse()
     .map((y) => ({ label: y + '年度', exams: byYear[y] }));
+}
+
+// ---- 試験カードの正誤棒グラフ（全教科の小問を合算。緑=正答率60%以上 / 黄=60%未満 / 灰=未） ----
+const GOOD_RATE = 0.6;   // ★2026-08-23 ユーザー確定・全アプリ共通
+function examBarStats(schoolId, ex) {
+  let total = 0, attempted = 0, good = 0;
+  for (const sub of ex.subjects || []) {
+    const qs = sub.questions || [];
+    if (!qs.length) continue;
+    let g = null;
+    try { g = JSON.parse(localStorage.getItem(`kakomon:${schoolId}:${ex.id}:${sub.id}`)); } catch (e) {}
+    const attempts = (g && Array.isArray(g.attempts)) ? g.attempts : [];
+    for (const q of qs) {
+      total++;
+      let n = 0, ok = 0;
+      for (const a of attempts) {
+        const m = a && a.marks ? a.marks[q] : '';
+        if (m === 'o') { n++; ok++; } else if (m === 'x') { n++; }
+      }
+      if (n > 0) { attempted++; if (ok / n >= GOOD_RATE) good++; }
+    }
+  }
+  return { total, attempted, good, low: attempted - good, unanswered: total - attempted };
+}
+function unitBarBlock(st) {
+  if (!(st.total > 0)) return '';
+  const pct = (n) => (n / st.total * 100);
+  const donePct = Math.round(st.attempted / st.total * 100);
+  return `
+      <div class="unit-card-row">
+        <div class="unit-card-info">
+          <div class="unit-card-bar" title="緑=正答率60%以上 / 黄=60%未満 / 灰=未回答">
+            <div class="unit-card-bar-good" style="width:${pct(st.good)}%"></div>
+            <div class="unit-card-bar-low" style="width:${pct(st.low)}%"></div>
+          </div>
+          <div class="unit-card-legend">
+            <span class="lg-good">○ ${st.good}</span>
+            <span class="lg-low">△ ${st.low}</span>
+            <span class="lg-none">未 ${st.unanswered}</span>
+          </div>
+        </div>
+        <div class="unit-card-stats">
+          <div class="unit-card-accuracy">${donePct}%</div>
+          <div class="unit-card-detail">完了 ${st.attempted}/${st.total}</div>
+        </div>
+      </div>`;
 }
 
 // ---- トップ: 学校セクション×試験一覧 ----
@@ -119,7 +166,7 @@ function renderHome() {
         html += `
           <div class="exam-card" data-school="${s.id}" data-id="${ex.id}">
             <div class="exam-name">${ex.label}</div>
-            <div class="exam-sub">${ex.roundNote ? ex.roundNote + '／' : ''}${subs}</div>
+            <div class="exam-sub">${ex.roundNote ? ex.roundNote + '／' : ''}${subs}</div>${unitBarBlock(examBarStats(s.id, ex))}
           </div>`;
       }
       html += '</div></div>';
