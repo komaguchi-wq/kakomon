@@ -265,11 +265,133 @@ function renderDetail() {
       ? `${sub.name}の解答です（この回は解答のみ収録・全教科分をまとめて表示しています）。`
       : `${sub.name}の解答解説です。画像タップで拡大。`;
     html += sub.explPages.map((p, i) => pageImg(p, i, '解説')).join('');
+    // 解いた解答用紙（原本・赤採点そのまま・追加日付入り）を解答タブ末尾に
+    if (sub.solvedPages && sub.solvedPages.length) {
+      html += `<h3 class="section-head">解いた解答用紙</h3>`;
+      html += sub.solvedPages.map((p, i) => `
+    <div class="page-item">
+      ${p.date ? `<div class="page-date">${p.date} 追加</div>` : ''}
+      <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" alt="解いた解答用紙${i + 1}" loading="lazy">
+    </div>`).join('');
+    }
   }
   stack.innerHTML = html;
   bindLightbox(stack);
   bindGrading();
   renderPrintButtons();
+  loadProposal();
+}
+
+// ---- AI正誤提案（proposals/{school}/{exam}/{subject}.json: 解答用紙の赤○✓を読み取った○×）----
+// 「仮入力する」→ 空いている回（1〜3回目の最初の未入力列）に仮の○×を表示 → 直して「確定」で保存。
+// 確定/閉じる後は同じ提案（id）を再表示しない（kakomon-proposal-done:{id}）。
+let proposalState = null;   // { id, t, grades:{q:bool}, score, date, review:false }
+function proposalDoneKey(id) { return `kakomon-proposal-done:${id}`; }
+async function loadProposal() {
+  proposalState = null;
+  const box = document.getElementById('proposal-banner');
+  if (box) box.remove();
+  if (!state.school || !state.exam || !state.subject || !(state.subject.questions || []).length) return;
+  const sch = state.school.id, ex = state.exam.id, sub = state.subject.id;
+  let prop = null;
+  try {
+    const r = await fetch(`proposals/${sch}/${ex}/${sub}.json`, { cache: 'no-cache' });
+    if (!r.ok) return;
+    prop = await r.json();
+  } catch (e) { return; }
+  if (!state.exam || state.exam.id !== ex || state.subject.id !== sub) return;
+  if (!prop || !prop.grades) return;
+  const id = prop.id || `${sch}/${ex}/${sub}:${prop.created || ''}`;
+  try { if (localStorage.getItem(proposalDoneKey(id)) === '1') return; } catch (e) {}
+  const qs = new Set(state.subject.questions || []);
+  const grades = {};
+  for (const q of Object.keys(prop.grades)) {
+    const v = prop.grades[q];
+    if (qs.has(q) && (v === true || v === false)) grades[q] = v;
+  }
+  if (!Object.keys(grades).length) return;
+  // 入れる回: 1〜3回目のうち最初の「○×が1つも無い」列（全部埋まっていれば3回目）
+  const g = loadGrades();
+  let t = g.attempts.findIndex((a) => !Object.values(a.marks || {}).some((v) => v));
+  if (t < 0) t = 2;
+  proposalState = { id, t, grades, score: prop.score != null ? String(prop.score) : '', date: prop.created || '', review: false };
+  renderProposalBanner();
+}
+function renderProposalBanner() {
+  let box = document.getElementById('proposal-banner');
+  const grading = document.querySelector('.grading');
+  if (!proposalState || !grading) { if (box) box.remove(); return; }
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'proposal-banner';
+    box.className = 'proposal-banner';
+    grading.insertBefore(box, grading.querySelector('.grade-table-wrap'));
+  }
+  const ps = proposalState;
+  const vals = Object.values(ps.grades);
+  const nOk = vals.filter((v) => v).length;
+  if (!ps.review) {
+    box.innerHTML = `
+      <span class="pb-text">🤖 解答用紙から読み取った○×提案があります（${vals.length}件: ○${nOk} ×${vals.length - nOk}${ps.score ? '・合計' + ps.score + '点' : ''}）→ <b>${ps.t + 1}回目</b>に入れます</span>
+      <span class="pb-btns">
+        <button class="pb-btn pb-primary" id="pb-apply">仮入力する</button>
+        <button class="pb-btn" id="pb-dismiss">閉じる</button>
+      </span>`;
+    box.querySelector('#pb-apply').addEventListener('click', applyProposal);
+    box.querySelector('#pb-dismiss').addEventListener('click', dismissProposal);
+  } else {
+    box.innerHTML = `
+      <span class="pb-text">✏️ ${ps.t + 1}回目に仮入力しました。違うものは○×をタップして直し、最後に「確定」を押してください（確定まで保存されません）</span>
+      <span class="pb-btns">
+        <button class="pb-btn pb-primary" id="pb-confirm">確定</button>
+        <button class="pb-btn" id="pb-cancel">取り消し</button>
+      </span>`;
+    box.querySelector('#pb-confirm').addEventListener('click', confirmProposal);
+    box.querySelector('#pb-cancel').addEventListener('click', cancelProposal);
+  }
+}
+function applyProposal() {
+  if (!proposalState) return;
+  const ps = proposalState;
+  ps.review = true;
+  ps.pending = Object.assign({}, ps.grades);   // {q: bool} 画面上の仮の値（タップで反転）
+  for (const q of Object.keys(ps.pending)) {
+    const btn = document.querySelector(`.mark-btn[data-q="${CSS.escape(q)}"][data-t="${ps.t}"]`);
+    if (!btn) continue;
+    const v = ps.pending[q] ? 'o' : 'x';
+    btn.className = `mark-btn pend ${v}`;
+    btn.textContent = v === 'o' ? '○' : '×';
+  }
+  const wrap = document.querySelector('.grade-table-wrap');
+  if (wrap && wrap.hidden) { wrap.hidden = false; sessionStorage.setItem('kakomon-grading-open', '1'); const tm = document.querySelector('#grading-toggle .toggle-mark'); if (tm) tm.textContent = '▲ とじる'; }
+  const si = document.querySelector(`.score-input[data-t="${ps.t}"]`);
+  if (si && ps.score && !si.value) { si.value = ps.score; si.classList.add('pend'); }
+  const di = document.querySelector(`.date-input[data-t="${ps.t}"]`);
+  if (di && ps.date && !di.value) { di.value = ps.date; di.classList.add('pend'); }
+  renderProposalBanner();
+}
+function confirmProposal() {
+  const ps = proposalState;
+  if (!ps || !ps.review) return;
+  const g = loadGrades();
+  for (const q of Object.keys(ps.pending)) g.attempts[ps.t].marks[q] = ps.pending[q] ? 'o' : 'x';
+  const si = document.querySelector(`.score-input[data-t="${ps.t}"]`);
+  if (si && si.value) g.attempts[ps.t].score = si.value;
+  const di = document.querySelector(`.date-input[data-t="${ps.t}"]`);
+  if (di && di.value) g.attempts[ps.t].date = di.value;
+  saveGrades(g);
+  try { localStorage.setItem(proposalDoneKey(ps.id), '1'); } catch (e) {}
+  proposalState = null;
+  renderDetail();
+}
+function cancelProposal() {
+  proposalState = null;
+  renderDetail();   // 画面の仮の値を捨てて描き直し（保存はしていない）
+}
+function dismissProposal() {
+  if (proposalState) { try { localStorage.setItem(proposalDoneKey(proposalState.id), '1'); } catch (e) {} }
+  proposalState = null;
+  renderProposalBanner();
 }
 
 function renderPrintButtons() {
@@ -447,8 +569,18 @@ function bindGrading() {
   });
   document.querySelectorAll('.mark-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const g = loadGrades();
       const { q, t } = btn.dataset;
+      // 提案レビュー中は、その回の列だけ仮の値を反転（保存しない）
+      if (proposalState && proposalState.review && Number(t) === proposalState.t) {
+        const cur = proposalState.pending[q];
+        const next = cur === true ? false : cur === false ? null : true;   // ○→×→・→○
+        if (next === null) delete proposalState.pending[q]; else proposalState.pending[q] = next;
+        const v = next === true ? 'o' : next === false ? 'x' : '';
+        btn.className = `mark-btn pend ${v}`;
+        btn.textContent = v === 'o' ? '○' : v === 'x' ? '×' : '・';
+        return;
+      }
+      const g = loadGrades();
       const cur = g.attempts[t].marks[q] || '';
       const next = cur === '' ? 'o' : cur === 'o' ? 'x' : '';  // ・→○→×→・
       g.attempts[t].marks[q] = next;

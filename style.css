@@ -241,3 +241,17 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 .unit-card-legend { display: flex; gap: 10px; margin-top: 4px; font-size: 11px; color: var(--muted); }
 .unit-card-legend .lg-good { color: #34c759; font-weight: 600; }
 .unit-card-legend .lg-low  { color: #ff9f0a; font-weight: 600; }
+
+/* AI正誤提案バナー／仮入力の見た目 */
+.proposal-banner {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+  margin: 10px 0 4px; padding: 8px 10px;
+  background: #fff7e0; border: 1px solid #f0c060; border-radius: 8px; font-size: 13px; line-height: 1.4;
+}
+.proposal-banner .pb-text { flex: 1 1 200px; }
+.proposal-banner .pb-btns { display: flex; gap: 6px; flex: 0 0 auto; }
+.pb-btn { padding: 6px 12px; font-size: 13px; border-radius: 8px; border: 1px solid var(--line); background: #fff; cursor: pointer; font-family: inherit; }
+.pb-btn.pb-primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+.mark-btn.pend { box-shadow: 0 0 0 2px #f0c060 inset; }
+.score-input.pend, .date-input.pend { border-color: #f0c060; background: #fff7e0; }
+.page-date { font-size: 11px; color: var(--muted); margin: 0 0 2px 2px; }
