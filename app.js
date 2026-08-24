@@ -33,6 +33,7 @@ async function init() {
       fetch(`data/${s.id}.json`, { cache: 'no-store' }).then((r) => r.json())));
     state.schools.forEach((s, i) => { state.schoolCache[s.id] = datas[i]; });
     renderHome();
+    openFromHash();   // #school/exam/subject で直接その教科を開く（正誤提案の案内URL用）
   } catch (e) {
     $('#school-list').innerHTML = '<p class="loading">学校一覧の読み込みに失敗しました。</p>';
     console.error(e);
@@ -44,6 +45,22 @@ async function init() {
   $('#info-print-btn').addEventListener('click', () => printInfo());
   // ○×表のクラウド同期（表示中の教科があれば取り込み後に再描画）
   gradeSyncInit(() => { if (state.subject) renderDetail(); else renderHome(); });   // 同期取り込み後は棒グラフも更新
+}
+
+// ---- ディープリンク（#school/exam/subject）----
+function openFromHash() {
+  const raw = decodeURIComponent(location.hash.replace(/^#/, ''));
+  if (!raw) return;
+  const [schoolId, examId, subjectId] = raw.split('/');
+  const data = state.schoolCache[schoolId];
+  if (!data) return;
+  state.school = Object.assign({ id: schoolId }, data);
+  if (!examId || !data.exams.some((e) => e.id === examId)) return;
+  openExam(examId);
+  if (subjectId) {
+    const sub = state.exam.subjects.find((s) => s.id === subjectId);
+    if (sub) { state.subject = sub; renderSubjectTabs(); renderDetail(); }
+  }
 }
 
 // ---- 画面遷移 ----
