@@ -1,0 +1,30 @@
+{
+ "id": "2026-08-24-seigo-tsukuba-kokugo",
+ "created": "2026-08-24",
+ "source": "claude-vision",
+ "grades": {
+  "一 (1)": true,
+  "一 (2)": true,
+  "一 (3)": true,
+  "一 (4)": true,
+  "一 (5)": true,
+  "一 (6)": true,
+  "一 (7)a": false,
+  "一 (7)b": true,
+  "一 (8)": true,
+  "一 (9)(i)": true,
+  "一 (9)(ii)": true,
+  "一 (9)(iii)": true,
+  "一 (10)x": false,
+  "一 (10)y": false,
+  "二 (1)": true,
+  "二 (2)": true,
+  "二 (3)": true,
+  "二 (4)": true,
+  "二 (5)": false,
+  "二 (6)": true,
+  "二 (7)": false,
+  "二 (8)": false
+ },
+ "score": 35
+}
