@@ -2,7 +2,13 @@
  {
   "id": "shibumaku",
   "name": "渋谷教育学園幕張中学校",
-  "yearsLabel": "2023〜2026年度・8回分"
+  "yearsLabel": "2018〜2026年度・16回分"
+ },
+ {
+  "id": "sfc",
+  "name": "慶應義塾湘南藤沢中等部",
+  "yearsLabel": "2017〜2026年度・10回分",
+  "shortName": "慶應湘南藤沢"
  },
  {
   "id": "hiroo",
