@@ -56,6 +56,10 @@
    {
     "full": "info/p13.jpg",
     "small": "info/p13_small.jpg"
+   },
+   {
+    "full": "info/p14.jpg",
+    "small": "info/p14_small.jpg"
    }
   ]
  },
@@ -3273,7 +3277,12 @@
        "small": "2021-2/sansu/q_04_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2021-2/sansu/sheet_1.jpg",
+       "small": "2021-2/sansu/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2021-2/sansu/e_01.jpg",
@@ -3358,7 +3367,16 @@
        "small": "2021-2/shakai/q_10_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2021-2/shakai/sheet_1.jpg",
+       "small": "2021-2/shakai/sheet_1_small.jpg"
+      },
+      {
+       "full": "2021-2/shakai/sheet_2.jpg",
+       "small": "2021-2/shakai/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2021-2/shakai/e_01.jpg",
@@ -3476,7 +3494,16 @@
        "small": "2021-2/rika/q_12_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2021-2/rika/sheet_1.jpg",
+       "small": "2021-2/rika/sheet_1_small.jpg"
+      },
+      {
+       "full": "2021-2/rika/sheet_2.jpg",
+       "small": "2021-2/rika/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2021-2/rika/e_01.jpg",
@@ -3496,7 +3523,8 @@
       }
      ],
      "questions": [
-      "1(1)①",
+      "1(1)①ア",
+      "1(1)①イ",
       "1(1)②",
       "1(2)①",
       "1(2)②",
@@ -3517,11 +3545,15 @@
       "2(5)",
       "2(6)",
       "2(7)",
-      "2(8)",
+      "2(8)Ⅰ",
+      "2(8)Ⅱ",
+      "2(8)Ⅲ",
       "2(9)",
-      "3(1)",
+      "3(1)窒素",
+      "3(1)酸素",
       "3(2)",
-      "3(3)①",
+      "3(3)①25℃",
+      "3(3)①50℃",
       "3(3)②",
       "3(3)③",
       "3(4)",
@@ -3574,7 +3606,12 @@
        "small": "2021-2/kokugo/q_09_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2021-2/kokugo/sheet_1.jpg",
+       "small": "2021-2/kokugo/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2021-2/kokugo/e_01.jpg",
@@ -3611,7 +3648,8 @@
       "二 問4",
       "二 問5",
       "二 問6",
-      "二 問7",
+      "二 問7①",
+      "二 問7②",
       "二 問8"
      ]
     }
@@ -3651,7 +3689,12 @@
        "small": "2021-1/sansu/q_04_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2021-1/sansu/sheet_1.jpg",
+       "small": "2021-1/sansu/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2021-1/sansu/e_01.jpg",
@@ -3675,14 +3718,17 @@
       }
      ],
      "questions": [
-      "1(1)",
+      "1(1)5△10",
+      "1(1)5△30",
+      "1(1)5△60",
       "1(2)",
       "1(3)",
       "2(1)",
       "2(2)",
       "2(3)",
       "3(1)",
-      "3(2)",
+      "3(2)あ",
+      "3(2)い",
       "3(3)",
       "4(1)",
       "4(2)",
@@ -3735,7 +3781,16 @@
        "small": "2021-1/shakai/q_09_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2021-1/shakai/sheet_1.jpg",
+       "small": "2021-1/shakai/sheet_1_small.jpg"
+      },
+      {
+       "full": "2021-1/shakai/sheet_2.jpg",
+       "small": "2021-1/shakai/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2021-1/shakai/e_01.jpg",
@@ -3790,7 +3845,8 @@
       "3 問4",
       "3 問5",
       "3 問6(1)",
-      "3 問6(2)",
+      "3 問6(2)都道府県名",
+      "3 問6(2)境は何か",
       "3 問7",
       "3 問8"
      ]
@@ -3859,7 +3915,16 @@
        "small": "2021-1/rika/q_14_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2021-1/rika/sheet_1.jpg",
+       "small": "2021-1/rika/sheet_1_small.jpg"
+      },
+      {
+       "full": "2021-1/rika/sheet_2.jpg",
+       "small": "2021-1/rika/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2021-1/rika/e_01.jpg",
@@ -3880,14 +3945,19 @@
      ],
      "questions": [
       "1(1)",
-      "1(2)",
+      "1(2)①",
+      "1(2)②",
       "1(3)",
       "1(4)",
       "1(5)",
       "2(1)",
-      "2(2)",
-      "2(3)",
-      "2(4)",
+      "2(2)①",
+      "2(2)②",
+      "2(3)①",
+      "2(3)②",
+      "2(4)①",
+      "2(4)②",
+      "2(4)③",
       "2(5)①",
       "2(5)②",
       "2(5)③",
@@ -3903,8 +3973,7 @@
       "3(6)",
       "4(1)①",
       "4(1)②",
-      "4(1)あ",
-      "4(1)い",
+      "4(1)あい",
       "4(1)う",
       "4(2)",
       "4(3)",
@@ -3949,7 +4018,12 @@
        "small": "2021-1/kokugo/q_07_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2021-1/kokugo/sheet_1.jpg",
+       "small": "2021-1/kokugo/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2021-1/kokugo/e_01.jpg",
@@ -3986,7 +4060,8 @@
       "二 問2Y",
       "二 問3",
       "二 問4",
-      "二 問5",
+      "二 問5①",
+      "二 問5②",
       "二 問6",
       "二 問7",
       "二 問8"
@@ -4024,7 +4099,12 @@
        "small": "2020-2/sansu/q_03_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2020-2/sansu/sheet_1.jpg",
+       "small": "2020-2/sansu/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2020-2/sansu/e_01.jpg",
@@ -4116,7 +4196,16 @@
        "small": "2020-2/shakai/q_11_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2020-2/shakai/sheet_1.jpg",
+       "small": "2020-2/shakai/sheet_1_small.jpg"
+      },
+      {
+       "full": "2020-2/shakai/sheet_2.jpg",
+       "small": "2020-2/shakai/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2020-2/shakai/e_01.jpg",
@@ -4229,7 +4318,16 @@
        "small": "2020-2/rika/q_10_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2020-2/rika/sheet_1.jpg",
+       "small": "2020-2/rika/sheet_1_small.jpg"
+      },
+      {
+       "full": "2020-2/rika/sheet_2.jpg",
+       "small": "2020-2/rika/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2020-2/rika/e_01.jpg",
@@ -4248,16 +4346,15 @@
       "1(1)",
       "1(2)",
       "1(3)",
-      "1(4)",
+      "1(4)①",
+      "1(4)②",
       "1(5)",
       "2(1)",
       "2(2)",
       "2(3)",
       "2(4)",
       "2(5)",
-      "3(1)Ⅰ",
-      "3(1)Ⅱ",
-      "3(1)Ⅲ",
+      "3(1)",
       "3(2)①",
       "3(2)②",
       "3(3)①",
@@ -4271,7 +4368,8 @@
       "3(7)④",
       "3(7)⑤",
       "4(1)",
-      "4(2)",
+      "4(2)①",
+      "4(2)②",
       "4(3)②",
       "4(3)③",
       "4(4)ア",
@@ -4319,7 +4417,12 @@
        "small": "2020-2/kokugo/q_07_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2020-2/kokugo/sheet_1.jpg",
+       "small": "2020-2/kokugo/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2020-2/kokugo/e_01.jpg",
@@ -4348,14 +4451,16 @@
       "一 問4",
       "一 問5",
       "一 問6",
-      "一 問7",
+      "一 問7①",
+      "一 問7②",
       "二 問1(a)",
       "二 問1(b)",
       "二 問1(c)",
       "二 問2",
       "二 問3",
       "二 問4",
-      "二 問5",
+      "二 問5①",
+      "二 問5②",
       "二 問6",
       "二 問7",
       "二 問8"
@@ -4401,7 +4506,12 @@
        "small": "2020-1/sansu/q_05_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2020-1/sansu/sheet_1.jpg",
+       "small": "2020-1/sansu/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2020-1/sansu/e_01.jpg",
@@ -4502,7 +4612,16 @@
        "small": "2020-1/shakai/q_13_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2020-1/shakai/sheet_1.jpg",
+       "small": "2020-1/shakai/sheet_1_small.jpg"
+      },
+      {
+       "full": "2020-1/shakai/sheet_2.jpg",
+       "small": "2020-1/shakai/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2020-1/shakai/e_01.jpg",
@@ -4535,7 +4654,8 @@
       "1 問3",
       "1 問4",
       "1 問5",
-      "1 問6",
+      "1 問6①",
+      "1 問6②",
       "1 問7",
       "1 問8",
       "1 問9",
@@ -4619,7 +4739,16 @@
        "small": "2020-1/rika/q_11_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2020-1/rika/sheet_1.jpg",
+       "small": "2020-1/rika/sheet_1_small.jpg"
+      },
+      {
+       "full": "2020-1/rika/sheet_2.jpg",
+       "small": "2020-1/rika/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2020-1/rika/e_01.jpg",
@@ -4639,12 +4768,14 @@
       }
      ],
      "questions": [
-      "1(1)",
+      "1(1)①",
+      "1(1)②",
       "1(2)",
       "1(3)",
       "1(4)",
       "1(5)①",
-      "1(5)②",
+      "1(5)②右目",
+      "1(5)②左目",
       "2(1)①",
       "2(1)②",
       "2(2)ア",
@@ -4730,7 +4861,12 @@
        "small": "2020-1/kokugo/q_08_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2020-1/kokugo/sheet_1.jpg",
+       "small": "2020-1/kokugo/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2020-1/kokugo/e_01.jpg",
@@ -4754,7 +4890,8 @@
       "一 問4",
       "一 問5",
       "一 問6",
-      "一 問7",
+      "一 問7①",
+      "一 問7②",
       "二 問1(a)",
       "二 問1(b)",
       "二 問1(c)",
@@ -4804,7 +4941,12 @@
        "small": "2019-2/sansu/q_04_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2019-2/sansu/sheet_1.jpg",
+       "small": "2019-2/sansu/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2019-2/sansu/e_01.jpg",
@@ -4824,7 +4966,9 @@
       }
      ],
      "questions": [
-      "1(1)",
+      "1(1)〈8〉",
+      "1(1)〈9〉",
+      "1(1)〈72〉",
       "1(2)",
       "2(1)",
       "2(2)",
@@ -4875,7 +5019,16 @@
        "small": "2019-2/shakai/q_07_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2019-2/shakai/sheet_1.jpg",
+       "small": "2019-2/shakai/sheet_1_small.jpg"
+      },
+      {
+       "full": "2019-2/shakai/sheet_2.jpg",
+       "small": "2019-2/shakai/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2019-2/shakai/e_01.jpg",
@@ -4904,7 +5057,8 @@
       "1 問7",
       "1 問8",
       "1 問9",
-      "1 問10",
+      "1 問10①",
+      "1 問10②",
       "1 問11",
       "1 問12",
       "2 問1",
@@ -4972,7 +5126,16 @@
        "small": "2019-2/rika/q_08_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2019-2/rika/sheet_1.jpg",
+       "small": "2019-2/rika/sheet_1_small.jpg"
+      },
+      {
+       "full": "2019-2/rika/sheet_2.jpg",
+       "small": "2019-2/rika/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2019-2/rika/e_01.jpg",
@@ -4994,19 +5157,32 @@
       "1(4)",
       "1(5)",
       "1(6)",
-      "1(7)",
+      "1(7)①②",
+      "1(7)③",
+      "1(7)④",
       "1(8)",
       "1(9)",
-      "2(1)",
+      "2(1)キョウチクトウ",
+      "2(1)サクラ",
+      "2(1)アジサイ",
       "2(2)",
-      "2(3)",
+      "2(3)②",
+      "2(3)③",
+      "2(3)④",
+      "2(3)⑤",
       "2(4)",
       "2(5)",
-      "3(1)",
+      "3(1)あ",
+      "3(1)い",
+      "3(1)う",
       "3(2)",
-      "3(3)Ⅰ",
+      "3(3)Ⅰメタン",
+      "3(3)Ⅰプロパン",
+      "3(3)Ⅰブタン",
       "3(3)Ⅱ",
-      "3(4)",
+      "3(4)か",
+      "3(4)き",
+      "3(4)く",
       "4(1)",
       "4(2)",
       "4(3)"
@@ -5052,7 +5228,12 @@
        "small": "2019-2/kokugo/q_08_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2019-2/kokugo/sheet_1.jpg",
+       "small": "2019-2/kokugo/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2019-2/kokugo/e_01.jpg",
@@ -5082,8 +5263,10 @@
       "二 問3",
       "二 問4",
       "二 問5",
-      "二 問6",
-      "二 問7"
+      "二 問6①",
+      "二 問6②",
+      "二 問7①",
+      "二 問7②"
      ]
     }
    ]
@@ -5118,7 +5301,12 @@
        "small": "2019-1/sansu/q_03_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2019-1/sansu/sheet_1.jpg",
+       "small": "2019-1/sansu/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2019-1/sansu/e_01.jpg",
@@ -5211,7 +5399,16 @@
        "small": "2019-1/shakai/q_11_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2019-1/shakai/sheet_1.jpg",
+       "small": "2019-1/shakai/sheet_1_small.jpg"
+      },
+      {
+       "full": "2019-1/shakai/sheet_2.jpg",
+       "small": "2019-1/shakai/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2019-1/shakai/e_01.jpg",
@@ -5254,7 +5451,8 @@
       "2 問9",
       "2 問10",
       "2 問11",
-      "3 問1(1)",
+      "3 問1(1)①",
+      "3 問1(1)②",
       "3 問1(2)",
       "3 問1(3)",
       "3 問1(4)",
@@ -5326,7 +5524,16 @@
        "small": "2019-1/rika/q_13_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2019-1/rika/sheet_1.jpg",
+       "small": "2019-1/rika/sheet_1_small.jpg"
+      },
+      {
+       "full": "2019-1/rika/sheet_2.jpg",
+       "small": "2019-1/rika/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2019-1/rika/e_01.jpg",
@@ -5368,17 +5575,17 @@
       "2(5)B",
       "3(1)",
       "3(2)",
-      "3(3)①",
-      "3(3)②",
-      "3(3)③",
-      "3(3)④",
+      "3(3)①②",
+      "3(3)③④",
       "3(3)⑤",
-      "3(4)",
+      "3(4)記号",
+      "3(4)気体名",
       "3(5)a",
       "3(5)b",
       "4(1)",
       "4(2)",
-      "4(3)",
+      "4(3)地表",
+      "4(3)火山灰層",
       "4(4)"
      ]
     },
@@ -5430,7 +5637,12 @@
        "small": "2019-1/kokugo/q_10_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2019-1/kokugo/sheet_1.jpg",
+       "small": "2019-1/kokugo/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2019-1/kokugo/e_01.jpg",
@@ -5446,19 +5658,26 @@
       }
      ],
      "questions": [
-      "一 問1",
+      "一 問1(a)",
+      "一 問1(b)",
+      "一 問1(c)",
       "一 問2",
-      "一 問3",
+      "一 問3(X)",
+      "一 問3(Y)",
+      "一 問3(Z)",
       "一 問4",
       "一 問5",
       "一 問6",
       "一 問7",
-      "二 問1",
+      "二 問1(a)",
+      "二 問1(b)",
+      "二 問1(c)",
       "二 問2",
       "二 問3",
       "二 問4",
       "二 問5",
-      "二 問6",
+      "二 問6(13字)",
+      "二 問6(9字)",
       "二 問7",
       "二 問8",
       "二 問9"
@@ -5496,7 +5715,12 @@
        "small": "2018-2/sansu/q_03_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2018-2/sansu/sheet_1.jpg",
+       "small": "2018-2/sansu/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2018-2/sansu/e_01.jpg",
@@ -5519,7 +5743,8 @@
       "2(3)",
       "3(1)",
       "3(2)",
-      "3(3)",
+      "3(3)①",
+      "3(3)②",
       "4(1)",
       "4(2)",
       "5(1)",
@@ -5572,7 +5797,16 @@
        "small": "2018-2/shakai/q_09_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2018-2/shakai/sheet_1.jpg",
+       "small": "2018-2/shakai/sheet_1_small.jpg"
+      },
+      {
+       "full": "2018-2/shakai/sheet_2.jpg",
+       "small": "2018-2/shakai/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2018-2/shakai/e_01.jpg",
@@ -5673,7 +5907,16 @@
        "small": "2018-2/rika/q_09_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2018-2/rika/sheet_1.jpg",
+       "small": "2018-2/rika/sheet_1_small.jpg"
+      },
+      {
+       "full": "2018-2/rika/sheet_2.jpg",
+       "small": "2018-2/rika/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2018-2/rika/e_01.jpg",
@@ -5691,21 +5934,39 @@
      "questions": [
       "1(1)",
       "1(2)",
-      "1(3)",
-      "1(4)",
-      "1(5)",
-      "2(1)",
+      "1(3)アイ",
+      "1(3)ウエ",
+      "1(3)オカキ",
+      "1(4)①",
+      "1(4)②",
+      "1(5)ク",
+      "1(5)ケ",
+      "1(5)コ",
+      "2(1)①",
+      "2(1)②",
       "2(2)",
-      "2(3)",
+      "2(3)ア",
+      "2(3)イ",
+      "2(3)ウ",
+      "2(3)エ",
+      "2(3)オ",
+      "2(3)カ",
+      "2(3)キ",
+      "2(3)ク",
       "2(4)",
-      "2(5)",
-      "2(6)",
+      "2(5)Ⅰ",
+      "2(5)Ⅱ",
+      "2(6)①",
+      "2(6)②",
       "3(1)",
-      "3(2)",
+      "3(1)説明",
+      "3(2)A",
+      "3(2)B",
       "3(3)",
       "3(4)",
       "3(5)",
-      "3(6)"
+      "3(6)あ",
+      "3(6)い"
      ]
     },
     {
@@ -5752,7 +6013,12 @@
        "small": "2018-2/kokugo/q_09_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2018-2/kokugo/sheet_1.jpg",
+       "small": "2018-2/kokugo/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2018-2/kokugo/e_01.jpg",
@@ -5777,7 +6043,9 @@
       "一 問3",
       "一 問4",
       "一 問5",
-      "一 問6",
+      "一 問6①",
+      "一 問6②",
+      "一 問6③",
       "一 問7",
       "二 問1(a)",
       "二 問1(b)",
@@ -5788,7 +6056,8 @@
       "二 問4",
       "二 問5",
       "二 問6",
-      "二 問7"
+      "二 問7①",
+      "二 問7②"
      ]
     }
    ]
@@ -5823,7 +6092,12 @@
        "small": "2018-1/sansu/q_03_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2018-1/sansu/sheet_1.jpg",
+       "small": "2018-1/sansu/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2018-1/sansu/e_01.jpg",
@@ -5856,9 +6130,12 @@
       "1(3)",
       "2(1)",
       "2(2)",
-      "3(1)",
-      "3(2)①",
-      "3(2)②",
+      "3(1)A君の走る速さ",
+      "3(1)1周の道のり",
+      "3(2)①B君の走る速さ",
+      "3(2)①3人が出会った時間",
+      "3(2)②Cさんの歩く速さ",
+      "3(2)②出会った回数",
       "4(1)①",
       "4(1)②",
       "4(2)",
@@ -5930,7 +6207,16 @@
        "small": "2018-1/shakai/q_14_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2018-1/shakai/sheet_1.jpg",
+       "small": "2018-1/shakai/sheet_1_small.jpg"
+      },
+      {
+       "full": "2018-1/shakai/sheet_2.jpg",
+       "small": "2018-1/shakai/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2018-1/shakai/e_01.jpg",
@@ -5983,9 +6269,11 @@
       "3 問1(2)",
       "3 問2(1)",
       "3 問2(2)",
-      "3 問2(3)",
+      "3 問2(3)命名者",
+      "3 問2(3)国名",
       "3 問2(4)",
-      "3 問3",
+      "3 問3あるもの",
+      "3 問3メリット",
       "3 問4"
      ]
     },
@@ -6033,7 +6321,16 @@
        "small": "2018-1/rika/q_09_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2018-1/rika/sheet_1.jpg",
+       "small": "2018-1/rika/sheet_1_small.jpg"
+      },
+      {
+       "full": "2018-1/rika/sheet_2.jpg",
+       "small": "2018-1/rika/sheet_2_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2018-1/rika/e_01.jpg",
@@ -6056,7 +6353,8 @@
       "1(1)①",
       "1(1)②",
       "1(2)",
-      "1(3)",
+      "1(3)記号",
+      "1(3)理由",
       "1(4)",
       "1(5)",
       "1(6)",
@@ -6123,7 +6421,12 @@
        "small": "2018-1/kokugo/q_09_small.jpg"
       }
      ],
-     "sheetPages": [],
+     "sheetPages": [
+      {
+       "full": "2018-1/kokugo/sheet_1.jpg",
+       "small": "2018-1/kokugo/sheet_1_small.jpg"
+      }
+     ],
      "explPages": [
       {
        "full": "2018-1/kokugo/e_01.jpg",
