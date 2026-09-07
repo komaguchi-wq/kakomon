@@ -210,10 +210,7 @@ function renderHome() {
 function openInfo() {
   state.exam = null;  // 学校レベルのimgBaseを使う（試験単位imgBase上書きの解除）
   $('#info-title').textContent = `📋 ${state.school.name} ${state.school.info.title || '学校情報・出題傾向&対策'}`;
-  $('#info-stack').innerHTML = state.school.info.pages.map((p, i) => `
-    <div class="page-item">
-      <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" alt="ページ${i + 1}" loading="lazy">
-    </div>`).join('');
+  $('#info-stack').innerHTML = pagePairsHTML(state.school.info.pages, 'ページ', false);
   bindLightbox($('#info-stack'));
   showScreen('info');
 }
@@ -263,6 +260,25 @@ function pageImg(p, i, label) {
     </div>`;
 }
 
+// 縦長ページ列の見開き表示: 印刷のB4横2面付け（printDuo/composePair）と同じ並びで
+// 画面にも2ページずつ横に並べる。rtl=true（国語）はペア内で右→左。
+// landscape:true のページ（学校情報の横長面）は1枚で1行。
+// 縦ページを1枚ずつ横幅いっぱいに出すと拡大されすぎるため（2026-09-07 ユーザー要望）。
+function pagePairsHTML(pages, label, rtl) {
+  let html = '';
+  for (let i = 0; i < pages.length; ) {
+    if (pages[i].landscape) { html += pageImg(pages[i], i, label); i += 1; continue; }
+    const pair = (i + 1 < pages.length && !pages[i + 1].landscape)
+      ? [pages[i], pages[i + 1]] : [pages[i]];
+    const items = pair.map((p, j) => pageImg(p, i + j, label));
+    // 1枚だけ余った場合は印刷と同じく読み進む側に寄せ、他方は空白
+    if (pair.length === 1) items.push('<div class="page-duo-empty"></div>');
+    html += `<div class="page-duo${rtl ? ' rtl' : ''}">${items.join('')}</div>`;
+    i += pair.length;
+  }
+  return html;
+}
+
 function renderDetail() {
   const sub = state.subject;
   const note = $('#view-note');
@@ -272,7 +288,7 @@ function renderDetail() {
     const specs = [sub.minutes ? sub.minutes + '分' : '', sub.maxScore ? '満点' + sub.maxScore + '点' : ''].filter(Boolean);
     note.textContent = `${sub.name}${specs.length ? '（' + specs.join('・') + '）' : ''}問題と解答用紙です。画像タップで拡大。`;
     html += `<h3 class="section-head">問題</h3>`;
-    html += sub.questionPages.map((p, i) => pageImg(p, i, '問題')).join('');
+    html += pagePairsHTML(sub.questionPages, '問題', sub.rtl);
     if (sub.sheetPages && sub.sheetPages.length) {
       html += `<h3 class="section-head">解答用紙</h3>`;
       html += sub.sheetPages.map((p, i) => pageImg(p, i, '解答用紙')).join('');
@@ -281,7 +297,7 @@ function renderDetail() {
     note.textContent = state.exam.ansOnly
       ? `${sub.name}の解答です（この回は解答のみ収録・全教科分をまとめて表示しています）。`
       : `${sub.name}の解答解説です。画像タップで拡大。`;
-    html += sub.explPages.map((p, i) => pageImg(p, i, '解説')).join('');
+    html += pagePairsHTML(sub.explPages, '解説', false);
     // 解いた解答用紙（原本・赤採点そのまま・追加日付入り）を解答タブ末尾に
     if (sub.solvedPages && sub.solvedPages.length) {
       html += `<h3 class="section-head">解いた解答用紙</h3>`;
