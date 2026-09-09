@@ -7,8 +7,14 @@
  {
   "id": "sfc",
   "name": "慶應義塾湘南藤沢中等部",
-  "yearsLabel": "2017〜2026年度・10回分",
+  "yearsLabel": "2006〜2026年度・20回分",
   "shortName": "慶應湘南藤沢"
+ },
+ {
+  "id": "keiochu",
+  "name": "慶應義塾中等部",
+  "yearsLabel": "2016〜2025年度・10回分",
+  "shortName": "慶應中等部"
  },
  {
   "id": "hiroo",
