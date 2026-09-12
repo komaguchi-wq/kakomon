@@ -173,6 +173,37 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 .mark-btn.x { background: #ffecec; border-color: #e05656; color: #e05656; }
 .mark-btn:active { transform: scale(.94); }
 .grade-count { font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+/* ---- 難易度マップ A/B/C（2026-09-12）---- */
+/* A=全部正解したい / B=3〜4割取りたい / C=捨ててよい。
+   国理社=Claude分類、算数=コベツバ過去問DB。data/{school}.json の subjects[].nanido */
+.lv {
+  display: inline-block; min-width: 15px; margin-right: 5px;
+  font-size: 11px; font-weight: 700; line-height: 1;
+  padding: 3px 4px; border-radius: 4px; text-align: center; vertical-align: middle;
+}
+.lv-a { background: #e8f6ee; color: #1e8449; border: 1px solid #a9dfbf; }
+.lv-b { background: #fdf3e3; color: #b9770e; border: 1px solid #f8c471; }
+.lv-c { background: #f2f3f4; color: #707b7c; border: 1px solid #d5d8dc; }
+.nanido-bar {
+  font-size: 13px; color: var(--accent-dark); background: #f7f9fc;
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 7px 10px; margin-bottom: 8px; line-height: 1.9;
+}
+.nanido-bar b { font-size: 15px; }
+.nanido-src { font-size: 11px; color: var(--muted); margin-left: 6px; }
+.nanido-help { font-size: 11px; color: var(--muted); margin-bottom: 8px; line-height: 2; }
+.nanido-help .lv { margin-left: 8px; }
+.nanido-help .lv:first-child { margin-left: 0; }
+/* Aなのに×＝最優先で直す行 */
+.grade-table tr.row-mustfix td.q-label { background: #fff1f0; }
+.grade-table tr.row-mustfix td { border-color: #f3b6b0; }
+/* A帯の到達状況の行 */
+.grade-table tr.a-row td { background: #f7fbf8; font-size: 13px; }
+.grade-table tr.a-row td.q-label { background: #eef7f1; color: #1e8449; }
+.a-cell.full { color: #1e8449; font-weight: 700; }
+.a-cell.miss { color: #b03a2e; font-weight: 700; }
+.a-miss { font-size: 11px; }
 .score-input {
   width: 64px; font-size: 15px; font-weight: 700; text-align: center;
   padding: 6px 4px; border: 1.5px solid var(--line); border-radius: 7px;

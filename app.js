@@ -543,6 +543,57 @@ function saveGrades(g) {
   gradeSyncTouch(gradeKey());
 }
 
+// ---- 難易度マップ（A=全部正解したい / B=3〜4割取りたい / C=捨ててよい）----
+// data/{school}.json の subjects[].nanido に焼き込み済み
+// （scripts/kakomon/burn_nanido_levels.py が 04_learning/.../nanido/ から生成）
+// 国理社=Claudeが全問読んで分類、算数=コベツバ過去問データベース由来。
+const B_TARGET_RATE = 0.35;   // 目標点 = A合計 ＋ Bの3〜4割（ユーザー確定基準の中央値）
+
+function nanidoOf(q) {
+  const n = state.subject && state.subject.nanido;
+  const v = n && n.q && n.q[q];
+  return v ? { cls: v[0], points: v[1] } : null;
+}
+function levelChip(q) {
+  const d = nanidoOf(q);
+  return d ? `<span class="lv lv-${d.cls.toLowerCase()}">${d.cls}</span>` : '';
+}
+// A帯の到達状況（1回ごとに「Aの何問を○にできたか」）
+function aStats(attempt, qs) {
+  const aQs = qs.filter((q) => { const d = nanidoOf(q); return d && d.cls === 'A'; });
+  const done = aQs.filter((q) => attempt.marks[q]);
+  const ok = aQs.filter((q) => attempt.marks[q] === 'o');
+  return { total: aQs.length, done: done.length, ok: ok.length };
+}
+function aCellHTML(attempt, qs) {
+  const st = aStats(attempt, qs);
+  if (!st.total) return '<td class="a-cell">—</td>';
+  if (!st.done) return '<td class="a-cell">—</td>';
+  const miss = st.done - st.ok;
+  return `<td class="a-cell${miss ? ' miss' : ' full'}">${st.ok}/${st.total}${miss ? `<br><span class="a-miss">×${miss}</span>` : ''}</td>`;
+}
+function nanidoBarHTML() {
+  const n = state.subject && state.subject.nanido;
+  if (!n) return '';
+  const target = Math.round(n.sums.A + n.sums.B * B_TARGET_RATE);
+  const avg = (n.avg && n.avg.gokakusha != null)
+    ? `　合格者平均 <b>${n.avg.gokakusha}点</b>` : '';
+  const src = n.src === 'kobetsuba' ? 'コベツバ過去問DB' : 'Claude分類';
+  return `
+    <div class="nanido-bar">
+      <span class="lv lv-a">A</span>${n.sums.A}点
+      <span class="lv lv-b">B</span>${n.sums.B}点
+      <span class="lv lv-c">C</span>${n.sums.C}点
+      ／ 目標 <b>${target}点</b>（Aを全部＋Bの3〜4割）${avg}
+      <span class="nanido-src">${src}</span>
+    </div>
+    <div class="nanido-help">
+      <span class="lv lv-a">A</span>全部正解したい（×は必ず直す）
+      <span class="lv lv-b">B</span>3〜4割取りたい（惜しい×だけ直す）
+      <span class="lv lv-c">C</span>捨ててよい（解説を一読）
+    </div>`;
+}
+
 function renderGrading() {
   const qs = state.subject.questions || [];
   if (!qs.length) return '';
@@ -552,14 +603,25 @@ function renderGrading() {
     const o = marks.filter((v) => v === 'o').length;
     return `${o}/${qs.length}`;
   });
+  const hasNanido = !!(state.subject.nanido && state.subject.nanido.q);
   let rows = '';
   for (const q of qs) {
-    rows += `<tr><td class="q-label">${q}</td>`;
+    const d = nanidoOf(q);
+    // Aの×＝最優先で直す問題。行ごと色を付けて目立たせる
+    const mustFix = d && d.cls === 'A'
+      && g.attempts.some((a) => a.marks[q] === 'x');
+    rows += `<tr${mustFix ? ' class="row-mustfix"' : ''} data-row="${q}">`;
+    rows += `<td class="q-label">${levelChip(q)}${q}</td>`;
     for (let t = 0; t < 3; t++) {
       const v = g.attempts[t].marks[q] || '';
       rows += `<td><button class="mark-btn ${v}" data-q="${q}" data-t="${t}">${v === 'o' ? '○' : v === 'x' ? '×' : '・'}</button></td>`;
     }
     rows += '</tr>';
+  }
+  let aRow = '';
+  if (hasNanido) {
+    aRow = `<tr class="a-row"><td class="q-label">A帯の正解</td>`
+      + g.attempts.map((a) => aCellHTML(a, qs)).join('') + '</tr>';
   }
   let dateCells = '';
   for (let t = 0; t < 3; t++) {
@@ -578,11 +640,13 @@ function renderGrading() {
         <span class="toggle-mark">${open ? '▲ とじる' : '▼ ひらく'}</span>
       </div>
       <div class="grade-table-wrap" ${open ? '' : 'hidden'}>
+        ${nanidoBarHTML()}
         <table class="grade-table">
           <thead><tr><th>問題</th><th>1回目</th><th>2回目</th><th>3回目</th></tr></thead>
           <tbody>
             <tr><td class="q-label">取り組んだ日</td>${dateCells}</tr>
             ${rows}
+            ${aRow}
             <tr><td class="q-label">合計点${state.subject.maxScore ? `（/${state.subject.maxScore}）` : ''}</td>${scoreCells}</tr>
           </tbody>
         </table>
@@ -620,12 +684,25 @@ function bindGrading() {
       saveGrades(g);
       btn.className = `mark-btn ${next}`;
       btn.textContent = next === 'o' ? '○' : next === 'x' ? '×' : '・';
+      const qsAll = state.subject.questions || [];
       const counts = g.attempts.map((a) => {
         const o = Object.values(a.marks).filter((v) => v === 'o').length;
-        return `${o}/${(state.subject.questions || []).length}`;
+        return `${o}/${qsAll.length}`;
       });
       const el = document.querySelector('.grade-count');
       if (el) el.textContent = `正解数 ${counts.join(' ／ ')}`;
+      // 難易度マップ由来の表示（A帯の到達状況・Aの×の行ハイライト）も更新
+      const aRow = document.querySelector('.a-row');
+      if (aRow) {
+        aRow.innerHTML = '<td class="q-label">A帯の正解</td>'
+          + g.attempts.map((a) => aCellHTML(a, qsAll)).join('');
+      }
+      const tr = document.querySelector(`tr[data-row="${CSS.escape(q)}"]`);
+      const d = nanidoOf(q);
+      if (tr) {
+        tr.classList.toggle('row-mustfix', !!d && d.cls === 'A'
+          && g.attempts.some((a) => a.marks[q] === 'x'));
+      }
     });
   });
   document.querySelectorAll('.score-input').forEach((inp) => {
