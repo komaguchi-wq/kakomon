@@ -9,6 +9,8 @@ const state = {
   subject: null,      // 現在の教科
   view: 'question',   // 'question' | 'expl'
   homeScroll: 0,      // トップの離脱時スクロール位置（もどる時に復元）
+  schoolScroll: 0,    // 学校ページの離脱時スクロール位置
+  screen: 'home',     // 'home' | 'school' | 'info' | 'detail'
 };
 
 const $ = (sel) => document.querySelector(sel);
@@ -44,7 +46,11 @@ async function init() {
   $('#lightbox-close').addEventListener('click', closeLightbox);
   $('#info-print-btn').addEventListener('click', () => printInfo());
   // ○×表のクラウド同期（表示中の教科があれば取り込み後に再描画）
-  gradeSyncInit(() => { if (state.subject) renderDetail(); else renderHome(); });   // 同期取り込み後は棒グラフも更新
+  gradeSyncInit(() => {   // 同期取り込み後は棒グラフも更新
+    if (state.subject) renderDetail();
+    else if (state.screen === 'school') renderSchool();
+    else renderHome();
+  });
 }
 
 // ---- ディープリンク（#school/exam/subject）----
@@ -55,7 +61,7 @@ function openFromHash() {
   const data = state.schoolCache[schoolId];
   if (!data) return;
   state.school = Object.assign({ id: schoolId }, data);
-  if (!examId || !data.exams.some((e) => e.id === examId)) return;
+  if (!examId || !data.exams.some((e) => e.id === examId)) { openSchool(schoolId); return; }
   openExam(examId);
   if (subjectId) {
     const sub = state.exam.subjects.find((s) => s.id === subjectId);
@@ -65,20 +71,26 @@ function openFromHash() {
 
 // ---- 画面遷移 ----
 function showScreen(id) {
-  for (const s of ['home', 'info', 'detail']) $('#' + s).hidden = (s !== id);
+  for (const s of ['home', 'school', 'info', 'detail']) $('#' + s).hidden = (s !== id);
   $('#back-btn').hidden = (id === 'home');
-  if (id === 'home') {
-    window.scrollTo(0, state.homeScroll);
-  } else {
-    window.scrollTo(0, 0);
-  }
+  state.screen = id;
+  if (id === 'home') window.scrollTo(0, state.homeScroll);
+  else if (id === 'school') window.scrollTo(0, state.schoolScroll);
+  else window.scrollTo(0, 0);
 }
 function leaveHome() { state.homeScroll = window.scrollY; }
+function leaveSchool() { state.schoolScroll = window.scrollY; }
+// もどる: 試験詳細/学校情報 → 学校ページ、学校ページ → トップ
 function goBack() {
-  state.school = null;
-  state.exam = null;
-  renderHome();   // 採点後の棒グラフを反映
-  showScreen('home');
+  if (state.screen === 'school' || !state.school) {
+    state.school = null; state.exam = null; state.subject = null;
+    renderHome();   // 採点後の棒グラフを反映
+    showScreen('home');
+    return;
+  }
+  state.exam = null; state.subject = null;
+  renderSchool();
+  showScreen('school');
 }
 
 // ---- 試験グループ分け（年度 or 編） ----
@@ -149,25 +161,59 @@ function unitBarBlock(st) {
       </div>`;
 }
 
-// ---- トップ: 学校セクション×試験一覧 ----
+// ---- トップ: 学校カード一覧（学校を選ぶ → 学校ページ） ----
+function schoolBarStats(schoolId, data) {
+  const t = { total: 0, attempted: 0, good: 0, low: 0, unanswered: 0 };
+  for (const ex of data.exams) {
+    const st = examBarStats(schoolId, ex);
+    for (const k in t) t[k] += st[k];
+  }
+  return t;
+}
 function renderHome() {
   if (!state.schools.length) {
     $('#school-list').innerHTML = '<p class="loading">まだ学校がありません。</p>';
     return;
   }
-  let html = '';
+  let html = '<div class="school-grid">';
   for (const s of state.schools) {
     const data = state.schoolCache[s.id];
     if (!data) continue;
     html += `
+      <div class="exam-card school-card" data-school="${s.id}">
+        <div class="school-card-head"><span class="school-icon">🏫</span>
+          <div><div class="exam-name">${s.name}</div>
+          <div class="exam-sub">${s.yearsLabel || ''}${data.exams.length ? `　${data.exams.length}回` : ''}</div></div></div>
+        ${unitBarBlock(schoolBarStats(s.id, data))}
+      </div>`;
+  }
+  html += '</div>';
+  const list = $('#school-list');
+  list.innerHTML = html;
+  list.querySelectorAll('.school-card').forEach((c) =>
+    c.addEventListener('click', () => { leaveHome(); openSchool(c.dataset.school); }));
+}
+
+// ---- 学校ページ: 学校情報カード＋年度（編）別の試験一覧 ----
+function openSchool(schoolId) {
+  state.school = Object.assign({ id: schoolId }, state.schoolCache[schoolId]);
+  state.exam = null; state.subject = null;
+  state.schoolScroll = 0;
+  renderSchool();
+  showScreen('school');
+}
+function renderSchool() {
+  const s = state.schools.find((x) => x.id === state.school.id) || state.school;
+  const data = state.schoolCache[s.id];
+  let html = `
     <section class="school-section" data-school="${s.id}">
       <h2 class="school-head">
         <span class="school-icon">🏫</span>
         <span class="school-head-name">${s.name}</span>
         <span class="school-head-sub">${s.yearsLabel || ''}</span>
       </h2>`;
-    if (data.info && data.info.pages.length) {
-      html += `
+  if (data.info && data.info.pages.length) {
+    html += `
       <div class="exam-card info-card" data-info="${s.id}">
         <span class="info-icon">📋</span>
         <div>
@@ -175,35 +221,26 @@ function renderHome() {
           <div class="exam-sub">${data.info.subtitle || '受験情報・教科別の出題分析'}</div>
         </div>
       </div>`;
-    }
-    for (const g of examGroupsOf(data)) {
-      html += `<div class="year-group"><h3 class="year-head">${g.label}</h3><div class="exam-grid">`;
-      for (const ex of g.exams) {
-        const subs = ex.subjects.map((sub) => sub.name).join('・');
-        html += `
-          <div class="exam-card" data-school="${s.id}" data-id="${ex.id}">
-            <div class="exam-name">${ex.label}</div>
-            <div class="exam-sub">${ex.roundNote ? ex.roundNote + '／' : ''}${subs}</div>${unitBarBlock(examBarStats(s.id, ex))}
-          </div>`;
-      }
-      html += '</div></div>';
-    }
-    html += '</section>';
   }
-  const list = $('#school-list');
-  list.innerHTML = html;
-  list.querySelectorAll('.exam-card[data-info]').forEach((c) =>
-    c.addEventListener('click', () => {
-      leaveHome();
-      state.school = state.schoolCache[c.dataset.info];
-      openInfo();
-    }));
-  list.querySelectorAll('.exam-card[data-id]').forEach((c) =>
-    c.addEventListener('click', () => {
-      leaveHome();
-      state.school = state.schoolCache[c.dataset.school];
-      openExam(c.dataset.id);
-    }));
+  for (const g of examGroupsOf(data)) {
+    html += `<div class="year-group"><h3 class="year-head">${g.label}</h3><div class="exam-grid">`;
+    for (const ex of g.exams) {
+      const subs = ex.subjects.map((sub) => sub.name).join('・');
+      html += `
+        <div class="exam-card" data-school="${s.id}" data-id="${ex.id}">
+          <div class="exam-name">${ex.label}</div>
+          <div class="exam-sub">${ex.roundNote ? ex.roundNote + '／' : ''}${subs}</div>${unitBarBlock(examBarStats(s.id, ex))}
+        </div>`;
+    }
+    html += '</div></div>';
+  }
+  html += '</section>';
+  const body = $('#school-body');
+  body.innerHTML = html;
+  body.querySelectorAll('.exam-card[data-info]').forEach((c) =>
+    c.addEventListener('click', () => { leaveSchool(); openInfo(); }));
+  body.querySelectorAll('.exam-card[data-id]').forEach((c) =>
+    c.addEventListener('click', () => { leaveSchool(); openExam(c.dataset.id); }));
 }
 
 // ---- 学校情報・出題傾向 ----
