@@ -323,7 +323,17 @@ function fracHTML(s) {
   return String(s).replace(/\{(\d+)\/(\d+)\}/g,
     '<span class="frac"><sup>$1</sup>⁄<sub>$2</sub></span>');
 }
-function daimonOf(q) { const m = /^(\d+)/.exec(q); return m ? m[1] : q; }
+// 大問の切り出し: 「一 問1(a)」「1 問4」→ 空白の前、「2Ⅰ(2)」「3(2)ア」→ 先頭の数字（漢数字・ローマ数字も）
+function daimonOf(q) {
+  const sp = q.indexOf(' ');
+  if (sp > 0) return q.slice(0, sp);
+  const m = /^([0-9０-９一二三四五六七八九十]+|[ⅠⅡⅢⅣⅤⅥ]+)/.exec(q);
+  return m ? m[1] : q;
+}
+function subLabelOf(q, daimon) {
+  const rest = q.slice(daimon.length).replace(/^ /, '');
+  return rest || q;
+}
 function ytLink(id, text, title) {
   const t = (title || text).replace(/"/g, '&quot;');
   return `<button type="button" class="ans-vid" data-yt="${id}" data-title="${t}">${text}</button>`;
@@ -344,16 +354,19 @@ function renderAnswerSummary() {
     for (const q of grp.qs) {
       const v = n.q[q] || [];
       const cls = v[0], pts = v[1], rate = v[2], vids = v[3];
-      const subLabel = q.slice(grp.d.length) || q;
+      const subLabel = subLabelOf(q, grp.d);
       let meta = '';
       if (rate) meta += `<span class="ans-rate">正答率${rate}</span>`;
       if (vids) meta += vids.map((id, i) => ytLink(id, `🎥解説${vids.length > 1 ? i + 1 : ''}`,
         `${sub.name} ${q} の解説${vids.length > 1 ? `（${i + 1}）` : ''}`)).join('');
-      body += `<div class="ans-cell">
+      const ansText = String(n.answers[q] ?? '');
+      // 長い記述は1行幅に広げて左寄せ（狭い縦長セルを避ける）
+      const wide = ansText.length > 22 ? ' wide' : '';
+      body += `<div class="ans-cell${wide}">
         <div class="ans-head"><span class="ans-sub">${subLabel}</span>
           ${cls ? `<span class="lv lv-${cls.toLowerCase()}">${cls}</span>` : ''}
           ${pts != null ? `<span class="ans-pts">${pts}点</span>` : ''}</div>
-        <div class="ans-val">${fracHTML(n.answers[q] ?? '')}</div>
+        <div class="ans-val">${fracHTML(ansText)}</div>
         ${meta ? `<div class="ans-meta">${meta}</div>` : ''}
       </div>`;
     }
@@ -362,9 +375,9 @@ function renderAnswerSummary() {
   const pv = (n.pointVideos && n.pointVideos.length)
     ? `<div class="ans-points">🎥 ポイント解説（コベツバ）: ${n.pointVideos.map((p) => ytLink(p.youtubeId, p.title, `ポイント解説: ${p.title}`)).join('　')}</div>`
     : '';
-  const src = n.src === 'kobetsuba' ? 'コベツバ過去問DB' : 'Claude分類';
+  const src = n.src === 'kobetsuba' ? '難易度=コベツバ過去問DB' : n.src === 'claude' ? '難易度=Claude分類' : '難易度は未整備';
   return `<div class="ans-summary" id="ans-summary">
-    <div class="ans-title">解答一覧 <span class="note">${state.school.name} ${state.exam.label} ${sub.name}${sub.maxScore ? `（${sub.maxScore}点）` : ''}　難易度=${src}</span></div>
+    <div class="ans-title">解答一覧 <span class="note">${state.school.name} ${state.exam.label} ${sub.name}${sub.maxScore ? `（${sub.maxScore}点）` : ''}　${src}</span></div>
     ${nanidoBarHTML()}
     ${body}${pv}
   </div>`;
@@ -745,7 +758,7 @@ function aCellHTML(attempt, qs) {
 }
 function nanidoBarHTML() {
   const n = state.subject && state.subject.nanido;
-  if (!n) return '';
+  if (!n || !n.sums) return '';
   const target = Math.round(n.sums.A + n.sums.B * B_TARGET_RATE);
   const avg = (n.avg && n.avg.gokakusha != null)
     ? `　合格者平均 <b>${n.avg.gokakusha}点</b>` : '';
@@ -774,7 +787,8 @@ function renderGrading() {
     const o = marks.filter((v) => v === 'o').length;
     return `${o}/${qs.length}`;
   });
-  const hasNanido = !!(state.subject.nanido && state.subject.nanido.q);
+  const hasNanido = !!(state.subject.nanido && state.subject.nanido.q
+    && Object.keys(state.subject.nanido.q).length);
   let rows = '';
   for (const q of qs) {
     const d = nanidoOf(q);

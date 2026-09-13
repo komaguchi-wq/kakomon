@@ -215,6 +215,8 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 .ans-vid:active { background: #dbe7fb; }
 .ans-points .ans-vid { font-size: 12px; margin: 2px 4px 2px 0; }
 .ans-points { font-size: 12px; margin-top: 10px; line-height: 2; color: #333; }
+.ans-cell.wide { flex: 1 1 100%; }
+.ans-cell.wide .ans-val { font-size: 15px; font-weight: 600; text-align: left; line-height: 1.6; padding: 4px 2px 2px; }
 
 /* ---- 難易度マップ A/B/C（2026-09-12）---- */
 /* A=全部正解したい / B=3〜4割取りたい / C=捨ててよい。
