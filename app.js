@@ -765,7 +765,8 @@ function nanidoBarHTML() {
   const target = Math.round(n.sums.A + n.sums.B * rate);
   const avg = (n.avg && n.avg.gokakusha != null)
     ? `　合格者平均 <b>${n.avg.gokakusha}点</b>`
-    : (n.goal ? `　<span class="nanido-goal">${n.goal}</span>` : '');
+    : ((n.avg && n.avg.jukensha != null) ? `　受験者平均 <b>${n.avg.jukensha}点</b>` : '')
+      + (n.goal ? `　<span class="nanido-goal">${n.goal}</span>` : '');
   const src = n.src === 'kobetsuba' ? 'コベツバ過去問DB' : 'Claude分類';
   return `
     <div class="nanido-bar">
