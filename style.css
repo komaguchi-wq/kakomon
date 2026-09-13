@@ -200,7 +200,13 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 .ans-val { font-size: 20px; font-weight: 700; text-align: center; padding: 6px 0 2px; min-height: 34px; }
 .frac sup, .frac sub { font-size: 60%; }
 .ans-meta { font-size: 11px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
-.ans-vid { color: #2f6fbf; text-decoration: none; white-space: nowrap; }
+.ans-vid {
+  color: #2f6fbf; background: #eef4ff; border: 1px solid #b9cdf2; border-radius: 6px;
+  font-size: 11px; font-weight: 600; padding: 3px 7px; cursor: pointer; white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+.ans-vid:active { background: #dbe7fb; }
+.ans-points .ans-vid { font-size: 12px; margin: 2px 4px 2px 0; }
 .ans-points { font-size: 12px; margin-top: 10px; line-height: 2; color: #333; }
 
 /* ---- 難易度マップ A/B/C（2026-09-12）---- */
@@ -258,6 +264,35 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 .lightbox-scroll { flex: 1; overflow: auto; -webkit-overflow-scrolling: touch; text-align: center; }
 .lightbox-scroll img { max-width: none; }
 
+/* ---- 解説動画モーダル（算数アプリと同じ全画面プレーヤー） ---- */
+.video-modal {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.95); flex-direction: column; justify-content: center;
+}
+.video-modal.active { display: flex; }
+.video-modal-inner { width: 100%; height: 100%; background: #000; display: flex; flex-direction: column; }
+.video-modal-close {
+  position: absolute; top: 12px; right: 16px; z-index: 10;
+  background: rgba(0,0,0,.5); color: #fff; border: none; border-radius: 50%;
+  width: 36px; height: 36px; font-size: 18px; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+#video-player-wrap { width: 100%; flex: 1; background: #000; min-height: 0; }
+#video-player-wrap iframe { width: 100%; height: 100%; border: none; }
+.video-modal-controls {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 16px; gap: 10px; flex-shrink: 0; background: #1c1c1e;
+}
+.video-modal-title {
+  font-size: 14px; font-weight: 600; color: #fff; flex: 1; min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.video-speed-buttons { display: flex; gap: 6px; flex-shrink: 0; }
+.video-speed-btn {
+  min-width: 48px; height: 36px; border-radius: 8px; font-size: 15px; font-weight: 600;
+  background: #3a3a3c; color: #fff; border: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.video-speed-btn.active { background: #007aff; color: #fff; }
+
 /* ---- 印刷 ---- */
 #print-container { display: none; }
 @media screen { #print-container { display: none !important; } }
@@ -270,7 +305,7 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 }
 
 @media print {
-  #app-header, #home, #info, #detail, #lightbox { display: none !important; }
+  #app-header, #home, #info, #detail, #lightbox, #video-modal { display: none !important; }
   /* ★物理mm + block（vh/flex禁止）: iOS Safariで1画像=1枚を安定させる */
   #print-container { display: block !important; }
   .print-page {
@@ -311,7 +346,7 @@ table.grade-table { border-collapse: collapse; width: 100%; }
   .print-page.a4-html { font-size: 11pt; text-align: left; }
   .print-page.a4-html .ans-summary { max-width: none; box-shadow: none; border: none; padding: 0; }
   .print-page.a4-html .ans-cell, .print-page.a4-html .ans-daimon { page-break-inside: avoid; break-inside: avoid; }
-  .print-page.a4-html .ans-vid { color: #333; }
+  .print-page.a4-html .ans-vid { color: #333; background: none; border: none; padding: 0; }
   .print-page.a4-html .lv-a, .print-page.a4-html .lv-b, .print-page.a4-html .lv-c,
   .print-page.a4-html .nanido-bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   /* @page size はJSが #print-page-style に動的注入する（B4 landscape / B4 portrait / A4 portrait） */

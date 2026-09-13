@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>過去問</title>
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
   <header id="app-header">
@@ -52,9 +52,26 @@
     <div class="lightbox-scroll"><img id="lightbox-img" alt="拡大"></div>
   </div>
 
+  <!-- 解説動画モーダル（算数アプリと同じ: その場で再生＋速度ボタン） -->
+  <div id="video-modal" class="video-modal" onclick="closeVideoModal(event)">
+    <div class="video-modal-inner" onclick="event.stopPropagation()">
+      <button class="video-modal-close" onclick="closeVideoModal()">✕</button>
+      <div id="video-player-wrap"></div>
+      <div class="video-modal-controls">
+        <span class="video-modal-title" id="video-modal-title"></span>
+        <div class="video-speed-buttons">
+          <button class="video-speed-btn" onclick="setVideoSpeed(1)">1x</button>
+          <button class="video-speed-btn active" onclick="setVideoSpeed(1.5)">1.5x</button>
+          <button class="video-speed-btn" onclick="setVideoSpeed(2)">2x</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 印刷専用コンテナ -->
   <div id="print-container"></div>
 
-  <script src="app.js?v=19"></script>
+  <script src="app.js?v=20"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>

@@ -287,8 +287,9 @@ function fracHTML(s) {
     '<span class="frac"><sup>$1</sup>⁄<sub>$2</sub></span>');
 }
 function daimonOf(q) { const m = /^(\d+)/.exec(q); return m ? m[1] : q; }
-function ytLink(id, text) {
-  return `<a class="ans-vid" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">${text}</a>`;
+function ytLink(id, text, title) {
+  const t = (title || text).replace(/"/g, '&quot;');
+  return `<button type="button" class="ans-vid" data-yt="${id}" data-title="${t}">${text}</button>`;
 }
 function renderAnswerSummary() {
   const sub = state.subject, n = sub.nanido;
@@ -309,7 +310,8 @@ function renderAnswerSummary() {
       const subLabel = q.slice(grp.d.length) || q;
       let meta = '';
       if (rate) meta += `<span class="ans-rate">正答率${rate}</span>`;
-      if (vids) meta += vids.map((id, i) => ytLink(id, `🎥解説${vids.length > 1 ? i + 1 : ''}`)).join('');
+      if (vids) meta += vids.map((id, i) => ytLink(id, `🎥解説${vids.length > 1 ? i + 1 : ''}`,
+        `${sub.name} ${q} の解説${vids.length > 1 ? `（${i + 1}）` : ''}`)).join('');
       body += `<div class="ans-cell">
         <div class="ans-head"><span class="ans-sub">${subLabel}</span>
           ${cls ? `<span class="lv lv-${cls.toLowerCase()}">${cls}</span>` : ''}
@@ -321,7 +323,7 @@ function renderAnswerSummary() {
     body += '</div></div>';
   }
   const pv = (n.pointVideos && n.pointVideos.length)
-    ? `<div class="ans-points">🎥 ポイント解説（コベツバ）: ${n.pointVideos.map((p) => ytLink(p.youtubeId, p.title)).join('　')}</div>`
+    ? `<div class="ans-points">🎥 ポイント解説（コベツバ）: ${n.pointVideos.map((p) => ytLink(p.youtubeId, p.title, `ポイント解説: ${p.title}`)).join('　')}</div>`
     : '';
   const src = n.src === 'kobetsuba' ? 'コベツバ過去問DB' : 'Claude分類';
   return `<div class="ans-summary" id="ans-summary">
@@ -440,6 +442,8 @@ function renderDetail() {
   stack.innerHTML = html;
   bindLightbox(stack);
   applyClips(stack);
+  stack.querySelectorAll('.ans-vid').forEach((b) =>
+    b.addEventListener('click', () => openVideoModal(b.dataset.yt, b.dataset.title)));
   bindGrading();
   renderPrintButtons();
   loadProposal();
@@ -993,3 +997,46 @@ async function printInfo() {
 }
 
 init();
+
+// ---- 解説動画モーダル（YouTube IFrame API・算数アプリ daily-support と同じ挙動）----
+// YouTubeアプリへ遷移せずその場で再生。速度は 1x/1.5x/2x（既定1.5x）。
+let ytPlayer = null, ytPlayerReady = false, pendingVideo = null, currentVideoSpeed = 1.5;
+function onYouTubeIframeAPIReady() {
+  ytPlayerReady = true;
+  if (pendingVideo) { createPlayer(pendingVideo); pendingVideo = null; }
+}
+function createPlayer(videoId) {
+  const wrap = document.getElementById('video-player-wrap');
+  wrap.innerHTML = '<div id="yt-player"></div>';
+  ytPlayer = new YT.Player('yt-player', {
+    videoId, width: '100%', height: '100%',
+    playerVars: { autoplay: 1, playsinline: 1, rel: 0, vq: 'hd720' },
+    events: {
+      onReady: (e) => e.target.setPlaybackRate(currentVideoSpeed),
+      onPlaybackRateChange: (e) => { currentVideoSpeed = e.data; updateSpeedButtons(); },
+    },
+  });
+}
+function openVideoModal(videoId, label) {
+  currentVideoSpeed = 1.5;
+  document.getElementById('video-modal-title').textContent = label || '';
+  document.getElementById('video-modal').classList.add('active');
+  updateSpeedButtons();
+  if (ytPlayerReady && window.YT && YT.Player) createPlayer(videoId);
+  else pendingVideo = videoId;
+}
+function closeVideoModal(e) {
+  if (e && e.target !== e.currentTarget && !e.target.classList.contains('video-modal-close')) return;
+  document.getElementById('video-modal').classList.remove('active');
+  if (ytPlayer && ytPlayer.destroy) { ytPlayer.destroy(); ytPlayer = null; }
+  document.getElementById('video-player-wrap').innerHTML = '';
+}
+function setVideoSpeed(speed) {
+  currentVideoSpeed = speed;
+  if (ytPlayer && ytPlayer.setPlaybackRate) ytPlayer.setPlaybackRate(speed);
+  updateSpeedButtons();
+}
+function updateSpeedButtons() {
+  document.querySelectorAll('.video-speed-btn').forEach((btn) =>
+    btn.classList.toggle('active', parseFloat(btn.textContent) === currentVideoSpeed));
+}
