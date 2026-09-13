@@ -9168,6 +9168,14 @@
       {
        "full": "2018-1/rika/e_03.jpg",
        "small": "2018-1/rika/e_03_small.jpg"
+      },
+      {
+       "full": "2018-1/kokugo/e_01.jpg",
+       "small": "2018-1/kokugo/e_01_small.jpg",
+       "clip": [
+        0,
+        0.163
+       ]
       }
      ],
      "questions": [
