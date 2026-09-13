@@ -123,6 +123,7 @@ html, body {
   box-shadow: 0 1px 4px rgba(0,0,0,.06);
 }
 .page-item img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+.page-item.clip { overflow: hidden; }  /* 教科範囲だけ見せる（高さはJSが設定） */
 /* 見開き表示（印刷のB4横2面付けと同じ並び。.rtl=国語は右→左） */
 .page-duo {
   width: 100%; max-width: 1200px;
@@ -173,6 +174,34 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 .mark-btn.x { background: #ffecec; border-color: #e05656; color: #e05656; }
 .mark-btn:active { transform: scale(.94); }
 .grade-count { font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+/* ---- 解答一覧（解答用紙風サマリ・2026-09-13）---- */
+.ans-summary {
+  width: 100%; max-width: 880px; background: #fff; margin-bottom: 14px;
+  border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.ans-title { font-size: 15px; font-weight: 700; color: var(--accent-dark); margin-bottom: 8px; }
+.ans-title .note { font-size: 12px; font-weight: 400; color: var(--muted); }
+.ans-daimon { display: flex; gap: 8px; margin: 8px 0; align-items: stretch; }
+.ans-dnum {
+  flex: 0 0 36px; display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 18px; border: 2px solid #333; border-radius: 4px; background: #fafbfd;
+}
+.ans-cells { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.ans-cell {
+  flex: 1 1 130px; min-width: 130px; border: 1px solid #555; border-radius: 4px;
+  padding: 4px 8px 6px; background: #fff;
+}
+.ans-head { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--muted); }
+.ans-sub { font-weight: 700; color: #333; margin-right: 2px; }
+.ans-head .lv { margin-right: 0; }
+.ans-pts { margin-left: auto; }
+.ans-val { font-size: 20px; font-weight: 700; text-align: center; padding: 6px 0 2px; min-height: 34px; }
+.frac sup, .frac sub { font-size: 60%; }
+.ans-meta { font-size: 11px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
+.ans-vid { color: #2f6fbf; text-decoration: none; white-space: nowrap; }
+.ans-points { font-size: 12px; margin-top: 10px; line-height: 2; color: #333; }
 
 /* ---- 難易度マップ A/B/C（2026-09-12）---- */
 /* A=全部正解したい / B=3〜4割取りたい / C=捨ててよい。
@@ -270,7 +299,22 @@ table.grade-table { border-collapse: collapse; width: 100%; }
     height: auto;
     vertical-align: top;
   }
-  /* @page size はJSが #print-page-style に動的注入する（B4 landscape / B4 portrait） */
+  /* A4縦 1面（解答解説: 解答一覧HTML＋教科範囲にクリップした解説画像） */
+  .print-page.a4 { text-align: center; }
+  .print-page.a4 img {
+    display: inline-block;
+    width: 194mm;       /* A4縦の印刷可能幅（210-余白16） */
+    max-height: 281mm;  /* 297-余白16 */
+    height: auto; object-fit: contain; object-position: top;
+    vertical-align: top;
+  }
+  .print-page.a4-html { font-size: 11pt; text-align: left; }
+  .print-page.a4-html .ans-summary { max-width: none; box-shadow: none; border: none; padding: 0; }
+  .print-page.a4-html .ans-cell, .print-page.a4-html .ans-daimon { page-break-inside: avoid; break-inside: avoid; }
+  .print-page.a4-html .ans-vid { color: #333; }
+  .print-page.a4-html .lv-a, .print-page.a4-html .lv-b, .print-page.a4-html .lv-c,
+  .print-page.a4-html .nanido-bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  /* @page size はJSが #print-page-style に動的注入する（B4 landscape / B4 portrait / A4 portrait） */
 }
 
 /* 試験カード: 正誤棒グラフ（緑=正答率60%以上 / 黄=60%未満 / 灰=未）＋完了%（理社v2と同デザイン） */

@@ -279,6 +279,131 @@ function pagePairsHTML(pages, label, rtl) {
   return html;
 }
 
+// ---- 解答一覧（解答用紙に答えを書き込んだ状態のサマリ）----
+// data の subjects[].nanido.answers（声教の解答ボックス転記。分数は {分子/分母}）を、
+// 大問ごとの解答らん風グリッドで表示。各らんに A/B/C・配点、コベツバがあれば正答率・🎥。
+function fracHTML(s) {
+  return String(s).replace(/\{(\d+)\/(\d+)\}/g,
+    '<span class="frac"><sup>$1</sup>⁄<sub>$2</sub></span>');
+}
+function daimonOf(q) { const m = /^(\d+)/.exec(q); return m ? m[1] : q; }
+function ytLink(id, text) {
+  return `<a class="ans-vid" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">${text}</a>`;
+}
+function renderAnswerSummary() {
+  const sub = state.subject, n = sub.nanido;
+  if (!n || !n.answers) return '';
+  const groups = [];
+  for (const q of sub.questions || []) {
+    const d = daimonOf(q);
+    let g = groups[groups.length - 1];
+    if (!g || g.d !== d) { g = { d, qs: [] }; groups.push(g); }
+    g.qs.push(q);
+  }
+  let body = '';
+  for (const grp of groups) {
+    body += `<div class="ans-daimon"><div class="ans-dnum">${grp.d}</div><div class="ans-cells">`;
+    for (const q of grp.qs) {
+      const v = n.q[q] || [];
+      const cls = v[0], pts = v[1], rate = v[2], vids = v[3];
+      const subLabel = q.slice(grp.d.length) || q;
+      let meta = '';
+      if (rate) meta += `<span class="ans-rate">正答率${rate}</span>`;
+      if (vids) meta += vids.map((id, i) => ytLink(id, `🎥解説${vids.length > 1 ? i + 1 : ''}`)).join('');
+      body += `<div class="ans-cell">
+        <div class="ans-head"><span class="ans-sub">${subLabel}</span>
+          ${cls ? `<span class="lv lv-${cls.toLowerCase()}">${cls}</span>` : ''}
+          ${pts != null ? `<span class="ans-pts">${pts}点</span>` : ''}</div>
+        <div class="ans-val">${fracHTML(n.answers[q] ?? '')}</div>
+        ${meta ? `<div class="ans-meta">${meta}</div>` : ''}
+      </div>`;
+    }
+    body += '</div></div>';
+  }
+  const pv = (n.pointVideos && n.pointVideos.length)
+    ? `<div class="ans-points">🎥 ポイント解説（コベツバ）: ${n.pointVideos.map((p) => ytLink(p.youtubeId, p.title)).join('　')}</div>`
+    : '';
+  const src = n.src === 'kobetsuba' ? 'コベツバ過去問DB' : 'Claude分類';
+  return `<div class="ans-summary" id="ans-summary">
+    <div class="ans-title">解答一覧 <span class="note">${state.school.name} ${state.exam.label} ${sub.name}${sub.maxScore ? `（${sub.maxScore}点）` : ''}　難易度=${src}</span></div>
+    ${nanidoBarHTML()}
+    ${body}${pv}
+  </div>`;
+}
+
+// ---- 解説ページの教科範囲クリップ ----
+// 声教の解説は教科をまたいで1ページに同居する（例: 算数の末尾と社会の冒頭）。
+// explPages[i].clip=[top,bottom]（高さ比）があれば、その範囲だけを表示・印刷する。
+function pageImgClip(p, i, label) {
+  if (!p.clip) return pageImg(p, i, label);
+  return `
+    <div class="page-item clip" data-top="${p.clip[0]}" data-bot="${p.clip[1]}">
+      <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" alt="${label}${i + 1}" loading="lazy">
+    </div>`;
+}
+function fitClip(wrap) {
+  const im = wrap.querySelector('img');
+  if (!im || !im.naturalHeight) return;
+  const h = im.clientWidth * im.naturalHeight / im.naturalWidth;
+  const t = +wrap.dataset.top, b = +wrap.dataset.bot;
+  wrap.style.height = `${h * (b - t)}px`;
+  im.style.marginTop = `${-h * t}px`;
+}
+function applyClips(root) {
+  root.querySelectorAll('.page-item.clip').forEach((w) => {
+    const im = w.querySelector('img');
+    if (im.complete && im.naturalHeight) fitClip(w);
+    else im.addEventListener('load', () => fitClip(w), { once: true });
+  });
+}
+window.addEventListener('resize', () =>
+  document.querySelectorAll('#page-stack .page-item.clip').forEach(fitClip));
+
+// clip範囲をcanvasで切り出す（印刷用）
+async function cropImage(p) {
+  const im = await loadImage(imgUrl(p.full));
+  const [t, b] = p.clip;
+  const y0 = Math.round(im.naturalHeight * t), h = Math.round(im.naturalHeight * (b - t));
+  const c = document.createElement('canvas');
+  c.width = im.naturalWidth; c.height = h;
+  const ctx = c.getContext('2d');
+  ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, h);
+  ctx.drawImage(im, 0, y0, im.naturalWidth, h, 0, 0, im.naturalWidth, h);
+  const url = c.toDataURL('image/jpeg', 0.9);
+  c.width = 0; c.height = 0;
+  return url;
+}
+
+// 解答解説の印刷: A4縦。1枚目=解答一覧（あれば）、以降=教科範囲の解説を1面ずつ
+async function printExpl(btn) {
+  const pages = state.subject.explPages || [];
+  const label = btn ? btn.textContent : '';
+  try {
+    setPageStyle('@media print { @page { size: A4 portrait; margin: 8mm; } }');
+    const container = $('#print-container');
+    container.innerHTML = '';
+    const summary = document.getElementById('ans-summary');
+    if (summary) {
+      const div = document.createElement('div');
+      div.className = 'print-page a4 a4-html';
+      div.innerHTML = summary.outerHTML.replace('id="ans-summary"', '');
+      container.appendChild(div);
+    }
+    for (let i = 0; i < pages.length; i++) {
+      if (btn) btn.textContent = `準備中… ${i + 1}/${pages.length}`;
+      const div = document.createElement('div');
+      div.className = 'print-page a4';
+      const im = document.createElement('img');
+      im.src = pages[i].clip ? await cropImage(pages[i]) : imgUrl(pages[i].full);
+      div.appendChild(im);
+      container.appendChild(div);
+    }
+    await firePrint(container);
+  } finally {
+    if (btn) btn.textContent = label;
+  }
+}
+
 function renderDetail() {
   const sub = state.subject;
   const note = $('#view-note');
@@ -297,7 +422,11 @@ function renderDetail() {
     note.textContent = state.exam.ansOnly
       ? `${sub.name}の解答です（この回は解答のみ収録・全教科分をまとめて表示しています）。`
       : `${sub.name}の解答解説です。画像タップで拡大。`;
-    html += pagePairsHTML(sub.explPages, '解説', false);
+    // 1枚目=解答一覧（解答用紙風サマリ。nanido.answers がある教科のみ）
+    html += renderAnswerSummary();
+    // 解説は教科に属する範囲だけを1列・大きく（印刷もA4縦1面ずつ）
+    html += `<h3 class="section-head">解説</h3>`;
+    html += sub.explPages.map((p, i) => pageImgClip(p, i, '解説')).join('');
     // 解いた解答用紙（原本・赤採点そのまま・追加日付入り）を解答タブ末尾に
     if (sub.solvedPages && sub.solvedPages.length) {
       html += `<h3 class="section-head">解いた解答用紙</h3>`;
@@ -310,6 +439,7 @@ function renderDetail() {
   }
   stack.innerHTML = html;
   bindLightbox(stack);
+  applyClips(stack);
   bindGrading();
   renderPrintButtons();
   loadProposal();
@@ -436,8 +566,8 @@ function renderPrintButtons() {
     $('#pr-q').addEventListener('click', (e) => printDuo(state.subject.questionPages, state.subject.rtl, e.currentTarget));
     $('#pr-s').addEventListener('click', () => printSheets(state.subject.sheetPages));
   } else {
-    g.innerHTML = `<button class="print-btn" id="pr-e">🖨 解説（B4横 2面）</button>`;
-    $('#pr-e').addEventListener('click', (e) => printDuo(state.subject.explPages, false, e.currentTarget));
+    g.innerHTML = `<button class="print-btn" id="pr-e">🖨 解答一覧＋解説（A4縦）</button>`;
+    $('#pr-e').addEventListener('click', (e) => printExpl(e.currentTarget));
   }
 }
 
