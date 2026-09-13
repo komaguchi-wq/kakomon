@@ -759,21 +759,25 @@ function aCellHTML(attempt, qs) {
 function nanidoBarHTML() {
   const n = state.subject && state.subject.nanido;
   if (!n || !n.sums) return '';
-  const target = Math.round(n.sums.A + n.sums.B * B_TARGET_RATE);
+  // 学校別の目標式（data の nanido.bRate / bLabel。無ければ既定=Bの3〜4割）
+  const rate = (n.bRate != null) ? n.bRate : B_TARGET_RATE;
+  const bLabel = n.bLabel || 'Bの3〜4割';
+  const target = Math.round(n.sums.A + n.sums.B * rate);
   const avg = (n.avg && n.avg.gokakusha != null)
-    ? `　合格者平均 <b>${n.avg.gokakusha}点</b>` : '';
+    ? `　合格者平均 <b>${n.avg.gokakusha}点</b>`
+    : (n.goal ? `　<span class="nanido-goal">${n.goal}</span>` : '');
   const src = n.src === 'kobetsuba' ? 'コベツバ過去問DB' : 'Claude分類';
   return `
     <div class="nanido-bar">
       <span class="lv lv-a">A</span>${n.sums.A}点
       <span class="lv lv-b">B</span>${n.sums.B}点
       <span class="lv lv-c">C</span>${n.sums.C}点
-      ／ 目標 <b>${target}点</b>（Aを全部＋Bの3〜4割）${avg}
+      ／ 目標 <b>${target}点</b>（Aを全部＋${bLabel}）${avg}
       <span class="nanido-src">${src}</span>
     </div>
     <div class="nanido-help">
       <span class="lv lv-a">A</span>全部正解したい（×は必ず直す）
-      <span class="lv lv-b">B</span>3〜4割取りたい（惜しい×だけ直す）
+      <span class="lv lv-b">B</span>${n.bRate === 0.5 ? '半分は取りたい' : '3〜4割取りたい'}（惜しい×だけ直す）
       <span class="lv lv-c">C</span>捨ててよい（解説を一読）
     </div>`;
 }

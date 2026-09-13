@@ -236,6 +236,7 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 }
 .nanido-bar b { font-size: 15px; }
 .nanido-src { font-size: 11px; color: var(--muted); margin-left: 6px; }
+.nanido-goal { font-size: 12px; color: var(--muted); }
 .nanido-help { font-size: 11px; color: var(--muted); margin-bottom: 8px; line-height: 2; }
 .nanido-help .lv { margin-left: 8px; }
 .nanido-help .lv:first-child { margin-left: 0; }
