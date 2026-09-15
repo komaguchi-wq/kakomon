@@ -944,11 +944,76 @@ function setPageStyle(css) {
 //   ?print=clean  紙の地と文字まわりの薄いにじみ(232以上)→白、ほぼ黒(60以下)→黒、
 //                 その間は 100/150/200/228 の4段のグレーに寄せる（図の濃淡は残る）。PNG（JPEGはにじみが再発する）
 //   ?print=bw     完全2色（白と黒だけ）。★図のグレーがつぶれるので採用しない・切り分け専用
+//   ?print=mix    白い紙の上の文字・線は完全2色、グレーの塗り（平らな網かけ）と暗い所（濃い表の行・地図・写真）
+//                 だけ clean の4段グレーで残す。clean でも遅かった（2026-09-15 ユーザー試し刷り）ための折衷
 const PRINT_MODE = (() => {
-  const m = location.search.match(/[?&]print=(clean|bw)\b/);
+  const m = location.search.match(/[?&]print=(clean|bw|mix)\b/);
   return m ? m[1] : '';
 })();
 const PRINT_CLEAN_LEVELS = [0, 100, 150, 200, 228, 255];
+// mix 用: グレーを残す画素のマスク（1=4段グレー / 0=完全2色）。3x3ブロックに縮めて判定（iPadのメモリ対策）
+//  平らなグレー: 9px四方の標準偏差<25 かつ 平均60〜225（網かけ・塗り）
+//  暗い所      : 21px四方の平均<170（濃い表の行・地図・写真の中の文字や線もグレー扱いで潰さない）
+// 判定したブロックは周囲1ブロック広げる。
+function _boxMean(src, w, h, r) {
+  const tmp = new Float32Array(w * h), out = new Float32Array(w * h), k = 2 * r + 1;
+  for (let y = 0; y < h; y++) {
+    const o = y * w; let acc = 0;
+    for (let x = -r; x <= r; x++) acc += src[o + Math.min(w - 1, Math.max(0, x))];
+    for (let x = 0; x < w; x++) {
+      tmp[o + x] = acc / k;
+      acc += src[o + Math.min(w - 1, x + r + 1)] - src[o + Math.max(0, x - r)];
+    }
+  }
+  for (let x = 0; x < w; x++) {
+    let acc = 0;
+    for (let y = -r; y <= r; y++) acc += tmp[Math.min(h - 1, Math.max(0, y)) * w + x];
+    for (let y = 0; y < h; y++) {
+      out[y * w + x] = acc / k;
+      acc += tmp[Math.min(h - 1, y + r + 1) * w + x] - tmp[Math.max(0, y - r) * w + x];
+    }
+  }
+  return out;
+}
+function grayKeepMask(d, w, h) {
+  const B = 3, sw = Math.ceil(w / B), sh = Math.ceil(h / B);
+  const m1 = new Float32Array(sw * sh), m2 = new Float32Array(sw * sh);
+  for (let by = 0; by < sh; by++) {
+    for (let bx = 0; bx < sw; bx++) {
+      let s1 = 0, s2 = 0;
+      for (let yy = 0; yy < B; yy++) {
+        const y = Math.min(h - 1, by * B + yy);
+        for (let xx = 0; xx < B; xx++) {
+          const x = Math.min(w - 1, bx * B + xx), p = (y * w + x) * 4;
+          const L = (d[p] * 299 + d[p + 1] * 587 + d[p + 2] * 114) / 1000 | 0;
+          s1 += L; s2 += L * L;
+        }
+      }
+      m1[by * sw + bx] = s1 / (B * B); m2[by * sw + bx] = s2 / (B * B);
+    }
+  }
+  const M1 = _boxMean(m1, sw, sh, 1), M2 = _boxMean(m2, sw, sh, 1), Mw = _boxMean(m1, sw, sh, 3);
+  const k0 = new Uint8Array(sw * sh);
+  for (let i = 0; i < sw * sh; i++) {
+    const sd = Math.sqrt(Math.max(M2[i] - M1[i] * M1[i], 0));
+    k0[i] = ((sd < 25 && M1[i] >= 60 && M1[i] < 225) || Mw[i] < 170) ? 1 : 0;
+  }
+  const k1 = new Uint8Array(sw * sh);   // 周囲1ブロック広げる
+  for (let by = 0; by < sh; by++) for (let bx = 0; bx < sw; bx++) {
+    let v = 0;
+    for (let dy = -1; dy <= 1 && !v; dy++) for (let dx = -1; dx <= 1; dx++) {
+      const yy = by + dy, xx = bx + dx;
+      if (yy >= 0 && yy < sh && xx >= 0 && xx < sw && k0[yy * sw + xx]) { v = 1; break; }
+    }
+    k1[by * sw + bx] = v;
+  }
+  const keep = new Uint8Array(w * h);
+  for (let y = 0; y < h; y++) {
+    const row = ((y / B) | 0) * sw, o = y * w;
+    for (let x = 0; x < w; x++) keep[o + x] = k1[row + ((x / B) | 0)];
+  }
+  return keep;
+}
 async function simplifyForPrint(src) {
   if (!PRINT_MODE) return src;
   const c = document.createElement('canvas');
@@ -970,12 +1035,14 @@ async function simplifyForPrint(src) {
       for (const L of PRINT_CLEAN_LEVELS) if (Math.abs(L - v) < Math.abs(best - v)) best = L;
       lut[v] = best;
     }
-    for (let p = 0; p < d.length; p += 4) {
+    const keep = PRINT_MODE === 'mix' ? grayKeepMask(d, w, h) : null;
+    for (let p = 0, i = 0; p < d.length; p += 4, i++) {
       const r = d[p], g = d[p + 1], b = d[p + 2];
       const mx = r > g ? (r > b ? r : b) : (g > b ? g : b);
       const mi = r < g ? (r < b ? r : b) : (g < b ? g : b);
       if (mx - mi >= 80) continue;   // 赤ペン・色刷りなど色の付いた画素はそのまま（カラーで刷れば色が出る）
-      const v = lut[(r * 299 + g * 587 + b * 114) / 1000 | 0];
+      const L = (r * 299 + g * 587 + b * 114) / 1000 | 0;
+      const v = keep ? (keep[i] ? lut[L] : (L < 160 ? 0 : 255)) : lut[L];
       d[p] = d[p + 1] = d[p + 2] = v; d[p + 3] = 255;
     }
     ctx.putImageData(id, 0, 0);
