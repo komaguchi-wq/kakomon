@@ -938,49 +938,48 @@ function setPageStyle(css) {
 }
 
 // ---- 印刷用のスキャン画像単純化（2026-09-15 試験中: 解説など画像ページの印刷が1枚ずつ遅い対策）----
+// 切り分けで「グレーの細かい点が多いほどプリンターが遅い」と判明（完全2色は明らかに速い）。
+// ただし完全2色は図のグレーの塗りをつぶすので、グレーを残す clean を試験中。
 // URL の ?print= で切り替え。指定なし＝従来どおり（元画像のまま）。
-//   ?print=gray  くっきり白黒（紙色→白・薄い印字→黒へ寄せる・グレーの輪郭は残す。JPEG）
-//   ?print=bw    完全2色（白と黒だけ。元の解像度。PNG）
-//   ?print=bw2   完全2色（2倍に拡大してから2色化＝ふちのギザギザを抑える。PNG）
+//   ?print=clean  紙の地と文字まわりの薄いにじみ(232以上)→白、ほぼ黒(60以下)→黒、
+//                 その間は 100/150/200/228 の4段のグレーに寄せる（図の濃淡は残る）。PNG（JPEGはにじみが再発する）
+//   ?print=bw     完全2色（白と黒だけ）。★図のグレーがつぶれるので採用しない・切り分け専用
 const PRINT_MODE = (() => {
-  const m = location.search.match(/[?&]print=(gray|bw2|bw)\b/);
+  const m = location.search.match(/[?&]print=(clean|bw)\b/);
   return m ? m[1] : '';
 })();
+const PRINT_CLEAN_LEVELS = [0, 100, 150, 200, 228, 255];
 async function simplifyForPrint(src) {
   if (!PRINT_MODE) return src;
   const c = document.createElement('canvas');
   try {
     const im = await loadImage(src);
-    const scale = PRINT_MODE === 'bw2' ? 2 : 1;
-    const w = im.naturalWidth * scale, h = im.naturalHeight * scale;
+    const w = im.naturalWidth, h = im.naturalHeight;
     c.width = w; c.height = h;
     const ctx = c.getContext('2d');
     ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h);
-    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(im, 0, 0, w, h);
     const id = ctx.getImageData(0, 0, w, h);
-    const d = id.data, n = w * h;
-    const hist = new Uint32Array(256);
-    for (let p = 0; p < d.length; p += 4) hist[(d[p] * 299 + d[p + 1] * 587 + d[p + 2] * 114) / 1000 | 0]++;
-    let acc = 0, bg = 255;
-    for (let v = 0; v < 256; v++) { acc += hist[v]; if (acc >= n * 0.9) { bg = v; break; } }
+    const d = id.data;
     const lut = new Uint8ClampedArray(256);
-    if (PRINT_MODE === 'gray') {
-      const hi = Math.max(bg - 40, 110), lo = 70;   // hi 以上は白、lo 以下は黒
-      for (let v = 0; v < 256; v++) {
-        let t = (hi - v) / (hi - lo); t = t < 0 ? 0 : t > 1 ? 1 : t;
-        lut[v] = 255 * (1 - Math.pow(t, 0.65));
-      }
-    } else {
-      const th = Math.min(160, bg - 40);
-      for (let v = 0; v < 256; v++) lut[v] = v < th ? 0 : 255;
+    for (let v = 0; v < 256; v++) {
+      if (PRINT_MODE === 'bw') { lut[v] = v < 160 ? 0 : 255; continue; }
+      if (v >= 232) { lut[v] = 255; continue; }
+      if (v <= 60) { lut[v] = 0; continue; }
+      let best = 0;
+      for (const L of PRINT_CLEAN_LEVELS) if (Math.abs(L - v) < Math.abs(best - v)) best = L;
+      lut[v] = best;
     }
     for (let p = 0; p < d.length; p += 4) {
-      const v = lut[(d[p] * 299 + d[p + 1] * 587 + d[p + 2] * 114) / 1000 | 0];
+      const r = d[p], g = d[p + 1], b = d[p + 2];
+      const mx = r > g ? (r > b ? r : b) : (g > b ? g : b);
+      const mi = r < g ? (r < b ? r : b) : (g < b ? g : b);
+      if (mx - mi >= 80) continue;   // 赤ペン・色刷りなど色の付いた画素はそのまま（カラーで刷れば色が出る）
+      const v = lut[(r * 299 + g * 587 + b * 114) / 1000 | 0];
       d[p] = d[p + 1] = d[p + 2] = v; d[p + 3] = 255;
     }
     ctx.putImageData(id, 0, 0);
-    const url = PRINT_MODE === 'gray' ? c.toDataURL('image/jpeg', 0.85) : c.toDataURL('image/png');
+    const url = c.toDataURL('image/png');
     return (url && url.length > 1000) ? url : src;   // iOS が空の "data:," を返したら元画像
   } catch (e) {
     console.warn('print simplify failed, using original', e);
