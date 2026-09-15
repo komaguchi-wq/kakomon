@@ -446,7 +446,7 @@ async function printExpl(btn) {
       const div = document.createElement('div');
       div.className = 'print-page a4';
       const im = document.createElement('img');
-      im.src = pages[i].clip ? await cropImage(pages[i]) : imgUrl(pages[i].full);
+      im.src = await simplifyForPrint(pages[i].clip ? await cropImage(pages[i]) : imgUrl(pages[i].full));
       div.appendChild(im);
       container.appendChild(div);
     }
@@ -937,6 +937,59 @@ function setPageStyle(css) {
   st.textContent = css;
 }
 
+// ---- 印刷用のスキャン画像単純化（2026-09-15 試験中: 解説など画像ページの印刷が1枚ずつ遅い対策）----
+// URL の ?print= で切り替え。指定なし＝従来どおり（元画像のまま）。
+//   ?print=gray  くっきり白黒（紙色→白・薄い印字→黒へ寄せる・グレーの輪郭は残す。JPEG）
+//   ?print=bw    完全2色（白と黒だけ。元の解像度。PNG）
+//   ?print=bw2   完全2色（2倍に拡大してから2色化＝ふちのギザギザを抑える。PNG）
+const PRINT_MODE = (() => {
+  const m = location.search.match(/[?&]print=(gray|bw2|bw)\b/);
+  return m ? m[1] : '';
+})();
+async function simplifyForPrint(src) {
+  if (!PRINT_MODE) return src;
+  const c = document.createElement('canvas');
+  try {
+    const im = await loadImage(src);
+    const scale = PRINT_MODE === 'bw2' ? 2 : 1;
+    const w = im.naturalWidth * scale, h = im.naturalHeight * scale;
+    c.width = w; c.height = h;
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h);
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(im, 0, 0, w, h);
+    const id = ctx.getImageData(0, 0, w, h);
+    const d = id.data, n = w * h;
+    const hist = new Uint32Array(256);
+    for (let p = 0; p < d.length; p += 4) hist[(d[p] * 299 + d[p + 1] * 587 + d[p + 2] * 114) / 1000 | 0]++;
+    let acc = 0, bg = 255;
+    for (let v = 0; v < 256; v++) { acc += hist[v]; if (acc >= n * 0.9) { bg = v; break; } }
+    const lut = new Uint8ClampedArray(256);
+    if (PRINT_MODE === 'gray') {
+      const hi = Math.max(bg - 40, 110), lo = 70;   // hi 以上は白、lo 以下は黒
+      for (let v = 0; v < 256; v++) {
+        let t = (hi - v) / (hi - lo); t = t < 0 ? 0 : t > 1 ? 1 : t;
+        lut[v] = 255 * (1 - Math.pow(t, 0.65));
+      }
+    } else {
+      const th = Math.min(160, bg - 40);
+      for (let v = 0; v < 256; v++) lut[v] = v < th ? 0 : 255;
+    }
+    for (let p = 0; p < d.length; p += 4) {
+      const v = lut[(d[p] * 299 + d[p + 1] * 587 + d[p + 2] * 114) / 1000 | 0];
+      d[p] = d[p + 1] = d[p + 2] = v; d[p + 3] = 255;
+    }
+    ctx.putImageData(id, 0, 0);
+    const url = PRINT_MODE === 'gray' ? c.toDataURL('image/jpeg', 0.85) : c.toDataURL('image/png');
+    return (url && url.length > 1000) ? url : src;   // iOS が空の "data:," を返したら元画像
+  } catch (e) {
+    console.warn('print simplify failed, using original', e);
+    return src;
+  } finally {
+    c.width = 0; c.height = 0;   // iOS の canvas メモリを早めに解放
+  }
+}
+
 async function firePrint(container) {
   const imgs = Array.from(container.querySelectorAll('img'));
   await Promise.all(imgs.map((im) =>
@@ -991,7 +1044,7 @@ async function printDuo(pages, rtl, btn) {
     container.innerHTML = '';
     for (let i = 0; i < pages.length; i += 2) {
       if (btn) btn.textContent = `準備中… ${Math.min(i + 2, pages.length)}/${pages.length}`;
-      const url = await composePair(pages.slice(i, i + 2), rtl);
+      const url = await simplifyForPrint(await composePair(pages.slice(i, i + 2), rtl));
       const div = document.createElement('div');
       div.className = 'print-page duo';
       const im = document.createElement('img');
@@ -1006,12 +1059,14 @@ async function printDuo(pages, rtl, btn) {
 }
 
 // 解答用紙: B4縦にB5→B4拡大で1面ずつ
-function printSheets(pages) {
+async function printSheets(pages) {
   if (!pages || !pages.length) return;
   setPageStyle('@media print { @page { size: B4 portrait; margin: 8mm; } }');
   const container = $('#print-container');
-  container.innerHTML = pages
-    .map((p) => `<div class="print-page solo"><img src="${imgUrl(p.full)}"></div>`)
+  const srcs = [];
+  for (const p of pages) srcs.push(await simplifyForPrint(imgUrl(p.full)));
+  container.innerHTML = srcs
+    .map((s) => `<div class="print-page solo"><img src="${s}"></div>`)
     .join('');
   firePrint(container);
 }
@@ -1036,7 +1091,7 @@ async function printInfo() {
       } else {
         const pair = (i + 1 < pages.length && !pages[i + 1].landscape)
           ? pages.slice(i, i + 2) : pages.slice(i, i + 1);
-        src = await composePair(pair, false);
+        src = await simplifyForPrint(await composePair(pair, false));
         i += pair.length;
       }
       const div = document.createElement('div');
