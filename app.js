@@ -1014,6 +1014,59 @@ function grayKeepMask(d, w, h) {
   }
   return keep;
 }
+// mix 用: 長く続く細い線（グラフの目盛り線・表の罫線など）のマスク。うすいグレーの線は
+// 2値化(160)で途切れるので、明るさ245未満が「3pxまでの切れ目を埋めて40px以上続き、太さ5px以下」なら線とみなし黒で残す。
+// （2026-09-15 ユーザー指摘: 渋幕2024-1理科 図6 のグラフ横線が印刷で半分消える）
+function longThinLineMask(d, w, h) {
+  const LT = 245, RUN = 40, GAP = 3, THICK = 5, n = w * h;
+  const m = new Uint8Array(n);
+  for (let i = 0, p = 0; i < n; i++, p += 4) m[i] = ((d[p] * 299 + d[p + 1] * 587 + d[p + 2] * 114) / 1000 | 0) < LT ? 1 : 0;
+  const th = new Uint16Array(n), tw = new Uint16Array(n);   // 縦・横の太さ（連続長）
+  for (let y = 0; y < h; y++) {
+    const o = y * w;
+    for (let x = 0; x < w; ) {
+      if (!m[o + x]) { x++; continue; }
+      const s = x; while (x < w && m[o + x]) x++;
+      for (let k = s; k < x; k++) tw[o + k] = Math.min(x - s, 65535);
+    }
+  }
+  for (let x = 0; x < w; x++) {
+    for (let y = 0; y < h; ) {
+      if (!m[y * w + x]) { y++; continue; }
+      const s = y; while (y < h && m[y * w + x]) y++;
+      for (let k = s; k < y; k++) th[k * w + x] = Math.min(y - s, 65535);
+    }
+  }
+  const line = new Uint8Array(n);
+  const rowC = new Uint8Array(w);
+  for (let y = 0; y < h; y++) {           // 横の線
+    const o = y * w;
+    for (let x = 0; x < w; x++) {
+      let v = m[o + x];
+      for (let k = 1; k <= GAP && !v; k++) if (x - k >= 0 && x + k < w && m[o + x - k] && m[o + x + k]) v = 1;
+      rowC[x] = v;
+    }
+    for (let x = 0; x < w; ) {
+      if (!rowC[x]) { x++; continue; }
+      const s = x; while (x < w && rowC[x]) x++;
+      if (x - s >= RUN) for (let k = s; k < x; k++) if (th[o + k] <= THICK) line[o + k] = 1;
+    }
+  }
+  const colC = new Uint8Array(h);
+  for (let x = 0; x < w; x++) {           // 縦の線
+    for (let y = 0; y < h; y++) {
+      let v = m[y * w + x];
+      for (let k = 1; k <= GAP && !v; k++) if (y - k >= 0 && y + k < h && m[(y - k) * w + x] && m[(y + k) * w + x]) v = 1;
+      colC[y] = v;
+    }
+    for (let y = 0; y < h; ) {
+      if (!colC[y]) { y++; continue; }
+      const s = y; while (y < h && colC[y]) y++;
+      if (y - s >= RUN) for (let k = s; k < y; k++) if (tw[k * w + x] <= THICK) line[k * w + x] = 1;
+    }
+  }
+  return line;
+}
 async function simplifyForPrint(src) {
   if (!PRINT_MODE) return src;
   const c = document.createElement('canvas');
@@ -1036,13 +1089,14 @@ async function simplifyForPrint(src) {
       lut[v] = best;
     }
     const keep = PRINT_MODE === 'mix' ? grayKeepMask(d, w, h) : null;
+    const line = PRINT_MODE === 'mix' ? longThinLineMask(d, w, h) : null;
     for (let p = 0, i = 0; p < d.length; p += 4, i++) {
       const r = d[p], g = d[p + 1], b = d[p + 2];
       const mx = r > g ? (r > b ? r : b) : (g > b ? g : b);
       const mi = r < g ? (r < b ? r : b) : (g < b ? g : b);
       if (mx - mi >= 80) continue;   // 赤ペン・色刷りなど色の付いた画素はそのまま（カラーで刷れば色が出る）
       const L = (r * 299 + g * 587 + b * 114) / 1000 | 0;
-      const v = keep ? (keep[i] ? lut[L] : (L < 160 ? 0 : 255)) : lut[L];
+      const v = keep ? (keep[i] ? lut[L] : ((L < 160 || (line[i] && L < 245)) ? 0 : 255)) : lut[L];
       d[p] = d[p + 1] = d[p + 2] = v; d[p + 3] = 255;
     }
     ctx.putImageData(id, 0, 0);
