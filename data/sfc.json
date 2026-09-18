@@ -16387,7 +16387,14 @@
        "6(1)え": "20cm",
        "6(2)": "10分56秒後"
       }
-     }
+     },
+     "solvedPages": [
+      {
+       "full": "2010-1/sansu/solved_2026-09-18_01.jpg",
+       "small": "2010-1/sansu/solved_2026-09-18_01_small.jpg",
+       "date": "2026-09-18"
+      }
+     ]
     },
     {
      "id": "shakai",
@@ -18397,7 +18404,14 @@
        "6(1)": "4.8km",
        "6(2)": "8分"
       }
-     }
+     },
+     "solvedPages": [
+      {
+       "full": "2008-1/sansu/solved_2026-09-18_01.jpg",
+       "small": "2008-1/sansu/solved_2026-09-18_01_small.jpg",
+       "date": "2026-09-18"
+      }
+     ]
     },
     {
      "id": "shakai",
