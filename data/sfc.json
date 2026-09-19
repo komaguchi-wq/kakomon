@@ -15267,7 +15267,14 @@
        "6(3)A君": "23分",
        "6(3)C君": "20分"
       }
-     }
+     },
+     "solvedPages": [
+      {
+       "full": "2011-1/sansu/solved_2026-09-19_01.jpg",
+       "small": "2011-1/sansu/solved_2026-09-19_01_small.jpg",
+       "date": "2026-09-19"
+      }
+     ]
     },
     {
      "id": "shakai",
