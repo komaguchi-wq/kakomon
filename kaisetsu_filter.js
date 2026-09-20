@@ -34,7 +34,10 @@
   const isDigit = (c) => !!c && DIGIT.test(c);
   // 短い方が長い方の先頭にあるとき、数字が続いていないか（"(1)"→"(12)" や "問1"→"問12" は不一致）
   function boundaryOK(short, long) {
-    return !(isDigit(short[short.length - 1]) && isDigit(long[short.length]));
+    const a = short[short.length - 1], b = long[short.length];
+    if (!(isDigit(a) && isDigit(b))) return true;
+    // 漢数字の直後に算用数字（大問「一」＋小問「1」＝「一 1」）は別の番号なので一致とみなす
+    return /[0-9]/.test(a) !== /[0-9]/.test(b);
   }
   function groupOf(p) {
     let m = /^(.*\))/.exec(p);

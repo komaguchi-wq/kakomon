@@ -1997,7 +1997,8 @@
        "jukensha": 49.7,
        "gokakusha": 62.5
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2026-1/sansu.html"
     },
     {
      "id": "shakai",
@@ -2228,7 +2229,8 @@
        "jukensha": 22.9,
        "gokakusha": 27.5
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2026-1/shakai.html"
     },
     {
      "id": "rika",
@@ -2447,7 +2449,8 @@
        "jukensha": 20.5,
        "gokakusha": 26.7
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2026-1/rika.html"
     },
     {
      "id": "kokugo",
@@ -2712,7 +2715,8 @@
        "jukensha": 58.8,
        "gokakusha": 67.2
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2026-1/kokugo.html"
     }
    ]
   },
