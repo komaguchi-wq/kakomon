@@ -264,7 +264,8 @@
        "6(1)": "53",
        "6(2)": "15"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/keiochu/2025-1/sansu.html"
     },
     {
      "id": "shakai",
@@ -600,7 +601,8 @@
        "6 問4": "3",
        "6 問5": "福沢諭吉"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/keiochu/2025-1/shakai.html"
     },
     {
      "id": "rika",
@@ -830,7 +832,8 @@
        "4(5)": "1",
        "4(6)": "3"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/keiochu/2025-1/rika.html"
     },
     {
      "id": "kokugo",
@@ -1190,7 +1193,8 @@
        "五 セ": "便乗",
        "五 ソ": "留"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/keiochu/2025-1/kokugo.html"
     }
    ]
   },
