@@ -7,7 +7,7 @@ const state = {
   school: null,       // 現在の学校データ
   exam: null,         // 現在の試験（年度・回）
   subject: null,      // 現在の教科
-  view: 'question',   // 'question' | 'expl'
+  view: 'question',   // 'question' | 'expl' | 'kaisetsu'（解説タブ。subjects[].kaisetsu がある教科だけ）
   homeScroll: 0,      // トップの離脱時スクロール位置（もどる時に復元）
   schoolScroll: 0,    // 学校ページの離脱時スクロール位置
   screen: 'home',     // 'home' | 'school' | 'info' | 'detail'
@@ -287,6 +287,8 @@ function switchView(view) {
 function syncViewTabs() {
   document.querySelectorAll('#detail .tab').forEach((t) =>
     t.classList.toggle('active', t.dataset.view === state.view));
+  const tk = $('#tab-kaisetsu');
+  if (tk) tk.hidden = !(state.subject && state.subject.kaisetsu);
 }
 
 // ---- 詳細描画 ----
@@ -460,6 +462,9 @@ function renderDetail() {
   const sub = state.subject;
   const note = $('#view-note');
   const stack = $('#page-stack');
+  // 解説が無い教科に切り替えたら解答解説タブへ
+  if (state.view === 'kaisetsu' && !sub.kaisetsu) { state.view = 'expl'; }
+  syncViewTabs();
   let html = renderGrading();
   if (state.view === 'question') {
     const specs = [sub.minutes ? sub.minutes + '分' : '', sub.maxScore ? '満点' + sub.maxScore + '点' : ''].filter(Boolean);
@@ -470,6 +475,9 @@ function renderDetail() {
       html += `<h3 class="section-head">解答用紙</h3>`;
       html += sub.sheetPages.map((p, i) => pageImg(p, i, '解答用紙')).join('');
     }
+  } else if (state.view === 'kaisetsu') {
+    note.textContent = `${sub.name}の解説です（👀 まず見るところ → 📚 前提知識 → 🔍 こう読み解く → 答え）。○×表の 📖 でその問題の解説へ。`;
+    html += renderKaisetsuView();
   } else {
     note.textContent = state.exam.ansOnly
       ? `${sub.name}の解答です（この回は解答のみ収録・全教科分をまとめて表示しています）。`
@@ -490,6 +498,7 @@ function renderDetail() {
     }
   }
   stack.innerHTML = html;
+  if (state.view === 'kaisetsu') loadKaisetsu();
   bindLightbox(stack);
   applyClips(stack);
   stack.querySelectorAll('.ans-vid').forEach((b) =>
@@ -619,10 +628,158 @@ function renderPrintButtons() {
       <button class="print-btn" id="pr-s">🖨 解答用紙（B4拡大）</button>`;
     $('#pr-q').addEventListener('click', (e) => printDuo(state.subject.questionPages, state.subject.rtl, e.currentTarget));
     $('#pr-s').addEventListener('click', () => printSheets(state.subject.sheetPages));
+  } else if (state.view === 'kaisetsu') {
+    g.innerHTML = `<button class="print-btn" id="pr-k">🖨 解説（B4横・絞り込んだ問題だけ）</button>`;
+    $('#pr-k').addEventListener('click', (e) => printKaisetsu(e.currentTarget));
   } else {
     g.innerHTML = `<button class="print-btn" id="pr-e">🖨 解答一覧＋解説（A4縦）</button>`;
     $('#pr-e').addEventListener('click', (e) => printExpl(e.currentTarget));
   }
+}
+
+// ---- 解説タブ（★2026-09-20）----
+// data/{school}.json の subjects[].kaisetsu = "kaisetsu/{school}/{exam}/{subject}.html"（HTML断片。scripts/kaisetsu/kakomon/assemble.py が置く）。
+// 問題／解答解説／解説 の3タブ。絞り込み（全ての問題／最新の回で×／×または未入力／どれかの回で×／A帯で×）で
+// 対象の問題のカードだけ赤帯にし、右上の印刷はその問題だけをB4横2段組で出す（kaisetsu_filter.js・他アプリと共通）。
+const KAISETSU_V = 1;   // 断片を全面差し替えしたら+1
+const KAISETSU_FILTERS = [
+  ['all', '全ての問題'],
+  ['latest-x', '最新の回で ×'],
+  ['latest-xu', '最新の回で ×または未入力'],
+  ['any-x', 'どれかの回で ×'],
+  ['a-x', 'A帯（全部正解したい問題）で ×'],
+];
+const _kaisetsuCache = {};
+function kaisetsuURL() {
+  const sub = state.subject;
+  if (!sub || !sub.kaisetsu) return null;
+  const p = typeof sub.kaisetsu === 'string' ? sub.kaisetsu : `kaisetsu/${state.school.id}/${state.exam.id}/${sub.id}.html`;
+  return `${p}?v=${KAISETSU_V}`;
+}
+function kaisetsuFilterKey() { return sessionStorage.getItem('kakomon-kaisetsu-filter') || 'all'; }
+// 「最新の回」= ○×・日付・点数のどれかが入っている最後の列（無ければ1回目）
+function latestAttemptIndex(g) {
+  let idx = 0;
+  g.attempts.forEach((a, i) => { if (Object.values(a.marks).some(Boolean) || a.date || a.score) idx = i; });
+  return idx;
+}
+function kaisetsuTargetIds(filterKey) {
+  if (filterKey === 'all') return null;
+  const qs = state.subject.questions || [];
+  const g = loadGrades();
+  const li = latestAttemptIndex(g);
+  const set = new Set();
+  for (const q of qs) {
+    const latest = g.attempts[li].marks[q] || '';
+    const anyX = g.attempts.some((a) => a.marks[q] === 'x');
+    const d = nanidoOf(q);
+    let hit = false;
+    if (filterKey === 'latest-x') hit = latest === 'x';
+    else if (filterKey === 'latest-xu') hit = latest !== 'o';
+    else if (filterKey === 'any-x') hit = anyX;
+    else if (filterKey === 'a-x') hit = !!d && d.cls === 'A' && anyX;
+    if (hit) set.add(q);
+  }
+  return set;
+}
+// 正誤表の小問 → kaisetsu_filter.js の形（id=○×キー・dm=大問・label=小問）。カードの qid は「1 (1)」「3 問2」「一 問五」
+function kaisetsuQuestions() {
+  return (state.subject.questions || []).map((q) => {
+    const dm = daimonOf(q);
+    return { id: q, dm, dmLabel: dm, group: '', label: subLabelOf(q, dm) };
+  });
+}
+function renderKaisetsuView() {
+  const cur = kaisetsuFilterKey();
+  const opts = KAISETSU_FILTERS.map(([k, l]) => `<option value="${k}"${k === cur ? ' selected' : ''}>${l}</option>`).join('');
+  return `
+    <div class="kaisetsu-toolbar kk-toolbar">
+      <span class="kaisetsu-toolbar-title">右上の「🖨 印刷」で、ここで絞り込んだ問題の解説だけをB4横で印刷します（大問の見出し・全体像は残ります）</span>
+      <label class="kk-filter">絞り込み <select id="kk-filter">${opts}</select></label>
+    </div>
+    <div class="kaisetsu-target-note" id="kk-note" hidden></div>
+    <div class="kaisetsu" id="kk-body"><p class="kaisetsu-loading">解説を読み込み中…</p></div>`;
+}
+async function loadKaisetsu() {
+  const url = kaisetsuURL();
+  const body = document.getElementById('kk-body');
+  if (!url || !body) return;
+  const sel = document.getElementById('kk-filter');
+  if (sel) sel.addEventListener('change', () => { sessionStorage.setItem('kakomon-kaisetsu-filter', sel.value); applyKaisetsuMarks(); });
+  try {
+    if (!_kaisetsuCache[url]) {
+      const res = await fetch(url, { cache: 'no-cache' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      _kaisetsuCache[url] = await res.text();
+    }
+    if (document.getElementById('kk-body') !== body) return;
+    body.innerHTML = _kaisetsuCache[url];
+    // 目次リンク: location.hash（ディープリンク）を変えずにカードへスクロール
+    body.querySelectorAll('.toc a[href^="#"]').forEach((a) => a.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const t = body.querySelector(`[id="${CSS.escape(a.getAttribute('href').slice(1))}"]`);
+      if (t) t.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }));
+    applyKaisetsuMarks();
+    if (_kaisetsuJumpQ) { const q = _kaisetsuJumpQ; _kaisetsuJumpQ = null; scrollToKaisetsuCard(q); }
+  } catch (e) {
+    body.innerHTML = `<p class="kaisetsu-loading">解説を読み込めませんでした（${e.message}）</p>`;
+  }
+}
+function applyKaisetsuMarks() {
+  const body = document.getElementById('kk-body'), note = document.getElementById('kk-note');
+  if (!body || !window.KaisetsuFilter) return;
+  const key = kaisetsuFilterKey();
+  const target = kaisetsuTargetIds(key);
+  const r = KaisetsuFilter.markCards(body, kaisetsuQuestions(), target);
+  if (note) {
+    const label = (KAISETSU_FILTERS.find(([k]) => k === key) || [])[1] || '';
+    note.hidden = !target;
+    if (target) note.textContent = `対象の解説 ${r.kept} / ${r.total} 問（${label}）。対象外のカードは薄く表示し、印刷では省きます`;
+  }
+}
+// ○×表の 📖: 解説タブに切り替えてその問題のカードへ
+let _kaisetsuJumpQ = null;
+function jumpToKaisetsu(q) {
+  if (state.view !== 'kaisetsu') { _kaisetsuJumpQ = q; switchView('kaisetsu'); return; }
+  scrollToKaisetsuCard(q);
+}
+function scrollToKaisetsuCard(q) {
+  const body = document.getElementById('kk-body');
+  if (!body || !window.KaisetsuFilter || typeof KaisetsuFilter.coveredIds !== 'function') return;
+  const qs = kaisetsuQuestions();
+  const cards = [...body.querySelectorAll('.card')];
+  const hit = cards.find((c) => {
+    const el = c.querySelector('.qid');
+    if (!el || c.classList.contains('card-overview') || c.classList.contains('card-summary')) return false;
+    const ids = KaisetsuFilter.coveredIds(el.textContent, qs, KaisetsuFilter.dmIndex(qs));
+    return ids && ids.includes(q);
+  });
+  if (hit) { hit.scrollIntoView({ block: 'start', behavior: 'smooth' }); hit.classList.add('k-flash'); setTimeout(() => hit.classList.remove('k-flash'), 1800); }
+}
+// 解説の印刷: B4横2段組（他アプリの解説印刷と同じ紙）。絞り込み中は対象の問題のカードだけ
+async function printKaisetsu(btn) {
+  const url = kaisetsuURL();
+  if (!url) return;
+  if (!_kaisetsuCache[url]) await loadKaisetsu();
+  let html = _kaisetsuCache[url];
+  if (!html) { alert('解説がまだ読み込めていません'); return; }
+  const key = kaisetsuFilterKey();
+  const target = kaisetsuTargetIds(key);
+  let sub = '';
+  if (target && window.KaisetsuFilter) {
+    const r = KaisetsuFilter.filterHTML(html, kaisetsuQuestions(), target);
+    if (!r.kept) { alert('絞り込みの対象になる問題がありません。絞り込みを「全ての問題」にするか、○×表で×を付けてから印刷してください'); return; }
+    html = r.html;
+    const label = (KAISETSU_FILTERS.find(([k]) => k === key) || [])[1] || '';
+    sub = `<div class="kp-sub">${label} の解説（${r.kept} / ${r.total} 問）</div>`;
+  }
+  const schoolLabel = state.school.shortName || state.school.name;
+  const title = `${schoolLabel} ${state.exam.label} ${state.subject.name} 解説`;
+  setPageStyle('@media print { @page { size: B4 landscape; margin: 12mm; } }');
+  const container = $('#print-container');
+  container.innerHTML = `<div class="kp"><div class="kp-title">${title}</div>${sub}<div class="kaisetsu kaisetsu-print">${html}</div></div>`;
+  await firePrint(container);
 }
 
 // ---- 家族共有クラウド同期（○×表を端末非依存にする） ----
@@ -801,7 +958,7 @@ function renderGrading() {
     const mustFix = d && d.cls === 'A'
       && g.attempts.some((a) => a.marks[q] === 'x');
     rows += `<tr${mustFix ? ' class="row-mustfix"' : ''} data-row="${q}">`;
-    rows += `<td class="q-label">${levelChip(q)}${q}</td>`;
+    rows += `<td class="q-label">${levelChip(q)}${q}${state.subject.kaisetsu ? ` <button class="kk-jump" data-q="${q}" title="この問題の解説へ">📖</button>` : ''}</td>`;
     for (let t = 0; t < 3; t++) {
       const v = g.attempts[t].marks[q] || '';
       rows += `<td><button class="mark-btn ${v}" data-q="${q}" data-t="${t}">${v === 'o' ? '○' : v === 'x' ? '×' : '・'}</button></td>`;
@@ -893,8 +1050,11 @@ function bindGrading() {
         tr.classList.toggle('row-mustfix', !!d && d.cls === 'A'
           && g.attempts.some((a) => a.marks[q] === 'x'));
       }
+      if (state.view === 'kaisetsu') applyKaisetsuMarks();
     });
   });
+  document.querySelectorAll('.kk-jump').forEach((b) =>
+    b.addEventListener('click', (ev) => { ev.stopPropagation(); jumpToKaisetsu(b.dataset.q); }));
   document.querySelectorAll('.score-input').forEach((inp) => {
     inp.addEventListener('change', () => {
       const g = loadGrades();

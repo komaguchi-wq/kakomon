@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>過去問</title>
-  <link rel="stylesheet" href="style.css?v=13">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
   <header id="app-header">
@@ -44,6 +44,7 @@
       <div class="tabs">
         <button class="tab active" data-view="question">問題＆解答用紙</button>
         <button class="tab" data-view="expl">解答解説</button>
+        <button class="tab" data-view="kaisetsu" id="tab-kaisetsu" hidden title="解説（👀 まず見るところ → 📚 前提知識 → 🔍 こう読み解く → 答え）">解説</button>
         <span class="print-group" id="print-group"></span>
       </div>
     </div>
@@ -76,7 +77,8 @@
   <!-- 印刷専用コンテナ -->
   <div id="print-container"></div>
 
-  <script src="app.js?v=31"></script>
+  <script src="kaisetsu_filter.js?v=1"></script>
+  <script src="app.js?v=32"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>

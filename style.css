@@ -388,3 +388,129 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 .mark-btn.pend { box-shadow: 0 0 0 2px #f0c060 inset; }
 .score-input.pend, .date-input.pend { border-color: #f0c060; background: #fff7e0; }
 .page-date { font-size: 11px; color: var(--muted); margin: 0 0 2px 2px; }
+
+/* ---- 解説タブ（★2026-09-20・共通CSSは末尾の kaisetsu-css ブロック） ---- */
+.page-stack .kk-toolbar, .page-stack .kaisetsu-target-note, .page-stack .kaisetsu { width: 100%; max-width: 900px; }
+.kk-filter { font-size: 14px; color: #333; white-space: nowrap; }
+.kk-filter select { font-size: 14px; padding: 5px 8px; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
+.kk-jump { border: none; background: none; cursor: pointer; font-size: 15px; padding: 0 2px; vertical-align: middle; }
+.kaisetsu .card.k-flash { box-shadow: 0 0 0 4px #ffd54f; }
+
+/* kaisetsu-css:begin （scripts/kaisetsu/inject_css.py が生成。手で編集せず css/ を直して再注入） */
+#wsm-tab-k.active { color: #1a6fb5; }
+.wsm-kaisetsu-wrap { margin-top: 8px; }
+.kaisetsu-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 8px 12px; margin-bottom: 10px; }
+.kaisetsu-toolbar-title { font-size: 13px; color: #555; }
+.kaisetsu-print-btn { font-size: 14px; padding: 6px 12px; border-radius: 8px; border: 1px solid #1a6fb5; background: #eef4fb; color: #1a6fb5; font-weight: 600; }
+.kaisetsu-loading { color: #888; font-size: 14px; padding: 12px; }
+/* ★2026-09-20 問題選択（全問以外）の対象/対象外: 対象は赤い左帯・対象外は薄く。大問ごと対象なしは見出しも薄く */
+.kaisetsu-target-note { background: #fff4f4; border: 1px solid #f1caca; color: #c0392b; border-radius: 10px; padding: 8px 12px; margin-bottom: 10px; font-size: 14px; font-weight: 600; }
+.kaisetsu .card.k-on { border-left: 6px solid #ff3b30; }
+.kaisetsu .card.k-off { opacity: 0.38; }
+.kaisetsu .daimon.k-empty .dtitle, .kaisetsu .daimon.k-empty .card-overview, .kaisetsu .daimon.k-empty .card-summary { opacity: 0.38; }
+.kaisetsu { --k-ink:#222; --k-sub:#666; --k-line:#dfe3ea; --k-acc:#1a6fb5; --k-hint:#e0891a; --k-read:#2e8b57; --k-warn:#c0392b; --k-ok:#2e8b57;
+  color: var(--k-ink); line-height: 1.85; font-size: 17px; max-width: 900px; margin: 0 auto; -webkit-user-select: text; user-select: text;
+  font-family: -apple-system, "Hiragino Maru Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif; }
+.kaisetsu .toc { background:#fff; border:1px solid var(--k-line); border-radius:12px; padding:12px 18px; margin:0 0 16px; font-size:15px; }
+.kaisetsu .toc ul { margin:6px 0 0; padding-left:20px; columns:2; }
+.kaisetsu .toc a { color: var(--k-acc); text-decoration: none; }
+.kaisetsu .daimon { margin-top: 30px; }
+.kaisetsu .daimon:first-of-type { margin-top: 0; }
+.kaisetsu .dtitle { font-size: 20px; margin: 0 0 14px; padding: 8px 14px; color: #fff; background: var(--k-acc); border-radius: 10px; font-weight: 700; }
+.kaisetsu .card { background:#fff; border:1px solid var(--k-line); border-radius:14px; padding:18px 20px 16px; margin:0 0 20px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+.kaisetsu .card-overview, .kaisetsu .card-summary { background:#f6f8fb; }
+.kaisetsu .card h2 { font-size:20px; margin:0 0 10px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; font-weight:700; line-height:1.4; }
+/* ★2026-09-20 ユーザー要望: どの問題の解説か一目で分かるように小問番号（qid）を大きく */
+.kaisetsu .qid { display:inline-block; background:var(--k-acc); color:#fff; font-size:24px; line-height:1.25; padding:5px 16px; border-radius:10px; font-weight:800; letter-spacing:.03em; box-shadow:0 2px 0 rgba(0,0,0,.18); white-space:nowrap; }
+.kaisetsu .card-overview .qid, .kaisetsu .card-summary .qid { font-size:19px; padding:3px 12px; font-weight:700; box-shadow:none; }
+.kaisetsu .card { border-top:4px solid var(--k-acc); }
+.kaisetsu .card-overview, .kaisetsu .card-summary { border-top-color:#9aa7b8; }
+.kaisetsu .type { display:inline-block; background:#eef4fb; color:var(--k-acc); font-size:12.5px; padding:2px 9px; border-radius:999px; font-weight:600; }
+.kaisetsu .src { color:var(--k-sub); font-size:12.5px; margin:-4px 0 8px; }
+.kaisetsu h3 { font-size:16px; margin:14px 0 6px; padding:4px 10px; border-left:5px solid var(--k-acc); background:#f3f7fc; border-radius:0 8px 8px 0; font-weight:700; }
+.kaisetsu h3.h-hint { border-left-color:var(--k-hint); background:#fff6e8; }
+.kaisetsu h3.h-read { border-left-color:var(--k-read); background:#eef8f1; }
+.kaisetsu .hint { background:#fff; border:1px solid #e8d9c3; border-left:4px solid var(--k-hint); border-radius:8px; padding:10px 14px; margin:4px 0 4px; }
+.kaisetsu ol, .kaisetsu ul { margin:4px 0 4px 0; padding-left:26px; }
+.kaisetsu li { margin:4px 0; }
+.kaisetsu li::marker { color: var(--k-sub); font-weight:700; }
+.kaisetsu p { margin: 6px 0; }
+/* ★2026-09-20 ユーザー要望: 各説明のポイント（<b>）を太字＋黄色マーカーで目立たせる */
+.kaisetsu b, .kaisetsu strong { font-weight:800; color:#a4261a; background:linear-gradient(transparent 55%, #fff1a0 55%); padding:0 2px; border-radius:2px; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+.kaisetsu .toc b, .kaisetsu th b, .kaisetsu .ans b, .kaisetsu .model b { background:none; padding:0; color:inherit; }
+.kaisetsu .model b { color: var(--k-read); }
+.kaisetsu .ans { background:#f0f8f2; border:1px solid #bfe0c7; border-radius:10px; padding:10px 14px; margin-top:12px; font-weight:700; font-size:17px; }
+.kaisetsu .miss { background:#fff4f4; border:1px solid #f1caca; border-radius:10px; padding:10px 14px; margin-top:10px; }
+.kaisetsu .miss b, .kaisetsu .x { color: var(--k-warn); }
+.kaisetsu .ok { color: var(--k-ok); font-weight:700; }
+.kaisetsu .tip { background:#fffbe6; border:1px solid #f1e3a1; border-radius:10px; padding:8px 14px; margin-top:10px; font-size:15.5px; }
+.kaisetsu table { border-collapse:collapse; font-size:14.5px; margin:6px 0; max-width:100%; }
+.kaisetsu td, .kaisetsu th { border:1px solid var(--k-line); padding:4px 10px; text-align:left; vertical-align:top; }
+.kaisetsu th { background:#f3f3f3; font-weight:700; }
+.kaisetsu .model { background:#f0f8f2; border:1px solid #bfe0c7; border-radius:10px; padding:10px 14px; margin-top:12px; }
+.kaisetsu .model b { color: var(--k-read); }
+.kaisetsu .card-fact { border-left: 6px solid #9aa7b8; padding-top: 14px; }
+.kaisetsu .card-fact .type { background:#f0f2f5; color:#556; }
+.kaisetsu .fact { margin: 4px 0 2px; padding: 2px 4px; }
+/* 算数の簡易図（文字で描く連除法・数直線・○の並び） */
+.kaisetsu pre.fig { font-family: Menlo, "Osaka-Mono", "MS Gothic", "Noto Sans Mono CJK JP", monospace; font-size:14px; line-height:1.5; background:#fafafa; border:1px dashed #cfd6de; border-radius:8px; padding:8px 12px; margin:6px 0 4px; white-space:pre; overflow-x:auto; }
+
+#print-container .kp { display: none; }
+@media print {
+  #print-container .kp { display: block !important; width: 100% !important; visibility: visible !important; background: #fff !important; }
+  #print-container .kp-title { font-size: 15pt; font-weight: 700; margin: 0 0 5mm; padding-bottom: 2mm; border-bottom: 2px solid #1a6fb5; }
+  #print-container .kp-sub { font-size: 10.5pt; font-weight: 700; color: #c0392b; margin: -3mm 0 4mm; }
+  /* 画面用の対象/対象外の印は印刷では使わない（印刷は対象だけを流す） */
+  #print-container .kaisetsu-print .card.k-off { opacity: 1; }
+  #print-container .kaisetsu-print .card.k-on { border-left: 1px solid #bbb; }
+  #print-container .kaisetsu-print {
+    max-width: none !important; font-size: 10.5pt !important; line-height: 1.65 !important; color: #000 !important;
+  }
+  #print-container .kaisetsu-print .toc { display: none; }
+  /* ★2026-09-16 大問（.daimon）ごとに2段組の箱を分け、区切りは必ず新しいページから始める（ユーザー要望） */
+  #print-container .kaisetsu-print .daimon {
+    column-count: 2; column-gap: 12mm; column-fill: auto; column-rule: 1px solid #ccc;
+    margin-top: 0; break-before: page; page-break-before: always;
+  }
+  #print-container .kaisetsu-print .daimon:first-of-type { break-before: auto; page-break-before: auto; }
+  #print-container .kaisetsu-print .dtitle { font-size: 13pt; margin: 0 0 4mm; padding: 2mm 4mm; break-after: avoid; break-inside: avoid;
+    background: #1a6fb5 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #print-container .kaisetsu-print .card {
+    break-inside: auto; page-break-inside: auto; orphans: 3; widows: 3;
+    border: 1px solid #bbb; border-radius: 3mm; padding: 4mm 5mm 3mm; margin: 0 0 5mm; box-shadow: none;
+  }
+  #print-container .kaisetsu-print .card-overview, #print-container .kaisetsu-print .card-summary { background: #f6f8fb !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #print-container .kaisetsu-print .card h2 { font-size: 13pt; break-after: avoid; page-break-after: avoid; margin-bottom: 2mm; }
+  /* ★2026-09-20 小問番号を大きく（白黒印刷でも黒帯に白抜きで目立つ） */
+  #print-container .kaisetsu-print .qid { font-size: 13pt; background: #1a6fb5 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 0.8mm 3.5mm; border-radius: 2mm; box-shadow: none; }
+  #print-container .kaisetsu-print .card-overview .qid, #print-container .kaisetsu-print .card-summary .qid { font-size: 11pt; }
+  #print-container .kaisetsu-print .card { border-top: 0.8mm solid #1a6fb5; }
+  /* ★2026-09-20 ポイント（<b>）は太字＋下線。白黒印刷でも残るように色に頼らない */
+  #print-container .kaisetsu-print b, #print-container .kaisetsu-print strong { font-weight: 800; color: #000 !important; background: none !important; padding: 0; text-decoration: underline; text-decoration-thickness: 1.2pt; text-underline-offset: 2pt; }
+  #print-container .kaisetsu-print .ans b, #print-container .kaisetsu-print .model b, #print-container .kaisetsu-print th b { text-decoration: none; }
+  #print-container .kaisetsu-print .src { font-size: 8.5pt; break-after: avoid; }
+  #print-container .kaisetsu-print h3 { font-size: 10.5pt; margin: 3mm 0 1.5mm; padding: 1mm 3mm; break-after: avoid; page-break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #print-container .kaisetsu-print h3 { background: #f3f7fc !important; }
+  #print-container .kaisetsu-print h3.h-hint { background: #fff6e8 !important; }
+  #print-container .kaisetsu-print h3.h-read { background: #eef8f1 !important; }
+  #print-container .kaisetsu-print .type { font-size: 8.5pt; border: 1px solid #9bbbe0; }
+  #print-container .kaisetsu-print table { font-size: 9pt; }
+  #print-container .kaisetsu-print li, #print-container .kaisetsu-print tr,
+  #print-container .kaisetsu-print .hint, #print-container .kaisetsu-print .ans, #print-container .kaisetsu-print .miss,
+  #print-container .kaisetsu-print .tip, #print-container .kaisetsu-print .model { break-inside: avoid; page-break-inside: avoid; -webkit-column-break-inside: avoid; }
+  #print-container .kaisetsu-print .hint, #print-container .kaisetsu-print .ans, #print-container .kaisetsu-print .miss,
+  #print-container .kaisetsu-print .tip, #print-container .kaisetsu-print .model { padding: 2mm 3mm; margin-top: 2.5mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #print-container .kaisetsu-print .hint { background: #fff !important; border-left: 1mm solid #e0891a; }
+  #print-container .kaisetsu-print .ans, #print-container .kaisetsu-print .model { background: #f0f8f2 !important; font-size: 10.5pt; }
+  #print-container .kaisetsu-print .miss { background: #fff4f4 !important; }
+  #print-container .kaisetsu-print .tip { background: #fffbe6 !important; font-size: 10pt; }
+  #print-container .kaisetsu-print p { orphans: 3; widows: 3; }
+  #print-container .kaisetsu-print .card-fact { border-left: 1.5mm solid #9aa7b8; }
+  #print-container .kaisetsu-print .fact { break-inside: avoid; }
+  #print-container .kaisetsu-print .ok { color: #2e8b57 !important; }
+  #print-container .kaisetsu-print .x, #print-container .kaisetsu-print .miss b { color: #c0392b !important; }
+}
+#print-container .kaisetsu-print pre.fig { font-size: 9pt; line-height:1.4; page-break-inside: avoid; break-inside: avoid; background:#fff; }
+
+/* kaisetsu-css:end */
