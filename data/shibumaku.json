@@ -4766,7 +4766,8 @@
        "jukensha": 37.7,
        "gokakusha": 54.9
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2024-1/sansu.html"
     },
     {
      "id": "shakai",
@@ -5348,7 +5349,8 @@
        "jukensha": 31.2,
        "gokakusha": 38.0
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2024-1/rika.html"
     },
     {
      "id": "kokugo",
@@ -5525,7 +5527,8 @@
        "jukensha": 59.1,
        "gokakusha": 64.6
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2024-1/kokugo.html"
     }
    ]
   },
