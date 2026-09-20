@@ -1972,7 +1972,8 @@
        "jukensha": 45.1,
        "gokakusha": 70.2
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2025-2/sansu.html"
     },
     {
      "id": "shakai",
@@ -2293,7 +2294,8 @@
        "jukensha": 41.8,
        "gokakusha": 48.3
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2025-2/shakai.html"
     },
     {
      "id": "rika",
@@ -2516,7 +2518,8 @@
        "jukensha": 43.3,
        "gokakusha": 54.7
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2025-2/rika.html"
     },
     {
      "id": "kokugo",
@@ -2697,7 +2700,8 @@
        "jukensha": 61.5,
        "gokakusha": 68.6
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2025-2/kokugo.html"
     }
    ]
   },
@@ -3632,7 +3636,8 @@
        "jukensha": 53.0,
        "gokakusha": 61.0
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2025-1/kokugo.html"
     }
    ]
   },
