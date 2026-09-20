@@ -6590,7 +6590,8 @@
        "jukensha": 47.8,
        "gokakusha": 58.7
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2023-1/sansu.html"
     },
     {
      "id": "shakai",
@@ -14816,7 +14817,8 @@
        "jukensha": 48.9,
        "gokakusha": 59.2
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2018-1/sansu.html"
     },
     {
      "id": "shakai",
@@ -15145,7 +15147,8 @@
        "3 問3メリット": "本来，春にふ化する蚕の卵を，風穴で低温貯蔵することで夏や秋にふ化させることができるので，生糸の原料となる蚕のまゆを一年を通して手に入れることができる。",
        "3 問4": "気温が高くなって空気が膨張したり，高所で空気が薄くなったりすると気圧が下がり，翼の上下に生じる気圧の差が小さくなってしまうから。"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2018-1/shakai.html"
     },
     {
      "id": "rika",
@@ -15390,7 +15393,8 @@
        "3(6)②": "＝",
        "3(6)③": "＜"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2018-1/rika.html"
     },
     {
      "id": "kokugo",
@@ -15603,7 +15607,8 @@
        "二 問7": "オ",
        "二 問8": "キ"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2018-1/kokugo.html"
     }
    ]
   }
