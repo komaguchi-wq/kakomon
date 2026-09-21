@@ -4376,7 +4376,14 @@
        "四": "国民の健康のため，ポテトチップスに税金をかけた国の話を聞いたことがあります。でも，食べたい人はとなりの国に買いに行くので，結局廃止されたそうです。廃止の理由は他にもあり，食品メーカーの経営悪化で失業者が出ては困るからです。安易な課税で，効果がないだけでなく，他のところに悪い影響が出るのでは，ばかげたことだと思います。"
       }
      },
-     "kaisetsu": "kaisetsu/sfc/2023-1/kokugo.html"
+     "kaisetsu": "kaisetsu/sfc/2023-1/kokugo.html",
+     "solvedPages": [
+      {
+       "full": "2023-1/kokugo/solved_2026-09-21_01.jpg",
+       "small": "2023-1/kokugo/solved_2026-09-21_01_small.jpg",
+       "date": "2026-09-21"
+      }
+     ]
     }
    ]
   },
@@ -6216,7 +6223,14 @@
        "4(5)理由": "木片が燃えるとき，下から上への新しい空気の流れが木片全体にふれるように続いて生じるから。"
       }
      },
-     "kaisetsu": "kaisetsu/sfc/2021-1/rika.html"
+     "kaisetsu": "kaisetsu/sfc/2021-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2021-1/rika/solved_2026-09-21_01.jpg",
+       "small": "2021-1/rika/solved_2026-09-21_01_small.jpg",
+       "date": "2026-09-21"
+      }
+     ]
     },
     {
      "id": "kokugo",
@@ -7244,7 +7258,14 @@
        "4 問4ウ": "③"
       }
      },
-     "kaisetsu": "kaisetsu/sfc/2020-1/rika.html"
+     "kaisetsu": "kaisetsu/sfc/2020-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2020-1/rika/solved_2026-09-21_01.jpg",
+       "small": "2020-1/rika/solved_2026-09-21_01_small.jpg",
+       "date": "2026-09-21"
+      }
+     ]
     },
     {
      "id": "kokugo",
