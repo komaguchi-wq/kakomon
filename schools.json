@@ -31,5 +31,11 @@
   "name": "有名中学入試問題集",
   "yearsLabel": "2027年度受験用・2026年実施",
   "shortName": "有名中"
+ },
+ {
+  "id": "moshi",
+  "name": "模試",
+  "yearsLabel": "学校別サピックスオープン ほか",
+  "shortName": "模試"
  }
 ]
