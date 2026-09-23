@@ -897,7 +897,8 @@ function nanidoOf(q) {
 }
 function levelChip(q) {
   const d = nanidoOf(q);
-  return d ? `<span class="lv lv-${d.cls.toLowerCase()}">${d.cls}</span>` : '';
+  // 難易度が無いデータ（模試: 配点だけ）は空のチップを出さない
+  return (d && d.cls) ? `<span class="lv lv-${d.cls.toLowerCase()}">${d.cls}</span>` : '';
 }
 // A帯の到達状況（1回ごとに「Aの何問を○にできたか」）
 function aStats(attempt, qs) {
