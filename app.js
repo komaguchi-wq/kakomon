@@ -950,8 +950,9 @@ function renderGrading() {
     const o = marks.filter((v) => v === 'o').length;
     return `${o}/${qs.length}`;
   });
+  // 難易度（A/B/C）が1つも無いデータ（模試: 配点だけ）では「A帯の正解」行を出さない
   const hasNanido = !!(state.subject.nanido && state.subject.nanido.q
-    && Object.keys(state.subject.nanido.q).length);
+    && Object.values(state.subject.nanido.q).some((v) => v && v[0]));
   let rows = '';
   for (const q of qs) {
     const d = nanidoOf(q);
