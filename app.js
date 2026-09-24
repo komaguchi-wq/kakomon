@@ -44,6 +44,8 @@ async function init() {
   document.querySelectorAll('#detail .tab').forEach((t) =>
     t.addEventListener('click', () => switchView(t.dataset.view)));
   $('#lightbox-close').addEventListener('click', closeLightbox);
+  document.querySelectorAll('#target-modebar .tmode-btn').forEach((b) =>
+    b.addEventListener('click', () => setTargetMode(b.dataset.tmode)));
   $('#info-print-btn').addEventListener('click', () => printInfo());
   // ○×表のクラウド同期（表示中の教科があれば取り込み後に再描画）
   gradeSyncInit(() => {   // 同期取り込み後は棒グラフも更新
@@ -465,6 +467,7 @@ function renderDetail() {
   // 解説が無い教科に切り替えたら解答解説タブへ
   if (state.view === 'kaisetsu' && !sub.kaisetsu) { state.view = 'expl'; }
   syncViewTabs();
+  syncTargetBar();
   let html = renderGrading();
   if (state.view === 'question') {
     const specs = [sub.minutes ? sub.minutes + '分' : '', sub.maxScore ? '満点' + sub.maxScore + '点' : ''].filter(Boolean);
@@ -629,8 +632,16 @@ function renderPrintButtons() {
     $('#pr-q').addEventListener('click', (e) => printDuo(state.subject.questionPages, state.subject.rtl, e.currentTarget));
     $('#pr-s').addEventListener('click', () => printSheets(state.subject.sheetPages));
   } else if (state.view === 'kaisetsu') {
-    g.innerHTML = `<button class="print-btn" id="pr-k">🖨 解説（B4横・絞り込んだ問題だけ）</button>`;
-    $('#pr-k').addEventListener('click', (e) => printKaisetsu(e.currentTarget));
+    // ★2026-09-24 対象問題（上のモードバー）を選んでいるときは「対象だけ」と「全体」の2本、全ての問題なら「全体」だけ
+    const mode = targetMode();
+    const label = TARGET_MODE_LABEL[mode] || '';
+    g.innerHTML = mode === 'all'
+      ? `<button class="print-btn" id="pr-k-all">🖨 解説（全体・B4横）</button>`
+      : `<button class="print-btn print-btn-target" id="pr-k-target">🖨 解説（${label}だけ）</button>
+         <button class="print-btn" id="pr-k-all">🖨 解説（全体）</button>`;
+    const bt = $('#pr-k-target');
+    if (bt) bt.addEventListener('click', (e) => printKaisetsu(e.currentTarget, 'target'));
+    $('#pr-k-all').addEventListener('click', (e) => printKaisetsu(e.currentTarget, 'all'));
   } else {
     g.innerHTML = `<button class="print-btn" id="pr-e">🖨 解答一覧＋解説（A4縦）</button>`;
     $('#pr-e').addEventListener('click', (e) => printExpl(e.currentTarget));
@@ -639,16 +650,96 @@ function renderPrintButtons() {
 
 // ---- 解説タブ（★2026-09-20）----
 // data/{school}.json の subjects[].kaisetsu = "kaisetsu/{school}/{exam}/{subject}.html"（HTML断片。scripts/kaisetsu/kakomon/assemble.py が置く）。
-// 問題／解答解説／解説 の3タブ。絞り込み（全ての問題／最新の回で×／×または未入力／どれかの回で×／A帯で×）で
-// 対象の問題のカードだけ赤帯にし、右上の印刷はその問題だけをB4横2段組で出す（kaisetsu_filter.js・他アプリと共通）。
+// 問題／解答解説／解説 の3タブ。上部の「対象問題」モードバー（★2026-09-24 他アプリと同じ 正答率50%未満／50%未満＆未解答／
+// 66%未満／未解答 ＋ 過去問固有の 最新の回で×／A帯で×）で対象の問題を決め、○×表の行と解説カードを赤で示す。
+// 右上の印刷は「対象だけ」「全体」を選べる（kaisetsu_filter.js・他アプリと共通）。
 const KAISETSU_V = 1;   // 断片を全面差し替えしたら+1
-const KAISETSU_FILTERS = [
+// 対象問題モード。キー below50/below50u/below67/unanswered は他アプリと同じ（memory accuracy-filter-thresholds.md）＝リネーム禁止
+const TARGET_MODES = [
   ['all', '全ての問題'],
-  ['latest-x', '最新の回で ×'],
-  ['latest-xu', '最新の回で ×または未入力'],
-  ['any-x', 'どれかの回で ×'],
-  ['a-x', 'A帯（全部正解したい問題）で ×'],
+  ['below50', '正答率50%未満'],
+  ['below50u', '50%未満＆未解答'],
+  ['below67', '正答率66%未満'],
+  ['unanswered', '未解答問題'],
+  ['latest-x', '最新の回で×'],
+  ['a-x', 'A帯で×'],
 ];
+const TARGET_MODE_LABEL = Object.fromEntries(TARGET_MODES);
+const TARGET_MODE_KEY = 'kakomon-target-mode';   // sessionStorage（他アプリ同様、永続化しない）
+// 旧「絞り込み」select の値（〜2026-09-23・sessionStorage 'kakomon-kaisetsu-filter'）を新モードへ読み替え
+const _OLD_FILTER_MAP = { 'latest-x': 'latest-x', 'latest-xu': 'below50u', 'any-x': 'below67', 'a-x': 'a-x' };
+function targetMode() {
+  let m = sessionStorage.getItem(TARGET_MODE_KEY);
+  if (!m) {
+    const old = sessionStorage.getItem('kakomon-kaisetsu-filter');
+    if (old && _OLD_FILTER_MAP[old]) m = _OLD_FILTER_MAP[old];
+  }
+  if (!m || !TARGET_MODE_LABEL[m]) m = 'all';
+  // A帯の無い教科（模試など）で a-x が残っていたら全問扱い
+  if (m === 'a-x' && !hasNanidoCls()) m = 'all';
+  return m;
+}
+function hasNanidoCls() {
+  const n = state.subject && state.subject.nanido;
+  return !!(n && n.q && Object.values(n.q).some((v) => v && v[0]));
+}
+// 小問ごとの正答率（3回分のうち ○×が入っている回だけを分母に。未入力の回は数えない）
+function questionRate(g, q) {
+  let attempts = 0, correct = 0;
+  for (const a of g.attempts) {
+    const v = a.marks[q];
+    if (v === 'o' || v === 'x') { attempts++; if (v === 'o') correct++; }
+  }
+  return { attempts, correct, pct: attempts ? Math.round(correct / attempts * 100) : null };
+}
+// モードの対象になる小問か（below50/below67=解答済みのみ・below50u=未解答も含む。他アプリの xyzSubMatchesMode と同じ判定）
+function questionMatchesMode(g, q, mode) {
+  if (mode === 'all') return true;
+  const r = questionRate(g, q);
+  if (mode === 'unanswered') return r.attempts === 0;
+  if (mode === 'below50') return r.pct !== null && r.pct < 50;
+  if (mode === 'below50u') return r.pct === null || r.pct < 50;
+  if (mode === 'below67') return r.pct !== null && r.pct < 66;
+  if (mode === 'latest-x') return (g.attempts[latestAttemptIndex(g)].marks[q] || '') === 'x';
+  if (mode === 'a-x') { const d = nanidoOf(q); return !!d && d.cls === 'A' && g.attempts.some((a) => a.marks[q] === 'x'); }
+  return true;
+}
+// モードの対象小問の Set（全ての問題なら null）
+function targetIdsForMode(mode) {
+  if (mode === 'all') return null;
+  const qs = state.subject.questions || [];
+  const g = loadGrades();
+  return new Set(qs.filter((q) => questionMatchesMode(g, q, mode)));
+}
+function setTargetMode(mode) {
+  if (!TARGET_MODE_LABEL[mode]) mode = 'all';
+  sessionStorage.setItem(TARGET_MODE_KEY, mode);
+  syncTargetBar();
+  refreshTargetMarks();
+  if (state.view === 'kaisetsu') applyKaisetsuMarks();
+  renderPrintButtons();
+}
+// モードバーの見た目（active・A帯ボタンの表示）を state に合わせる
+function syncTargetBar() {
+  const mode = targetMode();
+  document.querySelectorAll('#target-modebar .tmode-btn').forEach((b) => b.classList.toggle('active', b.dataset.tmode === mode));
+  const ax = document.getElementById('tmode-ax');
+  if (ax) ax.hidden = !hasNanidoCls();
+}
+// ○×表の対象行（赤い左帯）と件数表示を更新（描画し直さずに差し替え）
+function refreshTargetMarks() {
+  const mode = targetMode();
+  const target = targetIdsForMode(mode);
+  const qs = state.subject ? (state.subject.questions || []) : [];
+  document.querySelectorAll('.grade-table tr[data-row]').forEach((tr) => {
+    tr.classList.toggle('row-target', !!target && target.has(tr.dataset.row));
+  });
+  const el = document.querySelector('.target-count');
+  if (el) {
+    el.hidden = !target;
+    if (target) el.textContent = `対象 ${target.size} / ${qs.length} 問（${TARGET_MODE_LABEL[mode]}）`;
+  }
+}
 const _kaisetsuCache = {};
 function kaisetsuURL() {
   const sub = state.subject;
@@ -656,31 +747,11 @@ function kaisetsuURL() {
   const p = typeof sub.kaisetsu === 'string' ? sub.kaisetsu : `kaisetsu/${state.school.id}/${state.exam.id}/${sub.id}.html`;
   return `${p}?v=${KAISETSU_V}`;
 }
-function kaisetsuFilterKey() { return sessionStorage.getItem('kakomon-kaisetsu-filter') || 'all'; }
 // 「最新の回」= ○×・日付・点数のどれかが入っている最後の列（無ければ1回目）
 function latestAttemptIndex(g) {
   let idx = 0;
   g.attempts.forEach((a, i) => { if (Object.values(a.marks).some(Boolean) || a.date || a.score) idx = i; });
   return idx;
-}
-function kaisetsuTargetIds(filterKey) {
-  if (filterKey === 'all') return null;
-  const qs = state.subject.questions || [];
-  const g = loadGrades();
-  const li = latestAttemptIndex(g);
-  const set = new Set();
-  for (const q of qs) {
-    const latest = g.attempts[li].marks[q] || '';
-    const anyX = g.attempts.some((a) => a.marks[q] === 'x');
-    const d = nanidoOf(q);
-    let hit = false;
-    if (filterKey === 'latest-x') hit = latest === 'x';
-    else if (filterKey === 'latest-xu') hit = latest !== 'o';
-    else if (filterKey === 'any-x') hit = anyX;
-    else if (filterKey === 'a-x') hit = !!d && d.cls === 'A' && anyX;
-    if (hit) set.add(q);
-  }
-  return set;
 }
 // 正誤表の小問 → kaisetsu_filter.js の形（id=○×キー・dm=大問・label=小問）。カードの qid は「1 (1)」「3 問2」「一 問五」
 function kaisetsuQuestions() {
@@ -690,12 +761,9 @@ function kaisetsuQuestions() {
   });
 }
 function renderKaisetsuView() {
-  const cur = kaisetsuFilterKey();
-  const opts = KAISETSU_FILTERS.map(([k, l]) => `<option value="${k}"${k === cur ? ' selected' : ''}>${l}</option>`).join('');
   return `
     <div class="kaisetsu-toolbar kk-toolbar">
-      <span class="kaisetsu-toolbar-title">右上の「🖨 印刷」で、ここで絞り込んだ問題の解説だけをB4横で印刷します（大問の見出し・全体像は残ります）</span>
-      <label class="kk-filter">絞り込み <select id="kk-filter">${opts}</select></label>
+      <span class="kaisetsu-toolbar-title">上の「対象問題」で選んだ問題のカードを赤帯で示します。右上の印刷は「対象だけ」（大問の見出し・全体像は残ります）と「全体」を選べます</span>
     </div>
     <div class="kaisetsu-target-note" id="kk-note" hidden></div>
     <div class="kaisetsu" id="kk-body"><p class="kaisetsu-loading">解説を読み込み中…</p></div>`;
@@ -704,8 +772,6 @@ async function loadKaisetsu() {
   const url = kaisetsuURL();
   const body = document.getElementById('kk-body');
   if (!url || !body) return;
-  const sel = document.getElementById('kk-filter');
-  if (sel) sel.addEventListener('change', () => { sessionStorage.setItem('kakomon-kaisetsu-filter', sel.value); applyKaisetsuMarks(); });
   try {
     if (!_kaisetsuCache[url]) {
       const res = await fetch(url, { cache: 'no-cache' });
@@ -729,13 +795,13 @@ async function loadKaisetsu() {
 function applyKaisetsuMarks() {
   const body = document.getElementById('kk-body'), note = document.getElementById('kk-note');
   if (!body || !window.KaisetsuFilter) return;
-  const key = kaisetsuFilterKey();
-  const target = kaisetsuTargetIds(key);
+  const mode = targetMode();
+  const target = targetIdsForMode(mode);
   const r = KaisetsuFilter.markCards(body, kaisetsuQuestions(), target);
   if (note) {
-    const label = (KAISETSU_FILTERS.find(([k]) => k === key) || [])[1] || '';
+    const label = TARGET_MODE_LABEL[mode] || '';
     note.hidden = !target;
-    if (target) note.textContent = `対象の解説 ${r.kept} / ${r.total} 問（${label}）。対象外のカードは薄く表示し、印刷では省きます`;
+    if (target) note.textContent = `対象の解説 ${r.kept} / ${r.total} 問（${label}）。対象外のカードは薄く表示。右上「🖨 解説（${label}だけ）」で対象だけ印刷できます`;
   }
 }
 // ○×表の 📖: 解説タブに切り替えてその問題のカードへ
@@ -757,22 +823,21 @@ function scrollToKaisetsuCard(q) {
   });
   if (hit) { hit.scrollIntoView({ block: 'start', behavior: 'smooth' }); hit.classList.add('k-flash'); setTimeout(() => hit.classList.remove('k-flash'), 1800); }
 }
-// 解説の印刷: B4横2段組（他アプリの解説印刷と同じ紙）。絞り込み中は対象の問題のカードだけ
-async function printKaisetsu(btn) {
+// 解説の印刷: B4横2段組（他アプリの解説印刷と同じ紙）。scope='target' は対象問題のカードだけ／'all' は全体
+async function printKaisetsu(btn, scope) {
   const url = kaisetsuURL();
   if (!url) return;
   if (!_kaisetsuCache[url]) await loadKaisetsu();
   let html = _kaisetsuCache[url];
   if (!html) { alert('解説がまだ読み込めていません'); return; }
-  const key = kaisetsuFilterKey();
-  const target = kaisetsuTargetIds(key);
+  const mode = targetMode();
+  const target = scope === 'all' ? null : targetIdsForMode(mode);
   let sub = '';
   if (target && window.KaisetsuFilter) {
     const r = KaisetsuFilter.filterHTML(html, kaisetsuQuestions(), target);
-    if (!r.kept) { alert('絞り込みの対象になる問題がありません。絞り込みを「全ての問題」にするか、○×表で×を付けてから印刷してください'); return; }
+    if (!r.kept) { alert(`「${TARGET_MODE_LABEL[mode]}」の対象になる問題がありません。○×表で○×を付けるか、「🖨 解説（全体）」で印刷してください`); return; }
     html = r.html;
-    const label = (KAISETSU_FILTERS.find(([k]) => k === key) || [])[1] || '';
-    sub = `<div class="kp-sub">${label} の解説（${r.kept} / ${r.total} 問）</div>`;
+    sub = `<div class="kp-sub">${TARGET_MODE_LABEL[mode]} の解説（${r.kept} / ${r.total} 問）</div>`;
   }
   const schoolLabel = state.school.shortName || state.school.name;
   const title = `${schoolLabel} ${state.exam.label} ${state.subject.name} 解説`;
@@ -951,15 +1016,18 @@ function renderGrading() {
     return `${o}/${qs.length}`;
   });
   // 難易度（A/B/C）が1つも無いデータ（模試: 配点だけ）では「A帯の正解」行を出さない
-  const hasNanido = !!(state.subject.nanido && state.subject.nanido.q
-    && Object.values(state.subject.nanido.q).some((v) => v && v[0]));
+  const hasNanido = hasNanidoCls();
+  // 対象問題モード（上のモードバー）: 対象の行に赤い左帯
+  const tmode = targetMode();
+  const targetSet = targetIdsForMode(tmode);
   let rows = '';
   for (const q of qs) {
     const d = nanidoOf(q);
     // Aの×＝最優先で直す問題。行ごと色を付けて目立たせる
     const mustFix = d && d.cls === 'A'
       && g.attempts.some((a) => a.marks[q] === 'x');
-    rows += `<tr${mustFix ? ' class="row-mustfix"' : ''} data-row="${q}">`;
+    const isTarget = !!targetSet && targetSet.has(q);
+    rows += `<tr class="${mustFix ? 'row-mustfix' : ''}${isTarget ? ' row-target' : ''}" data-row="${q}">`;
     rows += `<td class="q-label">${levelChip(q)}${q}${state.subject.kaisetsu ? ` <button class="kk-jump" data-q="${q}" title="この問題の解説へ">📖</button>` : ''}</td>`;
     for (let t = 0; t < 3; t++) {
       const v = g.attempts[t].marks[q] || '';
@@ -986,6 +1054,7 @@ function renderGrading() {
       <div class="grading-head" id="grading-toggle">
         📊 ○×表（${state.subject.name}）
         <span class="grade-count">正解数 ${counts.join(' ／ ')}</span>
+        <span class="target-count" ${targetSet ? '' : 'hidden'}>${targetSet ? `対象 ${targetSet.size} / ${qs.length} 問（${TARGET_MODE_LABEL[tmode]}）` : ''}</span>
         <span class="toggle-mark">${open ? '▲ とじる' : '▼ ひらく'}</span>
       </div>
       <div class="grade-table-wrap" ${open ? '' : 'hidden'}>
@@ -1052,6 +1121,7 @@ function bindGrading() {
         tr.classList.toggle('row-mustfix', !!d && d.cls === 'A'
           && g.attempts.some((a) => a.marks[q] === 'x'));
       }
+      refreshTargetMarks();
       if (state.view === 'kaisetsu') applyKaisetsuMarks();
     });
   });

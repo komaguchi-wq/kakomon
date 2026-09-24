@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>過去問</title>
-  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
   <header id="app-header">
@@ -47,6 +47,17 @@
         <button class="tab" data-view="kaisetsu" id="tab-kaisetsu" hidden title="解説（👀 まず見るところ → 📚 前提知識 → 🔍 こう読み解く → 答え）">解説</button>
         <span class="print-group" id="print-group"></span>
       </div>
+      <!-- ★2026-09-24 対象問題モードバー（他アプリと同じ4分類＋過去問固有）。○×表の行・解説カード・解説印刷の対象を決める -->
+      <div class="target-modebar" id="target-modebar">
+        <span class="target-modebar-label">対象問題</span>
+        <button class="tmode-btn active" data-tmode="all">全ての問題</button>
+        <button class="tmode-btn" data-tmode="below50">正答率50%未満</button>
+        <button class="tmode-btn" data-tmode="below50u">50%未満＆未解答</button>
+        <button class="tmode-btn" data-tmode="below67">正答率66%未満</button>
+        <button class="tmode-btn" data-tmode="unanswered">未解答問題</button>
+        <button class="tmode-btn" data-tmode="latest-x">最新の回で×</button>
+        <button class="tmode-btn" data-tmode="a-x" id="tmode-ax">A帯で×</button>
+      </div>
     </div>
     <p id="view-note" class="view-note"></p>
     <div id="page-stack" class="page-stack"></div>
@@ -78,7 +89,7 @@
   <div id="print-container"></div>
 
   <script src="kaisetsu_filter.js?v=2"></script>
-  <script src="app.js?v=35"></script>
+  <script src="app.js?v=36"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>

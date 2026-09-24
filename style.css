@@ -121,6 +121,16 @@ html, body {
 }
 .print-btn:active { background: #eef0f8; }
 .view-note { color: var(--muted); font-size: 13px; margin: 0 0 10px; }
+/* ★2026-09-24 対象問題モードバー（他アプリの wsm-modebar と同じ見た目） */
+.target-modebar { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+.target-modebar-label { font-size: 12px; font-weight: 700; color: var(--muted); white-space: nowrap; margin-right: 2px; }
+.tmode-btn {
+  border: none; background: #e8e8ed; color: #1d1d1f;
+  font-size: 13px; font-weight: 600; padding: 7px 10px; border-radius: 8px; cursor: pointer; white-space: nowrap;
+}
+.tmode-btn.active { background: #007aff; color: #fff; }
+.tmode-btn[hidden] { display: none; }
+.print-btn-target { border-color: #ff3b30; color: #c0392b; font-weight: 700; }
 
 /* ---- ページ画像 ---- */
 .page-stack { display: flex; flex-direction: column; gap: 18px; align-items: center; }
@@ -242,6 +252,10 @@ table.grade-table { border-collapse: collapse; width: 100%; }
 .nanido-help .lv:first-child { margin-left: 0; }
 /* Aなのに×＝最優先で直す行 */
 .grade-table tr.row-mustfix td.q-label { background: #fff1f0; }
+/* 対象問題モードの対象行: 赤い左帯（解説カードの k-on と同じ赤） */
+.grade-table tr.row-target td.q-label { box-shadow: inset 5px 0 0 #ff3b30; background: #fff4f4; }
+.grading-head .target-count { font-size: 13px; font-weight: 700; color: #c0392b; background: #fff4f4; border: 1px solid #f1caca; border-radius: 999px; padding: 2px 10px; }
+.grading-head .target-count[hidden] { display: none; }
 .grade-table tr.row-mustfix td { border-color: #f3b6b0; }
 /* A帯の到達状況の行 */
 .grade-table tr.a-row td { background: #f7fbf8; font-size: 13px; }
