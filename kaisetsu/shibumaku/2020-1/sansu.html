@@ -1,0 +1,913 @@
+<!-- generated kakomon shibumaku/2020-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（カードの操作・連続整数の和・水そうのグラフ）</a></li>
+<li><a href="#4-5">大問4・5（平面図形の面積比・角すいの切断と相似）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（カードの操作・連続整数の和・水そうのグラフ）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 43点／B 15点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th><th>描く図・表</th></tr>
+    <tr><td>1 (1)〜(3)</td><td>144枚のカードに P（箱へ）と Q（山の下へ）をくり返す</td><td>A 7+7+7</td><td>「P→Q→P→Q」→ 上から順にP・Qを書き入れる。奇数は箱、偶数は山の下。1巡ごとに山が半分</td><td>P・Qを書き入れた図／巡目ごとの表／(3)は1回ずつの操作の表</td></tr>
+    <tr><td>2 (1)〜(4)</td><td>黒い正方形のまわりの白いマスに、連続した整数を並べる</td><td>A 8 / B 5+5+5</td><td>白のマスは 4×（黒の1辺＋1）→「連続した整数の和」は 真ん中×個数 か（両はしの和）×組の数。奇数の約数をさがす</td><td>白を4つの長方形に分けた図／「奇数×□」の表／並びの図</td></tr>
+    <tr><td>3 (1)(2)</td><td>2つの水そう。深いほうの深さのグラフ</td><td>A 7+7</td><td>平らな線＝Aの6cm、折れ目の7.5分＝Bが追いつく → 毎分の上がり方を表に。(2)はどちらが先にいっぱいかを表で決めて、つるかめ算</td><td>グラフに書き入れた図／7.5分後の水そうの図／毎分の表／面積図</td></tr>
+  </table>
+  <p>取り方: <b>1 (1)(2)と3 (1)(2)を先に確実に</b>。2は (1)の理由が書ければ、(2)〜(4)は同じ決まり（奇数の約数）で続けて取れる。1 (3)は「6巡目はQから」に気づけるかで差がつく。受験者平均45.0点、合格者平均61.3点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 42枚目に箱に入れるカードの数 <span class="type">A・7点｜操作のくり返し（奇数・偶数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>P→Q→P→Q→…</b>」と「山のいちばん上のカードについて」。上から 1, 2, 3, … の順にP・Qを図に書き入れる → <b>奇数は箱、偶数は山の下</b>と決まる。42枚目に箱に入るのは、42番目の奇数。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1はP（箱へ）、2はQ（下へ）、3はP、4はQ。上から順に見ると、奇数は箱に入り、偶数は山の下にもどる。</li>
+    <li>144枚を1回ずつさばくことを「1巡」とよぶ。1巡が終わると、山は偶数だけ72枚。上から 2, 4, 6, … の順。</li>
+    <li>n番目の奇数は 1＋2×(n−1)。3番目の奇数なら 1＋2×2＝5。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>上から8枚くらいに、P・Qを書き入れる。
+<svg viewBox="0 0 360 175" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="1巡目: 上から1, 2, 3…の順に P・Q をくり返す。奇数は箱へ、偶数は山の下へ">
+<text x="6" y="14" font-size="12" fill="#222" font-family="sans-serif">1巡目：上から 1, 2, 3, … の順に P, Q, P, Q…</text>
+<g font-family="sans-serif" font-size="13" text-anchor="middle">
+<rect x="8" y="24" width="28" height="34" fill="#fff" stroke="#222" stroke-width="1.2"/><text x="22" y="46" fill="#222">1</text>
+<rect x="43" y="24" width="28" height="34" fill="#fff" stroke="#222" stroke-width="1.2"/><text x="57" y="46" fill="#222">2</text>
+<rect x="78" y="24" width="28" height="34" fill="#fff" stroke="#222" stroke-width="1.2"/><text x="92" y="46" fill="#222">3</text>
+<rect x="113" y="24" width="28" height="34" fill="#fff" stroke="#222" stroke-width="1.2"/><text x="127" y="46" fill="#222">4</text>
+<rect x="148" y="24" width="28" height="34" fill="#fff" stroke="#222" stroke-width="1.2"/><text x="162" y="46" fill="#222">5</text>
+<rect x="183" y="24" width="28" height="34" fill="#fff" stroke="#222" stroke-width="1.2"/><text x="197" y="46" fill="#222">6</text>
+<rect x="218" y="24" width="28" height="34" fill="#fff" stroke="#222" stroke-width="1.2"/><text x="232" y="46" fill="#222">7</text>
+<rect x="253" y="24" width="28" height="34" fill="#fff" stroke="#222" stroke-width="1.2"/><text x="267" y="46" fill="#222">8</text>
+<text x="302" y="46" fill="#222">…</text>
+<rect x="322" y="24" width="32" height="34" fill="#fff" stroke="#222" stroke-width="1.2"/><text x="338" y="46" fill="#222" font-size="12">144</text>
+<g font-size="12" font-weight="bold">
+<text x="22" y="76" fill="#d32f2f">P</text><text x="57" y="76" fill="#1565c0">Q</text>
+<text x="92" y="76" fill="#d32f2f">P</text><text x="127" y="76" fill="#1565c0">Q</text>
+<text x="162" y="76" fill="#d32f2f">P</text><text x="197" y="76" fill="#1565c0">Q</text>
+<text x="232" y="76" fill="#d32f2f">P</text><text x="267" y="76" fill="#1565c0">Q</text>
+<text x="338" y="76" fill="#1565c0">Q</text>
+</g>
+<g font-size="11">
+<text x="22" y="91" fill="#d32f2f">箱へ</text><text x="57" y="91" fill="#1565c0">下へ</text>
+<text x="92" y="91" fill="#d32f2f">箱へ</text><text x="127" y="91" fill="#1565c0">下へ</text>
+<text x="162" y="91" fill="#d32f2f">箱へ</text><text x="197" y="91" fill="#1565c0">下へ</text>
+<text x="232" y="91" fill="#d32f2f">箱へ</text><text x="267" y="91" fill="#1565c0">下へ</text>
+<text x="338" y="91" fill="#1565c0">下へ</text>
+</g>
+</g>
+<g font-family="sans-serif" font-size="12">
+<text x="6" y="116" fill="#d32f2f">箱に入る順：1, 3, 5, …, 143（奇数・72枚）</text>
+<text x="6" y="136" fill="#1565c0">山に残る：2, 4, 6, …, 144（偶数・72枚、上から順）</text>
+<text x="6" y="160" fill="#222">144はQ（下へ）で終わる → 2巡目はPから始まる</text>
+</g>
+</svg>
+図：1巡目のカードにP・Qを書き入れたもの。奇数が箱、偶数が山の下。</li>
+    <li>箱に入る順は 1, 3, 5, …。42枚目は<b>42番目の奇数</b>。</li>
+    <li>1＋2×(42−1)＝<b>83</b>。</li>
+    <li>確かめ。83は奇数で144以下。1巡目に箱に入る72枚の中にある。</li>
+  </ol>
+  <div class="ans">答え：83</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 72のカードを箱に入れるのは何枚目 <span class="type">A・7点｜巡目ごとに半分（表）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>72が書かれたカード</b>」と「何枚目」。1巡ごとに<b>山が半分</b>になる → 巡目ごとに「箱に入る数のきまり」を表に置く。72が何巡目に入るかを決めて、その前の巡で箱に入った枚数をたす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2巡目の山は 2, 4, 6, …, 144（上から順）。上からP・Qをあてはめると、2, 6, 10, … が箱に入り、4, 8, 12, … が山に残る。箱に入るのは「4でわると2余る数」。</li>
+    <li>同じことのくり返し。3巡目は「8でわると4余る数」が箱、4巡目は「16でわると8余る数」が箱。</li>
+    <li>箱に入る枚数は 72 → 36 → 18 → 9 と半分になる。山の枚数も同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>まず巡目ごとの表を書く。列は「巡目」「山の枚数」「箱に入る数」「箱に入る枚数」「山に残る数」。72が「箱に入る数」に出たら止める。
+<table>
+  <tr><th>巡目</th><th>山の枚数</th><th>箱に入る数</th><th>箱に入る枚数</th><th>山に残る数</th></tr>
+  <tr><td>1</td><td>144</td><td>1, 3, 5, …, 143（奇数）</td><td>72</td><td>2, 4, 6, …, 144</td></tr>
+  <tr><td>2</td><td>72</td><td>2, 6, 10, …, 142（4でわると2余る）</td><td>36</td><td>4, 8, 12, …, 144</td></tr>
+  <tr><td>3</td><td>36</td><td>4, 12, 20, …, 140（8でわると4余る）</td><td>18</td><td>8, 16, 24, …, 144</td></tr>
+  <tr><td>4</td><td>18</td><td>8, 24, 40, 56, <b>72</b>, …, 136（16でわると8余る）</td><td>9</td><td>16, 32, 48, …, 144</td></tr>
+</table></li>
+    <li>72÷16＝4 余り 8。72は16でわると8余る → <b>4巡目</b>に箱に入る。</li>
+    <li>4巡目の箱の中で何番目か。8, 24, 40, 56, 72 → 5番目。（72−8）÷16＋1＝5 でも出せる。</li>
+    <li>その前の3巡で箱に入った枚数をたす。72＋36＋18＋5＝<b>131</b>。</li>
+    <li>確かめ。3巡目までで 72＋36＋18＝126枚。4巡目の5枚目は 126＋5＝131枚目。</li>
+  </ol>
+  <div class="ans">答え：131枚目</div>
+  <div class="tip">コツ：「巡目」で区切ると、箱に入る数のきまりが「○でわると△余る」の形でそろう。○は 2, 4, 8, 16 と2倍、△はその半分。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 最後に山に残るカードの数 <span class="type">A・7点｜操作の書き出し（奇数枚に注意）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>P→Q→P→Q→…</b>」（巡目が変わっても順番は続く）と「<b>山のカードが1枚になるまで</b>」。5巡目からは山が9枚と少ない → 1回ずつ操作を表に書き出す。9枚は奇数なので5巡目の最後がPになり、<b>6巡目はQから始まる</b>。ここを見落とすと答えがずれる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>4巡目が終わると、山は 16, 32, 48, …, 144 の9枚。上から順。</li>
+    <li>山の枚数が偶数なら、最後の操作はQ。次の巡はPから。9枚のように奇数なら、最後の操作はP。次の巡はQから始まる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>5巡目から、操作を1回ずつ表に書く。列は「巡目」「操作」「カード」「どうする」「山（上から）」。山が1枚になったら止める。
+<table>
+  <tr><th>巡目</th><th>操作</th><th>カード</th><th>どうする</th><th>山（上から）</th></tr>
+  <tr><td>5</td><td>P Q P Q P Q P Q P</td><td>16 32 48 64 80 96 112 128 144</td><td>16, 48, 80, 112, 144 が箱へ</td><td>32, 64, 96, 128（<b>最後がP</b>）</td></tr>
+  <tr><td>6</td><td><b>Q</b></td><td>32</td><td>下へ</td><td>64, 96, 128, 32</td></tr>
+  <tr><td>6</td><td>P</td><td>64</td><td>箱へ</td><td>96, 128, 32</td></tr>
+  <tr><td>6</td><td>Q</td><td>96</td><td>下へ</td><td>128, 32, 96</td></tr>
+  <tr><td>6</td><td>P</td><td>128</td><td>箱へ</td><td>32, 96</td></tr>
+  <tr><td>7</td><td>Q</td><td>32</td><td>下へ</td><td>96, 32</td></tr>
+  <tr><td>7</td><td>P</td><td>96</td><td>箱へ</td><td><b>32</b></td></tr>
+</table></li>
+    <li>山が1枚になった。残ったのは <b>32</b>。</li>
+    <li>確かめ。5巡目の最後は144を箱に入れるP。だから6巡目の1回目はQ。もしPから始めると、32が箱に入って答えがずれる。</li>
+  </ol>
+  <div class="ans">答え：32</div>
+  <div class="tip">コツ：「1巡ごとに半分」は、山の枚数が偶数のときだけ使える。奇数枚になったら、1回ずつの書き出しに切りかえる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 連続した2種類の整数では並べきれない理由 <span class="type">A・8点｜理由の説明（偶数と奇数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>連続した2種類の整数</b>」と「ちょうど並べきることができません。その理由」。白いマスの数を「（黒の1辺＋1）個の長方形が4つ」に直して書く → 白は<b>いつも4の倍数、つまり偶数</b>。となり合う2つの整数の和は奇数。偶数と奇数は同じにならない、が理由。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>白いマスは、同じ長方形4つに分けられる。1つの長方形は（黒の1辺＋1）個。黒が3cmなら 4個×4＝16個。</li>
+    <li>となり合う2つの整数は、片方が偶数で片方が奇数。たすと奇数。3＋4＝7、10＋11＝21。</li>
+    <li>「3を3個、4を4個」使うマスの数は 3＋4。並べる整数の和が、白いマスの数と同じになるとき「ちょうど並べきる」。</li>
+  </ul>
+  <h3 class="h-read">✍️ 答案の組み立て</h3>
+  <ol>
+    <li>白いマスを4つの長方形に分けた図を書く。1つは（黒の1辺＋1）個。だから白の数は 4×（黒の1辺＋1）。<b>4の倍数、つまり偶数</b>。
+<svg viewBox="0 0 360 190" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="白いマスを同じ長方形4つに分ける。黒が3cmなら1つは4個、白は4×4＝16個">
+<g stroke="#222" stroke-width="1.2">
+<rect x="20" y="20" width="120" height="30" fill="#dbe9ff"/>
+<rect x="140" y="20" width="30" height="120" fill="#ffe0b2"/>
+<rect x="50" y="140" width="120" height="30" fill="#dbe9ff"/>
+<rect x="20" y="50" width="30" height="120" fill="#ffe0b2"/>
+<rect x="50" y="50" width="90" height="90" fill="#888"/>
+</g>
+<g stroke="#222" stroke-width="0.6">
+<line x1="50" y1="20" x2="50" y2="50"/><line x1="80" y1="20" x2="80" y2="50"/><line x1="110" y1="20" x2="110" y2="50"/>
+<line x1="140" y1="50" x2="170" y2="50"/><line x1="140" y1="80" x2="170" y2="80"/><line x1="140" y1="110" x2="170" y2="110"/>
+<line x1="80" y1="140" x2="80" y2="170"/><line x1="110" y1="140" x2="110" y2="170"/><line x1="140" y1="140" x2="140" y2="170"/>
+<line x1="20" y1="80" x2="50" y2="80"/><line x1="20" y1="110" x2="50" y2="110"/><line x1="20" y1="140" x2="50" y2="140"/>
+</g>
+<g stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3" fill="none">
+<line x1="140" y1="20" x2="140" y2="50"/><line x1="140" y1="140" x2="170" y2="140"/>
+<line x1="20" y1="140" x2="50" y2="140"/><line x1="50" y1="20" x2="50" y2="50"/>
+<line x1="20" y1="50" x2="50" y2="50"/><line x1="50" y1="140" x2="50" y2="170"/>
+<line x1="140" y1="50" x2="170" y2="50"/><line x1="140" y1="140" x2="140" y2="170"/>
+</g>
+<g font-family="sans-serif" font-size="12" fill="#222">
+<text x="80" y="14" text-anchor="middle">↓ 3＋1＝4個</text>
+<text x="95" y="99" text-anchor="middle" fill="#fff">黒 3cm</text>
+<text x="188" y="40">白 ＝（黒の1辺＋1）個 × 4つ</text>
+<text x="188" y="60">黒が3cm → 4×4＝16個</text>
+<text x="188" y="80">黒が9cm → 10×4＝40個</text>
+<text x="188" y="100">黒が14cm → 15×4＝60個</text>
+<text x="188" y="130" fill="#d32f2f" font-weight="bold">白はいつも4の倍数＝偶数</text>
+<text x="188" y="150" fill="#1565c0">青の破線＝4つに分ける線</text>
+</g>
+</svg>
+図：白いマスを同じ長方形4つに分けたもの。黒が何cmでも、白は4の倍数。</li>
+    <li>連続した2種類の整数は、一方が偶数でもう一方が奇数。たすと<b>奇数</b>。</li>
+    <li>偶数と奇数は同じにならない。だから、2種類だけでは並べきれない。この3つを順に書く。</li>
+  </ol>
+  <div class="model">模範解答（解答一覧は「解説を参照のこと」・声教の解説から転記）：白い正方形は4つの同じ長方形に区切ることができるから、白い正方形の個数は必ず4の倍数、つまり偶数になる。一方、連続した2種類の整数は、一方が偶数でもう一方が奇数なので、その和は必ず奇数になる。よって、連続した2種類の整数だけでは並べきることができない。</div>
+  <div class="tip">コツ：理由の問題は「白の数は偶数」「2種類の和は奇数」「だから同じにならない」の3つがそろえば満点に近い。「4の倍数」と書く前に、図で4つの長方形を見せると伝わる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 黒が9cmのときの並べ方 <span class="type">B・5点｜連続した整数の和（奇数の約数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1辺の長さが9cm</b>」と「考えられるものをすべて」。白の数を 4×（9＋1）＝40 に直して書く → <b>40を「奇数×□」の形に分ける</b>。連続した整数の和は、真ん中×個数 か、（両はしの和）×組の数 で出せる。どちらも「奇数×整数」の形になる。時間をかける価値は、(1)の図が書けていれば十分ある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>個数が奇数個なら、和＝真ん中×個数。11＋12＋13＝12×3。</li>
+    <li>個数が偶数個なら、両はしから2つずつ組にする。和＝（両はしの和）×組の数。1〜8なら（1＋8）×4＝36。両はしの和は、偶数＋奇数だから奇数。</li>
+    <li>だから、連続した整数の和は「1以外の奇数×整数」の形になる。1以外の奇数が1つあるごとに、並べ方が1つできる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>白の数を出す。4×（9＋1）＝40。</li>
+    <li>まず「40＝□×△」の表を書く。列は「かけ算」「1以外の奇数」「読み方」「並び」。小さい方の数が大きい方をこえたら終わり。
+<table>
+  <tr><th>40＝</th><th>1以外の奇数</th><th>読み方</th><th>並び</th></tr>
+  <tr><td>1×40</td><td>なし</td><td>—</td><td>×</td></tr>
+  <tr><td>2×20</td><td>なし</td><td>—</td><td>×</td></tr>
+  <tr><td>4×10</td><td>なし</td><td>—</td><td>×</td></tr>
+  <tr><td><b>5×8</b></td><td>5</td><td>8が真ん中で5個</td><td><b>6〜10</b></td></tr>
+</table></li>
+    <li>5×8 → 真ん中が8で5個。8の左に2つ、右に2つ。
+<pre class="fig">6  7  8  9  10
+      ↑真ん中8   8×5＝40</pre></li>
+    <li>確かめ。6＋7＋8＋9＋10＝40。1以外の奇数が5だけだから、並べ方はこれ1つ。</li>
+  </ol>
+  <div class="ans">答え：6〜10</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 黒が14cmのときの並べ方 <span class="type">B・5点｜連続した整数の和（3通り）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>14cm</b>」と「<b>考えられるものをすべて</b>」。白の数は 4×（14＋1）＝60。60の中の1以外の奇数は 3, 5, 15 の3つ → 並べ方も3つ。奇数を「個数」にするか「両はしの和」にするかは、並びが1以上になる方を選ぶ。(2)が出せていれば、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>奇数が小さいうちは「奇数個で、真ん中がもう片方」。3×20なら、20が真ん中で3個。</li>
+    <li>真ん中から左に広げて1より小さくなるなら、読み方を変える。「両はしの和が奇数、組の数がもう片方÷2」。15×4なら、真ん中4で15個は 4−7＝−3 になってだめ。たして15になる組が4組、つまり8個。</li>
+    <li>真ん中の2つは、たして15で差が1。（15−1）÷2＝7 と、7＋1＝8。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>60をかけ算で全部書く。1×60, 2×30, 3×20, 4×15, 5×12, 6×10。1以外の奇数は <b>3, 5, 15</b>。</li>
+    <li>奇数ごとに表にまとめる。列は「奇数×もう片方」「読み方」「真ん中」「並び」。
+<table>
+  <tr><th>60＝</th><th>読み方</th><th>真ん中</th><th>並び</th></tr>
+  <tr><td>3×20</td><td>20が真ん中で3個</td><td>20</td><td>19〜21</td></tr>
+  <tr><td>5×12</td><td>12が真ん中で5個</td><td>12</td><td>10〜14</td></tr>
+  <tr><td><b>15×4</b></td><td>4が真ん中で15個は× → たして15の組が4組（8個）</td><td>7と8</td><td><b>4〜11</b></td></tr>
+</table></li>
+    <li>並びを図に書いて、真ん中から広げる。
+<svg viewBox="0 0 360 215" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="60を連続した整数の和で表す3通り: 19〜21は真ん中20×3個、10〜14は真ん中12×5個、4〜11はたして15の組が4組">
+<g font-family="sans-serif" font-size="14" fill="#222" text-anchor="middle">
+<text x="30" y="30">19</text><text x="70" y="30" fill="#d32f2f" font-weight="bold">20</text><text x="110" y="30">21</text>
+<text x="30" y="90">10</text><text x="70" y="90">11</text><text x="110" y="90" fill="#d32f2f" font-weight="bold">12</text><text x="150" y="90">13</text><text x="190" y="90">14</text>
+<text x="30" y="150">4</text><text x="70" y="150">5</text><text x="110" y="150">6</text><text x="150" y="150" fill="#d32f2f" font-weight="bold">7</text><text x="190" y="150" fill="#d32f2f" font-weight="bold">8</text><text x="230" y="150">9</text><text x="270" y="150">10</text><text x="310" y="150">11</text>
+</g>
+<g font-family="sans-serif" font-size="12" fill="#d32f2f">
+<text x="150" y="30">真ん中20 × 3個 ＝ 60</text>
+<text x="215" y="90">真ん中12 × 5個 ＝ 60</text>
+<text x="190" y="205" text-anchor="middle">たして15 の組が 4組 ＝ 60（真ん中の2つ 7と8 から広げる）</text>
+</g>
+<g stroke="#1565c0" stroke-width="1.3" fill="none">
+<path d="M30,158 Q170,205 310,158"/>
+<path d="M70,158 Q170,195 270,158"/>
+<path d="M110,158 Q170,185 230,158"/>
+<path d="M150,158 Q170,172 190,158"/>
+</g>
+</svg>
+図：3通りの並び。上2つは真ん中×個数、下は両はしの和×組の数。</li>
+    <li>確かめ。19＋20＋21＝60。10＋11＋12＋13＋14＝60。（4＋11）×4＝60。</li>
+  </ol>
+  <div class="ans">答え：4〜11と10〜14と19〜21</div>
+  <div class="tip">コツ：「奇数の約数の数＝並べ方の数」。奇数が大きくて個数にできないときは、「たして奇数になる組」に読みかえる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (4)</span> 100cmまでで並べられない黒の1辺 <span class="type">B・5点｜奇数の約数がない数（2だけの積）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>100cmまで</b>」と「<b>並べきることができない</b>」。並べられないのは、白の数に1以外の奇数の約数がないとき → 白の数が 2×2×2×… の数。白の数は 8以上404以下、に直して書く。(2)(3)の決まりを使うだけなので、時間があれば取れる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(2)(3)の決まり: 並べ方の数＝1以外の奇数の約数の数。奇数の約数が1しかない数は、2だけをかけた数。8＝2×2×2、16＝2×2×2×2。</li>
+    <li>黒の1辺が1cmなら、白は 4×2＝8個。100cmなら 4×101＝404個。白の数はこの間。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>まず8から404までの「2だけをかけた数」を表に書く。404をこえたら終わり。
+<table>
+  <tr><th>白の数（2だけの積）</th><th>黒の1辺（白÷4−1）</th></tr>
+  <tr><td>8</td><td>8÷4−1＝1cm</td></tr>
+  <tr><td>16</td><td>16÷4−1＝3cm</td></tr>
+  <tr><td>32</td><td>32÷4−1＝7cm</td></tr>
+  <tr><td>64</td><td>64÷4−1＝15cm</td></tr>
+  <tr><td>128</td><td>128÷4−1＝31cm</td></tr>
+  <tr><td><b>256</b></td><td>256÷4−1＝<b>63cm</b></td></tr>
+  <tr><td>512</td><td>404をこえる → 終わり</td></tr>
+</table></li>
+    <li>白の数÷4−1 が黒の1辺。6つとも100cm以下。</li>
+    <li>確かめ。63cmのとき白は 4×64＝256個。256の約数に、1以外の奇数はない。</li>
+  </ol>
+  <div class="ans">答え：1cm，3cm，7cm，15cm，31cm，63cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 水そうAの底面積はBの何倍 <span class="type">A・7点｜グラフの読み取り・底面積と深さの逆比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】資料の正体は「<b>深いほうの深さ</b>」のグラフ（横＝Bに入れ始めてからの分、たて＝cm）。部品は「<b>5分後にAにも</b>」「毎分同じ量の水」。折れ目の5分と7.5分に、AとBどちらの深さかを書き入れる → 0〜5分の平らな線＝Aの6cm、7.5分でBが追いつく、と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>はじめAは6cm、Bは0cm。5分までAには水が入らない。だからグラフが平ら。</li>
+    <li>同じ量の水を入れると、底面積が広いほど水面はゆっくり上がる。深さの上がり方が 3：5 なら、底面積は 5：3 と逆になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>グラフに、どちらの深さかを書き入れる。
+<svg viewBox="0 0 400 250" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="グラフに書き入れる: 0〜5分は Aの6cmのまま、5〜7.5分は Aが6→7.5cm、7.5分で Bが追いつき、そのあとは Bの深さ">
+<g stroke="#222" stroke-width="1.3" fill="none">
+<line x1="50" y1="205" x2="390" y2="205"/><line x1="50" y1="205" x2="50" y2="20"/>
+<polyline points="50,157 103.3,157 130,145 210,85"/>
+</g>
+<g stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3" fill="none">
+<line x1="50" y1="145" x2="130" y2="145"/><line x1="130" y1="145" x2="130" y2="205"/><line x1="103.3" y1="157" x2="103.3" y2="205"/>
+</g>
+<circle cx="103.3" cy="157" r="3" fill="#222"/><circle cx="130" cy="145" r="3" fill="#222"/>
+<line x1="100" y1="80" x2="100" y2="150" stroke="#d32f2f" stroke-width="1"/>
+<polygon points="100,153 96,145 104,145" fill="#d32f2f"/>
+<g font-family="sans-serif" font-size="12" fill="#222">
+<text x="30" y="161">6</text><text x="22" y="149">7.5</text>
+<text x="46" y="221">0</text><text x="99" y="221">5</text><text x="121" y="221">7.5</text>
+<text x="340" y="221">時間(分)</text><text x="22" y="16">深さ(cm)</text>
+</g>
+<g font-family="sans-serif" font-size="11" fill="#d32f2f">
+<text x="54" y="60">①0〜5分：Aの6cmのまま</text>
+<text x="54" y="74">（Bはまだ6cmより低い）</text>
+<text x="140" y="172">②5〜7.5分：Aが6→7.5cm</text>
+<text x="140" y="186">（2.5分で1.5cm上がる）</text>
+<text x="140" y="200">③7.5分：Bが追いつく（7.5分で0→7.5cm）</text>
+<text x="222" y="120">④ここからはB（毎分1cm）</text>
+</g>
+</svg>
+図：折れ目ごとに「A」「B」と分を書き入れたグラフ。</li>
+    <li>毎分の上がり方を表にする。列は「水そう」「時間」「上がった深さ」「毎分」。
+<table>
+  <tr><th>水そう</th><th>時間</th><th>上がった深さ</th><th>毎分</th></tr>
+  <tr><td>A</td><td>5分→7.5分（2.5分）</td><td>7.5−6＝1.5cm</td><td>1.5÷2.5＝<b>0.6cm</b></td></tr>
+  <tr><td>B</td><td>0分→7.5分（7.5分）</td><td>7.5cm</td><td>7.5÷7.5＝<b>1cm</b></td></tr>
+</table></li>
+    <li>7.5分後の水そうを図に書く。1分あたり同じ量の水で、Aは0.6cm、Bは1cm上がる。
+<svg viewBox="0 0 360 190" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="7.5分後の水そう: Aははじめの6cmに1.5cm増えて7.5cm、Bは0から7.5cm。増えた水の量は同じ">
+<g stroke="#222" stroke-width="1.4" fill="none">
+<polyline points="30,40 30,130 150,130 150,40"/>
+<polyline points="210,10 210,130 290,130 290,10"/>
+</g>
+<rect x="31" y="112" width="118" height="18" fill="#dbe9ff"/>
+<rect x="31" y="107.5" width="118" height="4.5" fill="#ffe0b2"/>
+<rect x="211" y="107.5" width="78" height="22.5" fill="#ffe0b2"/>
+<line x1="31" y1="107.5" x2="290" y2="107.5" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<g font-family="sans-serif" font-size="12" fill="#222">
+<text x="84" y="150" text-anchor="middle">A（深さ30cm）</text>
+<text x="250" y="150" text-anchor="middle">B（深さ40cm）</text>
+<text x="90" y="125" text-anchor="middle">はじめ 6cm</text>
+<text x="296" y="122">7.5cm</text>
+<text x="296" y="136">（7.5分で）</text>
+</g>
+<g font-family="sans-serif" font-size="12" fill="#d32f2f">
+<text x="34" y="100">＋1.5cm（2.5分で）</text>
+<text x="154" y="100">7.5cm</text>
+<text x="30" y="170">オレンジ＝入れた水（Aは2.5分ぶん、Bは7.5分ぶん）</text>
+<text x="30" y="186">広いA：毎分0.6cm　せまいB：毎分1cm</text>
+</g>
+</svg>
+図：7.5分後の水そうA・B。オレンジが入れた水。1分あたりの上がり方をくらべる。</li>
+    <li>深さの上がり方は 0.6：1＝3：5。底面積は逆で、A：B＝1/3：1/5＝5：3。</li>
+    <li>AはBの 5÷3＝1 2/3倍（5/3倍）。</li>
+  </ol>
+  <div class="ans">答え：1 2/3倍</div>
+  <div class="tip">コツ：「深いほうの深さ」のグラフは、折れ目で主役が入れかわる。平らな線は「まだ水が入っていない方」。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 毎分2倍にしたのはどちらで何分間 <span class="type">A・7点｜どちらが先か → つるかめ算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>片方の水そうが水でいっぱいになったとき</b>」「途中から一方の水そうに入れる水の量を毎分2倍」「<b>同時にいっぱい</b>」。今の毎分（A 0.6cm、B 1cm）で、どちらが先にいっぱいかを表に置く → 先はB。おそいAを2倍にする。あとは「2倍にした時間」を求めるつるかめ算。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>7.5分後から数える。Aはあと 30−7.5＝22.5cm。Bはあと 40−7.5＝32.5cm。</li>
+    <li>入れる水の量を2倍にすると、毎分の上がり方も2倍。Aは 0.6cm→1.2cm。</li>
+    <li>つるかめ算。全部0.6cmのときの合計を出す。足りない分を（1.2−0.6）でわると、1.2cmだった時間が出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>まず「どちらが先にいっぱいか」の表を書く。列は「水そう」「残り」「毎分」「かかる時間」。
+<table>
+  <tr><th>水そう</th><th>残り</th><th>毎分</th><th>かかる時間</th></tr>
+  <tr><td>A</td><td>30−7.5＝22.5cm</td><td>0.6cm</td><td>22.5÷0.6＝37.5分</td></tr>
+  <tr><td>B</td><td>40−7.5＝32.5cm</td><td>1cm</td><td>32.5÷1＝<b>32.5分（先）</b></td></tr>
+</table></li>
+    <li>Bが先。だからおそいAを2倍にする。Aは<b>32.5分で22.5cm</b>上がればよい。</li>
+    <li>面積図を書く。横が32.5分、たてが毎分0.6cmと1.2cm。
+<svg viewBox="0 0 360 200" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="つるかめ算の面積図: 横32.5分、たて毎分0.6cmと1.2cm。全体の面積が22.5cm。全部0.6なら19.5cm、足りない3cmが右上の赤い部分">
+<rect x="70" y="110" width="240" height="48" fill="#dbe9ff" stroke="#222" stroke-width="1.3"/>
+<rect x="270" y="62" width="40" height="48" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.5"/>
+<line x1="270" y1="110" x2="270" y2="158" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<g font-family="sans-serif" font-size="12" fill="#222">
+<text x="4" y="162">毎分0.6cm</text>
+<text x="4" y="66">毎分1.2cm</text>
+<text x="190" y="176" text-anchor="middle">32.5分（Bがいっぱいになるまで）</text>
+<text x="190" y="138" text-anchor="middle">全部0.6なら 0.6×32.5＝19.5cm</text>
+</g>
+<g font-family="sans-serif" font-size="12" fill="#d32f2f">
+<text x="290" y="54" text-anchor="middle">□分</text>
+<text x="60" y="30">足りない 22.5−19.5＝3cm</text>
+<text x="60" y="46">→ □＝3÷（1.2−0.6）＝5分</text>
+<text x="290" y="90" text-anchor="middle" font-size="11">3cm</text>
+</g>
+<text x="4" y="196" font-family="sans-serif" font-size="12" fill="#222">全体の面積＝Aが上がる深さ 22.5cm</text>
+</svg>
+図：つるかめ算の面積図。右上のオレンジが「2倍にした分」。</li>
+    <li>全部0.6なら 0.6×32.5＝19.5cm。足りないのは 22.5−19.5＝3cm。</li>
+    <li>1分を1.2cmに変えると 0.6cm増える。3÷0.6＝5分。</li>
+    <li>確かめ。0.6×27.5＋1.2×5＝16.5＋6＝22.5cm。合う。</li>
+  </ol>
+  <div class="ans">答え：水そうAに5分間</div>
+  <div class="tip">コツ：「同時にいっぱい」は、おそい方を速くする合図。先に「どちらが先か」の表を書くと、どちらを2倍にするか迷わない。</div>
+</section>
+</div>
+<div class="daimon" id="4-5"><h1 class="dtitle">大問4・5（平面図形の面積比・角すいの切断と相似）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4〜5</span> この回の全体像（担当の大問） <span class="type">A 7点／B 28点／C 7点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th><th>描く図・表</th></tr>
+    <tr><td>4 (1)</td><td>正方形を2つつけた直角三角形。三角形CDEの面積</td><td>B 7</td><td>「正方形」＝等しい辺の印 → 三角形を回してくっつける。15°はABで折り返して30°</td><td>回した三角形を塗った図／面積の受けわたしの表</td></tr>
+    <tr><td>4 (2)</td><td>CDを1辺とする正方形の面積</td><td>B 7</td><td>30°・60°・90°の三角形が2つ → 相似で 1：□＝□：3</td><td>対応する辺の表</td></tr>
+    <tr><td>4 (3)</td><td>三角形ABEは三角形DCFの何倍</td><td>C 7</td><td>「角の和が180°」→ 辺を重ねてくっつける。本番では後回し</td><td>くっつけた図（1枚）</td></tr>
+    <tr><td>5 (1)</td><td>角すいP-ABCDの表面積</td><td>A 7</td><td>「角Aが直角」＝PAが底面に垂直 → 側面4つは全部直角三角形</td><td>5つの面の表</td></tr>
+    <tr><td>5 (2)①</td><td>切り分けた立体X・Zの体積比</td><td>B 7</td><td>Y＝三角柱、Z＝四角すい → 体積の式を並べて □：△＝3：8</td><td>真上から見た図／体積の表</td></tr>
+    <tr><td>5 (2)②</td><td>立体X・Zの表面積の比</td><td>B 7</td><td>面PABを正面から見る → 3：8：11の相似</td><td>正面から見た図／面積の表</td></tr>
+  </table>
+  <p>取り方: <b>5 (1)を先に確実に</b>。4 (1)(2)と5 (2)①は入口がはっきりしているので、時間をかける価値がある。4 (3)は後回し。5 (2)②は①が出せて時間が残ったときだけ。受験者平均45.0点、合格者平均61.3点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 正方形を2つつけた直角三角形。三角形CDEの面積 <span class="type">B・7点｜回して合同・15°→30°</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ACを1辺とする正方形</b>」「<b>BCを1辺とする正方形</b>」→ 図に「CA＝CD」「CB＝CE」の印を置く。Cのまわりで、角ACBと角DCEをたすと180°になる → <b>三角形ABCをCを中心に回すと、三角形CDEと面積が同じ</b>と決まる。残るのは「15°の直角三角形の面積」で、ABで折り返して30°を作る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正方形の4つの辺は同じ長さ。だから CA＝CD、CB＝CE。</li>
+    <li>Cのまわりの角を全部たすと360°。正方形の角90°が2つあるので、残りの角ACBと角DCEをたすと180°。</li>
+    <li>30°・60°・90°の直角三角形は、正三角形を半分にした形。いちばん短い辺は、いちばん長い辺の半分。たとえば長い辺が8cmなら、短い辺は4cm。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>問題の図に、等しい辺の印と、角の関係を書きこむ。求める三角形CDEを塗っておく。
+<svg viewBox="0 0 360 320" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: 問題の図に、等しい辺の印と角の関係を書き込む">
+<polygon points="70,300 290,241 231,21 11,80" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="290,300 290,241 349,241 349,300" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="70,300 290,300 290,241" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="290,241 231,21 349,241" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="282,300 282,292 290,292" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M110,300 A40,40 0 0,0 108.6,289.6" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="112" y="296" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">15°</text>
+<text x="150" y="262" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">8cm</text>
+<line x1="176.8" y1="266.2" x2="179.4" y2="275.8" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="180.6" y1="265.2" x2="183.2" y2="274.8" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="256.2" y1="134.2" x2="265.8" y2="131.6" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="255.2" y1="130.4" x2="264.8" y2="127.8" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="285" y1="270.5" x2="295" y2="270.5" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="319.5" y1="236" x2="319.5" y2="246" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<text x="58" y="314" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="286" y="316" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="272" y="236" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="226" y="14" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="352" y="236" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">E</text>
+<path d="M268.8,246.7 A22,22 0 0,0 290,263" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<path d="M312,241 A22,22 0 0,0 284.3,219.8" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<text x="196" y="281" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">●＋○＝180°</text>
+<text x="196" y="296" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">●＝角ACB</text>
+<text x="196" y="310" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">○＝角DCE</text>
+<text x="262" y="262" font-size="9" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">●</text>
+<text x="300" y="232" font-size="9" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">○</text>
+</svg>
+図1: ●＋○＝180°。三角形CDEは、辺CD（＝CA）と辺CE（＝CB）にはさまれた三角形。</li>
+    <li>三角形ABCを、Cを中心にくるっと回す。CAはCDに重なる。CBは、ECをのばした線の上に来る。この点をFとする。三角形DFCは三角形ABCと合同。
+<svg viewBox="0 0 360 320" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: 三角形ABCをCを中心に回すと三角形DFC。CDEと底辺・高さが同じ">
+<polygon points="70,300 290,241 231,21 11,80" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="290,300 290,241 349,241 349,300" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="70,300 290,300 290,241" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="290,241 231,21 349,241" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="282,300 282,292 290,292" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M110,300 A40,40 0 0,0 108.6,289.6" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="112" y="296" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">15°</text>
+<text x="150" y="262" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">8cm</text>
+<line x1="176.8" y1="266.2" x2="179.4" y2="275.8" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="180.6" y1="265.2" x2="183.2" y2="274.8" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="256.2" y1="134.2" x2="265.8" y2="131.6" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="255.2" y1="130.4" x2="264.8" y2="127.8" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="285" y1="270.5" x2="295" y2="270.5" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="319.5" y1="236" x2="319.5" y2="246" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+<text x="58" y="314" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="286" y="316" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="272" y="236" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="226" y="14" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="352" y="236" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">E</text>
+<polygon points="231,21 231,241 290,241" fill="#ffe0b2" stroke="#1565c0" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="4 3"/>
+<polyline points="231,233 239,233 239,241" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round"/>
+<line x1="260.5" y1="236" x2="260.5" y2="246" stroke="#d32f2f" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="319.5" y1="236" x2="319.5" y2="246" stroke="#d32f2f" stroke-width="1.3" stroke-linecap="round"/>
+<text x="219" y="256" font-size="14" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">F</text>
+<text x="100" y="195" font-size="12" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">ABCを回して</text>
+<text x="100" y="210" font-size="12" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">ここへ</text>
+<text x="100" y="240" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">DFC＝ABC</text>
+<text x="258" y="285" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">FC＝CE</text>
+</svg>
+図2: 角ACB＋角DCE＝180°だから、FとC、Eは一直線に並ぶ。</li>
+    <li>三角形CDE（青）と三角形DFC（オレンジ）をくらべる。底辺FCとCEは同じ長さ。頂点はどちらもD。<b>だから面積が同じ</b>。つまり、三角形CDE＝三角形ABC。</li>
+    <li>三角形ABCの面積を出す。角Aの15°を、ABで折り返して30°にする。CからAGに垂線CHを引く。三角形CAHは30°・60°・90°で、<b>CH＝8÷2＝4cm</b>。
+<svg viewBox="0 0 360 175" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図3: ABで折り返すと角CAGは30°。CからAGに垂線CHを引くとCH＝4cm">
+<polygon points="20,80 300,80 300,5" fill="#c8e6c9" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="20,80 300,80 300,155" fill="#c8e6c9" stroke="#1565c0" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="4 3"/>
+<line x1="300" y1="5" x2="262.5" y2="145" stroke="#1565c0" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="292,80 292,72 300,72" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<polyline points="264.6,137.2 256.9,135.2 254.8,142.9" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M64,80 A44,44 0 0,0 62.5,68.6" fill="none" stroke="#222" stroke-width="1.2"/>
+<path d="M62.5,91.4 A44,44 0 0,0 64,80" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="66" y="76" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">15°</text>
+<text x="66" y="96" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">15°</text>
+<text x="60" y="133" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">合わせて30°</text>
+<text x="150" y="33" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">8cm</text>
+<text x="185" y="150" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">8cm</text>
+<text x="246" y="62" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">4cm</text>
+<text x="6" y="85" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="306" y="84" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="306" y="14" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="306" y="164" font-size="14" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">G</text>
+<text x="246" y="160" font-size="14" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">H</text>
+</svg>
+図3: 三角形CAGは、底辺AG＝8cm・高さCH＝4cm。</li>
+    <li>面積を受けわたす順を表にする。
+<table>
+  <tr><th>三角形</th><th>面積</th><th>どうして</th></tr>
+  <tr><td>CAG</td><td>8×4÷2＝16</td><td>底辺AG＝8cm、高さCH＝4cm</td></tr>
+  <tr><td>ABC</td><td>16÷2＝8</td><td>CAGを折り返して半分にした形</td></tr>
+  <tr><td>DFC</td><td>8</td><td>ABCを回しただけ（合同）</td></tr>
+  <tr><td>CDE</td><td><b>8</b></td><td>DFCと底辺・頂点が同じ</td></tr>
+</table></li>
+  </ol>
+  <div class="ans">答え：8cm²</div>
+  <div class="tip">コツ：「15°」「75°」を見たら、折り返して30°を作る。「正方形の辺」は「等しい辺」の合図。等しい辺が1点に集まっていたら、三角形を回してくっつける。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> CDを1辺とする正方形の面積 <span class="type">B・7点｜相似（1：□＝□：3）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>CDを1辺とする正方形の面積</b>」→ 求めるのは「CD×CD」と直して書く。CDそのものは出さなくてよい。三角形ADCと三角形CDBは<b>どちらも30°・60°・90°</b>で同じ形 → 対応する辺の比を書くと 1：□＝□：3 と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>直角三角形の直角から、向かいの辺に垂線を下ろす。できる2つの三角形は、元の三角形と同じ形（角が同じ）。ここでは三角形ADCと三角形CDBが同じ形。</li>
+    <li>同じ形の三角形は、対応する辺の比がどこも同じ。小さいほうの「短い辺：長い辺」と、大きいほうの「短い辺：長い辺」が同じ比。</li>
+    <li>「A：B＝C：D」なら「B×C＝A×D」。たとえば 2：4＝3：6 なら、4×3＝2×6＝12。内側どうしの積と外側どうしの積が同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に角度を書きこむ。三角形ADCは、角A＝60°・角D＝90°・角ACD＝30°。三角形CDBは、角DCB＝60°・角D＝90°・角B＝30°。CD＝□とおく。
+<svg viewBox="0 0 360 320" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: 三角形ADCと三角形CDBはどちらも30°・60°・90°の三角形。CD＝□とおく">
+<polygon points="90,130 90,26.1 193.9,26.1 193.9,130" fill="#c8e6c9" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="90,130 270,130 270,310 90,310" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="30,130 90,130 90,190 30,190" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="30,130 90,130 90,26.1" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="90,26.1 90,130 270,130" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="82,130 82,122 90,122" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<polyline points="86,33 92.9,37 96.9,30.1" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M50,130 A20,20 0 0,0 40,112.7" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="44" y="121" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">60°</text>
+<path d="M78,46.9 A24,24 0 0,0 90,50.1" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="72" y="62" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">30°</text>
+<path d="M236,130 A34,34 0 0,1 240.6,113" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="224" y="124" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">30°</text>
+<path d="M90,50.1 A24,24 0 0,0 110.8,38.1" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="100" y="62" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">60°</text>
+<text x="42" y="148" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">1cm</text>
+<text x="165" y="148" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">3cm</text>
+<text x="64" y="82" font-size="18" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">□</text>
+<text x="118" y="84" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">面積は</text>
+<text x="118" y="102" font-size="16" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">□×□</text>
+<text x="18" y="126" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="94" y="150" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="275" y="126" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="78" y="22" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+</svg>
+図1: 青とオレンジは同じ形。求める正方形（緑）の面積は □×□。</li>
+    <li>まずこの表を書く。角30°の向かいの辺（短い辺）と、角60°の向かいの辺（長い辺）を、2つの三角形でそろえる。
+<table>
+  <tr><th></th><th>30°の向かい（短い辺）</th><th>60°の向かい（長い辺）</th></tr>
+  <tr><td>三角形ADC（小）</td><td>AD＝1</td><td>DC＝□</td></tr>
+  <tr><td>三角形CDB（大）</td><td>DC＝□</td><td>DB＝3</td></tr>
+</table>
+横に見て比が同じ。<b>1：□＝□：3</b>。</li>
+    <li>内側どうしの積＝外側どうしの積。□×□＝1×3＝3。</li>
+    <li>正方形の面積は □×□。だから <b>3cm²</b>。□の値を出す必要はない。</li>
+    <li>別の見方（声教の解き方）: 正方形BDの角をE（Dの真下、DE＝3cm）、正方形CDの角をF（DB上、DF＝CD）とする。三角形CDBと三角形FDEは合同で、角FED＝角CBD＝30°。角ACD＝30°でもあるので、ACとEFは平行。三角形AFCと三角形AECの面積が同じになり、共通の三角形ADCを取ると、三角形CDF＝三角形AED＝3×1÷2＝1.5cm²。正方形はその2倍で3cm²。
+<svg viewBox="0 0 360 320" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: 別の見方。ACとEFが平行だから、三角形CDFと三角形AEDの面積が等しい">
+<polygon points="90,130 90,26.1 193.9,26.1 193.9,130" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="90,130 270,130 270,310 90,310" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="30,130 90,130 90,190 30,190" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="30,130 90,130 90,26.1" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="90,26.1 90,130 270,130" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="90,26.1 90,130 193.9,130" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="30,130 90,310 90,130" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="30" y1="130" x2="90" y2="310" stroke="#1565c0" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="90" y1="310" x2="193.9" y2="130" stroke="#1565c0" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="30" y1="130" x2="90" y2="26.1" stroke="#1565c0" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M90,280 A30,30 0 0,1 105,284" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="100" y="280" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">30°</text>
+<path d="M90,50.1 A24,24 0 0,1 78,46.9" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="72" y="62" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">30°</text>
+<text x="120" y="200" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">ACとEFは平行</text>
+<text x="120" y="216" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">→ 面積が同じ</text>
+<text x="50" y="148" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">1cm</text>
+<text x="165" y="148" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">3cm</text>
+<text x="94" y="250" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">3cm</text>
+<text x="18" y="126" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="94" y="150" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="275" y="126" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="78" y="22" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="78" y="318" font-size="14" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">E</text>
+<text x="189.9" y="148" font-size="14" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">F</text>
+</svg>
+図2: 青（AED）とオレンジ（CDF）の面積が同じ。</li>
+  </ol>
+  <div class="ans">答え：3cm²</div>
+  <div class="tip">コツ：「正方形の面積」を聞かれたら、辺の長さでなく「辺×辺」を直接ねらう。相似の比を書くと、内側どうしの積が「□×□」になる。この「□×□＝3」は(3)でも使う。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 三角形ABEは三角形DCFの何倍 <span class="type">C・7点｜角の和180°で三角形をくっつける</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>角Aの大きさが150°</b>」「<b>AB＝AD</b>」「<b>直線ADと直線GHが平行</b>」→ 図に置く。Aのまわりで角EAB＋角GAD＝180°、Dのまわりで角HDA＋角CDF＝180° → <b>辺を重ねてくっつけると、面積の比が辺の比で出る</b>。ADとGHが平行なので、三角形GADと三角形HADの面積は同じ（これをSとおく）。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2つの三角形が、1つの頂点で辺を重ねて、もう1つの辺が一直線に並ぶとき。面積の比は「一直線の辺の比」×「重ねた辺の比」。理由: 一直線の辺を底辺にすると、高さの比が重ねた辺の比と同じになる。図で、三角形ABEと三角形GADは、ABとADが一直線（2と2）なので、面積の比は EA：GA。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>角の和が180°の三角形どうしを、辺を重ねてくっつける。三角形ABEはGADと、三角形DCFはHADとくっつく。
+<svg viewBox="0 0 360 180" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: 角の和が180°の三角形どうしを、辺を重ねてくっつける">
+<polygon points="105,130 15,130 36.1,72.1" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="105,130 195,130 45.3,79.9" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="52" y="146" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">2</text>
+<text x="148" y="146" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">2</text>
+<text x="8" y="133" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="100" y="146" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="198" y="133" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="24.1" y="74.1" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">E</text>
+<text x="51.3" y="75.9" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">G</text>
+<text x="14" y="168" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">ABE：GAD＝EA：GA＝2：□</text>
+<polygon points="222,12 222,72 292.5,97.7" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="222,72 222,162 344.1,116.4" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="210" y="44" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">2</text>
+<text x="210" y="122" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">3</text>
+<text x="226" y="12" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="208" y="76" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="226" y="170" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="296.5" y="91.7" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">H</text>
+<text x="348.1" y="120.4" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">F</text>
+<text x="252" y="79" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">1</text>
+<text x="312" y="100" font-size="16" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">□</text>
+</svg>
+図: 左はBAとADが一直線。右はADとDCが一直線。オレンジの三角形はどちらも面積S。</li>
+    <li>三角形EGAも三角形HDFも30°・60°・90°。短い辺：長い辺：いちばん長い辺＝1：□：2 で、(2)より <b>□×□＝3</b>。表にする。
+<table>
+  <tr><th>三角形</th><th>相手（面積S）</th><th>一直線の辺の比</th><th>重ねた辺の比</th><th>面積</th></tr>
+  <tr><td>ABE</td><td>GAD</td><td>AB：AD＝2：2</td><td>EA：GA＝2：□</td><td>S×2÷□</td></tr>
+  <tr><td>DCF</td><td>HAD</td><td>DC：AD＝3：2</td><td>FD：HD＝□：1</td><td>S×1.5×□</td></tr>
+</table></li>
+    <li>比は（2÷□）：（1.5×□）。両方に□をかけて 2：（1.5×□×□）＝2：（1.5×3）＝2：4.5＝<b>4：9</b>。だから 4/9倍。</li>
+  </ol>
+  <div class="ans">答え：4/9倍</div>
+  <div class="tip">コツ：「角の和が180°」は、辺を重ねて一直線を作る合図。(2)の「□×□＝3」を使わせる作りになっている。</div>
+</section>
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 角すいP-ABCDの表面積 <span class="type">A・7点｜角すいの表面積（側面は全部直角三角形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>三角形APBと三角形APDはどちらも角Aが直角</b>」→ 図に直角の印を置く。PAは底面に垂直。すると<b>辺BCはPBとも直角</b>になる（BCはABともAPとも垂直だから）。側面4つは全部直角三角形で、面積は「3×4÷2」と「3×5÷2」の2種類だけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>角すいの表面積＝底面＋側面4つ。底面は正方形で 3×3。</li>
+    <li>PAが底面に垂直なら、PAは底面のどの直線とも垂直。だからPAとADも直角。</li>
+    <li>BCはABに垂直で、APにも垂直。この2本が作る面（面PAB）にBCは垂直。だからBCは、面PABの中の線PBとも垂直。直角三角形PBCの直角はB。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に直角の印を4つ書く。Aに2つ、BとDに1つずつ。
+<svg viewBox="0 0 360 320" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: 角すいP-ABCD。PAが底面に垂直なので、側面4つは全部直角三角形">
+<polygon points="40,15 40,263 162,303" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="40,15 162,303 312,265" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="40" y1="15" x2="187" y2="233" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="40" y1="263" x2="187" y2="233" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="187" y1="233" x2="312" y2="265" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="40" y1="15" x2="40" y2="263" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="40" y1="15" x2="162" y2="303" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="40" y1="15" x2="312" y2="265" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="40" y1="263" x2="162" y2="303" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="162" y1="303" x2="312" y2="265" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="40,255 47.6,257.5 47.6,265.5" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<polyline points="40,255 47.8,253.4 47.8,261.4" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<polyline points="158.9,295.6 166.6,293.7 169.8,301" fill="none" stroke="#d32f2f" stroke-width="1.1" stroke-linejoin="round"/>
+<polyline points="182.5,226.4 190.3,228.4 194.8,235" fill="none" stroke="#d32f2f" stroke-width="1.1" stroke-linejoin="round"/>
+<text x="14" y="145" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">4cm</text>
+<text x="80" y="300" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">3cm</text>
+<text x="110" y="168" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">5cm</text>
+<text x="66" y="220" font-size="15" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">6</text>
+<text x="175" y="200" font-size="15" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">7.5</text>
+<text x="200" y="300" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">ここも直角</text>
+<text x="212" y="212" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">うしろの2面も同じ</text>
+<text x="46" y="14" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">P</text>
+<text x="22" y="272" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="158" y="318" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="318" y="268" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="190" y="228" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+</svg>
+図: 青がPAB（3×4÷2）、オレンジがPBC（3×5÷2）。うしろのPAD・PDCも同じ。</li>
+    <li>まずこの表を書く。5つの面を1行ずつ。
+<table>
+  <tr><th>面</th><th>形</th><th>式</th><th>面積</th></tr>
+  <tr><td>底面ABCD</td><td>正方形</td><td>3×3</td><td>9</td></tr>
+  <tr><td>PAB・PAD</td><td>直角三角形（直角はA）</td><td>3×4÷2</td><td>6ずつ</td></tr>
+  <tr><td>PBC・PDC</td><td>直角三角形（<b>直角はB・D</b>）</td><td>3×5÷2</td><td>7.5ずつ</td></tr>
+</table></li>
+    <li>たす。9＋6×2＋7.5×2＝9＋12＋15＝<b>36</b>。</li>
+  </ol>
+  <div class="ans">答え：36cm²</div>
+  <div class="tip">コツ：落としやすいのはPBCの直角の場所。「5cm」を斜辺と思いこむと止まる。PBは直角をはさむ辺で、斜辺はPC。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)①</span> 立体Xと立体Zの体積の比 <span class="type">B・7点｜三角柱と四角すいの体積比→相似比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>BR：RC＝AQ：QB</b>」「<b>立体Yと立体Zの体積の比を4：1</b>」→ 真上から見た図に、AQ＝BR＝△、QB＝RC＝□ と置く。Yは三角柱、Zは四角すい → <b>体積の式を2つ並べると、共通の□×○が消えて □：△ が決まる</b>。Zは全体の角すいと同じ形なので、あとは相似比で全部の体積が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角柱の体積＝底面の三角形×長さ。四角すいの体積＝底面×高さ÷3（問題文にある）。</li>
+    <li>同じ形の立体の体積の比は、長さの比を3回かける。長さの比が3：11なら、体積の比は 3×3×3：11×11×11＝27：1331。</li>
+    <li>底面に垂直な平面で、辺に平行に切ると、切り口は縦にまっすぐ。Qの真上の点E（PB上）の高さを○とすると、Zの高さも○。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>真上から見た図を描く。QSとTRで4つに分かれる。AQ＝BR＝△、QB＝RC＝□ と置く。
+<svg viewBox="0 0 360 250" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: 底面を真上から見る。QSとTRで4つに分かれる">
+<polygon points="40,215 185.5,215 185.5,69.5 40,69.5" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="185.5,215 240,215 240,69.5 185.5,69.5" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="185.5,69.5 240,69.5 240,15 185.5,15" fill="#c8e6c9" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="40,69.5 185.5,69.5 185.5,15 40,15" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="185.5" y1="215" x2="185.5" y2="15" stroke="#d32f2f" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="40" y1="69.5" x2="240" y2="69.5" stroke="#d32f2f" stroke-width="1.4" stroke-linecap="round"/>
+<text x="100" y="150" font-size="16" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">X</text>
+<text x="96" y="168" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">正方形</text>
+<text x="200" y="150" font-size="16" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">Y</text>
+<text x="200" y="50" font-size="16" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">Z</text>
+<text x="70" y="45" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Yと同じ形</text>
+<text x="70" y="60" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">（合同）</text>
+<text x="105" y="240" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">△</text>
+<text x="207" y="240" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">□</text>
+<text x="250" y="150" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">△</text>
+<text x="250" y="45" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">□</text>
+<text x="268" y="150" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">（BR）</text>
+<text x="268" y="45" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">（RC）</text>
+<text x="275" y="90" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">あとで</text>
+<text x="275" y="104" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">□：△</text>
+<text x="275" y="118" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">＝3：8</text>
+<text x="26" y="232" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="244" y="232" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="244" y="12" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="26" y="12" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="181.5" y="232" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="244" y="73.5" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">R</text>
+<text x="181.5" y="12" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">S</text>
+<text x="26" y="73.5" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">T</text>
+<text x="171.5" y="85.5" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">I</text>
+</svg>
+図1: Xは△×△の正方形の上、Yは△×□の長方形の上、Zは□×□の正方形の上。左上（Dを含む立体）はYと同じ形。</li>
+    <li>YとZの形を見る。Yは、三角形EQB（□×○÷2）を△の長さだけのばした三角柱。Zは、正方形□×□の上に高さ○の四角すい。
+<svg viewBox="0 0 360 185" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: 立体Yは三角柱、立体Zは四角すい">
+<polygon points="20,110 20,160 95,160" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="20,110 95,160 191,96 116,46" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="20" y1="160" x2="116" y2="96" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="116" y1="96" x2="191" y2="96" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="116" y1="96" x2="116" y2="46" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="95" y1="160" x2="191" y2="96" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="20" y1="110" x2="116" y2="46" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="116" y1="46" x2="191" y2="96" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="20,152 28,152 28,160" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<text x="6" y="140" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">○</text>
+<text x="50" y="176" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">□</text>
+<text x="150" y="140" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">△</text>
+<text x="20" y="20" font-size="13" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">立体Y＝三角柱</text>
+<text x="20" y="36" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">底面 □×○÷2、長さ △</text>
+<text x="10" y="108" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">E</text>
+<text x="10" y="170" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="92" y="174" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<polygon points="230,100 230,150 305,150" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="230,100 305,150 341,126" fill="#c8e6c9" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="230" y1="150" x2="266" y2="126" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="266" y1="126" x2="341" y2="126" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="230" y1="100" x2="266" y2="126" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="230" y1="100" x2="230" y2="150" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="230" y1="150" x2="305" y2="150" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="230" y1="100" x2="305" y2="150" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="305" y1="150" x2="341" y2="126" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="230" y1="100" x2="341" y2="126" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="230,142 238,142 238,150" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<text x="216" y="130" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">○</text>
+<text x="262" y="166" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">□</text>
+<text x="330" y="142" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">□</text>
+<text x="200" y="20" font-size="13" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">立体Z＝四角すい</text>
+<text x="200" y="36" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">底面 □×□、高さ ○</text>
+<text x="218" y="98" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">F</text>
+<text x="220" y="162" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">I</text>
+<text x="304" y="166" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">R</text>
+<text x="345" y="130" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="264" y="120" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">S</text>
+<text x="232" y="128" font-size="10" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">切り口</text>
+</svg>
+図2: どちらの式にも「□×○」が入っている。</li>
+    <li>まずこの表を書く。体積の式を並べて、共通の□×○を消す。
+<table>
+  <tr><th>立体</th><th>形</th><th>体積の式</th><th>□×○を消すと</th></tr>
+  <tr><td>Y</td><td>三角柱</td><td>□×○÷2×△</td><td>△÷2</td></tr>
+  <tr><td>Z</td><td>四角すい</td><td>□×□×○÷3</td><td>□÷3</td></tr>
+</table>
+Y：Z＝4：1 だから、（△÷2）：（□÷3）＝4：1。</li>
+    <li>□を3とおく。□÷3＝1で、Zが1。Yは4だから △÷2＝4、△＝8。<b>□：△＝3：8</b>。</li>
+    <li>Zと全体の角すいP-ABCDは同じ形（どちらも底面の角の真上に頂点がある）。長さの比は □：（△＋□）＝3：11。体積の比は 27：1331。</li>
+    <li>Zを27とおいて、全部の体積を表にする。
+<table>
+  <tr><th>立体</th><th>体積</th><th>どうして</th></tr>
+  <tr><td>Z</td><td>27</td><td>3×3×3</td></tr>
+  <tr><td>Y</td><td>108</td><td>Zの4倍</td></tr>
+  <tr><td>Dを含む立体</td><td>108</td><td>Yと同じ形</td></tr>
+  <tr><td>全体 P-ABCD</td><td>1331</td><td>11×11×11</td></tr>
+  <tr><td>X</td><td><b>1088</b></td><td>1331−(27＋108＋108)</td></tr>
+</table></li>
+    <li>X：Z＝1088：27。これ以上は約分できない。</li>
+  </ol>
+  <div class="ans">答え：1088：27</div>
+  <div class="tip">コツ：「切り分けた立体の比」は、まず真上から見た図で4つに分ける。Zが全体と同じ形と気づくと、相似比だけで全部の体積が出る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)②</span> 立体Xと立体Zの表面積の比 <span class="type">B・7点｜表面積の比（相似比→面積比）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>色をぬった部分の面積と、色をぬっていない部分の面積の比が1：4</b>」→「Zの表面積＝ぬった面×5」と直して書く。ぬった面は切り口の三角形2つで、面PABの三角形EQBと同じ大きさ。<b>面PABを正面から見ると、三角形EQB・PHE・PABが 3：8：11 の相似</b> → 面積を 9・64・121 と置ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ形の図形の面積の比は、長さの比を2回かける。長さの比が3：8なら、面積の比は 9：64。</li>
+    <li>Eを通って底面に平行に切ると、上に小さい角すいP-EFGHができる。ZとP-EFGHは同じ形で、長さの比は □：△＝3：8。</li>
+    <li>立体Xは、箱（AQIT-HEFG）の上に小さい角すいP-EFGHがのった形。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>面PABを正面から見た図を描く。HはPA上でEと同じ高さ。三角形EQB（3）・PHE（8）・PAB（11）は同じ形。
+<svg viewBox="0 0 360 262" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: 面PABを正面から見る。三角形EQB・PHE・PABは同じ形で 3：8：11">
+<polygon points="30,20 30,240 250,240" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="190,180 190,240 250,240" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="30,20 30,180 190,180" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="30,180 30,240 190,240 190,180" fill="#c8e6c9" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="30" y1="180" x2="190" y2="180" stroke="#d32f2f" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="190" y1="180" x2="190" y2="240" stroke="#d32f2f" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="30,232 38,232 38,240" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<polyline points="190,232 198,232 198,240" fill="none" stroke="#222" stroke-width="1.1" stroke-linejoin="round"/>
+<text x="100" y="256" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">8</text>
+<text x="216" y="256" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">3</text>
+<text x="260" y="244" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="184" y="256" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="18" y="244" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="18" y="184" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">H</text>
+<text x="196" y="176" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">E</text>
+<text x="36" y="18" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">P</text>
+<text x="208" y="224" font-size="14" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">9</text>
+<text x="60" y="120" font-size="14" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">64</text>
+<text x="100" y="216" font-size="15" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">48</text>
+<text x="120" y="200" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">121−9−64</text>
+<text x="300" y="120" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">全体は</text>
+<text x="300" y="136" font-size="13" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">121</text>
+<text x="60" y="176" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">8</text>
+</svg>
+図1: 面積は 9・64・121。長方形HAQE＝121−9−64＝48。</li>
+    <li>Zの表面積を出す。切り口の三角形（①の図2のFIRと、その反対側）は三角形EQBと同じで9。2つで18。ぬった：ぬらない＝1：4 だから、Z全体は 18×5＝<b>90</b>。</li>
+    <li>小さい角すいP-EFGHの表面積を出す。Zと同じ形で長さの比が3：8。面積の比は9：64。90×64÷9＝640。</li>
+    <li>Xの表面積を出す。箱の上に小さい角すいがのった形を描く。
+<svg viewBox="0 0 360 170" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: 立体Xは、箱の上に小さい角すいP-EFGHがのった形">
+<polygon points="60,150 140,150 140,120 60,120" fill="#c8e6c9" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="140,150 196,110 196,80 140,120" fill="#c8e6c9" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="60,40 60,120 140,120" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="60,40 140,120 196,80" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="196" y1="110" x2="116" y2="110" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="116" y1="110" x2="60" y2="150" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="116" y1="110" x2="116" y2="80" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="196" y1="80" x2="116" y2="80" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="116" y1="80" x2="60" y2="120" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="60" y1="40" x2="116" y2="80" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<text x="88" y="140" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">48</text>
+<text x="162" y="130" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">48</text>
+<text x="80" y="100" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">64</text>
+<text x="150" y="24" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">小さい角すいP-EFGH</text>
+<text x="230" y="62" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">長方形は4つ</text>
+<text x="230" y="78" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">（前・右・後・左）</text>
+<text x="230" y="112" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">底面AQITは</text>
+<text x="230" y="126" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">EFGHと同じ大きさ</text>
+<text x="48" y="42" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">P</text>
+<text x="46" y="158" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="136" y="164" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="200" y="114" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">I</text>
+<text x="104" y="112" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">T</text>
+<text x="46" y="122" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">H</text>
+<text x="143" y="115" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">E</text>
+<text x="200" y="82" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">F</text>
+<text x="104" y="78" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">G</text>
+</svg>
+図2: 緑の長方形は4つ（前・右・後・左）。底面AQITはEFGHと同じ大きさ。</li>
+    <li>まずこの表を書く。Xの面を種類ごとに。
+<table>
+  <tr><th>Xの面</th><th>面積</th></tr>
+  <tr><td>P-EFGHの側面4つ＋底面AQIT（EFGHと同じ大きさ）</td><td>P-EFGHの表面積と同じ＝640</td></tr>
+  <tr><td>長方形HAQE×4（前・右・後・左）</td><td>48×4＝192</td></tr>
+  <tr><td>合計</td><td>640＋192＝<b>832</b></td></tr>
+</table></li>
+    <li>X：Z＝832：90。2でわって 416：45。</li>
+  </ol>
+  <div class="ans">答え：416：45</div>
+  <div class="tip">コツ：立体の表面積は「どの面が何個」を表に書く。相似比が分かっている立体は、面積の比（2回かける）で、1つの面から全部出る。</div>
+</section>
+</div>
