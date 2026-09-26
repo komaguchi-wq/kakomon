@@ -11028,7 +11028,19 @@
        "gokakusha": 47.4
       }
      },
-     "kaisetsu": "kaisetsu/shibumaku/2020-1/shakai.html"
+     "kaisetsu": "kaisetsu/shibumaku/2020-1/shakai.html",
+     "solvedPages": [
+      {
+       "full": "2020-1/shakai/solved_2026-09-26_01.jpg",
+       "small": "2020-1/shakai/solved_2026-09-26_01_small.jpg",
+       "date": "2026-09-26"
+      },
+      {
+       "full": "2020-1/shakai/solved_2026-09-26_02.jpg",
+       "small": "2020-1/shakai/solved_2026-09-26_02_small.jpg",
+       "date": "2026-09-26"
+      }
+     ]
     },
     {
      "id": "rika",
@@ -11442,7 +11454,19 @@
        "gokakusha": 57.1
       }
      },
-     "kaisetsu": "kaisetsu/shibumaku/2020-1/rika.html"
+     "kaisetsu": "kaisetsu/shibumaku/2020-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2020-1/rika/solved_2026-09-26_01.jpg",
+       "small": "2020-1/rika/solved_2026-09-26_01_small.jpg",
+       "date": "2026-09-26"
+      },
+      {
+       "full": "2020-1/rika/solved_2026-09-26_02.jpg",
+       "small": "2020-1/rika/solved_2026-09-26_02_small.jpg",
+       "date": "2026-09-26"
+      }
+     ]
     },
     {
      "id": "kokugo",
