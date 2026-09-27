@@ -1,0 +1,1194 @@
+<!-- generated kakomon moshi/2026-09-27_gohan-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（計算3問・小問集合6問）</a></li>
+<li><a href="#3-4">大問3・4（図形の小問5問・食塩水3問）</a></li>
+<li><a href="#5-6">大問5・6（立方体の切断3問・一本道の速さ3問）</a></li>
+<li><a href="#7">大問7（3でわると2あまり4でわると3あまる数・個数と数字の2の個数）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（計算3問・小問集合6問）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜7</span> この回の全体像（大問1〜7） <span class="type">A 101点／B 49点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)〜(3)</td><td>計算3問（分配法則・分数と小数のまざった計算・□の逆算）</td><td>A 6+6+6</td><td>39と13、89と111 → 13と11でまとめる／小数は分数に直す／□を含むかたまりを1つずつもどす</td></tr>
+    <tr><td>2 (1)〜(6)</td><td>小問集合（約数の個数・2で何回われるか・時計算・売買のつるかめ算・玉の並べ方・4つの数の和）</td><td>A 6+6+6+6+6 / B 6</td><td>「約数が3個」＝素数×同じ素数／「積を2でくり返し割る」＝2の倍数の個数／10時の60°から150°まで／定価と売値の2種類→つるかめ算／10通りから「3個連続」をひく／2数の和は小さい順に A+B, A+C, …</td></tr>
+    <tr><td>3 (1)〜(5)</td><td>図形（角の2等分・直方体2個の表面積・円が転がる面積・長方形の中の三角形の比・12等分した円）</td><td>A 6+6+6+6 / B 6</td><td>●●と○○の2等分は「半分の角の和」／表面積は上下・前後・左右で分ける／円の通過は「角の4か所」を別あつかい／等分点から比を書きこむ／中心と結んで30°の三角形に切る</td></tr>
+    <tr><td>4 (1)〜(3)</td><td>食塩水（Aに食塩を加える・Bから水を蒸発）</td><td>A 5+5+6</td><td>「濃さ2%→10%」「7%→10%」→ 加えた食塩＝蒸発した水 なので、面積図かてんびんを2本並べる</td></tr>
+    <tr><td>5 (1)〜(3)</td><td>立方体の切断（3点P, Q, Rを通る平面・さらにA, E, Pを通る平面）</td><td>A 5+5 / B 6</td><td>「延長して交わる点」→ 同じ面の2点を結ぶ→平行な面には平行な線。体積は「大きい三角すい−小さい三角すい」</td></tr>
+    <tr><td>6 (1)〜(3)</td><td>速さ（2人が出発・引き返し・2回のすれちがい）</td><td>B 5+5+6</td><td>「20分後に1回目」「34分後に2回目」「一本杉は真ん中」→ 進行グラフ（ダイヤグラム）を描く</td></tr>
+    <tr><td>7 (1)〜(3)</td><td>「3でわると2あまり、4でわると3あまる」数（＝12でわると11あまる）の個数と数字の2の個数</td><td>A 3 / B 3+3+3+6</td><td>「あまりが1つ足りない」→ 12の倍数−1。一の位・十の位は12ごとの周期で表にする</td></tr>
+  </table>
+  <p>取り方: <b>A（大問1・2の(5)以外・3の(1)〜(4)・4・5(1)(2)・7(1)①）を先に確実に</b>。Bは手が動くものから（2(5)の並べ方・3(5)の30°の三角形・7の表）。Aだけで101点。この回は6(1)〜(3)がまるごとBなので、6は最後に回してよい。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 39×51＋13×47−89×11−37×33 <span class="type">A・6点｜分配法則（同じ数でまとめる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>39と13</b>」「<b>33と11</b>」。39は13×3、33は11×3 → 前2つを13で、後ろ2つを11でまとめる形に直して書く。かけ算をそのまま4回するのは、けたが大きくて時間がかかる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数でまとめる決まり。13×153＋13×47 は 13×(153＋47)。たとえば 13×2＋13×3 は 13×5 と同じ。</li>
+    <li>39×51 は、39を13×3に分けて、3を51にわたす。13×(3×51)＝13×153。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>前の2つを13でそろえる。39×51＝13×153。
+<pre class="fig">39×51＋13×47 ＝ 13×153＋13×47 ＝ 13×(153＋47) ＝ 13×200</pre></li>
+    <li>後ろの2つを11でそろえる。37×33＝11×111。
+<pre class="fig">89×11＋37×33 ＝ 11×89＋11×111 ＝ 11×(89＋111) ＝ 11×200</pre></li>
+    <li>どちらも「×200」になった。<b>13×200−11×200＝2×200＝400</b>。</li>
+    <li>たしかめ。153＋47＝200、89＋111＝200。どちらもきれいに200になるのが、この形の合図。</li>
+  </ol>
+  <div class="ans">答え：400</div>
+  <div class="miss">今回：400 ○</div>
+  <div class="tip">コツ：「39と13」「33と11」のように、片方がもう片方の倍数になっている組をさがす。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 分数と小数のまざった計算 <span class="type">A・6点｜小数→分数・かっこの内側から</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1.875</b>」「<b>4.125</b>」「1.25」。8分のいくつになる小数 → <b>全部を分数に直して書く</b>（1.875＝15/8、4.125＝33/8、1.25＝5/4）。計算は小かっこ→÷→＋→中かっこの外の順。小数のままわり算をすると、けたが増えて止まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>0.125＝1/8。だから 1.875＝1 7/8＝15/8、4.125＝4 1/8＝33/8。0.25＝1/4 なので 1.25＝5/4。</li>
+    <li>分数のわり算は、わる数をひっくり返してかける。11/24÷33/8 は 11/24×8/33。約分は 11と33、8と24 の2組。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小数を分数に直して、式を書き直す。2 1/3＝7/3、3 3/7＝24/7。
+<pre class="fig">{(7/3−15/8)÷33/8＋5/4}×24/7</pre></li>
+    <li>小かっこの中。分母を24にそろえる。7/3−15/8＝56/24−45/24＝11/24。</li>
+    <li>÷33/8 は ×8/33。11/24×8/33＝1/9（11と33で11、8と24で8を消す）。</li>
+    <li>1/9＋5/4。分母を36にそろえる。4/36＋45/36＝49/36。</li>
+    <li><b>49/36×24/7</b>。49と7で7、24と36で12を消す。7/3×2/1＝14/3＝<b>4 2/3</b>。</li>
+  </ol>
+  <div class="ans">答え：4 2/3</div>
+  <div class="miss">今回：14/3 ○（4 2/3 と同じ値）</div>
+  <div class="tip">コツ：1.875・4.125・0.625 のような「〜5」で終わる3けたの小数は、8分のいくつ。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 1.05−1.23÷(□＋3 1/3)÷0.6＝0.75 <span class="type">A・6点｜□の逆算（かたまりを1つずつもどす）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1.05−（かたまり）＝0.75</b>」。□の入っている「1.23÷(□＋3 1/3)÷0.6」をまるごと1つのかたまりとして丸で囲む → かたまり＝1.05−0.75＝0.3 と決まる。そこから外側の計算を1つずつはがす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆算は「最後にした計算」から順にもどす。「A÷B＝C」なら B＝A÷C。たとえば 12÷□＝3 なら □＝12÷3＝4。</li>
+    <li>「A−B＝C」なら B＝A−C。ひき算のうしろの数をもとめるときは、前の数から答えをひく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>□のあるかたまりを1つと見る。1.05−（かたまり）＝0.75 → かたまり＝1.05−0.75＝0.3。</li>
+    <li>かたまりは「1.23÷(□＋3 1/3)÷0.6＝0.3」。最後の÷0.6をもどす。1.23÷(□＋3 1/3)＝0.3×0.6＝0.18。</li>
+    <li>「1.23÷(　)＝0.18」をもどす。<b>□＋3 1/3＝1.23÷0.18</b>。123÷18＝41/6（3で約分）。
+<pre class="fig">1.23÷0.18 ＝ 123/18 ＝ 41/6 ＝ 6 5/6</pre></li>
+    <li>□＝41/6−3 1/3＝41/6−20/6＝21/6＝<b>7/2＝3 1/2</b>。</li>
+    <li>たしかめ。3 1/2＋3 1/3＝6 5/6＝41/6。1.23÷41/6＝123/100×6/41＝18/100＝0.18。0.18÷0.6＝0.3。1.05−0.3＝0.75。合っている。</li>
+  </ol>
+  <div class="ans">答え：3 1/2</div>
+  <div class="miss">今回：7/2 ○（3 1/2 と同じ値）</div>
+  <div class="tip">コツ：□をふくむ部分を先に丸で囲んで「1つの数」にする。囲んだ外側から順にもどせば、迷わない。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 1〜100で約数が3個の数の和 <span class="type">A・6点｜約数の個数（素数×同じ素数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>約数の個数が3個</b>」と「1以上100以下」。約数が3個＝「1・その数・まん中の1つ」→ <b>同じ素数を2回かけた数</b>と直して書く。あとは素数を小さい順に2回かけて、100をこえたら終わり。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>4の約数は 1, 2, 4 の3個。9の約数は 1, 3, 9 の3個。まん中の数が素数のとき、約数はこの3個だけになる。</li>
+    <li>素数は小さい順に 2, 3, 5, 7, 11, …。1は素数ではない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>素数を小さい順に書き、同じ数を2回かける。
+<pre class="fig">2×2＝4   3×3＝9   5×5＝25   7×7＝49   11×11＝121（100をこえた→終わり）</pre></li>
+    <li>当てはまるのは 4, 9, 25, 49 の4個。</li>
+    <li>たす。<b>4＋9＋25＋49＝87</b>。</li>
+  </ol>
+  <div class="ans">答え：87</div>
+  <div class="miss">今回：87 ○</div>
+  <div class="tip">コツ：「約数が3個」は素数の平方数、「約数が2個」は素数、「約数が奇数個」は平方数。個数から形をきめる問題として覚える。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 1×2×…×16 を2でくり返しわる <span class="type">A・6点｜2で何回われるか（倍数の個数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1から16までの整数を1個ずつかけた積</b>」と「<b>2でくり返し割ると…はじめて奇数</b>」。積の中に2が何個かくれているかを数える問題に直す → 2の倍数・4の倍数・8の倍数・16の倍数の個数をたす。16個の数を実際にかけるのは無理。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2でわれる回数は、その数にふくまれる「2」の個数と同じ。8＝2×2×2 なら3回われて、そのあと商は1（奇数）になる。</li>
+    <li>1〜16の積にふくまれる2の個数は、2の倍数（8個）＋4の倍数（4個）＋8の倍数（2個）＋16の倍数（1個）。4の倍数は「2」を2個持つので、2の倍数として1回、4の倍数としてもう1回数える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>16を2でわり続ける形を書く。商が、2の倍数・4の倍数・8の倍数・16の倍数の個数。
+<pre class="fig">2 ) 16
+2 )  8   ← 2の倍数 8個
+2 )  4   ← 4の倍数 4個
+2 )  2   ← 8の倍数 2個
+     1   ← 16の倍数 1個</pre></li>
+    <li>たす。<b>8＋4＋2＋1＝15</b>。積の中に2は15個。</li>
+    <li>2で15回われて、15回目にわったときの商が、はじめて奇数になる。</li>
+  </ol>
+  <div class="ans">答え：15</div>
+  <div class="miss">今回：15 ○</div>
+  <div class="tip">コツ：「1からNまでの積が2で何回われるか」は、Nを2でわり続けて商をたす。5で何回われるか（末尾の0の個数）も同じ形。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 10時台で長針と短針がはじめて150° <span class="type">A・6点｜時計算（長針が短針を追いこす前）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>10時と11時の間</b>」「<b>はじめて150度</b>」。10時ちょうどの図を描く → 長針（12）は短針（10）より60°先にある。長針のほうが速いので、この差が広がって150°になるときが「はじめて」。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>長針は1分に6°、短針は1分に0.5°進む。差は1分に 6−0.5＝5.5°。10分で55°広がる。</li>
+    <li>10時ちょうど、短針は10、長針は12。10から12までは 30°×2＝60°。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>10時ちょうどの時計を描く。長針が短針より60°先。
+<svg id="q2_3_clock" viewBox="0 0 380 205" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="左: 10時ちょうど。長針は短針より60度先。右: 10時16と11分の4分。長針が短針より150度先" font-family="sans-serif">
+<circle cx="95" cy="88" r="70" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<line x1="95.0" y1="18.0" x2="95.0" y2="28.0" stroke="#222" stroke-width="1.6"/>
+<line x1="130.0" y1="27.4" x2="127.0" y2="32.6" stroke="#222" stroke-width="1"/>
+<line x1="155.6" y1="53.0" x2="150.4" y2="56.0" stroke="#222" stroke-width="1"/>
+<line x1="165.0" y1="88.0" x2="155.0" y2="88.0" stroke="#222" stroke-width="1.6"/>
+<line x1="155.6" y1="123.0" x2="150.4" y2="120.0" stroke="#222" stroke-width="1"/>
+<line x1="130.0" y1="148.6" x2="127.0" y2="143.4" stroke="#222" stroke-width="1"/>
+<line x1="95.0" y1="158.0" x2="95.0" y2="148.0" stroke="#222" stroke-width="1.6"/>
+<line x1="60.0" y1="148.6" x2="63.0" y2="143.4" stroke="#222" stroke-width="1"/>
+<line x1="34.4" y1="123.0" x2="39.6" y2="120.0" stroke="#222" stroke-width="1"/>
+<line x1="25.0" y1="88.0" x2="35.0" y2="88.0" stroke="#222" stroke-width="1.6"/>
+<line x1="34.4" y1="53.0" x2="39.6" y2="56.0" stroke="#222" stroke-width="1"/>
+<line x1="60.0" y1="27.4" x2="63.0" y2="32.6" stroke="#222" stroke-width="1"/>
+<text x="95.0" y="12.0" font-size="11" fill="#222" text-anchor="middle">12</text>
+<text x="175.0" y="92.0" font-size="11" fill="#222" text-anchor="middle">3</text>
+<text x="15.0" y="92.0" font-size="11" fill="#222" text-anchor="middle">9</text>
+<text x="25.7" y="52.0" font-size="11" fill="#222" text-anchor="middle">10</text>
+<text x="55.0" y="22.7" font-size="11" fill="#222" text-anchor="middle">11</text>
+<line x1="95" y1="88" x2="58.6" y2="67.0" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+<line x1="95" y1="88" x2="95.0" y2="26.0" stroke="#d32f2f" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 74.2 76.0 A 24 24 0 0 1 95.0 64.0" fill="none" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="4 2"/>
+<text x="87" y="54" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">60°</text>
+<circle cx="95" cy="88" r="2.5" fill="#222"/>
+<text x="95" y="180" font-size="13" fill="#222" text-anchor="middle">10時ちょうど：長針が60°先</text>
+<circle cx="285" cy="88" r="70" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<line x1="285.0" y1="18.0" x2="285.0" y2="28.0" stroke="#222" stroke-width="1.6"/>
+<line x1="320.0" y1="27.4" x2="317.0" y2="32.6" stroke="#222" stroke-width="1"/>
+<line x1="345.6" y1="53.0" x2="340.4" y2="56.0" stroke="#222" stroke-width="1"/>
+<line x1="355.0" y1="88.0" x2="345.0" y2="88.0" stroke="#222" stroke-width="1.6"/>
+<line x1="345.6" y1="123.0" x2="340.4" y2="120.0" stroke="#222" stroke-width="1"/>
+<line x1="320.0" y1="148.6" x2="317.0" y2="143.4" stroke="#222" stroke-width="1"/>
+<line x1="285.0" y1="158.0" x2="285.0" y2="148.0" stroke="#222" stroke-width="1.6"/>
+<line x1="250.0" y1="148.6" x2="253.0" y2="143.4" stroke="#222" stroke-width="1"/>
+<line x1="224.4" y1="123.0" x2="229.6" y2="120.0" stroke="#222" stroke-width="1"/>
+<line x1="215.0" y1="88.0" x2="225.0" y2="88.0" stroke="#222" stroke-width="1.6"/>
+<line x1="224.4" y1="53.0" x2="229.6" y2="56.0" stroke="#222" stroke-width="1"/>
+<line x1="250.0" y1="27.4" x2="253.0" y2="32.6" stroke="#222" stroke-width="1"/>
+<text x="285.0" y="12.0" font-size="11" fill="#222" text-anchor="middle">12</text>
+<text x="365.0" y="92.0" font-size="11" fill="#222" text-anchor="middle">3</text>
+<text x="205.0" y="92.0" font-size="11" fill="#222" text-anchor="middle">9</text>
+<text x="215.7" y="52.0" font-size="11" fill="#222" text-anchor="middle">10</text>
+<text x="245.0" y="22.7" font-size="11" fill="#222" text-anchor="middle">11</text>
+<line x1="285" y1="88" x2="252.0" y2="62.0" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+<line x1="285" y1="88" x2="346.4" y2="96.8" stroke="#d32f2f" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 266.1 73.2 A 24 24 0 0 1 308.8 91.4" fill="none" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="4 2"/>
+<text x="303" y="58" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">150°</text>
+<circle cx="285" cy="88" r="2.5" fill="#222"/>
+<text x="285" y="180" font-size="13" fill="#222" text-anchor="middle">長針が150°先になったとき</text>
+<text x="190" y="100" font-size="18" fill="#222" text-anchor="middle">⇒</text>
+</svg></li>
+    <li>150°になるには、あと 150−60＝90° 広がればよい。</li>
+    <li>差は1分に5.5°広がる。<b>90÷5.5＝90÷11/2＝180/11＝16 4/11（分）</b>。</li>
+    <li>たしかめ。16 4/11分後、長針は 6×180/11＝98 2/11°、短針は 300＋0.5×180/11＝308 2/11°。308 2/11−98 2/11＝210°。時計の小さいほうの角は 360−210＝150°。合っている。</li>
+  </ol>
+  <div class="ans">答え：16 4/11</div>
+  <div class="miss">今回：16 4/11 ○</div>
+  <div class="tip">コツ：時計算は「ちょうどの時刻の図」を先に描いて、差が何度かを書きこむ。差が広がるのか縮まるのかで、たすかひくかが決まる。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (4)</span> どら焼き280個・定価で売れた個数 <span class="type">A・6点｜売買損益→つるかめ算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1個100円</b>」「280個」「<b>4割増し</b>」「<b>4割引き</b>」「30個が売れ残った」「全体で2割の利益」。値段は 定価140円 と 売値84円 の2種類に直して書く。売れた個数 250個 と 売り上げ 33600円 がそろえば、つるかめ算になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>4割増しは ×1.4、4割引きは ×0.6。100×1.4＝140円、140×0.6＝84円。</li>
+    <li>「全体で2割の利益」は、仕入れの合計の1.2倍が売り上げ。100×280＝28000円、28000×1.2＝33600円。処分した30個は売り上げ0円。</li>
+    <li>つるかめ算。全部を安いほう（84円）で売ったとして、実際との差を「1個の値段の差」でわると、高いほうの個数が出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>値段と個数の表を書く。
+<table><tr><th></th><th>1個の値段</th><th>個数</th></tr>
+<tr><td>定価で売れた</td><td>140円</td><td>□個</td></tr>
+<tr><td>4割引きで売れた</td><td>84円</td><td>250−□個</td></tr>
+<tr><td>処分（売れ残り）</td><td>0円</td><td>30個</td></tr>
+<tr><td>合計</td><td>売り上げ 33600円</td><td>280個</td></tr></table></li>
+    <li>売れたのは 280−30＝250個。全部84円で売ったとすると 84×250＝21000円。</li>
+    <li>実際の売り上げとの差は 33600−21000＝12600円。1個を140円に変えるごとに 140−84＝56円 ふえる。</li>
+    <li><b>12600÷56＝225</b>。定価で売れたのは225個。</li>
+    <li>たしかめ。140×225＝31500、84×25＝2100。31500＋2100＝33600。合っている。</li>
+  </ol>
+  <div class="ans">答え：225</div>
+  <div class="miss">今回：225 ○</div>
+  <div class="tip">コツ：売買の問題は「定価／売値／仕入れ値」の3つの値段と、「売れた個数／処分した個数」を先に表にする。処分は0円で数に入れる。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (5)</span> 赤3個・白2個を同じ色が3個続かないように並べる <span class="type">B・6点｜並べ方（全部から「だめな並び」をひく）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>赤玉が3個、白玉が2個</b>」「<b>3個連続して並ばない</b>」「同じ色の玉は区別しない」。全部の並べ方（10通り）から、だめな並び（赤が3個続く）をひく形に直す。白は2個しかないので、白が3個続くことはない。全部で10通りなら、書き出して確かめる時間もある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>5か所のうち白の2か所を選ぶ選び方は、5×4÷(2×1)＝10通り。赤の場所は残りに決まる。</li>
+    <li>「〜でない並べ方」は、全部から「〜である並べ方」をひくと速い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>全部の並べ方。白2個の場所を選んで、5×4÷2＝10通り。</li>
+    <li>赤が3個続く並びを書き出す。「赤赤赤」をひとかたまりにして、白2個との並べ方は3通り。
+<pre class="fig">赤赤赤白白 ／ 白赤赤赤白 ／ 白白赤赤赤</pre></li>
+    <li>白は2個なので、白が3個続くことはない。ひくのは赤の3通りだけ。</li>
+    <li><b>10−3＝7</b>（通り）。</li>
+    <li>たしかめ。7通りを書き出すと 赤赤白赤白／赤赤白白赤／赤白赤赤白／赤白赤白赤／赤白白赤赤／白赤赤白赤／白赤白赤赤。7個ある。</li>
+  </ol>
+  <div class="ans">答え：7</div>
+  <div class="miss">今回：7 ○</div>
+  <div class="tip">コツ：「〜しないように」は、全部から「〜する」をひく。「赤赤赤」をひとかたまりにすれば、続く並びは数えやすい。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (6)</span> 2けたの4つの整数、2個ずつの和が6通り <span class="type">A・6点｜和の表（大きさの順に当てはめる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2けたの異なる4個の整数</b>」「小さい順にA, B, C, D」「和が <b>43, 74, 87, 99, 112, 143</b>」。6つの和を、いちばん小さい A＋B＝43、次に小さい A＋C＝74、いちばん大きい C＋D＝143、その前 B＋D＝112 と表に置く → 残った87と99が A＋D と B＋C のどちらか。「2けた」で決める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>A＜B＜C＜D のとき、和がいちばん小さいのは A＋B、2番目は A＋C。いちばん大きいのは C＋D、2番目は B＋D。まん中の2つ（A＋D と B＋C）は、どちらが大きいか決まらない。</li>
+    <li>(B＋D)−(A＋B)＝D−A。同じBをふくむ2つの和の差は、残りの2つの差になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>和を小さい順に表に置く。
+<table><tr><th>組み合わせ</th><th>和</th><th>決まり方</th></tr>
+<tr><td>A＋B</td><td>43</td><td>いちばん小さい</td></tr>
+<tr><td>A＋C</td><td>74</td><td>2番目に小さい</td></tr>
+<tr><td>A＋D</td><td>87 か 99</td><td>どちらか</td></tr>
+<tr><td>B＋C</td><td>99 か 87</td><td>どちらか</td></tr>
+<tr><td>B＋D</td><td>112</td><td>2番目に大きい</td></tr>
+<tr><td>C＋D</td><td>143</td><td>いちばん大きい</td></tr></table></li>
+    <li>DとAの差を出す。(B＋D)−(A＋B)＝112−43＝69。</li>
+    <li>A＋D＝87 のとき。A＝(87−69)÷2＝9。<b>1けたなので当てはまらない</b>。</li>
+    <li>A＋D＝99 のとき。A＝(99−69)÷2＝15。B＝43−15＝28、C＝74−15＝59、<b>D＝99−15＝84</b>。</li>
+    <li>たしかめ。B＋C＝28＋59＝87、B＋D＝28＋84＝112、C＋D＝59＋84＝143。全部2けたで、和も6つそろった。</li>
+  </ol>
+  <div class="ans">答え：84</div>
+  <div class="miss">今回：84 ○</div>
+  <div class="tip">コツ：4つの数の「2個ずつの和」は、小さい順・大きい順の両はしから2つずつ決まる。まん中の2つは場合分けして、「2けた」「異なる」の条件で切る。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ（大問1・2でくり返し出た入口）</h2>
+  <ul>
+    <li>計算は「同じ数でまとめる」「小数は分数に」「□のかたまりを丸で囲む」の3つ。9問すべて正解のこの回は、この形が身についている。</li>
+    <li>「約数が3個」「2で何回われるか」は、数の中身（素数のかけ算）を見る問題。素数を小さい順に書く動作から入る。</li>
+    <li>時計算・売買・和の表は、まず「ちょうどの時刻の図」「値段と個数の表」「小さい順の表」を書く。図と表ができれば、計算は1〜2行。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4"><h1 class="dtitle">大問3・4（図形の小問5問・食塩水3問）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜4</span> この回の全体像（担当の大問） <span class="type">A 40点／B 6点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>3 (1)</td><td>角の2等分線が2本・角ア</td><td>A 6</td><td>●●・○○を図に置く → ●＋○＝180−126、角B＋角Cはその2倍</td></tr>
+    <tr><td>3 (2)</td><td>直方体2個を重ねた立体の表面積</td><td>A 6</td><td>上下・前後・左右の3方向から見た面積×2</td></tr>
+    <tr><td>3 (3)</td><td>長方形の内側を円が1周する通過面積</td><td>A 6</td><td>通らない所（まん中の長方形＋四すみ）を全体からひく</td></tr>
+    <tr><td>3 (4)</td><td>長方形の中の三角形EHIの面積比</td><td>A 6</td><td>③③・②②②を書きこみ、対角線とのちょうちょ（相似）2組</td></tr>
+    <tr><td>3 (5)</td><td>12等分した円のア・イの面積の差</td><td>B 6</td><td>「面積の差」→ 間の☆を両方につけたす → 半円−150°の弓形</td></tr>
+    <tr><td>4 (1)〜(3)</td><td>食塩水（Aに食塩を加える／Bから水を蒸発）</td><td>A 5+5+6</td><td>面積図か「変わらないもの」（食塩を加える＝水が同じ／蒸発＝食塩が同じ）で比を出し、(3)で④＝△3を12にそろえる</td></tr>
+  </table>
+  <p>取り方: <b>Aの7問（3(1)〜(4)・4(1)〜(3)）で40点</b>。今回は大問3の4問が○、大問4は3問とも✓で0点。大問4は(1)の比が出れば(2)(3)も同じ形なので、(1)の面積図1枚で16点が動く。3(5)のBは「差」と「12等分＝30°」が見えたら手を付ける。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 角の2等分線の交点Dと角ア <span class="type">A・6点｜角度（半分の角の和）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2等分</b>」が2回と「<b>126°</b>」。角Bを●●、角Cを○○として図に置く → 三角形DBCで ●＋○＝180−126＝54。角B＋角Cはその2倍。●と○がそれぞれ何度かは出さなくてよい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角形の3つの角の和は180°。三角形DBCなら ●＋○＋126＝180。</li>
+    <li>2等分した角は同じ印を2つ並べて書く。角B＝●＋●、角C＝○＋○。<b>●1つと○1つの和</b>が分かれば、2倍で角B＋角Cが出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に●●と○○を書きこむ。
+<svg id="q3_1_fig" viewBox="0 0 400 245" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="三角形ABC。Dは角Bと角Cの二等分線の交点。角BDCが126度">
+<polygon points="200,17 60,210 340,210" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<polyline points="60,210 200,139 340,210" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="200" y="12" font-size="12" fill="#222" text-anchor="middle">A</text>
+<text x="200" y="48" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle">ア</text>
+<text x="48" y="226" font-size="12" fill="#222">B</text>
+<text x="344" y="226" font-size="12" fill="#222">C</text>
+<text x="212" y="134" font-size="12" fill="#222">D</text>
+<text x="200" y="162" font-size="12" fill="#222" text-anchor="middle">126°</text>
+<text x="84" y="192" font-size="10" fill="#222">●</text>
+<text x="88" y="206" font-size="10" fill="#222">●</text>
+<text x="306" y="192" font-size="10" fill="#222">○</text>
+<text x="302" y="206" font-size="10" fill="#222">○</text>
+<text x="200" y="238" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">●＋○＝180−126＝54　→　角B＋角C＝54×2＝108</text>
+</svg></li>
+    <li>三角形DBC。●＋○＝180−126＝54。</li>
+    <li>角B＋角C＝(●＋○)×2＝54×2＝108。</li>
+    <li>三角形ABC。<b>ア＝180−108＝72</b>。</li>
+    <li>たしかめ。角Bと角Cが別々に何度かは分からないままでよい。「和」だけでアは決まる。</li>
+  </ol>
+  <div class="ans">答え：72</div>
+  <div class="miss">今回：72 ○</div>
+  <div class="tip">コツ：「2等分」が2つ出たら、半分の角の和（●＋○）を先に出す。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 直方体2個を重ねた立体の表面積 <span class="type">A・6点｜表面積（3方向から見る）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>4cm, 5cm, 6cmの直方体を2個</b>」「<b>表面積</b>」。上の直方体は下の直方体の上面からはみ出していない → 上・前・横の3方向から見た形を図に置く。見えた面積の合計を2倍すれば表面積になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>段になった立体は、上から見た形と下から見た形が同じ。前と後ろ、左と右も同じ。だから<b>3方向ぶんを2倍</b>する。</li>
+    <li>かくれて見えない面（へこみ）がなければ、この方法がそのまま使える。この立体は上の直方体がのっているだけなので、かくれる面はない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3方向から見た形を描く。上：6×5＝30。前：下の段 6×4＝24 と上の段 5×6＝30 で 54。横：下の段 5×4＝20 と上の段 4×6＝24 で 44。
+<svg id="q3_2_fig" viewBox="0 0 400 210" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="上から・前から・横から見た図。上から見ると6×5、前から見ると6×4と5×6、横から見ると5×4と4×6">
+<text x="63" y="30" font-size="12" fill="#222" text-anchor="middle">上・下から</text>
+<rect x="30" y="110" width="66" height="55" fill="#dbe9ff" stroke="#222" stroke-width="1.4"/>
+<text x="63" y="179" font-size="11" fill="#222" text-anchor="middle">6</text>
+<text x="24" y="141.5" font-size="11" fill="#222" text-anchor="end">5</text>
+<text x="63" y="141.5" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">30</text>
+<text x="173" y="30" font-size="12" fill="#222" text-anchor="middle">前・後ろから</text>
+<rect x="140" y="121" width="66" height="44" fill="#dbe9ff" stroke="#222" stroke-width="1.4"/>
+<rect x="140" y="55" width="55" height="66" fill="#ffe0b2" stroke="#222" stroke-width="1.4"/>
+<text x="173" y="179" font-size="11" fill="#222" text-anchor="middle">6</text>
+<text x="134" y="147" font-size="11" fill="#222" text-anchor="end">4</text>
+<text x="134" y="92" font-size="11" fill="#222" text-anchor="end">6</text>
+<text x="167.5" y="50" font-size="11" fill="#222" text-anchor="middle">5</text>
+<text x="173" y="147" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">24</text>
+<text x="167.5" y="92" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">30</text>
+<text x="317.5" y="30" font-size="12" fill="#222" text-anchor="middle">左・右から</text>
+<rect x="290" y="121" width="55" height="44" fill="#dbe9ff" stroke="#222" stroke-width="1.4"/>
+<rect x="290" y="55" width="44" height="66" fill="#ffe0b2" stroke="#222" stroke-width="1.4"/>
+<text x="317.5" y="179" font-size="11" fill="#222" text-anchor="middle">5</text>
+<text x="284" y="147" font-size="11" fill="#222" text-anchor="end">4</text>
+<text x="284" y="92" font-size="11" fill="#222" text-anchor="end">6</text>
+<text x="312" y="50" font-size="11" fill="#222" text-anchor="middle">4</text>
+<text x="317.5" y="147" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">20</text>
+<text x="312" y="92" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">24</text>
+<text x="200" y="202" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">30×2 ＋ 54×2 ＋ 44×2 ＝ 256</text>
+</svg></li>
+    <li>3つを2倍してたす。30×2＋54×2＋44×2＝60＋108＋88＝<b>256</b>。</li>
+    <li>たしかめ（SAPIXの解き方）。直方体1個の表面積は (4×5＋4×6＋5×6)×2＝148。2個で 148×2＝296。重なってかくれた面は 4×5＝20 が2面。296−20×2＝256。同じになる。</li>
+  </ol>
+  <div class="ans">答え：256</div>
+  <div class="miss">今回：256 ○</div>
+  <div class="tip">コツ：表面積は「3方向×2」か「1個ずつの表面積−重なった面×2」。2つの式で同じ数になれば安心して次に進める。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 長方形の内側を転がる円の通過部分 <span class="type">A・6点｜円の通過範囲（通らない所をひく）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>11cm・16cm</b>」「半径2cm」「<b>内側を各辺に接しながら1周</b>」。円は辺にそって、はば4cmの帯を通る → 帯を図に置く。通る所より<b>通らない所</b>（まん中の長方形と四すみのすき間）のほうが数えやすい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>直径4cmの円が辺にそって動くと、はば4cmの帯を通る。帯の内側に残る長方形は、たて 11−4×2＝3、横 16−4×2＝8。</li>
+    <li>角では円が直角のすみまで入りこめない。四すみのすき間4つを集めると「<b>1辺4cmの正方形−半径2cmの円</b>」になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>長方形の四すみに円を置き、帯と、通らない所に色をつける。
+<svg id="q3_3_fig" viewBox="0 0 400 285" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="長方形ABCD 16×11。四すみに半径2の円。円が通らないのは中央の長方形3×8と四すみの小さな部分">
+<rect x="40" y="20" width="320" height="220" fill="#dbe9ff" stroke="#222" stroke-width="1.6"/>
+<rect x="120" y="100" width="160" height="60" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="40" y="20" width="80" height="80" fill="#ffe0b2" stroke="none"/>
+<circle cx="80" cy="60" r="40" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/>
+<rect x="280" y="20" width="80" height="80" fill="#ffe0b2" stroke="none"/>
+<circle cx="320" cy="60" r="40" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/>
+<rect x="40" y="160" width="80" height="80" fill="#ffe0b2" stroke="none"/>
+<circle cx="80" cy="200" r="40" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/>
+<rect x="280" y="160" width="80" height="80" fill="#ffe0b2" stroke="none"/>
+<circle cx="320" cy="200" r="40" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/>
+<rect x="120" y="100" width="160" height="60" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<circle cx="80" cy="60" r="2" fill="#222"/>
+<line x1="80" y1="60" x2="120" y2="60" stroke="#222" stroke-width="1.2"/>
+<text x="100" y="56" font-size="11" fill="#222" text-anchor="middle">2</text>
+<text x="32" y="24" font-size="12" fill="#222" text-anchor="end">A</text>
+<text x="368" y="24" font-size="12" fill="#222">D</text>
+<text x="32" y="244" font-size="12" fill="#222" text-anchor="end">B</text>
+<text x="368" y="244" font-size="12" fill="#222">C</text>
+<text x="200.0" y="256" font-size="11" fill="#222" text-anchor="middle">16</text>
+<text x="28" y="134.0" font-size="11" fill="#222" text-anchor="end">11</text>
+<text x="200.0" y="134.0" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">3×8＝24</text>
+<text x="200" y="64" font-size="11" fill="#222" text-anchor="middle">4</text>
+<text x="200" y="204" font-size="11" fill="#222" text-anchor="middle">4</text>
+<text x="80" y="134.0" font-size="11" fill="#222" text-anchor="middle">4</text>
+<text x="320" y="134.0" font-size="11" fill="#222" text-anchor="middle">4</text>
+<text x="200" y="278" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">四すみのすき間4つ ＝ 4×4−2×2×3.14 ＝ 3.44</text>
+</svg></li>
+    <li>まん中の長方形。(11−8)×(16−8)＝3×8＝24。</li>
+    <li>四すみのすき間。4×4−2×2×3.14＝16−12.56＝3.44。</li>
+    <li>全体からひく。<b>11×16−(24＋3.44)＝176−27.44＝148.56</b>。</li>
+  </ol>
+  <div class="ans">答え：148.56</div>
+  <div class="miss">今回：148.56 ○</div>
+  <div class="tip">コツ：「通過する部分」は、通らない部分を全体からひくと式が短い。四すみは4つまとめて「正方形−円」。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (4)</span> 長方形の中の三角形EHIの面積比 <span class="type">A・6点｜面積比（等分点＋ちょうちょ相似）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ADを2等分する点E</b>」「<b>BCを3等分する点F, G</b>」「三角形EHIは長方形の□倍」。AD＝⑥として ③③と②②② を図に置く → EF・EGと対角線BDが作る<b>ちょうちょ（相似）</b>2組で、EH:HF と EI:IG が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>平行な2辺にはさまれた2本の線が交わると、ちょうちょ形の相似ができる。ADとBCは平行。三角形DEHと三角形BFHは DE:BF＝③:②＝3:2。三角形DEIと三角形BGIは DE:BG＝③:④＝3:4。</li>
+    <li>三角形EFGは、底辺FG＝②、高さは長方形のたて。長方形（⑥×たて）の 2/12＝<b>1/6</b>。</li>
+    <li>三角形の2辺を縮めると、面積はその割合のかけ算。EH:EF＝3:5、EI:EG＝3:7 なら、三角形EHIは三角形EFGの 3/5×3/7。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に③③・②②②と、相似の比を書きこむ。
+<svg id="q3_4_fig" viewBox="0 0 400 260" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="長方形ABCD。EはADの真ん中、F・GはBCの3等分点。BDとEFの交点H、BDとEGの交点I。三角形EHIに色">
+<rect x="40" y="20" width="300" height="200" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<polygon points="190,20 160,140 211.4,105.7" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.6"/>
+<line x1="40" y1="220" x2="340" y2="20" stroke="#222" stroke-width="1.6"/>
+<line x1="190" y1="20" x2="140" y2="220" stroke="#222" stroke-width="1.6"/>
+<line x1="190" y1="20" x2="240" y2="220" stroke="#222" stroke-width="1.6"/>
+<text x="34.0" y="16.0" font-size="12" fill="#222" text-anchor="end">A</text>
+<text x="346.0" y="16.0" font-size="12" fill="#222" text-anchor="start">D</text>
+<text x="34.0" y="234.0" font-size="12" fill="#222" text-anchor="end">B</text>
+<text x="346.0" y="234.0" font-size="12" fill="#222" text-anchor="start">C</text>
+<text x="190.0" y="14.0" font-size="12" fill="#222" text-anchor="middle">E</text>
+<text x="140.0" y="236.0" font-size="12" fill="#222" text-anchor="middle">F</text>
+<text x="240.0" y="236.0" font-size="12" fill="#222" text-anchor="middle">G</text>
+<text x="150.0" y="144.0" font-size="12" fill="#222" text-anchor="end">H</text>
+<text x="221.4" y="103.7" font-size="12" fill="#222" text-anchor="start">I</text>
+<text x="115" y="12" font-size="11" fill="#1565c0" text-anchor="middle">③</text>
+<text x="265" y="12" font-size="11" fill="#1565c0" text-anchor="middle">③</text>
+<text x="90" y="248" font-size="11" fill="#1565c0" text-anchor="middle">②</text>
+<text x="190" y="248" font-size="11" fill="#1565c0" text-anchor="middle">②</text>
+<text x="290" y="248" font-size="11" fill="#1565c0" text-anchor="middle">②</text>
+<text x="164" y="86" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="end">3</text>
+<text x="140" y="190" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="end">2</text>
+<text x="212" y="66" font-size="11" fill="#d32f2f" font-weight="bold">3</text>
+<text x="236" y="176" font-size="11" fill="#d32f2f" font-weight="bold">4</text>
+</svg></li>
+    <li>三角形EFGは長方形の 2/(6+6)＝1/6。</li>
+    <li>ちょうちょ DEH・BFH。EH:HF＝DE:BF＝3:2。EF全体は 3＋2＝5。</li>
+    <li>ちょうちょ DEI・BGI。EI:IG＝DE:BG＝3:4。EG全体は 3＋4＝7。</li>
+    <li>三角形EHI＝三角形EFG×3/5×3/7。<b>1/6×3/5×3/7＝9/210＝3/70</b>。</li>
+  </ol>
+  <div class="ans">答え：3/70</div>
+  <div class="miss">今回：3/70 ○</div>
+  <div class="tip">コツ：「等分する点」と「交点」の組み合わせは、まず ③③・②②② を書き、対角線と交わる所でちょうちょをさがす。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (5)</span> 12等分した円の2つの部分ア・イの面積の差 <span class="type">B・6点｜面積の差（同じところをつけたす）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>円周を12等分</b>」「半径6cm」「<b>アとイの面積の差</b>」。アとイの間の白い部分を☆として、両方に☆をつけたす（図に置く）→ 差は「イ＋☆（半円）」−「ア＋☆（150°の弓形）」に直せる。12等分だから1つ分は30°。「差」と30°が見えたら手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>離れた2つの面積の差は、両方に同じ形をたしても変わらない。イ−ア＝(イ＋☆)−(ア＋☆)。</li>
+    <li>12等分の点は、となりと30°。5つ分なら150°、6つ分なら180°（直径）。</li>
+    <li>半径6、頂角150°の二等辺三角形。頂角のとなりに30°ができるので、<b>高さは6の半分の3</b>。面積は 6×3÷2＝9。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図の左。ア＋☆は弦の左上側の弓形（円周の点5つ分＝150°）。イ＋☆は上半分の半円（180°）。
+<svg id="q3_5_fig" viewBox="0 0 400 215" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="左: 半径6の円と12等分点。ア・☆・イの3つの部分。右: ア＋☆を30度回すと、差は三角形OABとおうぎ形OCA">
+<circle cx="95" cy="100" r="75" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="170.0" cy="100.0" r="2.2" fill="#222"/>
+<circle cx="160.0" cy="62.5" r="2.2" fill="#222"/>
+<circle cx="132.5" cy="35.0" r="2.2" fill="#222"/>
+<circle cx="95.0" cy="25.0" r="2.2" fill="#222"/>
+<circle cx="57.5" cy="35.0" r="2.2" fill="#222"/>
+<circle cx="30.0" cy="62.5" r="2.2" fill="#222"/>
+<circle cx="20.0" cy="100.0" r="2.2" fill="#222"/>
+<circle cx="30.0" cy="137.5" r="2.2" fill="#222"/>
+<circle cx="57.5" cy="165.0" r="2.2" fill="#222"/>
+<circle cx="95.0" cy="175.0" r="2.2" fill="#222"/>
+<circle cx="132.5" cy="165.0" r="2.2" fill="#222"/>
+<circle cx="160.0" cy="137.5" r="2.2" fill="#222"/>
+<circle cx="285" cy="100" r="75" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="360.0" cy="100.0" r="2.2" fill="#222"/>
+<circle cx="350.0" cy="62.5" r="2.2" fill="#222"/>
+<circle cx="322.5" cy="35.0" r="2.2" fill="#222"/>
+<circle cx="285.0" cy="25.0" r="2.2" fill="#222"/>
+<circle cx="247.5" cy="35.0" r="2.2" fill="#222"/>
+<circle cx="220.0" cy="62.5" r="2.2" fill="#222"/>
+<circle cx="210.0" cy="100.0" r="2.2" fill="#222"/>
+<circle cx="220.0" cy="137.5" r="2.2" fill="#222"/>
+<circle cx="247.5" cy="165.0" r="2.2" fill="#222"/>
+<circle cx="285.0" cy="175.0" r="2.2" fill="#222"/>
+<circle cx="322.5" cy="165.0" r="2.2" fill="#222"/>
+<circle cx="350.0" cy="137.5" r="2.2" fill="#222"/>
+<path d="M 20.0 100.0 A 75 75 0 0 0 30.0 137.5 L 67.5 100 Z" fill="#ffe0b2" stroke="none"/>
+<path d="M 67.5 100 L 132.5 35.0 A 75 75 0 0 1 170.0 100.0 Z" fill="#dbe9ff" stroke="none"/>
+<line x1="20.0" y1="100" x2="170.0" y2="100" stroke="#222" stroke-width="1.6"/>
+<line x1="30.0" y1="137.5" x2="132.5" y2="35.0" stroke="#222" stroke-width="1.6"/>
+<text x="40" y="122" font-size="12" font-weight="bold" fill="#222">ア</text>
+<text x="62" y="70" font-size="13" fill="#222">☆</text>
+<text x="130" y="82" font-size="12" font-weight="bold" fill="#222">イ</text>
+<text x="95" y="196" font-size="11" fill="#222" text-anchor="middle">ア＋☆ ＝ 150°の弓形</text>
+<text x="95" y="210" font-size="11" fill="#222" text-anchor="middle">イ＋☆ ＝ 半円</text>
+<path d="M 210.0 100 L 350.0 62.5 A 75 75 0 0 1 360.0 100 Z" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.6"/>
+<line x1="210.0" y1="100" x2="360.0" y2="100" stroke="#222" stroke-width="1.4"/>
+<line x1="285" y1="100" x2="350.0" y2="62.5" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 2"/>
+<line x1="350.0" y1="62.5" x2="350.0" y2="100" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 2"/>
+<text x="346.0" y="85.2" font-size="11" fill="#1565c0" font-weight="bold" text-anchor="end">3</text>
+<text x="307" y="96" font-size="10" fill="#222">30°</text>
+<text x="247.5" y="114" font-size="11" fill="#222" text-anchor="middle">6</text>
+<text x="311.5" y="77.2" font-size="11" fill="#222" text-anchor="middle">6</text>
+<text x="200.0" y="104" font-size="12" fill="#222" text-anchor="middle">B</text>
+<text x="285" y="114" font-size="12" fill="#222" text-anchor="middle">O</text>
+<text x="370.0" y="104" font-size="12" fill="#222" text-anchor="middle">C</text>
+<text x="354.0" y="58.5" font-size="12" fill="#222">A</text>
+<text x="285" y="196" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="middle">差 ＝ 三角形OAB ＋ おうぎ形OCA</text>
+<text x="285" y="210" font-size="11" fill="#222" text-anchor="middle">6×3÷2＝9　＋　6×6×3.14÷12＝9.42</text>
+<text x="190" y="46" font-size="18" fill="#222" text-anchor="middle">⇒</text>
+</svg></li>
+    <li>差は「半円−150°の弓形」。図の右のように、ア＋☆を30°回して半円に重ねると、残るのは三角形OABとおうぎ形OCA（30°）。</li>
+    <li>三角形OAB。6×3÷2＝9。</li>
+    <li>おうぎ形OCA。6×6×3.14×30/360＝6×6×3.14×1/12＝9.42。</li>
+    <li><b>9＋9.42＝18.42</b>。</li>
+  </ol>
+  <div class="ans">答え：18.42</div>
+  <div class="miss">今回：無記入 ✓（0点）。答えの欄は空らん。見直すところ：「離れた2か所の面積の差」と見たら、間の白い部分に☆と書いて両方にたす（部品の形を直す）。そこまで書ければ、あとは半円と弓形の引き算。</div>
+  <div class="tip">コツ：「離れた2か所の面積の差（または等しい）」は、同じところをつけたす。つけたしたあとの形（半円・弓形・おうぎ形）で式を立てる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 2%の食塩水に食塩を加えて10% <span class="type">A・5点｜食塩水（面積図・逆比）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>濃さ2%</b>」「<b>食塩を加えて</b>」「濃さ10%」。食塩は「濃さ100%の食塩水」に直して書く → 2%と100%を混ぜて10%の面積図。たての差 8 と 90 が、横（重さ）の逆比になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>面積図。横＝重さ、たて＝濃さ、面積＝食塩の重さ。混ぜたあとの濃さの線を引くと、出っぱった長方形とへこんだ長方形の面積が等しい。</li>
+    <li>面積が同じ2つの長方形は、たてが長いほうが横が短い。たての比 8:90＝4:45 なら、横の比は <b>45:4（逆比）</b>。</li>
+    <li>食塩そのものは「100%の食塩水」。てんびんでも同じ（2%と100%を10%でつり合わせる。うでの長さ 8:90 → 重さは逆比）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>面積図を描く。左に2%の食塩水、右に100%の食塩、10%の線を引く。
+<svg id="q4_1_fig" viewBox="0 0 400 222" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="面積図。左は2パーセントの食塩水、右は100パーセントの食塩。混ぜて10パーセント。2か所の斜線の面積が等しい">
+<rect x="60" y="140" width="170" height="40" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<rect x="230" y="30" width="30" height="150" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<rect x="60" y="110" width="170" height="30" fill="#ffe0b2" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 2"/>
+<rect x="230" y="30" width="30" height="80" fill="#ffe0b2" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 2"/>
+<line x1="60" y1="110" x2="260" y2="110" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 2"/>
+<text x="145" y="165" font-size="12" fill="#222" text-anchor="middle">2%</text>
+<text x="54" y="114" font-size="12" fill="#222" text-anchor="end">10%</text>
+<text x="266" y="34" font-size="12" fill="#222">100%（食塩）</text>
+<text x="145" y="130" font-size="12" fill="#d32f2f" font-weight="bold" text-anchor="middle">たて 10−2＝8</text>
+<text x="266" y="75" font-size="12" fill="#d32f2f" font-weight="bold">たて 100−10＝90</text>
+<text x="145" y="196" font-size="12" fill="#222" text-anchor="middle">はじめの食塩水 □g</text>
+<text x="245" y="196" font-size="12" fill="#222" text-anchor="middle">食塩 △g</text>
+<text x="200" y="215" font-size="12" fill="#d32f2f" font-weight="bold" text-anchor="middle">色の2か所の面積は同じ → 横の比は たての逆比 90：8＝45：4</text>
+</svg></li>
+    <li>たての差。左（食塩水側）10−2＝8。右（食塩側）100−10＝90。</li>
+    <li>横の比は逆比。<b>90:8＝45:4</b>。</li>
+    <li>たしかめ（SAPIXの別解）。食塩を加えても水の重さは変わらない。はじめの食塩水をア、あとの食塩水をイとすると、ア×0.98＝イ×0.9。ア:イ＝90:98＝45:49。加えた食塩は 49−45＝4。やはり 45:4。</li>
+  </ol>
+  <div class="ans">答え：45:4</div>
+  <div class="miss">今回：9:40 ✓（正解 45:4）。用紙は「9:40」。見直すところ：面積図でたての差「10−2＝8」「100−10＝90」を先に書き、横は逆比。答える順は「はじめの食塩水：加えた食塩」。</div>
+  <div class="tip">コツ：食塩を加える＝100%を混ぜる、水を加える＝0%を混ぜる。どちらも面積図（てんびん）に置ける。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 7%の食塩水から水を蒸発させて10% <span class="type">A・5点｜食塩水（食塩の重さは変わらない）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>濃さ7%</b>」「<b>水を蒸発</b>」「濃さ10%」。蒸発で変わらないのは食塩の重さ、と直して書く → 食塩水の重さは濃さの逆比 10:7。減った 10−7＝3 が蒸発した水。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>水だけが出ていくとき、食塩の重さは前後で同じ。前 ⑩×7%、後 ⑦×10%、どちらも食塩は 0.7。</li>
+    <li>食塩が同じなら、食塩水の重さは<b>濃さの逆比</b>。7%と10% → 重さは 10:7。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>前と後を図にする。前をウ、後をエとすると ウ×0.07＝エ×0.1。
+<svg id="q4_2_fig" viewBox="0 0 400 165" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="蒸発の前と後。食塩の量は同じ。前は横10たて7、後は横7たて10で面積が同じ">
+<rect x="40" y="60" width="100" height="70" fill="#dbe9ff" stroke="#222" stroke-width="1.4"/>
+<text x="90" y="100" font-size="12" fill="#222" text-anchor="middle">食塩</text>
+<text x="90" y="146" font-size="12" fill="#222" text-anchor="middle">前：食塩水 ⑩</text>
+<text x="34" y="99" font-size="12" fill="#222" text-anchor="end">7%</text>
+<text x="200" y="104" font-size="18" fill="#222" text-anchor="middle">⇒</text>
+<text x="200" y="124" font-size="11" fill="#222" text-anchor="middle">水だけ蒸発</text>
+<rect x="260" y="30" width="70" height="100" fill="#dbe9ff" stroke="#222" stroke-width="1.4"/>
+<text x="295" y="85" font-size="12" fill="#222" text-anchor="middle">食塩</text>
+<text x="295" y="146" font-size="12" fill="#222" text-anchor="middle">後：食塩水 ⑦</text>
+<text x="254" y="84" font-size="12" fill="#222" text-anchor="end">10%</text>
+<text x="200" y="162" font-size="12" fill="#d32f2f" font-weight="bold" text-anchor="middle">食塩の面積は同じ → 食塩水の重さは 濃さの逆比 10：7</text>
+</svg></li>
+    <li>ウ:エ＝10:7（濃さの逆比）。</li>
+    <li>蒸発した水は ウ−エ＝10−7＝3。<b>求める比は 10:3</b>。</li>
+    <li>たしかめ。前が1000gなら食塩70g。後は700gで 70÷700＝10%。蒸発は300g。1000:300＝10:3。</li>
+  </ol>
+  <div class="ans">答え：10:3</div>
+  <div class="miss">今回：7:30 ✓（正解 10:3）。用紙は「7:30」。見直すところ：答える比は「はじめの食塩水の重さ：蒸発した水の重さ」。食塩水を⑩・⑦と置いてから、その差3を右に書く。</div>
+  <div class="tip">コツ：「蒸発」「水を加える」は食塩が変わらない。「食塩を加える」は水が変わらない。変わらないものを先に決める。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> A・Bの合計700gから加えた食塩の重さ <span class="type">A・6点｜比をそろえる（加えた食塩＝蒸発した水）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は大問の頭の「<b>加えた食塩の重さと同じ重さの水を蒸発</b>」と「<b>合計は700g</b>」。(1)の④と(2)の△3が同じ重さ → 12にそろえて書き直す。すると「はじめのA＋はじめのB」が何にあたるか分かる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)から A は 45→49（+4）。(2)から B は 10→7（−3）。○と△は別の比なので、そのままではたせない。</li>
+    <li>同じ重さのものを両方の比で見つけてそろえる。④＝△3 → <b>最小公倍数の12</b>。○は3倍、△は4倍する。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>前と後の表を書き、④＝△3＝12 でそろえる。
+<table><tr><th></th><th>前</th><th>変化</th><th>後</th></tr>
+<tr><td>A（(1)の比）</td><td>㊺</td><td>＋④</td><td>㊾</td></tr>
+<tr><td>B（(2)の比）</td><td>△10</td><td>−△3</td><td>△7</td></tr>
+<tr><td>A（そろえた後・×3）</td><td><b>135</b></td><td>＋12</td><td>147</td></tr>
+<tr><td>B（そろえた後・×4）</td><td><b>40</b></td><td>−12</td><td>28</td></tr></table></li>
+    <li>はじめの合計は 135＋40＝175。これが700g。1は 700÷175＝4g。</li>
+    <li>加えた食塩は12。<b>4×12＝48</b>（g）。SAPIXの式なら 700×12/175＝48。</li>
+    <li>たしかめ。Aは 540g の2%＝10.8g。食塩48gを加えると 58.8g÷588g＝10%。Bは 160g の7%＝11.2g。48g蒸発して 11.2÷112＝10%。合っている。</li>
+  </ol>
+  <div class="ans">答え：48</div>
+  <div class="miss">今回：10.8 ✓（正解 48）。用紙は「10.8」。見直すところ：(1)の 45:4 と (2)の 10:3 を出してから、④＝△3 を12にそろえる。(1)(2)が直れば、この問いも同じ表で解ける。</div>
+  <div class="tip">コツ：「同じ重さ」が2つの比にまたがるときは、その部分を最小公倍数にそろえる。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜4</span> まとめ（大問3・4でくり返し出た入口）</h2>
+  <ul>
+    <li>図形は「印を図に置く」から始める。●●○○、③③②②②、はば4cmの帯、☆。置いた印だけで式ができる。</li>
+    <li>食塩水は「変わらないもの」を先に決める。食塩を加える→水が同じ、蒸発→食塩が同じ。面積図なら、たての差→横は逆比。</li>
+    <li>大問4は3問16点が(1)の比1つにかかっている。(1)で 45:4 を出す練習を優先する。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="5-6"><h1 class="dtitle">大問5・6（立方体の切断3問・一本道の速さ3問）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">5〜6</span> この回の全体像（担当の大問） <span class="type">A 10点／B 22点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>5 (1)</td><td>立方体・PQとEFを延長した点Sと、RSが辺BFと交わる点T</td><td>A 5</td><td>「延長」→ 底面の三角形GQPとFSPは合同（FS＝3）→ 左の面で三角形SFTとSERの相似</td></tr>
+    <tr><td>5 (2)</td><td>3点P・Q・Rで切ったHを含む立体の体積</td><td>A 5</td><td>反対側にもU・Vを作り、切り口は五角形 → 大きい三角すい−小さい三角すい2つ</td></tr>
+    <tr><td>5 (3)</td><td>(2)の立体をさらにA・E・Pの面で切る</td><td>B 6</td><td>AEを通るたての面 → 落ちるのは四角すいP-FERT。(2)の37.5から引く</td></tr>
+    <tr><td>6 (1)</td><td>太郎が駅に着く時刻（一本杉は真ん中）</td><td>B 5</td><td>「真ん中」→ 太郎は半分3つ分を 20＋34＝54分 → 半分1つ18分</td></tr>
+    <tr><td>6 (2)</td><td>太郎と花子の速さの比</td><td>B 5</td><td>すれ違い点〜駅を太郎16分・花子20分 → 逆比 5:4</td></tr>
+    <tr><td>6 (3)</td><td>学校から駅までの距離</td><td>B 6</td><td>花子の54分を4つに分けて「一本杉〜公園」を出す → 900mが○50</td></tr>
+  </table>
+  <p>取り方: <b>Aの5(1)(2)で10点を先に</b>（今回は2問とも○）。Bは、6(1)で「半分3つ分＝54分」に気づけば(2)まで続けて10点が動く。5(3)は(2)ができていれば、引く立体1つの計算で届く。今回は大問5が10点、大問6が0点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> PQ・EFを延長した点Sと、RSが辺BFと交わる点T <span class="type">A・5点｜立体の切断（延長と相似）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>PQをPの方向へ延長</b>」「EFをFの方向へ延長」「交わる点S」。底面EFGHの図に延長の線を置く → 三角形GQPと三角形FSPは<b>合同</b>で、FS＝3。次にS・T・Rは左の面AEFBの上にある。三角形SFTと三角形SERの相似でFTが出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>PもQも辺の真ん中。三角形GQPは GP＝GQ＝3 の直角二等辺三角形。PQをのばした先の三角形FSPも同じ形で、FS＝FP＝3。</li>
+    <li>同じ面の上にある2点は、そのまま直線で結べる。S・F・Eは1本の直線の上、T・Rも左の面の上。だから三角形SFTと三角形SERは<b>相似</b>（同じ形で大きさちがい）。相似比は SF:SE＝3:9＝1:3。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に延長の線を描く。PQをのばしてEFの延長と交わる点がS。RとSを結んで、辺BFと交わる点がT。
+<svg id="q5_1_fig" viewBox="0 0 400 270" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="立方体ABCD-EFGH。PQをのばしてEFの延長と交わる点S。RSが辺BFと交わる点T。三角形SFTと三角形SERは相似">
+<polygon points="11.4,241.4 145.3,159.3 145.3,87.3" fill="#dbe9ff" stroke="none"/>
+<polygon points="11.4,241.4 56,214 56,190" fill="#c8e6c9" stroke="none"/>
+<polygon points="11.4,241.4 56,214 128,214" fill="#ffe0b2" stroke="none" opacity="0.8"/>
+<polygon points="200,214 244.6,186.6 128,214" fill="#ffe0b2" stroke="none" opacity="0.8"/>
+<polygon points="56,70 200,70 200,214 56,214" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="56,70 145.3,15.3 289.3,15.3 200,70" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="289.3,15.3 289.3,159.3 200,214" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="145.3,15.3 145.3,159.3 289.3,159.3" fill="none" stroke="#222" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="145.3" y1="159.3" x2="56" y2="214" stroke="#222" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="11.4" y1="241.4" x2="244.6" y2="186.6" stroke="#222" stroke-width="1.6"/>
+<line x1="11.4" y1="241.4" x2="56" y2="214" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 2"/>
+<line x1="11.4" y1="241.4" x2="145.3" y2="87.3" stroke="#d32f2f" stroke-width="1.8"/>
+<circle cx="128" cy="214" r="3" fill="#222"/>
+<circle cx="244.6" cy="186.6" r="3" fill="#222"/>
+<circle cx="145.3" cy="87.3" r="3" fill="#222"/>
+<circle cx="11.4" cy="241.4" r="3" fill="#222"/>
+<circle cx="56" cy="190" r="3.5" fill="#d32f2f"/>
+<text x="140" y="12" font-size="12" fill="#222" text-anchor="end">A</text>
+<text x="295" y="12" font-size="12" fill="#222">D</text>
+<text x="48" y="66" font-size="12" fill="#222" text-anchor="end">B</text>
+<text x="206" y="66" font-size="12" fill="#222">C</text>
+<text x="150" y="170" font-size="12" fill="#222">E</text>
+<text x="295" y="164" font-size="12" fill="#222">H</text>
+<text x="52" y="228" font-size="12" fill="#222" text-anchor="end">F</text>
+<text x="206" y="228" font-size="12" fill="#222">G</text>
+<text x="128" y="230" font-size="12" fill="#222" text-anchor="middle">P</text>
+<text x="250" y="198" font-size="12" fill="#222">Q</text>
+<text x="152" y="88" font-size="12" fill="#222">R</text>
+<text x="8" y="256" font-size="12" fill="#222">S</text>
+<text x="46" y="186" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="end">T</text>
+<text x="92" y="228" font-size="11" fill="#222" text-anchor="middle">3</text>
+<text x="164" y="228" font-size="11" fill="#222" text-anchor="middle">3</text>
+<text x="228" y="208" font-size="11" fill="#222">3</text>
+<text x="38" y="248" font-size="11" fill="#222">3</text>
+<text x="152" y="128" font-size="11" fill="#222">3</text>
+<text x="92" y="182" font-size="11" fill="#222">6</text>
+<text x="44" y="206" font-size="11" font-weight="bold" fill="#d32f2f" text-anchor="end">1</text>
+<text x="200" y="264" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">SF：SE＝3：9＝1：3　→　FT＝3×1/3＝1　→　BT＝6−1＝5</text>
+</svg></li>
+    <li>底面で、三角形GQPと三角形FSPは合同。<b>FS＝GQ＝3</b>。</li>
+    <li>左の面で、三角形SFTと三角形SERは相似。SF:SE＝3:(3＋6)＝1:3。</li>
+    <li>ER＝3 だから FT＝3×1/3＝1。</li>
+    <li><b>BT＝6−1＝5</b>。</li>
+  </ol>
+  <div class="ans">答え：5</div>
+  <div class="miss">今回：5 ○</div>
+  <div class="tip">コツ：「延長した直線が交わる点」は、まず底面だけを平らに見て合同・直角二等辺をさがす。次に側面で相似。面を1つずつ分けて見ると迷わない。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 3点P・Q・Rで切ったHを含む立体の体積 <span class="type">A・5点｜立体の切断（大きい三角すい−小さい三角すい）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3点P, Q, Rを通る平面</b>」「頂点Hを含む方」。(1)で作ったS・Tをそのまま図に置く → 右奥も同じ形で、PQをQの方向へのばした点U（EHの延長上）とRUがDHと交わる点Vができる。切り口は<b>五角形R-T-P-Q-V</b>。Hを含む立体は「大きい三角すいR-ESU − 小さい三角すい2つ」で出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>切り口は「同じ面の2点を結ぶ」「向かい合う面の切り口は平行」で描く。ここでは(1)の延長線を使うと、Sから見た大きい三角すいR-ESUの中に切り口が全部入る。</li>
+    <li>三角すいの体積＝底面積×高さ÷3。底面ESUは ES＝EU＝9 の直角二等辺三角形。高さはER＝3。</li>
+    <li>三角すいR-ESUのうち、はみ出た小さい三角すいT-FSPとV-HQUは、(1)より FT＝HV＝1・底面が3×3÷2。<b>左右で同じ大きさ</b>なので、1つ出して2倍する。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図にU・Vを足し、切り口の五角形と大きい三角すいR-ESUを描く。
+<svg id="q5_2_fig" viewBox="0 0 400 302" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="切り口の五角形RTPQV。Sから見た大きい三角すいR-ESUから、小さい三角すいT-FSPとV-HQUを引く">
+<polygon points="11.4,241.4 361.3,159.3 145.3,159.3" fill="#dbe9ff" stroke="none" opacity="0.6"/>
+<polygon points="145.3,87.3 56,190 128,214 244.6,186.6 289.3,135.3" fill="#c8e6c9" stroke="#d32f2f" stroke-width="1.8"/>
+<polygon points="11.4,241.4 56,214 128,214 56,190" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<polygon points="244.6,186.6 289.3,159.3 361.3,159.3 289.3,135.3" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<polygon points="56,70 200,70 200,214 56,214" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="56,70 145.3,15.3 289.3,15.3 200,70" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="289.3,15.3 289.3,159.3 200,214" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="145.3,15.3 145.3,159.3 289.3,159.3" fill="none" stroke="#222" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="145.3" y1="159.3" x2="56" y2="214" stroke="#222" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="11.4" y1="241.4" x2="361.3" y2="159.3" stroke="#222" stroke-width="1.4"/>
+<line x1="11.4" y1="241.4" x2="145.3" y2="159.3" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 2"/>
+<line x1="145.3" y1="159.3" x2="361.3" y2="159.3" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 2"/>
+<line x1="11.4" y1="241.4" x2="145.3" y2="87.3" stroke="#222" stroke-width="1.4"/>
+<line x1="145.3" y1="87.3" x2="361.3" y2="159.3" stroke="#222" stroke-width="1.4"/>
+<circle cx="128" cy="214" r="3" fill="#222"/>
+<circle cx="244.6" cy="186.6" r="3" fill="#222"/>
+<circle cx="145.3" cy="87.3" r="3" fill="#222"/>
+<circle cx="11.4" cy="241.4" r="3" fill="#222"/>
+<circle cx="361.3" cy="159.3" r="3" fill="#222"/>
+<circle cx="56" cy="190" r="3" fill="#222"/>
+<circle cx="289.3" cy="135.3" r="3" fill="#222"/>
+<text x="140" y="12" font-size="12" fill="#222" text-anchor="end">A</text>
+<text x="295" y="12" font-size="12" fill="#222">D</text>
+<text x="48" y="66" font-size="12" fill="#222" text-anchor="end">B</text>
+<text x="206" y="66" font-size="12" fill="#222">C</text>
+<text x="150" y="172" font-size="12" fill="#222">E</text>
+<text x="292" y="172" font-size="12" fill="#222">H</text>
+<text x="52" y="228" font-size="12" fill="#222" text-anchor="end">F</text>
+<text x="206" y="228" font-size="12" fill="#222">G</text>
+<text x="128" y="230" font-size="12" fill="#222" text-anchor="middle">P</text>
+<text x="246" y="200" font-size="12" fill="#222">Q</text>
+<text x="152" y="88" font-size="12" fill="#222">R</text>
+<text x="8" y="256" font-size="12" fill="#222">S</text>
+<text x="368" y="164" font-size="12" fill="#222">U</text>
+<text x="46" y="186" font-size="12" fill="#222" text-anchor="end">T</text>
+<text x="296" y="132" font-size="12" fill="#222">V</text>
+<text x="86" y="192" font-size="11" fill="#1565c0" font-weight="bold">9</text>
+<text x="325" y="154" font-size="11" fill="#1565c0" font-weight="bold">9</text>
+<text x="152" y="128" font-size="11" fill="#222">3</text>
+<text x="66" y="206" font-size="11" fill="#222">1</text>
+<text x="300" y="150" font-size="11" fill="#222">1</text>
+<text x="200" y="266" font-size="12" fill="#222" text-anchor="middle">大きい三角すい R-ESU：9×9÷2×3÷3＝40.5</text>
+<text x="200" y="281" font-size="12" fill="#222" text-anchor="middle">小さい三角すい T-FSP・V-HQU：3×3÷2×1÷3＝1.5 が2つ</text>
+<text x="200" y="297" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">40.5−1.5×2＝37.5</text>
+</svg></li>
+    <li>大きい三角すいR-ESU。底面 9×9÷2＝40.5、高さ3。40.5×3÷3＝40.5。</li>
+    <li>小さい三角すいT-FSP。底面 3×3÷2＝4.5、高さ FT＝1。4.5×1÷3＝1.5。</li>
+    <li>V-HQUも同じ形・同じ大きさで 1.5。</li>
+    <li><b>40.5−1.5×2＝37.5</b>。</li>
+  </ol>
+  <div class="ans">答え：37.5</div>
+  <div class="miss">今回：37.5 ○</div>
+  <div class="tip">コツ：切り口が五角形になるときは、延長線で「大きい三角すい」を作り、はみ出た小さい三角すいをひく。左右が対称なら小さい方は1回計算して2倍。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> (2)の立体をさらにA・E・Pの面で切ったHを含む立体 <span class="type">B・6点｜立体の切断（四角すいをひく）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>(2)の立体を、さらに</b>」「3点A, E, Pを通る平面」「頂点Hを含む方」。A・E・Pの面は辺AEを通るたての面 → (2)の図にこの面を1本足して置く。この面より左（F側）に残っているのは、<b>頂点P・底面が台形FERTの四角すい</b>だけ。(2)の37.5からその分をひけば終わる。(2)が合っていて台形FERTが見えたら、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(2)の立体のうち左の面AEFBに残っているのは台形FERT（FT＝1、ER＝3、EF＝6）。A・E・Pの面で切ると、この台形とPを結んだ四角すいが落ちる。</li>
+    <li>四角すいの体積も底面積×高さ÷3。底面は台形FERT、高さは<b>PからAEFBの面までの長さFP＝3</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(2)の図に、A・E・Pを通るたての面を足す。落ちる四角すいP-FERTに色をつける。
+<svg id="q5_3_fig" viewBox="0 0 400 290" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="(2)の立体にA・E・Pを通るたての面を足す。左に落ちるのは頂点P、底面が台形FERTの四角すい">
+<polygon points="145.3,15.3 145.3,159.3 128,214 128,70" fill="#dbe9ff" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 2" opacity="0.7"/>
+<polygon points="145.3,87.3 56,190 128,214 244.6,186.6 289.3,135.3" fill="none" stroke="#222" stroke-width="1.2" stroke-dasharray="3 3"/>
+<polygon points="56,214 145.3,159.3 145.3,87.3 56,190" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.8" opacity="0.9"/>
+<polygon points="56,70 200,70 200,214 56,214" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="56,70 145.3,15.3 289.3,15.3 200,70" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="289.3,15.3 289.3,159.3 200,214" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="145.3,15.3 145.3,159.3 289.3,159.3" fill="none" stroke="#222" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="145.3" y1="159.3" x2="56" y2="214" stroke="#222" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="128" y1="214" x2="56" y2="190" stroke="#d32f2f" stroke-width="1.6"/>
+<line x1="128" y1="214" x2="145.3" y2="87.3" stroke="#d32f2f" stroke-width="1.6"/>
+<line x1="128" y1="214" x2="145.3" y2="159.3" stroke="#d32f2f" stroke-width="1.4" stroke-dasharray="4 2"/>
+<circle cx="128" cy="214" r="3.5" fill="#d32f2f"/>
+<circle cx="244.6" cy="186.6" r="3" fill="#222"/>
+<circle cx="145.3" cy="87.3" r="3" fill="#222"/>
+<circle cx="56" cy="190" r="3" fill="#222"/>
+<circle cx="289.3" cy="135.3" r="3" fill="#222"/>
+<text x="140" y="12" font-size="12" fill="#222" text-anchor="end">A</text>
+<text x="295" y="12" font-size="12" fill="#222">D</text>
+<text x="48" y="66" font-size="12" fill="#222" text-anchor="end">B</text>
+<text x="206" y="66" font-size="12" fill="#222">C</text>
+<text x="150" y="172" font-size="12" fill="#222">E</text>
+<text x="295" y="164" font-size="12" fill="#222">H</text>
+<text x="52" y="228" font-size="12" fill="#222" text-anchor="end">F</text>
+<text x="206" y="228" font-size="12" fill="#222">G</text>
+<text x="128" y="230" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle">P</text>
+<text x="250" y="198" font-size="12" fill="#222">Q</text>
+<text x="152" y="88" font-size="12" fill="#222">R</text>
+<text x="46" y="186" font-size="12" fill="#222" text-anchor="end">T</text>
+<text x="296" y="132" font-size="12" fill="#222">V</text>
+<text x="40" y="206" font-size="11" fill="#222">1</text>
+<text x="152" y="128" font-size="11" fill="#222">3</text>
+<text x="96" y="176" font-size="11" fill="#222">6</text>
+<text x="92" y="228" font-size="11" fill="#222" text-anchor="middle">3</text>
+<text x="200" y="268" font-size="12" fill="#222" text-anchor="middle">四角すい P-FERT：台形 (1＋3)×6÷2＝12、高さ FP＝3 → 12×3÷3＝12</text>
+<text x="200" y="284" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">37.5−12＝25.5</text>
+</svg></li>
+    <li>台形FERTの面積。(1＋3)×6÷2＝12。</li>
+    <li>四角すいP-FERTの体積。12×3÷3＝12。</li>
+    <li><b>37.5−12＝25.5</b>。</li>
+    <li>たしかめ（SAPIXの別解）。Sから見た三角すいR-ESUのうち、Pから右の三角すいR-EPUは、底面が SU:PU＝9:6＝3:2 だから 40.5×2/3＝27。そこから右奥の小さい三角すい1.5をひいて 27−1.5＝25.5。同じになる。</li>
+  </ol>
+  <div class="ans">答え：25.5</div>
+  <div class="miss">今回：無記入 ✓（大問5は10点）。答えの欄は空らん。見直すところ：(2)の図に、辺AEを通るたての面を1本足す（部品の形を直す）。落ちる立体は台形FERTが底面の四角すい。(2)の37.5から12をひくだけで答えに届く。</div>
+  <div class="tip">コツ：「さらに切る」は、前の問いの立体のどこが落ちるかを図に色で置く。落ちる形が「すい」なら 底面積×高さ÷3。台形が底面でも同じ式でよい。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)</span> 太郎が駅に着くのは出発から何分後か <span class="type">B・5点｜速さ（真ん中＝半分の道のり）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>一本杉は学校と駅のちょうど真ん中</b>」「20分後に…1回目」「1回目から34分後に一本杉の前で2回目」。「真ん中」は「半分・半分」に直して線分図に置く → 太郎は 学校→駅→一本杉 で<b>半分3つ分を 20＋34＝54分</b>。半分1つが18分と見えたら、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>速さが一定なら、同じ道のりには同じ時間がかかる。半分の道のりが18分なら、駅までは 18×2。</li>
+    <li>2回目のすれ違いは「1回目から34分後」。出発からは 20＋34＝54分。時刻はいつも出発からの分数に直して書く。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>線分図に太郎の道を描く。学校→一本杉→駅→一本杉。半分の道のりが3つ。
+<svg id="q6_1_fig" viewBox="0 0 400 170" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="学校・一本杉・駅の線分図。太郎は学校から駅へ行き一本杉へもどる。半分の道のり3つ分で54分">
+<line x1="40" y1="50" x2="360" y2="50" stroke="#222" stroke-width="1.6"/>
+<line x1="40" y1="42" x2="40" y2="58" stroke="#222" stroke-width="1.6"/>
+<line x1="200" y1="42" x2="200" y2="58" stroke="#222" stroke-width="1.6"/>
+<line x1="360" y1="42" x2="360" y2="58" stroke="#222" stroke-width="1.6"/>
+<text x="40" y="34" font-size="12" fill="#222" text-anchor="middle">学校</text>
+<text x="200" y="34" font-size="12" fill="#222" text-anchor="middle">一本杉</text>
+<text x="360" y="34" font-size="12" fill="#222" text-anchor="middle">駅</text>
+<text x="120" y="66" font-size="11" fill="#1565c0" text-anchor="middle">半分</text>
+<text x="280" y="66" font-size="11" fill="#1565c0" text-anchor="middle">半分</text>
+<line x1="40" y1="88" x2="196" y2="88" stroke="#222" stroke-width="1.6"/>
+<polygon points="196,84 204,88 196,92" fill="#222"/>
+<line x1="204" y1="88" x2="356" y2="88" stroke="#222" stroke-width="1.6"/>
+<polygon points="356,84 364,88 356,92" fill="#222"/>
+<line x1="360" y1="116" x2="208" y2="116" stroke="#222" stroke-width="1.6"/>
+<polygon points="208,112 200,116 208,120" fill="#222"/>
+<text x="30" y="92" font-size="11" fill="#222" text-anchor="end">太郎</text>
+<text x="120" y="104" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="middle">18分</text>
+<text x="280" y="104" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="middle">18分</text>
+<text x="280" y="132" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="middle">18分</text>
+<circle cx="218" cy="88" r="3.5" fill="#d32f2f"/>
+<text x="218" y="80" font-size="10" fill="#d32f2f" text-anchor="middle">①20分</text>
+<circle cx="200" cy="116" r="3.5" fill="#d32f2f"/>
+<text x="192" y="132" font-size="10" fill="#d32f2f" text-anchor="end">②54分（一本杉）</text>
+<text x="200" y="160" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">半分3つ分＝20＋34＝54分　→　半分1つ＝18分　→　駅は 18×2＝36分後</text>
+</svg></li>
+    <li>出発から2回目のすれ違いまで 20＋34＝54分。</li>
+    <li>半分1つ分は 54÷3＝18分。</li>
+    <li>駅までは半分2つ分。<b>18×2＝36分後</b>。SAPIXの式なら 54×2/3＝36。</li>
+    <li>たしかめ。1回目の20分は、一本杉を2分すぎた所。「一本杉と駅の間」に合う。</li>
+  </ol>
+  <div class="ans">答え：36</div>
+  <div class="miss">今回：34 ✓（正解 36）。用紙は「34」。見直すところ：「ちょうど真ん中」を「半分・半分」に直して線分図に置く（部品の形を直す）。太郎の道のりは半分3つ分＝54分。そこから18分が出る。</div>
+  <div class="tip">コツ：「真ん中」「2等分」と見たら、同じ長さの区切りを線分図に置く。2人がすれ違う場所が区切りの上（一本杉の前）なら、時間もその区切りで分けられる。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)</span> 太郎と花子の歩く速さの比 <span class="type">B・5点｜速さ（同じ道のりは時間の逆比）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同時に出発</b>」「20分後に…1回目にすれ違い」「速さの比」。(1)の36分をいっしょに線分図に置く → 1回目のすれ違い点〜駅を、<b>太郎は36−20＝16分、花子は20分</b>で歩いた。同じ道のりだから、速さは時間の逆比。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ道のりを進むとき、速さの比は時間の逆比。16分と20分なら 20:16＝5:4。たとえば160mを16分なら分速10m、20分なら分速8m。10:8＝5:4。</li>
+    <li>花子は駅を出て、1回目のすれ違いまで20分歩き続けている（休むのは公園に着いてから）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>線分図に「すれ違い点〜駅」を2人ぶん描く。
+<svg id="q6_2_fig" viewBox="0 0 400 150" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="学校と駅の線分図。1回目のすれ違い点から駅まで、太郎は16分、花子は20分">
+<line x1="40" y1="50" x2="360" y2="50" stroke="#222" stroke-width="1.6"/>
+<line x1="40" y1="42" x2="40" y2="58" stroke="#222" stroke-width="1.6"/>
+<line x1="360" y1="42" x2="360" y2="58" stroke="#222" stroke-width="1.6"/>
+<line x1="218" y1="42" x2="218" y2="58" stroke="#d32f2f" stroke-width="1.6"/>
+<text x="40" y="34" font-size="12" fill="#222" text-anchor="middle">学校</text>
+<text x="360" y="34" font-size="12" fill="#222" text-anchor="middle">駅</text>
+<text x="218" y="34" font-size="11" fill="#d32f2f" text-anchor="middle">1回目（20分）</text>
+<line x1="40" y1="82" x2="214" y2="82" stroke="#222" stroke-width="1.6"/>
+<polygon points="214,78 222,82 214,86" fill="#222"/>
+<line x1="222" y1="82" x2="356" y2="82" stroke="#222" stroke-width="1.6"/>
+<polygon points="356,78 364,82 356,86" fill="#222"/>
+<text x="30" y="86" font-size="11" fill="#222" text-anchor="end">太郎</text>
+<text x="129" y="98" font-size="11" fill="#222" text-anchor="middle">20分</text>
+<text x="289" y="98" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="middle">36−20＝16分</text>
+<line x1="360" y1="112" x2="226" y2="112" stroke="#222" stroke-width="1.6" stroke-dasharray="5 3"/>
+<polygon points="226,108 218,112 226,116" fill="#222"/>
+<text x="372" y="116" font-size="11" fill="#222">花子</text>
+<text x="289" y="128" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="middle">20分</text>
+<text x="200" y="146" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">同じ道のり：太郎16分・花子20分　→　速さは逆比 20：16＝5：4</text>
+</svg></li>
+    <li>太郎は、すれ違い点から駅まで 36−20＝16分。</li>
+    <li>花子は、駅からすれ違い点まで20分。</li>
+    <li>同じ道のりだから、速さの比は時間の逆比。<b>太郎:花子＝20:16＝5:4</b>。SAPIXの式なら 1/16:1/20＝5:4。</li>
+  </ol>
+  <div class="ans">答え：5:4</div>
+  <div class="miss">今回：10:7 ✓（正解 5:4）。用紙は「10:7」。見直すところ：同じ道のり（すれ違い点〜駅）を、太郎16分・花子20分と線分図に書く（部品を図に置く）。速さは時間の逆比 20:16。(1)が36分に直れば、ここも直る。</div>
+  <div class="tip">コツ：「速さの比」は、同じ道のりを2人が何分で進んだかを1か所さがす。時間が出れば逆比で終わる。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (3)</span> 学校から駅までの距離 <span class="type">B・6点｜速さ（○で道のりを表して900mに合わせる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>学校から公園までの距離は900m</b>」「11分30秒休み」。休みは<b>11.5分</b>に直して書く（30秒＝0.5分）→ 太郎を分速⑤、花子を分速④とおき、花子の54分を「駅→一本杉」「一本杉→公園」「休み」「公園→一本杉」の4つに分ける。学校〜公園が○いくつ分か出れば、900mから1が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>速さの比 5:4 は、分速⑤・分速④と○で書く。道のり＝速さ×時間だから、太郎が18分歩けば ⑤×18＝90。</li>
+    <li>花子は駅から公園へ行き、11.5分休んで、公園から一本杉へもどる。2回目のすれ違い（54分）は一本杉の前。<b>一本杉〜公園の往復</b>が2回入る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>線分図に○の道のりと花子の時間を書く。
+<svg id="q6_3_fig" viewBox="0 0 400 200" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="学校・公園・一本杉・駅の線分図。学校から一本杉は90、一本杉から公園は40、学校から公園は50で900m。花子は駅から一本杉22.5分、一本杉から公園10分、休み11.5分、公園から一本杉10分">
+<line x1="40" y1="50" x2="360" y2="50" stroke="#222" stroke-width="1.6"/>
+<line x1="40" y1="42" x2="40" y2="58" stroke="#222" stroke-width="1.6"/>
+<line x1="129" y1="42" x2="129" y2="58" stroke="#222" stroke-width="1.6"/>
+<line x1="200" y1="42" x2="200" y2="58" stroke="#222" stroke-width="1.6"/>
+<line x1="360" y1="42" x2="360" y2="58" stroke="#222" stroke-width="1.6"/>
+<text x="40" y="34" font-size="12" fill="#222" text-anchor="middle">学校</text>
+<text x="129" y="34" font-size="12" fill="#222" text-anchor="middle">公園</text>
+<text x="200" y="34" font-size="12" fill="#222" text-anchor="middle">一本杉</text>
+<text x="360" y="34" font-size="12" fill="#222" text-anchor="middle">駅</text>
+<text x="84" y="66" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="middle">900m＝50</text>
+<text x="164" y="66" font-size="11" fill="#222" text-anchor="middle">40</text>
+<text x="280" y="66" font-size="11" fill="#222" text-anchor="middle">⑤×18＝90</text>
+<text x="120" y="80" font-size="10" fill="#1565c0" text-anchor="middle">学校〜一本杉も 90</text>
+<line x1="360" y1="100" x2="208" y2="100" stroke="#222" stroke-width="1.6" stroke-dasharray="5 3"/>
+<polygon points="208,96 200,100 208,104" fill="#222"/>
+<text x="372" y="104" font-size="11" fill="#222">花子</text>
+<text x="280" y="114" font-size="11" fill="#222" text-anchor="middle">90÷4＝22.5分</text>
+<line x1="200" y1="126" x2="137" y2="126" stroke="#222" stroke-width="1.6" stroke-dasharray="5 3"/>
+<polygon points="137,122 129,126 137,130" fill="#222"/>
+<text x="164" y="140" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="middle">□分</text>
+<text x="100" y="140" font-size="10" fill="#222" text-anchor="middle">休み11.5分</text>
+<line x1="129" y1="152" x2="192" y2="152" stroke="#222" stroke-width="1.6" stroke-dasharray="5 3"/>
+<polygon points="192,148 200,152 192,156" fill="#222"/>
+<text x="164" y="166" font-size="11" fill="#d32f2f" font-weight="bold" text-anchor="middle">□分</text>
+<text x="216" y="156" font-size="10" fill="#222">②54分</text>
+<text x="200" y="190" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">22.5＋□＋11.5＋□＝54　→　□＝10分　→　一本杉〜公園＝④×10＝40</text>
+</svg></li>
+    <li>太郎は分速⑤で、半分の道のりを18分。学校〜一本杉＝駅〜一本杉＝⑤×18＝90。</li>
+    <li>花子は分速④。駅〜一本杉の90を 90÷4＝22.5分。</li>
+    <li>花子の54分を分ける。22.5＋□＋11.5＋□＝54。□×2＝20、□＝10分。一本杉〜公園＝④×10＝40。</li>
+    <li>学校〜公園＝90−40＝50。これが900m。1は 900÷50＝18m。</li>
+    <li>学校〜駅は 90×2＝180。<b>18×180＝3240</b>（m）。</li>
+    <li>たしかめ（SAPIXの式）。学校〜駅＝(⑤＋④)×20＝180。公園〜駅の往復＝⑤×34＋④×22.5＝260 で片道130。180−130＝50 が900m。900×180/50＝3240。同じになる。</li>
+  </ol>
+  <div class="ans">答え：3240</div>
+  <div class="miss">今回：無記入（採点の印なし・大問6は0点）。見直すところ：(1)(2)が直ってから、太郎を分速⑤・花子を分速④と置いて、⑤×18＝90 を線分図に書く（部品を図に置く）。花子の54分を4つに分けると□＝10分が出る。</div>
+  <div class="tip">コツ：距離を聞かれて実際の数が1つ（900m）しかないときは、道のりを○で表して「900mが○いくつ分」に直す。休みは分に直してから時間の式に入れる。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">5〜6</span> まとめ（大問5・6でくり返し出た入口）</h2>
+  <ul>
+    <li>立体の切断は「延長線を図に置く」から始める。SとUができれば、大きい三角すいから小さい三角すいをひくだけ。「さらに切る」は落ちる形に色をつける。</li>
+    <li>速さは「真ん中」「同時」「休み11分30秒」を、半分・同じ道のり・11.5分に直して線分図に置く。同じ道のりが見つかれば速さは時間の逆比。</li>
+    <li>大問6は3問とも(1)の18分にかかっている。「半分3つ分＝54分」を出す練習を優先する。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="7"><h1 class="dtitle">大問7（3でわると2あまり4でわると3あまる数・個数と数字の2の個数）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">7</span> この回の全体像（担当の大問） <span class="type">A 3点／B 15点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>7 (1)①</td><td>1〜2027で「3でわると2あまり、4でわると3あまる」数の個数</td><td>A 3</td><td>「あまりがあと1で割り切れる」→ 12の倍数−1。(2027＋1)÷12</td></tr>
+    <tr><td>7 (1)②</td><td>そのうち一の位が7の数の個数</td><td>B 3</td><td>11, 23, 35, 47, 59, … の一の位だけ書く → 1, 3, 5, 7, 9 の5個で1周</td></tr>
+    <tr><td>7 (2)①</td><td>十の位が2の数を小さい方から3個</td><td>B 3</td><td>12ずつたして表に書き出す。3個見つかるまで（23, 227, 323）</td></tr>
+    <tr><td>7 (2)②</td><td>十の位が2の数の個数</td><td>B 3</td><td>(2)①の表で 311＝11＋300 → 300（＝12×25）ごとに下2けたがくり返す</td></tr>
+    <tr><td>7 (3)</td><td>全部書き出したとき、数字の2は何個</td><td>B 6</td><td>「22は2個」の例 → 一の位・十の位・百の位・千の位に分けて数える。十の位は(2)②の14個</td></tr>
+  </table>
+  <p>取り方: <b>Aの(1)①は「12の倍数−1」で3点を先に</b>（今回○）。Bは、(2)①の表を書けば3点（今回○）。その表を見て「300ごとに同じ」に気づけると、(2)②と(3)の9点が続けて動く。今回は大問7が6点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">7 (1)①</span> 3でわると2あまり、4でわると3あまる数の個数 <span class="type">A・3点｜あまりの言いかえ（公倍数−1）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3で割ると2あまり</b>」「<b>4で割ると3あまる</b>」「1から2027まで」。あまりはちがうが、どちらも「あと1あれば割り切れる」→ <b>「12の倍数−1」に直して書く</b>。あとは2027までに12の倍数−1が何個あるかを数えるだけになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3でわると2あまる数は、1をたすと3でわり切れる。たとえば 11＋1＝12、23＋1＝24。だから「3の倍数−1」。4でわると3あまる数も同じで「4の倍数−1」。</li>
+    <li>3の倍数でも4の倍数でもある数は、12の倍数（3と4の最小公倍数）。だから両方に当てはまる数は<b>「12の倍数−1」</b>。11, 23, 35, …。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「あと1で割り切れる」を式に直す。
+<pre class="fig">3でわると2あまる → 3の倍数−1
+4でわると3あまる → 4の倍数−1
+両方に当てはまる → 12の倍数−1 ＝ 11, 23, 35, 47, …</pre></li>
+    <li>2027に1をたすと、12の倍数になるか調べる。2027＋1＝2028。2028÷12＝169。わり切れる。</li>
+    <li>12の倍数−1は、12×1−1 から 12×169−1（＝2027）まで。<b>169個</b>。</li>
+    <li>たしかめ。2027÷3＝675あまり2、2027÷4＝506あまり3。2027自身も仲間に入っている。</li>
+  </ol>
+  <div class="ans">答え：169</div>
+  <div class="miss">今回：169 ○</div>
+  <div class="tip">コツ：「aでわるとa−1あまり、bでわるとb−1あまる」は、どちらも「不足が1」。公倍数−1に直すと、数えるのは公倍数の個数と同じになる。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">7 (1)②</span> そのうち一の位が7の数の個数 <span class="type">B・3点｜一の位の周期</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>一の位の数字が7</b>」と、①で出した「12の倍数−1は169個」。11, 23, 35, 47, 59, 71, … の<b>一の位だけを横に書く</b> → 1, 3, 5, 7, 9 の5個で1周する。169個を5個ずつに区切れば、7は1周に1回と分かる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>12ずつたすと、一の位は2ずつ増える。11→23→35→47→59 で一の位は 1→3→5→7→9。次の71で1にもどる。だから<b>一の位は5個で1周</b>。</li>
+    <li>周期の数え方は「全部の個数÷1周の個数」。あまりが出たら、あまりの分に7が入るかを表で見る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>①の数を小さい順に書き、一の位を下にならべる。
+<table>
+  <tr><th>何番目</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>…</td></tr>
+  <tr><th>数</th><td>11</td><td>23</td><td>35</td><td>47</td><td>59</td><td>71</td><td>83</td><td>95</td><td>107</td><td>119</td><td>…</td></tr>
+  <tr><th>一の位</th><td>1</td><td>3</td><td>5</td><td><b>7</b></td><td>9</td><td>1</td><td>3</td><td>5</td><td><b>7</b></td><td>9</td><td>…</td></tr>
+</table>
+1周＝5個。7は各周の4番目に1回。</li>
+    <li>169個を5個ずつに区切る。169÷5＝33あまり4。33周と、あと4個。</li>
+    <li>33周で7は33個。あまりの4個は一の位が 1, 3, 5, 7。4番目に7が入る。</li>
+    <li><b>33＋1＝34個</b>。</li>
+    <li>たしかめ。一の位が7の数は 47 から 60 ずつ増える（12×5＝60）。47＋60×33＝2027。ちょうど2027で終わり、47を入れて34個。</li>
+  </ol>
+  <div class="ans">答え：34</div>
+  <div class="miss">今回：18 ✓（正解 34）。用紙は「18」。見直すところ：11, 23, 35, 47, 59 の一の位だけを表に書く（部品を図に置く）。1, 3, 5, 7, 9 の5個で1周と見えれば、169÷5 で出る。あまりの4個に7が入るかを表で確かめる。</div>
+  <div class="tip">コツ：「一の位が○」と聞かれたら、数そのものでなく一の位だけをならべる。12ずつ増えるなら一の位は2ずつ増えるので、5個で1周になる。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">7 (2)①</span> 十の位が2の数を小さい方から3個 <span class="type">B・3点｜書き出し（12ずつの表）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>十の位の数字が2</b>」「小さい方から順に3個」。答え方の指示に丸 → 3個見つかるまで、<b>11から12ずつたして表に書き出す</b>。20台・120台・220台・320台に入るかどうかだけ見る。5個ずつ横にならべると、あとの(2)②で使える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>十の位が2の数は、20〜29、120〜129、220〜229、320〜329 のどれかに入る。12ずつたす数は<b>10個の区間に1個入るか入らないか</b>なので、書いて確かめるのがいちばん早い。</li>
+    <li>書き出しは、1行に5個ずつ。行の終わり（59, 119, 179, 239, 299）が見やすく、次の行の頭がすぐ出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>11から12ずつたして、1行5個の表に書く。十の位が2の数に丸をつける。
+<table>
+  <tr><td>11</td><td><b>23</b></td><td>35</td><td>47</td><td>59</td></tr>
+  <tr><td>71</td><td>83</td><td>95</td><td>107</td><td>119</td></tr>
+  <tr><td>131</td><td>143</td><td>155</td><td>167</td><td>179</td></tr>
+  <tr><td>191</td><td>203</td><td>215</td><td><b>227</b></td><td>239</td></tr>
+  <tr><td>251</td><td>263</td><td>275</td><td>287</td><td>299</td></tr>
+  <tr><td>311</td><td><b>323</b></td><td>…</td><td></td><td></td></tr>
+</table>
+3個見つかったら終わり。</li>
+    <li>20台は23。120台は 119 と 131 の間で、無い。220台は227。320台は323。</li>
+    <li>小さい方から <b>23, 227, 323</b>。</li>
+  </ol>
+  <div class="ans">答え：23, 227, 323</div>
+  <div class="miss">今回：23, 227, 323 ○</div>
+  <div class="tip">コツ：「小さい方から3個」は、きれいな式より書き出しが確実。1行5個の表にしておくと、311＝11＋300 のように「もどる」ところが目に入る。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">7 (2)②</span> 十の位が2の数の個数 <span class="type">B・3点｜300ごとの周期（下2けた）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>十の位の数字が2</b>」「何個」と、(2)①の表。表の6行目 311, 323 は 11＋300, 23＋300 → <b>300ごとに下2けたが同じ数が並ぶ</b>と書く。1周は300÷12＝25個。1周の中に十の位が2の数は 23 と 227 の2個。あとは169個を25個ずつに区切る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>300は12の倍数（12×25）。だから12の倍数−1 に300をたしても、やはり12の倍数−1。23＋300＝323、227＋300＝527。<b>下2けたは変わらない</b>。</li>
+    <li>1周＝300の中に12の倍数−1は25個（11, 23, …, 287, 299）。その下2けた「11, 23, …, 87, 99」がくり返す。十の位が2なのは下2けたが 23 と 27 のとき、つまり 23 と 227。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>169個を25個ずつに区切る。169÷25＝6あまり19。6周と、あと19個。</li>
+    <li>周ごとに、十の位が2の数を表に書く。
+<table>
+  <tr><th>何周目</th><th>数の範囲</th><th>十の位が2の数</th><th>個数</th></tr>
+  <tr><td>1周目</td><td>11〜299</td><td>23, 227</td><td>2</td></tr>
+  <tr><td>2周目</td><td>311〜599</td><td>323, 527</td><td>2</td></tr>
+  <tr><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+  <tr><td>6周目</td><td>1511〜1799</td><td>1523, 1727</td><td>2</td></tr>
+  <tr><td>あまり19個</td><td>1811〜2027</td><td>1823（2番目）, <b>2027（19番目）</b></td><td>2</td></tr>
+</table>
+19番目が2027であることは、1周目の19番目が227（十の位2）と同じ場所だから分かる。</li>
+    <li>6周で 2×6＝12個。あまりの19個に 1823 と 2027 の2個。</li>
+    <li><b>12＋2＝14個</b>。</li>
+  </ol>
+  <div class="ans">答え：14</div>
+  <div class="miss">今回：18 ✓（正解 14）。用紙は「18」。見直すところ：(2)①の表で「311＝11＋300」を見つけて、300ごとの周期に直す（部品の形を直す）。1周25個に十の位が2は2個。169÷25＝6あまり19 のあまり19個に 1823 と 2027 が入るかを、表の何番目かで確かめる。</div>
+  <div class="tip">コツ：「12ずつ増える数の下2けた」は、12×25＝300 で1周。300をたしても下2けたは同じ、と気づけば、大きい数まで表を書かずにすむ。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">7 (3)</span> 全部書き出したとき数字の2は何個 <span class="type">B・6点｜けたごとに数える</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>数字の2は何個</b>」と、例の「<b>22は2個と数える</b>」。同じ数の中の2も別々に数える → <b>一の位・十の位・百の位・千の位に分けて</b>、それぞれ「その位が2の数」を数えて表に置く。十の位は(2)②の14個がそのまま使える。(2)②まで出ていれば、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「数字の2の個数」は、数の個数ではなく、書いた2の個数。2027 なら千の位と十の位で2個。だから<b>位ごとに数えてたす</b>。</li>
+    <li>百の位が2になるのは 200〜299 と 1200〜1299 の2か所（2200以上は2027をこえる）。千の位が2になるのは 2000〜2027。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>位ごとに、さがす範囲と当てはまる数を表に書く。
+<table>
+  <tr><th>位</th><th>さがす範囲</th><th>当てはまる数</th><th>個数</th></tr>
+  <tr><td>一の位</td><td>全部</td><td>一の位は 1, 3, 5, 7, 9 だけ。2は出ない</td><td>0</td></tr>
+  <tr><td>十の位</td><td>全部</td><td>(2)②より</td><td><b>14</b></td></tr>
+  <tr><td>百の位</td><td>200〜299</td><td>203, 215, 227, 239, 251, 263, 275, 287, 299</td><td>9</td></tr>
+  <tr><td>百の位</td><td>1200〜1299</td><td>1211, 1223, 1235, 1247, 1259, 1271, 1283, 1295</td><td>8</td></tr>
+  <tr><td>千の位</td><td>2000〜2027</td><td>2003, 2015, 2027</td><td>3</td></tr>
+</table></li>
+    <li>一の位。12の倍数−1 は全部奇数。一の位が2になることはない。0個。</li>
+    <li>十の位。(2)②で出した 14個。</li>
+    <li>百の位。200〜299 は (2)①の表の4行目・5行目から 203〜299 の9個。1200〜1299 は 1200＝300×4 だから、表の 11〜95 に1200をたした 1211〜1295 の8個。9＋8＝17個。</li>
+    <li>千の位。2027から12ずつ引く。2027, 2015, 2003。次は1991で2000より小さい。3個。</li>
+    <li><b>14＋17＋3＝34個</b>。2027の2は、十の位と千の位で1個ずつ数えている。</li>
+  </ol>
+  <div class="ans">答え：34</div>
+  <div class="miss">今回：無記入（採点の印なし・大問7は6点）。見直すところ：例の「22は2個」に丸をつけて、一の位・十の位・百の位・千の位の4行の表を先に書く（部品を図に置く）。一の位は0個、十の位は(2)②の14個と埋めれば、残りは百の位と千の位の書き出しだけになる。</div>
+  <div class="tip">コツ：「数字の○は何個」は、位ごとの表を書いてから数える。前の小問（十の位＝(2)②）がそのまま1行に入るのが、この問題の作り。解答一覧の🎥にコベツバの解説動画あり。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">7</span> まとめ（大問7でくり返し出た入口）</h2>
+  <ul>
+    <li>「あまりがあと1で割り切れる」は「公倍数−1」に直す。個数は (2027＋1)÷12 で出る。</li>
+    <li>「一の位が○」「十の位が○」は、数そのものでなく、その位だけを表にならべる。12ずつなら一の位は5個で1周、下2けたは300（12×25）で1周。</li>
+    <li>「数字の2は何個」は、位ごとの表。前の小問の答えが1行に入る。</li>
+  </ul>
+</section>
+</div>
