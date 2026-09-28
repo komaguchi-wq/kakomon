@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>過去問</title>
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
   <header id="app-header">
@@ -66,7 +66,7 @@
   <!-- 拡大ライトボックス -->
   <div id="lightbox" class="lightbox" hidden>
     <button id="lightbox-close" class="lightbox-close">✕ とじる</button>
-    <div class="lightbox-scroll"><img id="lightbox-img" alt="拡大"></div>
+    <div class="lightbox-scroll"><span class="lightbox-wrap"><img id="lightbox-img" alt="拡大"><span class="q-trings" id="lightbox-rings"></span><span class="q-tlabel" id="lightbox-tlabel" hidden></span></span></div>
   </div>
 
   <!-- 解説動画モーダル（算数アプリと同じ: その場で再生＋速度ボタン） -->
@@ -89,7 +89,7 @@
   <div id="print-container"></div>
 
   <script src="kaisetsu_filter.js?v=2"></script>
-  <script src="app.js?v=36"></script>
+  <script src="app.js?v=37"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>

@@ -140,6 +140,25 @@ html, body {
   box-shadow: 0 1px 4px rgba(0,0,0,.06);
 }
 .page-item img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+/* 対象問題モード: 問題ページの左上ラベルと小問番号の赤い丸（位置は qpos/*.json） */
+.page-imgwrap, .lightbox-wrap { position: relative; display: block; }
+.lightbox-wrap { display: inline-block; vertical-align: top; }
+.q-trings { position: absolute; inset: 0; pointer-events: none; display: block; }
+.q-tring { position: absolute; box-sizing: border-box; border: 3px solid #ff3b30; border-radius: 50%; }
+.q-tlabel {
+  position: absolute; left: 1.2%; top: 0.6%; max-width: 92%; pointer-events: none;
+  font-size: 13px; font-weight: 700; line-height: 1.35; color: #ff3b30;
+  background: rgba(255,255,255,.94); border: 1.5px solid #ff3b30; border-radius: 6px; padding: 2px 8px;
+}
+.q-tlabel[hidden] { display: none; }
+.lightbox-wrap .q-tlabel { font-size: 20px; }
+.lightbox-wrap .q-tring { border-width: 4px; }
+.q-target-note {
+  width: 100%; max-width: 880px; font-size: 13px; font-weight: 700; color: #c0392b;
+  background: #fff4f4; border: 1px solid #f1caca; border-radius: 8px; padding: 6px 12px;
+}
+.q-target-note[hidden] { display: none; }
+@media (max-width: 767px) { .q-tring { border-width: 2px; } .q-tlabel { font-size: 11px; } }
 .page-item.clip { overflow: hidden; }  /* 教科範囲だけ見せる（高さはJSが設定） */
 /* 見開き表示（印刷のB4横2面付けと同じ並び。.rtl=国語は右→左） */
 .page-duo {

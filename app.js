@@ -294,7 +294,16 @@ function syncViewTabs() {
 }
 
 // ---- 詳細描画 ----
-function pageImg(p, i, label) {
+// qpage=true（問題ページ）は、対象問題モード用に左上ラベル（.q-tlabel）と赤丸レイヤー（.q-trings）を重ねる
+function pageImg(p, i, label, qpage) {
+  if (qpage) return `
+    <div class="page-item">
+      <div class="page-imgwrap" data-qidx="${i}">
+        <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" data-qidx="${i}" alt="${label}${i + 1}" loading="lazy">
+        <div class="q-trings"></div>
+        <div class="q-tlabel" hidden></div>
+      </div>
+    </div>`;
   return `
     <div class="page-item">
       <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" alt="${label}${i + 1}" loading="lazy">
@@ -305,13 +314,13 @@ function pageImg(p, i, label) {
 // 画面にも2ページずつ横に並べる。rtl=true（国語）はペア内で右→左。
 // landscape:true のページ（学校情報の横長面）は1枚で1行。
 // 縦ページを1枚ずつ横幅いっぱいに出すと拡大されすぎるため（2026-09-07 ユーザー要望）。
-function pagePairsHTML(pages, label, rtl) {
+function pagePairsHTML(pages, label, rtl, qpage) {
   let html = '';
   for (let i = 0; i < pages.length; ) {
-    if (pages[i].landscape) { html += pageImg(pages[i], i, label); i += 1; continue; }
+    if (pages[i].landscape) { html += pageImg(pages[i], i, label, qpage); i += 1; continue; }
     const pair = (i + 1 < pages.length && !pages[i + 1].landscape)
       ? [pages[i], pages[i + 1]] : [pages[i]];
-    const items = pair.map((p, j) => pageImg(p, i + j, label));
+    const items = pair.map((p, j) => pageImg(p, i + j, label, qpage));
     // 1枚だけ余った場合は印刷と同じく読み進む側に寄せ、他方は空白
     if (pair.length === 1) items.push('<div class="page-duo-empty"></div>');
     html += `<div class="page-duo${rtl ? ' rtl' : ''}">${items.join('')}</div>`;
@@ -473,7 +482,8 @@ function renderDetail() {
     const specs = [sub.minutes ? sub.minutes + '分' : '', sub.maxScore ? '満点' + sub.maxScore + '点' : ''].filter(Boolean);
     note.textContent = `${sub.name}${specs.length ? '（' + specs.join('・') + '）' : ''}問題と解答用紙です。画像タップで拡大。`;
     html += `<h3 class="section-head">問題</h3>`;
-    html += pagePairsHTML(sub.questionPages, '問題', sub.rtl);
+    html += `<div class="q-target-note" id="q-target-note" hidden></div>`;
+    html += pagePairsHTML(sub.questionPages, '問題', sub.rtl, true);
     if (sub.sheetPages && sub.sheetPages.length) {
       html += `<h3 class="section-head">解答用紙</h3>`;
       html += sub.sheetPages.map((p, i) => pageImg(p, i, '解答用紙')).join('');
@@ -509,6 +519,7 @@ function renderDetail() {
   bindGrading();
   renderPrintButtons();
   loadProposal();
+  if (state.view === 'question') { updateTargetOverlays(); loadQpos().then((r) => { if (r) updateTargetOverlays(); }); }
 }
 
 // ---- AI正誤提案（proposals/{school}/{exam}/{subject}.json: 解答用紙の赤○✓を読み取った○×）----
@@ -629,7 +640,7 @@ function renderPrintButtons() {
     g.innerHTML = `
       <button class="print-btn" id="pr-q">🖨 問題（B4横 2面）</button>
       <button class="print-btn" id="pr-s">🖨 解答用紙（B4拡大）</button>`;
-    $('#pr-q').addEventListener('click', (e) => printDuo(state.subject.questionPages, state.subject.rtl, e.currentTarget));
+    $('#pr-q').addEventListener('click', async (e) => { const b = e.currentTarget; await loadQpos(); printDuo(state.subject.questionPages, state.subject.rtl, b, true); });
     $('#pr-s').addEventListener('click', () => printSheets(state.subject.sheetPages));
   } else if (state.view === 'kaisetsu') {
     // ★2026-09-24 対象問題（上のモードバー）を選んでいるときは「対象だけ」と「全体」の2本、全ての問題なら「全体」だけ
@@ -739,6 +750,129 @@ function refreshTargetMarks() {
     el.hidden = !target;
     if (target) el.textContent = `対象 ${target.size} / ${qs.length} 問（${TARGET_MODE_LABEL[mode]}）`;
   }
+  updateTargetOverlays();
+}
+
+// ---- 対象問題を問題ページの上に示す（★2026-09-28 他アプリと同じ: 左上に対象番号＋小問番号に赤い丸）----
+// 位置は qpos/{school}/{exam}/{subject}.json（scripts/kakomon/kakomon_qpos.py が OCR で作る）。
+//   subs[q]   = {p: ページ添字, x, y, rx, ry}（丸の中心と半径。ページの幅・高さに対する比）
+//   daimons[d]= 大問の見出し（小問の位置が取れなかったときは見出しに丸）
+//   pageOf[q] = 位置は無いがページだけ分かる小問（ラベルだけ）
+//   after[q]  = 同じ大問の前の小問があるページ（その後ろにある＝ラベルに「この後」と出す）
+// どれも無い小問は、問題の上の「ページ不明の対象」に出す（誤った場所は囲まない）。
+const QPOS_V = 1;   // qpos を作り直したら+1
+const _qposCache = {};
+function qposKey() {
+  return (state.school && state.exam && state.subject) ? `${state.school.id}/${state.exam.id}/${state.subject.id}` : '';
+}
+async function loadQpos() {
+  const key = qposKey();
+  if (!key) return null;
+  if (key in _qposCache) return _qposCache[key];
+  _qposCache[key] = null;
+  try {
+    const r = await fetch(`qpos/${key}.json?v=${QPOS_V}`);
+    if (r.ok) _qposCache[key] = await r.json();
+  } catch (e) { console.warn('qpos 読み込み失敗', e); }
+  return qposKey() === key ? _qposCache[key] : null;
+}
+// 対象小問 → ページ（分からなければ null）と丸
+function targetPlacement(q) {
+  const qp = _qposCache[qposKey()];
+  if (!qp) return { page: null, ring: null };
+  const s = qp.subs && qp.subs[q];
+  if (s) return { page: s.p, ring: s };
+  const d = qp.daimons && qp.daimons[daimonOf(q)];
+  const po = qp.pageOf ? qp.pageOf[q] : undefined;
+  if (po != null) return { page: po, ring: (d && d.p === po) ? d : null };
+  const af = qp.after ? qp.after[q] : undefined;   // 前の小問があるページ「以降」（このページか次のページ）
+  if (af != null) return { page: af, ring: null, after: true };
+  if (d) return { page: d.p, ring: d };
+  return { page: null, ring: null };
+}
+// 対象の小問を「1-(1),(2)　/　2-問3」の形に（同じ大問はまとめる）
+function targetLabelText(list) {
+  const runs = [];
+  for (const q of list) {
+    const d = daimonOf(q);
+    const sub = d === q ? '' : subLabelOf(q, d);
+    const last = runs[runs.length - 1];
+    if (last && last.d === d) last.subs.push(sub);
+    else runs.push({ d, subs: [sub] });
+  }
+  return runs.map((r) => { const ss = r.subs.filter(Boolean); return ss.length ? `${r.d}-${ss.join(',')}` : r.d; }).join('　/　');
+}
+function targetMarksForPage(idx) {
+  const mode = targetMode();
+  const target = state.subject ? targetIdsForMode(mode) : null;
+  if (!target) return null;
+  const list = [], later = [], rings = [], seen = new Set();
+  for (const q of state.subject.questions || []) {
+    if (!target.has(q)) continue;
+    const pl = targetPlacement(q);
+    if (pl.page !== idx) continue;
+    if (pl.after) { later.push(q); continue; }
+    list.push(q);
+    if (pl.ring) {
+      const k = `${pl.ring.x},${pl.ring.y}`;
+      if (!seen.has(k)) { seen.add(k); rings.push(pl.ring); }
+    }
+  }
+  let text = list.length ? '対象 ' + targetLabelText(list) : '';
+  if (later.length) text += `${text ? '　' : '対象 '}（この後 ${targetLabelText(later)}）`;
+  return { text, rings };
+}
+function ringsHTML(rings) {
+  return rings.map((r) =>
+    `<span class="q-tring" style="left:${((r.x - r.rx) * 100).toFixed(2)}%;top:${((r.y - r.ry) * 100).toFixed(2)}%;width:${(r.rx * 200).toFixed(2)}%;height:${(r.ry * 200).toFixed(2)}%"></span>`).join('');
+}
+function updateTargetOverlays() {
+  const note = document.getElementById('q-target-note');
+  if (!note || !state.subject) return;
+  document.querySelectorAll('#page-stack .page-imgwrap').forEach((w) => {
+    const m = targetMarksForPage(parseInt(w.dataset.qidx, 10));
+    const lb = w.querySelector('.q-tlabel');
+    lb.hidden = !(m && m.text);
+    lb.textContent = m ? m.text : '';
+    w.querySelector('.q-trings').innerHTML = m ? ringsHTML(m.rings) : '';
+  });
+  const mode = targetMode();
+  const target = targetIdsForMode(mode);
+  const lost = target ? (state.subject.questions || []).filter((q) => target.has(q) && targetPlacement(q).page == null) : [];
+  note.hidden = !target;
+  if (target) {
+    note.textContent = !target.size ? `対象の問題はありません（${TARGET_MODE_LABEL[mode]}）`
+      : lost.length ? `対象（ページが決められない問題）: ${targetLabelText(lost)}`
+      : `対象 ${target.size} 問（${TARGET_MODE_LABEL[mode]}）は、各ページの左上の番号と赤い丸で示しています`;
+  }
+}
+// 印刷用: canvas に左上ラベルと赤丸を焼き込む（x0,y0,w,h = そのページを描いた範囲）
+function drawTargetMarks(ctx, idx, x0, y0, w, h) {
+  const m = targetMarksForPage(idx);
+  if (!m || (!m.text && !m.rings.length)) return;
+  ctx.save();
+  ctx.strokeStyle = '#ff3b30';
+  ctx.lineWidth = Math.max(4, Math.round(w * 0.0032));
+  m.rings.forEach((r) => {
+    ctx.beginPath();
+    ctx.ellipse(x0 + r.x * w, y0 + r.y * h, r.rx * w, r.ry * h, 0, 0, Math.PI * 2);
+    ctx.stroke();
+  });
+  if (m.text) {
+    const fs = Math.round(w * 0.021);
+    ctx.font = `700 ${fs}px sans-serif`;
+    ctx.textBaseline = 'middle';
+    const pad = Math.round(fs * 0.45);
+    const tw = Math.min(ctx.measureText(m.text).width, w * 0.9 - pad * 2);
+    const bx = x0 + w * 0.012, by = y0 + h * 0.006, bh = fs + pad * 2;
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(bx, by, tw + pad * 2, bh);
+    ctx.lineWidth = Math.max(2, Math.round(w * 0.0016));
+    ctx.strokeRect(bx, by, tw + pad * 2, bh);
+    ctx.fillStyle = '#ff3b30';
+    ctx.fillText(m.text, bx + pad, by + bh / 2, tw);
+  }
+  ctx.restore();
 }
 const _kaisetsuCache = {};
 function kaisetsuURL() {
@@ -1146,10 +1280,16 @@ function bindGrading() {
 // ---- ライトボックス ----
 function bindLightbox(root) {
   root.querySelectorAll('.page-item img').forEach((img) =>
-    img.addEventListener('click', () => openLightbox(img.dataset.full)));
+    img.addEventListener('click', () => openLightbox(img.dataset.full, img.dataset.qidx)));
 }
-function openLightbox(fullSrc) {
+function openLightbox(fullSrc, qidx) {
   $('#lightbox-img').src = fullSrc;
+  // 問題ページの拡大にも対象の赤丸・ラベルを重ねる
+  const m = (qidx != null && qidx !== '') ? targetMarksForPage(parseInt(qidx, 10)) : null;
+  $('#lightbox-rings').innerHTML = m ? ringsHTML(m.rings) : '';
+  const lb = $('#lightbox-tlabel');
+  lb.hidden = !(m && m.text);
+  lb.textContent = m ? m.text : '';
   $('#lightbox').hidden = false;
   $('.lightbox-scroll').scrollTo(0, 0);
 }
@@ -1356,7 +1496,7 @@ function loadImage(src) {
 // B5×2ページを1枚のB4横画像にcanvas合成する（iPad印刷対策:
 // 2枚並びのCSSレイアウトはiOSが余白/@pageを無視して折り返すため、
 // アプリ側で合成して「1画像=1ページ」の実績ある方式で刷る）
-async function composePair(pair, rtl) {
+async function composePair(pair, rtl, qidx0) {
   const imgs = [];
   for (const p of pair) imgs.push(await loadImage(imgUrl(p.full)));
   const ordered = rtl ? imgs.slice().reverse() : imgs;
@@ -1373,6 +1513,8 @@ async function composePair(pair, rtl) {
   let x = (pair.length === 1 && rtl) ? fullW - widths[0] : 0;
   ordered.forEach((im, i) => {
     ctx.drawImage(im, x, 0, widths[i], h);
+    // ★対象問題モード: 左上ラベルと赤丸を焼き込む（問題の印刷だけ。qidx0=このペアの先頭ページの添字）
+    if (qidx0 != null) drawTargetMarks(ctx, qidx0 + (rtl ? ordered.length - 1 - i : i), x, 0, widths[i], h);
     x += widths[i];
   });
   const url = canvas.toDataURL('image/jpeg', 0.9);
@@ -1381,7 +1523,7 @@ async function composePair(pair, rtl) {
 }
 
 // B4横に2面付け（事前合成方式）。rtl=true（国語）はペア内で右→左に配置
-async function printDuo(pages, rtl, btn) {
+async function printDuo(pages, rtl, btn, withTarget) {
   if (!pages || !pages.length) return;
   const label = btn ? btn.textContent : '';
   try {
@@ -1390,7 +1532,7 @@ async function printDuo(pages, rtl, btn) {
     container.innerHTML = '';
     for (let i = 0; i < pages.length; i += 2) {
       if (btn) btn.textContent = `準備中… ${Math.min(i + 2, pages.length)}/${pages.length}`;
-      const url = await composePair(pages.slice(i, i + 2), rtl);
+      const url = await composePair(pages.slice(i, i + 2), rtl, withTarget ? i : null);
       const div = document.createElement('div');
       div.className = 'print-page duo';
       const im = document.createElement('img');
