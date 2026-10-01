@@ -1,0 +1,512 @@
+<!-- generated kakomon hiroo/2026-2/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（小問集合／3つの半円の上を動く点）</a></li>
+<li><a href="#3-4-5">大問3・4・5（和と積が同じになる組／白玉と黒玉の取り出し方／5人の点数と基準点）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（小問集合／3つの半円の上を動く点）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 40点／B 12点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)(2)</td><td>計算のくふう・分数の中の□</td><td>A 5+5</td><td>8.5、4.25、2.125 は半分ずつ／分子が1の分数は逆数にする</td></tr>
+    <tr><td>1 (3)(4)</td><td>つるかめ算・仕事算</td><td>A 6+6</td><td>「合わせて20個」／「8日」「10日」</td></tr>
+    <tr><td>1 (5)(6)</td><td>四角形の面積・円すいの糸</td><td>A 6+6</td><td>直角が2つで CD＝DA／「糸」「最も短く」</td></tr>
+    <tr><td>2</td><td>3つの半円の上を往復する点</td><td>A 6／B 6+6</td><td>どの点も「何秒で半円を1回わたるか」を先に出す</td></tr>
+  </table>
+  <p>取り方: <b>大問1の6問と 2 (1) の40点を先に確実に</b>取る。受験者平均は60.6点、合格者平均は71.4点。2 (2) は「角の和が180度」に気づけば短い。2 (3) は (2) の答えを使って調べる問題で、時間が残っていれば手を付ける。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 8.5×14＋4.25×28＋2.125×56 <span class="type">A・5点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は式の数字「<b>8.5、4.25、2.125</b>」と「14、28、56」。左は半分ずつ、右は2倍ずつ → 3つとも<b>「8.5×14」に直して書く</b>。小数の筆算3回をしなくてすむ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>かけ算は、片方を<b>半分</b>にして、もう片方を<b>2倍</b>にしても、答えが同じ。たとえば 4×6＝24。2×12＝24。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2つ目を書きかえる。4.25×28 は、4.25×2×14 と同じ。4.25×2＝8.5。だから 8.5×14 になる。</li>
+    <li>3つ目を書きかえる。2.125×56 は、2.125×4×14 と同じ。2.125×4＝8.5。これも 8.5×14 になる。</li>
+    <li><b>8.5×14 が3つ</b>。まとめてかける。
+<pre class="fig">8.5×14×3＝8.5×42＝357</pre></li>
+    <li>落としやすい所は最後の 8.5×42。8×42＝336 と 0.5×42＝21 に分けて、たす。</li>
+  </ol>
+  <div class="ans">答え：357</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 分数の中に分数がある式の□ <span class="type">A・5点｜もどして考える計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は、どの段にもある分子の「<b>1</b>」と右の「4/7」。「1÷（分母ぜんぶ）＝4/7」に直して書く → <b>外側から、上下をひっくり返して1を引く</b>。2回で□が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「1÷ある数」が 4/7 なら、「ある数」は 4/7 の<b>上下をひっくり返した 7/4</b>。たとえば 1÷2＝1/2。1÷(1/2)＝2。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>いちばん外側を見る。「1÷（分母ぜんぶ）＝4/7」。分母ぜんぶは、ひっくり返して 7/4。</li>
+    <li>分母は「1＋（中の分数）」。1を引く。中の分数は <b>7/4−1＝3/4</b>。</li>
+    <li>中の分数も同じ形。「1÷（その分母）＝3/4」。その分母は、ひっくり返して 4/3。</li>
+    <li>その分母は「1＋1/□」。1を引く。1/□＝4/3−1＝1/3。□は3。
+<pre class="fig">4/7 →(ひっくり返す) 7/4 →(1を引く) 3/4
+3/4 →(ひっくり返す) 4/3 →(1を引く) 1/3 → □＝3</pre></li>
+    <li>たしかめ。1＋1/3＝4/3。1÷4/3＝3/4。1＋3/4＝7/4。1÷7/4＝4/7。合っている。</li>
+  </ol>
+  <div class="ans">答え：3</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 値上がりして3個ずつ減らしたクッキーとチョコ <span class="type">A・6点｜つるかめ算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>合わせて20個</b>」「3個ずつ少なく」「150円安く」と、求めるもの「何個買ったか」に丸。「値上がり後も20個なら予定より何円高いか」に直して書く → <b>値上がり分50円と70円のつるかめ算</b>になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>つるかめ算は、「1個あたりの数が2種類」「合わせた個数」「合計」の3つがそろえば解ける。全部を片方にして、<b>ずれを1個ごとの差でわる</b>。</li>
+    <li>値上がり後の値段は、クッキーが 150＋50＝200円。チョコが 200＋70＝270円。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>値上がり後も20個買ったとする。実際よりクッキー3個とチョコ3個が多い。その分は (200＋270)×3＝1410円。</li>
+    <li>実際の代金は、予定より150円安い。だから「値上がり後に20個」は、予定より <b>1410−150＝1260円</b>高い。
+<pre class="fig">予定の代金 ──(150円安い)── 実際の代金
+実際の代金 ──(1410円高い)── 値上がり後に20個
+→ 値上がり後に20個 は 予定より 1260円高い</pre></li>
+    <li>この1260円は、20個の値上がり分の合計。クッキーは1個50円、チョコは1個70円で、合わせて20個。</li>
+    <li>20個が全部チョコなら 70×20＝1400円。1260円より140円多い。チョコ1個をクッキーにかえると 70−50＝20円へる。140÷20＝7個。これが予定のクッキーの個数。</li>
+    <li>落としやすい所はここ。聞かれているのは買った個数。3個少なくしたから <b>7−3＝4個</b>。</li>
+    <li>たしかめ。予定はクッキー7個とチョコ13個。150×7＋200×13＝3650円。実際は 200×4＋270×10＝3500円。差は150円で合っている。</li>
+  </ol>
+  <div class="ans">答え：4個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 8日のロボットAと10日のロボットB <span class="type">A・6点｜仕事算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>8日</b>」「<b>10日</b>」と、求めるもの「何日かかるか」に丸。仕事全体を8と10の最小公倍数の40に直して書く → 1日分が5と4で出る。「何日目」ではないので、答えは<b>分数のまま</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>仕事全体を40とすると、8日で終わる人は1日に <b>40÷8＝5</b> だけ進む。10日で終わる人は1日に 40÷10＝4 だけ進む。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>仕事全体を40とする。Aは1日に5。Bは1日に4。</li>
+    <li>一緒にやると、1日に 5＋4＝<b>9</b> 進む。</li>
+    <li>かかる日数は 40÷9＝40/9＝4 4/9日（4と9分の4）。</li>
+    <li>落としやすい所は「5日」と答えてしまうこと。聞かれているのは「何日目に終わるか」ではなく「何日かかるか」。ロボットは休まず動くので、分数のまま答える。</li>
+  </ol>
+  <div class="ans">答え：4 4/9日</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 直角が2つで CD＝DA の四角形の面積 <span class="type">A・6点｜合同な図形を組み合わせる</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>CD＝DA</b>」と「角ABCと角CDAはともに直角」。図の辺に同じ印、角に直角の印を置く → Dのまわりに同じ四角形を<b>4つならべると正方形</b>になる。CDの長さは出さなくてすむ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>四角形の4つの角の和は360度。角Bと角Dが90度だから、角Aと角Cの和は 360−90×2＝<b>180度</b>。180度は一直線。</li>
+    <li>Dを中心に90度回すと、辺DAは辺DCにぴったり重なる。長さが同じで、間の角が90度だから。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>同じ四角形を、Dを中心に90度ずつ回して4つならべる。角Dが4つ集まって 90×4＝360度。すき間なくうまる。</li>
+    <li>となりどうしの境目では、角Aと角Cがとなり合う。和が180度だから、外側の辺はまっすぐつながる。外側の1辺は、4cm と 6cm をつないだ <b>10cm</b>。
+<svg viewBox="-30 -20 270 250" style="max-width:300px;width:100%;height:auto;display:block;margin:8px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="同じ四角形4つでできる1辺10cmの正方形">
+<rect x="0" y="0" width="200" height="200" fill="#fff" stroke="#888" stroke-dasharray="5 4"/>
+<polygon points="80,200 200,200 200,120 100,100" fill="#dbe9ff" stroke="#222" stroke-width="2"/>
+<line x1="100" y1="100" x2="120" y2="0" stroke="#888" stroke-dasharray="5 4"/>
+<line x1="100" y1="100" x2="0" y2="80" stroke="#888" stroke-dasharray="5 4"/>
+<polyline points="96,120 116,124 120,104" fill="none" stroke="#222"/>
+<polyline points="188,200 188,188 200,188" fill="none" stroke="#222"/>
+<text x="76" y="216" font-size="13" text-anchor="middle" fill="#333">A</text>
+<text x="208" y="216" font-size="13" fill="#333">B</text>
+<text x="206" y="118" font-size="13" fill="#333">C</text>
+<text x="88" y="94" font-size="13" fill="#333">D</text>
+<text x="140" y="216" font-size="12" text-anchor="middle" fill="#333">6cm</text>
+<text x="40" y="216" font-size="12" text-anchor="middle" fill="#333">4cm</text>
+<text x="206" y="164" font-size="12" fill="#333">4cm</text>
+<text x="206" y="64" font-size="12" fill="#333">6cm</text>
+</svg></li>
+    <li>正方形の面積は 10×10＝100cm²。</li>
+    <li>同じ四角形4つ分だから、4でわる。100÷4＝<b>25</b>cm²。</li>
+  </ol>
+  <div class="ans">答え：25cm²</div>
+  <div class="tip">コツ：「となり合う2辺が同じ長さで、間が直角」の図形は、その頂点を中心に90度回すと重なる。4つならべて正方形にする手が使える。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (6)</span> 円すいの側面に一巻きさせた糸 <span class="type">A・6点｜円すいの展開図</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>最も短くなるように</b>」と「半径が2cm」「母線の長さが12cm」。「最も短い糸」を「展開図のまっすぐな線」に直して書く → <b>おうぎ形をかいてAとA′を結ぶ</b>。先に中心角を出す。3.14は使わずにすむ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円すいの側面を開くと、おうぎ形になる。中心角は <b>360×（底面の半径÷母線）</b>で出る。</li>
+    <li>立体の表面をまわる線は、開いて平らにすると、まっすぐな線のときがいちばん短い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>中心角を出す。360×2/12＝<b>60度</b>。</li>
+    <li>半径12cm、中心角60度のおうぎ形をかく。点Aで切り開いたので、おうぎ形の両はしが A と A′ になる。糸は A から A′ までのまっすぐな線。
+<svg viewBox="-20 -10 260 215" style="max-width:280px;width:100%;height:auto;display:block;margin:8px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="半径12cm中心角60度のおうぎ形と糸">
+<path d="M110,10 L20,165.9 A180,180 0 0 0 200,165.9 Z" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<line x1="20" y1="165.9" x2="200" y2="165.9" stroke="#e53935" stroke-width="3"/>
+<path d="M97,32.5 A26,26 0 0 0 123,32.5" fill="none" stroke="#222"/>
+<text x="110" y="4" font-size="13" text-anchor="middle" fill="#333">O</text>
+<text x="110" y="52" font-size="12" text-anchor="middle" fill="#333">60°</text>
+<text x="6" y="172" font-size="13" text-anchor="middle" fill="#333">A</text>
+<text x="214" y="172" font-size="13" text-anchor="middle" fill="#333">A′</text>
+<text x="44" y="84" font-size="12" text-anchor="middle" fill="#333">12cm</text>
+<text x="176" y="84" font-size="12" text-anchor="middle" fill="#333">12cm</text>
+<text x="110" y="158" font-size="12" text-anchor="middle" fill="#e53935">糸</text>
+</svg></li>
+    <li>三角形OAA′を見る。OA と OA′ はどちらも12cm。間の角が60度。残りの2つの角は (180−60)÷2＝60度ずつ。3つの角が全部60度だから<b>正三角形</b>。</li>
+    <li>正三角形は3辺が同じ長さ。AA′ も12cm。</li>
+  </ol>
+  <div class="ans">答え：12cm</div>
+  <div class="tip">コツ：円すいの糸の長さを聞く問題は、中心角が60度で正三角形になることが多い。中心角を出した時点で、三角形OAA′の形を見る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 3秒後の角ASP <span class="type">A・6点｜点の移動と中心角</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>毎秒3.14cm</b>」「半径10cm」と、求めるもの「角ASP」に丸。速さを「AからCまで何秒か」に直して書く → <b>角ASPが1秒に何度ふえるか</b>が出る。3.14はわり算で消える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>半円の上を同じ速さで動くと、中心から見た角も同じ調子でふえる。端から端までで180度。10秒かかるなら、<b>1秒に18度</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>弧ACの長さは 10×2×3.14÷2＝10×3.14 cm。3.14はかけたままにしておく。</li>
+    <li>PがAからCまで動く時間は (10×3.14)÷3.14＝<b>10秒</b>。</li>
+    <li>10秒で180度。1秒では 180÷10＝18度。</li>
+    <li>3秒後は 18×3＝<b>54度</b>。</li>
+  </ol>
+  <div class="ans">答え：54度</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> PSとQTがはじめて平行になるとき <span class="type">B・6点｜点の移動・角の和が180度</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>はじめて平行になる</b>」と「1.2倍」。Pは直線ACの上側、Qは下側を動く。「平行」を<b>「角ASPと角ATQの和が180度」</b>に直して書く → Qも「1秒に何度」にすれば、わり算1回で出る。ここまで見えたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2本の直線が平行なとき、錯角（Zの形にならぶ角）は同じ大きさ。ここでは<b>角ASPと角BTQ</b>が錯角になる。</li>
+    <li>角BTQは 180度−角ATQ。一直線が180度だから。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>QがAからBまで動く時間を出す。弧ABは 6×3.14 cm。速さは 3.14×1.2。わると 6÷1.2＝5秒。角ATQは1秒に 180÷5＝<b>36度</b>ふえる。</li>
+    <li>図に平行な2本をかいてみよう。PはSから左上へ、QはTから右下へのびる。Zの形にならぶ角ASPと角BTQが同じ大きさになる。
+<svg viewBox="0 0 285 215" style="max-width:320px;width:100%;height:auto;display:block;margin:8px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PSとQTが平行になるときの図">
+<path d="M20,130 A120,120 0 0 1 260,130" fill="none" stroke="#222" stroke-width="1.5"/>
+<path d="M164,130 A48,48 0 0 1 260,130" fill="none" stroke="#222" stroke-width="1.5"/>
+<path d="M20,130 A72,72 0 0 0 164,130" fill="none" stroke="#222" stroke-width="1.5"/>
+<line x1="20" y1="130" x2="260" y2="130" stroke="#888" stroke-dasharray="4 3"/>
+<line x1="140" y1="130" x2="80" y2="26.1" stroke="#e53935" stroke-width="2.5"/>
+<line x1="92" y1="130" x2="128" y2="192.4" stroke="#1e6fd9" stroke-width="2.5"/>
+<path d="M118,130 A22,22 0 0 1 129,110.9" fill="none" stroke="#e53935"/>
+<path d="M70,130 A22,22 0 0 0 103,149.1" fill="none" stroke="#1e6fd9"/>
+<path d="M106,130 A14,14 0 0 1 99,142.1" fill="none" stroke="#1e6fd9"/>
+<circle cx="80" cy="26.1" r="3.5" fill="#e53935"/><circle cx="128" cy="192.4" r="3.5" fill="#1e6fd9"/>
+<circle cx="140" cy="130" r="2.5" fill="#222"/><circle cx="92" cy="130" r="2.5" fill="#222"/><circle cx="212" cy="130" r="2.5" fill="#222"/>
+<text x="8" y="134" font-size="12" text-anchor="middle" fill="#333">A</text>
+<text x="92" y="122" font-size="12" text-anchor="middle" fill="#333">T</text>
+<text x="148" y="122" font-size="12" text-anchor="middle" fill="#333">S</text>
+<text x="168" y="146" font-size="12" text-anchor="middle" fill="#333">B</text>
+<text x="212" y="146" font-size="12" text-anchor="middle" fill="#333">U</text>
+<text x="270" y="134" font-size="12" text-anchor="middle" fill="#333">C</text>
+<text x="70" y="22" font-size="12" text-anchor="middle" fill="#e53935">P</text>
+<text x="138" y="206" font-size="12" text-anchor="middle" fill="#1e6fd9">Q</text>
+<text x="108" y="108" font-size="11" text-anchor="middle" fill="#e53935">60°</text>
+<text x="64" y="160" font-size="11" text-anchor="middle" fill="#1e6fd9">120°</text>
+<text x="122" y="147" font-size="11" text-anchor="middle" fill="#1e6fd9">60°</text>
+</svg></li>
+    <li>角BTQは「180度−角ATQ」。これが角ASPと同じ。つまり <b>角ASP＋角ATQ＝180度</b>。</li>
+    <li>2つの角は合わせて1秒に 18＋36＝54度ふえる。180÷54＝10/3＝3 1/3秒後（3と3分の1）。</li>
+    <li>たしかめ。3 1/3秒は5秒より前。QはまだBに着いていない。角ASPは60度、角ATQは120度で、和は180度。</li>
+  </ol>
+  <div class="ans">答え：3 1/3秒後</div>
+  <div class="tip">コツ：平行を聞かれたら、図に平行な2本を実際にかいて、同じになる角に印をつける。「同じ角」を「和が180度」に直せると、出会いの旅人算と同じ形になる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> PS、QT、RUがはじめて同時に平行になるとき <span class="type">B・6点｜点の移動・往復の調べ上げ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同時に平行になる</b>」と「4/7倍」。3つを一度に追わず、(2)の「PSとQTが平行」の時刻を先に表に置く → そのとき角ATQはいつも120度。<b>角CURが120度になる時刻</b>とくらべる。(2)が解けていたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>往復する点は、行きと帰りで同じ場所を通る。片道5秒のQなら、3 1/3秒後（3と3分の1）にいた場所に、10−3 1/3＝6 2/3秒後にもいる。そのあとは10秒ごとにくり返す。</li>
+    <li>RはCから出て、直線ACの上側を動く。QTとRUが平行なら、錯角の角BTQと角BURが同じ大きさ。どちらも180度からひくと、<b>角ATQと角CURも同じ大きさ</b>になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Rの片道の時間を出す。弧BCは 4×3.14 cm。速さは 3.14×4/7。わると 4÷4/7＝<b>7秒</b>。往復は14秒。</li>
+    <li>PSとQTが平行になる時刻をならべる。Pは往復20秒、Qは往復10秒。2点の動きは20秒ごとに同じになる。20秒の中では、Pの行きの 3 1/3秒後と、帰りの 20−3 1/3＝16 2/3秒後。どちらも角ASPは60度、角ATQは120度。10秒後も和は180度になるが、PがC、QがAにいるので除く。</li>
+    <li>Rの角CURが120度になる時刻をならべる。120度は180度の 2/3。行きは 7×2/3＝4 2/3秒後。帰りは 14−4 2/3＝9 1/3秒後。あとは14秒ずつたす。
+<table>
+  <tr><th>PSとQTが平行</th><td>3 1/3</td><td>16 2/3</td><td><b>23 1/3</b></td><td>36 2/3</td></tr>
+  <tr><th>角CURが120度</th><td>4 2/3</td><td>9 1/3</td><td>18 2/3</td><td><b>23 1/3</b></td></tr>
+</table></li>
+    <li>はじめて同じになるのは <b>23 1/3秒後</b>。このときの図は下のとおり。3本とも同じかたむきになっている。
+<svg viewBox="0 0 285 215" style="max-width:320px;width:100%;height:auto;display:block;margin:8px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="23と3分の1秒後に3本が平行になる図">
+<path d="M20,130 A120,120 0 0 1 260,130" fill="none" stroke="#222" stroke-width="1.5"/>
+<path d="M164,130 A48,48 0 0 1 260,130" fill="none" stroke="#222" stroke-width="1.5"/>
+<path d="M20,130 A72,72 0 0 0 164,130" fill="none" stroke="#222" stroke-width="1.5"/>
+<line x1="20" y1="130" x2="260" y2="130" stroke="#888" stroke-dasharray="4 3"/>
+<line x1="140" y1="130" x2="80" y2="26.1" stroke="#e53935" stroke-width="2.5"/>
+<line x1="92" y1="130" x2="128" y2="192.4" stroke="#1e6fd9" stroke-width="2.5"/>
+<line x1="212" y1="130" x2="188" y2="88.4" stroke="#2e7d32" stroke-width="2.5"/>
+<path d="M228,130 A16,16 0 0 0 204,116.1" fill="none" stroke="#2e7d32"/>
+<circle cx="80" cy="26.1" r="3.5" fill="#e53935"/><circle cx="128" cy="192.4" r="3.5" fill="#1e6fd9"/><circle cx="188" cy="88.4" r="3.5" fill="#2e7d32"/>
+<circle cx="140" cy="130" r="2.5" fill="#222"/><circle cx="92" cy="130" r="2.5" fill="#222"/><circle cx="212" cy="130" r="2.5" fill="#222"/>
+<text x="8" y="134" font-size="12" text-anchor="middle" fill="#333">A</text>
+<text x="92" y="122" font-size="12" text-anchor="middle" fill="#333">T</text>
+<text x="148" y="122" font-size="12" text-anchor="middle" fill="#333">S</text>
+<text x="168" y="146" font-size="12" text-anchor="middle" fill="#333">B</text>
+<text x="212" y="146" font-size="12" text-anchor="middle" fill="#333">U</text>
+<text x="270" y="134" font-size="12" text-anchor="middle" fill="#333">C</text>
+<text x="70" y="22" font-size="12" text-anchor="middle" fill="#e53935">P</text>
+<text x="138" y="206" font-size="12" text-anchor="middle" fill="#1e6fd9">Q</text>
+<text x="180" y="82" font-size="12" text-anchor="middle" fill="#2e7d32">R</text>
+<text x="235" y="113" font-size="11" text-anchor="middle" fill="#2e7d32">120°</text>
+</svg></li>
+    <li>たしかめ。23 1/3秒後、Pは2回目の行きで 3 1/3秒分。角ASPは 18×10/3＝60度。Rは2回目の帰りで、Bを出てから 23 1/3−21＝2 1/3秒。角CURは180度から 60度もどって120度。P、Q、Rとも A、B、C の上にはいない。</li>
+  </ol>
+  <div class="ans">答え：23 1/3秒後</div>
+  <div class="tip">コツ：3つの点を同時に追わない。先に2つの点で合う時刻をならべて、3つ目とくらべる。声の教育社の解説は、角の変化を折れ線グラフにかいて、21秒から28秒の間の交点を相似で出している（21＋2 1/3＝23 1/3）。答えは同じ。</div>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（和と積が同じになる組／白玉と黒玉の取り出し方／5人の点数と基準点）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">A 18点／B 24点／C 6点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>3 (1)(2)</td><td>たした数とかけた数が同じになる組</td><td>A 6+6</td><td>「1から5までの整数」→ 小さい数から入れて表にする</td></tr>
+    <tr><td>3 (3)</td><td>4つの数で、合う組を全部さがす</td><td>B 6</td><td>「全て」→ 小さい順に決めて、1の個数で分ける</td></tr>
+    <tr><td>4 (1)(2)</td><td>白玉1個と黒玉3個・4個の取り出し方</td><td>B 6+6</td><td>「順番が異なれば別」→ 黒玉のへり方の順番 × どの黒玉を取るか</td></tr>
+    <tr><td>4 (3)</td><td>黒玉6個の取り出し方</td><td>C 6</td><td>後回し。「黒と黒」の回数で分ける</td></tr>
+    <tr><td>5 (1)</td><td>5人の順位と合格した2人</td><td>A 6</td><td>「半分」「100点満点」→ AとBは50点以下</td></tr>
+    <tr><td>5 (2)</td><td>基準点の最高・最低と理由</td><td>B 6</td><td>基準点は「3位より上、2位の点数以下」</td></tr>
+  </table>
+  <p>取り方: <b>Aの 3 (1)(2) と 5 (1) の18点を先に確実に</b>取る。5 は最後の大問だが (1) はAなので、4 (3) に時間を使う前に 5 へ進む。Bは 4 (1)(2) が同じ手で続けて取れる。3 (3) と 5 (2) は「全部」「理由」まで書いて正解になる問題で、表が書けたら手を付ける。4 (3) は捨ててよい。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)(2)</span> たした数とかけた数が同じになる組 <span class="type">A・6点＋6点｜小さい数で調べる</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1から5までの整数</b>」と「同じ整数が入る場合があります」に丸。入れられる数は5つだけ → <b>小さい数から順に入れて、たした数とかけた数を表に置く</b>。(1)は同じ数どうし、(2)は1を1個入れた組で合う。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li><b>1は、たすと1ふえる。かけても変わらない。</b>たとえば 1＋3＝4、1×3＝3。1が入ると、たした数のほうが大きくなりやすい。</li>
+    <li>大きい数どうしは、かけた数のほうがずっと大きい。たとえば 4＋5＝9、4×5＝20。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1) AとBを入れかえても式は同じ。小さい順に書き出して、表にする。
+<table>
+  <tr><th>AとB</th><td>1と1</td><td>1と2</td><td>1と3</td><td><b>2と2</b></td><td>2と3</td><td>3と3</td></tr>
+  <tr><th>たした数</th><td>2</td><td>3</td><td>4</td><td><b>4</b></td><td>5</td><td>6</td></tr>
+  <tr><th>かけた数</th><td>1</td><td>2</td><td>3</td><td><b>4</b></td><td>6</td><td>9</td></tr>
+</table></li>
+    <li>1が入る組は、たした数がいつも1大きい。2と2で、どちらも4になる。2と3から先は、かけた数のほうが大きい。差は広がっていく。合うのは A＝2、B＝2。</li>
+    <li>(2) 数が3つになった。2を3つ入れると、たして6、かけて8。かけた数が大きすぎる。そこで1を1個入れて、同じように表にする。
+<table>
+  <tr><th>A・B・C</th><td>1・1・2</td><td>1・2・2</td><td><b>1・2・3</b></td><td>2・2・2</td></tr>
+  <tr><th>たした数</th><td>4</td><td>5</td><td><b>6</b></td><td>6</td></tr>
+  <tr><th>かけた数</th><td>2</td><td>4</td><td><b>6</b></td><td>8</td></tr>
+</table></li>
+    <li>1・2・3 で、どちらも6になる。聞かれているのは A×B×C の値。答えは6。</li>
+    <li>落としやすい所は答えの形。(1)は解答らんのAとBに数を1つずつ書く。(2)は組ではなく、かけた数を書く。</li>
+  </ol>
+  <div class="ans">答え：(1) A…2・B…2　(2) 6</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 1＋B＋C＋D＋E＝1×B×C×D×E になる組を全部 <span class="type">B・6点｜1の個数で場合分け</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>全て</b>」と、式の先頭の「1＋」「1×」に丸。BからEを小さい順と決めて、<b>1が何個入るかで表に置く</b> → 1が多いと和が大きく、少ないと積が大きい。合うのはその間だけ。(1)(2)が表で出せたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)(2)で見たとおり、1はたすと1ふえて、かけても変わらない。<b>1が多い組は、たした数のほうが大きい</b>。</li>
+    <li>2以上の数ばかりだと、かけた数のほうが大きい。たとえば2を4つ。左は 1＋2＋2＋2＋2＝9。右は 2×2×2×2＝16。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>B、C、D、Eは入れかえても式が同じ。BからEへ小さい順にならべると決める。右の「1×」はかけても変わらないので、ないものとして考える。</li>
+    <li>1の個数で4つに分けて、1を入れた式を書く。
+<table>
+  <tr><th>1の個数</th><th>1を入れた式</th><th>合うのは</th><th>合う組</th></tr>
+  <tr><td>3個</td><td>4＋E ＝ E</td><td>左がいつも4大きい</td><td>なし</td></tr>
+  <tr><td>2個</td><td>3＋D＋E ＝ D×E</td><td>かけた数が、たした数より<b>3大きい</b>とき</td><td>2と5、3と3</td></tr>
+  <tr><td>1個</td><td>2＋C＋D＋E ＝ C×D×E</td><td>かけた数が、たした数より<b>2大きい</b>とき</td><td>2と2と2</td></tr>
+  <tr><td>0個</td><td>1＋B＋C＋D＋E ＝ B×C×D×E</td><td>いちばん小さい2・2・2・2で、9と16</td><td>なし</td></tr>
+</table></li>
+    <li>1が2個のときを調べる。DとEを小さい順に入れて、差を書く。
+<table>
+  <tr><th>DとE</th><td>2と2</td><td>2と3</td><td>2と4</td><td><b>2と5</b></td><td><b>3と3</b></td><td>3と4</td></tr>
+  <tr><th>かけた数−たした数</th><td>0</td><td>1</td><td>2</td><td><b>3</b></td><td><b>3</b></td><td>5</td></tr>
+</table>
+    3と4から先は、差が5以上で広がっていく。ここで終わり。</li>
+    <li>1が1個のときを調べる。2・2・2は、たして6、かけて8。差が2で合う。2・2・3は、たして7、かけて12。差が5。これより大きい組は、差がもっと広がる。</li>
+    <li>合う組は (1, 1, 2, 5)、(1, 1, 3, 3)、(1, 2, 2, 2) の3つ。かけた数は順に 10、9、8。</li>
+    <li>たしかめ。1＋1＋1＋2＋5＝10。1＋1＋1＋3＋3＝9。1＋1＋2＋2＋2＝8。どれも、かけた数と同じ。3つとも書けて正解になる。</li>
+  </ol>
+  <div class="ans">答え：8・9・10</div>
+  <div class="tip">コツ：「全て見つけなさい」は、小さい順にならべると決めてから調べる。同じ組を2回数えずにすむ。終わりの合図は「差が広がるだけになったとき」。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 白玉1個と黒玉3個の取り出し方 <span class="type">B・6点｜場合の数（順番×選び方）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>取り出す順番が異なる取り出し方は、別の取り出し方</b>」と例の「3通り」。作業を「白と黒（黒が1個へる）」「黒と黒（黒が2個へる）」に直して書く → <b>へり方の順番 × どの黒玉を取るか</b>で数える。例の3通りが自分で出せたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>白玉は1個だけ。1回の作業で出る2個は、「白と黒」か「黒と黒」のどちらか。白玉は箱にもどすので、へるのは黒玉だけ。</li>
+    <li>2個を同時に取るときは、2個の順番を区別しない。黒玉3個から2個を取るのは、<b>残す1個を選ぶのと同じ</b>で3通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「白と黒」の作業をA、「黒と黒」の作業をBと書く。Aは黒が1個へる。Bは黒が2個へる。黒3個を0個にする順番は、A→A→A、A→B、B→A の3つ。</li>
+    <li>順番ごとに、どの黒玉を取るかを数える。
+<table>
+  <tr><th>順番</th><th>箱の中（○白 ●黒）</th><th>どの黒玉を取るか</th><th>取り方</th></tr>
+  <tr><td>A→A→A</td><td>○●●● → ○●● → ○● → ○</td><td>3×2×1</td><td>6通り</td></tr>
+  <tr><td>A→B</td><td>○●●● → ○●● → ○</td><td>3×1</td><td>3通り</td></tr>
+  <tr><td>B→A</td><td>○●●● → ○● → ○</td><td>3×1</td><td>3通り</td></tr>
+</table></li>
+    <li>全部たす。<b>6＋3＋3＝12通り</b>。</li>
+    <li>落としやすい所は B→A の1回目。「3×2＝6通り」と数えると多すぎる。「黒玉1と2」「黒玉2と1」は同じ取り方。</li>
+    <li>別の見方でたしかめ。1回目で分ける。1回目がAなら、取る黒玉は3通り。残りは白1個と黒2個で、例の3通り。3×3＝9通り。1回目がBなら3通り。残りは白1個と黒1個で1通り。3×1＝3通り。9＋3＝12通りで同じ。</li>
+  </ol>
+  <div class="ans">答え：12通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 白玉1個と黒玉4個の取り出し方 <span class="type">B・6点｜場合の数（順番×選び方）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>黒玉が4個</b>」に丸。(1)と変わったのは個数だけ → (1)と同じ表を置く。へり方の順番は5つ。「黒と黒」が1回入るごとに、取り方は<b>半分</b>になる。(1)が合っていれば、同じ手で届く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>黒玉4個から2個を同時に取るのは <b>(4×3)÷2＝6通り</b>。1個ずつ順に取ると 4×3＝12通り。「1と2」「2と1」は同じ取り方なので、2でわる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>黒4個を0個にする順番を、Bの回数で書き出す。Bが0回は A→A→A→A。Bが1回は A→A→B、A→B→A、B→A→A。Bが2回は B→B。全部で5つ。</li>
+    <li>順番ごとに、どの黒玉を取るかを数える。
+<table>
+  <tr><th>順番</th><th>どの黒玉を取るか</th><th>取り方</th></tr>
+  <tr><td>A→A→A→A</td><td>4×3×2×1</td><td>24通り</td></tr>
+  <tr><td>A→A→B</td><td>4×3×1</td><td>12通り</td></tr>
+  <tr><td>A→B→A</td><td>4×3×1（Bは残す1個を選ぶ3通り）</td><td>12通り</td></tr>
+  <tr><td>B→A→A</td><td>6×2×1</td><td>12通り</td></tr>
+  <tr><td>B→B</td><td>6×1</td><td>6通り</td></tr>
+</table></li>
+    <li>全部たす。<b>24＋12×3＋6＝66通り</b>。</li>
+    <li>表をたてに見る。Bが0回は24通り。1回は12通り。2回は6通り。Bが1回入るごとに半分になっている。同時に取る2個は、順番を区別しないから。</li>
+    <li>別の見方でたしかめ。1回目がAなら、取る黒玉は4通り。残りは黒3個で、(1)の12通り。4×12＝48通り。1回目がBなら6通り。残りは黒2個で、例の3通り。6×3＝18通り。48＋18＝66通りで同じ。</li>
+  </ol>
+  <div class="ans">答え：66通り</div>
+  <div class="tip">コツ：「1回目で分けて、残りは前の答えを使う」見方は、個数がふえても同じ形で続けられる。(1)の答えを問題用紙に大きく書いておく。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 白玉1個と黒玉6個の取り出し方 <span class="type">C・6点｜場合の数（Bの回数で場合分け）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>黒玉が6個</b>」に丸。(2)の表を<b>「黒と黒」の回数</b>でまとめ直して置く → 回数が1ふえるごとに、取り方は半分になる。あとは順番の数をかけて、たすだけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>黒玉6個を全部A（白と黒）で取ると、<b>6×5×4×3×2×1＝720通り</b>。(2)で見たとおり、B（黒と黒）が1回入るごとに半分になる。360通り、180通り、90通りと続く。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Bの回数で分けて、表にする。「順番の数」は、AとBのならべ方の数。
+<table>
+  <tr><th>Bの回数</th><th>作業の中身</th><th>順番の数</th><th>1つの順番での取り方</th><th>小計</th></tr>
+  <tr><td>0回</td><td>Aが6回</td><td>1</td><td>720</td><td>720</td></tr>
+  <tr><td>1回</td><td>Aが4回、Bが1回</td><td>5</td><td>360</td><td>1800</td></tr>
+  <tr><td>2回</td><td>Aが2回、Bが2回</td><td>6</td><td>180</td><td>1080</td></tr>
+  <tr><td>3回</td><td>Bが3回</td><td>1</td><td>90</td><td>90</td></tr>
+</table></li>
+    <li>順番の数を確かめる。Bが1回のときは、5回のうちBが何回目かで5通り。Bが2回のときは、4回のうちBの2回を選んで (4×3)÷2＝6通り。</li>
+    <li>全部たす。<b>720＋1800＋1080＋90＝3690通り</b>。</li>
+  </ol>
+  <div class="ans">答え：3690通り</div>
+  <div class="tip">コツ：別の見方。(2)と同じように1回目で分けると、黒5個は 5×66＋10×12＝450通り。黒6個は 6×450＋15×66＝3690通り。答えは同じになる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 5人の順位と合格した2人 <span class="type">A・6点｜条件の整理（順位の表）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>半分</b>」「<b>100点満点</b>」「2人だけが合格」に丸。「半分」は「AはCより下、BはDより下、AもBも50点以下」に直して書く → 91点のEはAとBより上。順位の表に×を置くと、<b>1位と2位はCとE</b>に決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>基準点以上の人が合格。だから合格者は、点数の高い人から順に決まる。2人だけ合格なら、<b>合格は1位と2位</b>。</li>
+    <li>CはAの2倍の点数。Cは100点以下だから、Aは50点以下。同じように、Bも50点以下。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>②から、AはCより下。Aは1位ではない。Cは5位ではない。③から、BはDより下。Dは3位だから、Bは4位か5位。</li>
+    <li>AとBは50点以下。Eは91点だから、AとBより上。Eより下に2人以上いるので、Eは3位までに入る。3位はDだから、<b>Eは1位か2位</b>。ここまでを表に書く。
+<table>
+  <tr><th></th><th>1位</th><th>2位</th><th>3位</th><th>4位</th><th>5位</th></tr>
+  <tr><th>A</th><td>×</td><td></td><td></td><td></td><td></td></tr>
+  <tr><th>B</th><td>×</td><td>×</td><td>×</td><td></td><td></td></tr>
+  <tr><th>C</th><td></td><td></td><td></td><td></td><td>×</td></tr>
+  <tr><th>D</th><td>×</td><td>×</td><td>○</td><td>×</td><td>×</td></tr>
+  <tr><th>E</th><td></td><td></td><td>×</td><td>×</td><td>×</td></tr>
+</table></li>
+    <li>1位と2位のうち、1人はE。もう1人はAかC。Aは1位ではないので、Aが入るなら2位。すると1位はEで、CはAより下になる。②に合わない。だから、もう1人は<b>C</b>。</li>
+    <li>合格したのは1位と2位の2人。CとE。落としやすい所は、⑥を「合格＝上から2人」に直さずに進めること。</li>
+  </ol>
+  <div class="ans">答え：CとE</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 基準点の最も高い点数・最も低い点数と理由 <span class="type">B・6点｜条件の整理（理由を書く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>合計は316点</b>」と「最も高い点数と最も低い点数」に丸。「半分」を「CはAの2倍、DはBの2倍」に直して書く → C＋D＝150点。基準点は<b>3位のDより上、2位の点数以下</b>。この両はしをさがす。(1)が出ていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>合格が1位と2位だけになるのは、基準点が「<b>2位の点数以下</b>」で「<b>3位の点数より上</b>」のとき。たとえば2位が80点、3位が60点なら、基準点は61点から80点まで。</li>
+    <li>CはAの2倍、DはBの2倍。A、B、C、Dの合計は、「AとBの合計」の3つ分になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>E以外の4人の合計を出す。316−91＝225点。これが「AとBの合計」の3つ分。AとBの合計は 225÷3＝75点。CとDの合計は 75×2＝<b>150点</b>。</li>
+    <li>最も高い基準点をさがす。基準点は2位の点数以下。Eが2位なら、2位は91点。Eが1位なら、2位のCは91点より下。だから2位の点数は、高くても91点。Cが92点のとき、Dは 150−92＝58点、Aは46点、Bは29点。Dは3位で、条件に全部合う。<b>基準点は91点</b>にできる。</li>
+    <li>最も低い基準点をさがす。基準点は3位のDより上。Dが低いほど、基準点も下げられる。CとDの合計は150点。Cは高くても100点。Dは低くても 150−100＝50点。このとき、Aは50点、Bは25点。AとDが同じ50点で、2人とも3位になる。<b>基準点は51点</b>まで下げられる。
+<svg id="q5_2_fig" viewBox="0 0 380 215" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="5人の点数を数直線にならべた図。上はCが92点のときで基準点は91点まで上げられる。下はCが100点のときで基準点は51点まで下げられる">
+<text x="12" y="18" font-size="12" font-weight="bold" fill="#222">最も高いとき（Cが92点）</text>
+<line x1="20" y1="62" x2="356" y2="62" stroke="#222" stroke-width="1.4"/>
+<line x1="174" y1="62" x2="304" y2="62" stroke="#d32f2f" stroke-width="6" opacity="0.55"/>
+<circle cx="56" cy="62" r="3.5" fill="#222"/>
+<circle cx="124" cy="62" r="3.5" fill="#222"/>
+<circle cx="172" cy="62" r="3.5" fill="#222"/>
+<circle cx="304" cy="62" r="3.5" fill="#222"/>
+<circle cx="309" cy="62" r="3.5" fill="#222"/>
+<text x="56" y="50" font-size="12" fill="#222" text-anchor="middle">B 29</text>
+<text x="124" y="50" font-size="12" fill="#222" text-anchor="middle">A 46</text>
+<text x="172" y="50" font-size="12" fill="#222" text-anchor="middle">D 58</text>
+<text x="300" y="50" font-size="12" fill="#222" text-anchor="end">E 91</text>
+<text x="312" y="50" font-size="12" fill="#222" text-anchor="start">C 92</text>
+<text x="239" y="82" font-size="11" fill="#d32f2f" text-anchor="middle">基準点が入るところ</text>
+<text x="304" y="97" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">右はしが91点</text>
+<text x="12" y="128" font-size="12" font-weight="bold" fill="#222">最も低いとき（Cが100点）</text>
+<line x1="20" y1="172" x2="356" y2="172" stroke="#222" stroke-width="1.4"/>
+<line x1="144" y1="172" x2="304" y2="172" stroke="#d32f2f" stroke-width="6" opacity="0.55"/>
+<circle cx="40" cy="172" r="3.5" fill="#222"/>
+<circle cx="140" cy="172" r="3.5" fill="#222"/>
+<circle cx="304" cy="172" r="3.5" fill="#222"/>
+<circle cx="340" cy="172" r="3.5" fill="#222"/>
+<text x="40" y="160" font-size="12" fill="#222" text-anchor="middle">B 25</text>
+<text x="140" y="160" font-size="12" fill="#222" text-anchor="middle">AとD 50</text>
+<text x="300" y="160" font-size="12" fill="#222" text-anchor="middle">E 91</text>
+<text x="344" y="160" font-size="12" fill="#222" text-anchor="middle">C 100</text>
+<text x="230" y="192" font-size="11" fill="#d32f2f" text-anchor="middle">基準点が入るところ</text>
+<text x="144" y="207" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle">左はしが51点</text>
+</svg></li>
+    <li>理由を書く。入れるのは3つ。「CとDの合計は150点」「基準点はDより上で、2位の点数以下」「両はしになるときの点数の例」。計算の式もそのまま書いてよい。</li>
+  </ol>
+  <div class="ans">答え：最も高い点数…91点，最も低い点数…51点</div>
+  <div class="model">理由（例・解答一覧は「解説を参照のこと」。声の教育社の解説をもとにした書き方）：A、B、C、Dの合計は 316−91＝225点。CはAの2倍、DはBの2倍だから、AとBの合計は 225÷3＝75点、CとDの合計は150点。合格はCとEで、3位のDは不合格。だから基準点は、Dの点数より上で、CとEの低いほうの点数以下。Eは91点なので、基準点は91点より高くできない。Cが92点、Dが58点、Aが46点、Bが29点のとき、基準点を91点にできる。また、Cは100点以下なので、Dは 150−100＝50点以上。Cが100点、Dが50点、Aが50点、Bが25点のとき（AとDは同じ点数で、どちらも3位）、基準点を51点まで下げられる。</div>
+  <div class="tip">コツ：「考えられる点数のうち最も高い・最も低い」は、まず「基準点が入るはば」を言葉で書く。次に、そのはばの両はしが動くかどうかを調べる。最も低いときは、AとDが同じ50点で2人とも3位になる（声の教育社の解説の図もこの形）。</div>
+</section>
+</div>
