@@ -1,0 +1,1133 @@
+<!-- generated kakomon shibumaku/2021-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（約束記号 △＝商・▼＝余り／デジタル時計のライトの本数）</a></li>
+<li><a href="#3-4-5">大問3・4・5（点の移動とグラフ・おうぎ形の転がり・四角すいの体積と切断）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（約束記号 △＝商・▼＝余り／デジタル時計のライトの本数）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 13点／B 28点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th><th>描く図・表</th></tr>
+    <tr><td>1 (1)〜(3)</td><td>約束記号。a×b を a＋b で割った商が △、余りが ▼</td><td>A 2+2+2 / B 7+7</td><td>「商をa△b、余りをa▼b」→ 記号の横に「商」「余り」と書く。(2)(3)は「わる数の□個分」をわられる数とくらべる</td><td>わり算の表／わる数の8個分の図／線分図</td></tr>
+    <tr><td>2 (1)〜(3)</td><td>ライト28個のデジタル時計。点灯する本数</td><td>A 7 / B 7+7</td><td>「図3」→ 数字の下に本数を書く。「00:00から23:59まで」→ 位ごとに入る数字を図2に書く</td><td>本数を書いた図3／位ごとの図／場合分けの表</td></tr>
+  </table>
+  <p>取り方: <b>1 (1) と 2 (1) を先に確実に</b>。2 (2)(3) は、(1) で書いた本数を使う数え上げ。表が書ければ取れる。1 (2)(3) は「商は7で止まる」に気づけるかで分かれる。受験者平均41.9点、合格者平均52.1点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 5△10、5△30、5△60 を計算する <span class="type">A・2点×3｜約束記号（商と余り）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>割ったときの商をa△b</b>」と「<b>余りをa▼b</b>」。△の横に「商」、▼の横に「余り」と直して書く → 「かけた数÷たした数」の商を3回出すと決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>例は「24を10で割った商は2で余りは4」。6△4＝2 と 6▼4＝4 はここから出ている。<b>わられる数はかけ算、わる数はたし算</b>。</li>
+    <li>商は「わる数が何回入るか」。余りは「入りきらずに残った数」。余りはわる数より小さい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>問題文の記号の横にメモを書く。△＝商。▼＝余り。</li>
+    <li>わり算を表にならべる。列は「b」「5×b（わられる数）」「5＋b（わる数）」「わり算」「5△b（商）」。
+<table>
+  <tr><th>b</th><th>5×b（わられる数）</th><th>5＋b（わる数）</th><th>わり算</th><th>5△b（商）</th></tr>
+  <tr><td>10</td><td>50</td><td>15</td><td>50÷15＝3 余り5</td><td><b>3</b></td></tr>
+  <tr><td>30</td><td>150</td><td>35</td><td>150÷35＝4 余り10</td><td><b>4</b></td></tr>
+  <tr><td>60</td><td>300</td><td>65</td><td>300÷65＝4 余り40</td><td><b>4</b></td></tr>
+</table></li>
+    <li>確かめ。15×3＋5＝50。35×4＋10＝150。65×4＋40＝300。</li>
+    <li>落としやすい所は、△と▼の取りちがえ。答えに書くのは商の 3, 4, 4。余りの 5, 10, 40 は書かない。</li>
+  </ol>
+  <div class="ans">答え：5△10＝3、5△30＝4、5△60＝4</div>
+  <div class="tip">コツ：bを30から60に大きくしても、商は4のまま。「どこまで大きくなるか」が (2) の入口になる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 8△c のうち、もっとも大きいもの <span class="type">B・7点｜約束記号（商はどこまで大きくなるか）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>いろいろな整数にかえて</b>」と「<b>もっとも大きいもの</b>」。8△cを「8×c÷（8＋c）の商」に直して書く → cを大きくした表を置くと、商は7で止まると決まる。(1)で 5△30 も 5△60 も4のまま、と気づけたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>商が8になるのは、わる数の8個分が、わられる数の中に入るとき。たとえば 40÷5 は、5の8個分がちょうど40。だから商が8。</li>
+    <li>わる数（8＋c）の8個分は、8×8 と 8×c の合計。つまり <b>8×c より64大きい</b>。c＝100 なら 108×8＝864。8×100＝800 より64大きい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>cを大きくしながら表を書く。列は「c」「8×c」「8＋c」「わり算」「8△c」。
+<table>
+  <tr><th>c</th><th>8×c（わられる数）</th><th>8＋c（わる数）</th><th>わり算</th><th>8△c（商）</th></tr>
+  <tr><td>1</td><td>8</td><td>9</td><td>8÷9＝0 余り8</td><td>0</td></tr>
+  <tr><td>8</td><td>64</td><td>16</td><td>64÷16＝4</td><td>4</td></tr>
+  <tr><td>24</td><td>192</td><td>32</td><td>192÷32＝6</td><td>6</td></tr>
+  <tr><td>56</td><td>448</td><td>64</td><td>448÷64＝7</td><td><b>7</b></td></tr>
+  <tr><td>100</td><td>800</td><td>108</td><td>800÷108＝7 余り44</td><td><b>7</b></td></tr>
+  <tr><td>1000</td><td>8000</td><td>1008</td><td>8000÷1008＝7 余り944</td><td><b>7</b></td></tr>
+</table></li>
+    <li>商は7で止まっている。8になることがあるかを、図で確かめる。
+<svg viewBox="0 0 360 150" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="c＝100のとき。わられる数 8×100＝800 と、わる数108の8個分 864 をくらべる。8個分のほうが64大きい">
+<g font-family="sans-serif" font-size="12" fill="#222">
+<text x="6" y="14">c＝100 のとき（わる数は 8＋100＝108）</text>
+<rect x="14" y="24" width="281.5" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/>
+<text x="150" y="41" text-anchor="middle">わられる数 8×100＝800</text>
+<rect x="14" y="62" width="304" height="24" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<rect x="295.5" y="62" width="22.5" height="24" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.5"/>
+<line x1="52" y1="62" x2="52" y2="86" stroke="#222" stroke-width="0.6"/>
+<line x1="90" y1="62" x2="90" y2="86" stroke="#222" stroke-width="0.6"/>
+<line x1="128" y1="62" x2="128" y2="86" stroke="#222" stroke-width="0.6"/>
+<line x1="166" y1="62" x2="166" y2="86" stroke="#222" stroke-width="0.6"/>
+<line x1="204" y1="62" x2="204" y2="86" stroke="#222" stroke-width="0.6"/>
+<line x1="242" y1="62" x2="242" y2="86" stroke="#222" stroke-width="0.6"/>
+<line x1="280" y1="62" x2="280" y2="86" stroke="#222" stroke-width="0.6"/>
+<text x="33" y="78" text-anchor="middle" font-size="10" fill="#555">108</text>
+<text x="71" y="78" text-anchor="middle" font-size="10" fill="#555">108</text>
+<text x="109" y="78" text-anchor="middle" font-size="10" fill="#555">108</text>
+<text x="147" y="78" text-anchor="middle" font-size="10" fill="#555">108</text>
+<text x="185" y="78" text-anchor="middle" font-size="10" fill="#555">108</text>
+<text x="223" y="78" text-anchor="middle" font-size="10" fill="#555">108</text>
+<text x="261" y="78" text-anchor="middle" font-size="10" fill="#555">108</text>
+<text x="306.7" y="79" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-size="11">64</text>
+<text x="14" y="102">わる数108の8個分 108×8＝864</text>
+<line x1="295.5" y1="18" x2="295.5" y2="92" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="6" y="124" fill="#d32f2f">8個分は、わられる数より64大きい</text>
+<text x="6" y="142" fill="#d32f2f">→ 108は800の中に8回は入らない（商は7まで）</text>
+</g></svg>
+図：c＝100 のとき。上がわられる数。下がわる数108の8個分。8個分のほうが64長い。</li>
+    <li>cがいくつでも、わる数の8個分は 8×c より64大きい。わられる数の中に8回は入らない。だから<b>商は8にならない</b>。</li>
+    <li>声教の解説は、同じことを逆数で確かめている。8×c÷（8＋c）をひっくり返すと 1/c＋1/8。これは 1/8 より大きい。だから、もとの数は8より小さい。</li>
+    <li>7は、表の c＝56 で実際に出ている。いちばん大きいのは 7。</li>
+  </ol>
+  <div class="ans">答え：7</div>
+  <div class="tip">コツ：「わる数の□個分」をわられる数とくらべると、商がどこで止まるかが分かる。5△b は4まで。3△d は2まで。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 3▼d＝3 となる d を3つ <span class="type">B・7点｜約束記号（商で場合分け）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3▼d＝3</b>」と「<b>全部で3つ</b>」。▼を余りに直して「3×d＝（3＋d）×商＋3」と書く → 商は (2) と同じ考えで 0, 1, 2 の3つだけ。商ごとにdが1つ決まる。(2)が解けていれば続けて取れる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>わり算の確かめの式は「<b>わられる数＝わる数×商＋余り</b>」。例の 24÷10＝2 余り4 なら、24＝10×2＋4。</li>
+    <li>わる数（3＋d）の3個分は、9 と 3×d の合計。3×d より9大きい。だから商は3にならない。商は 0, 1, 2 のどれか。</li>
+    <li>余りはわる数より小さい。わる数の 3＋d は4以上。余り3は、どのdでも当てはまる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「3▼d＝3」を確かめの式に直す。3×d＝（3＋d）×商＋3。</li>
+    <li>商は 0, 1, 2 の3通り。「全部で3つ」と数が合う。商ごとに表を書く。
+<table>
+  <tr><th>商</th><th>確かめの式</th><th>dの個数でくらべる</th><th>d</th><th>もとのわり算</th></tr>
+  <tr><td>0</td><td>3×d＝3</td><td>dの3個分＝3</td><td><b>1</b></td><td>3÷4＝0 余り3</td></tr>
+  <tr><td>1</td><td>3×d＝（3＋d）×1＋3</td><td>dの2個分＝6</td><td><b>3</b></td><td>9÷6＝1 余り3</td></tr>
+  <tr><td>2</td><td>3×d＝（3＋d）×2＋3</td><td>dの1個分＝9</td><td><b>9</b></td><td>27÷12＝2 余り3</td></tr>
+</table></li>
+    <li>商が1と2のときは、線分図を書く。上と下で同じ長さのdを消す。残りがdの大きさになる。
+<svg viewBox="0 0 360 196" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="線分図。商が1のとき、dの3個分は dの1個分と3と余り3。だからdの2個分が6。商が2のとき、dの3個分は dの2個分と3が2つと余り3。だからdの1個分が9">
+<g font-family="sans-serif" font-size="12" fill="#222">
+<text x="6" y="14">商が1のとき</text>
+<text x="112" y="37" text-anchor="end" font-size="11">3×d</text>
+<rect x="118" y="22" width="54" height="20" fill="#dbe9ff" stroke="#222" stroke-width="1.1"/>
+<text x="145.0" y="37" text-anchor="middle" fill="#222">d</text>
+<rect x="172" y="22" width="54" height="20" fill="#dbe9ff" stroke="#222" stroke-width="1.1"/>
+<text x="199.0" y="37" text-anchor="middle" fill="#222">d</text>
+<rect x="226" y="22" width="54" height="20" fill="#dbe9ff" stroke="#222" stroke-width="1.1"/>
+<text x="253.0" y="37" text-anchor="middle" fill="#222">d</text>
+<text x="112" y="63" text-anchor="end" font-size="11">（3＋d）×1＋余り3</text>
+<rect x="118" y="48" width="54" height="20" fill="#dbe9ff" stroke="#222" stroke-width="1.1"/>
+<text x="145.0" y="63" text-anchor="middle" fill="#222">d</text>
+<rect x="172" y="48" width="54" height="20" fill="#ffe0b2" stroke="#222" stroke-width="1.1"/>
+<text x="199.0" y="63" text-anchor="middle" fill="#222">3</text>
+<rect x="226" y="48" width="54" height="20" fill="#c8e6c9" stroke="#222" stroke-width="1.1"/>
+<text x="253.0" y="63" text-anchor="middle" fill="#222">余り3</text>
+<text x="118" y="86" fill="#d32f2f" font-weight="bold">dの2個分＝3＋3＝6 → d＝3</text>
+<text x="6" y="112">商が2のとき</text>
+<text x="112" y="135" text-anchor="end" font-size="11">3×d</text>
+<rect x="118" y="120" width="54" height="20" fill="#dbe9ff" stroke="#222" stroke-width="1.1"/>
+<text x="145.0" y="135" text-anchor="middle" fill="#222">d</text>
+<rect x="172" y="120" width="54" height="20" fill="#dbe9ff" stroke="#222" stroke-width="1.1"/>
+<text x="199.0" y="135" text-anchor="middle" fill="#222">d</text>
+<rect x="226" y="120" width="54" height="20" fill="#dbe9ff" stroke="#222" stroke-width="1.1"/>
+<text x="253.0" y="135" text-anchor="middle" fill="#222">d</text>
+<text x="112" y="161" text-anchor="end" font-size="11">（3＋d）×2＋余り3</text>
+<rect x="118" y="146" width="54" height="20" fill="#dbe9ff" stroke="#222" stroke-width="1.1"/>
+<text x="145.0" y="161" text-anchor="middle" fill="#222">d</text>
+<rect x="172" y="146" width="54" height="20" fill="#dbe9ff" stroke="#222" stroke-width="1.1"/>
+<text x="199.0" y="161" text-anchor="middle" fill="#222">d</text>
+<rect x="226" y="146" width="18" height="20" fill="#ffe0b2" stroke="#222" stroke-width="1.1"/>
+<text x="235.0" y="161" text-anchor="middle" fill="#222">3</text>
+<rect x="244" y="146" width="18" height="20" fill="#ffe0b2" stroke="#222" stroke-width="1.1"/>
+<text x="253.0" y="161" text-anchor="middle" fill="#222">3</text>
+<rect x="262" y="146" width="18" height="20" fill="#c8e6c9" stroke="#222" stroke-width="1.1"/>
+<text x="271.0" y="161" text-anchor="middle" fill="#222">3</text>
+<text x="118" y="184" fill="#d32f2f" font-weight="bold">dの1個分＝3＋3＋3＝9 → d＝9</text>
+<line x1="172" y1="18" x2="172" y2="72" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="226" y1="116" x2="226" y2="170" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+</g></svg>
+図：上が 3×d。下が「わる数×商＋余り3」。青い破線の左は、上下で同じ長さ。</li>
+    <li>3つとも、もとのわり算で余りが3になった。dは 1, 3, 9。</li>
+  </ol>
+  <div class="ans">答え：1、3、9</div>
+  <div class="tip">コツ：余りの問題は「わられる数＝わる数×商＋余り」に直す。商が何通りあるかを先に決めると、場合分けの数が決まる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 点灯するライトがもっとも多い時刻 <span class="type">A・7点｜条件の整理（位ごとに最多の数字）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は「<b>図3</b>」と「<b>00:00から23:59まで</b>」。図3の正体を1行＝数字の下に点灯の本数を書く。位ごとに入る数字も図2に置く → 位ごとに本数がいちばん多い数字を選ぶと決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>4つの位は、入る数字がちがう。<b>時の十の位は 0, 1, 2</b>。分の十の位は 0〜5。一の位は 0〜9。</li>
+    <li>時の十の位が2のとき、時の一の位は 0〜3 だけ。24時や28時はない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図3の数字の下に、黒いライトの本数を書く。
+<svg viewBox="0 0 360 226" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図3の数字の下に、点灯するライトの本数を書いたもの。0は6本、1は2本、2は5本、3は5本、4は4本、5は5本、6は6本、7は4本、8は7本、9は6本">
+<g font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">
+<text x="39" y="16">「0」</text>
+<rect x="27.0" y="24.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="22.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="51.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="27.0" y="51.5" width="24.0" height="5.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="22.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="51.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="27.0" y="79.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<text x="39" y="102" fill="#d32f2f" font-weight="bold" font-size="14">6本</text>
+<text x="107" y="16">「1」</text>
+<rect x="95.0" y="24.0" width="24.0" height="5.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="90.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="119.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="95.0" y="51.5" width="24.0" height="5.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="90.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="119.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="95.0" y="79.0" width="24.0" height="5.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<text x="107" y="102" fill="#d32f2f" font-weight="bold" font-size="14">2本</text>
+<text x="175" y="16">「2」</text>
+<rect x="163.0" y="24.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="158.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="187.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="163.0" y="51.5" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="158.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="187.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="163.0" y="79.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<text x="175" y="102" fill="#d32f2f" font-weight="bold" font-size="14">5本</text>
+<text x="243" y="16">「3」</text>
+<rect x="231.0" y="24.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="226.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="255.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="231.0" y="51.5" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="226.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="255.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="231.0" y="79.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<text x="243" y="102" fill="#d32f2f" font-weight="bold" font-size="14">5本</text>
+<text x="311" y="16">「4」</text>
+<rect x="299.0" y="24.0" width="24.0" height="5.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="294.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="323.0" y="29.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="299.0" y="51.5" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="294.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="323.0" y="57.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="299.0" y="79.0" width="24.0" height="5.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<text x="311" y="102" fill="#d32f2f" font-weight="bold" font-size="14">4本</text>
+<text x="39" y="128">「5」</text>
+<rect x="27.0" y="136.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="22.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="51.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="27.0" y="163.5" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="22.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="51.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="27.0" y="191.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<text x="39" y="214" fill="#d32f2f" font-weight="bold" font-size="14">5本</text>
+<text x="107" y="128">「6」</text>
+<rect x="95.0" y="136.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="90.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="119.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="95.0" y="163.5" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="90.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="119.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="95.0" y="191.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<text x="107" y="214" fill="#d32f2f" font-weight="bold" font-size="14">6本</text>
+<text x="175" y="128">「7」</text>
+<rect x="163.0" y="136.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="158.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="187.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="163.0" y="163.5" width="24.0" height="5.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="158.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="187.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="163.0" y="191.0" width="24.0" height="5.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<text x="175" y="214" fill="#d32f2f" font-weight="bold" font-size="14">4本</text>
+<text x="243" y="128">「8」</text>
+<rect x="231.0" y="136.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="226.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="255.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="231.0" y="163.5" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="226.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="255.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="231.0" y="191.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<text x="243" y="214" fill="#d32f2f" font-weight="bold" font-size="14">7本</text>
+<text x="311" y="128">「9」</text>
+<rect x="299.0" y="136.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="294.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="323.0" y="141.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="299.0" y="163.5" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="294.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#fff" stroke="#bbb" stroke-width="0.8"/>
+<rect x="323.0" y="169.0" width="5.0" height="22.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<rect x="299.0" y="191.0" width="24.0" height="5.0" rx="1.5" fill="#222" stroke="#222" stroke-width="0.8"/>
+<text x="311" y="214" fill="#d32f2f" font-weight="bold" font-size="14">6本</text>
+</g></svg>
+図：図3に本数を書きこんだもの。いちばん多いのは8の7本。次は 0, 6, 9 の6本。</li>
+    <li>図2の4つの位に、入る数字を書く。その中で本数がいちばん多い数字を選ぶ。
+<svg viewBox="0 0 360 150" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="位ごとに入る数字。時の十の位は0,1,2、時の一の位は0〜9、分の十の位は0〜5、分の一の位は0〜9。本数がいちばん多い数字を選ぶと 08:08 で 6＋7＋6＋7＝26本">
+<g font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">
+<text x="126" y="14">時</text><text x="246" y="14">分</text>
+<rect x="78" y="22" width="44" height="50" fill="#fff" stroke="#222" stroke-width="1.3"/>
+<text x="100" y="57" font-size="28" font-weight="bold" fill="#d32f2f">0</text>
+<rect x="130" y="22" width="44" height="50" fill="#fff" stroke="#222" stroke-width="1.3"/>
+<text x="152" y="57" font-size="28" font-weight="bold" fill="#d32f2f">8</text>
+<rect x="198" y="22" width="44" height="50" fill="#fff" stroke="#222" stroke-width="1.3"/>
+<text x="220" y="57" font-size="28" font-weight="bold" fill="#d32f2f">0</text>
+<rect x="250" y="22" width="44" height="50" fill="#fff" stroke="#222" stroke-width="1.3"/>
+<text x="272" y="57" font-size="28" font-weight="bold" fill="#d32f2f">8</text>
+<circle cx="186" cy="38" r="2.5" fill="#222"/><circle cx="186" cy="56" r="2.5" fill="#222"/>
+<text x="100" y="90" fill="#1565c0">0, 1, 2</text>
+<text x="152" y="90" fill="#1565c0">0〜9</text>
+<text x="220" y="90" fill="#1565c0">0〜5</text>
+<text x="272" y="90" fill="#1565c0">0〜9</text>
+<text x="100" y="110" fill="#d32f2f" font-weight="bold">6本</text>
+<text x="152" y="110" fill="#d32f2f" font-weight="bold">7本</text>
+<text x="220" y="110" fill="#d32f2f" font-weight="bold">6本</text>
+<text x="272" y="110" fill="#d32f2f" font-weight="bold">7本</text>
+<text x="36" y="90" font-size="11" fill="#1565c0">入る数字</text>
+<text x="36" y="110" font-size="11" fill="#d32f2f">最多の本数</text>
+<text x="180" y="136" fill="#d32f2f" font-weight="bold">6＋7＋6＋7＝26本</text>
+</g></svg>
+図：青が位ごとに入る数字。赤がその中でいちばん多い本数。</li>
+    <li>時の十の位は 0（6本）、1（2本）、2（5本）。いちばん多いのは0。分の十の位も、0〜5 の中では0の6本がいちばん多い。一の位は2つとも8の7本。</li>
+    <li>時刻は 08:08。本数は 6＋7＋6＋7＝<b>26本</b>。08時は実際にある時刻。</li>
+    <li>落としやすい所は、十の位にも8を置くこと。88:88 という時刻はない。入る数字を先に書くと防げる。</li>
+  </ol>
+  <div class="ans">答え：08：08</div>
+  <div class="tip">コツ：図3に書いた本数は (2)(3) でも使う。答えは「02:01」の形に合わせて「08:08」と書く。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> ライトが12本点灯する時刻は何通り <span class="type">B・7点｜条件の整理（本数の組→場合分け）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>12本点灯</b>」と「<b>何通り</b>」。12本を「4つの数字の本数の和」に直して書く → いちばん少ない「1」（2本）が4つで8本。残り4本の増やし方は2つだけと決まる。(1)の本数が書けていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>4つとも「1」なら 2×4＝8本。12本まで<b>あと4本</b>。「1」を4に変えると2本増える。0に変えると4本増える。</li>
+    <li>位ごとに入る数字は (1) と同じ。時の十の位は 0, 1, 2。分の十の位は 0〜5。6, 7, 9 は十の位に入らない。4は時の十の位に入らない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>本数ごとに数字をまとめた表を書く。3本の数字はない。
+<table>
+  <tr><th>本数</th><th>2本</th><th>4本</th><th>5本</th><th>6本</th><th>7本</th></tr>
+  <tr><td>数字</td><td>1</td><td>4, 7</td><td>2, 3, 5</td><td>0, 6, 9</td><td>8</td></tr>
+  <tr><td>「1」から増える本数</td><td>0</td><td>＋2</td><td>＋3</td><td>＋4</td><td>＋5</td></tr>
+</table></li>
+    <li>あと4本の増やし方をさがす。1か所で＋4。または2か所で＋2ずつ。＋3を使うと残りは＋1。＋1になる数字はない。だから<b>組は2つだけ</b>。
+<svg viewBox="0 0 360 150" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="12本になる本数の組は2つ。アは2本・2本・2本・6本で、数字は1,1,1と0か6か9。イは2本・2本・4本・4本で、数字は1,1と4か7が2つ">
+<g font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">
+<text x="18" y="34" font-size="14" font-weight="bold">㋐</text>
+<rect x="40" y="10" width="60" height="36" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="70" y="34" font-size="14">1</text>
+<text x="70" y="62" fill="#d32f2f" font-weight="bold">2本</text>
+<rect x="108" y="10" width="60" height="36" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="138" y="34" font-size="14">1</text>
+<text x="138" y="62" fill="#d32f2f" font-weight="bold">2本</text>
+<rect x="176" y="10" width="60" height="36" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="206" y="34" font-size="14">1</text>
+<text x="206" y="62" fill="#d32f2f" font-weight="bold">2本</text>
+<rect x="244" y="10" width="60" height="36" fill="#ffe0b2" stroke="#222" stroke-width="1.2"/>
+<text x="274" y="34" font-size="14">0・6・9</text>
+<text x="274" y="62" fill="#d32f2f" font-weight="bold">6本</text>
+<text x="334" y="62" fill="#d32f2f" font-weight="bold">＝12本</text>
+<text x="18" y="106" font-size="14" font-weight="bold">㋑</text>
+<rect x="40" y="82" width="60" height="36" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="70" y="106" font-size="14">1</text>
+<text x="70" y="134" fill="#d32f2f" font-weight="bold">2本</text>
+<rect x="108" y="82" width="60" height="36" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="138" y="106" font-size="14">1</text>
+<text x="138" y="134" fill="#d32f2f" font-weight="bold">2本</text>
+<rect x="176" y="82" width="60" height="36" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/>
+<text x="206" y="106" font-size="14">4・7</text>
+<text x="206" y="134" fill="#d32f2f" font-weight="bold">4本</text>
+<rect x="244" y="82" width="60" height="36" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/>
+<text x="274" y="106" font-size="14">4・7</text>
+<text x="274" y="134" fill="#d32f2f" font-weight="bold">4本</text>
+<text x="334" y="134" fill="#d32f2f" font-weight="bold">＝12本</text>
+</g></svg>
+図：㋐は「1」が3つと、0・6・9 のどれか。㋑は「1」が2つと、4・7 が2つ。</li>
+    <li>㋐を数える。「1でない数字」をどの位に置くかで表にする。
+<table>
+  <tr><th>1でない数字の位</th><th>入る数字</th><th>時刻</th><th>通り</th></tr>
+  <tr><td>時の十の位</td><td>0だけ（6, 9は入らない）</td><td>01:11</td><td>1</td></tr>
+  <tr><td>時の一の位</td><td>0, 6, 9</td><td>10:11、16:11、19:11</td><td>3</td></tr>
+  <tr><td>分の十の位</td><td>0だけ（6, 9は入らない）</td><td>11:01</td><td>1</td></tr>
+  <tr><td>分の一の位</td><td>0, 6, 9</td><td>11:10、11:16、11:19</td><td>3</td></tr>
+  <tr><td colspan="3">㋐の合計</td><td><b>8</b></td></tr>
+</table></li>
+    <li>㋑を数える。時の十の位には4も7も入らない。だから時の十の位は「1」。もう1つの「1」の位で表にする。
+<table>
+  <tr><th>もう1つの「1」の位</th><th>残りの2か所</th><th>時刻</th><th>通り</th></tr>
+  <tr><td>時の一の位</td><td>分の十の位は4だけ。分の一の位は4か7</td><td>11:44、11:47</td><td>2</td></tr>
+  <tr><td>分の十の位</td><td>時の一の位は4か7。分の一の位も4か7</td><td>14:14、14:17、17:14、17:17</td><td>4</td></tr>
+  <tr><td>分の一の位</td><td>時の一の位は4か7。分の十の位は4だけ</td><td>14:41、17:41</td><td>2</td></tr>
+  <tr><td colspan="3">㋑の合計</td><td><b>8</b></td></tr>
+</table></li>
+    <li>合わせて 8＋8＝16通り。</li>
+  </ol>
+  <div class="ans">答え：16通り</div>
+  <div class="tip">コツ：分の十の位は 0〜5。6, 7, 9 は入らない。数える前に、位ごとに入る数字を図に書いておくと、74分や61分を数えずにすむ。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 1分後にライトがもっとも多く増える時刻 <span class="type">B・7点｜条件の整理（進み方ごとの増える本数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1分後</b>」と「<b>もっとも多く増える</b>」。「1分後」を「数字が1つ進む」に直して、増える本数を表に置く → ＋3は「1→2」「7→8」だけ。59分で2か所が同時に増える時刻と決まる。表が書ければ手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1分たつと、分の一の位が1つ進む。9のときは0にもどる。そのとき、となりの位が1つ進む（くり上がり）。</li>
+    <li>分の十の位は、5の次が0。59分の次は00分。このとき時も1つ進む。</li>
+    <li>増える本数は「あとの本数−前の本数」。1→2 は 5−2＝3本。7→8 は 7−4＝3本。<b>3本増えるのはこの2つだけ</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>進み方ごとに、増える本数を表にする。右はしの 5→0 は、分の十の位（59分→00分）で使う。
+<table>
+  <tr><th>進み方</th><th>0→1</th><th>1→2</th><th>2→3</th><th>3→4</th><th>4→5</th><th>5→6</th><th>6→7</th><th>7→8</th><th>8→9</th><th>9→0</th><th>5→0</th></tr>
+  <tr><td>本数</td><td>6→2</td><td>2→5</td><td>5→5</td><td>5→4</td><td>4→5</td><td>5→6</td><td>6→4</td><td>4→7</td><td>7→6</td><td>6→6</td><td>5→6</td></tr>
+  <tr><td>増える本数</td><td>−4</td><td><b>＋3</b></td><td>0</td><td>−1</td><td>＋1</td><td>＋1</td><td>−2</td><td><b>＋3</b></td><td>−1</td><td>0</td><td>＋1</td></tr>
+</table></li>
+    <li>いくつの位が進むかで場合を分ける。進む位ごとに、増える本数を下に書く。
+<svg viewBox="0 0 360 262" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="1分後に進む位と増える本数。①一の位だけ進むと最大で3本増える。②19分から20分は3本増える。③時の一の位が1で59分のとき、時が3本、分が1本で合わせて4本増える。④19時59分から20時00分も合わせて4本増える">
+<g font-family="sans-serif" font-size="12" fill="#222">
+<text x="8" y="14" font-size="11">① 分の一の位だけ進む</text>
+<rect x="8" y="20" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="34" y="20" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="70" y="20" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="96" y="20" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="108" y="39" text-anchor="middle" font-size="15" fill="#222">1</text>
+<circle cx="64" cy="29" r="1.6" fill="#222"/><circle cx="64" cy="38" r="1.6" fill="#222"/>
+<rect x="8" y="52" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="34" y="52" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="70" y="52" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="96" y="52" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="108" y="71" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">2</text>
+<circle cx="64" cy="61" r="1.6" fill="#222"/><circle cx="64" cy="70" r="1.6" fill="#222"/>
+<path d="M124,33 Q136,49 124,65" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<polygon points="122,68 123,60 129,64" fill="#1565c0"/>
+<text x="134" y="53" font-size="10" fill="#1565c0">1分後</text>
+<text x="108" y="92" text-anchor="middle" font-size="10" fill="#d32f2f">＋3</text>
+<text x="8" y="110" font-weight="bold" fill="#222">全体 ＋3（7→8も）</text>
+<text x="190" y="14" font-size="11">② 19分→20分</text>
+<rect x="190" y="20" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="216" y="20" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="252" y="20" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="264" y="39" text-anchor="middle" font-size="15" fill="#222">1</text>
+<rect x="278" y="20" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="290" y="39" text-anchor="middle" font-size="15" fill="#222">9</text>
+<circle cx="246" cy="29" r="1.6" fill="#222"/><circle cx="246" cy="38" r="1.6" fill="#222"/>
+<rect x="190" y="52" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="216" y="52" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="252" y="52" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="264" y="71" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">2</text>
+<rect x="278" y="52" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="290" y="71" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">0</text>
+<circle cx="246" cy="61" r="1.6" fill="#222"/><circle cx="246" cy="70" r="1.6" fill="#222"/>
+<path d="M306,33 Q318,49 306,65" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<polygon points="304,68 305,60 311,64" fill="#1565c0"/>
+<text x="316" y="53" font-size="10" fill="#1565c0">1分後</text>
+<text x="264" y="92" text-anchor="middle" font-size="10" fill="#d32f2f">＋3</text>
+<text x="290" y="92" text-anchor="middle" font-size="10" fill="#d32f2f">±0</text>
+<text x="190" y="110" font-weight="bold" fill="#222">全体 ＋3</text>
+<text x="8" y="146" font-size="11">③ 59分で時の一の位が1</text>
+<rect x="8" y="152" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="34" y="152" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="46" y="171" text-anchor="middle" font-size="15" fill="#222">1</text>
+<rect x="70" y="152" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="82" y="171" text-anchor="middle" font-size="15" fill="#222">5</text>
+<rect x="96" y="152" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="108" y="171" text-anchor="middle" font-size="15" fill="#222">9</text>
+<circle cx="64" cy="161" r="1.6" fill="#222"/><circle cx="64" cy="170" r="1.6" fill="#222"/>
+<rect x="8" y="184" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<rect x="34" y="184" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="46" y="203" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">2</text>
+<rect x="70" y="184" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="82" y="203" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">0</text>
+<rect x="96" y="184" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="108" y="203" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">0</text>
+<circle cx="64" cy="193" r="1.6" fill="#222"/><circle cx="64" cy="202" r="1.6" fill="#222"/>
+<path d="M124,165 Q136,181 124,197" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<polygon points="122,200 123,192 129,196" fill="#1565c0"/>
+<text x="134" y="185" font-size="10" fill="#1565c0">1分後</text>
+<text x="46" y="224" text-anchor="middle" font-size="10" fill="#d32f2f">＋3</text>
+<text x="82" y="224" text-anchor="middle" font-size="10" fill="#d32f2f">＋1</text>
+<text x="108" y="224" text-anchor="middle" font-size="10" fill="#d32f2f">±0</text>
+<text x="8" y="242" font-weight="bold" fill="#d32f2f">全体 ＋4（7→8も）</text>
+<text x="190" y="146" font-size="11">④ 19:59 → 20:00</text>
+<rect x="190" y="152" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="202" y="171" text-anchor="middle" font-size="15" fill="#222">1</text>
+<rect x="216" y="152" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="228" y="171" text-anchor="middle" font-size="15" fill="#222">9</text>
+<rect x="252" y="152" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="264" y="171" text-anchor="middle" font-size="15" fill="#222">5</text>
+<rect x="278" y="152" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="290" y="171" text-anchor="middle" font-size="15" fill="#222">9</text>
+<circle cx="246" cy="161" r="1.6" fill="#222"/><circle cx="246" cy="170" r="1.6" fill="#222"/>
+<rect x="190" y="184" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="202" y="203" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">2</text>
+<rect x="216" y="184" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="228" y="203" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">0</text>
+<rect x="252" y="184" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="264" y="203" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">0</text>
+<rect x="278" y="184" width="24" height="26" fill="#fff" stroke="#222" stroke-width="1.1"/>
+<text x="290" y="203" text-anchor="middle" font-size="15" fill="#d32f2f" font-weight="bold">0</text>
+<circle cx="246" cy="193" r="1.6" fill="#222"/><circle cx="246" cy="202" r="1.6" fill="#222"/>
+<path d="M306,165 Q318,181 306,197" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<polygon points="304,200 305,192 311,196" fill="#1565c0"/>
+<text x="316" y="185" font-size="10" fill="#1565c0">1分後</text>
+<text x="202" y="224" text-anchor="middle" font-size="10" fill="#d32f2f">＋3</text>
+<text x="228" y="224" text-anchor="middle" font-size="10" fill="#d32f2f">±0</text>
+<text x="264" y="224" text-anchor="middle" font-size="10" fill="#d32f2f">＋1</text>
+<text x="290" y="224" text-anchor="middle" font-size="10" fill="#d32f2f">±0</text>
+<text x="190" y="242" font-weight="bold" fill="#d32f2f">全体 ＋4</text>
+<line x1="4" y1="124" x2="356" y2="124" stroke="#bbb" stroke-width="0.8"/>
+</g></svg>
+図：上の段が今の時刻。下の段が1分後。赤い数字が変わった位。</li>
+    <li>場合ごとに、いちばん多く増えるときを表にまとめる。
+<table>
+  <tr><th>場合</th><th>進む位</th><th>いちばん多く増えるとき</th></tr>
+  <tr><td>① 分の一の位が9以外</td><td>分の一の位だけ</td><td>＋3（1→2、7→8）</td></tr>
+  <tr><td>② 分の一の位が9（59分以外）</td><td>分の十の位。一の位は 9→0</td><td>＋3＋0＝＋3（19分→20分）</td></tr>
+  <tr><td>③ 59分で、時の一の位が9以外（23:59 は⑤）</td><td>分は 5→0 と 9→0。時の一の位</td><td>＋1＋0＋3＝<b>＋4</b>（時の一の位が1か7）</td></tr>
+  <tr><td>④ 09:59 と 19:59</td><td>時の十の位も進む</td><td>09:59 は ＋1−4＝−3。19:59 は ＋1＋3＝<b>＋4</b></td></tr>
+  <tr><td>⑤ 23:59 → 00:00</td><td>4つとも変わる</td><td>2→0 で＋1、3→0 で＋1、分で＋1。合わせて＋3</td></tr>
+</table></li>
+    <li>いちばん多いのは＋4。③は時の一の位が1か7。時は 01, 07, 11, 17, 21。27時はない。④は 19:59。全部で6つ。</li>
+    <li>確かめ。01:59 は 6＋2＋5＋6＝19本。02:00 は 6＋5＋6＋6＝23本。4本増えている。</li>
+  </ol>
+  <div class="ans">答え：01：59、07：59、11：59、17：59、19：59、21：59</div>
+  <div class="tip">コツ：「すべて答えなさい」は、19:59 のように時の十の位が進む場合まで調べる合図。くり上がる位が多いほど、増える場所も多い。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ</h2>
+  <ul>
+    <li>新しい記号や図が出たら、横に意味を書く。△の横に「商」。図3の数字の下に本数。</li>
+    <li>「もっとも大きい」「もっとも多い」は、小さい表を書いて、どこで止まるかを見る。</li>
+    <li>時刻の問題は、位ごとに入る数字を先に図に書く。数えすぎと数え落としを防げる。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（点の移動とグラフ・おうぎ形の転がり・四角すいの体積と切断）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">A 7点／B 45点／C 7点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th><th>描く図・表</th></tr>
+    <tr><td>3 (1)</td><td>長方形の辺を動く2点とグラフ。PがD、QがBに着く時間の差</td><td>B 7</td><td>グラフの折れ目「60」と「PのほうがQより速く」→ 先にかどに着くのはP</td><td>2つの場合の図と表</td></tr>
+    <tr><td>3 (2)</td><td>グラフの あ・い</td><td>B 5＋5</td><td>折れ目＝かどに着いた時 → 時刻を横じくに書く</td><td>かどに着く時刻の表／書きこんだグラフ</td></tr>
+    <tr><td>3 (3)</td><td>面積の差が100cm²になる時</td><td>B 7</td><td>底辺ABが同じ → 「PQ＝10cm」に直す</td><td>すれちがう前と後の図</td></tr>
+    <tr><td>4 (1)</td><td>おうぎ形を転がす。QOの長さ</td><td>B 7</td><td>2つの弧がどちらも6.28cm</td><td>転がるようすの図（2枚）</td></tr>
+    <tr><td>4 (2)</td><td>点Oがえがく線の長さ</td><td>B 7</td><td>回転の中心が変わるたびに1行</td><td>中心・半径・角度の表</td></tr>
+    <tr><td>5 (1)</td><td>四角すいO-KLMNは四角柱の何倍</td><td>A 7</td><td>底面の辺の比 → 角の三角形4つをひく</td><td>真上から見た図／面積の表</td></tr>
+    <tr><td>5 (2)</td><td>高さのまん中で切った切り口</td><td>B 7</td><td>「真ん中の点」＝底面に平行 → 1/2に縮めた形</td><td>四角すいの図</td></tr>
+    <tr><td>5 (3)</td><td>ななめの平面で切った体積</td><td>C 7</td><td>BとDが同じ高さ → BDの方向から見る。本番では後回し</td><td>横から見た図／体積の表</td></tr>
+  </table>
+  <p>取り方: <b>5 (1)を先に確実に</b>。続けて5 (2)は(1)の答えを1/4にするだけ。大問3は、(1)の速さが出れば(2)(3)まで続く。時間をかける価値がある。大問4は図を描く量が多い。3と5のあとに回す。5 (3)は後回し。受験者平均41.9点、合格者平均52.1点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> PがDに着く時間と、QがBに着く時間の差 <span class="type">B・7点｜点の移動とグラフ（折れ目を読む）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→資料問題】グラフの正体を1行書く＝「時間と、2つの三角形の面積の和S」。部品は折れ目の「<b>60</b>」「12.8」と、条件「<b>PのほうがQより速く</b>」。折れ目は点がかどに着いた合図 → 60の所で、先に着いたのがPかQかが決まる。(2)(3)もここから続く。時間をかける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角形の面積と底辺が分かれば、高さは「面積×2÷底辺」で出る。たとえば面積60cm²・底辺20cmなら、60×2÷20＝6cm。</li>
+    <li>グラフの折れ目は、<b>点がかどに着いた時</b>。かどを曲がると、面積の増え方・へり方が変わる。</li>
+    <li>同じ時間に動いた長さの比は、速さの比と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>グラフの正体を書く。Sは、三角形BCQと三角形CDPの面積の和。はじめはPもQもAにいる。どちらの三角形も 24×20÷2＝240cm²。はじめのSは480。</li>
+    <li>最初の折れ目は S＝60。PかQのどちらかが、かどに着いた。2つの場合を図と表でくらべる。
+<svg viewBox="0 0 360 200" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: S＝60の折れ目。Qが先にBに着いた場合と、Pが先にDに着いた場合">
+<text x="30" y="18" font-size="12" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">もしQが先にBに着いたら</text>
+<polygon points="130,40 160,140 160,40" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="40,40 160,40 160,140 40,140" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<circle cx="130" cy="40" r="2.6" fill="#d32f2f"/>
+<circle cx="40" cy="140" r="2.6" fill="#d32f2f"/>
+<text x="27" y="38" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="164" y="38" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="27" y="153" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="164" y="153" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="210" y="18" font-size="12" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">Pが先にDに着いたら</text>
+<polygon points="220,115 220,140 340,140" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="220,40 340,40 340,140 220,140" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<circle cx="340" cy="40" r="2.6" fill="#d32f2f"/>
+<circle cx="220" cy="115" r="2.6" fill="#d32f2f"/>
+<text x="207" y="38" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="344" y="38" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="207" y="153" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="344" y="153" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="125" y="34" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">P</text>
+<text x="45" y="133" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">Q</text>
+<text x="138" y="30" font-size="10" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">6cm</text>
+<text x="101" y="92" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">60cm²</text>
+<line x1="137" y1="88" x2="148" y2="80" stroke="#d32f2f" stroke-width="0.9" stroke-linecap="round"/>
+<text x="30" y="168" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Pは 24−6＝18cm</text>
+<text x="30" y="182" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Qは 20cm</text>
+<text x="30" y="196" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">Pのほうがおそい → 合わない</text>
+<text x="329" y="34" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">P</text>
+<text x="226" y="112" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">Q</text>
+<text x="196" y="131" font-size="10" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">5cm</text>
+<text x="262" y="122" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">60cm²</text>
+<line x1="262" y1="124" x2="246" y2="134" stroke="#d32f2f" stroke-width="0.9" stroke-linecap="round"/>
+<text x="210" y="168" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Pは 24cm</text>
+<text x="210" y="182" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Qは 20−5＝15cm</text>
+<text x="210" y="196" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">Pのほうが速い → 合う</text>
+</svg>
+<table>
+  <tr><th></th><th>Qが先にBに着いた場合</th><th>Pが先にDに着いた場合</th></tr>
+  <tr><td>0になった三角形</td><td>BCQ</td><td>CDP</td></tr>
+  <tr><td>60の三角形</td><td>CDP。PD＝60×2÷20＝6cm</td><td>BCQ。QB＝60×2÷24＝5cm</td></tr>
+  <tr><td>Pが動いた長さ</td><td>24−6＝18cm</td><td>24cm</td></tr>
+  <tr><td>Qが動いた長さ</td><td>20cm</td><td>20−5＝15cm</td></tr>
+  <tr><td>「PのほうがQより速く」</td><td>合わない</td><td><b>合う</b></td></tr>
+</table>
+先に着いたのはP。速さの比は 24：15＝<b>8：5</b>。</li>
+    <li>次に「12.8」の正体を決める。Sがはじめの480にもどった時。480になるのは、2つの三角形がどちらも240の時。三角形CDPは、PがBに着いたあと240。三角形BCQは、QがDに着いたあと240。Pが1周（88cm）してAで止まる時でも、Qは 88×5/8＝55cm しか進んでいない。55cmは、C（44cm）とD（64cm）の間。あとでそろうのはQのほう。だから12.8秒は、QがDに着いた時。</li>
+    <li>QがDに着くまでに動く長さは 20＋24＋20＝64cm。64÷12.8＝5。Qは毎秒5cm。Pは 5×8/5＝8 で、毎秒8cm。</li>
+    <li>PがDに着くのは 24÷8＝3秒後。QがBに着くのは 20÷5＝4秒後。4−3＝1。Pのほうが1秒早い。</li>
+  </ol>
+  <div class="ans">答え：1秒早い</div>
+  <div class="tip">コツ：折れ目の数（60）は「どちらが先に着いたか」を決める材料。両方の場合を書いて、条件に合わないほうを消す。速さの比が出たら、もう1つの数（12.8）で本当の速さにする。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)あ・い</span> グラフの「あ」と「い」 <span class="type">B・5点＋5点｜かどに着く時刻の表</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→資料問題】部品は、平らな所の高さ「<b>あ</b>」と、その左はしの時刻「<b>い</b>」。PとQがかどに着く時刻を、図2の横じくに書きこむ（図に置く）→「い」がどの点の、どのかどの時刻かが決まる。(1)の速さが出ていれば、表を作るだけで取れる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「3つの点が三角形をつくらない場合は、面積は0」。QがBC上にいる間、三角形BCQは0。PがDC上にいる間、三角形CDPは0。</li>
+    <li>底辺と高さが変わらなければ、頂点が動いても面積は同じ。PがBA上を動く間、三角形CDPは底辺CD＝20cm・高さ24cmのままで<b>240cm²</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>かどに着く時刻の表を書く。Pは毎秒8cm、Qは毎秒5cm。
+<table>
+  <tr><th>点</th><th>着くかど</th><th>動いた長さ</th><th>時刻</th></tr>
+  <tr><td>P</td><td>D</td><td>24cm</td><td>3秒</td></tr>
+  <tr><td>P</td><td>C</td><td>44cm</td><td>5.5秒</td></tr>
+  <tr><td>P</td><td>B</td><td>68cm</td><td><b>8.5秒</b></td></tr>
+  <tr><td>P</td><td>A（止まる）</td><td>88cm</td><td>11秒</td></tr>
+  <tr><td>Q</td><td>B</td><td>20cm</td><td>4秒</td></tr>
+  <tr><td>Q</td><td>C</td><td>44cm</td><td>8.8秒</td></tr>
+  <tr><td>Q</td><td>D</td><td>64cm</td><td>12.8秒</td></tr>
+  <tr><td>Q</td><td>A（止まる）</td><td>88cm</td><td>17.6秒</td></tr>
+</table>
+全部がAに着いたら終わり。</li>
+    <li>時刻を図2の横じくに書きこむ。折れ目と1つずつ合わせる。
+<svg viewBox="0 0 360 232" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: 図2のグラフに、PとQがかどに着く時刻を書きこむ">
+<line x1="50" y1="190" x2="350" y2="190" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="50" y1="190" x2="50" y2="18" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="98" y1="171.2" x2="98" y2="190" stroke="#888" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="1.5 3"/>
+<line x1="184" y1="115" x2="184" y2="190" stroke="#888" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="1.5 3"/>
+<line x1="214" y1="115" x2="214" y2="190" stroke="#888" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="1.5 3"/>
+<line x1="270" y1="40" x2="270" y2="190" stroke="#888" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="1.5 3"/>
+<line x1="336" y1="40" x2="336" y2="190" stroke="#888" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="1.5 3"/>
+<line x1="50" y1="171.2" x2="98" y2="171.2" stroke="#888" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="1.5 3"/>
+<line x1="50" y1="115" x2="184" y2="115" stroke="#888" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="1.5 3"/>
+<line x1="50" y1="40" x2="270" y2="40" stroke="#888" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="1.5 3"/>
+<polyline points="50,40 98,171.2 114,190 138,190 184,115 214,115 270,40 336,40" fill="none" stroke="#222" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="50" cy="40" r="2.4" fill="#222"/>
+<circle cx="98" cy="171.2" r="2.4" fill="#222"/>
+<circle cx="114" cy="190" r="2.4" fill="#222"/>
+<circle cx="138" cy="190" r="2.4" fill="#222"/>
+<circle cx="184" cy="115" r="2.4" fill="#222"/>
+<circle cx="214" cy="115" r="2.4" fill="#222"/>
+<circle cx="270" cy="40" r="2.4" fill="#222"/>
+<circle cx="336" cy="40" r="2.4" fill="#222"/>
+<text x="22" y="14" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">S（cm²）</text>
+<text x="34" y="194" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">0</text>
+<text x="32" y="175.2" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">60</text>
+<text x="26" y="44" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">480</text>
+<text x="2" y="119" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">あ＝240</text>
+<text x="98" y="204" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">3</text>
+<text x="114" y="204" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">4</text>
+<text x="138" y="204" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">5.5</text>
+<text x="214" y="204" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">8.8</text>
+<text x="336" y="204" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">17.6</text>
+<text x="184" y="204" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">8.5</text>
+<text x="270" y="204" font-size="11" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">12.8</text>
+<text x="184" y="219" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">い</text>
+<text x="232" y="226" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">時間（秒）</text>
+<text x="58" y="226" font-size="10" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">赤が書きこんだ時刻</text>
+<text x="103" y="166.2" font-size="9.5" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">PがD</text>
+<text x="179" y="109" font-size="9.5" fill="#1565c0" text-anchor="end" font-weight="normal" font-family="sans-serif">PがB</text>
+<text x="219" y="128" font-size="9.5" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">QがC</text>
+<text x="264" y="34" font-size="9.5" fill="#1565c0" text-anchor="end" font-weight="normal" font-family="sans-serif">QがD</text>
+</svg>
+図1: 赤が書きこんだ時刻。横の目もりのはばは、問題の図2と同じで正確ではない。11秒（PがAで止まる）は折れ目にならない。三角形CDPが240のまま変わらないから。</li>
+    <li>「い」は、Sが0から増えて平らになる所。5.5秒から増えているのは三角形CDP（PがCB上を動く）。PがBに着くと増えるのが止まる。だから <b>い＝8.5</b>。</li>
+    <li>8.5秒後のSを出す。
+<svg viewBox="0 0 360 205" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: 8.5秒後。PはBに着き、QはまだBC上。三角形CDPは240">
+<polygon points="240,180 240,30 60,180" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="60,30 240,30 240,180 60,180" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<circle cx="60" cy="180" r="2.6" fill="#d32f2f"/>
+<circle cx="228.8" cy="180" r="2.6" fill="#d32f2f"/>
+<text x="44" y="32" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="245" y="32" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="245" y="194" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="28" y="196" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">B（P）</text>
+<text x="218" y="197" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">Q</text>
+<text x="130" y="20" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">24cm</text>
+<text x="22" y="108" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">20cm</text>
+<text x="148" y="132" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">三角形CDP</text>
+<text x="148" y="150" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">24×20÷2＝240</text>
+<text x="262" y="70" font-size="12" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">8.5秒後</text>
+<text x="262" y="90" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">PがBに着く</text>
+<text x="262" y="108" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">QはBC上</text>
+<text x="262" y="124" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">→ 三角形BCQは0</text>
+</svg>
+図2: QはまだBC上。三角形BCQは0。三角形CDPは 24×20÷2＝240。だから あ＝240。</li>
+    <li>確かめ。8.8秒でQがCを曲がる。そこから三角形BCQが増える。12.8秒で240になり、Sは 240＋240＝480。グラフの形と合う。</li>
+  </ol>
+  <div class="ans">答え：あ 240／い 8.5</div>
+  <div class="tip">コツ：点が2つ動く問題は、先に「かどに着く時刻の表」を作る。グラフの折れ目と1つずつ合わせると、空らんの正体が分かる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 三角形ABPと三角形ABQの面積の差が100cm² <span class="type">B・7点｜向かい合って進む2点（間が10cm）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>点Pが辺BC上</b>」と「<b>面積の差が100cm²</b>」。2つの三角形は、底辺がどちらもAB＝20cm → 差100は「PQ＝10cm」に直して書く。「すべて」とあるから、すれちがう前と後の2回と決まる。PQ＝10cmに直せたら手をつける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>底辺が同じ2つの三角形の面積の差は、高さの差で決まる。底辺20cmで差が100cm²なら、高さの差は 100×2÷20＝<b>10cm</b>。</li>
+    <li>向かい合って進む2つの点は、1秒に「速さの和」ずつ近づく。ここでは 8＋5＝13cm ずつ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(2)の表を見る。PがBC上にいるのは5.5秒から8.5秒。QがBC上にいるのは4秒から8.8秒。この間は2点ともBC上。</li>
+    <li>三角形ABPと三角形ABQは、どちらも底辺がAB。高さはBPとBQ。面積の差は、三角形APQの面積と同じ。20×PQ÷2＝100。PQ＝10cm。
+<svg viewBox="0 0 360 200" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: PQ＝10cmになるのは、すれちがう前と後の2回">
+<polygon points="40,40 90,140 140,140" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="40,40 160,40 160,140 40,140" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<circle cx="140" cy="140" r="2.6" fill="#d32f2f"/>
+<circle cx="90" cy="140" r="2.6" fill="#d32f2f"/>
+<text x="30" y="18" font-size="12" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">1回目（すれちがう前）</text>
+<text x="27" y="38" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="164" y="38" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="27" y="153" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="164" y="153" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="90" y="154" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">Q→</text>
+<text x="140" y="154" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">←P</text>
+<text x="115" y="170" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">10cm</text>
+<text x="115" y="132" font-size="11" fill="#222" text-anchor="middle" font-weight="bold" font-family="sans-serif">100</text>
+<text x="30" y="190" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">和は 88−10＝78cm</text>
+<text x="10" y="95" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">20cm</text>
+<polygon points="220,40 308.5,140 258.5,140" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="220,40 340,40 340,140 220,140" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<circle cx="258.5" cy="140" r="2.6" fill="#d32f2f"/>
+<circle cx="308.5" cy="140" r="2.6" fill="#d32f2f"/>
+<text x="210" y="18" font-size="12" fill="#222" text-anchor="start" font-weight="bold" font-family="sans-serif">2回目（すれちがった後）</text>
+<text x="207" y="38" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="344" y="38" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="207" y="153" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="344" y="153" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="308.5" y="154" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">Q→</text>
+<text x="258.5" y="154" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">←P</text>
+<text x="283.5" y="170" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">10cm</text>
+<text x="283.5" y="132" font-size="11" fill="#222" text-anchor="middle" font-weight="bold" font-family="sans-serif">100</text>
+<text x="210" y="190" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">和は 88＋10＝98cm</text>
+</svg>
+図: PQ＝10cmになるのは、すれちがう前と後の2回。</li>
+    <li>PとQは、Aから反対向きに出発した。長方形の1周は（20＋24）×2＝88cm。1回目は、2点が動いた長さの和が 88−10＝78cm。78÷13＝<b>6秒後</b>。</li>
+    <li>2回目は、和が 88＋10＝98cm。98÷13＝<b>7 7/13秒後</b>。</li>
+    <li>確かめ。6秒も7 7/13秒も、5.5秒と8.5秒の間に入っている。6秒後は、BP＝68−48＝20cm、BQ＝30−20＝10cm。差は10cmで合う。</li>
+  </ol>
+  <div class="ans">答え：6秒後・7 7/13秒後</div>
+  <div class="tip">コツ：「差が100」は、PがQより右にある時と左にある時の2回ある。「すべて答えなさい」とあったら、反対側の場合も書く。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 転がすのを止めたときのQOの長さ <span class="type">B・7点｜おうぎ形の転がり（弧の長さが同じ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>すべらないように</b>」と「<b>半径QRと再び重なったところ</b>」。2つの弧の長さを計算して図に置く。どちらも6.28cm → 最後はQRの上を弧が6.28cm進み、半径6cmが倒れると決まる。弧が同じ長さと気づけたら手をつける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>おうぎ形の弧の長さ＝半径×2×3.14×中心角/360。半径6cm・60°なら 6×2×3.14×60/360＝6.28cm。</li>
+    <li>すべらずに転がるとき、ふれ合った所の長さは同じ。弧が直線の上を転がると、<b>弧の長さと同じだけ</b>進む。</li>
+    <li>かどが引っかかっている間は、そのかどを中心に回る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>弧の長さを2つ出して、図に書く。Aは 6×2×3.14×60/360＝6.28cm。Bは 12×2×3.14×30/360＝6.28cm。同じ長さ。</li>
+    <li>説明のために名前をつける。Aの弧のPでないほうのはしをU、Bの右下のかどをTとする。転がるようすを順に描く。
+<svg viewBox="0 0 360 272" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: おうぎ形Aが転がるようす（❶から❻）">
+<path d="M58,178 L214,178 A156,156 0 0,0 193.1,100 Z" fill="#f4f4f4" stroke="#222" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M125.5,139 L58,100 A78,78 0 0,0 58,178 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M125.5,139 L193.1,100 A78,78 0 0,0 125.5,61 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M260.6,61 L193.1,100 A78,78 0 0,0 260.6,139 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M292,178 L253,110.5 A78,78 0 0,0 214,178 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M136,178 L175,245.5 A78,78 0 0,0 214,178 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M136,178 L58,178 A78,78 0 0,0 97,245.5 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<text x="74.8" y="143" font-size="13" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">❶</text>
+<text x="150.9" y="99.1" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❷</text>
+<text x="235.3" y="108.9" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❸</text>
+<text x="248.1" y="156.7" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❹</text>
+<text x="179.9" y="207.3" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❺</text>
+<text x="92.1" y="207.3" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❻</text>
+<text x="44" y="183" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="34" y="197" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">（P）</text>
+<text x="177.1" y="95" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">R</text>
+<text x="217" y="193" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">T</text>
+<text x="54" y="94" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">U</text>
+<circle cx="125.5" cy="139" r="2.6" fill="#222"/>
+<text x="129.5" y="153" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">O</text>
+<text x="160" y="139.6" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">6.28cm</text>
+<text x="43.6" y="141" font-size="11" fill="#d32f2f" text-anchor="end" font-weight="bold" font-family="sans-serif">6.28cm</text>
+<text x="252" y="226" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Aの弧とBの弧は</text>
+<text x="252" y="241" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">どちらも6.28cm</text>
+<text x="252" y="256" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">→ ちょうど</text>
+<text x="252" y="270" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">　 転がり切る</text>
+</svg>
+図1: ❶→❷はOを中心に回る。❷→❸はRを中心に回る。❸→❹はAの弧がBの弧の上を転がる。2つの弧は同じ長さ。だから、ちょうどTで転がり切る。❹→❺はTを中心に回る。❺→❻はOを中心に回って、UがQに着く。</li>
+    <li>ここからQRにもどる。❻→❼はQを中心に回る。Aの弧がQRにふれた所が❼。
+<svg viewBox="0 0 360 276" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: おうぎ形Aが転がるようす（❻から❾）">
+<path d="M96,136 L252,136 A156,156 0 0,0 231.1,58 Z" fill="#f4f4f4" stroke="#222" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M174,136 L96,136 A78,78 0 0,0 135,203.5 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M57,68.5 L96,136 A78,78 0 0,0 135,68.5 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M127.7,27.6 L88.7,95.2 A78,78 0 0,0 166.7,95.2 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M234.3,56.2 L166.7,17.2 A78,78 0 0,0 166.7,95.2 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="130.1" y="165.3" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❻</text>
+<text x="80.9" y="89.8" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❼</text>
+<text x="133.7" y="64.3" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❽</text>
+<text x="183.6" y="60.2" font-size="13" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">❾</text>
+<text x="97" y="151" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="225.1" y="78" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">R</text>
+<text x="255" y="151" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">T</text>
+<line x1="96" y1="136" x2="166.7" y2="95.2" stroke="#d32f2f" stroke-width="3" stroke-linecap="round"/>
+<line x1="166.7" y1="95.2" x2="234.3" y2="56.2" stroke="#1565c0" stroke-width="3" stroke-linecap="round"/>
+<circle cx="166.7" cy="95.2" r="2.6" fill="#222"/>
+<circle cx="234.3" cy="56.2" r="2.6" fill="#222"/>
+<text x="169.7" y="110.2" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">P</text>
+<text x="239.3" y="53.2" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">O</text>
+<text x="131.8" y="133.5" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">6.28cm</text>
+<text x="195.3" y="94.5" font-size="11" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">6cm</text>
+<text x="8" y="240" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">❼→❽ 弧がQRの上を6.28cm転がる</text>
+<text x="8" y="255" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">❽→❾ Pを中心に半径POが倒れる</text>
+<text x="8" y="271" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">QO＝6.28＋6＝12.28cm</text>
+</svg>
+図2: ❼→❽は、弧がQRの上を転がる。進むのは弧と同じ6.28cm。❽でPがQR上に着く。</li>
+    <li>❽→❾は、Pを中心に半径POが倒れる。半径POがQRに重なった所で止める。</li>
+    <li>QからPまでが6.28cm。PからOまでが半径の6cm。QO＝6.28＋6＝<b>12.28cm</b>。QRは12cm。OはRを少しこえる。問題文の「半径OPの一部の線が」重なる、と合う。</li>
+  </ol>
+  <div class="ans">答え：12.28cm</div>
+  <div class="tip">コツ：転がす問題は「いま何が引っかかっているか」を1つずつ描く。かどなら回転、弧なら転がり。弧の長さは先に計算して図に書いておく。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 点Oがえがく線の長さ <span class="type">B・7点｜中心がえがく線（回転の中心ごとの表）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>点Oがえがく線</b>」→ 動きごとに「何を中心に回るか」に直して書く。かどが中心なら半径6cmの弧。弧どうしなら、Qが中心で半径<b>12＋6＝18cm</b>の弧。弧が直線の上なら、まっすぐ → 表にして足すと決まる。(1)の図が描けていれば手をつける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>かどを中心に回るとき、Oはそのかどを中心に半径6cmの弧をえがく。O自身が中心のときは、Oは動かない。</li>
+    <li>弧と弧がふれ合って転がるとき、OはいつもBの弧から6cm外側にある。だからQを中心に、半径 12＋6＝<b>18cm</b> の弧をえがく。</li>
+    <li>弧が直線の上を転がるとき、Oは直線から6cmはなれたまま、まっすぐ進む。進む長さは、転がった弧の長さと同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1)の図に、Oの動きを赤でなぞる。
+<svg viewBox="0 0 360 272" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: おうぎ形Aが転がるようす（❶から❻）と点Oの動き">
+<path d="M58,178 L214,178 A156,156 0 0,0 193.1,100 Z" fill="#f4f4f4" stroke="#222" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M125.5,139 L58,100 A78,78 0 0,0 58,178 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M125.5,139 L193.1,100 A78,78 0 0,0 125.5,61 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M260.6,61 L193.1,100 A78,78 0 0,0 260.6,139 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M292,178 L253,110.5 A78,78 0 0,0 214,178 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M136,178 L175,245.5 A78,78 0 0,0 214,178 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M136,178 L58,178 A78,78 0 0,0 97,245.5 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<text x="74.8" y="143" font-size="13" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">❶</text>
+<text x="150.9" y="99.1" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❷</text>
+<text x="235.3" y="108.9" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❸</text>
+<text x="248.1" y="156.7" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❹</text>
+<text x="179.9" y="207.3" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❺</text>
+<text x="92.1" y="207.3" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❻</text>
+<text x="44" y="183" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="34" y="197" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">（P）</text>
+<text x="177.1" y="95" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">R</text>
+<text x="217" y="193" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">T</text>
+<text x="54" y="94" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">U</text>
+<path d="M125.5,139 A78,78 0 0,1 260.6,61" fill="none" stroke="#d32f2f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M260.6,61 A234,234 0 0,1 292,178" fill="none" stroke="#d32f2f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M292,178 A78,78 0 0,1 136,178" fill="none" stroke="#d32f2f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="125.5" cy="139" r="3" fill="#d32f2f"/>
+<circle cx="260.6" cy="61" r="3" fill="#d32f2f"/>
+<circle cx="292" cy="178" r="3" fill="#d32f2f"/>
+<circle cx="136" cy="178" r="3" fill="#d32f2f"/>
+<circle cx="193.1" cy="100" r="2.4" fill="#222"/>
+<circle cx="214" cy="178" r="2.4" fill="#222"/>
+<text x="130.5" y="153" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">O</text>
+<text x="171.6" y="16.2" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">Rが中心・半径6cm・180°</text>
+<text x="297" y="109.4" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">Qが中心</text>
+<text x="297" y="123.4" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">半径18cm</text>
+<text x="297" y="137.4" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">30°</text>
+<text x="234" y="270" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">Tが中心・半径6cm・180°</text>
+<line x1="58" y1="178" x2="260.6" y2="61" stroke="#1565c0" stroke-width="0.9" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="58" y1="178" x2="292" y2="178" stroke="#1565c0" stroke-width="0.9" stroke-linecap="round" stroke-dasharray="4 3"/>
+</svg>
+図1: 前半（❶から❻）。Rのまわりで半回転、Bの弧の外側を30°、Tのまわりで半回転。
+<svg viewBox="0 0 360 262" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: おうぎ形Aが転がるようす（❻から❾）と点Oの動き">
+<path d="M96,136 L252,136 A156,156 0 0,0 231.1,58 Z" fill="#f4f4f4" stroke="#222" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M174,136 L96,136 A78,78 0 0,0 135,203.5 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M57,68.5 L96,136 A78,78 0 0,0 135,68.5 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M127.7,27.6 L88.7,95.2 A78,78 0 0,0 166.7,95.2 Z" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<path d="M234.3,56.2 L166.7,17.2 A78,78 0 0,0 166.7,95.2 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="130.1" y="165.3" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❻</text>
+<text x="80.9" y="89.8" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❼</text>
+<text x="133.7" y="64.3" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal" font-family="sans-serif">❽</text>
+<text x="183.6" y="60.2" font-size="13" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">❾</text>
+<text x="97" y="151" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="225.1" y="78" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">R</text>
+<text x="255" y="151" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">T</text>
+<path d="M174,136 A78,78 0 1,1 57,68.5" fill="none" stroke="#d32f2f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="57" y1="68.5" x2="127.7" y2="27.6" stroke="#d32f2f" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M127.7,27.6 A78,78 0 0,1 234.3,56.2" fill="none" stroke="#d32f2f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="174" cy="136" r="3" fill="#d32f2f"/>
+<circle cx="57" cy="68.5" r="3" fill="#d32f2f"/>
+<circle cx="127.7" cy="27.6" r="3" fill="#d32f2f"/>
+<circle cx="234.3" cy="56.2" r="3" fill="#d32f2f"/>
+<circle cx="166.7" cy="95.2" r="2.4" fill="#222"/>
+<text x="169.7" y="110.2" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">P</text>
+<text x="239.3" y="53.2" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">O</text>
+<text x="90" y="230" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">Qが中心・半径6cm・240°</text>
+<text x="90" y="244" font-size="10" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">（360°−30°−90°）</text>
+<text x="86.4" y="40" font-size="11" fill="#d32f2f" text-anchor="end" font-weight="bold" font-family="sans-serif">まっすぐ6.28cm</text>
+<text x="216.9" y="13.8" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">Pが中心・半径6cm・90°</text>
+<line x1="96" y1="136" x2="57" y2="68.5" stroke="#1565c0" stroke-width="0.9" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="166.7" y1="95.2" x2="127.7" y2="27.6" stroke="#1565c0" stroke-width="0.9" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="106.1,130.2 100.3,120 90.2,125.9" fill="none" stroke="#1565c0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M132,115.2 A41.6,41.6 0 0,1 137.6,136" fill="none" stroke="#222" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="150.5" y="126.4" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">30°</text>
+</svg>
+図2: 後半（❻から❾）。Qのまわりは、1回転360°から、30°と直角90°をひいた240°。</li>
+    <li>表にする。長さは「□×3.14」の形でそろえる。
+<table>
+  <tr><th>動き</th><th>引っかかっている所</th><th>Oの動き</th><th>長さ</th></tr>
+  <tr><td>❶→❷</td><td>O（QRの上）</td><td>動かない</td><td>0</td></tr>
+  <tr><td>❷→❸</td><td>かどR</td><td>半径6cm・180°</td><td>6×3.14</td></tr>
+  <tr><td>❸→❹</td><td>弧と弧</td><td>Qが中心・半径18cm・30°</td><td>3×3.14</td></tr>
+  <tr><td>❹→❺</td><td>かどT</td><td>半径6cm・180°</td><td>6×3.14</td></tr>
+  <tr><td>❺→❻</td><td>O（TQの上）</td><td>動かない</td><td>0</td></tr>
+  <tr><td>❻→❼</td><td>かどQ</td><td>半径6cm・240°</td><td>8×3.14</td></tr>
+  <tr><td>❼→❽</td><td>弧がQRの上</td><td>まっすぐ6.28cm</td><td>2×3.14</td></tr>
+  <tr><td>❽→❾</td><td>P（QRの上）</td><td>半径6cm・90°</td><td>3×3.14</td></tr>
+</table>
+半径6cmの弧は 6×2×3.14×角度/360。180°なら6×3.14、240°なら8×3.14、90°なら3×3.14。半径18cm・30°は 18×2×3.14×30/360＝3×3.14。</li>
+    <li>3.14の前の数をたす。6＋3＋6＋8＋2＋3＝28。28×3.14＝<b>87.92cm</b>。</li>
+    <li>確かめ。半径6cmの分は 6＋6＋8＋2＋3＝25。角度にすると 180×3＋60＋90＋60（まっすぐの分）＝750°。6×2×3.14×750/360＝25×3.14。半径18cmの分は3×3.14。合わせて28×3.14。</li>
+  </ol>
+  <div class="ans">答え：87.92cm</div>
+  <div class="tip">コツ：「中心がえがく線」は、引っかかる所が変わるたびに1行書く。O自身が中心の時（0cm）と、弧が直線を転がる時（まっすぐ）の2つが、数え落としやすい。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 四角すいO-KLMNは四角柱の何倍 <span class="type">A・7点｜角の三角形をひく（面積の割合）→角すいの体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>AK：KB＝AN：ND＝1：1</b>」「<b>BL：LC＝DM：MC＝2：1</b>」→ ひし形を真上から見た図に比を置く。KLMNは、ひし形から角の三角形4つをひいた残り。Oは上の面にある。高さは四角柱と同じ → 体積は「KLMNの割合÷3」と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角形の1つの角をはさむ2辺を、それぞれ何分のいくつにしたか。その2つをかけると、面積の割合になる。たとえば三角形ABDで、AK＝ABの1/2、AN＝ADの1/2 なら、三角形AKNは三角形ABDの 1/2×1/2＝1/4。</li>
+    <li>ひし形を対角線で切ると、同じ面積の三角形が2つできる。三角形ABDも三角形CBDも、ひし形の1/2。</li>
+    <li>角すいの体積＝底面積×高さ<b>÷3</b>（問題文にある）。四角柱の体積＝底面積×高さ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ひし形ABCDを真上から見た図を描く。比を書きこむ。ひし形の面積を1とする。
+<svg viewBox="0 0 360 232" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: ひし形ABCDを真上から見る。角の三角形4つをひくと四角形KLMN">
+<polygon points="30,115 105,160 105,70" fill="#dbe9ff" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="330,115 280,85 280,145" fill="#c8e6c9" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="180,25 105,70 280,85" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="180,205 280,145 105,160" fill="#ffe0b2" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="30,115 180,205 330,115 180,25" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="105,160 280,145 280,85 105,70" fill="none" stroke="#d32f2f" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="105" cy="160" r="2.4" fill="#222"/>
+<circle cx="280" cy="145" r="2.4" fill="#222"/>
+<circle cx="280" cy="85" r="2.4" fill="#222"/>
+<circle cx="105" cy="70" r="2.4" fill="#222"/>
+<text x="14" y="119" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="335" y="119" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="175" y="18" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="175" y="223" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="92" y="176" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">K</text>
+<text x="92" y="64" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">N</text>
+<text x="285" y="160" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">L</text>
+<text x="285" y="80" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">M</text>
+<text x="54" y="148" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">1</text>
+<text x="136" y="197" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">1</text>
+<text x="54" y="90" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">1</text>
+<text x="136" y="41" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">1</text>
+<text x="232" y="190" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">2</text>
+<text x="311" y="142" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">1</text>
+<text x="232" y="49" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">2</text>
+<text x="311" y="97" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">1</text>
+<text x="80" y="119" font-size="12" fill="#222" text-anchor="middle" font-weight="bold" font-family="sans-serif">1/8</text>
+<text x="298" y="119" font-size="11" fill="#222" text-anchor="middle" font-weight="bold" font-family="sans-serif">1/18</text>
+<text x="186" y="64" font-size="12" fill="#222" text-anchor="middle" font-weight="bold" font-family="sans-serif">1/6</text>
+<text x="186" y="176" font-size="12" fill="#222" text-anchor="middle" font-weight="bold" font-family="sans-serif">1/6</text>
+<text x="190" y="108" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">四角形KLMN</text>
+<text x="190" y="126" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">1−37/72＝35/72</text>
+</svg>
+図: 角の三角形4つ（青・緑・オレンジ2つ）をひくと、四角形KLMNが残る。</li>
+    <li>角の三角形4つを表にする。
+<table>
+  <tr><th>三角形</th><th>もとの三角形（ひし形の1/2）</th><th>2辺の割合</th><th>面積</th></tr>
+  <tr><td>AKN</td><td>ABD</td><td>1/2 と 1/2</td><td>1/2×1/2×1/2＝1/8</td></tr>
+  <tr><td>CML</td><td>CBD</td><td>1/3 と 1/3</td><td>1/2×1/3×1/3＝1/18</td></tr>
+  <tr><td>DNM</td><td>DAC</td><td>1/2 と 2/3</td><td>1/2×1/2×2/3＝1/6</td></tr>
+  <tr><td>BLK</td><td>BAC</td><td>1/2 と 2/3</td><td>1/2×1/2×2/3＝1/6</td></tr>
+</table></li>
+    <li>4つをたす。分母を72にそろえる。9/72＋4/72＋12/72＋12/72＝37/72。</li>
+    <li>四角形KLMNは 1−37/72＝<b>35/72</b>。</li>
+    <li>Oは上の面EFGHにある。KLMNは下の面にある。だから四角すいの高さは、四角柱の高さと同じ。高さを1とする。四角柱は 1×1＝1。四角すいは 35/72×1÷3＝35/216。</li>
+    <li>落としやすい所は、最後の「÷3」を忘れて 35/72 と答えてしまうこと。</li>
+  </ol>
+  <div class="ans">答え：35/216倍</div>
+  <div class="tip">コツ：「EO：OG＝1：5」は(1)(2)では使わない部品。Oが上の面のどこにあっても、高さは同じ。使う部品と、まだ使わない部品を分けて読む。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 高さのまん中で切った切り口は、ひし形の何倍 <span class="type">B・7点｜角すいを底面に平行に切る（相似）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>それぞれの真ん中の点を通る平面</b>」→「高さの半分の所で、底面に平行に切る」と直して書く。四角すいの4本の辺もまん中で切れる → 切り口は<b>KLMNを1/2に縮めた形</b>と決まる。(1)の35/72がそのまま使える。取りたい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>角すいを底面に平行な面で切ると、切り口は底面と同じ形になる。頂点からの長さが1/2の所で切れば、辺の長さも1/2。</li>
+    <li>同じ形の図形の面積の比は、長さの比を2回かける。長さが1/2なら、面積は 1/2×1/2＝<b>1/4</b>。たとえば1辺4cmの正方形は16cm²、1辺2cmの正方形は4cm²。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>四角すいO-KLMNだけを取り出して描く。高さの半分の所に、切り口を赤でかく。
+<svg viewBox="0 0 360 272" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: 四角すいO-KLMNを高さの半分で切ると、切り口はKLMNを1/2に縮めた形">
+<polygon points="112.5,105 162.5,135 223.3,111 190,91" fill="#ffe0b2" stroke="none" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="175" y1="20" x2="205" y2="162" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="50" y1="190" x2="205" y2="162" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="205" y1="162" x2="271.7" y2="202" stroke="#222" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="175" y1="20" x2="50" y2="190" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="175" y1="20" x2="150" y2="250" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="175" y1="20" x2="271.7" y2="202" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="50" y1="190" x2="150" y2="250" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="150" y1="250" x2="271.7" y2="202" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="112.5" y1="105" x2="162.5" y2="135" stroke="#d32f2f" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="162.5" y1="135" x2="223.3" y2="111" stroke="#d32f2f" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="223.3" y1="111" x2="190" y2="91" stroke="#d32f2f" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="190" y1="91" x2="112.5" y2="105" stroke="#d32f2f" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 3"/>
+<circle cx="112.5" cy="105" r="2.6" fill="#d32f2f"/>
+<circle cx="162.5" cy="135" r="2.6" fill="#d32f2f"/>
+<circle cx="223.3" cy="111" r="2.6" fill="#d32f2f"/>
+<circle cx="190" cy="91" r="2.6" fill="#d32f2f"/>
+<text x="171" y="13" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">O</text>
+<text x="34" y="195" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">N</text>
+<text x="145" y="266" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">K</text>
+<text x="276.7" y="207" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">L</text>
+<text x="210" y="158" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">M</text>
+<text x="127.8" y="62.5" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">1</text>
+<text x="65.2" y="147.5" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">1</text>
+<text x="250" y="60" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">切り口（赤）</text>
+<text x="250" y="78" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">辺の長さは1/2</text>
+<text x="250" y="94" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">面積は 1/2×1/2</text>
+<text x="250" y="110" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">＝1/4</text>
+<text x="232" y="245" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">底面KLMN＝35/72</text>
+</svg>
+図: OK・OL・OM・ONは、どれもまん中で切れる。</li>
+    <li>切り口は、四角形KLMNを1/2に縮めた形。面積は 1/2×1/2＝1/4倍。</li>
+    <li>(1)で、四角形KLMNはひし形の35/72。切り口は 35/72×1/4＝<b>35/288</b>。</li>
+  </ol>
+  <div class="ans">答え：35/288倍</div>
+  <div class="tip">コツ：切る面が底面に平行なら、切り口は底面を縮めた形。長さが1/2でも、面積は1/4。「1/2倍」のままにすると面積にならない。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> P・Q・Rを通る平面で切った、Oを含むほうの体積 <span class="type">C・7点｜ななめの切断（横から見る→三角すいに分ける）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>AP：PE＝2：1</b>、BQ：QF＝1：1、CR：RG＝1：2」→ 高さを6とおいて、Pは4、Qは3、Rは2と図に置く。DH上の点も高さ3になる。BとDが同じ高さ → BDの方向から見ると、<b>切り口が1本の線</b>に見えると決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角すいを、頂点Oから出る3本の辺の上の点で切る。上に残る小さい三角すいの体積は、もとの「辺の割合×辺の割合×辺の割合」倍。たとえば3本とも半分なら、1/2×1/2×1/2＝<b>1/8倍</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>BDの方向から見た図を描く。平面で四角柱を切ると、向かい合う辺の高さの和が同じになる。4＋2＝3＋□ で、DH上の点Sも高さ3。EGを12とすると、EO＝2。下の辺では、AからK（N）まで3、L（M）まで10。切り口の線は、横に6進むと1下がる。PはEより2低い。だから左に12のばすと、上の辺に届く（I）。右にも12のばすと、下の辺に届く（J）。
+<svg viewBox="0 0 360 204" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: BDの方向から見た図。切り口は1本の線。のばしてI・Jを作ると辺の切れる比が出る">
+<polygon points="14,40 140,40 143.6,88" fill="#dbe9ff" stroke="none" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="143.6,88 149,160 338,160" fill="#ffe0b2" stroke="none" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="122,40 230,40 230,160 122,160" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="176" y1="40" x2="176" y2="160" stroke="#888" stroke-width="0.9" stroke-linecap="round"/>
+<line x1="14" y1="40" x2="122" y2="40" stroke="#1565c0" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="230" y1="160" x2="338" y2="160" stroke="#1565c0" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="14" y1="40" x2="338" y2="160" stroke="#d32f2f" stroke-width="2" stroke-linecap="round"/>
+<line x1="140" y1="40" x2="149" y2="160" stroke="#222" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="140" y1="40" x2="212" y2="160" stroke="#222" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="140" cy="40" r="2.3" fill="#222"/>
+<circle cx="149" cy="160" r="2.3" fill="#222"/>
+<circle cx="212" cy="160" r="2.3" fill="#222"/>
+<circle cx="122" cy="80" r="2.3" fill="#222"/>
+<circle cx="230" cy="120" r="2.3" fill="#222"/>
+<circle cx="176" cy="100" r="2.3" fill="#222"/>
+<circle cx="143.6" cy="88" r="3" fill="#d32f2f"/>
+<circle cx="176" cy="100" r="3" fill="#d32f2f"/>
+<text x="8" y="34" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">I</text>
+<text x="340" y="155" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold" font-family="sans-serif">J</text>
+<text x="118" y="22" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">E</text>
+<text x="142" y="22" font-size="12" fill="#222" text-anchor="middle" font-weight="bold" font-family="sans-serif">O</text>
+<text x="176" y="22" font-size="11" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">F（H）</text>
+<text x="234" y="22" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">G</text>
+<text x="68" y="36" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold" font-family="sans-serif">12</text>
+<text x="131" y="36" font-size="10" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">2</text>
+<text x="120" y="188" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">A</text>
+<text x="149" y="188" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">K</text>
+<text x="176" y="188" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">B</text>
+<text x="212" y="188" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">L</text>
+<text x="232" y="188" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">C</text>
+<text x="149" y="200" font-size="9" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">（N）</text>
+<text x="176" y="200" font-size="9" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">（D）</text>
+<text x="212" y="200" font-size="9" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">（M）</text>
+<text x="135.5" y="173" font-size="10" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">3</text>
+<text x="162.5" y="173" font-size="10" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">3</text>
+<text x="194" y="173" font-size="10" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">4</text>
+<text x="221" y="173" font-size="10" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">2</text>
+<text x="284" y="173" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold" font-family="sans-serif">12</text>
+<text x="115" y="84" font-size="12" fill="#222" text-anchor="end" font-weight="normal" font-family="sans-serif">P</text>
+<text x="234" y="112" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">R</text>
+<text x="182" y="95" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q（S）</text>
+<text x="98" y="126" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">4</text>
+<text x="246" y="144" font-size="10" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">2</text>
+<text x="135.6" y="62" font-size="12" fill="#d32f2f" text-anchor="end" font-weight="bold" font-family="sans-serif">2</text>
+<text x="140.6" y="128" font-size="12" fill="#d32f2f" text-anchor="end" font-weight="bold" font-family="sans-serif">3</text>
+<text x="163.4" y="74" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">1</text>
+<text x="199.4" y="134" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">1</text>
+<text x="8" y="104" font-size="10.5" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">IO＝12＋2＝14</text>
+<text x="250" y="100" font-size="10.5" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">KJ＝21</text>
+<text x="250" y="114" font-size="10.5" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">LJ＝14</text>
+</svg>
+図: 青とオレンジの三角形は同じ形。辺OK（ON）は IO：KJ＝14：21＝<b>2：3</b> に切れる。辺OL（OM）は IO：LJ＝14：14＝<b>1：1</b> に切れる。</li>
+    <li>四角すいを、O・N・Lを通る面で2つの三角すいに分ける。X＝O-NKL、Y＝O-LMN とする。NKとLMは、どちらもBDに平行。長さはBDの1/2と1/3で、比は3：2。だからXは全体の3/5、Yは2/5。上に残る部分を表で出す。
+<table>
+  <tr><th>三角すい</th><th>全体の何倍</th><th>3本の辺で、上に残る割合</th><th>上の部分（全体の何倍）</th></tr>
+  <tr><td>X（O-NKL）</td><td>3/5</td><td>ON 2/5 × OK 2/5 × OL 1/2 ＝ 2/25</td><td>3/5×2/25＝6/125</td></tr>
+  <tr><td>Y（O-LMN）</td><td>2/5</td><td>ON 2/5 × OL 1/2 × OM 1/2 ＝ 1/10</td><td>2/5×1/10＝1/25</td></tr>
+</table></li>
+    <li>たす。6/125＋1/25＝6/125＋5/125＝11/125。</li>
+  </ol>
+  <div class="ans">答え：11/125倍</div>
+  <div class="tip">コツ：ななめに切る問題は、切り口が1本の線に見える方向をさがす。ここでは、BとDの上の点が同じ高さ（3）。だからBDの方向から見る。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ</h2>
+  <ul>
+    <li>グラフの折れ目も、転がる図形の切りかわりも、合図は「かどに着いた時」。1つずつ表に書く（大問3・4）。</li>
+    <li>長さが出ていない図形（大問5）は、全体を1とおく。いらない部分の割合をひく。</li>
+    <li>前の小問の答えが、次の小問の部品になる。(1)の速さ 8と5、(1)の図、(1)の35/72 を、すぐ見える所に書いておく。</li>
+  </ul>
+</section>
+</div>
