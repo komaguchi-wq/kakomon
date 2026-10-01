@@ -1,0 +1,634 @@
+<!-- generated kakomon shibumaku/2020-2/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（平方数でない数の何番目・石の並べ方・流水算の2回の出会い）</a></li>
+<li><a href="#4-5">大問4・5（作図と角の二等分線・回転体の体積）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（平方数でない数の何番目・石の並べ方・流水算の2回の出会い）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 28点／B 42点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th><th>描く図・表</th></tr>
+    <tr><td>1 (1)①②・(2)</td><td>平方数（立方数）をぬいた整数の列の、300番目・2020番目</td><td>A 7+7 / B 7</td><td>「平方数でない」→ ぬけた個数を数える。番目＋ぬけた個数が答えの近く</td><td>近い平方数を書いた数直線／立方数の表</td></tr>
+    <tr><td>2 (1)〜(3)</td><td>同じ色が3個続かない石の並べ方</td><td>A 7 / B 7+7</td><td>「3個以上続いて並ぶことがない」→ 右はしの2個が同じ色かちがう色かで分ける。前の2つをたすきまり</td><td>右はしの石の図／個数と並べ方の表／15個を7・1・7に分けた図</td></tr>
+    <tr><td>3 (1)〜(4)</td><td>川を往復する2そうの船。2回の出会い</td><td>A 7 / B 7+7+7</td><td>「3：2」と「1.5倍」→ 流れの速さを①と決めて、速さの表を作る</td><td>川の図／速さの表／18分後の図</td></tr>
+  </table>
+  <p>取り方: <b>1 (1)①②・2 (1)・3 (1)のA4問を先に確実に</b>。2 (2)は(1)の表をのばすだけ、3 (2)〜(4)は(1)の速さの表から続けて出せるので、Bの中ではこの4問から手を付ける。受験者平均32.1点、合格者平均56.5点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)①</span> 平方数でない整数の300番目 <span class="type">A・7点｜ぬけた個数を数える</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>平方数でない</b>」と「300番目」。ぬけた平方数の個数を数えて書く（直して書く）→ 答えは<b>300＋ぬけた個数</b>。300に近い平方数は 17×17＝289。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1から10までの整数は10個。平方数は 1, 4, 9 の3個。残りは 10−3＝7個。だから10は7番目。「番目＝その数−ぬけた個数」になる。</li>
+    <li>ある数までの平方数の個数は、何×何まで入るかで数える。17×17＝289 は300までに入る。18×18＝324 は入らない。だから<b>17個</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>300に近い平方数を書く。17×17＝289、18×18＝324。
+<svg viewBox="0 0 360 120" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="数直線。289と324が平方数。300番目は317">
+<g font-family="sans-serif" font-size="12">
+<line x1="14" y1="60" x2="346" y2="60" stroke="#222" stroke-width="1.5"/>
+<line x1="60" y1="52" x2="60" y2="68" stroke="#222" stroke-width="1.5"/>
+<line x1="130" y1="52" x2="130" y2="68" stroke="#222" stroke-width="1.5"/>
+<line x1="240" y1="52" x2="240" y2="68" stroke="#d32f2f" stroke-width="2"/>
+<line x1="300" y1="52" x2="300" y2="68" stroke="#222" stroke-width="1.5"/>
+<text x="60" y="84" text-anchor="middle" fill="#222">289</text>
+<text x="60" y="99" text-anchor="middle" fill="#222" font-size="11">17×17</text>
+<text x="130" y="84" text-anchor="middle" fill="#222">300</text>
+<text x="240" y="84" text-anchor="middle" fill="#d32f2f" font-weight="bold">317</text>
+<text x="240" y="99" text-anchor="middle" fill="#d32f2f" font-size="11">300番目</text>
+<text x="300" y="84" text-anchor="middle" fill="#222">324</text>
+<text x="300" y="99" text-anchor="middle" fill="#222" font-size="11">18×18</text>
+<path d="M130 48 Q185 14 240 48" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="185" y="20" text-anchor="middle" fill="#1565c0">＋17（ぬけた個数）</text>
+<text x="14" y="44" fill="#222" font-size="11">平方数17個→</text>
+</g>
+</svg>
+図：289までに平方数が17個。その分だけ300より先へ進む。</li>
+    <li>1から289までに、平方数は 1×1 から 17×17 までの17個ある。</li>
+    <li>17個ぬけているので、300より17大きい数を見る。300＋17＝<b>317</b>。</li>
+    <li>317までに新しい平方数は出てこない。次の平方数は324。</li>
+    <li>確かめ。317−17＝300。317は300番目で合っている。</li>
+    <li>落としやすい所。300−17＝283 とひいてしまう。ぬけた分だけ先へ進むので、たす。</li>
+  </ol>
+  <div class="ans">答え：317</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)②</span> 平方数でない整数の2020番目 <span class="type">A・7点｜近い平方数から数える</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2020番目</b>」。①と同じ並び。2020に近い平方数 45×45＝2025 を数直線に書く（図に置く）→ <b>2025までの個数を出して、足りない分だけ進む</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2020の近くの平方数は、40×40＝1600 から見当をつける。44×44＝1936、<b>45×45＝2025</b>、46×46＝2116。</li>
+    <li>1から2025までの平方数は 1×1 から 45×45 までの45個。①と同じ数え方。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>近い平方数を書く。45×45＝2025、46×46＝2116。</li>
+    <li>1から2025までの整数は2025個。平方数は45個。平方数でない数は 2025−45＝<b>1980個</b>。</li>
+    <li>2020番目まで、あと 2020−1980＝40個。
+<svg viewBox="0 0 360 110" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="数直線。2025までで1980個。あと40個進んで2065">
+<g font-family="sans-serif" font-size="12">
+<line x1="14" y1="58" x2="346" y2="58" stroke="#222" stroke-width="1.5"/>
+<line x1="80" y1="50" x2="80" y2="66" stroke="#222" stroke-width="1.5"/>
+<line x1="220" y1="50" x2="220" y2="66" stroke="#d32f2f" stroke-width="2"/>
+<line x1="310" y1="50" x2="310" y2="66" stroke="#222" stroke-width="1.5"/>
+<text x="80" y="82" text-anchor="middle" fill="#222">2025</text>
+<text x="80" y="97" text-anchor="middle" fill="#222" font-size="11">45×45</text>
+<text x="220" y="82" text-anchor="middle" fill="#d32f2f" font-weight="bold">2065</text>
+<text x="220" y="97" text-anchor="middle" fill="#d32f2f" font-size="11">2020番目</text>
+<text x="310" y="82" text-anchor="middle" fill="#222">2116</text>
+<text x="310" y="97" text-anchor="middle" fill="#222" font-size="11">46×46</text>
+<path d="M80 46 Q150 12 220 46" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="150" y="18" text-anchor="middle" fill="#1565c0">あと40個（平方数なし）</text>
+<text x="14" y="44" fill="#222" font-size="11">1980個→</text>
+</g>
+</svg>
+図：2025までで1980個。2026から40個進む。</li>
+    <li>2025の次から40個進む。2025＋40＝<b>2065</b>。とちゅうに平方数は無い。次は2116。</li>
+    <li>確かめ。2065−45＝2020。</li>
+    <li>落としやすい所。2020までの平方数は44個なので、2020＋44＝2064 としたくなる。とちゅうに2025があるので、もう1つ先になる。</li>
+  </ol>
+  <div class="ans">答え：2065</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 平方数でも立方数でもない整数の2020番目 <span class="type">B・7点｜重なりを二重に引かない</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は(1)と変わった言葉「<b>立方数でもない</b>」に丸。(1)②の2065から始める → <b>2065までの立方数の個数だけ、先へ進む</b>。平方数でもある立方数は二重に引かない。12×12×12＝1728 が出せたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2065までの立方数は、12×12×12＝1728 まで。13×13×13＝2197 は入らない。だから<b>12個</b>。</li>
+    <li>平方数でも立方数でもある数がある。64＝8×8＝4×4×4。同じように 1 と 729＝27×27＝9×9×9。この3個は(1)でもうぬいてある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1)②から始める。1から2065までに、平方数でない数は2020個ある。</li>
+    <li>2065までの立方数を表に書く。平方数でもあるものに○をつける。
+      <table>
+        <tr><th>立方数</th><td>1</td><td>8</td><td>27</td><td>64</td><td>125</td><td>216</td><td>343</td><td>512</td><td>729</td><td>1000</td><td>1331</td><td>1728</td></tr>
+        <tr><th>平方数でもある</th><td><b>○</b></td><td></td><td></td><td><b>○</b></td><td></td><td></td><td></td><td></td><td><b>○</b></td><td></td><td></td><td></td></tr>
+      </table>
+      表は 13×13×13＝2197 が2065をこえるので、12個で終わり。</li>
+    <li>新しくぬく数は、○のない 12−3＝<b>9個</b>。</li>
+    <li>2065までに残る数は 2020−9＝2011個。2020番目まで、あと9個。</li>
+    <li>2066から9個進む。2065＋9＝<b>2074</b>。とちゅうに平方数も立方数も無い。次は2116と2197。</li>
+    <li>確かめ。2074−45−12＋3＝2020。</li>
+  </ol>
+  <div class="ans">答え：2074</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 石を6個並べる <span class="type">A・7点｜前の2つをたすきまり</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同じ色の石が3個以上続いて並ぶことがない</b>」と「6個」。右はしの2個が同じ色か、ちがう色かで分けて個数を表に置く → <b>前の2つの数をたすきまり</b>で6個まで出せる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>問題の図は、左はしが白のときだけの枝分かれ。右はしまで行く道は5本。左はしが黒のときも同じ数なので、4個のときは 5×2＝10通り。</li>
+    <li>右はしの2個が<b>ちがう色</b>の並びは、1個少ない並べ方の右に、ちがう色を1個足したもの。右はしの2個が<b>同じ色</b>の並びは、2個少ない並べ方の右に、ちがう色を2個足したもの。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1個は○と●の2通り。2個は○○、○●、●○、●●の4通り。</li>
+    <li>3個のときを、右はしの2個で分けて書く。
+<svg viewBox="0 0 360 150" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="右はしの2個がちがう色なら1個少ない並びに1個足す。同じ色なら2個少ない並びに2個足す">
+<g font-family="sans-serif" font-size="12">
+<text x="6" y="16" fill="#222">右はしの2個がちがう色（1個足す）</text>
+<rect x="10" y="26" width="150" height="34" fill="#dbe9ff" stroke="#1565c0" stroke-dasharray="4 3"/>
+<text x="20" y="48" fill="#1565c0" font-size="11">1個少ない並べ方</text>
+<circle cx="140" cy="43" r="9" fill="#222" stroke="#222"/>
+<text x="172" y="48" fill="#222">＋</text>
+<circle cx="200" cy="43" r="9" fill="#fff" stroke="#d32f2f" stroke-width="2"/>
+<text x="220" y="48" fill="#d32f2f">ちがう色を1個</text>
+<text x="6" y="88" fill="#222">右はしの2個が同じ色（2個足す）</text>
+<rect x="10" y="98" width="150" height="34" fill="#ffe0b2" stroke="#1565c0" stroke-dasharray="4 3"/>
+<text x="20" y="120" fill="#1565c0" font-size="11">2個少ない並べ方</text>
+<circle cx="140" cy="115" r="9" fill="#222" stroke="#222"/>
+<text x="172" y="120" fill="#222">＋</text>
+<circle cx="200" cy="115" r="9" fill="#fff" stroke="#d32f2f" stroke-width="2"/>
+<circle cx="222" cy="115" r="9" fill="#fff" stroke="#d32f2f" stroke-width="2"/>
+<text x="240" y="120" fill="#d32f2f">ちがう色を2個</text>
+</g>
+</svg>
+図：もとの並びの右はしが●なら、足すのは○。足し方は1つに決まる。</li>
+    <li>3個は、2個の4通り＋1個の2通り＝6通り。同じように、<b>1個少ないときと2個少ないときをたす</b>。
+      <table>
+        <tr><th>石の数</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+        <tr><th>並べ方</th><td>2</td><td>4</td><td>6</td><td>10</td><td>16</td><td><b>26</b></td></tr>
+      </table>
+      6＋4＝10、10＋6＝16、16＋10＝26。</li>
+    <li>確かめ。4個の10通りは、図の5本×2と同じ。</li>
+    <li>落としやすい所。図は左はしが白の分だけ。枝分かれで数えるときは、黒から始まる分の×2を入れる。</li>
+  </ol>
+  <div class="ans">答え：26通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 石を15個並べる <span class="type">B・7点｜表を15個までのばす</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は(1)と変わった数「<b>15個</b>」に丸。(1)の表を15個までのばして書く → <b>前の2つをたす</b>たし算を9回するだけ。(1)できまりが見えていたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)のきまり。並べ方の数は、1個少ないときと2個少ないときの<b>たし算</b>。10＋6＝16 のように、となりどうしをたす。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1)の表の続きを書く。26＋16＝42 から始める。
+      <table>
+        <tr><th>石の数</th><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><th>並べ方</th><td>26</td><td>42</td><td>68</td><td>110</td><td>178</td></tr>
+      </table>
+      <table>
+        <tr><th>石の数</th><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+        <tr><th>並べ方</th><td>288</td><td>466</td><td>754</td><td>1220</td><td><b>1974</b></td></tr>
+      </table>
+      15個まで書いたら終わり。</li>
+    <li>けた数がふえる 288＋178＝466 からは、筆算を表の横に書く。</li>
+    <li>確かめ。最後のたし算は 1220＋754＝<b>1974</b>。7個の42通りは(3)で使う。</li>
+  </ol>
+  <div class="ans">答え：1974通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 15個の並べ方のうち左右対称のもの <span class="type">B・7点｜半分を決めれば残りが決まる</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>左右対称</b>」。15個を 7個・まん中1個・7個に分けて図に置く → 左の7個を決めると残りは全部決まるので、<b>7個の並べ方の数</b>と同じ。(2)の表が7個まで書けていたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>左右対称は、まん中で折るとぴったり重なる並び。15個のまん中は<b>8個目</b>。7個目と9個目、6個目と10個目が同じ色になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>左の7個を1つ決める。たとえば ●○●●○●○。右の7個は、それを折り返して写す。
+<svg viewBox="0 0 360 120" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="15個の石。左7個を決めると右7個は折り返し。8個目は7個目と9個目の反対の色">
+<g font-family="sans-serif" font-size="11">
+<rect x="6" y="38" width="154" height="30" fill="#dbe9ff" stroke="none"/>
+<rect x="200" y="38" width="154" height="30" fill="#c8e6c9" stroke="none"/>
+<circle cx="18" cy="53" r="8" fill="#222" stroke="#222"/>
+<circle cx="40" cy="53" r="8" fill="#fff" stroke="#222"/>
+<circle cx="62" cy="53" r="8" fill="#222" stroke="#222"/>
+<circle cx="84" cy="53" r="8" fill="#222" stroke="#222"/>
+<circle cx="106" cy="53" r="8" fill="#fff" stroke="#222"/>
+<circle cx="128" cy="53" r="8" fill="#222" stroke="#222"/>
+<circle cx="150" cy="53" r="8" fill="#fff" stroke="#222"/>
+<circle cx="180" cy="53" r="9" fill="#222" stroke="#d32f2f" stroke-width="2.5"/>
+<circle cx="210" cy="53" r="8" fill="#fff" stroke="#222"/>
+<circle cx="232" cy="53" r="8" fill="#222" stroke="#222"/>
+<circle cx="254" cy="53" r="8" fill="#fff" stroke="#222"/>
+<circle cx="276" cy="53" r="8" fill="#222" stroke="#222"/>
+<circle cx="298" cy="53" r="8" fill="#222" stroke="#222"/>
+<circle cx="320" cy="53" r="8" fill="#fff" stroke="#222"/>
+<circle cx="342" cy="53" r="8" fill="#222" stroke="#222"/>
+<text x="83" y="30" text-anchor="middle" fill="#1565c0" font-size="12">左の7個（自由に決める）</text>
+<text x="277" y="30" text-anchor="middle" fill="#222" font-size="12">右の7個（写すだけ）</text>
+<text x="150" y="84" text-anchor="middle" fill="#222">7個目</text>
+<text x="212" y="84" text-anchor="middle" fill="#222">9個目</text>
+<text x="180" y="102" text-anchor="middle" fill="#d32f2f" font-size="12" font-weight="bold">8個目は反対の色に決まる</text>
+<line x1="180" y1="64" x2="180" y2="90" stroke="#d32f2f" stroke-width="1.2"/>
+</g>
+</svg>
+図：7個目と9個目は同じ色（ここでは○）。8個目も○にすると3個続くので、8個目は●。</li>
+    <li>8個目を決める。7個目と9個目は同じ色。8個目も同じ色にすると3個続く。だから<b>8個目は反対の色</b>の1通り。</li>
+    <li>つなぎ目を見る。8個目がちがう色なので、まん中で3個続くことはない。右の7個は左の写しなので、右でも3個続かない。</li>
+    <li>左の7個の並べ方1つにつき、15個の並べ方が1つ決まる。7個の並べ方は(2)の表から<b>42通り</b>。</li>
+  </ol>
+  <div class="ans">答え：42通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 船QがAB間を往復する時間 <span class="type">A・7点｜流水算（速さの表を作る）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3：2</b>」と「<b>1.5倍</b>」。距離の比3：2は「Pの下りとQの上りの速さの比」に直して書く。静水の比 2：3 と合わせると流れの速さが決まり、速さの表ができる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>下りの速さ＝静水の速さ＋流れ。上りの速さ＝静水の速さ−流れ。</li>
+    <li>同じ時間に進む距離の比は、速さの比と同じ。出発からCで出会うまで、2そうは同じ時間だけ進む。</li>
+    <li>同じ距離を進む時間の比は、速さの比の<b>逆</b>。速さが 3：1 なら、時間は 1：3。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>川の図をかく。Aが上流、Bが下流。Pは下りから、Qは上りから始まる。
+<svg viewBox="0 0 360 130" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="川の図。AC対CBは3対2。船PはAから下り、船QはBから上り、Cで出会う">
+<defs><marker id="q3_1_ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#d32f2f"/></marker></defs>
+<g font-family="sans-serif" font-size="12">
+<line x1="30" y1="60" x2="330" y2="60" stroke="#222" stroke-width="1.5"/>
+<line x1="30" y1="52" x2="30" y2="68" stroke="#222" stroke-width="1.5"/>
+<line x1="210" y1="52" x2="210" y2="68" stroke="#222" stroke-width="1.5"/>
+<line x1="330" y1="52" x2="330" y2="68" stroke="#222" stroke-width="1.5"/>
+<text x="30" y="46" text-anchor="middle" fill="#222">A</text>
+<text x="210" y="46" text-anchor="middle" fill="#222">C</text>
+<text x="330" y="46" text-anchor="middle" fill="#222">B</text>
+<text x="30" y="16" text-anchor="middle" fill="#222" font-size="11">上流</text>
+<text x="330" y="16" text-anchor="middle" fill="#222" font-size="11">下流</text>
+<path d="M30 36 Q120 14 210 36" fill="none" stroke="#1565c0" stroke-dasharray="4 3"/>
+<text x="120" y="18" text-anchor="middle" fill="#1565c0">3</text>
+<path d="M210 36 Q270 18 330 36" fill="none" stroke="#1565c0" stroke-dasharray="4 3"/>
+<text x="270" y="20" text-anchor="middle" fill="#1565c0">2</text>
+<line x1="32" y1="86" x2="206" y2="86" stroke="#d32f2f" stroke-width="2" marker-end="url(#q3_1_ar)"/>
+<text x="118" y="103" text-anchor="middle" fill="#d32f2f">船P（下り）</text>
+<line x1="328" y1="86" x2="214" y2="86" stroke="#d32f2f" stroke-width="2" marker-end="url(#q3_1_ar)"/>
+<text x="272" y="103" text-anchor="middle" fill="#d32f2f">船Q（上り）</text>
+<text x="180" y="124" text-anchor="middle" fill="#222" font-size="11">同じ時間 → Pの下り：Qの上り＝3：2</text>
+</g>
+</svg>
+図：Cで出会うまで、Pは3、Qは2進む。</li>
+    <li>静水の速さの比は 1：1.5＝2：3。Pを②、Qを③と書く。</li>
+    <li>Pの下りは ②＋流れ。Qの上りは ③−流れ。この2つをたす。流れの分は消えて、②＋③＝⑤。これを 3：2 に分ける。Pの下りは③、Qの上りは②。</li>
+    <li>Pは静水②で下り③。だから<b>流れは①</b>。速さの表にまとめる。
+      <table>
+        <tr><th></th><th>静水</th><th>上り</th><th>下り</th></tr>
+        <tr><th>船P</th><td>②</td><td>①</td><td>③</td></tr>
+        <tr><th>船Q</th><td>③</td><td>②</td><td>④</td></tr>
+      </table></li>
+    <li>Pの往復は48分。下り③、上り①なので、時間の比は 1：3。下りは 48÷4＝12分。上りは36分。</li>
+    <li>ABの長さは ③×12＝36。</li>
+    <li>Qは上り 36÷2＝18分、下り 36÷4＝9分。18＋9＝<b>27分</b>。</li>
+    <li>落としやすい所。Qは下流のBから出るので、先に上る。上りと下りの速さを入れかえない。</li>
+  </ol>
+  <div class="ans">答え：27分</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 2回目に出会う（地点D）のは何分後 <span class="type">B・7点｜折り返してからの出会い</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>地点Dで出会った</b>」と「出発してから何分後」。QがAに着く<b>18分後</b>の2そうの場所を図に置く → そこからは向かい合って進む出会い算。(1)の速さの表ができていたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>向かい合って進むと、間の長さは1分に「速さの和」ずつちぢむ。出会うまでの時間＝間の長さ÷<b>速さの和</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2そうの動きを時間の表にする。
+      <table>
+        <tr><th></th><th>行き</th><th>帰り</th></tr>
+        <tr><th>船P</th><td>下り③で12分（12分後にB）</td><td>上り①で36分</td></tr>
+        <tr><th>船Q</th><td>上り②で18分（<b>18分後にA</b>）</td><td>下り④で9分</td></tr>
+      </table></li>
+    <li>18分後を図にする。QはAにいる。PはBから 18−12＝6分上っている。進んだ長さは ①×6＝6。
+<svg viewBox="0 0 360 120" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="18分後の図。QはA、PはBから6上った所。間は30。Aから24の所Dで出会う">
+<defs><marker id="q3_2_ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#d32f2f"/></marker></defs>
+<g font-family="sans-serif" font-size="12">
+<line x1="30" y1="50" x2="330" y2="50" stroke="#222" stroke-width="1.5"/>
+<line x1="30" y1="42" x2="30" y2="58" stroke="#222" stroke-width="1.5"/>
+<line x1="230" y1="42" x2="230" y2="58" stroke="#d32f2f" stroke-width="2"/>
+<line x1="280" y1="42" x2="280" y2="58" stroke="#222" stroke-width="1.5"/>
+<line x1="330" y1="42" x2="330" y2="58" stroke="#222" stroke-width="1.5"/>
+<text x="30" y="34" text-anchor="middle" fill="#222">A</text>
+<text x="230" y="34" text-anchor="middle" fill="#d32f2f" font-weight="bold">D</text>
+<text x="330" y="34" text-anchor="middle" fill="#222">B</text>
+<text x="6" y="16" text-anchor="start" fill="#222" font-size="11">Q（18分後）</text>
+<text x="282" y="16" text-anchor="middle" fill="#222" font-size="11">P（18分後）</text>
+<line x1="281" y1="20" x2="280" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="32" y1="74" x2="226" y2="74" stroke="#d32f2f" stroke-width="2" marker-end="url(#q3_2_ar)"/>
+<text x="128" y="91" text-anchor="middle" fill="#d32f2f">Q 下り④×6分＝24</text>
+<line x1="279" y1="74" x2="234" y2="74" stroke="#d32f2f" stroke-width="2" marker-end="url(#q3_2_ar)"/>
+<text x="268" y="91" text-anchor="middle" fill="#d32f2f">P ①×6分</text>
+<text x="305" y="70" text-anchor="middle" fill="#1565c0">6</text>
+<text x="155" y="112" text-anchor="middle" fill="#1565c0">AからPまで 36−6＝30</text>
+</g>
+</svg>
+図：18分後。2そうの間は30。ここから向かい合う。</li>
+    <li>2そうの間は 36−6＝30。</li>
+    <li>Qは下り④、Pは上り①。1分に ④＋①＝⑤ ちぢむ。30÷5＝<b>6分</b>で出会う。</li>
+    <li>出発からは 18＋6＝<b>24分後</b>。</li>
+    <li>確かめ。24分後は、QがBにもどる27分後より前。Qはまだ下りのとちゅうで合っている。</li>
+  </ol>
+  <div class="ans">答え：24分後</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> AとBの距離 <span class="type">B・7点｜比の長さを本物の長さに直す</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>CとDは120m</b>」と、答え方の「何km」に丸。本物の長さはこの120mだけ。比の長さでACとADを出して差を図に置く → <b>差の2.4が120m</b>と決まる。(2)が出ていたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>比で出した長さ（ABが36）と本物の長さは、同じ場所どうしをくらべてつなぐ。CDが比で2.4、本物で120m。1あたりは<b>120÷2.4</b>で出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ADを出す。QはAから下り④で6分進んでDに着く。④×6＝24。</li>
+    <li>ACを出す。ABの36を 3：2 に分ける。36×3/5＝21.6。</li>
+    <li>CDは 24−21.6＝<b>2.4</b>。
+<svg viewBox="0 0 360 100" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ABは36。ACは21.6、ADは24。CDの2.4が120m">
+<g font-family="sans-serif" font-size="12">
+<line x1="30" y1="46" x2="330" y2="46" stroke="#222" stroke-width="1.5"/>
+<line x1="30" y1="38" x2="30" y2="54" stroke="#222" stroke-width="1.5"/>
+<line x1="210" y1="38" x2="210" y2="54" stroke="#222" stroke-width="1.5"/>
+<line x1="230" y1="38" x2="230" y2="54" stroke="#222" stroke-width="1.5"/>
+<line x1="330" y1="38" x2="330" y2="54" stroke="#222" stroke-width="1.5"/>
+<line x1="210" y1="46" x2="230" y2="46" stroke="#d32f2f" stroke-width="4"/>
+<text x="30" y="30" text-anchor="middle" fill="#222">A</text>
+<text x="206" y="30" text-anchor="middle" fill="#222">C</text>
+<text x="234" y="30" text-anchor="middle" fill="#222">D</text>
+<text x="330" y="30" text-anchor="middle" fill="#222">B</text>
+<text x="30" y="70" text-anchor="middle" fill="#222" font-size="11">0</text>
+<text x="196" y="70" text-anchor="middle" fill="#222" font-size="11">21.6</text>
+<text x="240" y="70" text-anchor="middle" fill="#222" font-size="11">24</text>
+<text x="330" y="70" text-anchor="middle" fill="#222" font-size="11">36</text>
+<text x="220" y="90" text-anchor="middle" fill="#d32f2f" font-weight="bold">2.4 ＝ 120m</text>
+<line x1="220" y1="50" x2="220" y2="78" stroke="#d32f2f" stroke-width="1"/>
+</g>
+</svg>
+図：Aからの長さを比で書いたもの。赤い所がCD。</li>
+    <li>2.4が120m。1あたりは 120÷2.4＝50m。</li>
+    <li>ABは 50×36＝1800m。kmに直して<b>1.8km</b>。</li>
+    <li>確かめ。CDは 50×2.4＝120m。問題文と同じ。</li>
+  </ol>
+  <div class="ans">答え：1.8km</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (4)</span> 川の流れの速さ <span class="type">B・7点｜分速mを時速kmに直す</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は答え方の「<b>毎時何km</b>」に丸。流れは①、Pの下りは③で12分。毎分のmで出してから<b>毎時kmに直して書く</b>。(3)の1800mが出ていたら2行で終わる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>毎分50mを毎時に直すには<b>60をかける</b>。50×60＝3000m。1000でわってkmにする。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Pは1800mを12分で下る。下りの速さは 1800÷12＝毎分150m。</li>
+    <li>下り③と流れ①の比は 3：1。流れは 150÷3＝<b>毎分50m</b>。</li>
+    <li>毎時に直す。50×60＝3000m。3000÷1000＝<b>3km</b>。</li>
+    <li>確かめ。(3)の「1あたり50m」と、流れ①が毎分50mは同じ数で合っている。</li>
+  </ol>
+  <div class="ans">答え：毎時3km</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>「〜でない数の何番目」は、<b>ぬけた個数を数えてたす</b>。近い平方数・立方数を先に書く。重なりは二重に引かない。</li>
+    <li>「続いて並ばない」並べ方は、右はしで分けて<b>前の2つをたす表</b>にする。左右対称は半分を決めれば残りが決まる。</li>
+    <li>流水算は、<b>流れを①にした速さの表</b>を先に作る。本物の長さは、比の長さと同じ場所でつなぐ。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4-5"><h1 class="dtitle">大問4・5（作図と角の二等分線・回転体の体積）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4〜5</span> この回の全体像（担当の大問） <span class="type">A 8点／B 8点／C 14点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th><th>描く図・表</th></tr>
+    <tr><td>4 (1)</td><td>宝物の場所Tを作図する</td><td>C 7</td><td>「最短距離が等しい」＝角Bの二等分線の上。本番では後回し</td><td>作図の順番の図</td></tr>
+    <tr><td>4 (2)</td><td>TはBから何m</td><td>C 7</td><td>「角Bの大きさは角Cの大きさのちょうど2倍」→ 角Bを半分にすると角Cと同じ。本番では後回し</td><td>○の印を書きこんだ図</td></tr>
+    <tr><td>5 (1)</td><td>2つの直角三角形を軸で合わせて回す</td><td>A 8</td><td>軸の左右に図形 → 片側に折り返して重ねる。外側の線だけを回す</td><td>折り返した図／円すい台の表</td></tr>
+    <tr><td>5 (2)</td><td>軸から3cmはなして回す</td><td>B 8</td><td>(1)の図を3cmずらす → 外側の円すい台2つ−まん中の円柱</td><td>斜めの線を軸までのばした図／体積の表</td></tr>
+  </table>
+  <p>取り方: <b>5 (1)を先に確実に</b>。5 (2)は(1)と同じ手順なので、(1)が出せたら続けて手を付ける。大問4は2問ともCなので、ほかの大問を見直したあとに回す。受験者平均32.1点、合格者平均56.5点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 宝物の場所Tを作図する <span class="type">C・7点｜作図（角の二等分線と垂直な線）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は②「<b>最短距離が等しい</b>」と③「<b>TAとTBは垂直</b>」。②は「角Bの二等分線の上」、③は「Aから二等分線に垂直な線」に直して書く → 2本の線が交わる点がTと決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>角の二等分線の上の点は、角をつくる2本の直線から同じ距離にある。だから②に当てはまる点は、角Bの二等分線の上にならぶ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>角Bの二等分線をひく。Bを中心に円の一部をかく。BA、BCと交わる点をP、Qとする。P、Qを中心に同じ半径で円の一部をかく。交わる点をRとする。BとRを結ぶ。</li>
+    <li>Aから直線BRに垂直な線をひく。Aを中心に円の一部をかく。BRと交わる点をX、Yとする。X、Yを中心に同じ半径で円の一部をかく。交わる点をZとする。AとZを結ぶ。</li>
+    <li><b>直線AZと直線BRが交わる点がT</b>。TAとTBは垂直になっている。近くに「T」と書く。
+<svg viewBox="0 0 360 185" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: 角Bの二等分線BRをひき、AからBRに垂直な線AZをひく。交わる点がT">
+<polygon points="103.6,33.2 17.9,149.1 333.2,148.0" fill="none" fill-opacity="1" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="45.1,101.3 47.4,102.7 49.6,104.2 51.8,105.8 53.8,107.5 55.8,109.3 57.7,111.2 59.5,113.2 61.2,115.2 62.8,117.4 64.3,119.6 65.7,121.9 67.0,124.3 68.1,126.7 69.2,129.2 70.1,131.7 70.9,134.2 71.5,136.8 72.1,139.5 72.5,142.1 72.7,144.8 72.9,147.5 72.9,150.2 72.8,152.8 72.5,155.5" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3"/>
+<polyline points="223.5,32.4 223.9,33.3 224.2,34.2 224.6,35.0 224.9,35.9 225.3,36.8 225.6,37.6 225.9,38.5 226.3,39.4 226.6,40.3 226.9,41.2 227.2,42.0 227.6,42.9 227.9,43.8 228.2,44.7 228.5,45.6 228.8,46.5 229.0,47.4 229.3,48.3 229.6,49.1 229.9,50.0 230.2,50.9 230.4,51.8 230.7,52.7 231.0,53.6" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3"/>
+<polyline points="220.9,33.8 221.5,34.6 222.1,35.3 222.6,36.1 223.2,36.8 223.7,37.6 224.3,38.3 224.9,39.1 225.4,39.8 225.9,40.6 226.5,41.4 227.0,42.1 227.6,42.9 228.1,43.7 228.6,44.5 229.1,45.2 229.6,46.0 230.2,46.8 230.7,47.6 231.2,48.4 231.7,49.2 232.2,50.0 232.7,50.8 233.1,51.6 233.6,52.4" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="17.9" y1="149.1" x2="254.3" y2="29.4" stroke="#1565c0" stroke-width="1.3" stroke-linecap="round"/>
+<polyline points="188.1,52.4 186.5,58.5 184.4,64.5 181.9,70.4 179.0,76.0 175.7,81.4 171.9,86.5 167.9,91.4 163.4,95.9 158.7,100.1 153.6,104.0 148.3,107.5 142.8,110.5 137.0,113.2 131.1,115.4 125.0,117.2 118.8,118.5 112.5,119.4 106.2,119.8 99.8,119.8 93.5,119.3 87.2,118.3 81.1,116.9 75.0,115.0 69.1,112.7" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3"/>
+<polyline points="157.0,119.6 157.0,120.9 156.9,122.2 156.8,123.4 156.7,124.7 156.5,125.9 156.4,127.2 156.2,128.4 156.0,129.7 155.8,130.9 155.5,132.2 155.3,133.4 155.0,134.6 154.7,135.8 154.4,137.1 154.0,138.3 153.6,139.5 153.3,140.7 152.9,141.9 152.4,143.1 152.0,144.3 151.5,145.4 151.0,146.6 150.5,147.7 150.0,148.9" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3"/>
+<polyline points="169.4,139.1 168.2,138.8 167.0,138.5 165.7,138.2 164.5,137.9 163.3,137.6 162.1,137.2 160.9,136.8 159.7,136.4 158.5,136.0 157.3,135.6 156.1,135.1 155.0,134.6 153.8,134.1 152.7,133.6 151.5,133.1 150.4,132.5 149.3,131.9 148.2,131.3 147.1,130.7 146.0,130.1 144.9,129.5 143.8,128.8 142.7,128.1 141.7,127.4" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="103.6" y1="33.2" x2="159.5" y2="143.5" stroke="#d32f2f" stroke-width="1.3" stroke-linecap="round"/>
+<polyline points="130.1,85.6 135.5,82.8 138.2,88.2" fill="none" stroke="#d32f2f" stroke-width="1.1"/>
+<circle cx="132.8" cy="90.9" r="3" fill="#d32f2f"/>
+<text x="100" y="27" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="4" y="161" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="336" y="160" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="117" y="86" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">T</text>
+<text x="35" y="103" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">P</text>
+<text x="70" y="163" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="230" y="59" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">R</text>
+<text x="83" y="132" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">X</text>
+<text x="172" y="59" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">Y</text>
+<text x="169" y="139" font-size="11" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">Z</text>
+<text x="42" y="138" font-size="8" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">○</text>
+<text x="48" y="147" font-size="8" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">○</text>
+</svg>
+図: 青の線が角Bの二等分線。赤の線がAからひいた垂直な線。作図に使った線は消さずに残す。</li>
+  </ol>
+  <div class="ans">答え：解説の図2を参照のこと。（角Bの二等分線と、Aからその線にひいた垂直な線が交わる点がT）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> TはBから何m離れているか <span class="type">C・7点｜角の二等分線と相似</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>角Bの大きさは角Cの大きさのちょうど2倍</b>」。角Bを二等分線で半分にして、角Cと同じ印○を図に置く → <b>二等辺三角形DBC</b>ができる。BCのまん中の9mが使えるようになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2つの角が同じ三角形どうしは、形が同じ（相似）。対応する辺の比が同じになる。たとえば片方の辺が5と6なら、もう片方も5：6。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>角Bの二等分線をのばす。ACと交わる点をDとする。角DBCと角Cはどちらも○。三角形DBCは二等辺三角形になる。DからBCに垂直な線DGをひく。BGは 18÷2＝<b>9m</b>。
+<svg viewBox="0 0 360 195" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: 角Bの二等分線BDと、DからBCへの垂直な線DG。三角形ABTと三角形DBGは形が同じ">
+<polygon points="103.2,44.8 20.0,168.0 135.9,106.4" fill="#dbe9ff" fill-opacity="1" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="177.5,84.3 20.0,168.0 177.5,168.0" fill="#ffe0b2" fill-opacity="1" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="103.2,44.8 20.0,168.0 335.0,168.0" fill="none" fill-opacity="1" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="20.0" y1="168.0" x2="177.5" y2="84.3" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="103.2" y1="44.8" x2="135.9" y2="106.4" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="177.5" y1="84.3" x2="177.5" y2="168.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3" stroke-linecap="round"/>
+<polyline points="133.1,101.1 127.8,103.9 130.6,109.2" fill="none" stroke="#222" stroke-width="1.1"/>
+<polyline points="177.5,162.0 171.5,162.0 171.5,168.0" fill="none" stroke="#1565c0" stroke-width="1.1"/>
+<text x="99" y="39" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">A</text>
+<text x="6" y="178" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">B</text>
+<text x="338" y="178" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">C</text>
+<text x="180" y="79" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">D</text>
+<text x="134" y="122" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">T</text>
+<text x="174" y="183" font-size="13" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">G</text>
+<text x="46" y="155" font-size="8" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">○</text>
+<text x="52" y="165" font-size="8" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">○</text>
+<text x="299" y="164" font-size="8" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">○</text>
+<text x="233" y="94" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">AC＝15m</text>
+<text x="265" y="184" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">BC＝18m</text>
+<text x="85" y="184" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">9m</text>
+<text x="80" y="161" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">BT＝？</text>
+</svg>
+図: ○は同じ大きさの角。青の三角形ABTとオレンジの三角形DBGは、○と直角がそろっている。</li>
+    <li>三角形ABCと三角形ADBをくらべる。角Aは同じ。角Cと角ABDはどちらも○。形が同じなので、AB：DB＝AC：BC＝15：18＝5：6。</li>
+    <li>三角形ABTと三角形DBGも形が同じ。BT：BG＝AB：DB＝<b>5：6</b>。BTは 9×5/6＝7.5m。</li>
+  </ol>
+  <div class="ans">答え：7.5m</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 2つの直角三角形を合わせて回した体積 <span class="type">A・8点｜回転体（折り返して重ねる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ぴったりと重なるように並べた</b>」と「<b>通った部分</b>」。軸の左にある三角形あを右へ折り返して、いに重ねて図に置く → 外側の線だけが立体の形になる。<b>斜めの線が交わる点の高さ</b>を先に出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>軸の左と右にある図形は、回すと同じ所を通る。だから片側に折り返して重ねる。重なった所は1回だけ数える。</li>
+    <li>円すいの体積は、半径×半径×3.14×高さ÷3。たとえば半径6cm、高さ6cmなら 6×6×6÷3＝72 に3.14をかける。</li>
+    <li>円すい台（円すいの先を切り落とした形）は、大きい円すいから小さい円すいをひく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>あを軸の右側に折り返して、いに重ねてかく。軸の上の点をM、下の点をNとする。あの斜めの線NLと、いの斜めの線MJが交わる。この点をKとする。
+<svg viewBox="0 0 300 235" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: あを軸の右側に折り返して、いに重ねた図。斜めの線が点Kで交わる">
+<polygon points="70.0,205.0 70.0,25.0 160.0,25.0" fill="#ffe0b2" fill-opacity="0.75" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="70.0,25.0 70.0,205.0 250.0,205.0" fill="#dbe9ff" fill-opacity="0.6" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="70.0" y1="10.0" x2="70.0" y2="217.0" stroke="#222" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="70.0" y1="205.0" x2="160.0" y2="25.0" stroke="#222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="70.0" y1="85.0" x2="130.0" y2="85.0" stroke="#d32f2f" stroke-width="1.3" stroke-dasharray="4 3" stroke-linecap="round"/>
+<circle cx="130.0" cy="85.0" r="3" fill="#d32f2f"/>
+<text x="54" y="29" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">M</text>
+<text x="54" y="210" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">N</text>
+<text x="164" y="29" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">L</text>
+<text x="254" y="210" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">J</text>
+<text x="137" y="88" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">K</text>
+<text x="54" y="90" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">O</text>
+<text x="115" y="19" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">3cm</text>
+<text x="160" y="221" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">6cm</text>
+<text x="24" y="59" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">2cm</text>
+<text x="24" y="149" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">4cm</text>
+<text x="100" y="99" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">2cm</text>
+<text x="115" y="44" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">あ</text>
+<text x="166" y="181" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">い</text>
+</svg>
+図1: 上の辺MLは3cm、下の辺NJは6cm。Kから軸にひいた線がOK。問題の図1の名前でいうと、MはAとFが重なった点。NはCとDが重なった点。LはBを折り返した点。JはE。</li>
+    <li>Kの高さを出す。三角形MKLと三角形JKNは形が同じ。MLとNJの比は 3：6＝1：2。高さ6cmも1：2に分かれる。MOは2cm、ONは4cm。いは直角二等辺三角形なので、三角形MOKも直角二等辺三角形。OKは<b>2cm</b>。</li>
+    <li>外側の線を太くなぞる。Kより下はいの斜めの線。Kより上はあの斜めの線。Kの高さで、下の円すい台㋐と上の円すい台㋑に分ける。
+<svg viewBox="0 0 300 235" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: 外側の線で囲んだ形を、Kの高さで上の円すい台㋑と下の円すい台㋐に分ける">
+<polygon points="70.0,205.0 250.0,205.0 130.0,85.0 70.0,85.0" fill="#dbe9ff" fill-opacity="1" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="70.0,85.0 130.0,85.0 160.0,25.0 70.0,25.0" fill="#ffe0b2" fill-opacity="1" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="130.0" y1="85.0" x2="70.0" y2="25.0" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3" stroke-linecap="round"/>
+<line x1="130.0" y1="85.0" x2="70.0" y2="205.0" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3" stroke-linecap="round"/>
+<line x1="70.0" y1="10.0" x2="70.0" y2="217.0" stroke="#222" stroke-width="2.4" stroke-linecap="round"/>
+<text x="54" y="29" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">M</text>
+<text x="54" y="210" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">N</text>
+<text x="164" y="29" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">L</text>
+<text x="254" y="210" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">J</text>
+<text x="137" y="88" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">K</text>
+<text x="54" y="90" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">O</text>
+<text x="115" y="19" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">半径3</text>
+<text x="160" y="221" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">半径6</text>
+<text x="100" y="99" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">半径2</text>
+<text x="4" y="59" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">高さ2cm</text>
+<text x="4" y="149" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">高さ4cm</text>
+<text x="106" y="46" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">㋑</text>
+<text x="124" y="169" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">㋐</text>
+</svg>
+図2: 青の点線を使うと、どちらも「大きい円すい−小さい円すい」になる。</li>
+    <li>3.14をかける前の数を表にする。
+<table>
+<tr><th>部分</th><th>大きい円すい</th><th>小さい円すい</th><th>ひいた残り</th></tr>
+<tr><td>㋐（下・高さ4cm）</td><td>6×6×6÷3＝72</td><td>2×2×2÷3＝8/3</td><td><b>208/3</b></td></tr>
+<tr><td>㋑（上・高さ2cm）</td><td>3×3×6÷3＝18</td><td>2×2×4÷3＝16/3</td><td><b>38/3</b></td></tr>
+</table>
+㋐の小さい円すいは、Mを頂点にした高さ2cmの円すい。㋑の小さい円すいは、Nを頂点にした高さ4cmの円すい。</li>
+    <li>2つをたす。208/3＋38/3＝246/3＝82。最後に3.14をかける。82×3.14＝257.48cm³。</li>
+    <li>落としやすい所。2つの円すいをそのままたすと 72＋18＝90 になる。これは重なった所を2回数えている。重なりは 8/3＋16/3＝8。90−8＝82 で同じ答えになるので、たしかめに使える。</li>
+  </ol>
+  <div class="ans">答え：257.48cm³</div>
+  <div class="tip">コツ：3.14は最後に1回だけかける。途中は「○×3.14」の○だけを表に書く。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 軸から3cmはなして回した体積 <span class="type">B・8点｜回転体（円すい台−円柱）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直線lからそれぞれ3cm離した</b>」。(1)の折り返した図を、右へ3cmずらして図に置く → 交わる点Kは高さ4cmのまま、軸からは5cm。<b>外側の円すい台2つ−まん中の円柱</b>で出す。(1)が出せたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>軸からはなれた図形を回すと、まん中に穴があく。穴までつまった立体を先に出して、あとから穴の円柱をひく。ここでは穴は半径3cm、高さ6cmの円柱。</li>
+    <li>斜めの線を軸までのばすと、円すいの頂点になる。いの斜めの線は、横に3cm進むと高さも3cm変わる。あの斜めの線は、横に3cm進むと高さが6cm変わる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>あを軸の右側に折り返して、いに重ねてかく。(1)の図を右へ3cmずらしただけの形になる。Kは高さ4cmのまま。軸からKまでは 2＋3＝<b>5cm</b>。</li>
+    <li>斜めの線を軸までのばす。いの線は、上の辺より3cm上で軸に当たる。この点をMとする。あの線は、下の辺より6cm下で軸に当たる。この点をNとする。(1)のM、Nとは場所がちがう。円すいの頂点という役目は同じ。
+<svg viewBox="0 0 300 305" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: (1)の図を軸から3cmはなした図。斜めの線を軸までのばすと頂点MとN。まん中は円柱の穴">
+<polygon points="141.0,180.0 243.0,180.0 175.0,112.0 141.0,112.0" fill="#dbe9ff" fill-opacity="1" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="141.0,112.0 175.0,112.0 192.0,78.0 141.0,78.0" fill="#ffe0b2" fill-opacity="1" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="90.0,180.0 141.0,180.0 141.0,78.0 90.0,78.0" fill="#f2f2f2" stroke="#222" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="90.0" y1="27.0" x2="141.0" y2="78.0" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3" stroke-linecap="round"/>
+<line x1="90.0" y1="282.0" x2="141.0" y2="180.0" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3" stroke-linecap="round"/>
+<line x1="141.0" y1="78.0" x2="175.0" y2="112.0" stroke="#222" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="141.0" y1="180.0" x2="175.0" y2="112.0" stroke="#222" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="90.0" y1="16.8" x2="90.0" y2="292.2" stroke="#222" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="90.0" y1="112.0" x2="175.0" y2="112.0" stroke="#d32f2f" stroke-width="1.3" stroke-dasharray="4 3" stroke-linecap="round"/>
+<circle cx="175.0" cy="112.0" r="3" fill="#d32f2f"/>
+<text x="96" y="29" font-size="13" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">M</text>
+<text x="96" y="288" font-size="13" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">N</text>
+<text x="196" y="82" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">L</text>
+<text x="247" y="185" font-size="13" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">J</text>
+<text x="182" y="115" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">K</text>
+<text x="116" y="73" font-size="11" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">3cm</text>
+<text x="166" y="73" font-size="11" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">3cm</text>
+<text x="192" y="195" font-size="11" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">6cm</text>
+<text x="116" y="108" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">5cm</text>
+<text x="46" y="56" font-size="12" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">3cm</text>
+<text x="46" y="99" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">2cm</text>
+<text x="46" y="150" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal" font-family="sans-serif">4cm</text>
+<text x="46" y="235" font-size="12" fill="#1565c0" text-anchor="start" font-weight="normal" font-family="sans-serif">6cm</text>
+<line x1="82.0" y1="78.0" x2="90.0" y2="78.0" stroke="#222" stroke-width="1" stroke-linecap="round"/>
+<line x1="82.0" y1="180.0" x2="90.0" y2="180.0" stroke="#222" stroke-width="1" stroke-linecap="round"/>
+<text x="116" y="153" font-size="13" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">㋔</text>
+<text x="116" y="172" font-size="10" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">（穴）</text>
+<text x="178" y="160" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">㋒</text>
+<text x="163" y="96" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">㋓</text>
+</svg>
+図: ㋒は下の円すい台、㋓は上の円すい台、㋔はまん中の円柱。㋒と㋓は穴までつまった形で考える。</li>
+    <li>3.14をかける前の数を表にする。
+<table>
+<tr><th>部分</th><th>大きい円すい</th><th>小さい円すい</th><th>体積</th></tr>
+<tr><td>㋒（下・Mが頂点）</td><td>半径9、高さ9<br>9×9×9÷3＝243</td><td>半径5、高さ5<br>5×5×5÷3＝125/3</td><td><b>604/3</b></td></tr>
+<tr><td>㋓（上・Nが頂点）</td><td>半径6、高さ12<br>6×6×12÷3＝144</td><td>半径5、高さ10<br>5×5×10÷3＝250/3</td><td><b>182/3</b></td></tr>
+<tr><td>㋔（円柱）</td><td colspan="2">半径3、高さ6　3×3×6</td><td>54</td></tr>
+</table></li>
+    <li>円すい台2つをたす。604/3＋182/3＝786/3＝262。円柱をひく。262−54＝208。最後に3.14をかける。208×3.14＝653.12cm³。</li>
+  </ol>
+  <div class="ans">答え：653.12cm³</div>
+  <div class="tip">コツ：円すいの高さは、頂点MやNからはかる。㋒の小さい円すいは、MからKの高さまでの 3＋2＝5cm。㋓の小さい円すいは、NからKの高さまでの 6＋4＝10cm。</div>
+</section>
+</div>
