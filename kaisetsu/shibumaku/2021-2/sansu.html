@@ -1,0 +1,807 @@
+<!-- generated kakomon shibumaku/2021-2/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（分母2021の分数と「商＝余り」／3色の色紙のはり方／強風で遅れる電車）</a></li>
+<li><a href="#4-5">大問4・5（円の中の道すじの作図と弧の長さ・直方体の影の面積）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（分母2021の分数と「商＝余り」／3色の色紙のはり方／強風で遅れる電車）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 31点／B 33点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th><th>描く図・表</th></tr>
+    <tr><td>1 (1)(2)</td><td>分母が2021の分数。商と余りが等しい数</td><td>A 6+6+7 / B 7</td><td>「2021＝43×47」→ 分子が43か47の倍数。「商と余りが等しく」→ わる数より1大きい数の倍数</td><td>倍数の個数の表／はしどうしの組／連除法</td></tr>
+    <tr><td>2 (1)(2)</td><td>青・黄・赤の色紙を決まりどおりにはる</td><td>B 6+6+7</td><td>「上下左右に同じ色の色紙をはらない」→ 黄と赤はたがいちがいの2通り。数えるのは青の場所</td><td>青の場所を書いたマス目</td></tr>
+    <tr><td>3 (1)(2)</td><td>強風で遅くなる電車の遅れ</td><td>B 7 / A 6+6</td><td>「通常の60%の速さ」→ 時間の比は3：5。差の8分から12分と20分</td><td>ダイヤグラム／時間と速さの表</td></tr>
+  </table>
+  <p>取り方: <b>1 (1)①②・1 (2)① と 3 (2) を先に確実に</b>。3 (2) は、3 (1) の最初の一歩（通常12分・強風20分）だけで解ける。待つ電車の図で止まっても先に進める。大問2は「黄と赤は2通り」に気づけるかで分かれる。受験者平均34.6点、合格者平均55.4点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)①</span> 分母2021の分数で、約分できるものの個数 <span class="type">A・6点｜倍数の個数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2021＝43×47</b>」と「<b>約分できるもの</b>」。「約分できる」を「分子が43の倍数か47の倍数」に直して書く → 1から2020までの倍数の個数を数えると決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>約分できるのは、分子と分母を同じ数でわれるとき。たとえば 3/6 は、どちらも3でわれる。</li>
+    <li>43と47は素数。2021をわり切る数は 1, 43, 47, 2021 の4つだけ。だから、<b>分子が43か47でわれるときだけ</b>約分できる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「約分できる」の横に「分子が43の倍数か47の倍数」と書く。</li>
+    <li>分子は1から2020まで。倍数の個数を表にする。
+<table>
+  <tr><th>分子</th><th>1から2021までの個数</th><th>2021をのぞく</th><th>1から2020までの個数</th></tr>
+  <tr><td>43の倍数</td><td>2021÷43＝47個</td><td>47−1</td><td><b>46個</b></td></tr>
+  <tr><td>47の倍数</td><td>2021÷47＝43個</td><td>43−1</td><td><b>42個</b></td></tr>
+</table></li>
+    <li>43の倍数でもあり47の倍数でもある数を考える。いちばん小さいのは 43×47＝2021。分子は2020までなので、重なりは0個。</li>
+    <li>たす。46＋42＝88個。</li>
+    <li>落としやすい所は、2021÷43＝47 をそのまま47個とすること。47個目は2021そのもの。分子に2021は無いので、1ひく。</li>
+  </ol>
+  <div class="ans">答え：88個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)②</span> 約分できない分数を全部たす <span class="type">A・6点｜分数の和（はしどうしを組にする）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>約分できるものをすべて取り除きます</b>」と「<b>残った分数をすべて足す</b>」。残りを「2020−88＝1932個」に直して書く → 小さいほうと大きいほうを組にすると、1組の和が1に決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>はしどうしをたすと1になる。1/2021＋2020/2021＝1。2/2021＋2019/2021＝1。分子の和がいつも2021。</li>
+    <li>取り除く分数の相手は、取り除く分数。たとえば 43/2021 の相手は 1978/2021。1978＝43×46 で、これも43の倍数。だから<b>残った分数の相手は、残っている</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>残った個数を出す。2020−88＝1932個。</li>
+    <li>小さいほうから1つ、大きいほうから1つ取って組にする。
+<table>
+  <tr><th>小さいほう</th><th>大きいほう</th><th>1組の和</th></tr>
+  <tr><td>1/2021</td><td>2020/2021</td><td><b>1</b></td></tr>
+  <tr><td>2/2021</td><td>2019/2021</td><td><b>1</b></td></tr>
+  <tr><td>3/2021</td><td>2018/2021</td><td><b>1</b></td></tr>
+</table></li>
+    <li>組の数を出す。1932÷2＝966組。</li>
+    <li>和は 1×966＝966。</li>
+    <li>確かめ。2020個全部の和は、1010組で1010。取り除いた43の倍数の和は 23。47の倍数の和は 21。1010−23−21＝966。合っている。</li>
+    <li>落としやすい所は、1932を2でわり忘れること。1になるのは2個で1組。</li>
+  </ol>
+  <div class="ans">答え：966</div>
+  <div class="tip">コツ：確かめの23は、43×（1から46までの和）÷2021 で出る。1から46までの和は1081。1081÷47＝23。47の倍数も同じやり方で 903÷43＝21。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)①</span> 15でわっても17でわっても、商と余りが等しい数A <span class="type">A・7点｜商と余りが等しい数（公倍数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>15で割ったときの商と余りが等しく</b>」と「<b>17で割ったときの商と余りも等しく</b>」。「15が□個と余り□」を「16が□個」に直して書く → Aは16の倍数で、18の倍数でもあると決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>問題文の例で確かめる。60＝9×6＋6。9が6個と、1が6個。合わせると10が6個。<b>わる数より1大きい数の倍数</b>になっている。</li>
+    <li>余りは、わる数より小さい。15でわった余りは14まで。17でわった余りは16まで。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>60の例を図にする。余りの6を1ずつくばる。
+<svg viewBox="0 0 360 92" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="60は9が6個と余り6。余りの1を1個ずつ9にくばると、10が6個になる">
+<g font-family="sans-serif" font-size="11" fill="#222">
+<text x="6" y="14">60＝9が6個と、余り6（1が6個）</text>
+<rect x="14" y="24" width="40" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/><text x="34" y="41" text-anchor="middle" font-size="12">9</text>
+<rect x="54" y="24" width="10" height="24" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.5"/><text x="59" y="41" text-anchor="middle" font-size="10" fill="#d32f2f">1</text>
+<text x="39" y="64" text-anchor="middle" font-size="11">10</text>
+<rect x="70" y="24" width="40" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/><text x="90" y="41" text-anchor="middle" font-size="12">9</text>
+<rect x="110" y="24" width="10" height="24" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.5"/><text x="115" y="41" text-anchor="middle" font-size="10" fill="#d32f2f">1</text>
+<text x="95" y="64" text-anchor="middle" font-size="11">10</text>
+<rect x="126" y="24" width="40" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/><text x="146" y="41" text-anchor="middle" font-size="12">9</text>
+<rect x="166" y="24" width="10" height="24" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.5"/><text x="171" y="41" text-anchor="middle" font-size="10" fill="#d32f2f">1</text>
+<text x="151" y="64" text-anchor="middle" font-size="11">10</text>
+<rect x="182" y="24" width="40" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/><text x="202" y="41" text-anchor="middle" font-size="12">9</text>
+<rect x="222" y="24" width="10" height="24" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.5"/><text x="227" y="41" text-anchor="middle" font-size="10" fill="#d32f2f">1</text>
+<text x="207" y="64" text-anchor="middle" font-size="11">10</text>
+<rect x="238" y="24" width="40" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/><text x="258" y="41" text-anchor="middle" font-size="12">9</text>
+<rect x="278" y="24" width="10" height="24" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.5"/><text x="283" y="41" text-anchor="middle" font-size="10" fill="#d32f2f">1</text>
+<text x="263" y="64" text-anchor="middle" font-size="11">10</text>
+<rect x="294" y="24" width="40" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/><text x="314" y="41" text-anchor="middle" font-size="12">9</text>
+<rect x="334" y="24" width="10" height="24" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.5"/><text x="339" y="41" text-anchor="middle" font-size="10" fill="#d32f2f">1</text>
+<text x="319" y="64" text-anchor="middle" font-size="11">10</text>
+<text x="6" y="84" fill="#d32f2f" font-weight="bold">余りの1を1個ずつくばる → 10が6個 → 60は10の倍数</text>
+</g></svg></li>
+    <li>Aも同じ形にする。15でわった商と余りを□とする。A＝15×□＋□＝16×□。Aは16の倍数。□は余りなので14まで。Aは 16×14＝224 まで。</li>
+    <li>17でわった商と余りを△とする。A＝17×△＋△＝18×△。Aは18の倍数。</li>
+    <li>16と18の最小公倍数を連除法で出す。2×8×9＝144。
+<pre class="fig">2 ) 16  18
+     8   9      2×8×9＝144</pre></li>
+    <li>Aは144の倍数。144の次は288。288は224をこえる。当てはまるのは<b>144だけ</b>。</li>
+    <li>確かめ。144÷15＝9 余り9。144÷17＝8 余り8。どちらも商と余りが同じ。</li>
+    <li>落としやすい所は、余りの大きさを見ないこと。288は 288÷15＝19 余り3 で、商と余りが合わない。</li>
+  </ol>
+  <div class="ans">答え：144</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)②</span> 商と余りが15になり、別の数でわると17になる3けたの数B <span class="type">B・7点｜商と余りが等しい数（わる数が分からない）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>商と余りがそれぞれ15</b>」と「<b>もっとも大きいもの</b>」。①と変わったのは、分かっているのが商と余りのほうという点。「Cが15個と15」を「15×（C＋1）」に直して書く → Bは15と17の公倍数と決まる。①が解けたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Cが20の場合でためす。20×15＋15＝315。315＝15×21。<b>15が（C＋1）個</b>の形になる。Bは15の倍数。</li>
+    <li>余りは、わる数より小さい。余りが15なので、Cは16以上。余りが17なので、Dは18以上。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>式に直す。B＝C×15＋15＝15×（C＋1）。Bは15の倍数。</li>
+    <li>同じように、B＝D×17＋17＝17×（D＋1）。Bは17の倍数。</li>
+    <li>Bは15と17の公倍数。15と17は、1以外に同じ約数がない。最小公倍数は 15×17＝255。</li>
+    <li>3けたの255の倍数を書き出す。255、510、765。次の1020は4けた。999÷255＝3 余り234 からも、3倍までと分かる。</li>
+    <li>小さすぎないかを見る。Dは18以上なので、Bは 17×（18＋1）＝323 以上。765は当てはまる。いちばん大きいのは<b>765</b>。</li>
+    <li>確かめ。765÷15＝51 なので C＝50。765÷50＝15 余り15。765÷17＝45 なので D＝44。765÷44＝17 余り17。</li>
+  </ol>
+  <div class="ans">答え：765</div>
+  <div class="tip">コツ：255は323より小さいので、Bにならない（D＝14になり、余り17が出せない）。「もっとも小さいもの」を聞かれたら510になる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)①</span> 3×3で、青を1枚だけ使うもよう <span class="type">B・6点｜場合の数（黄と赤はたがいちがい）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>上下左右に同じ色の色紙をはらない</b>」と「<b>青の色紙を1枚だけ</b>」。黄と赤の決まりを「たがいちがい」に直して図2に書く → 青の場所9通りに、黄と赤の入れかえ2通りをかけると決まる。たがいちがいに気づけたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>黄の上下左右は赤。赤の上下左右は黄。1マスの色を決めると、となりへ順に決まっていく。だから黄と赤のはり方は、<b>入れかえの2通りだけ</b>。</li>
+    <li>図には「上・下・左・右」が書いてある。回すと重なるもようも、別のもようとして数える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>青をはる場所を決める。まん中が1通り。すみが4通り。辺のまん中が4通り。合わせて<b>9通り</b>。</li>
+    <li>残りの8マスに黄と赤をはる。たがいちがいにするしかない。
+<svg viewBox="0 0 360 112" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3×3のたがいちがいのもようと、青をまん中・すみ・辺のまん中にはった例。残りの黄と赤はたがいちがいのまま">
+<g font-family="sans-serif" font-size="11" fill="#222">
+<rect x="8" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="20.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="32" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="44.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="56" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="68.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="8" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="20.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="32" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="44.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="56" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="68.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="8" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="20.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="32" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="44.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="56" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="68.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<text x="44.0" y="94" text-anchor="middle" font-size="10">黄と赤だけなら</text>
+<text x="44.0" y="107" text-anchor="middle" font-size="10">たがいちがい</text>
+<rect x="98" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="110.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="122" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="134.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="146" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="158.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="98" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="110.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="122" y="32" width="24" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="134.0" y="48.0" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="146" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="158.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="98" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="110.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="122" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="134.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="146" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="158.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<text x="134.0" y="94" text-anchor="middle" font-size="10">まん中を青</text>
+<text x="134.0" y="107" text-anchor="middle" font-size="10">（1通り）</text>
+<rect x="188" y="8" width="24" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="200.0" y="24.0" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="212" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="224.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="236" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="248.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="188" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="200.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="212" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="224.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="236" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="248.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="188" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="200.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="212" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="224.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="236" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="248.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<text x="224.0" y="94" text-anchor="middle" font-size="10">すみを青</text>
+<text x="224.0" y="107" text-anchor="middle" font-size="10">（4通り）</text>
+<rect x="274" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="286.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="298" y="8" width="24" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="310.0" y="24.0" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="322" y="8" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="334.0" y="24.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="274" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="286.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="298" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="310.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="322" y="32" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="334.0" y="48.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="274" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="286.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<rect x="298" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="310.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">赤</text>
+<rect x="322" y="56" width="24" height="24" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="334.0" y="72.0" text-anchor="middle" font-size="11" fill="#222">黄</text>
+<text x="310.0" y="94" text-anchor="middle" font-size="10">辺のまん中を青</text>
+<text x="310.0" y="107" text-anchor="middle" font-size="10">（4通り）</text>
+</g></svg></li>
+    <li>どの図も、黄と赤を全部入れかえたものがもう1つある。青の場所1つにつき2通り。</li>
+    <li>かける。9×2＝18通り。</li>
+  </ol>
+  <div class="ans">答え：18通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)②</span> 3×3で、青をちょうど2枚使うもよう <span class="type">B・6点｜場合の数（はなれた2マスを選ぶ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>青の色紙の周りには青の色紙をはらない</b>」と「<b>ちょうど2枚</b>」。「周り」は図1の①から⑧。ななめの4マスにも丸をつける → さわらない2マスの選び方を数えて、2倍すると決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>青どうしは、たて・横・ななめのどこでもとなりあえない。まん中に青をはると、残りの8マス全部が「周り」になる。だから青2枚のとき、<b>まん中は使えない</b>。</li>
+    <li>黄と赤は①と同じ。青の場所を決めると、残りは入れかえの2通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>青2枚は、外側の8マスから選ぶ。形で5つに分けて図にする。
+<svg viewBox="0 0 360 96" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="青2枚の場所の5つの形。同じ辺のすみ2つ、すみとはなれた辺のまん中（2つの向き）、向かい合うすみ、向かい合う辺のまん中">
+<g font-family="sans-serif" font-size="11" fill="#222">
+<rect x="10" y="8" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="19.0" y="20.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="28" y="8" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="46" y="8" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="55.0" y="20.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="10" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="28" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="46" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="10" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="28" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="46" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="37" y="76" text-anchor="middle" font-size="8.5">同じ辺のすみ</text>
+<text x="37" y="88" text-anchor="middle" font-size="8.5">4通り</text>
+<rect x="80" y="8" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="89.0" y="20.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="98" y="8" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="116" y="8" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="80" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="98" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="116" y="26" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="125.0" y="38.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="80" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="98" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="116" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="107" y="76" text-anchor="middle" font-size="8.5">すみと遠い辺</text>
+<text x="107" y="88" text-anchor="middle" font-size="8.5">4通り</text>
+<rect x="150" y="8" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="159.0" y="20.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="168" y="8" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="186" y="8" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="150" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="168" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="186" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="150" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="168" y="44" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="177.0" y="56.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="186" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="177" y="76" text-anchor="middle" font-size="8.5">左を裏返した形</text>
+<text x="177" y="88" text-anchor="middle" font-size="8.5">4通り</text>
+<rect x="220" y="8" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="229.0" y="20.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="238" y="8" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="256" y="8" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="220" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="238" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="256" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="220" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="238" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="256" y="44" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="265.0" y="56.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<text x="247" y="76" text-anchor="middle" font-size="8.5">向かい合うすみ</text>
+<text x="247" y="88" text-anchor="middle" font-size="8.5">2通り</text>
+<rect x="290" y="8" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="308" y="8" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="317.0" y="20.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="326" y="8" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="290" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="308" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="326" y="26" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="290" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="308" y="44" width="18" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="317.0" y="56.6" text-anchor="middle" font-size="10" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="326" y="44" width="18" height="18" fill="#fff" stroke="#222" stroke-width="1"/>
+<text x="317" y="76" text-anchor="middle" font-size="8.5">向かい合う辺</text>
+<text x="317" y="88" text-anchor="middle" font-size="8.5">2通り</text>
+</g></svg></li>
+    <li>図を90度ずつ回して、場所の数を数える。左の3つは4通りずつ。右の2つは、半回転でもとにもどるので2通りずつ。</li>
+    <li>たす。4＋4＋4＋2＋2＝<b>16通り</b>。</li>
+    <li>黄と赤の入れかえで2倍。16×2＝32通り。</li>
+    <li>確かめ。すみに青を1枚はると、もう1枚をはれるのは5マス。辺のまん中にはると3マス。4×5＋4×3＝32。同じ2枚を2回数えているので、32÷2＝16。合っている。</li>
+  </ol>
+  <div class="ans">答え：32通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 縦4×横5で、青をできるだけ多く使うもよう <span class="type">B・7点｜場合の数（青の最大枚数と場所）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>計20枚</b>」と「<b>できるだけ多く</b>」。図3を2マス×2マスの太わくで区切って書く → わく1つに青は1枚まで。青は6枚、場所は27通りと決まる。(1)で「黄と赤は2通り」が見えていたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2マス×2マスの4マスは、どの2マスを選んでもとなりあう（ななめもふくむ）。だから、この中に<b>青は1枚まで</b>。</li>
+    <li>たて1列の4マスに青を2枚はる方法は3通り。上から1・3番目、1・4番目、2・4番目。3枚ははれない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図3を左から太わくで区切る。右はしの列は2マスのわくにする。
+<svg viewBox="0 0 360 146" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="縦4横5の図を、2マス×2マスの太わく4つと、右はしの2マスの太わく2つに区切った図。太わくは6つ">
+<g font-family="sans-serif" font-size="11" fill="#222">
+<text x="6" y="14">太わく1つに、青は1枚まで</text>
+<rect x="20" y="22" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="46" y="22" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="72" y="22" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="98" y="22" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="124" y="22" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="20" y="48" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="46" y="48" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="72" y="48" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="98" y="48" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="124" y="48" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="20" y="74" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="46" y="74" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="72" y="74" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="98" y="74" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="124" y="74" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="20" y="100" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="46" y="100" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="72" y="100" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="98" y="100" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="124" y="100" width="26" height="26" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="22" y="24" width="48" height="48" fill="none" stroke="#d32f2f" stroke-width="2.5" rx="3"/>
+<rect x="74" y="24" width="48" height="48" fill="none" stroke="#d32f2f" stroke-width="2.5" rx="3"/>
+<rect x="22" y="76" width="48" height="48" fill="none" stroke="#d32f2f" stroke-width="2.5" rx="3"/>
+<rect x="74" y="76" width="48" height="48" fill="none" stroke="#d32f2f" stroke-width="2.5" rx="3"/>
+<rect x="126" y="24" width="22" height="48" fill="none" stroke="#d32f2f" stroke-width="2.5" rx="3"/>
+<rect x="126" y="76" width="22" height="48" fill="none" stroke="#d32f2f" stroke-width="2.5" rx="3"/>
+<text x="33.0" y="140" text-anchor="middle" font-size="10">1</text>
+<text x="59.0" y="140" text-anchor="middle" font-size="10">2</text>
+<text x="85.0" y="140" text-anchor="middle" font-size="10">3</text>
+<text x="111.0" y="140" text-anchor="middle" font-size="10">4</text>
+<text x="137.0" y="140" text-anchor="middle" font-size="10">5</text>
+<text x="154" y="140" font-size="10">列目</text>
+<text x="170" y="50" fill="#d32f2f" font-weight="bold">太わくは6つ</text>
+<text x="170" y="68">→ 青は6枚まで</text>
+<text x="170" y="92">6枚はるには、</text>
+<text x="170" y="108">どのわくにも青が1枚。</text>
+</g></svg></li>
+    <li>右はしの5列目は、2つのわくに1枚ずつ。5列目に青は2枚。区切りを右からはじめると、同じ理由で1列目にも青は2枚。</li>
+    <li>となりあう2列は、2マス×2マスの太わく2つ分。青は合わせて2枚まで。1列目に2枚あるので、2列目は0枚。5列目に2枚あるので、4列目も0枚。残りの2枚は3列目に入る。
+<svg viewBox="0 0 360 132" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="青が入るのは1列目・3列目・5列目で2枚ずつ。1列4マスに青2枚をはる方法は、上から1・3番目、1・4番目、2・4番目の3通り">
+<g font-family="sans-serif" font-size="11" fill="#222">
+<text x="6" y="14">青は1・3・5列目に2枚ずつ</text>
+<rect x="14" y="22" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="36" y="22" width="22" height="22" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="58" y="22" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="80" y="22" width="22" height="22" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="102" y="22" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="14" y="44" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="36" y="44" width="22" height="22" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="58" y="44" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="80" y="44" width="22" height="22" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="102" y="44" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="14" y="66" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="36" y="66" width="22" height="22" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="58" y="66" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="80" y="66" width="22" height="22" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="102" y="66" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="14" y="88" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="36" y="88" width="22" height="22" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="58" y="88" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="80" y="88" width="22" height="22" fill="#fff" stroke="#222" stroke-width="1"/>
+<rect x="102" y="88" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<text x="25.0" y="124" text-anchor="middle" font-size="10" fill="#d32f2f">2枚</text>
+<text x="47.0" y="124" text-anchor="middle" font-size="10" fill="#222">0枚</text>
+<text x="69.0" y="124" text-anchor="middle" font-size="10" fill="#d32f2f">2枚</text>
+<text x="91.0" y="124" text-anchor="middle" font-size="10" fill="#222">0枚</text>
+<text x="113.0" y="124" text-anchor="middle" font-size="10" fill="#d32f2f">2枚</text>
+<text x="160" y="14">1列（4マス）に青2枚のはり方</text>
+<rect x="176" y="22" width="22" height="22" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="187.0" y="37.0" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="176" y="44" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="176" y="66" width="22" height="22" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="187.0" y="81.0" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="176" y="88" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<text x="187.0" y="124" text-anchor="middle" font-size="10">1・3番目</text>
+<rect x="236" y="22" width="22" height="22" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="247.0" y="37.0" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="236" y="44" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="236" y="66" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="236" y="88" width="22" height="22" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="247.0" y="103.0" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">青</text>
+<text x="247.0" y="124" text-anchor="middle" font-size="10">1・4番目</text>
+<rect x="296" y="22" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="296" y="44" width="22" height="22" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="307.0" y="59.0" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">青</text>
+<rect x="296" y="66" width="22" height="22" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="296" y="88" width="22" height="22" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<text x="307.0" y="103.0" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">青</text>
+<text x="307.0" y="124" text-anchor="middle" font-size="10">2・4番目</text>
+</g></svg></li>
+    <li>1・3・5列目は、あいだが1列あいている。おたがいにさわらない。それぞれ3通りなので、3×3×3＝<b>27通り</b>。</li>
+    <li>黄と赤は入れかえの2通り。27×2＝54通り。</li>
+  </ol>
+  <div class="ans">答え：54通り</div>
+  <div class="tip">コツ：「できるだけ多く」は、先に「これより多くはできない」わくを作る。そのあとで、ちょうどその数になる置き方を数える。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 電車Cは予定より何分遅れるか <span class="type">B・7点｜速さと比（ダイヤグラム）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>通常の60%の速さ</b>」と「<b>M駅に停車して待つ</b>」。60%を「時間の比は3：5」に直して書く → 差の8分から通常12分・強風20分。ダイヤグラムに置くとCの到着が決まる。Bの13分遅れを図で確かめられたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ道のりでは、速さの比と時間の比は逆になる。たとえば、60kmを時速20kmで走ると3時間。その60%の時速12kmなら5時間。<b>速さ5：3なら時間は3：5</b>。</li>
+    <li>「15分間かく」なので、AがM駅を出る時刻を0分とする。BがM駅に着くのは15分。Cは30分。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>速さの比は、通常：強風＝1：0.6＝5：3。時間の比は3：5。差の2がAの遅れの8分。1は4分。通常は 4×3＝12分。強風は 4×5＝<b>20分</b>。</li>
+    <li>ダイヤグラムを描く。Aは0分に出て20分に着く。
+<svg viewBox="0 0 360 200" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="電車A・B・Cのダイヤグラム。Aは0分発20分着、Bは20分発40分着、Cは40分発60分着。予定は12分、27分、42分着">
+<g font-family="sans-serif" font-size="11" fill="#222">
+<line x1="44.0" y1="150" x2="347.8" y2="150" stroke="#222" stroke-width="1"/>
+<line x1="44.0" y1="44" x2="347.8" y2="44" stroke="#222" stroke-width="1"/>
+<line x1="44.0" y1="150" x2="44.0" y2="44" stroke="#222" stroke-width="1"/>
+<text x="6" y="154">M駅</text><text x="6" y="48">K駅</text>
+<line x1="44.0" y1="150" x2="102.80000000000001" y2="44" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="102.80000000000001" y="38" text-anchor="middle" font-size="10" fill="#1565c0">12</text>
+<line x1="117.5" y1="150" x2="176.3" y2="44" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="176.3" y="38" text-anchor="middle" font-size="10" fill="#1565c0">27</text>
+<line x1="191.0" y1="150" x2="249.8" y2="44" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="249.8" y="38" text-anchor="middle" font-size="10" fill="#1565c0">42</text>
+<line x1="44.0" y1="150" x2="142.0" y2="44" stroke="#222" stroke-width="2.2"/>
+<text x="142.0" y="24" text-anchor="middle" font-size="11" fill="#222" font-weight="bold">20</text>
+<text x="109.0" y="107.0" text-anchor="middle" font-size="12" fill="#222" font-weight="bold">A</text>
+<line x1="142.0" y1="150" x2="240.0" y2="44" stroke="#222" stroke-width="2.2"/>
+<text x="240.0" y="24" text-anchor="middle" font-size="11" fill="#222" font-weight="bold">40</text>
+<text x="207.0" y="107.0" text-anchor="middle" font-size="12" fill="#222" font-weight="bold">B</text>
+<line x1="240.0" y1="150" x2="338.0" y2="44" stroke="#d32f2f" stroke-width="2.2"/>
+<text x="338.0" y="24" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">60</text>
+<text x="305.0" y="107.0" text-anchor="middle" font-size="12" fill="#d32f2f" font-weight="bold">C</text>
+<line x1="117.5" y1="150" x2="142.0" y2="150" stroke="#ef6c00" stroke-width="5"/>
+<text x="129.75" y="180" text-anchor="middle" font-size="10" fill="#ef6c00">B 5分待つ</text>
+<line x1="191.0" y1="150" x2="240.0" y2="150" stroke="#ef6c00" stroke-width="5"/>
+<text x="215.5" y="180" text-anchor="middle" font-size="10" fill="#ef6c00">C 10分待つ</text>
+<line x1="44.0" y1="147" x2="44.0" y2="153" stroke="#222" stroke-width="1"/>
+<text x="44.0" y="166" text-anchor="middle" font-size="10">0</text>
+<line x1="117.5" y1="147" x2="117.5" y2="153" stroke="#222" stroke-width="1"/>
+<text x="117.5" y="166" text-anchor="middle" font-size="10">15</text>
+<line x1="142.0" y1="147" x2="142.0" y2="153" stroke="#222" stroke-width="1"/>
+<text x="142.0" y="166" text-anchor="middle" font-size="10">20</text>
+<line x1="191.0" y1="147" x2="191.0" y2="153" stroke="#222" stroke-width="1"/>
+<text x="191.0" y="166" text-anchor="middle" font-size="10">30</text>
+<line x1="240.0" y1="147" x2="240.0" y2="153" stroke="#222" stroke-width="1"/>
+<text x="240.0" y="166" text-anchor="middle" font-size="10">40</text>
+<line x1="338.0" y1="147" x2="338.0" y2="153" stroke="#222" stroke-width="1"/>
+<text x="338.0" y="166" text-anchor="middle" font-size="10">60</text>
+<text x="349.8" y="166" font-size="9">分</text>
+<text x="44" y="12" font-size="10">太い線＝実際（強風で20分）　<tspan fill="#1565c0">点線＝予定（12分）</tspan></text>
+<text x="44" y="194" font-size="10" fill="#d32f2f">Cは60分に着く。予定は42分。遅れは 60−42＝18分</text>
+</g></svg></li>
+    <li>Bは15分にM駅に着く。Aはまだ走っている。20分まで待つ。20分に出て40分に着く。予定は 15＋12＝27分。遅れは 40−27＝13分。問題文と合う。</li>
+    <li>Cは30分にM駅に着く。Bが着く40分まで待つ。40分に出て<b>60分</b>に着く。</li>
+    <li>Cの予定は 30＋12＝42分。遅れは 60−42＝18分。</li>
+  </ol>
+  <div class="ans">答え：18分</div>
+  <div class="tip">コツ：遅れは 8分→13分→18分 と5分ずつ増える。強風の20分が、間かくの15分より5分長いため。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)①②</span> 通常の速さと、M駅からK駅までの道のり <span class="type">A・6点×2｜速さと比（時間の比から速さへ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>毎分0.2km</b>」と「<b>18分遅れて</b>」。18分遅れを「12＋18＝30分かかる」に直して書く → 強風の20分とくらべる。速さの比3：2の差が毎分0.2kmと決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>使うのは (1) の最初の一歩だけ。通常は12分、強風は20分。待つ電車の図は使わない。</li>
+    <li>時間の比が2：3なら、速さの比は逆の<b>3：2</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aの走り方を表にならべる。
+<table>
+  <tr><th>走り方</th><th>遅れ</th><th>M駅からK駅までの時間</th><th>速さの比</th></tr>
+  <tr><td>通常</td><td>0分</td><td>12分</td><td>—</td></tr>
+  <tr><td>強風（実際）</td><td>8分</td><td>20分</td><td>3</td></tr>
+  <tr><td>さらに毎分0.2km遅い</td><td>18分</td><td><b>30分</b></td><td>2</td></tr>
+</table></li>
+    <li>時間の比は 20：30＝2：3。速さの比は 3：2。差の1が毎分0.2km。強風の速さは 0.2×3＝毎分0.6km。</li>
+    <li>毎分0.6kmは、通常の60%。通常の速さは 0.6÷0.6＝<b>毎分1km</b>。これが①。</li>
+    <li>②は、通常の速さで12分かかる道のり。1×12＝12km。</li>
+    <li>確かめ。強風は 0.6×20＝12km。さらに遅いときは 0.4×30＝12km。どれも同じ道のり。</li>
+    <li>落としやすい所は、①に毎分0.6kmと書くこと。聞かれているのは「通常の速さ」。60%でわってもどす。</li>
+  </ol>
+  <div class="ans">答え：① 毎分1km　② 12km</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ</h2>
+  <ul>
+    <li>「商と余りが等しい」「60%の速さ」は、式に入る形に直してから使う。16が□個。時間の比は3：5。</li>
+    <li>2色をたがいちがいにはる決まりは、入れかえの2通りに決まる。数えるのは青の場所だけ。</li>
+    <li>遅れの問題は、出発を0分にしてダイヤグラムに置く。予定の線と実際の線を両方かく。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4-5"><h1 class="dtitle">大問4・5（円の中の道すじの作図と弧の長さ・直方体の影の面積）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4〜5</span> この回の全体像（担当の大問） <span class="type">A 0点／B 36点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th><th>描く図・表</th></tr>
+    <tr><td>4 (1)</td><td>DからPを通る道すじと点Eの作図</td><td>B 8</td><td>道すじの円の中心は「Dで半径に垂直な線」の上で、DとPから同じ長さ</td><td>垂直な線と垂直二等分線の図</td></tr>
+    <tr><td>4 (2)</td><td>六角形の点をめぐる2人の速さの比</td><td>B 7</td><td>「6等分」＝60° → 30°・60°の三角形で半径の比。同時に着く → 速さの比＝道のりの比</td><td>中心X・Yをかいた図／半径と中心角の表</td></tr>
+    <tr><td>5 (1)①</td><td>電球でできる頂点Bの影の高さ</td><td>B 7</td><td>ABを1として真上から見た図に長さを置く → 電球からのきょりの比で影がのびる</td><td>真上から見た図／きょりの表</td></tr>
+    <tr><td>5 (1)②</td><td>電球でできる影の面積</td><td>B 7</td><td>頂点4つの影を置く → 台形2つ。横は□のまま</td><td>倍率の表／スクリーンの影の図</td></tr>
+    <tr><td>5 (2)</td><td>太陽でできる影の面積</td><td>B 7</td><td>「3：2」→ 高さ3の影は長さ2。スクリーンまで2より近い頂点だけ影がのぼる</td><td>横から見た図／頂点の表／影の図</td></tr>
+  </table>
+  <p>取り方: この2題は全部B。<b>4 (2)と5 (1)①は、図を1枚かけば式が短い</b>ので先に手を付ける。4 (1)は決まりを自分の図で言いかえられたときに作図する。5 (1)②と5 (2)は分数の計算が重いので、ほかの大問を見直したあとに回す。受験者平均34.6点、合格者平均55.4点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> DからPを通る道すじと点Eの作図 <span class="type">B・8点｜作図（垂直な線・垂直二等分線）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>点Dを出発し</b>」「<b>点Pを通って</b>」。図1のCにあたる点をSとして図2に置く。SはDで半径ODに垂直な線の上にあり、DとPから同じ長さ → <b>2本の線の交点がS</b>と決まる。この言いかえができたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>問題の決まり。道すじは円の一部で、その中心Cは「Aで半径OAに垂直な線」の上にある。CAとCBは同じ長さ。</li>
+    <li>2つの点から同じ長さにある点は、その2点を結んだ線の垂直二等分線の上にならぶ。DとPから同じ長さの点は、DPの垂直二等分線の上。</li>
+    <li>直線の上の点Dで垂直な線を引く方法。Dの両側に、Dから同じ長さの点を2つとる。その2点の垂直二等分線は、Dを通って垂直になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>道すじは、DもPも通る円の一部。その円の中心をSとする。Sの場所を、2本の線で決める。</li>
+    <li>1本目。SはDで半径ODに垂直な線の上にある。三角定規の直角は使えない。そこでODをDの先へのばす。コンパスで DO＝DL となる点Lをとる。OLの垂直二等分線を引く（図の①）。</li>
+    <li>2本目。SDとSPは同じ長さ。DとPを結ぶ。DPの垂直二等分線を引く（図の②）。</li>
+    <li><b>①と②の交点がS</b>。Sを中心に、Dを通る円をかく。この円はPも通る。シブマールの円周ともう1回交わる点がE（図の③）。
+<svg viewBox="0 0 320 340" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="12">
+  <circle cx="150" cy="130" r="100" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="150" y1="130" x2="102.5" y2="324.3" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="58.3" y1="210.5" x2="291.4" y2="267.5" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <line x1="126.3" y1="227.1" x2="187" y2="150" stroke="#222" stroke-width="1"/>
+  <line x1="93.7" y1="139.1" x2="265" y2="274" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <polyline points="128.2,219.4 135.9,221.3 134.0,229.0" fill="none" stroke="#1565c0" stroke-width="1"/>
+  <path id="q4_1_arc" d="M126.3,227.1 A118.45,118.45 0 0 1 249.7,137.1" fill="none" stroke="#d32f2f" stroke-width="2.5"/>
+  <circle cx="150" cy="130" r="2.5" fill="#222"/><text x="136" y="126" fill="#222">O</text>
+  <circle cx="187" cy="150" r="2.5" fill="#222"/><text x="192" y="164" fill="#222">P</text>
+  <circle cx="126.3" cy="227.1" r="2.5" fill="#222"/><text x="108" y="238" fill="#222">D</text>
+  <circle cx="102.5" cy="324.3" r="2.5" fill="#1565c0"/><text x="110" y="330" fill="#1565c0">L（DO＝DL）</text>
+  <circle cx="241.3" cy="255.3" r="3" fill="#d32f2f"/><text x="238" y="246" fill="#d32f2f" font-weight="bold">S</text>
+  <circle cx="249.7" cy="137.1" r="3" fill="#d32f2f"/><text x="256" y="136" fill="#d32f2f" font-weight="bold">E</text>
+  <text x="44" y="204" fill="#1565c0">①</text>
+  <text x="270" y="290" fill="#1565c0">②</text>
+  <text x="212" y="128" fill="#d32f2f">③</text>
+</svg></li>
+    <li>確かめ。SDとSEは同じ円の半径で、同じ長さ。図はOとSを結ぶ線で折ると重なる。だからEでも、SEは半径OEに垂直になり、決まりに合う。</li>
+    <li>コンパスのあとや引いた線は消さずに残す。点Eの近くに記号「E」を書く。</li>
+  </ol>
+  <div class="ans">答え：解説の図①を参照のこと。（ODをのばして DO＝DL の点Lをとり、OLの垂直二等分線を引く。DPの垂直二等分線との交点Sを中心に、DとPを通る円の一部をかく。シブマールの円周とのD以外の交点がE）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 六角形の点をめぐる2人の速さの比 <span class="type">B・7点｜弧の長さの比（半径×中心角）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>円周を6等分する</b>」「<b>点Fに同時にとう着</b>」。6等分は「中心の角60°」に直して図に置く。同時に着くから、<b>速さの比＝道のりの比</b>と決まる。30°・60°の三角形が見えたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>弧の長さ＝半径×2×円周率×中心角÷360。比を出すだけなら、「半径×中心角」をくらべれば足りる。</li>
+    <li>30°・60°・90°の直角三角形は、正三角形の半分。いちばん長い辺は、いちばん短い辺の2倍。短い辺が1なら、長い辺は2。</li>
+    <li>同じ時間で歩くと、速さの比は道のりの比と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>マークさんのF→Gの道すじをかく。FとGで半径に垂直な線を引く。交点Xが道すじの円の中心。ハリーさんのF→Jも同じように引く。交点をYとする。
+<svg viewBox="0 0 352 262" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="12">
+  <circle cx="150" cy="150" r="90" fill="none" stroke="#222" stroke-width="1.5"/>
+  <polygon points="150,60 227.9,105 227.9,195 150,240 72.1,195 72.1,105" fill="none" stroke="#222" stroke-width="0.8"/>
+  <line x1="60" y1="60" x2="330" y2="60" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <line x1="98" y1="60" x2="61.7" y2="123" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <line x1="305.9" y1="60" x2="204.5" y2="235.5" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <line x1="150" y1="150" x2="98" y2="60" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="150" y1="150" x2="305.9" y2="60" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="150" y1="150" x2="150" y2="60" stroke="#222" stroke-width="1"/>
+  <line x1="150" y1="150" x2="72.1" y2="105" stroke="#222" stroke-width="1"/>
+  <line x1="150" y1="150" x2="227.9" y2="195" stroke="#222" stroke-width="1"/>
+  <path id="q4_2_mark" d="M150,60 A51.96,51.96 0 0 1 72.06,105" fill="none" stroke="#d32f2f" stroke-width="2.5"/>
+  <path id="q4_2_harry" d="M150,60 A155.88,155.88 0 0 0 227.94,195" fill="none" stroke="#222" stroke-width="2.5"/>
+  <circle cx="150" cy="150" r="2.5" fill="#222"/><text x="146" y="168" fill="#222">O</text>
+  <circle cx="98" cy="60" r="3" fill="#d32f2f"/><text x="90" y="52" fill="#d32f2f" font-weight="bold">X</text>
+  <circle cx="305.9" cy="60" r="3" fill="#1565c0"/><text x="302" y="52" fill="#1565c0" font-weight="bold">Y</text>
+  <text x="146" y="52" fill="#222">F</text>
+  <text x="56" y="100" fill="#222">G</text>
+  <text x="56" y="206" fill="#222">H</text>
+  <text x="146" y="255" fill="#222">I</text>
+  <text x="233" y="210" fill="#222">J</text>
+  <text x="241" y="123" fill="#222">K</text>
+  <text x="120" y="54" fill="#d32f2f">1</text>
+  <text x="222" y="54" fill="#1565c0">3</text>
+  <text x="22" y="52" fill="#d32f2f" font-size="10">角X＝120°</text>
+  <text x="302" y="80" fill="#1565c0" font-size="10">角Y＝60°</text>
+</svg></li>
+    <li>半径の比を出す。角FOGは60°。OXはこれを半分に分けるので、角FOXは30°。三角形OFXは正三角形の半分。XF＝1 とすると OX＝2。</li>
+    <li>角FOJは120°。OYはこれを半分に分けるので、角FOYは60°。角XOYは 30°＋60°＝90°。三角形YOXも正三角形の半分で、XY＝2×2＝4。だから YF＝4−1＝3。<b>半径の比は 1：3</b>。</li>
+    <li>中心角を出す。四角形XFOGの角は、Fが90°、Gが90°、Oが60°。残りの角Xは 360−90−90−60＝120°。同じように、角Yは 360−90−90−120＝60°。</li>
+    <li>表にまとめる。
+<table>
+  <tr><th>人</th><th>半径</th><th>中心角</th><th>弧の数</th><th>半径×中心角×数</th></tr>
+  <tr><td>マークさん（F→G→…→F）</td><td>1</td><td>120°</td><td>6</td><td><b>720</b></td></tr>
+  <tr><td>ハリーさん（F→J→H→F）</td><td>3</td><td>60°</td><td>3</td><td><b>540</b></td></tr>
+</table></li>
+    <li>道のりの比は 720：540＝4：3。同時に着いたので、速さの比も 4：3。4÷3＝4/3＝1 1/3倍。</li>
+  </ol>
+  <div class="ans">答え：1 1/3倍</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)①</span> 電球でできる頂点Bの影の高さ <span class="type">B・7点｜電球の影（真上から見た図と相似）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>OE：EG＝1：2</b>」「<b>AB：AC＝1：2</b>」。ABを1として、真上から見た図に長さを置く（直して書く）。Oからのきょりは、Bまで1.5、スクリーンまで4 → <b>影は 4÷1.5 倍にのびる</b>と決まる。真上から見た図がかけたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>電球の光は1点から広がる。電球からのきょりが2倍の所では、影の長さも2倍になる。電球から1mの所に30cmの棒を立てると、2m先のかべには60cmの影ができる。</li>
+    <li>直角があって、辺の比が1：2の三角形は、正三角形の半分。AB＝1、AC＝2 の三角形ABCはこの形。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ABを1とする。AC＝2、AE＝3（直方体の高さ）。EGはACと同じ2。だから OE＝1、GP＝1。真上から見ると、AはEに、CはGに重なる。</li>
+    <li>Bから直線mに垂直な線を引く。mと交わる点をIとする。三角形ABIも正三角形の半分なので、AI＝1÷2＝0.5。Dからも同じように引いてJとする。CJ＝0.5。
+<svg viewBox="0 0 330 285" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="12">
+  <polygon points="90,110 120,162 210,110 180,58" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+  <line x1="10" y1="110" x2="300" y2="110" stroke="#222" stroke-width="1"/>
+  <line x1="270" y1="15" x2="270" y2="262" stroke="#222" stroke-width="3"/>
+  <line x1="120" y1="162" x2="120" y2="110" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="180" y1="58" x2="180" y2="110" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="30" y1="110" x2="270" y2="248.6" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <line x1="30" y1="110" x2="270" y2="26.8" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <circle cx="30" cy="110" r="3" fill="#222"/><text x="22" y="128" fill="#222">O</text>
+  <text x="76" y="128" fill="#222">A</text>
+  <text x="112" y="178" fill="#222">B</text>
+  <text x="214" y="126" fill="#222">C</text>
+  <text x="176" y="50" fill="#222">D</text>
+  <text x="123" y="106" fill="#1565c0" font-size="10">I</text>
+  <text x="168" y="122" fill="#1565c0" font-size="10">J</text>
+  <circle cx="270" cy="110" r="2.5" fill="#222"/><text x="276" y="128" fill="#222">P</text>
+  <circle cx="270" cy="248.6" r="3" fill="#d32f2f"/><text x="277" y="253" fill="#d32f2f">Bの影</text>
+  <circle cx="270" cy="26.8" r="3" fill="#d32f2f"/><text x="277" y="31" fill="#d32f2f">Dの影</text>
+  <text x="2" y="104" fill="#222" font-size="10">南</text>
+  <text x="306" y="114" fill="#222" font-size="10">北</text>
+  <text x="200" y="278" fill="#222" font-size="11">スクリーン（真上から）</text>
+</svg>
+<table>
+  <tr><th>mの上の点</th><th>O</th><th>A（E）</th><th>I（Bの横）</th><th>J（Dの横）</th><th>C（G）</th><th>P（スクリーン）</th></tr>
+  <tr><td>Oからのきょり</td><td>0</td><td>1</td><td><b>1.5</b></td><td>2.5</td><td>3</td><td><b>4</b></td></tr>
+</table></li>
+    <li>Bは、Oから北へ1.5進んだ所にある。スクリーンは4進んだ所。光はまっすぐ進む。だからBFの影は、4÷1.5＝<b>8/3倍</b>にのびる。</li>
+    <li>BFの長さは3。影の高さは 3×8/3＝8。ABは1なので、8÷1＝8倍。</li>
+  </ol>
+  <div class="ans">答え：8倍</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)②</span> 電球でできる影の面積 <span class="type">B・7点｜影の形を台形2つに分ける</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直方体の影の面積</b>」「<b>長方形ABCDの面積の何倍</b>」。頂点4つの影を、①と同じやり方でスクリーンの図に置く。影は<b>台形2つ</b>と決まる。横の長さは□のまま進める。①が出せて、時間が残ったときに手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>台形の面積＝（上底＋下底）×高さ÷2。</li>
+    <li>分からない長さは□のまま計算してよい。何倍かを出すとき、最後に□どうしが消える。6×□ は 2×□ の3倍、と同じ考え方。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>頂点ごとに、影が何倍にのびるかを表にする。□はBIの長さ（DJも同じ長さ）。
+<table>
+  <tr><th>頂点</th><th>Oからのきょり</th><th>のびる倍率</th><th>影の高さ（もとは3）</th><th>Pから横へ</th></tr>
+  <tr><td>A</td><td>1</td><td>4÷1＝4</td><td><b>12</b></td><td>0（Pの真上）</td></tr>
+  <tr><td>B</td><td>1.5</td><td>8/3</td><td><b>8</b></td><td>□×8/3</td></tr>
+  <tr><td>D</td><td>2.5</td><td>4÷2.5＝8/5</td><td><b>24/5</b></td><td>□×8/5（Bと反対側）</td></tr>
+  <tr><td>C</td><td>3</td><td>4/3</td><td>4</td><td>0（Aの影の中にかくれる）</td></tr>
+</table></li>
+    <li>スクリーンに影をかく。Pの真上に高さ12。片側に高さ8。反対側に高さ24/5。地面までぬりつぶした形が影になる。
+<svg viewBox="0 0 320 262" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="12">
+  <polygon points="50,235 50,158.2 130,43 130,235" fill="#dbe9ff" stroke="none"/>
+  <polygon points="130,235 130,43 263,107 263,235" fill="#ffe0b2" stroke="none"/>
+  <polyline points="50,235 50,158.2 130,43 263,107 263,235" fill="none" stroke="#222" stroke-width="1.8"/>
+  <line x1="20" y1="235" x2="300" y2="235" stroke="#222" stroke-width="2.5"/>
+  <line x1="130" y1="43" x2="130" y2="235" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <text x="14" y="202" fill="#d32f2f">24/5</text>
+  <text x="136" y="150" fill="#d32f2f">12</text>
+  <text x="269" y="178" fill="#d32f2f">8</text>
+  <text x="85" y="253" fill="#222" text-anchor="middle">□×8/5</text>
+  <text x="200" y="253" fill="#222" text-anchor="middle">□×8/3</text>
+  <text x="126" y="253" fill="#222">P</text>
+  <text x="130" y="34" fill="#222" text-anchor="middle" font-size="11">Aの影</text>
+  <text x="46" y="150" fill="#222" text-anchor="end" font-size="11">Dの影</text>
+  <text x="266" y="100" fill="#222" font-size="11">Bの影</text>
+</svg></li>
+    <li>左の台形の面積。（24/5＋12）×（□×8/5）÷2＝336/25×□。</li>
+    <li>右の台形の面積。（8＋12）×（□×8/3）÷2＝80/3×□。</li>
+    <li>合わせる。336/25＋80/3＝1008/75＋2000/75＝<b>3008/75</b>。影の面積は 3008/75×□。</li>
+    <li>長方形ABCDは、三角形ABCの2つ分。2×□÷2×2＝2×□。</li>
+    <li>3008/75÷2＝1504/75＝20 4/75倍。</li>
+  </ol>
+  <div class="ans">答え：20 4/75倍</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 太陽でできる影の面積 <span class="type">B・7点｜太陽の影（スクリーンにのぼる影）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>棒の長さと影の長さの比は3：2</b>」。「高さ3の辺の影は長さ2」に直して書く。スクリーンまで2より近い頂点だけ、影がスクリーンにのぼる。<b>Bの影はとどかない</b>ので、形は台形＋三角形と決まる。(1)の真上から見た図がかけていたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>太陽の光は平行。南から来る光なので、どの頂点の影も真北へのびる。横にはずれない。</li>
+    <li>影がとちゅうでスクリーンに当たると、残りの長さの分だけスクリーンをのぼる。光は「2進むと3下がる」。残りが1なら、のぼる高さは 1×3/2＝1.5。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>高さ3の辺の影は、地面の上なら長さ2。これをスクリーンまでのきょりとくらべる。辺CGを横から見た図をかく。
+<svg viewBox="0 0 300 225" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="12">
+  <line x1="10" y1="190" x2="290" y2="190" stroke="#222" stroke-width="1.5"/>
+  <line x1="100" y1="190" x2="100" y2="40" stroke="#222" stroke-width="2"/>
+  <line x1="150" y1="190" x2="150" y2="15" stroke="#222" stroke-width="3"/>
+  <line x1="76" y1="4" x2="150" y2="115" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <line x1="150" y1="115" x2="200" y2="190" stroke="#1565c0" stroke-width="1" stroke-dasharray="2 4"/>
+  <line x1="150" y1="190" x2="150" y2="115" stroke="#d32f2f" stroke-width="5"/>
+  <text x="86" y="44" fill="#222">C</text>
+  <text x="86" y="205" fill="#222">G</text>
+  <text x="84" y="122" fill="#222">3</text>
+  <text x="121" y="205" fill="#222">1</text>
+  <text x="170" y="205" fill="#1565c0">残り1</text>
+  <text x="124" y="160" fill="#d32f2f">3/2</text>
+  <text x="158" y="28" fill="#222" font-size="11">スクリーン</text>
+  <text x="14" y="20" fill="#1565c0" font-size="11">太陽の光</text>
+  <text x="150" y="221" fill="#222" text-anchor="middle" font-size="11">スクリーンが無ければ影は2</text>
+</svg></li>
+    <li>(1)の真上から見た図で、頂点ごとにスクリーンまでのきょりを出す。
+<table>
+  <tr><th>頂点</th><th>スクリーンまで</th><th>残り（2−きょり）</th><th>スクリーンでの高さ</th></tr>
+  <tr><td>D</td><td>4−2.5＝1.5</td><td>0.5</td><td>0.5×3/2＝<b>3/4</b></td></tr>
+  <tr><td>C</td><td>4−3＝1</td><td>1</td><td>1×3/2＝<b>3/2</b></td></tr>
+  <tr><td>B</td><td>4−1.5＝2.5</td><td>とどかない（0.5手前で終わる）</td><td>—</td></tr>
+  <tr><td>A</td><td>4−1＝3</td><td>とどかない</td><td>—</td></tr>
+</table></li>
+    <li>辺BCの上で、影がちょうどスクリーンの根もとに落ちる点をKとする。Kはスクリーンまで2の点。Cは1、Bは2.5。だから CK：KB＝（2−1）：（2.5−2）＝<b>2：1</b>。</li>
+    <li>スクリーンの影をかく。横はばは、DからCまでが□、CからBまでも□。KはCから □×2/3 の所。
+<svg viewBox="0 0 280 200" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="12">
+  <polygon points="40,165 40,105 130,45 130,165" fill="#dbe9ff" stroke="none"/>
+  <polygon points="130,165 130,45 190,165" fill="#ffe0b2" stroke="none"/>
+  <polyline points="40,165 40,105 130,45 190,165" fill="none" stroke="#222" stroke-width="1.8"/>
+  <line x1="10" y1="165" x2="270" y2="165" stroke="#222" stroke-width="2.5"/>
+  <line x1="130" y1="45" x2="130" y2="165" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <line x1="220" y1="160" x2="220" y2="170" stroke="#222" stroke-width="1.5"/>
+  <text x="12" y="140" fill="#d32f2f">3/4</text>
+  <text x="102" y="125" fill="#d32f2f">3/2</text>
+  <text x="85" y="184" fill="#222" text-anchor="middle">□</text>
+  <text x="160" y="184" fill="#222" text-anchor="middle">②</text>
+  <text x="205" y="184" fill="#222" text-anchor="middle">①</text>
+  <text x="36" y="100" fill="#222" text-anchor="end" font-size="11">Dの影</text>
+  <text x="130" y="36" fill="#222" text-anchor="middle" font-size="11">Cの影</text>
+  <text x="194" y="158" fill="#222" font-size="11">K</text>
+  <text x="224" y="158" fill="#222" font-size="11">Bの真北</text>
+</svg></li>
+    <li>左の台形の面積。（3/4＋3/2）×□÷2＝9/8×□。</li>
+    <li>右の三角形の面積。□×2/3×3/2÷2＝1/2×□。</li>
+    <li>合わせる。9/8＋1/2＝13/8。長方形ABCDは 2×□。13/8÷2＝13/16倍。</li>
+  </ol>
+  <div class="ans">答え：13/16倍</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">4〜5</span> まとめ <span class="type">この2題でくり返し出た入口</span></h2>
+  <ul>
+    <li>長い決まりの文は、<b>自分の図で言いかえる</b>。大問4は「中心は、半径に垂直な線の上で、通る2点から同じ長さ」。</li>
+    <li>1：2と直角、60°が出たら<b>正三角形の半分</b>。大問4 (2)の半径の比も、大問5のAI＝0.5も、ここから出る。</li>
+    <li>影の問題は、真上から見た図と横から見た図に分ける。電球は「きょりの比で何倍」、太陽は「同じ向きに同じ比」。</li>
+  </ul>
+</section>
+</div>
