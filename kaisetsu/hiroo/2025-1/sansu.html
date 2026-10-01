@@ -1,0 +1,737 @@
+<!-- generated kakomon hiroo/2025-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（小問集合6題／3桁の整数の各位の和と積）</a></li>
+<li><a href="#3-4-5">大問3・4・5（立方体の頂点を結ぶ／3種類の液体の比／真実か嘘が書かれた箱）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（小問集合6題／3桁の整数の各位の和と積）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 36点／B 12点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)(2)</td><td>分数のたし算／□をふくむ計算</td><td>A 5+5</td><td>となりどうしの数のかけ算は引き算に直す／3.14をそろえて消す</td></tr>
+    <tr><td>1 (3)(4)</td><td>さいころの目の積／2桁の数の条件</td><td>A 5+5</td><td>奇数になるほうを数えて引く／入れかえた差は9の倍数</td></tr>
+    <tr><td>1 (5)(6)</td><td>直角三角形の中の円／ふたのない箱</td><td>A 5+5</td><td>中心と頂点を結ぶ／容積÷高さで底面積</td></tr>
+    <tr><td>2 (1)</td><td>各位の和が3の倍数</td><td>A 6</td><td>3の倍数の見分け方そのもの</td></tr>
+    <tr><td>2 (2)(3)</td><td>各位の積が3桁の奇数／「または」</td><td>B 6+6</td><td>使える数字は3、5、7、9だけ／重なりを1回引く</td></tr>
+  </table>
+  <p>取り方: <b>大問1の6問と大問2の(1)の7問・36点を先に確実に</b>取る。大問2の(2)は、使える数字が4つと分かれば数え切れる。(3)は(2)の答えを使うので、(2)が出せたときに進む。受験者平均は57.1点、合格者平均は68.9点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 分母がとなりどうしの数のかけ算になっている分数のたし算 <span class="type">A・5点｜分数の計算（引き算に直す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は分母の「<b>2020×2021</b>」。となりどうしの数のかけ算は「1/2020−1/2021」（2020分の1 ひく 2021分の1）に<b>直して書く</b> → とちゅうが消えて、はしだけ残る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>分母がとなりどうしの数のかけ算なら、<b>2つの分数の引き算</b>に直せる。小さい数でためす。1/2−1/3＝3/6−2/6＝1/6。分母の6は 2×3 になっている。</li>
+    <li>分母は1つだけでも 2020×2021＝4082420 で、400万をこえる。通分してたすのは大変。直してからたすほうが速い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>はじめの5つの分数を、引き算に直して書く。
+<pre class="fig">1/(2020×2021) ＝ 1/2020 − 1/2021
+1/(2021×2022) ＝ 1/2021 − 1/2022
+1/(2022×2023) ＝ 1/2022 − 1/2023
+1/(2023×2024) ＝ 1/2023 − 1/2024
+1/(2024×2025) ＝ 1/2024 − 1/2025</pre></li>
+    <li>5つをたす。「−1/2021」と「＋1/2021」のように、同じ分数を引いてたす所が消える。残るのは 1/2020−1/2025。</li>
+    <li>最後の 1/2025 をたす。「−1/2025」と「＋1/2025」も消える。残りは <b>1/2020</b> だけ。</li>
+    <li>落としやすい所は、最後の 1/2025。これだけ形がちがう。引き算に直さないで、そのままたす。</li>
+  </ol>
+  <div class="ans">答え：1/2020（2020分の1）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 3.14をふくむ式の□を出す <span class="type">A・5点｜□をふくむ計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は左の「<b>3.14×2</b>」と右の「<b>15.7×0.8</b>」。15.7を 3.14×5 に直して書く → 両がわの3.14が消えて、<b>かっこの中は2</b>と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>15.7 は 3.14×5。3.14のかけ算は、<b>3.14を残したまま</b>ほかの数を先に計算する。3.14×5×0.8 なら 3.14×4。</li>
+    <li>□を出すときは、最後にした計算から順にもどす。引いた数はたす。わった数はかける。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>右がわを直す。15.7×0.8＝3.14×5×0.8＝3.14×4。</li>
+    <li>左がわは 3.14×2×（かっこ）。両がわを3.14でわる。2×（かっこ）＝4。だから<b>かっこの中は2</b>。</li>
+    <li>かっこの中は「□÷7/32（32分の7）から 2 3/7（2と7分の3）を引く」計算。引く前にもどす。
+<pre class="fig">□÷7/32 ＝ 2＋2 3/7 ＝ 4 3/7</pre></li>
+    <li>4 3/7（4と7分の3）を仮分数にする。4×7＋3＝31 で 31/7。わる前にもどす。
+<pre class="fig">□ ＝ 31/7×7/32 ＝ 31/32</pre>
+    7が約分で消えて <b>31/32</b>。</li>
+    <li>落としやすい所は、もどす向き。2 3/7 を引いて2になった。だから、もどすときは2にたす。</li>
+  </ol>
+  <div class="ans">答え：31/32（32分の31）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 大小2個のさいころの目の積が偶数 <span class="type">A・5点｜場合の数（全体から引く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>大小2個</b>」と「<b>積が偶数</b>」に丸。偶数になる出方は種類が多い → <b>積が奇数になるほうを数えて、全部の36通りから引く</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>かけ算の答えが奇数になるのは、<b>奇数×奇数のときだけ</b>。3×5＝15 は奇数。3×4＝12 は偶数。偶数が1つでも入ると、積は偶数になる。</li>
+    <li>大小2個のさいころは、区別して数える。大が2で小が3と、大が3で小が2は、別の出方。全部で 6×6＝36通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>全部の出方を数える。6×6＝36通り。</li>
+    <li>積が奇数になる出方を数える。大も小も奇数の目（1、3、5）のとき。3×3＝9通り。
+<table>
+  <tr><th></th><th>小が奇数（1、3、5）</th><th>小が偶数（2、4、6）</th></tr>
+  <tr><th>大が奇数（1、3、5）</th><td>積は奇数　9通り</td><td>積は偶数　9通り</td></tr>
+  <tr><th>大が偶数（2、4、6）</th><td>積は偶数　9通り</td><td>積は偶数　9通り</td></tr>
+</table></li>
+    <li>全部から引く。36−9＝<b>27通り</b>。</li>
+    <li>落としやすい所は、偶数×偶数。表で見ると、偶数になるマスは3つある。9×3＝27 でも同じ答えになる。</li>
+  </ol>
+  <div class="ans">答え：27通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 各位の和の5倍と、位の入れかえから2桁の数を決める <span class="type">A・5点｜数の性質（位の入れかえ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>入れかえると、もとの数より18だけ大きく</b>」。「一の位は十の位より<b>2大きい</b>」に直して書く → 当てはまる数は7個だけ。もう1つの「和を5倍すると、もとの数より5だけ大きく」で確かめる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>十の位と一の位を入れかえると、差は<b>「数字の差×9」</b>になる。13と31の差は18。数字の差は 3−1＝2 で、2×9＝18。</li>
+    <li>5をかけた数は、一の位が0か5になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>入れかえの条件から見る。18÷9＝2。一の位は、十の位より2大きい。</li>
+    <li>当てはまる数を書き出す。13、24、35、46、57、68、79。一の位は9までなので、79で終わり。</li>
+    <li>7個の数で「各位の和×5」と「もとの数＋5」をくらべる。
+<table>
+  <tr><th>もとの数</th><td>13</td><td>24</td><td><b>35</b></td><td>46</td><td>57</td><td>68</td><td>79</td></tr>
+  <tr><th>各位の和×5</th><td>20</td><td>30</td><td><b>40</b></td><td>50</td><td>60</td><td>70</td><td>80</td></tr>
+  <tr><th>もとの数＋5</th><td>18</td><td>29</td><td><b>40</b></td><td>51</td><td>62</td><td>73</td><td>84</td></tr>
+</table></li>
+    <li>下の2行が同じになるのは<b>35</b>だけ。たしかめ。3＋5＝8。8×5＝40。35＋5＝40。53−35＝18。</li>
+    <li>落としやすい所は、入れかえの向き。入れかえると大きくなるので、一の位のほうが大きい。答えは53でなく35。</li>
+  </ol>
+  <div class="ans">答え：35</div>
+  <div class="tip">コツ：表を書かなくても決まる。「各位の和×5」は5の倍数。そこから5を引いたもとの数も5の倍数。7個のうち、一の位が0か5なのは35だけ。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 辺が3cm、4cm、5cmの直角三角形の内側に接する円 <span class="type">A・5点｜平面図形（内側に接する円）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>AB＝5cm、BC＝4cm、AC＝3cm</b>」と「内側に円が接して」。長さは図の辺に書きこむ。<b>円の中心と3つの頂点を結ぶ</b> → 半径を高さにした三角形3つに分かれて、半径が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円が辺に接しているとき、中心から接している点に引いた<b>半径は、辺と直角</b>に交わる。だから半径は、その辺を底辺にした三角形の高さになる。</li>
+    <li>三角形の面積は、底辺×高さ÷2。同じ三角形の面積を2通りの出し方で書くと、分からない長さが出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>三角形ABCの面積を出す。直角をはさむ辺は4cmと3cm。4×3÷2＝6cm²。</li>
+    <li>円の中心と、A、B、Cを結ぶ。三角形が3つできる。底辺は5cm、4cm、3cm。高さはどれも円の半径（□cm）。
+<svg id="q1_5_a" viewBox="0 0 320 272" style="max-width:340px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="直角三角形ABCの中の円。中心と3つの頂点を結ぶと、半径を高さにした三角形が3つできる" font-family="sans-serif">
+<rect x="0" y="0" width="320" height="272" fill="#fff"/>
+<polygon points="30,210 270,210 270,30" fill="none" stroke="#222" stroke-width="2"/>
+<circle cx="210" cy="150" r="60" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+<polyline points="258,210 258,198 270,198" fill="none" stroke="#222" stroke-width="1"/>
+<line x1="210" y1="150" x2="270" y2="30" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="210" y1="150" x2="30" y2="210" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="210" y1="150" x2="270" y2="210" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="210" y1="150" x2="210" y2="210" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="210" y1="150" x2="270" y2="150" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="210" y1="150" x2="174" y2="102" stroke="#d32f2f" stroke-width="2.5"/>
+<circle cx="210" cy="150" r="3" fill="#222"/>
+<text x="274" y="26" font-size="14" fill="#222">A</text>
+<text x="12" y="216" font-size="14" fill="#222">B</text>
+<text x="276" y="224" font-size="14" fill="#222">C</text>
+<text x="100" y="118" font-size="13" fill="#222" text-anchor="middle">5cm</text>
+<text x="130" y="230" font-size="13" fill="#222" text-anchor="middle">4cm</text>
+<text x="278" y="110" font-size="13" fill="#222">3cm</text>
+<rect x="193" y="178" width="11" height="11" fill="#fff" stroke="#d32f2f" stroke-width="1.8"/>
+<rect x="233" y="133" width="11" height="11" fill="#fff" stroke="#d32f2f" stroke-width="1.8"/>
+<rect x="172" y="122" width="11" height="11" fill="#fff" stroke="#d32f2f" stroke-width="1.8"/>
+<text x="30" y="250" font-size="12" fill="#333">赤＝半径（3本とも同じ長さ。辺と直角）</text>
+<text x="30" y="266" font-size="12" fill="#333">青の点線＝中心と頂点を結ぶ線</text>
+</svg></li>
+    <li>3つの面積をたす。
+<pre class="fig">5×□÷2 ＋ 4×□÷2 ＋ 3×□÷2
+＝（5＋4＋3）×□÷2
+＝ 6×□</pre></li>
+    <li>これが、手順1で出した6cm²と同じ。6×□＝6。□＝<b>1cm</b>。</li>
+    <li>円の面積を出す。1×1×3.14＝<b>3.14cm²</b>。</li>
+    <li>落としやすい所は、答えるもの。聞かれているのは半径でなく、円の面積。</li>
+  </ol>
+  <div class="ans">答え：3.14cm²</div>
+  <div class="tip">コツ：別の見方もある。角Cの所に、半径を1辺にした正方形ができる。1つの点から円に引いた2本の接する線は、同じ長さ。Aからは 3−□、Bからは 4−□。この2つをたすと辺ABの5cm。7−□×2＝5 で、□＝1。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (6)</span> 四隅から1辺5cmの正方形を切り取って作る箱 <span class="type">A・5点｜立体図形（容積からもどす）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1辺の長さが5cmの正方形を切り取り</b>」と「<b>容積が720cm³</b>」。5cmは「箱の高さ」に直して図に書く → 720÷5 で底面積が出て、底の1辺が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>四隅を切って折り上げると、切り取った正方形の1辺が<b>箱の高さ</b>になる。底は、点線でかこまれたまん中の正方形。</li>
+    <li>直方体の容積は、底面積×高さ。だから底面積は、容積÷高さ。</li>
+    <li>同じ数を2回かけて144になる数は12。10×10＝100、12×12＝144。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に書きこむ。高さは5cm。底は1辺□cmの正方形。
+<svg id="q1_6_a" viewBox="0 0 300 232" style="max-width:320px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="正方形の紙。四隅の1辺5cmの正方形を切り取ると、まん中の正方形が箱の底になる。底面積は144平方センチメートル" font-family="sans-serif">
+<rect x="0" y="0" width="300" height="232" fill="#fff"/>
+<rect x="40" y="28" width="176" height="176" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="80" y="68" width="96" height="96" fill="#ffe0b2" stroke="#222" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="40" y="28" width="40" height="40" fill="#ccc" stroke="#222" stroke-width="1"/>
+<rect x="176" y="28" width="40" height="40" fill="#ccc" stroke="#222" stroke-width="1"/>
+<rect x="40" y="164" width="40" height="40" fill="#ccc" stroke="#222" stroke-width="1"/>
+<rect x="176" y="164" width="40" height="40" fill="#ccc" stroke="#222" stroke-width="1"/>
+<text x="60" y="20" font-size="13" fill="#222" text-anchor="middle">5cm</text>
+<rect x="110" y="9" width="12" height="12" fill="#fff" stroke="#d32f2f" stroke-width="1.8"/>
+<text x="125" y="20" font-size="13" fill="#d32f2f" font-weight="bold">cm</text>
+<text x="196" y="20" font-size="13" fill="#222" text-anchor="middle">5cm</text>
+<text x="128" y="112" font-size="13" fill="#222" text-anchor="middle">底面積</text>
+<text x="128" y="131" font-size="14" fill="#d32f2f" font-weight="bold" text-anchor="middle">144cm²</text>
+<text x="222" y="52" font-size="12" fill="#222">←切り取る</text>
+<text x="222" y="120" font-size="12" fill="#222">←折り上げる</text>
+<text x="20" y="224" font-size="12" fill="#333">高さは5cm。紙の1辺は、5cm＋底の1辺＋5cm</text>
+</svg></li>
+    <li>底面積を出す。720÷5＝144cm²。</li>
+    <li>□×□＝144。12×12＝144 なので、<b>底の1辺は12cm</b>。</li>
+    <li>もとの紙の1辺は、底の1辺の両がわに5cmずつたした長さ。5＋12＋5＝<b>22cm</b>。</li>
+    <li>落としやすい所は、最後のたし算。5cmは右と左の両方にある。12＋5＝17 で止めない。</li>
+  </ol>
+  <div class="ans">答え：22cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 3桁の整数で、各位の和が3の倍数 <span class="type">A・6点｜数の性質（3の倍数の見分け方）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>各位の和が『3の倍数』</b>」。これは3の倍数の見分け方そのもの。「<b>3の倍数は何個か</b>」に直して書く → 100から999までの3の倍数を数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>各位の数字をたした和が3の倍数なら、<b>その数は3の倍数</b>。3の倍数なら、和も3の倍数。たとえば 372 は 3＋7＋2＝12。372÷3＝124 でわり切れる。</li>
+    <li>1からある数までの3の倍数の個数は、その数÷3 の商。1から99までなら 99÷3＝33個。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1から999までの3の倍数を数える。999÷3＝333個。</li>
+    <li>1から99までの3の倍数を数える。99÷3＝33個。これは3桁ではないので引く。</li>
+    <li>333−33＝<b>300個</b>。</li>
+    <li>たしかめ。100から999までは900個。3つに1つが3の倍数なので、900÷3＝300。</li>
+    <li>落としやすい所は、引く数。3桁は100からなので、引くのは「99まで」の分。式の横に「1〜99」と書いてから計算する。</li>
+  </ol>
+  <div class="ans">答え：300個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 3桁の整数で、各位の積が3桁の奇数 <span class="type">B・6点｜場合の数（使える数字を決める）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>積</b>」「<b>3桁の奇数</b>」に丸。奇数は「3つとも奇数の数字」に直して書く。1が入ると積は81以下 → <b>使える数字は3、5、7、9だけ</b>。ここまで見えたら数え切れるので、手をつけてよい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>積が奇数になるのは、<b>かける数が全部奇数</b>のとき。偶数や0が1つでも入ると、積は偶数になる。</li>
+    <li>いちばん大きい積は 9×9×9＝729。4桁にはならない。だから「3桁」は「100以上」だけ調べればよい。</li>
+    <li>3つの数字のならべ方。3つとも同じなら1通り。2つが同じなら3通り。3つともちがえば6通り。たとえば 3・3・5 は 335、353、533 の3通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>使える数字を決める。奇数の数字は1、3、5、7、9。1が入ると、積は残り2つの数字の積と同じ。大きくても 9×9＝81 で、100にとどかない。使えるのは<b>3、5、7、9</b>の4つ。</li>
+    <li>この4つの数字で作る3桁の数を、全部数える。4×4×4＝64個。</li>
+    <li>このうち、積が100より小さいものを数える。小さい数字の3が入る組から調べる。
+<table>
+  <tr><th>数字の組</th><th>積</th><th>ならべ方</th></tr>
+  <tr><td>3・3・3</td><td>27</td><td>1通り</td></tr>
+  <tr><td>3・3・5</td><td>45</td><td>3通り</td></tr>
+  <tr><td>3・3・7</td><td>63</td><td>3通り</td></tr>
+  <tr><td>3・3・9</td><td>81</td><td>3通り</td></tr>
+  <tr><td>3・5・5</td><td>75</td><td>3通り</td></tr>
+</table>
+    次に小さい 3・5・7 は105。3が入らない組は、いちばん小さい 5・5・5 でも125。ここで終わり。合わせて 1＋3×4＝13個。</li>
+    <li>全部から引く。64−13＝<b>51個</b>。</li>
+  </ol>
+  <div class="ans">答え：51個</div>
+  <div class="tip">コツ：「100以上のもの」をじかに数えると、組が15種類ある。「100より小さいもの」は5種類だけ。少ないほうを数えて引く。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 各位の和が3の倍数「または」各位の積が3桁の奇数 <span class="type">B・6点｜集合（重なりを引く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>または</b>」に丸。(1)の300個と(2)の51個をたすと、両方に当てはまる数を2回数えてしまう → 「<b>300＋51−両方に当てはまる個数</b>」に直して書く。(2)が出せていたら手をつける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「AまたはB」の個数は、Aの個数＋Bの個数−<b>両方に当てはまる個数</b>。算数の「または」は、両方に当てはまるものも入れて数える。</li>
+    <li>奇数を3つたすと奇数になる。3＋5＋7＝15。だから(2)の数の各位の和は奇数。3の倍数で奇数なのは 9、15、21、27。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ベン図を書く。まん中の重なりが、両方に当てはまる数。
+<svg id="q2_3_a" viewBox="0 0 340 200" style="max-width:340px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ベン図。和が3の倍数の300個と、積が3桁の奇数の51個。まん中の重なりが両方に当てはまる数" font-family="sans-serif">
+<rect x="0" y="0" width="340" height="200" fill="#fff"/>
+<circle cx="120" cy="118" r="75" fill="#dbe9ff" fill-opacity="0.7" stroke="#222" stroke-width="1.5"/>
+<circle cx="215" cy="118" r="65" fill="#ffe0b2" fill-opacity="0.7" stroke="#222" stroke-width="1.5"/>
+<text x="95" y="18" font-size="13" fill="#222" text-anchor="middle">和が3の倍数</text>
+<text x="95" y="34" font-size="13" fill="#222" text-anchor="middle">300個</text>
+<text x="245" y="18" font-size="13" fill="#222" text-anchor="middle">積が3桁の奇数</text>
+<text x="245" y="34" font-size="13" fill="#222" text-anchor="middle">51個</text>
+<text x="95" y="123" font-size="14" fill="#222" text-anchor="middle">和だけ</text>
+<text x="172.5" y="113" font-size="12" fill="#d32f2f" font-weight="bold" text-anchor="middle">両方</text>
+<rect x="159" y="120" width="12" height="12" fill="#fff" stroke="#d32f2f" stroke-width="1.8"/>
+<text x="173" y="132" font-size="14" fill="#d32f2f" font-weight="bold">個</text>
+<text x="240" y="123" font-size="14" fill="#222" text-anchor="middle">積だけ</text>
+</svg></li>
+    <li>重なりを数える。(2)で使える数字は3、5、7、9。この数字3つで、和が9、15、21、27になる組を書き出す。積が100以上かも見る。
+<table>
+  <tr><th>和</th><th>数字の組</th><th>積</th><th>ならべ方</th></tr>
+  <tr><td>9</td><td>3・3・3</td><td>27で×</td><td>—</td></tr>
+  <tr><td>15</td><td>3・3・9</td><td>81で×</td><td>—</td></tr>
+  <tr><td>15</td><td>3・5・7</td><td>105で○</td><td>6通り</td></tr>
+  <tr><td>15</td><td>5・5・5</td><td>125で○</td><td>1通り</td></tr>
+  <tr><td>21</td><td>3・9・9</td><td>243で○</td><td>3通り</td></tr>
+  <tr><td>21</td><td>5・7・9</td><td>315で○</td><td>6通り</td></tr>
+  <tr><td>21</td><td>7・7・7</td><td>343で○</td><td>1通り</td></tr>
+  <tr><td>27</td><td>9・9・9</td><td>729で○</td><td>1通り</td></tr>
+</table></li>
+    <li>○の行をたす。6＋1＋3＋6＋1＋1＝<b>18個</b>。</li>
+    <li>式に入れる。300＋51−18＝<b>333個</b>。</li>
+  </ol>
+  <div class="ans">答え：333個</div>
+  <div class="tip">コツ：ベン図に数を入れてたしかめる。和だけ当てはまる数は 300−18＝282個。積だけ当てはまる数は 51−18＝33個。282＋18＋33＝333。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ</h2>
+  <ul>
+    <li>そのまま式に入らない言葉は、<b>直して書く</b>。1 (4) の「18だけ大きく」は数字の差2、1 (6) の「5cm」は箱の高さ、2 (1) の「各位の和が3の倍数」は3の倍数。</li>
+    <li>数えにくいほうは数えない。<b>少ないほうを数えて全体から引く</b>。1 (3) は奇数の9通り、2 (2) は100より小さい13個。</li>
+    <li>答えが出たら、もとの文にもどして<b>たしかめ</b>をする。1 (4)、2 (1)、2 (3) は1行でたしかめられる。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（立方体の頂点を結ぶ／3種類の液体の比／真実か嘘が書かれた箱）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">A 23点／B 23点／C 6点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>3</td><td>立方体の頂点を結ぶ（いちばん長い線・体積が最大の立体・共通部分）</td><td>A 6 / B 6+6</td><td>頂点の結び方を「辺・面の対角線・中を通る対角線」に分ける。4点は、辺でつながらない頂点どうしを選ぶ</td></tr>
+  <tr><td>4</td><td>3種類の液体A・B・Cを混ぜる比</td><td>A 6+6 / B 6</td><td>「何を加えたか」→ 加えていない液体の数をそろえる。gが分かる所から表に書く</td></tr>
+  <tr><td>5</td><td>真実か嘘が書かれた箱（論理）</td><td>A 5 / B 5 / C 6</td><td>「真実のとき」「嘘のとき」の2通りを表に書き、文と合わない場合を消す</td></tr></table>
+  <p>取り方: <b>Aの4問（3 (1)・4 (1)・4 (2)・5 (1)）を先に確実に取る</b>。Bは 3 (2) と 5 (2) が短い時間で決まる。3 (3) は (2) の図がかけたときに進む。4 (3) は表が書ければ計算は軽い。5 (3) は理由を文で書く問題なので、後回しでよい。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 立方体の頂点を結ぶ、いちばん長い直線 <span class="type">A・6点｜立方体の対角線</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>異なる2点を選び</b>」「<b>最も長くなる直線</b>」に丸。2点の結び方を「辺・面の対角線・中を通る対角線」の3種類に分けて図に置く → 中を通る対角線の本数を数えれば決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>立方体の頂点どうしを結ぶ線は3種類ある。辺が12本。面の対角線が 2×6＝12本。<b>立方体の中を通る対角線</b>が4本。合わせて28本で、8×7÷2＝28 と合う。</li>
+    <li>直角三角形では、直角の向かいの辺がいちばん長い。三角定規で、ななめの辺がいちばん長いのと同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>頂点Aから出る線を全部書く。相手は7つ。B・D・E（辺）、C・F・H（面の対角線）、G（中を通る対角線）。</li>
+    <li>長さをくらべる。三角形AEGを見る。角Eが直角。だからAGは、辺AEよりも、面の対角線EGよりも長い。
+<svg id="q3_1_a" font-family="sans-serif" viewBox="0 0 350 308" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: 立方体の中を通る対角線AG・BH・CE・DFの4本（赤）。三角形AEGは角Eが直角で、AGがいちばん長い">
+<polygon points="60,80 60,240 294,203" fill="#ffe0b2" fill-opacity="0.55" stroke="none" stroke-width="1"/>
+<line x1="60" y1="80" x2="220" y2="80" stroke="#222" stroke-width="1.5"/>
+<line x1="220" y1="80" x2="294" y2="43" stroke="#222" stroke-width="1.5"/>
+<line x1="294" y1="43" x2="134" y2="43" stroke="#222" stroke-width="1.5"/>
+<line x1="134" y1="43" x2="60" y2="80" stroke="#222" stroke-width="1.5"/>
+<line x1="60" y1="80" x2="60" y2="240" stroke="#222" stroke-width="1.5"/>
+<line x1="60" y1="240" x2="220" y2="240" stroke="#222" stroke-width="1.5"/>
+<line x1="220" y1="240" x2="220" y2="80" stroke="#222" stroke-width="1.5"/>
+<line x1="294" y1="43" x2="294" y2="203" stroke="#222" stroke-width="1.5"/>
+<line x1="294" y1="203" x2="220" y2="240" stroke="#222" stroke-width="1.5"/>
+<line x1="134" y1="43" x2="134" y2="203" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="134" y1="203" x2="60" y2="240" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="134" y1="203" x2="294" y2="203" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="60" y1="240" x2="294" y2="203" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="6 4"/>
+<line x1="220" y1="80" x2="134" y2="203" stroke="#d32f2f" stroke-width="1.6"/>
+<line x1="294" y1="43" x2="60" y2="240" stroke="#d32f2f" stroke-width="1.6"/>
+<line x1="134" y1="43" x2="220" y2="240" stroke="#d32f2f" stroke-width="1.6"/>
+<line x1="60" y1="80" x2="294" y2="203" stroke="#d32f2f" stroke-width="3.2"/>
+<polyline points="70.865,238.282 70.865,227.282 60,229" fill="none" stroke="#222" stroke-width="1"/>
+<text x="49" y="82" font-size="14" fill="#222" text-anchor="middle">A</text>
+<text x="211" y="73" font-size="14" fill="#222" text-anchor="middle">B</text>
+<text x="304" y="41" font-size="14" fill="#222" text-anchor="middle">C</text>
+<text x="124" y="39" font-size="14" fill="#222" text-anchor="middle">D</text>
+<text x="49" y="252" font-size="14" fill="#222" text-anchor="middle">E</text>
+<text x="224" y="256" font-size="14" fill="#222" text-anchor="middle">F</text>
+<text x="305" y="211" font-size="14" fill="#222" text-anchor="middle">G</text>
+<text x="123" y="199" font-size="14" fill="#222" text-anchor="middle">H</text>
+<text x="175" y="282" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">赤い線＝立方体の中を通る対角線（4本）</text>
+<text x="175" y="300" font-size="12" fill="#1565c0" text-anchor="middle">青い点線EG＝面の対角線。AGはこれより長い</text>
+</svg></li>
+    <li>いちばん長いのは、<b>真向かいの頂点</b>と結ぶ線。真向かいの頂点は、どの頂点にも1つだけある。</li>
+    <li>8つの頂点が2つずつ組になる。8÷2＝4本。AG・BH・CE・DFの4本。</li>
+  </ol>
+  <div class="ans">答え：4本</div>
+  <div class="tip">コツ：「Aの真向かいはG」のように、頂点を組にして書く。8本と答えると、同じ線を2回数えたことになる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 4つの頂点でつくる、体積がいちばん大きい立体 <span class="type">B・6点｜立方体から角を切り落とす</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>異なる4点</b>」「<b>体積が最も大きく</b>」に丸。4点を結ぶと三角すい → 「3点が同じ面にある形」と「<b>どの面にも2点ずつの形</b>」に分けて図に置き、体積をくらべる。2つの形がかけたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角すいの体積は「底面積×高さ÷3」。底面が立方体の面の半分で、高さが1辺の三角すいは、立方体の <b>1/6</b>（6分の1）。1辺6cmなら 18×6÷3＝36cm³ で、216cm³の1/6。</li>
+    <li>4点が同じ平面にあると、立体にならない。たとえば A・B・C・D や、A・C・G・E。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1辺を6cmと決める。立方体の体積は 6×6×6＝216cm³。</li>
+    <li>3点が同じ面にある形を調べる。たとえば A・B・C と F。底面は三角形ABCで 6×6÷2＝18cm²。高さは6cm。体積は 18×6÷3＝36cm³。4点目を下の面のどの頂点にしても、高さは6cmのままで、体積は同じ。</li>
+    <li>3点が同じ面に来ない形をさがす。上の面でAとC（ななめ）を選ぶ。下の面では、AやCの真下ではないFとHを選ぶ。どの面にも2点ずつになる。
+<svg id="q3_2_a" font-family="sans-serif" viewBox="0 0 520 262" style="max-width:480px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: 左は頂点A・C・F・Hを結んだ立体（赤）。角Bの三角すいに色をつけた。右は頂点B・D・E・Gを結んだ立体（青）">
+<polygon points="34,62 164,62 224,32" fill="#ffecb3" fill-opacity="1" stroke="none" stroke-width="1"/>
+<polygon points="34,62 164,62 164,192" fill="#ffe0b2" fill-opacity="1" stroke="none" stroke-width="1"/>
+<polygon points="164,62 224,32 164,192" fill="#ffcc80" fill-opacity="1" stroke="none" stroke-width="1"/>
+<line x1="34" y1="62" x2="164" y2="62" stroke="#222" stroke-width="1.5"/>
+<line x1="164" y1="62" x2="224" y2="32" stroke="#222" stroke-width="1.5"/>
+<line x1="224" y1="32" x2="94" y2="32" stroke="#222" stroke-width="1.5"/>
+<line x1="94" y1="32" x2="34" y2="62" stroke="#222" stroke-width="1.5"/>
+<line x1="34" y1="62" x2="34" y2="192" stroke="#222" stroke-width="1.5"/>
+<line x1="34" y1="192" x2="164" y2="192" stroke="#222" stroke-width="1.5"/>
+<line x1="164" y1="192" x2="164" y2="62" stroke="#222" stroke-width="1.5"/>
+<line x1="224" y1="32" x2="224" y2="162" stroke="#222" stroke-width="1.5"/>
+<line x1="224" y1="162" x2="164" y2="192" stroke="#222" stroke-width="1.5"/>
+<line x1="94" y1="32" x2="94" y2="162" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="94" y1="162" x2="34" y2="192" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="94" y1="162" x2="224" y2="162" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="34" y1="62" x2="224" y2="32" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="34" y1="62" x2="164" y2="192" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="224" y1="32" x2="164" y2="192" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="34" y1="62" x2="94" y2="162" stroke="#d32f2f" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="224" y1="32" x2="94" y2="162" stroke="#d32f2f" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="164" y1="192" x2="94" y2="162" stroke="#d32f2f" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="34" cy="62" r="3.5" fill="#d32f2f"/>
+<circle cx="224" cy="32" r="3.5" fill="#d32f2f"/>
+<circle cx="164" cy="192" r="3.5" fill="#d32f2f"/>
+<circle cx="94" cy="162" r="3.5" fill="#d32f2f"/>
+<text x="23" y="64" font-size="13" fill="#222" text-anchor="middle">A</text>
+<text x="153" y="79" font-size="13" fill="#222" text-anchor="middle">B</text>
+<text x="234" y="30" font-size="13" fill="#222" text-anchor="middle">C</text>
+<text x="84" y="28" font-size="13" fill="#222" text-anchor="middle">D</text>
+<text x="23" y="204" font-size="13" fill="#222" text-anchor="middle">E</text>
+<text x="168" y="208" font-size="13" fill="#222" text-anchor="middle">F</text>
+<text x="235" y="170" font-size="13" fill="#222" text-anchor="middle">G</text>
+<text x="83" y="158" font-size="13" fill="#222" text-anchor="middle">H</text>
+<text x="125" y="236" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">A・C・F・H を結ぶ</text>
+<text x="125" y="254" font-size="12" fill="#b26a00" text-anchor="middle">色の部分＝角Bの三角すい</text>
+<line x1="300" y1="62" x2="430" y2="62" stroke="#222" stroke-width="1.5"/>
+<line x1="430" y1="62" x2="490" y2="32" stroke="#222" stroke-width="1.5"/>
+<line x1="490" y1="32" x2="360" y2="32" stroke="#222" stroke-width="1.5"/>
+<line x1="360" y1="32" x2="300" y2="62" stroke="#222" stroke-width="1.5"/>
+<line x1="300" y1="62" x2="300" y2="192" stroke="#222" stroke-width="1.5"/>
+<line x1="300" y1="192" x2="430" y2="192" stroke="#222" stroke-width="1.5"/>
+<line x1="430" y1="192" x2="430" y2="62" stroke="#222" stroke-width="1.5"/>
+<line x1="490" y1="32" x2="490" y2="162" stroke="#222" stroke-width="1.5"/>
+<line x1="490" y1="162" x2="430" y2="192" stroke="#222" stroke-width="1.5"/>
+<line x1="360" y1="32" x2="360" y2="162" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="360" y1="162" x2="300" y2="192" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="360" y1="162" x2="490" y2="162" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="430" y1="62" x2="360" y2="32" stroke="#1565c0" stroke-width="2.6"/>
+<line x1="430" y1="62" x2="300" y2="192" stroke="#1565c0" stroke-width="2.6"/>
+<line x1="430" y1="62" x2="490" y2="162" stroke="#1565c0" stroke-width="2.6"/>
+<line x1="360" y1="32" x2="300" y2="192" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="360" y1="32" x2="490" y2="162" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="300" y1="192" x2="490" y2="162" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="430" cy="62" r="3.5" fill="#1565c0"/>
+<circle cx="360" cy="32" r="3.5" fill="#1565c0"/>
+<circle cx="300" cy="192" r="3.5" fill="#1565c0"/>
+<circle cx="490" cy="162" r="3.5" fill="#1565c0"/>
+<text x="289" y="64" font-size="13" fill="#222" text-anchor="middle">A</text>
+<text x="444" y="69" font-size="13" fill="#222" text-anchor="middle">B</text>
+<text x="500" y="30" font-size="13" fill="#222" text-anchor="middle">C</text>
+<text x="350" y="28" font-size="13" fill="#222" text-anchor="middle">D</text>
+<text x="289" y="204" font-size="13" fill="#222" text-anchor="middle">E</text>
+<text x="434" y="208" font-size="13" fill="#222" text-anchor="middle">F</text>
+<text x="501" y="170" font-size="13" fill="#222" text-anchor="middle">G</text>
+<text x="349" y="158" font-size="13" fill="#222" text-anchor="middle">H</text>
+<text x="391" y="236" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">B・D・E・G を結ぶ</text>
+</svg></li>
+    <li>立体A・C・F・Hは、立方体から4つの角（B・D・E・Gのところ）を切り落とした形。角1つは手順2と同じ36cm³。216−36×4＝<b>72cm³</b>。立方体の 1/3（3分の1）で、36cm³より大きい。</li>
+    <li>同じ形は、上でBとD、下でEとGを選んだ <b>B・D・E・G</b> だけ。上の2点をとなりどうし（AとBなど）にすると、3点が同じ面にのるか、平らになる。上がAとCのときも、下にE（Aの真下）やG（Cの真下）を入れると、3点が同じ面にのるか、平らになる。だから2個。</li>
+  </ol>
+  <div class="ans">答え：2個</div>
+  <div class="tip">コツ：体積が大きい立体は、辺でつながる頂点を1組も選ばない。Aを選んだら、B・D・Eは選べない。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 2つの立体に共通している部分の体積 <span class="type">B・6点｜面の真ん中を結ぶ立体（正八面体）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>(2)で求めたすべての立体</b>」「共通している部分」に丸。2つの立体の辺を同じ立方体に置く → どの面でも対角線2本が<b>面の真ん中で交わる</b> → その6つの点を結んだ立体の体積を出す。(2)の図があるときに手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正方形の対角線2本は、真ん中の点で交わる。</li>
+    <li>対角線の長さが分かる正方形の面積は「<b>対角線×対角線÷2</b>」。対角線が6cmと6cmなら 6×6÷2＝18cm²。</li>
+    <li>四角すいの体積は「底面積×高さ÷3」。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(2)の2つの立体の辺を、同じ立方体にかく。A・C・F・Hの立体の辺は、6つの面の対角線。B・D・E・Gの立体の辺は、同じ面のもう1本の対角線。どの面でも、2本は真ん中で交わる。
+<svg id="q3_3_a" font-family="sans-serif" viewBox="0 0 350 308" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: 上・前・右の面に、1つめの立体の辺（赤）と2つめの立体の辺（青）をかいた図。どの面でも真ん中で交わる">
+<line x1="60" y1="80" x2="220" y2="80" stroke="#222" stroke-width="1.5"/>
+<line x1="220" y1="80" x2="294" y2="43" stroke="#222" stroke-width="1.5"/>
+<line x1="294" y1="43" x2="134" y2="43" stroke="#222" stroke-width="1.5"/>
+<line x1="134" y1="43" x2="60" y2="80" stroke="#222" stroke-width="1.5"/>
+<line x1="60" y1="80" x2="60" y2="240" stroke="#222" stroke-width="1.5"/>
+<line x1="60" y1="240" x2="220" y2="240" stroke="#222" stroke-width="1.5"/>
+<line x1="220" y1="240" x2="220" y2="80" stroke="#222" stroke-width="1.5"/>
+<line x1="294" y1="43" x2="294" y2="203" stroke="#222" stroke-width="1.5"/>
+<line x1="294" y1="203" x2="220" y2="240" stroke="#222" stroke-width="1.5"/>
+<line x1="134" y1="43" x2="134" y2="203" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="134" y1="203" x2="60" y2="240" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="134" y1="203" x2="294" y2="203" stroke="#222" stroke-width="1.2000000000000002" stroke-dasharray="5 4"/>
+<line x1="60" y1="80" x2="294" y2="43" stroke="#d32f2f" stroke-width="2"/>
+<line x1="60" y1="80" x2="220" y2="240" stroke="#d32f2f" stroke-width="2"/>
+<line x1="294" y1="43" x2="220" y2="240" stroke="#d32f2f" stroke-width="2"/>
+<line x1="220" y1="80" x2="134" y2="43" stroke="#1565c0" stroke-width="2"/>
+<line x1="220" y1="80" x2="60" y2="240" stroke="#1565c0" stroke-width="2"/>
+<line x1="220" y1="80" x2="294" y2="203" stroke="#1565c0" stroke-width="2"/>
+<circle cx="177" cy="61.5" r="4.2" fill="#222"/>
+<circle cx="140" cy="160" r="4.2" fill="#222"/>
+<circle cx="257" cy="141.5" r="4.2" fill="#222"/>
+<text x="49" y="82" font-size="14" fill="#222" text-anchor="middle">A</text>
+<text x="235" y="89" font-size="14" fill="#222" text-anchor="middle">B</text>
+<text x="304" y="41" font-size="14" fill="#222" text-anchor="middle">C</text>
+<text x="124" y="39" font-size="14" fill="#222" text-anchor="middle">D</text>
+<text x="49" y="252" font-size="14" fill="#222" text-anchor="middle">E</text>
+<text x="224" y="256" font-size="14" fill="#222" text-anchor="middle">F</text>
+<text x="305" y="211" font-size="14" fill="#222" text-anchor="middle">G</text>
+<text x="123" y="199" font-size="14" fill="#222" text-anchor="middle">H</text>
+<text x="175" y="282" font-size="11" fill="#222" text-anchor="middle">赤＝A・C・F・Hの立体の辺　青＝B・D・E・Gの立体の辺</text>
+<text x="175" y="300" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">黒い点＝面の真ん中（2本が交わる点）</text>
+</svg></li>
+    <li>交わる点は6つ。この6つの点は、どちらの立体にも入っている。A・C・F・Hの立体は、4つの角を相手の立体の面で切り落とされる。たとえばAの角は、B・D・Eを通る面で切られる。切り口は、上・前・左の面の真ん中を結ぶ三角形。残るのは、<b>6つの面の真ん中の点を結んだ立体</b>。
+<svg id="q3_3_b" font-family="sans-serif" viewBox="0 0 350 308" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: 6つの面の真ん中の点を結んだ立体（赤）。真ん中の高さの正方形（色つき）で上下2つの四角すいに分かれる">
+<line x1="60" y1="80" x2="220" y2="80" stroke="#888" stroke-width="1.1"/>
+<line x1="220" y1="80" x2="294" y2="43" stroke="#888" stroke-width="1.1"/>
+<line x1="294" y1="43" x2="134" y2="43" stroke="#888" stroke-width="1.1"/>
+<line x1="134" y1="43" x2="60" y2="80" stroke="#888" stroke-width="1.1"/>
+<line x1="60" y1="80" x2="60" y2="240" stroke="#888" stroke-width="1.1"/>
+<line x1="60" y1="240" x2="220" y2="240" stroke="#888" stroke-width="1.1"/>
+<line x1="220" y1="240" x2="220" y2="80" stroke="#888" stroke-width="1.1"/>
+<line x1="294" y1="43" x2="294" y2="203" stroke="#888" stroke-width="1.1"/>
+<line x1="294" y1="203" x2="220" y2="240" stroke="#888" stroke-width="1.1"/>
+<line x1="134" y1="43" x2="134" y2="203" stroke="#888" stroke-width="0.8800000000000001" stroke-dasharray="5 4"/>
+<line x1="134" y1="203" x2="60" y2="240" stroke="#888" stroke-width="0.8800000000000001" stroke-dasharray="5 4"/>
+<line x1="134" y1="203" x2="294" y2="203" stroke="#888" stroke-width="0.8800000000000001" stroke-dasharray="5 4"/>
+<polygon points="140,160 257,141.5 214,123 97,141.5" fill="#ffe0b2" fill-opacity="0.85" stroke="none" stroke-width="1"/>
+<line x1="214" y1="123" x2="177" y2="61.5" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="5 4"/>
+<line x1="214" y1="123" x2="177" y2="221.5" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="5 4"/>
+<line x1="214" y1="123" x2="97" y2="141.5" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="5 4"/>
+<line x1="214" y1="123" x2="257" y2="141.5" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="5 4"/>
+<line x1="140" y1="160" x2="177" y2="61.5" stroke="#d32f2f" stroke-width="2.4"/>
+<line x1="140" y1="160" x2="177" y2="221.5" stroke="#d32f2f" stroke-width="2.4"/>
+<line x1="140" y1="160" x2="97" y2="141.5" stroke="#d32f2f" stroke-width="2.4"/>
+<line x1="140" y1="160" x2="257" y2="141.5" stroke="#d32f2f" stroke-width="2.4"/>
+<line x1="177" y1="61.5" x2="97" y2="141.5" stroke="#d32f2f" stroke-width="2.4"/>
+<line x1="177" y1="61.5" x2="257" y2="141.5" stroke="#d32f2f" stroke-width="2.4"/>
+<line x1="177" y1="221.5" x2="97" y2="141.5" stroke="#d32f2f" stroke-width="2.4"/>
+<line x1="177" y1="221.5" x2="257" y2="141.5" stroke="#d32f2f" stroke-width="2.4"/>
+<line x1="177" y1="61.5" x2="177" y2="221.5" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="177" cy="61.5" r="3.6" fill="#222"/>
+<circle cx="177" cy="221.5" r="3.6" fill="#222"/>
+<circle cx="140" cy="160" r="3.6" fill="#222"/>
+<circle cx="214" cy="123" r="3.6" fill="#222"/>
+<circle cx="97" cy="141.5" r="3.6" fill="#222"/>
+<circle cx="257" cy="141.5" r="3.6" fill="#222"/>
+<text x="49" y="82" font-size="13" fill="#555" text-anchor="middle">A</text>
+<text x="211" y="73" font-size="13" fill="#555" text-anchor="middle">B</text>
+<text x="304" y="41" font-size="13" fill="#555" text-anchor="middle">C</text>
+<text x="124" y="39" font-size="13" fill="#555" text-anchor="middle">D</text>
+<text x="49" y="252" font-size="13" fill="#555" text-anchor="middle">E</text>
+<text x="224" y="256" font-size="13" fill="#555" text-anchor="middle">F</text>
+<text x="305" y="211" font-size="13" fill="#555" text-anchor="middle">G</text>
+<text x="123" y="199" font-size="13" fill="#555" text-anchor="middle">H</text>
+<text x="187" y="58.5" font-size="11" fill="#222" text-anchor="start">上の真ん中</text>
+<text x="167" y="234.5" font-size="11" fill="#222" text-anchor="end">下の真ん中</text>
+<text x="175" y="282" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">色の正方形で、上と下の四角すいに分ける</text>
+<text x="175" y="300" font-size="12" fill="#1565c0" text-anchor="middle">青い点線＝2つの四角すいの高さ（合わせて立方体の1辺）</text>
+</svg></li>
+    <li>1辺を6cmとして体積を出す。真ん中の高さの正方形で、上下2つの四角すいに分ける。正方形の面積は 6×6÷2＝18cm²。
+<svg id="q3_3_c" font-family="sans-serif" viewBox="0 0 330 200" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図3: 立方体を真ん中の高さで切った切り口（1辺6cmの正方形）と、その辺の真ん中を結んだ色つきの正方形。対角線は6cmと6cm">
+<polygon points="40,24 180,24 180,164 40,164" fill="none" fill-opacity="1" stroke="#222" stroke-width="1.5"/>
+<polygon points="110,24 180,94 110,164 40,94" fill="#ffe0b2" fill-opacity="0.9" stroke="#d32f2f" stroke-width="2.4"/>
+<line x1="110" y1="24" x2="110" y2="164" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line x1="40" y1="94" x2="180" y2="94" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<circle cx="110" cy="24" r="3.4" fill="#222"/>
+<circle cx="180" cy="94" r="3.4" fill="#222"/>
+<circle cx="110" cy="164" r="3.4" fill="#222"/>
+<circle cx="40" cy="94" r="3.4" fill="#222"/>
+<text x="110" y="16" font-size="13" fill="#222" text-anchor="middle">6cm</text>
+<text x="132" y="88" font-size="12" fill="#1565c0" text-anchor="middle">6cm</text>
+<text x="94" y="128" font-size="12" fill="#1565c0" text-anchor="middle">6cm</text>
+<text x="200" y="70" font-size="13" fill="#222" text-anchor="start">色の正方形の面積</text>
+<text x="200" y="92" font-size="13" fill="#222" text-anchor="start">＝対角線×対角線÷2</text>
+<text x="200" y="114" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold">＝6×6÷2＝18cm²</text>
+<text x="200" y="140" font-size="12" fill="#222" text-anchor="start">（切り口36cm²の半分）</text>
+<text x="110" y="186" font-size="12" fill="#222" text-anchor="middle">真上から見た図</text>
+</svg></li>
+    <li>四角すい1つの高さは、立方体の高さの半分で3cm。体積は 18×3÷3＝18cm³。2つで <b>36cm³</b>。</li>
+    <li>立方体は216cm³。36÷216＝1/6（6分の1）。</li>
+    <li>たしかめ。(2)の立体は72cm³。切り落とす角は、辺の長さが半分の小さい三角すい。辺が半分になると、体積は 1/2×1/2×1/2＝1/8（8分の1）になる。72÷8＝9cm³。72−9×4＝36cm³。合っている。</li>
+  </ol>
+  <div class="ans">答え：1/6倍（6分の1倍）</div>
+  <div class="tip">コツ：「重なる部分がない場合は0」とあるが、6つの面の真ん中の点はどちらの立体にも入るので、0にはならない。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> Aを70g入れるとAとBが等しくなる <span class="type">A・6点｜比（変わらないものはそのまま）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Aを70g入れた</b>」「A，Bの割合が等しく」。ふえたのはAだけ → Aが①から③になった、と直して書く → <b>②＝70g</b> で①が決まる。「最初の液体全体」に丸。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Aだけを加えたとき、BとCの重さは変わらない。だから<b>BとCの数はそのまま</b>使える。1：3 のAに2つ分たすと 3：3 になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を書く。BとCは、はじめと同じ数を書く。AはBと同じ③にする。
+      <table><tr><th></th><th>A</th><th>B</th><th>C</th><th>全体</th></tr>
+      <tr><td>はじめ</td><td>①</td><td>③</td><td>⑦</td><td>⑪</td></tr>
+      <tr><td>Aを70g入れたあと</td><td><b>③</b></td><td>③</td><td>⑦</td><td>⑬</td></tr></table>
+    </li>
+    <li>Aは①から③になった。ふえた②が70g。①は 70÷2＝<b>35g</b>。</li>
+    <li>最初の全体は ①＋③＋⑦＝⑪。35×11＝385g。</li>
+    <li>聞かれているのは「最初の」全体。入れたあとの⑬（455g）と取りちがえない。</li>
+  </ol>
+  <div class="ans">答え：385g</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> Aを200g、Bを何gか加えて 5：3：2 にする <span class="type">A・6点｜比（変わらないCにそろえる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「Aを200g加えた」「<b>Bを何gか加えた</b>」。<b>Cには何も加えていない</b> → あとの比 5：3：2 を、Cが6になるように 15：9：6 に直して書く → Aのふえた分が200gに当たる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2つの比をくらべるときは、<b>重さが変わらないものの数をそろえる</b>。5：3：2 を3倍すると 15：9：6。比は、全部に同じ数をかけても変わらない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を書く。Cは変わらない。あとの比を3倍して、Cを6にそろえる。
+      <table><tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+      <tr><td>はじめ</td><td>7</td><td>5</td><td>6</td></tr>
+      <tr><td>あと（5：3：2 を3倍）</td><td>15</td><td>9</td><td>6</td></tr>
+      <tr><td>ふえた分</td><td><b>8</b></td><td><b>4</b></td><td>0</td></tr></table>
+    </li>
+    <li>Aは 15−7＝8 ふえた。これが200g。1つ分は 200÷8＝<b>25g</b>。</li>
+    <li>Bは 9−5＝4 ふえた。25×4＝100g。</li>
+    <li>たしかめ。はじめは A175g・B125g・C150g。あとは A375g・B225g・C150g。375：225：150＝5：3：2。合っている。</li>
+  </ol>
+  <div class="ans">答え：100g</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 同じ液体Dを2回入れる。Dの中のA：B：C <span class="type">B・6点｜比（同じ量を2回→ふえ方が同じ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「液体<b>100g</b>」と「<b>さきほどと同じ重さだけ</b>」。100gは A30g・B60g・C10g に直して書く。同じDを同じ重さ → 1回目と2回目で<b>ふえる重さが同じ</b>。最初・1回後・2回後の表が書けたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ重さずつふえる3つの数は、<b>まん中の2倍＝両はしの和</b>。たとえば 10・13・16 なら、13×2＝26、10＋16＝26。</li>
+    <li>分からない数が2種類あるときは、片方をそろえてひく（消去算）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>最初の100gを分ける。3：6：1 の合計は10。A＝30g、B＝60g、C＝10g。</li>
+    <li>1回入れたあとの比 21：18：11 の1つ分を ア g とする。2回入れたあとの比 9：6：5 の1つ分を イ g とする。表を書く。
+      <table><tr><th></th><th>最初</th><th>Dを1回入れたあと</th><th>Dを2回入れたあと</th></tr>
+      <tr><td>A</td><td>30g</td><td>ア×21</td><td>イ×9</td></tr>
+      <tr><td>B</td><td>60g</td><td>ア×18</td><td>イ×6</td></tr>
+      <tr><td>C</td><td>10g</td><td>ア×11</td><td>イ×5</td></tr></table>
+    </li>
+    <li>Aの重さは、1回目も2回目も同じだけふえる。Bも同じ。「まん中の2倍＝両はしの和」を式にする。
+      <table><tr><th></th><th>まん中の2倍</th><th>両はしの和</th></tr>
+      <tr><td>A</td><td>ア×42</td><td>30＋イ×9</td></tr>
+      <tr><td>B</td><td>ア×36</td><td>60＋イ×6</td></tr></table>
+    </li>
+    <li>イをそろえる。Aの式を2倍、Bの式を3倍して、ひく。
+      <table><tr><th></th><th>左</th><th>右</th></tr>
+      <tr><td>Aの式を2倍</td><td>ア×84</td><td>60＋イ×18</td></tr>
+      <tr><td>Bの式を3倍</td><td>ア×108</td><td>180＋イ×18</td></tr>
+      <tr><td>下から上をひく</td><td><b>ア×24</b></td><td><b>120</b></td></tr></table>
+      アは 120÷24＝5。
+    </li>
+    <li>1回入れたあとは A＝5×21＝105g、B＝5×18＝90g、C＝5×11＝55g。最初からふえた分がDの中身。Aは 105−30＝75g。Bは 90−60＝30g。Cは 55−10＝45g。</li>
+    <li>75：30：45＝<b>5：2：3</b>。たしかめ。もう1回入れると A180g・B120g・C100g。180：120：100＝9：6：5。合っている。</li>
+  </ol>
+  <div class="ans">答え：5：2：3</div>
+  <div class="tip">コツ：答えるのは「Dに含まれる」比。1回入れたあとの 105：90：55 ではなく、ふえた分の 75：30：45 を比にする。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 「この箱には石が入っている」と書かれた箱A <span class="type">A・5点｜論理（真実か嘘か決まらない）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は決まりの言葉「<b>真実か嘘のどちらか</b>」に丸。箱Aの文が真実のときと嘘のときの2通りを書く → 石が入っている場合も、入っていない場合もある → <b>どちらか決められない</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>嘘は「真実を否定した内容」。「石が入っている」が嘘なら、本当は<b>「石が入っていない」</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2通りを表に書く。
+      <table><tr><th>箱Aの文</th><th>箱Aの中</th></tr>
+      <tr><td>真実</td><td>石が入っている</td></tr>
+      <tr><td>嘘</td><td>石が入っていない</td></tr></table>
+    </li>
+    <li>真実か嘘かを決める手がかりは、ほかに何もない。<b>2通りとも残る</b>。</li>
+    <li>だから「入っているかどうかわからない」のウ。「最も正しいもの」を選ぶので、アやイのように言い切ったものは選べない。</li>
+  </ol>
+  <div class="ans">答え：ウ</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 箱B「真実が書かれた箱は1つだけ」 <span class="type">B・5点｜論理（場合に分けて、合わないものを消す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は箱Bの「<b>真実が書かれた箱は1つだけ</b>」と「すべて選び」に丸。箱Bの文が真実のとき・嘘のときの2通りを表に置く → どちらでも<b>箱Aの文は嘘</b>に決まる。表が2行で終わるので手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「1つだけ」が嘘なら、真実の箱は<b>0個か2個</b>。箱は2つなので、1個でなければ0個か2個になる。</li>
+    <li>箱の文と、真実の箱の数が合わない場合は起こらない。そういう場合を消していく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>箱Bの文が真実のとき。真実の箱は1つだけで、それは箱B。だから箱Aの文は嘘。</li>
+    <li>箱Bの文が嘘のとき。真実の箱は0個か2個。箱Bが嘘なので、2個にはならない。0個に決まり、箱Aの文も嘘。
+      <table><tr><th>箱Bの文</th><th>真実の箱の数</th><th>箱Aの文</th><th>箱Aの石</th></tr>
+      <tr><td>真実</td><td>1個（箱B）</td><td>嘘</td><td>入っていない</td></tr>
+      <tr><td>嘘</td><td>0個</td><td>嘘</td><td>入っていない</td></tr></table>
+    </li>
+    <li>どちらでも、箱Aの文「石が入っている」は嘘。箱Aには<b>石が入っていない</b>。イが正しい。</li>
+    <li>箱Bの石については、どの箱にも書かれていない。だから、わからない。カが正しい。</li>
+    <li>箱Aについて1つ、箱Bについて1つ選ぶ。2つとも合って正解になる。</li>
+  </ol>
+  <div class="ans">答え：イ・カ</div>
+  <div class="tip">コツ：(1)では「わからない」だった箱Aが、箱Bの文が加わると「石が入っていない」に決まる。情報がふえたら、前の答えを見直す。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 箱C「箱Aには宝も石も入っていない」 <span class="type">C・6点｜論理（4通りを調べて理由を書く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">本番では後回し。【条件文】部品は箱Cの「<b>箱Aには宝も石も入っていない</b>」。箱Aの中身を<b>4通り</b>に分けて表に置く → 箱Bの文と合う場合だけが残る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>箱が3つになったので、(2)の結果は使わずに調べ直す。箱AとCの<b>片方だけが真実</b>だと、箱Bは真実でも嘘でも合わない。箱Bが真実なら、真実の箱が2つになる。箱Bが嘘なら、真実の箱が1つだけになり、箱Bの文が本当になってしまう。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>箱Aの中身を4通りに分ける。箱Aの文と箱Cの文が、真実か嘘かを書く。
+      <table><tr><th>箱Aの中身</th><th>箱A「石が入っている」</th><th>箱C「宝も石も入っていない」</th><th>箱B「真実は1つだけ」</th></tr>
+      <tr><td>宝も石も入っていない</td><td>嘘</td><td>真実</td><td>合わない</td></tr>
+      <tr><td>石だけ入っている</td><td>真実</td><td>嘘</td><td>合わない</td></tr>
+      <tr><td><b>宝だけ入っている</b></td><td>嘘</td><td>嘘</td><td><b>真実でも嘘でも合う</b></td></tr>
+      <tr><td>宝も石も入っている</td><td>真実</td><td>嘘</td><td>合わない</td></tr></table>
+    </li>
+    <li>残るのは「宝が入っていて、石は入っていない」だけ。このとき箱AもCも嘘。箱Bが真実なら、真実の箱は箱Bの1つだけで合う。箱Bが嘘なら、真実の箱は0個で、これも合う。</li>
+    <li>答案は、結果を1文で書く。理由は、4通りそれぞれに「箱AとCが真実か嘘か」と「箱Bと合うか」を書く。</li>
+  </ol>
+  <div class="ans">答え：考えられる結果…箱Aには宝が入っていて，石は入っていない。</div>
+  <div class="model">模範解答：理由…（例）「箱Aには宝も石も入っていない」とき，Aは嘘でCは真実だからBに矛盾する。「箱Aには石が入っていて，宝は入っていない」とき，Aは真実でCは嘘だからBに矛盾する。「箱Aには宝が入っていて，石は入っていない」とき，AもCも嘘だからBはどちらでもよい。「箱Aには宝も石も入っている」とき，Aは真実でCは嘘だからBに矛盾する。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ</h2>
+  <ul>
+    <li>立方体の頂点を選ぶ問題は、結び方を「辺・面の対角線・中を通る対角線」に分ける。体積が大きい立体は、辺でつながる頂点を選ばない。</li>
+    <li>比の問題は、加えていない液体の数をそろえる。gが分かる所は、先に重さに直して表に書く。</li>
+    <li>真実か嘘かの問題は、2通りを表に書く。文と合わない場合を消して、残ったものが答えになる。</li>
+  </ul>
+</section>
+</div>
