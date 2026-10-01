@@ -6916,7 +6916,8 @@
        "jukensha": 45.1,
        "gokakusha": 50.1
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2023-1/shakai.html"
     },
     {
      "id": "rika",
@@ -7195,7 +7196,8 @@
        "jukensha": 35.1,
        "gokakusha": 42.5
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2023-1/rika.html"
     },
     {
      "id": "kokugo",
@@ -7380,7 +7382,8 @@
        "jukensha": 48.6,
        "gokakusha": 55.3
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2023-1/kokugo.html"
     }
    ]
   },
