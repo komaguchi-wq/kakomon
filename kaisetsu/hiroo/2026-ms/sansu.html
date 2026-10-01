@@ -1,0 +1,677 @@
+<!-- generated kakomon hiroo/2026-ms/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（立方体に棒をさす／和が素数になる入れ方・並べ方／2つの船と流れるボール）</a></li>
+<li><a href="#4">大問4（3×3のマスに6個の数字・列の合計から入れ方を決める）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（立方体に棒をさす／和が素数になる入れ方・並べ方／2つの船と流れるボール）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（大問1〜4） <span class="type">A 40点／B 35点／C 25点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1</td><td>27個・125個の立方体に棒をさす（つき通す個数）</td><td>A 8+8 / B 9</td><td>「つき通している」→ 正面と真上から見た図に分ける。(3)は境目の面の数</td></tr>
+    <tr><td>2</td><td>和が素数になる数の入れ方・並べ方</td><td>B 9+8 / C 8</td><td>「和はどれも素数」→ 組を書き出して、相手が少ない数・多い数から決める</td></tr>
+    <tr><td>3</td><td>流水算（2つの船と流れるボール）</td><td>B 9 / A 8+8</td><td>「静水時に同じ速さ」「川の流れと同じ速さ」→ 流れの分が消える</td></tr>
+    <tr><td>4</td><td>3×3のマスに6個の数字（列の合計）</td><td>A 8 / C 9+8</td><td>合計が大きい列（16＝7＋9）から決める（別の断片で解説）</td></tr>
+  </table>
+  <p>取り方: 100点満点で、受験者平均は40.2点、合格者平均は54.7点。<b>Aの40点（1 (1)(2)、3 (2)(3)、4 (1)）を先に確実に</b>取る。3 (2)(3) は 3 (1) の答えを使うので、大問3は (1) から通して解く。Bは 2 (1)(2) が書き出しで届く。Aの40点にBを2問足すと、合格者平均をこえる。2 (3) と 4 (2)(3) は後回しでよい。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 大きな立方体の2つの頂点を通る棒 <span class="type">A・8点｜立体図形（つき通す個数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2つの頂点を通る</b>」と、決まりの「1つの頂点だけを通る場合」は数えない、に丸。棒を正面から見た図と真上から見た図に直して書く → <b>段ごとに、棒が通るますをぬる</b>。どの段も1個で、3個。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>立体の中の棒は、<b>正面から見た図と真上から見た図の2枚</b>に分けて調べる。正面の図で「どの段の、左右のどこを通るか」が分かる。真上の図で「その段のどのますを通るか」が分かる。</li>
+    <li>棒が小さな立方体の頂点にふれるだけなら、つき通したことにならない。中を通った立方体だけを数える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>正面から見た図をかく。棒は左上の角から右下の角へ進む。上の段では左の列を通る。中の段ではまん中の列、下の段では右の列を通る。</li>
+    <li>真上から見た図を、段ごとに3枚かく。棒は手前の左の角から、奥の右の角へ進む。正面の図で分かった列の中で、棒が通るますをぬる。
+<svg id="q1_1_fig" viewBox="0 0 392 128" style="max-width:380px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="正面から見た図では棒が左上の角から右下の角へ進む。真上から見た図では、上の段は手前の左、中の段はまん中、下の段は奥の右のますを通る">
+<text x="82" y="14" font-size="11" fill="#222" text-anchor="middle">正面から見た図</text>
+<rect x="40" y="26" width="84" height="84" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<path d="M68 26V110M96 26V110M40 54H124M40 82H124" stroke="#222" stroke-width="1" fill="none"/>
+<line x1="40" y1="26" x2="124" y2="110" stroke="#d32f2f" stroke-width="2.6"/>
+<text x="36" y="44" font-size="10" fill="#222" text-anchor="end">上の段</text>
+<text x="36" y="72" font-size="10" fill="#222" text-anchor="end">中の段</text>
+<text x="36" y="100" font-size="10" fill="#222" text-anchor="end">下の段</text>
+<text x="272" y="14" font-size="11" fill="#222" text-anchor="middle">真上から見た図（下が手前）</text>
+<rect x="160" y="74" width="24" height="24" fill="#ffe0b2"/>
+<rect x="160" y="26" width="72" height="72" fill="none" stroke="#222" stroke-width="1.4"/>
+<path d="M184 26V98M208 26V98M160 50H232M160 74H232" stroke="#222" stroke-width="1" fill="none"/>
+<line x1="160" y1="98" x2="232" y2="26" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 3"/>
+<line x1="160" y1="98" x2="184" y2="74" stroke="#d32f2f" stroke-width="2.6"/>
+<text x="196" y="114" font-size="11" fill="#222" text-anchor="middle">上の段 1個</text>
+<rect x="260" y="50" width="24" height="24" fill="#ffe0b2"/>
+<rect x="236" y="26" width="72" height="72" fill="none" stroke="#222" stroke-width="1.4"/>
+<path d="M260 26V98M284 26V98M236 50H308M236 74H308" stroke="#222" stroke-width="1" fill="none"/>
+<line x1="236" y1="98" x2="308" y2="26" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 3"/>
+<line x1="260" y1="74" x2="284" y2="50" stroke="#d32f2f" stroke-width="2.6"/>
+<text x="272" y="114" font-size="11" fill="#222" text-anchor="middle">中の段 1個</text>
+<rect x="360" y="26" width="24" height="24" fill="#ffe0b2"/>
+<rect x="312" y="26" width="72" height="72" fill="none" stroke="#222" stroke-width="1.4"/>
+<path d="M336 26V98M360 26V98M312 50H384M312 74H384" stroke="#222" stroke-width="1" fill="none"/>
+<line x1="312" y1="98" x2="384" y2="26" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 3"/>
+<line x1="360" y1="50" x2="384" y2="26" stroke="#d32f2f" stroke-width="2.6"/>
+<text x="348" y="114" font-size="11" fill="#222" text-anchor="middle">下の段 1個</text>
+</svg></li>
+    <li>ぬったますは、どの段も1個。<b>1＋1＋1＝3個</b>。</li>
+    <li>落としやすい所は、段が変わる所。棒は小さな立方体の頂点を通って、次の段へ入る。頂点でふれるだけのまわりの立方体は数えない。</li>
+  </ol>
+  <div class="ans">答え：3個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 小さな正方形のまん中A・Bを通る棒 <span class="type">A・8点｜立体図形（つき通す個数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>小さな正方形の対角線の交点</b>」に丸。正方形のまん中のこと。AとBを、正面から見た図と真上から見た図に置く → (1)と同じく<b>段ごとに、棒が通るますをぬる</b>。3個、3個、1個で7個。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)と同じ2枚の図を使う。正面から見た図で「どの段の、左右のどこからどこまでを通るか」を決める。次に、真上から見た図で、そのはばの中のますを数える。</li>
+    <li>棒は<b>境目の面を1回こえると、次の立方体に入る</b>。境目を2枚同時にこえる所は、辺や頂点。(1)の棒はそこを通っていた。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>正面から見た図をかく。小さな立方体の1辺を1とする。Aは上の辺の、左から0.5の所。Bは右の辺の、下から0.5の所。棒は右へ2.5進む間に、下へ2.5進む。ななめ45度の線になる。</li>
+    <li>段が変わる所を読む。棒は右へ1進むと、下へ1進む。左から1.5の所と2.5の所で、段が変わる。上の段は左から0.5〜1.5。中の段は1.5〜2.5。下の段は2.5〜3。</li>
+    <li>真上から見た図をかく。Aは手前の左のますのまん中。Bは右の辺の上で、奥の列のまん中の高さ。AとBを結ぶ。左から1.5と2.5の所に点線を入れて、棒を3つに切る。
+<svg id="q1_2_fig" viewBox="0 0 392 152" style="max-width:380px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="正面から見た図ではAからBへななめ45度の線。左から1.5と2.5の所で段が変わる。真上から見た図では、上の段で3個、中の段で3個、下の段で1個のますを通る">
+<text x="82" y="12" font-size="11" fill="#222" text-anchor="middle">正面から見た図</text>
+<rect x="40" y="34" width="84" height="84" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<path d="M68 34V118M96 34V118M40 62H124M40 90H124" stroke="#222" stroke-width="1" fill="none"/>
+<line x1="82" y1="62" x2="82" y2="124" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="110" y1="90" x2="110" y2="124" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="54" y1="34" x2="124" y2="104" stroke="#d32f2f" stroke-width="2.6"/>
+<circle cx="54" cy="34" r="2.8" fill="#222"/>
+<circle cx="124" cy="104" r="2.8" fill="#222"/>
+<circle cx="82" cy="62" r="2.6" fill="#1565c0"/>
+<circle cx="110" cy="90" r="2.6" fill="#1565c0"/>
+<text x="54" y="29" font-size="11" font-weight="bold" fill="#222" text-anchor="middle">A</text>
+<text x="129" y="108" font-size="11" font-weight="bold" fill="#222">B</text>
+<text x="36" y="52" font-size="10" fill="#222" text-anchor="end">上の段</text>
+<text x="36" y="80" font-size="10" fill="#222" text-anchor="end">中の段</text>
+<text x="36" y="108" font-size="10" fill="#222" text-anchor="end">下の段</text>
+<text x="82" y="135" font-size="10" fill="#1565c0" text-anchor="middle">1.5</text>
+<text x="110" y="135" font-size="10" fill="#1565c0" text-anchor="middle">2.5</text>
+<text x="82" y="148" font-size="9.5" fill="#1565c0" text-anchor="middle">（左からの長さ）</text>
+<text x="272" y="12" font-size="11" fill="#222" text-anchor="middle">真上から見た図（下が手前）</text>
+<rect x="160" y="82" width="48" height="24" fill="#ffe0b2"/>
+<rect x="184" y="58" width="24" height="24" fill="#ffe0b2"/>
+<rect x="160" y="34" width="72" height="72" fill="none" stroke="#222" stroke-width="1.4"/>
+<path d="M184 34V106M208 34V106M160 58H232M160 82H232" stroke="#222" stroke-width="1" fill="none"/>
+<path d="M196 34V106M220 34V106" stroke="#777" stroke-width="1" stroke-dasharray="2 3" fill="none"/>
+<line x1="172" y1="94" x2="232" y2="46" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 3"/>
+<line x1="172" y1="94" x2="196" y2="74.8" stroke="#d32f2f" stroke-width="2.6"/>
+<circle cx="172" cy="94" r="2.6" fill="#222"/>
+<circle cx="232" cy="46" r="2.6" fill="#222"/>
+<text x="166" y="104" font-size="10" font-weight="bold" fill="#222" text-anchor="middle">A</text>
+<text x="228" y="30" font-size="10" font-weight="bold" fill="#222" text-anchor="middle">B</text>
+<text x="196" y="122" font-size="11" fill="#222" text-anchor="middle">上の段 3個</text>
+<rect x="260" y="58" width="48" height="24" fill="#ffe0b2"/>
+<rect x="284" y="34" width="24" height="24" fill="#ffe0b2"/>
+<rect x="236" y="34" width="72" height="72" fill="none" stroke="#222" stroke-width="1.4"/>
+<path d="M260 34V106M284 34V106M236 58H308M236 82H308" stroke="#222" stroke-width="1" fill="none"/>
+<path d="M272 34V106M296 34V106" stroke="#777" stroke-width="1" stroke-dasharray="2 3" fill="none"/>
+<line x1="248" y1="94" x2="308" y2="46" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 3"/>
+<line x1="272" y1="74.8" x2="296" y2="55.6" stroke="#d32f2f" stroke-width="2.6"/>
+<circle cx="248" cy="94" r="2.6" fill="#222"/>
+<circle cx="308" cy="46" r="2.6" fill="#222"/>
+<text x="272" y="122" font-size="11" fill="#222" text-anchor="middle">中の段 3個</text>
+<rect x="360" y="34" width="24" height="24" fill="#ffe0b2"/>
+<rect x="312" y="34" width="72" height="72" fill="none" stroke="#222" stroke-width="1.4"/>
+<path d="M336 34V106M360 34V106M312 58H384M312 82H384" stroke="#222" stroke-width="1" fill="none"/>
+<path d="M348 34V106M372 34V106" stroke="#777" stroke-width="1" stroke-dasharray="2 3" fill="none"/>
+<line x1="324" y1="94" x2="384" y2="46" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 3"/>
+<line x1="372" y1="55.6" x2="384" y2="46" stroke="#d32f2f" stroke-width="2.6"/>
+<circle cx="324" cy="94" r="2.6" fill="#222"/>
+<circle cx="384" cy="46" r="2.6" fill="#222"/>
+<text x="348" y="122" font-size="11" fill="#222" text-anchor="middle">下の段 1個</text>
+</svg></li>
+    <li>段ごとに、棒が通るますをぬって数える。上の段は3個。中の段は3個。下の段は1個。<b>3＋3＋1＝7個</b>。</li>
+    <li>たしかめ。棒が境目の面をこえる所を、左からの長さでならべる。前後の境目は、奥へ0.5と1.5進んだ所。棒は奥へ2進む間に、右へ2.5進む。右へ進む長さは、奥へ進む長さの1.25倍。右へは 0.5×1.25＝0.625 と 1.5×1.25＝1.875 進んでいる。Aは左から0.5の所なので、左からは1.125と2.375。
+<table>
+  <tr><th>境目の面</th><th>こえる所（左からの長さ）</th></tr>
+  <tr><td>左右の境目（2枚）</td><td>1、2</td></tr>
+  <tr><td>上下の境目（2枚）</td><td>1.5、2.5</td></tr>
+  <tr><td>前後の境目（2枚）</td><td>1.125、2.375</td></tr>
+</table>
+    6か所が全部ちがう。境目を1枚ずつ、6回こえている。辺や頂点は通らない。はじめの1個に6個ふえて、1＋6＝7個で合う。</li>
+    <li>落としやすい所は、真上から見た図の線。左から1の所で、棒は手前から0.9の所を通る。ますの角（手前から1）のすぐ手前になる。方眼を大きめにかくと見分けられる。</li>
+  </ol>
+  <div class="ans">答え：7個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 125個の立方体で、つき通す個数の最大 <span class="type">B・9点｜立体図形（境目の面の数で考える）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>125個</b>」と「最大となるさし方の1つ」に丸。125を 5×5×5 に直して書く → 境目の面は、左右・前後・上下に4枚ずつ。<b>境目を1回こえるごとに1個ふえる</b>ので 4×3＋1。(2)を「境目6回で7個」と数え直せたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>棒は、はじめに1個の立方体に入る。そのあと<b>境目の面を1回こえるたびに、1個ふえる</b>。(2)は境目が 2×3＝6枚で、1＋6＝7個。</li>
+    <li>まっすぐな棒は、同じ境目の面を2回こえない。こえる回数は、境目の枚数より多くならない。</li>
+    <li>境目を何枚か同時にこえると、ふえるのは1個だけ。(1)は3枚を同時にこえる所が2回で、1＋2＝3個。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>125＝5×5×5。1辺に小さな立方体が5個ならぶ。高さは5段。</li>
+    <li>境目の面を数える。5個ならぶと、間は4か所。左右に4枚、前後に4枚、上下に4枚。全部で 4×3＝12枚。</li>
+    <li>12枚を1枚ずつ別々にこえるとき、個数が最大になる。<b>1＋12＝13個</b>。</li>
+    <li>本当に別々にこえられるかを、(2)と同じさし方でたしかめる。Aは上の面の、手前の左のますのまん中。Bは右の面の、いちばん下の段で奥の列のますのまん中。段ごとに数えると、下の表になる。
+<table>
+  <tr><th>段（上から）</th><td>1段目</td><td>2段目</td><td>3段目</td><td>4段目</td><td>5段目</td></tr>
+  <tr><th>棒が通るはば（左から）</th><td>0.5〜1.5</td><td>1.5〜2.5</td><td>2.5〜3.5</td><td>3.5〜4.5</td><td>4.5〜5</td></tr>
+  <tr><th>通る個数</th><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
+</table>
+    3×4＋1＝13個。境目の数で出した答えと同じになる。</li>
+    <li>解答らんには式や考え方も書く。入れるのは3つ。「125＝5×5×5」「境目は 4×3＝12枚」「12＋1＝13個」。</li>
+  </ol>
+  <div class="ans">答え：13個</div>
+  <div class="model">式や考え方（例・解答一覧は答えだけ。声の教育社の解説をもとにした書き方）：125＝5×5×5 だから、大きな立方体の1辺には小さな立方体が5個ならぶ。小さな立方体どうしの境目の面は、たて・横・高さの向きに4枚ずつある。棒は境目を1回通るごとに、新しい立方体に入る。境目を通る回数は最大で 4×3＝12回。だから、つき通している立方体は最大で 12＋1＝13個。</div>
+  <div class="tip">コツ：(3)の問題文の「最大となるさし方の1つ」がヒント。(2)のさし方が最大、という意味。7個を「1＋2×3」と読み直すと、5×5×5 では「1＋4×3」になる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> つながった丸の和が素数になるように数を入れる <span class="type">B・9点｜条件の整理（素数の組を書き出す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は【条件】の「<b>直線でつながっている</b>」と「<b>和はどれも素数</b>」に丸。和が素数になる2つの数の組を書き出して置く → <b>組に出てくる回数と、丸から出る線の本数が合う所</b>から決まる。図1は2と5、図2は12と18。図1が入ったら、同じ手で図2に手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>素数は、1とその数でしかわれない数。小さい順に 2、3、5、7、11、13、17、19、23、29、31、37。1は素数ではない。</li>
+    <li>ここで出てくる素数は、どれも奇数。たして奇数になるのは、<b>偶数と奇数の組</b>だけ。たとえば 1＋4＝5。奇数どうしの 1＋3＝4 は偶数になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図1から。和は 1＋2＝3 から 4＋5＝9 まで。この間の素数は3、5、7。和ごとに組を書き出す。
+<table>
+  <tr><th>和</th><th>2つの数の組</th></tr>
+  <tr><td>3</td><td>1＋2</td></tr>
+  <tr><td>5</td><td>1＋4、2＋3</td></tr>
+  <tr><td>7</td><td>2＋5、3＋4</td></tr>
+</table></li>
+    <li>表に出てくる回数を数える。<b>2は3回、5は1回</b>。あとの1、3、4は2回ずつ。次に、丸から出る線の本数を見る。右上の丸は3本。まん中の丸は1本。あとの3つは2本。2が右上、5がまん中に決まる。</li>
+    <li>2の相手は、あと1と3。右上の丸とつながる左上と右下に入れる。残りの4が左下。1＋4＝5、3＋4＝7 で、どちらも素数。
+<svg id="q2_1_fig1" viewBox="0 0 180 170" style="max-width:170px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="図1の答えの例。左上1、右上2、右下3、左下4、まん中5">
+<path d="M35 35H135V135H35Z" stroke="#222" stroke-width="1.4" fill="none"/>
+<line x1="88" y1="82" x2="135" y2="35" stroke="#222" stroke-width="1.4"/>
+<circle cx="35" cy="35" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="135" cy="35" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="135" cy="135" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="35" cy="135" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="88" cy="82" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<text x="35" y="41" font-size="17" font-weight="bold" fill="#d32f2f" text-anchor="middle">1</text>
+<text x="135" y="41" font-size="17" font-weight="bold" fill="#d32f2f" text-anchor="middle">2</text>
+<text x="135" y="141" font-size="17" font-weight="bold" fill="#d32f2f" text-anchor="middle">3</text>
+<text x="35" y="141" font-size="17" font-weight="bold" fill="#d32f2f" text-anchor="middle">4</text>
+<text x="88" y="88" font-size="17" font-weight="bold" fill="#d32f2f" text-anchor="middle">5</text>
+</svg></li>
+    <li>図2。和は 11＋12＝23 から 18＋19＝37 まで。この間の素数は23、29、31、37。同じように組を書き出す。
+<table>
+  <tr><th>和</th><th>2つの数の組</th></tr>
+  <tr><td>23</td><td>11＋12</td></tr>
+  <tr><td>29</td><td>11＋18、12＋17、13＋16、14＋15</td></tr>
+  <tr><td>31</td><td>12＋19、13＋18、14＋17、15＋16</td></tr>
+  <tr><td>37</td><td>18＋19</td></tr>
+</table></li>
+    <li>表に3回出てくる数は、<b>12と18だけ</b>。あとの数は2回ずつ。線が3本出ている丸は、左下と右上の2つ。左下を12、右上を18とする。</li>
+    <li>12の相手は11、17、19。18の相手は11、13、19。両方にある11と19を、12と18の両方につながる左上と右下に入れる。残りの17は12のとなり。13は18のとなり。</li>
+    <li>ななめの列を、左下の12から順に決める。17の相手は12と14。次は14。14の相手は15と17。次は15。続けて16、13。最後は 13＋18＝31 で、右上の18につながる。
+<svg id="q2_1_fig2" viewBox="0 0 300 300" style="max-width:280px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="図2の答えの例。左上11、右上18、右下19、左下12。ななめの列は左下から17、14、15、16、13">
+<path d="M40 40H260V260H40Z" stroke="#222" stroke-width="1.4" fill="none"/>
+<line x1="40" y1="260" x2="260" y2="40" stroke="#222" stroke-width="1.4"/>
+<circle cx="40" cy="40" r="18" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="260" cy="40" r="18" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="260" cy="260" r="18" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="40" cy="260" r="18" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="76.7" cy="223.3" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="113.3" cy="186.7" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="150" cy="150" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="186.7" cy="113.3" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<circle cx="223.3" cy="76.7" r="17" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<text x="40" y="46" font-size="16" font-weight="bold" fill="#d32f2f" text-anchor="middle">11</text>
+<text x="260" y="46" font-size="16" font-weight="bold" fill="#d32f2f" text-anchor="middle">18</text>
+<text x="260" y="266" font-size="16" font-weight="bold" fill="#d32f2f" text-anchor="middle">19</text>
+<text x="40" y="266" font-size="16" font-weight="bold" fill="#d32f2f" text-anchor="middle">12</text>
+<text x="76.7" y="229" font-size="16" font-weight="bold" fill="#d32f2f" text-anchor="middle">17</text>
+<text x="113.3" y="192.5" font-size="16" font-weight="bold" fill="#d32f2f" text-anchor="middle">14</text>
+<text x="150" y="156" font-size="16" font-weight="bold" fill="#d32f2f" text-anchor="middle">15</text>
+<text x="186.7" y="119" font-size="16" font-weight="bold" fill="#d32f2f" text-anchor="middle">16</text>
+<text x="223.3" y="82.5" font-size="16" font-weight="bold" fill="#d32f2f" text-anchor="middle">13</text>
+</svg></li>
+    <li>図1と図2の両方が合って9点（完答）。書き終えたら、線を1本ずつ指でたどる。和が素数になっているかを、全部の線で確かめる。</li>
+  </ol>
+  <div class="ans">答え：上の図の赤い数字（例）。図1…左上1・右上2・右下3・左下4・まん中5／図2…左上11・右上18・右下19・左下12・ななめの列は左下から 17，14，15，16，13（解答一覧では 図1…「（例）解説の図③を参照のこと」／図2…「（例）解説の図⑥を参照のこと」）</div>
+  <div class="tip">コツ：入れ方はほかにもある。図1は、1と3を入れかえた形。図2は、11と19の入れかえと、12と18の入れかえ（ななめの5つは逆の順になる）で、全部で4通り。どれを書いてもよい。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 1から5を、となりの和が素数になるように1列に並べる <span class="type">B・8点｜条件の整理（書き出し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>隣り合っている数の和がどれも素数</b>」と「<b>以外のものを解答欄にすべて</b>」に丸。(1)の図1の表を使う → 5のとなりに置けるのは2だけなので、<b>5は列のはし</b>。そこから順に決める。(1)の図1ができていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)の表から、となりに置ける相手をまとめる。1は2と4。2は1と3と5。3は2と4。4は1と3。<b>5は2だけ</b>。</li>
+    <li>列のまん中にある数は、両どなりに相手が1つずつ要る。相手が1つしかない数は、はしにしか置けない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>5の相手は2だけ。5をまん中に置くと、両どなりに2が2個要る。だから5は左はしか右はし。そのとなりは2。</li>
+    <li>5を左はしに置く。「5，2，□，□，□」。2の次は1か3。</li>
+    <li>2の次が1のとき。1の相手で残っているのは4。4の次は3。「5，2，1，4，3」。2の次が3のとき。3の次は4。4の次は1。「5，2，3，4，1」。</li>
+    <li>5を右はしに置く。左はしのときの2つを、逆から読めばよい。「3，4，1，2，5」と「1，4，3，2，5」。</li>
+    <li>並べ方は全部で4つ。「1，4，3，2，5」は例なので、のぞく。<b>答えは3つ</b>。</li>
+    <li>落としやすい所は、逆から読んだ列。「5，2，1，4，3」と「3，4，1，2，5」は別の並べ方として書く。解答らんは5つあるが、使うのは3つ。3つとも合って8点（完答）。</li>
+  </ol>
+  <div class="ans">答え：「3，4，1，2，5」，「5，2，1，4，3」，「5，2，3，4，1」</div>
+  <div class="tip">コツ：声の教育社の解説は、(1)の図1の答えを線にそってたどっている。左上→左下→右下→右上→まん中の順に読むと「1，4，3，2，5」。たどり始める丸を変えると、ほかの3つが出る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 11から19を、となりの和が素数になるように1列に並べる <span class="type">C・8点｜場合の数（かたまりを作る）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>11から19までの整数</b>」と「<b>全部で何通り</b>」に丸。(1)の図2の表を使う → 相手が2つだけの14と16から、「17，14，15，16，13」が<b>ひとかたまり</b>に決まる。残りは11、19、12、18の置き方だけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>となりは偶数と奇数の組。奇数は5個、偶数は4個なので、列は「奇・偶・奇・偶・奇・偶・奇・偶・奇」になる。<b>偶数ははしに来ない</b>。両どなりに相手が1つずつ入る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>14の相手は15と17だけ。16の相手は13と15だけ。どちらも両どなりが決まる。「17，14，15，16，13」がひとかたまりになる。逆向きの「13，16，15，14，17」でもよい。</li>
+    <li>かたまりの17の外側に置けるのは12。13の外側に置けるのは18。残りの11と19は、12と18のどちらのとなりにも置ける。かたまりの場所で分けて数える。□には11と19が入り、入れ方は2通りずつ。
+<table>
+  <tr><th>かたまりの場所</th><th>並べ方の形</th><th>数</th></tr>
+  <tr><td>左はし</td><td>17，14，15，16，13，18，□，12，□<br>13，16，15，14，17，12，□，18，□</td><td>2＋2＝4通り</td></tr>
+  <tr><td>まん中</td><td>□，12，17，14，15，16，13，18，□<br>□，18，13，16，15，14，17，12，□</td><td>2＋2＝4通り</td></tr>
+  <tr><td>右はし</td><td>左はしの4通りを逆から読んだもの</td><td>4通り</td></tr>
+</table></li>
+    <li>全部で 4×3＝<b>12通り</b>。声の教育社の解説は、はじめの数で分けている。11から始まるのが4通り、19からが4通り、17からが2通り、13からが2通り。(4＋2)×2＝12通りで同じ。</li>
+  </ol>
+  <div class="ans">答え：12通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 静水時の船の速さ <span class="type">B・9点｜流水算・旅人算（流れが消える）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>静水時に同じ速さ</b>」と「<b>川の流れと同じ速さで流れた</b>」に丸。時刻は「出発から10分・38分」に直して書く → 向かい合う2つの速さをたすと、<b>流れの分が消えて静水時の速さだけ</b>になる。10分のときの線分図がかけたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>下りの速さ＝静水時の速さ＋流れの速さ。上りの速さ＝静水時の速さ−流れの速さ。ボールは流れの速さで下る。</li>
+    <li>向かい合って進む2つは、<b>速さの和</b>で近づく。AとBなら（静水＋流れ）＋（静水−流れ）。静水時の速さの2つ分になる。Bとボールなら（静水−流れ）＋流れ。静水時の速さの1つ分になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>12km＝12000m。静水時の速さを毎分□mと書く。時刻は出発からの時間に直す。ボールを落としたのが10分。Bがボールの横を通ったのが38分。</li>
+    <li>はじめの10分。AとBは向かい合っている。近づく速さは毎分 □×2 m。10分で □×20 m 近づく。</li>
+    <li>10分のとき、ボールはAと同じ場所にある。ここから38分までの28分間は、ボールとBが向かい合う。近づく速さは毎分□m。28分で □×28 m 近づいて、出会う。</li>
+    <li>線分図にまとめる。
+<svg id="q3_1_fig" viewBox="0 0 380 136" style="max-width:370px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="川の長さ12000mの線分図。左はしからAが10分で進む長さ、右はしからBが10分で進む長さ、その間が10分のときのボールとBの間で□×28。AとBが10分で進む長さは合わせて□×20">
+<text x="20" y="13" font-size="11" fill="#222">上流</text>
+<text x="360" y="13" font-size="11" fill="#222" text-anchor="end">下流</text>
+<text x="190" y="13" font-size="11" fill="#222" text-anchor="middle">全体 12000m</text>
+<path d="M20 26V20H360V26" stroke="#222" stroke-width="1" fill="none"/>
+<text x="65" y="52" font-size="11" fill="#222" text-anchor="middle">Aが10分</text>
+<text x="210" y="52" font-size="11" fill="#d32f2f" text-anchor="middle">10分のときのボールとBの間</text>
+<text x="335" y="52" font-size="11" fill="#222" text-anchor="middle">Bが10分</text>
+<line x1="20" y1="66" x2="111" y2="66" stroke="#222" stroke-width="2.2"/>
+<line x1="309" y1="66" x2="360" y2="66" stroke="#222" stroke-width="2.2"/>
+<line x1="111" y1="66" x2="309" y2="66" stroke="#d32f2f" stroke-width="4"/>
+<path d="M20 59V73M111 59V73M309 59V73M360 59V73" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="210" y="86" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle">□×28</text>
+<path d="M65 76V104H335V76" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3" fill="none"/>
+<text x="200" y="122" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="middle">AとBで合わせて □×2×10＝□×20</text>
+</svg></li>
+    <li>全体をたす。□×20＋□×28＝□×48。これが12000m。□＝12000÷48＝<b>250</b>。</li>
+    <li>解答らんには式や考え方も書く。入れるのは3つ。「AとBは毎分□×2mで近づく」「ボールとBは毎分□mで近づく」「□×48＝12000」。</li>
+  </ol>
+  <div class="ans">答え：毎分250m</div>
+  <div class="model">式や考え方（例・解答一覧は答えだけ。声の教育社の解説をもとにした書き方）：12km＝12000m。静水時の速さを毎分□m、流れの速さを毎分△mとする。出発から10分までは、AとBが毎分（□＋△）＋（□−△）＝□×2（m）ずつ近づく。10分から38分までは、ボールとBが毎分（□−△）＋△＝□（m）ずつ近づく。□×2×10＋□×28＝□×48 が12000mだから、□＝12000÷48＝250。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 川の流れの速さ <span class="type">A・8点｜流水算（はなれる時間＝近づく時間）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>すぐ引き返した</b>」と「<b>11時5分にボールを拾う</b>」に丸。11時5分は65分に直して書く。Aとボールの間は、下りでは毎分250mで広がり、上りでは毎分250mでちぢまる → 時間が同じなので、<b>折り返しは10分と65分のまん中</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ向きに進む2つは、<b>速さの差</b>ではなれる。下りのAとボールなら（250＋流れ）−流れ＝250。</li>
+    <li>向かい合う2つは、速さの和で近づく。上りのAとボールなら（250−流れ）＋流れ＝250。流れの速さが分からなくても、どちらも毎分250mになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>10分にボールを落とす。Aは下りを続ける。Aとボールの間は、毎分250mずつ広がる。</li>
+    <li>Aが下流のはしに着いて、すぐ引き返す。ここからAとボールの間は、毎分250mずつちぢまる。65分に0mになる。</li>
+    <li>広がる速さとちぢまる速さが同じ。広がった時間とちぢまった時間も同じになる。10分から65分までは55分。半分ずつで27.5分。折り返したのは 10＋27.5＝<b>37.5分</b>。
+<svg id="q3_2_fig" viewBox="0 0 390 262" style="max-width:380px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" aria-label="時間と場所のグラフ。Aは0分に上流を出て37.5分に下流のはしで折り返し、65分にボールを拾う。ボールは10分に落ちて流れる。Aとボールの間は10分から37.5分まで広がり、37.5分から65分までちぢまる">
+<polygon points="90.7,75.7 216.4,215 216.4,106.1" fill="#dbe9ff"/>
+<polygon points="216.4,106.1 216.4,215 342.1,136.6" fill="#ffe0b2"/>
+<path d="M45 18V215H376" stroke="#222" stroke-width="1.2" fill="none"/>
+<text x="6" y="12" font-size="10.5" fill="#222">上流 12000m</text>
+<text x="41" y="212" font-size="10.5" fill="#222" text-anchor="end">下流</text>
+<line x1="45" y1="215" x2="342.1" y2="29.8" stroke="#777" stroke-width="1.3"/>
+<path d="M90.7 75.7V215M342.1 136.6V215" stroke="#777" stroke-width="1" stroke-dasharray="2 3" fill="none"/>
+<line x1="216.4" y1="106.1" x2="216.4" y2="215" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 3"/>
+<path d="M45 25L216.4 215L342.1 136.6" stroke="#222" stroke-width="2.2" fill="none"/>
+<line x1="90.7" y1="75.7" x2="342.1" y2="136.6" stroke="#d32f2f" stroke-width="2.2" stroke-dasharray="6 4"/>
+<circle cx="90.7" cy="75.7" r="3" fill="#d32f2f"/>
+<circle cx="342.1" cy="136.6" r="3" fill="#d32f2f"/>
+<text x="78" y="44" font-size="12" font-weight="bold" fill="#222">A</text>
+<text x="290" y="50" font-size="12" font-weight="bold" fill="#777" text-anchor="end">B</text>
+<text x="150" y="80" font-size="11" font-weight="bold" fill="#d32f2f">ボール</text>
+<text x="45" y="229" font-size="10.5" fill="#222" text-anchor="middle">0</text>
+<text x="90.7" y="229" font-size="10.5" fill="#222" text-anchor="middle">10</text>
+<text x="216.4" y="229" font-size="11" font-weight="bold" fill="#d32f2f" text-anchor="middle">37.5</text>
+<text x="342.1" y="229" font-size="10.5" fill="#222" text-anchor="middle">65</text>
+<text x="372" y="229" font-size="10.5" fill="#222" text-anchor="middle">(分)</text>
+<path d="M90.7 235V240H214.4V235" stroke="#1565c0" stroke-width="1.1" fill="none"/>
+<path d="M218.4 235V240H342.1V235" stroke="#e65100" stroke-width="1.1" fill="none"/>
+<text x="152.5" y="254" font-size="11" fill="#1565c0" text-anchor="middle">広がる 27.5分</text>
+<text x="280.2" y="254" font-size="11" fill="#e65100" text-anchor="middle">ちぢまる 27.5分</text>
+</svg></li>
+    <li>Aは12000mを37.5分で下った。下りの速さは 12000÷37.5＝320。毎分320m。</li>
+    <li>流れの速さは、下りの速さ−静水時の速さ。320−250＝<b>70</b>。</li>
+    <li>たしかめ。ボールを落とした場所は、上流から 320×10＝3200m。65分には 3200＋70×55＝7050m。Aは毎分 250−70＝180m で27.5分上る。180×27.5＝4950m。上流からは 12000−4950＝7050m。同じ場所になる。</li>
+    <li>落としやすい所は 12000÷37.5 の計算。両方を2倍して 24000÷75＝320 とすると、小数のわり算をしなくてすむ。</li>
+  </ol>
+  <div class="ans">答え：毎分70m</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> Bがボールの横を通ったときの、AとBの間の距離 <span class="type">A・8点｜流水算（同じ速さで同じ向き）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>船Bがボールの横を通り過ぎた時刻</b>」に丸。38分に直して書く。Aの折り返しは37.5分 → 38分にはAもBも上り。同じ毎分180mなので、<b>37.5分のときの間の距離がそのまま答え</b>になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ向きに同じ速さで進む2つは、間の距離が変わらない。AとBは<b>静水時の速さが同じ</b>。だから上りの速さも同じ毎分180mになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>上りの速さを出す。250−70＝180。毎分180m。</li>
+    <li>37.5分のとき。Aは下流のはしにいる。Bは下流のはしから 180×37.5＝<b>6750m</b> の所にいる。間は6750m。</li>
+    <li>ここからAも上りになる。AもBも毎分180m。間の距離は6750mのまま変わらない。38分のときも6750m。</li>
+    <li>たしかめ。38分の場所を別々に出して、ひく。
+<table>
+  <tr><th></th><th>37.5分</th><th>38分</th></tr>
+  <tr><th>Aの場所（下流のはしから）</th><td>0m</td><td>180×0.5＝90m</td></tr>
+  <tr><th>Bの場所（下流のはしから）</th><td>6750m</td><td>180×38＝6840m</td></tr>
+  <tr><th>間の距離</th><td>6750m</td><td>6840−90＝<b>6750m</b></td></tr>
+</table></li>
+    <li>落としやすい所は、38分のAの向き。Aを下りのまま計算すると合わない。(2)で出した37.5分と見くらべて、Aがもう折り返していることを図に書く。</li>
+  </ol>
+  <div class="ans">答え：6750m</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ</h2>
+  <ul>
+    <li>立体の中の棒は、<b>正面と真上の2枚の図</b>に分ける。つき通す個数は「1＋こえた境目の面の数」。同時にこえる所は辺や頂点。</li>
+    <li>「和が素数」は、組を全部書き出す。<b>相手が少ない数・多い数</b>から場所が決まる。並べる問題も同じ表で解ける。</li>
+    <li>流水算で向かい合う2つは、<b>流れの分が消える</b>。船と流れるボールの間は、下りでも上りでも静水時の速さで変わる。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4"><h1 class="dtitle">大問4（3×3のマスに6個の数字・列の合計から入れ方を決める）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4</span> 全体像 <span class="type">A 8点／C 17点</span></h2>
+  <table>
+    <tr><th>小問</th><th>図と合計</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>(1)</td><td>図1（横 7・4・16／縦 6・10・11）</td><td>A・8点</td><td>4 と 16 は、ちがう2つの数の和が1通りだけ</td></tr>
+    <tr><td>(2)</td><td>図2（横 9・6・15／縦 7・10・13）</td><td>C・9点</td><td>15 は 6＋9 か 7＋8。入れ方が何通りもある</td></tr>
+    <tr><td>(3)</td><td>図3（横 3・ア・14／縦 4・ア・13）</td><td>C・8点</td><td>3＝1＋2 と 4＝1＋3 で、1 の場所が決まる</td></tr>
+  </table>
+  <p>どの列も、入る数字は2個だけ。だから列の合計は「<b>ちがう2つの数の和</b>」になる。この言いかえが3問とも入口になる。</p>
+  <p>取り方: <b>(1)を確実に取る</b>。(2)(3)は後回しでよい。時間が残ったら、決まるマスが多い(3)から見る。(2)は入れ方を全部そろえて9点なので、最後にする。</p>
+  <p>この解説では、横の列を「上の段・中の段・下の段」、縦の列を「左・まん中・右」とよぶ。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 図1のマスに数字を入れる <span class="type">A・8点｜条件の整理（2つの数の和）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>それぞれ2個ずつ</b>」と「<b>異なる</b>」に丸。合計を「ちがう2つの数の和」に直して書く → <b>4＝1＋3、16＝7＋9 と1通りに決まる列から埋める</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1つの列に入る数字は2個。だから列の合計は「ちがう2つの数の和」。4 なら <b>1＋3 だけ</b>。2＋2 は同じ数字なので使えない。</li>
+    <li>小さい合計と大きい合計は、組が少ない。16 は 7＋9 だけ。7 は 1＋6、2＋5、3＋4 の3通りある。組が少ない列から決める。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>合計の横に、たして合計になる2つの数を書く。組が少ない列から書く。中の段は 4＝1＋3。下の段は 16＝7＋9。</li>
+    <li>上の段の 7 は、1＋6、2＋5、3＋4 の3通り。1 と 3 は中の段で使った。残るのは 2＋5。使う6個は <b>1・2・3・5・7・9</b> に決まった。</li>
+    <li>縦の列も、この6個から2個ずつ使う。左の 6 は 1＋5。右の 11 は 2＋9。残った 3 と 7 で、まん中の 10 になる。
+<svg id="q4_1_fig1" viewBox="0 0 360 226" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:360px;width:100%;height:auto;display:block">
+<rect x="0" y="0" width="360" height="226" fill="#fff"/>
+<line x1="16" y1="34" x2="142" y2="34" stroke="#222" stroke-width="2"/>
+<line x1="16" y1="34" x2="16" y2="160" stroke="#222" stroke-width="2"/>
+<line x1="16" y1="76" x2="142" y2="76" stroke="#222" stroke-width="1"/>
+<line x1="58" y1="34" x2="58" y2="160" stroke="#222" stroke-width="1"/>
+<line x1="16" y1="118" x2="142" y2="118" stroke="#222" stroke-width="1"/>
+<line x1="100" y1="34" x2="100" y2="160" stroke="#222" stroke-width="1"/>
+<line x1="16" y1="160" x2="142" y2="160" stroke="#222" stroke-width="2"/>
+<line x1="142" y1="34" x2="142" y2="160" stroke="#222" stroke-width="2"/>
+<text x="150" y="60.4" font-size="15" fill="#222">7</text>
+<text x="150" y="102.4" font-size="15" fill="#222">4</text>
+<text x="150" y="144.4" font-size="15" fill="#222">16</text>
+<text x="37.0" y="179" font-size="15" fill="#222" text-anchor="middle">6</text>
+<text x="79.0" y="179" font-size="15" fill="#222" text-anchor="middle">10</text>
+<text x="121.0" y="179" font-size="15" fill="#222" text-anchor="middle">11</text>
+<text x="174" y="60.0" font-size="15" font-weight="bold" fill="#1565c0">＝2＋5</text>
+<text x="234" y="60.0" font-size="11" fill="#1565c0">③ 1と3は使ったあと</text>
+<text x="174" y="102.0" font-size="15" font-weight="bold" fill="#1565c0">＝1＋3</text>
+<text x="234" y="102.0" font-size="11" fill="#1565c0">① これだけ</text>
+<text x="174" y="144.0" font-size="15" font-weight="bold" fill="#1565c0">＝7＋9</text>
+<text x="234" y="144.0" font-size="11" fill="#1565c0">② これだけ</text>
+<text x="37.0" y="200" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">1＋5</text>
+<text x="79.0" y="200" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">3＋7</text>
+<text x="121.0" y="200" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">2＋9</text>
+<text x="174" y="200" font-size="11" fill="#1565c0">④ 縦も同じ6個で作る</text>
+<text x="16" y="20" font-size="12" fill="#222">合計の横に「ちがう2つの数の和」を書く</text>
+</svg></li>
+    <li>数字を1個ずつマスに置く。5 は「上の段」と「左の列」の両方にある。だから左上のマス。同じように、2 は右上、1 は中の段の左、3 はまん中、7 は下の段のまん中、9 は右下。
+<svg id="q4_1_fig2" viewBox="0 0 230 200" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:230px;width:100%;height:auto;display:block">
+<rect x="0" y="0" width="230" height="200" fill="#fff"/>
+<line x1="30" y1="14" x2="180" y2="14" stroke="#222" stroke-width="2"/>
+<line x1="30" y1="14" x2="30" y2="164" stroke="#222" stroke-width="2"/>
+<line x1="30" y1="64" x2="180" y2="64" stroke="#222" stroke-width="1"/>
+<line x1="80" y1="14" x2="80" y2="164" stroke="#222" stroke-width="1"/>
+<line x1="30" y1="114" x2="180" y2="114" stroke="#222" stroke-width="1"/>
+<line x1="130" y1="14" x2="130" y2="164" stroke="#222" stroke-width="1"/>
+<line x1="30" y1="164" x2="180" y2="164" stroke="#222" stroke-width="2"/>
+<line x1="180" y1="14" x2="180" y2="164" stroke="#222" stroke-width="2"/>
+<text x="55.0" y="47.6" font-size="24" font-weight="bold" fill="#d32f2f" text-anchor="middle">5</text>
+<text x="155.0" y="47.6" font-size="24" font-weight="bold" fill="#d32f2f" text-anchor="middle">2</text>
+<text x="55.0" y="97.6" font-size="24" font-weight="bold" fill="#d32f2f" text-anchor="middle">1</text>
+<text x="105.0" y="97.6" font-size="24" font-weight="bold" fill="#d32f2f" text-anchor="middle">3</text>
+<text x="105.0" y="147.6" font-size="24" font-weight="bold" fill="#d32f2f" text-anchor="middle">7</text>
+<text x="155.0" y="147.6" font-size="24" font-weight="bold" fill="#d32f2f" text-anchor="middle">9</text>
+<text x="188" y="44.4" font-size="15" fill="#222">7</text>
+<text x="188" y="94.4" font-size="15" fill="#222">4</text>
+<text x="188" y="144.4" font-size="15" fill="#222">16</text>
+<text x="55.0" y="183" font-size="15" fill="#222" text-anchor="middle">6</text>
+<text x="105.0" y="183" font-size="15" fill="#222" text-anchor="middle">10</text>
+<text x="155.0" y="183" font-size="15" fill="#222" text-anchor="middle">11</text>
+</svg></li>
+    <li>たしかめ。横は 5＋2＝7、1＋3＝4、7＋9＝16。縦は 5＋1＝6、3＋7＝10、2＋9＝11。上の段を 3＋4 や 1＋6 にすると、中の段の 1 や 3 と重なる。ここが落としやすい。</li>
+  </ol>
+  <div class="ans">答え：上の図の赤い数字（上の段は左5・右2、中の段は左1・まん中3、下の段はまん中7・右9。解答一覧では「解説の図②を参照のこと。」）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 図2の入れ方を全部書く <span class="type">C・9点｜場合分け（大きい合計から）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>考えられる場合をできるだけ</b>」に丸 → 入れ方は1つではない。<b>下の段の 15＝6＋9、7＋8 を先に置いて場合分け</b>する。全部そろえて9点なので、(3)のあとに時間が残れば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>合計が大きい列は組が少ない。15 は <b>6＋9 と 7＋8 の2通り</b>だけ。下の段に2個を置くと、同じ縦の列のもう1個は「縦の合計−置いた数」で出る。たとえば右の列に 6 を置くと、もう1個は 13−6＝7。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>下の段は 6＋9 か 7＋8。左の列は合計が 7。だから左の列には 6 までしか入らない。7・8・9 は、まん中か右に置く。置き方は下の表の6通りで全部。</li>
+    <li>同じ縦の列のもう1個を、ひき算で出す。同じ数字が2回出たら消す。残ったら、その数が上の段と中の段のどちらに入るかを、横の合計で決める。
+      <table>
+        <tr><th>下の段（左・まん中・右）</th><th>同じ縦の列のもう1個</th><th>上の段・中の段の決め方</th><th>結果</th></tr>
+        <tr><td>6・9・空き</td><td>左 7−6＝1、まん中 10−9＝1</td><td>1 が2回出る</td><td>×</td></tr>
+        <tr><td>空き・9・6</td><td>まん中 1、右 13−6＝7</td><td>7 は中の段（合計6）に入らない。上の段は 7 と 2、中の段は 1 と 5。左は 2＋5＝7 で合う</td><td><b>○（あ）</b></td></tr>
+        <tr><td>6・空き・9</td><td>左 1、右 13−9＝4</td><td>中の段は 4 と 2、上の段は 1 と 8。まん中は 8＋2＝10 で合う。中の段に 1 を入れると、5 が2回出る</td><td><b>○（い）</b></td></tr>
+        <tr><td>空き・6・9</td><td>まん中 10−6＝4、右 4</td><td>4 が2回出る</td><td>×</td></tr>
+        <tr><td>空き・7・8</td><td>まん中 10−7＝3、右 13−8＝5</td><td>中の段は 5 と 1、上の段は 3 と 6。左は 6＋1＝7 で合う。中の段に 3 を入れると、3 が2回出る</td><td><b>○（う）</b></td></tr>
+        <tr><td>空き・8・7</td><td>まん中 10−8＝2、右 13−7＝6</td><td>6 は中の段に入らない。上の段は 6 と 3、中の段は 2 と 4。左は 3＋4＝7 で合う</td><td><b>○（え）</b></td></tr>
+      </table>
+    </li>
+    <li>残った4通りを解答らんに書く。色のついたマスが、先に置いた下の段の2個。書いたら、6個の数字がどれもちがうことを1通りずつ見直す。
+<svg id="q4_2_fig" viewBox="0 0 360 376" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:360px;width:100%;height:auto;display:block">
+<rect x="0" y="0" width="360" height="376" fill="#fff"/>
+<text x="20" y="21" font-size="14" font-weight="bold" fill="#222">あ</text>
+<rect x="60" y="110" width="40" height="40" fill="#ffe0b2"/>
+<rect x="100" y="110" width="40" height="40" fill="#ffe0b2"/>
+<line x1="20" y1="30" x2="140" y2="30" stroke="#222" stroke-width="2"/>
+<line x1="20" y1="30" x2="20" y2="150" stroke="#222" stroke-width="2"/>
+<line x1="20" y1="70" x2="140" y2="70" stroke="#222" stroke-width="1"/>
+<line x1="60" y1="30" x2="60" y2="150" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="110" x2="140" y2="110" stroke="#222" stroke-width="1"/>
+<line x1="100" y1="30" x2="100" y2="150" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="150" x2="140" y2="150" stroke="#222" stroke-width="2"/>
+<line x1="140" y1="30" x2="140" y2="150" stroke="#222" stroke-width="2"/>
+<text x="40.0" y="57.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">2</text>
+<text x="120.0" y="57.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">7</text>
+<text x="40.0" y="97.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">5</text>
+<text x="80.0" y="97.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">1</text>
+<text x="80.0" y="137.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">9</text>
+<text x="120.0" y="137.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">6</text>
+<text x="148" y="54.7" font-size="13" fill="#222">9</text>
+<text x="148" y="94.7" font-size="13" fill="#222">6</text>
+<text x="148" y="134.7" font-size="13" fill="#222">15</text>
+<text x="40.0" y="167" font-size="13" fill="#222" text-anchor="middle">7</text>
+<text x="80.0" y="167" font-size="13" fill="#222" text-anchor="middle">10</text>
+<text x="120.0" y="167" font-size="13" fill="#222" text-anchor="middle">13</text>
+<text x="200" y="21" font-size="14" font-weight="bold" fill="#222">い</text>
+<rect x="200" y="110" width="40" height="40" fill="#ffe0b2"/>
+<rect x="280" y="110" width="40" height="40" fill="#ffe0b2"/>
+<line x1="200" y1="30" x2="320" y2="30" stroke="#222" stroke-width="2"/>
+<line x1="200" y1="30" x2="200" y2="150" stroke="#222" stroke-width="2"/>
+<line x1="200" y1="70" x2="320" y2="70" stroke="#222" stroke-width="1"/>
+<line x1="240" y1="30" x2="240" y2="150" stroke="#222" stroke-width="1"/>
+<line x1="200" y1="110" x2="320" y2="110" stroke="#222" stroke-width="1"/>
+<line x1="280" y1="30" x2="280" y2="150" stroke="#222" stroke-width="1"/>
+<line x1="200" y1="150" x2="320" y2="150" stroke="#222" stroke-width="2"/>
+<line x1="320" y1="30" x2="320" y2="150" stroke="#222" stroke-width="2"/>
+<text x="220.0" y="57.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">1</text>
+<text x="260.0" y="57.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">8</text>
+<text x="260.0" y="97.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">2</text>
+<text x="300.0" y="97.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">4</text>
+<text x="220.0" y="137.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">6</text>
+<text x="300.0" y="137.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">9</text>
+<text x="328" y="54.7" font-size="13" fill="#222">9</text>
+<text x="328" y="94.7" font-size="13" fill="#222">6</text>
+<text x="328" y="134.7" font-size="13" fill="#222">15</text>
+<text x="220.0" y="167" font-size="13" fill="#222" text-anchor="middle">7</text>
+<text x="260.0" y="167" font-size="13" fill="#222" text-anchor="middle">10</text>
+<text x="300.0" y="167" font-size="13" fill="#222" text-anchor="middle">13</text>
+<text x="20" y="207" font-size="14" font-weight="bold" fill="#222">う</text>
+<rect x="60" y="296" width="40" height="40" fill="#ffe0b2"/>
+<rect x="100" y="296" width="40" height="40" fill="#ffe0b2"/>
+<line x1="20" y1="216" x2="140" y2="216" stroke="#222" stroke-width="2"/>
+<line x1="20" y1="216" x2="20" y2="336" stroke="#222" stroke-width="2"/>
+<line x1="20" y1="256" x2="140" y2="256" stroke="#222" stroke-width="1"/>
+<line x1="60" y1="216" x2="60" y2="336" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="296" x2="140" y2="296" stroke="#222" stroke-width="1"/>
+<line x1="100" y1="216" x2="100" y2="336" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="336" x2="140" y2="336" stroke="#222" stroke-width="2"/>
+<line x1="140" y1="216" x2="140" y2="336" stroke="#222" stroke-width="2"/>
+<text x="40.0" y="243.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">6</text>
+<text x="80.0" y="243.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">3</text>
+<text x="40.0" y="283.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">1</text>
+<text x="120.0" y="283.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">5</text>
+<text x="80.0" y="323.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">7</text>
+<text x="120.0" y="323.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">8</text>
+<text x="148" y="240.7" font-size="13" fill="#222">9</text>
+<text x="148" y="280.7" font-size="13" fill="#222">6</text>
+<text x="148" y="320.7" font-size="13" fill="#222">15</text>
+<text x="40.0" y="353" font-size="13" fill="#222" text-anchor="middle">7</text>
+<text x="80.0" y="353" font-size="13" fill="#222" text-anchor="middle">10</text>
+<text x="120.0" y="353" font-size="13" fill="#222" text-anchor="middle">13</text>
+<text x="200" y="207" font-size="14" font-weight="bold" fill="#222">え</text>
+<rect x="240" y="296" width="40" height="40" fill="#ffe0b2"/>
+<rect x="280" y="296" width="40" height="40" fill="#ffe0b2"/>
+<line x1="200" y1="216" x2="320" y2="216" stroke="#222" stroke-width="2"/>
+<line x1="200" y1="216" x2="200" y2="336" stroke="#222" stroke-width="2"/>
+<line x1="200" y1="256" x2="320" y2="256" stroke="#222" stroke-width="1"/>
+<line x1="240" y1="216" x2="240" y2="336" stroke="#222" stroke-width="1"/>
+<line x1="200" y1="296" x2="320" y2="296" stroke="#222" stroke-width="1"/>
+<line x1="280" y1="216" x2="280" y2="336" stroke="#222" stroke-width="1"/>
+<line x1="200" y1="336" x2="320" y2="336" stroke="#222" stroke-width="2"/>
+<line x1="320" y1="216" x2="320" y2="336" stroke="#222" stroke-width="2"/>
+<text x="220.0" y="243.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">3</text>
+<text x="300.0" y="243.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">6</text>
+<text x="220.0" y="283.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">4</text>
+<text x="260.0" y="283.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">2</text>
+<text x="260.0" y="323.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">8</text>
+<text x="300.0" y="323.2" font-size="20" font-weight="bold" fill="#d32f2f" text-anchor="middle">7</text>
+<text x="328" y="240.7" font-size="13" fill="#222">9</text>
+<text x="328" y="280.7" font-size="13" fill="#222">6</text>
+<text x="328" y="320.7" font-size="13" fill="#222">15</text>
+<text x="220.0" y="353" font-size="13" fill="#222" text-anchor="middle">7</text>
+<text x="260.0" y="353" font-size="13" fill="#222" text-anchor="middle">10</text>
+<text x="300.0" y="353" font-size="13" fill="#222" text-anchor="middle">13</text>
+</svg></li>
+  </ol>
+  <div class="ans">答え：上の図（あ）〜（え）の4通り（解答一覧では「解説の図④を参照のこと。」）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 図3のイに入る数字を全部 <span class="type">C・8点｜条件の整理（1 の場所を決める）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>同じ数が入ります</b>」と、合計の 3 と 4。<b>3＝1＋2、4＝1＋3 に直して書く</b> → 1 は左上に決まる。ここまで見えたら、(2)より先に手を付けてよい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数字は2回使えない。3＝1＋2 と 4＝1＋3 の<b>両方に 1 がある</b>。1 は1個だけ。だから、上の段と左の列が重なる左上のマスに入る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1 を左上に書く。2 を右の列に置くと、もう1個が 13−2＝11 になってしまう。だから 2 は上の段のまん中。3 を下の段に置くと、もう1個が 14−3＝11 になってしまう。だから 3 は中の段の左。</li>
+    <li>上の段と左の列は、もう2個入った。右上と左下は空き。下の段は、まん中と右に入る。まん中の列は 2 と下のマスで2個。だから、まん中のマスも空き。残りの3マスを ○・△・イ とする。
+<svg id="q4_3_fig" viewBox="0 0 300 218" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:300px;width:100%;height:auto;display:block">
+<rect x="0" y="0" width="300" height="218" fill="#fff"/>
+<rect x="130" y="14" width="50" height="50" fill="#eeeeee"/>
+<text x="155.0" y="43.0" font-size="11" fill="#777" text-anchor="middle">空き</text>
+<rect x="80" y="64" width="50" height="50" fill="#eeeeee"/>
+<text x="105.0" y="93.0" font-size="11" fill="#777" text-anchor="middle">空き</text>
+<rect x="30" y="114" width="50" height="50" fill="#eeeeee"/>
+<text x="55.0" y="143.0" font-size="11" fill="#777" text-anchor="middle">空き</text>
+<line x1="30" y1="14" x2="180" y2="14" stroke="#222" stroke-width="2"/>
+<line x1="30" y1="14" x2="30" y2="164" stroke="#222" stroke-width="2"/>
+<line x1="30" y1="64" x2="180" y2="64" stroke="#222" stroke-width="1"/>
+<line x1="80" y1="14" x2="80" y2="164" stroke="#222" stroke-width="1"/>
+<line x1="30" y1="114" x2="180" y2="114" stroke="#222" stroke-width="1"/>
+<line x1="130" y1="14" x2="130" y2="164" stroke="#222" stroke-width="1"/>
+<line x1="30" y1="164" x2="180" y2="164" stroke="#222" stroke-width="2"/>
+<line x1="180" y1="14" x2="180" y2="164" stroke="#222" stroke-width="2"/>
+<text x="55.0" y="47.6" font-size="24" font-weight="bold" fill="#222" text-anchor="middle">1</text>
+<text x="105.0" y="47.6" font-size="24" font-weight="bold" fill="#222" text-anchor="middle">2</text>
+<text x="55.0" y="97.6" font-size="24" font-weight="bold" fill="#222" text-anchor="middle">3</text>
+<text x="105.0" y="147.6" font-size="24" font-weight="bold" fill="#1565c0" text-anchor="middle">△</text>
+<text x="155.0" y="147.6" font-size="24" font-weight="bold" fill="#d32f2f" text-anchor="middle">イ</text>
+<text x="188" y="44.4" font-size="15" fill="#222">3</text>
+<text x="188" y="94.4" font-size="15" fill="#222">ア</text>
+<text x="188" y="144.4" font-size="15" fill="#222">14</text>
+<text x="55.0" y="183" font-size="15" fill="#222" text-anchor="middle">4</text>
+<text x="105.0" y="183" font-size="15" fill="#222" text-anchor="middle">ア</text>
+<text x="155.0" y="183" font-size="15" fill="#222" text-anchor="middle">13</text>
+<circle cx="155" cy="89" r="12" fill="none" stroke="#1565c0" stroke-width="2.5"/>
+<text x="216" y="94" font-size="13" fill="#1565c0">＝3＋○</text>
+<text x="220" y="144" font-size="13" fill="#1565c0">＝△＋イ</text>
+<text x="105" y="204" font-size="13" fill="#1565c0" text-anchor="middle">2＋△</text>
+<text x="155" y="204" font-size="13" fill="#1565c0" text-anchor="middle">○＋イ</text>
+</svg>
+    下の段は △＋イ＝14。使える組は 5＋9 と 6＋8 だけ。7＋7 は同じ数字なので使えない。イは <b>5・6・8・9</b> のどれか。</li>
+    <li>4つとも表でたしかめる。△は 14−イ。○は 13−イ。横のアは 3＋○。縦のアは 2＋△。
+      <table>
+        <tr><th>イ</th><th>△（14−イ）</th><th>○（13−イ）</th><th>横のア（3＋○）</th><th>縦のア（2＋△）</th></tr>
+        <tr><td><b>5</b></td><td>9</td><td>8</td><td>11</td><td>11</td></tr>
+        <tr><td><b>6</b></td><td>8</td><td>7</td><td>10</td><td>10</td></tr>
+        <tr><td><b>8</b></td><td>6</td><td>5</td><td>8</td><td>8</td></tr>
+        <tr><td><b>9</b></td><td>5</td><td>4</td><td>7</td><td>7</td></tr>
+      </table>
+      4つとも、横のアと縦のアが同じ数になった。6個の数字も全部ちがう。イは4つとも当てはまる。</li>
+  </ol>
+  <div class="ans">答え：5，6，8，9</div>
+  <div class="tip">コツ：○は△より1小さい（13 と 14 の差）。だから 3＋○ と 2＋△ は、いつも同じ数になる。アが同じになるかどうかより、「同じ数字を2回使っていないか」を見るほうが大事。</div>
+</section>
+</div>
