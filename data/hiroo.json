@@ -2883,7 +2883,8 @@
        "jukensha": 79.1,
        "gokakusha": 91.9
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2025-ms/sansu.html"
     },
     {
      "id": "shakai",
@@ -3146,7 +3147,8 @@
        "jukensha": 30.0,
        "gokakusha": 35.4
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2025-ms/shakai.html"
     },
     {
      "id": "rika",
@@ -3415,7 +3417,8 @@
        "jukensha": 55.3,
        "gokakusha": 67.1
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2025-ms/rika.html"
     },
     {
      "id": "kokugo",
@@ -3606,7 +3609,8 @@
        "jukensha": 32.1,
        "gokakusha": 35.7
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2025-ms/kokugo.html"
     }
    ]
   },
@@ -7462,7 +7466,8 @@
        "jukensha": 60.6,
        "gokakusha": 72.3
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2024-1/sansu.html"
     },
     {
      "id": "shakai",
@@ -7908,7 +7913,8 @@
        "jukensha": 19.7,
        "gokakusha": 24.2
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/hiroo/2024-1/rika.html"
     },
     {
      "id": "kokugo",

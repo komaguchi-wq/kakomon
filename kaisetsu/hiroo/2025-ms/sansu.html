@@ -1,0 +1,421 @@
+<!-- generated kakomon hiroo/2025-ms/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（○×の書き出し／タクシー代の共同利益／電灯と影）</a></li>
+<li><a href="#4">大問4（あみだくじ・横線の最少本数）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（○×の書き出し／タクシー代の共同利益／電灯と影）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 54点／B 14点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1</td><td>○×の書き方（回して同じものは1つ）</td><td>A 7 / B 7</td><td>「回転させて同じ」→ ○や×の数で分けて書き出す</td></tr>
+    <tr><td>2</td><td>タクシー代の共同利益</td><td>A 7+7 / B 7</td><td>「1人あたりの得した金額」→（別々の合計−いっしょの代金）÷人数</td></tr>
+    <tr><td>3</td><td>電灯と影（立方体・正四角すい）</td><td>A 13+13+7</td><td>「高さ2mの電灯」と高さ1mの立体 → 真横から見た図で相似</td></tr>
+  </table>
+  <p>取り方: <b>配点の大きい大問3（33点）と大問2の(1)(2)を先に</b>。大問1の(2)は16通りの書き出しで時間がかかる。ほかのA問題を書き終えてから手を付ける。受験者平均は79.1点、合格者平均は91.9点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 4マスのわくに○と×を書く <span class="type">A・7点｜場合の数（書き出し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>回転させて同じになるもの</b>」と「<b>すべて書きなさい</b>」に丸。→ ○の数（4個・3個・2個・1個・0個）で分けて書き出す。分けておくと、もれと重なりが見つけやすい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>回すと重なる書き方は、1つと数える。たとえば×が1個のとき。×は4つのマスのどこにあっても、回せば同じ場所に来る。だから1通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>○の数で分けて、表にする。
+      <table>
+        <tr><th>○の数</th><th>書き方</th><th>何通り</th></tr>
+        <tr><td>4個</td><td>全部○</td><td>1</td></tr>
+        <tr><td>3個</td><td>×が1個。どこでも同じ</td><td>1</td></tr>
+        <tr><td>2個</td><td>○が「となり」と「ななめ」</td><td><b>2</b></td></tr>
+        <tr><td>1個</td><td>○が1個。どこでも同じ</td><td>1</td></tr>
+        <tr><td>0個</td><td>全部×</td><td>1</td></tr>
+      </table>
+    </li>
+    <li>○が2個のときだけ、2通りある。「となり」は回しても「となり」のまま。「ななめ」にはならない。</li>
+    <li>たすと 1＋1＋2＋1＋1＝<b>6通り</b>。解答らんのわくに6つ書く。
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 72" style="max-width:380px;width:100%;height:auto;display:block"><rect x="14" y="8" width="40" height="40" fill="none" stroke="#222" stroke-width="1.5"/><line x1="14" y1="28" x2="54" y2="28" stroke="#222" stroke-width="1"/><line x1="34" y1="8" x2="34" y2="48" stroke="#222" stroke-width="1"/><circle cx="24.0" cy="18.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="44.0" cy="18.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="24.0" cy="38.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="44.0" cy="38.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><text x="34.0" y="64.0" font-size="9" fill="#222" text-anchor="middle">○4個</text><rect x="76" y="8" width="40" height="40" fill="none" stroke="#222" stroke-width="1.5"/><line x1="76" y1="28" x2="116" y2="28" stroke="#222" stroke-width="1"/><line x1="96" y1="8" x2="96" y2="48" stroke="#222" stroke-width="1"/><circle cx="86.0" cy="18.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="106.0" cy="18.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="86.0" cy="38.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><path d="M100.4 32.4L111.6 43.6M100.4 43.6L111.6 32.4" stroke="#222" stroke-width="1.6"/><text x="96.0" y="64.0" font-size="9" fill="#222" text-anchor="middle">○3個</text><rect x="138" y="8" width="40" height="40" fill="none" stroke="#222" stroke-width="1.5"/><line x1="138" y1="28" x2="178" y2="28" stroke="#222" stroke-width="1"/><line x1="158" y1="8" x2="158" y2="48" stroke="#222" stroke-width="1"/><circle cx="148.0" cy="18.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="168.0" cy="18.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><path d="M142.4 32.4L153.6 43.6M142.4 43.6L153.6 32.4" stroke="#222" stroke-width="1.6"/><path d="M162.4 32.4L173.6 43.6M162.4 43.6L173.6 32.4" stroke="#222" stroke-width="1.6"/><text x="158.0" y="64.0" font-size="9" fill="#222" text-anchor="middle">○2個 となり</text><rect x="200" y="8" width="40" height="40" fill="none" stroke="#222" stroke-width="1.5"/><line x1="200" y1="28" x2="240" y2="28" stroke="#222" stroke-width="1"/><line x1="220" y1="8" x2="220" y2="48" stroke="#222" stroke-width="1"/><circle cx="210.0" cy="18.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><path d="M224.4 12.4L235.6 23.6M224.4 23.6L235.6 12.4" stroke="#222" stroke-width="1.6"/><path d="M204.4 32.4L215.6 43.6M204.4 43.6L215.6 32.4" stroke="#222" stroke-width="1.6"/><circle cx="230.0" cy="38.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><text x="220.0" y="64.0" font-size="9" fill="#222" text-anchor="middle">○2個 ななめ</text><rect x="262" y="8" width="40" height="40" fill="none" stroke="#222" stroke-width="1.5"/><line x1="262" y1="28" x2="302" y2="28" stroke="#222" stroke-width="1"/><line x1="282" y1="8" x2="282" y2="48" stroke="#222" stroke-width="1"/><path d="M266.4 12.4L277.6 23.6M266.4 23.6L277.6 12.4" stroke="#222" stroke-width="1.6"/><path d="M286.4 12.4L297.6 23.6M286.4 23.6L297.6 12.4" stroke="#222" stroke-width="1.6"/><path d="M266.4 32.4L277.6 43.6M266.4 43.6L277.6 32.4" stroke="#222" stroke-width="1.6"/><circle cx="292.0" cy="38.0" r="6.0" fill="none" stroke="#222" stroke-width="1.3"/><text x="282.0" y="64.0" font-size="9" fill="#222" text-anchor="middle">○1個</text><rect x="324" y="8" width="40" height="40" fill="none" stroke="#222" stroke-width="1.5"/><line x1="324" y1="28" x2="364" y2="28" stroke="#222" stroke-width="1"/><line x1="344" y1="8" x2="344" y2="48" stroke="#222" stroke-width="1"/><path d="M328.4 12.4L339.6 23.6M328.4 23.6L339.6 12.4" stroke="#222" stroke-width="1.6"/><path d="M348.4 12.4L359.6 23.6M348.4 23.6L359.6 12.4" stroke="#222" stroke-width="1.6"/><path d="M328.4 32.4L339.6 43.6M328.4 43.6L339.6 32.4" stroke="#222" stroke-width="1.6"/><path d="M348.4 32.4L359.6 43.6M348.4 43.6L359.6 32.4" stroke="#222" stroke-width="1.6"/><text x="344.0" y="64.0" font-size="9" fill="#222" text-anchor="middle">○0個</text></svg>
+    </li>
+    <li>落としやすい所は、○が2個の「ななめ」。となりの形だけ書いて5通りで止まりやすい。</li>
+  </ol>
+  <div class="ans">答え：解説の図①を参照のこと。（上の図の6通り。向きは回したものでもよい）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 9マスのわくに○6つ・×3つ <span class="type">B・7点｜場合の数（書き出し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>×を3つ</b>」と、(1)から変わった「<b>うら返したりして</b>」に丸。→ 数の少ない×の場所だけを決める、に直して書く。答えは16通りと多い。ほかの問題を終えてから書き出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>回しても、うら返しても重なる書き方は1つと数える。たとえば×が下の段に3個ならぶ形。左の列に3個ならぶ形は、回せばこれと同じになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>×の3個だけを考える。○は残りの6マスに書くだけでよい。</li>
+    <li>先に×を2個（アとキは3個）置く。<b>残りの1個を置けるマス</b>に色をぬる。前に出た形と同じになるマスには、色をぬらない。
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 262 148" style="max-width:300px;width:100%;height:auto;display:block"><rect x="10" y="6" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="10" y1="22" x2="58" y2="22" stroke="#222" stroke-width="1"/><line x1="10" y1="38" x2="58" y2="38" stroke="#222" stroke-width="1"/><line x1="26" y1="6" x2="26" y2="54" stroke="#222" stroke-width="1"/><line x1="42" y1="6" x2="42" y2="54" stroke="#222" stroke-width="1"/><path d="M13.5 41.5L22.5 50.5M13.5 50.5L22.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M29.5 41.5L38.5 50.5M29.5 50.5L38.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M45.5 41.5L54.5 50.5M45.5 50.5L54.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><text x="34.0" y="68.0" font-size="11" fill="#222" text-anchor="middle">ア</text><rect x="74" y="6" width="16" height="16" fill="#ffe0b2"/><rect x="90" y="6" width="16" height="16" fill="#ffe0b2"/><rect x="106" y="6" width="16" height="16" fill="#ffe0b2"/><rect x="74" y="22" width="16" height="16" fill="#ffe0b2"/><rect x="90" y="22" width="16" height="16" fill="#ffe0b2"/><rect x="106" y="22" width="16" height="16" fill="#ffe0b2"/><rect x="74" y="6" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="74" y1="22" x2="122" y2="22" stroke="#222" stroke-width="1"/><line x1="74" y1="38" x2="122" y2="38" stroke="#222" stroke-width="1"/><line x1="90" y1="6" x2="90" y2="54" stroke="#222" stroke-width="1"/><line x1="106" y1="6" x2="106" y2="54" stroke="#222" stroke-width="1"/><path d="M93.5 41.5L102.5 50.5M93.5 50.5L102.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M109.5 41.5L118.5 50.5M109.5 50.5L118.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><text x="98.0" y="68.0" font-size="11" fill="#222" text-anchor="middle">イ</text><rect x="154" y="6" width="16" height="16" fill="#ffe0b2"/><rect x="170" y="6" width="16" height="16" fill="#ffe0b2"/><rect x="154" y="22" width="16" height="16" fill="#ffe0b2"/><rect x="138" y="6" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="138" y1="22" x2="186" y2="22" stroke="#222" stroke-width="1"/><line x1="138" y1="38" x2="186" y2="38" stroke="#222" stroke-width="1"/><line x1="154" y1="6" x2="154" y2="54" stroke="#222" stroke-width="1"/><line x1="170" y1="6" x2="170" y2="54" stroke="#222" stroke-width="1"/><path d="M141.5 41.5L150.5 50.5M141.5 50.5L150.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M173.5 41.5L182.5 50.5M173.5 50.5L182.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><text x="162.0" y="68.0" font-size="11" fill="#222" text-anchor="middle">ウ</text><rect x="202" y="6" width="16" height="16" fill="#ffe0b2"/><rect x="202" y="22" width="16" height="16" fill="#ffe0b2"/><rect x="202" y="6" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="202" y1="22" x2="250" y2="22" stroke="#222" stroke-width="1"/><line x1="202" y1="38" x2="250" y2="38" stroke="#222" stroke-width="1"/><line x1="218" y1="6" x2="218" y2="54" stroke="#222" stroke-width="1"/><line x1="234" y1="6" x2="234" y2="54" stroke="#222" stroke-width="1"/><path d="M221.5 25.5L230.5 34.5M221.5 34.5L230.5 25.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M237.5 41.5L246.5 50.5M237.5 50.5L246.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><text x="226.0" y="68.0" font-size="11" fill="#222" text-anchor="middle">エ</text><rect x="26" y="78" width="16" height="16" fill="#ffe0b2"/><rect x="10" y="78" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="10" y1="94" x2="58" y2="94" stroke="#222" stroke-width="1"/><line x1="10" y1="110" x2="58" y2="110" stroke="#222" stroke-width="1"/><line x1="26" y1="78" x2="26" y2="126" stroke="#222" stroke-width="1"/><line x1="42" y1="78" x2="42" y2="126" stroke="#222" stroke-width="1"/><path d="M13.5 97.5L22.5 106.5M13.5 106.5L22.5 97.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M45.5 113.5L54.5 122.5M45.5 122.5L54.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><text x="34.0" y="140.0" font-size="11" fill="#222" text-anchor="middle">オ</text><rect x="74" y="94" width="16" height="16" fill="#ffe0b2"/><rect x="90" y="94" width="16" height="16" fill="#ffe0b2"/><rect x="74" y="78" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="74" y1="94" x2="122" y2="94" stroke="#222" stroke-width="1"/><line x1="74" y1="110" x2="122" y2="110" stroke="#222" stroke-width="1"/><line x1="90" y1="78" x2="90" y2="126" stroke="#222" stroke-width="1"/><line x1="106" y1="78" x2="106" y2="126" stroke="#222" stroke-width="1"/><path d="M109.5 97.5L118.5 106.5M109.5 106.5L118.5 97.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M93.5 113.5L102.5 122.5M93.5 122.5L102.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><text x="98.0" y="140.0" font-size="11" fill="#222" text-anchor="middle">カ</text><rect x="138" y="78" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="138" y1="94" x2="186" y2="94" stroke="#222" stroke-width="1"/><line x1="138" y1="110" x2="186" y2="110" stroke="#222" stroke-width="1"/><line x1="154" y1="78" x2="154" y2="126" stroke="#222" stroke-width="1"/><line x1="170" y1="78" x2="170" y2="126" stroke="#222" stroke-width="1"/><path d="M141.5 97.5L150.5 106.5M141.5 106.5L150.5 97.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M157.5 97.5L166.5 106.5M157.5 106.5L166.5 97.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M173.5 97.5L182.5 106.5M173.5 106.5L182.5 97.5" stroke="#d32f2f" stroke-width="1.6"/><text x="162.0" y="140.0" font-size="11" fill="#222" text-anchor="middle">キ</text></svg>
+      <table>
+        <tr><th>記号</th><th>先に置く×</th><th>残り1個を置けるマス</th><th>何通り</th></tr>
+        <tr><td>ア</td><td>下の段に3個</td><td>―</td><td>1</td></tr>
+        <tr><td>イ</td><td>下の段のまん中と右</td><td>上の2段の6マス</td><td>6</td></tr>
+        <tr><td>ウ</td><td>下の段の左と右</td><td>3マス</td><td>3</td></tr>
+        <tr><td>エ</td><td>まん中と右下</td><td>2マス</td><td>2</td></tr>
+        <tr><td>オ</td><td>左のまん中と右下</td><td>1マス</td><td>1</td></tr>
+        <tr><td>カ</td><td>右のまん中と下のまん中</td><td>2マス</td><td>2</td></tr>
+        <tr><td>キ</td><td>まん中の段に3個</td><td>―</td><td>1</td></tr>
+      </table>
+    </li>
+    <li>たすと 1＋6＋3＋2＋1＋2＋1＝<b>16通り</b>。</li>
+    <li>16通りを書くと下の図になる。図の下の記号は、上の表の記号。
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 262 292" style="max-width:300px;width:100%;height:auto;display:block"><rect x="10" y="6" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="10" y1="22" x2="58" y2="22" stroke="#222" stroke-width="1"/><line x1="10" y1="38" x2="58" y2="38" stroke="#222" stroke-width="1"/><line x1="26" y1="6" x2="26" y2="54" stroke="#222" stroke-width="1"/><line x1="42" y1="6" x2="42" y2="54" stroke="#222" stroke-width="1"/><circle cx="18.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="34.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="50.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="18.0" cy="30.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="34.0" cy="30.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="50.0" cy="30.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M13.5 41.5L22.5 50.5M13.5 50.5L22.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M29.5 41.5L38.5 50.5M29.5 50.5L38.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M45.5 41.5L54.5 50.5M45.5 50.5L54.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><text x="34.0" y="68.0" font-size="11" fill="#222" text-anchor="middle">ア</text><rect x="74" y="6" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="74" y1="22" x2="122" y2="22" stroke="#222" stroke-width="1"/><line x1="74" y1="38" x2="122" y2="38" stroke="#222" stroke-width="1"/><line x1="90" y1="6" x2="90" y2="54" stroke="#222" stroke-width="1"/><line x1="106" y1="6" x2="106" y2="54" stroke="#222" stroke-width="1"/><circle cx="82.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="98.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="114.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="82.0" cy="30.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="98.0" cy="30.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M109.5 25.5L118.5 34.5M109.5 34.5L118.5 25.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="82.0" cy="46.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M93.5 41.5L102.5 50.5M93.5 50.5L102.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M109.5 41.5L118.5 50.5M109.5 50.5L118.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><text x="98.0" y="68.0" font-size="11" fill="#222" text-anchor="middle">イ</text><rect x="138" y="6" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="138" y1="22" x2="186" y2="22" stroke="#222" stroke-width="1"/><line x1="138" y1="38" x2="186" y2="38" stroke="#222" stroke-width="1"/><line x1="154" y1="6" x2="154" y2="54" stroke="#222" stroke-width="1"/><line x1="170" y1="6" x2="170" y2="54" stroke="#222" stroke-width="1"/><circle cx="146.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="162.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="178.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="146.0" cy="30.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M157.5 25.5L166.5 34.5M157.5 34.5L166.5 25.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="178.0" cy="30.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="146.0" cy="46.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M157.5 41.5L166.5 50.5M157.5 50.5L166.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M173.5 41.5L182.5 50.5M173.5 50.5L182.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><text x="162.0" y="68.0" font-size="11" fill="#222" text-anchor="middle">イ</text><rect x="202" y="6" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="202" y1="22" x2="250" y2="22" stroke="#222" stroke-width="1"/><line x1="202" y1="38" x2="250" y2="38" stroke="#222" stroke-width="1"/><line x1="218" y1="6" x2="218" y2="54" stroke="#222" stroke-width="1"/><line x1="234" y1="6" x2="234" y2="54" stroke="#222" stroke-width="1"/><circle cx="210.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="226.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="242.0" cy="14.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M205.5 25.5L214.5 34.5M205.5 34.5L214.5 25.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="226.0" cy="30.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="242.0" cy="30.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="210.0" cy="46.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M221.5 41.5L230.5 50.5M221.5 50.5L230.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M237.5 41.5L246.5 50.5M237.5 50.5L246.5 41.5" stroke="#d32f2f" stroke-width="1.6"/><text x="226.0" y="68.0" font-size="11" fill="#222" text-anchor="middle">イ</text><rect x="10" y="78" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="10" y1="94" x2="58" y2="94" stroke="#222" stroke-width="1"/><line x1="10" y1="110" x2="58" y2="110" stroke="#222" stroke-width="1"/><line x1="26" y1="78" x2="26" y2="126" stroke="#222" stroke-width="1"/><line x1="42" y1="78" x2="42" y2="126" stroke="#222" stroke-width="1"/><circle cx="18.0" cy="86.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="34.0" cy="86.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M45.5 81.5L54.5 90.5M45.5 90.5L54.5 81.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="18.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="34.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="50.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="18.0" cy="118.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M29.5 113.5L38.5 122.5M29.5 122.5L38.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M45.5 113.5L54.5 122.5M45.5 122.5L54.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><text x="34.0" y="140.0" font-size="11" fill="#222" text-anchor="middle">イ</text><rect x="74" y="78" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="74" y1="94" x2="122" y2="94" stroke="#222" stroke-width="1"/><line x1="74" y1="110" x2="122" y2="110" stroke="#222" stroke-width="1"/><line x1="90" y1="78" x2="90" y2="126" stroke="#222" stroke-width="1"/><line x1="106" y1="78" x2="106" y2="126" stroke="#222" stroke-width="1"/><circle cx="82.0" cy="86.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M93.5 81.5L102.5 90.5M93.5 90.5L102.5 81.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="114.0" cy="86.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="82.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="98.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="114.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="82.0" cy="118.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M93.5 113.5L102.5 122.5M93.5 122.5L102.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M109.5 113.5L118.5 122.5M109.5 122.5L118.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><text x="98.0" y="140.0" font-size="11" fill="#222" text-anchor="middle">イ</text><rect x="138" y="78" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="138" y1="94" x2="186" y2="94" stroke="#222" stroke-width="1"/><line x1="138" y1="110" x2="186" y2="110" stroke="#222" stroke-width="1"/><line x1="154" y1="78" x2="154" y2="126" stroke="#222" stroke-width="1"/><line x1="170" y1="78" x2="170" y2="126" stroke="#222" stroke-width="1"/><path d="M141.5 81.5L150.5 90.5M141.5 90.5L150.5 81.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="162.0" cy="86.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="178.0" cy="86.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="146.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="162.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="178.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="146.0" cy="118.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M157.5 113.5L166.5 122.5M157.5 122.5L166.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M173.5 113.5L182.5 122.5M173.5 122.5L182.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><text x="162.0" y="140.0" font-size="11" fill="#222" text-anchor="middle">イ</text><rect x="202" y="78" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="202" y1="94" x2="250" y2="94" stroke="#222" stroke-width="1"/><line x1="202" y1="110" x2="250" y2="110" stroke="#222" stroke-width="1"/><line x1="218" y1="78" x2="218" y2="126" stroke="#222" stroke-width="1"/><line x1="234" y1="78" x2="234" y2="126" stroke="#222" stroke-width="1"/><circle cx="210.0" cy="86.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="226.0" cy="86.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="242.0" cy="86.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="210.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M221.5 97.5L230.5 106.5M221.5 106.5L230.5 97.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="242.0" cy="102.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M205.5 113.5L214.5 122.5M205.5 122.5L214.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="226.0" cy="118.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M237.5 113.5L246.5 122.5M237.5 122.5L246.5 113.5" stroke="#d32f2f" stroke-width="1.6"/><text x="226.0" y="140.0" font-size="11" fill="#222" text-anchor="middle">ウ</text><rect x="10" y="150" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="10" y1="166" x2="58" y2="166" stroke="#222" stroke-width="1"/><line x1="10" y1="182" x2="58" y2="182" stroke="#222" stroke-width="1"/><line x1="26" y1="150" x2="26" y2="198" stroke="#222" stroke-width="1"/><line x1="42" y1="150" x2="42" y2="198" stroke="#222" stroke-width="1"/><circle cx="18.0" cy="158.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="34.0" cy="158.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M45.5 153.5L54.5 162.5M45.5 162.5L54.5 153.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="18.0" cy="174.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="34.0" cy="174.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="50.0" cy="174.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M13.5 185.5L22.5 194.5M13.5 194.5L22.5 185.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="34.0" cy="190.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M45.5 185.5L54.5 194.5M45.5 194.5L54.5 185.5" stroke="#d32f2f" stroke-width="1.6"/><text x="34.0" y="212.0" font-size="11" fill="#222" text-anchor="middle">ウ</text><rect x="74" y="150" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="74" y1="166" x2="122" y2="166" stroke="#222" stroke-width="1"/><line x1="74" y1="182" x2="122" y2="182" stroke="#222" stroke-width="1"/><line x1="90" y1="150" x2="90" y2="198" stroke="#222" stroke-width="1"/><line x1="106" y1="150" x2="106" y2="198" stroke="#222" stroke-width="1"/><circle cx="82.0" cy="158.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M93.5 153.5L102.5 162.5M93.5 162.5L102.5 153.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="114.0" cy="158.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="82.0" cy="174.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="98.0" cy="174.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="114.0" cy="174.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M77.5 185.5L86.5 194.5M77.5 194.5L86.5 185.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="98.0" cy="190.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M109.5 185.5L118.5 194.5M109.5 194.5L118.5 185.5" stroke="#d32f2f" stroke-width="1.6"/><text x="98.0" y="212.0" font-size="11" fill="#222" text-anchor="middle">ウ</text><rect x="138" y="150" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="138" y1="166" x2="186" y2="166" stroke="#222" stroke-width="1"/><line x1="138" y1="182" x2="186" y2="182" stroke="#222" stroke-width="1"/><line x1="154" y1="150" x2="154" y2="198" stroke="#222" stroke-width="1"/><line x1="170" y1="150" x2="170" y2="198" stroke="#222" stroke-width="1"/><circle cx="146.0" cy="158.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="162.0" cy="158.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="178.0" cy="158.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M141.5 169.5L150.5 178.5M141.5 178.5L150.5 169.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M157.5 169.5L166.5 178.5M157.5 178.5L166.5 169.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="178.0" cy="174.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="146.0" cy="190.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="162.0" cy="190.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M173.5 185.5L182.5 194.5M173.5 194.5L182.5 185.5" stroke="#d32f2f" stroke-width="1.6"/><text x="162.0" y="212.0" font-size="11" fill="#222" text-anchor="middle">エ</text><rect x="202" y="150" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="202" y1="166" x2="250" y2="166" stroke="#222" stroke-width="1"/><line x1="202" y1="182" x2="250" y2="182" stroke="#222" stroke-width="1"/><line x1="218" y1="150" x2="218" y2="198" stroke="#222" stroke-width="1"/><line x1="234" y1="150" x2="234" y2="198" stroke="#222" stroke-width="1"/><path d="M205.5 153.5L214.5 162.5M205.5 162.5L214.5 153.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="226.0" cy="158.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="242.0" cy="158.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="210.0" cy="174.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M221.5 169.5L230.5 178.5M221.5 178.5L230.5 169.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="242.0" cy="174.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="210.0" cy="190.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="226.0" cy="190.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M237.5 185.5L246.5 194.5M237.5 194.5L246.5 185.5" stroke="#d32f2f" stroke-width="1.6"/><text x="226.0" y="212.0" font-size="11" fill="#222" text-anchor="middle">エ</text><rect x="10" y="222" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="10" y1="238" x2="58" y2="238" stroke="#222" stroke-width="1"/><line x1="10" y1="254" x2="58" y2="254" stroke="#222" stroke-width="1"/><line x1="26" y1="222" x2="26" y2="270" stroke="#222" stroke-width="1"/><line x1="42" y1="222" x2="42" y2="270" stroke="#222" stroke-width="1"/><circle cx="18.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M29.5 225.5L38.5 234.5M29.5 234.5L38.5 225.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="50.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M13.5 241.5L22.5 250.5M13.5 250.5L22.5 241.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="34.0" cy="246.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="50.0" cy="246.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="18.0" cy="262.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="34.0" cy="262.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M45.5 257.5L54.5 266.5M45.5 266.5L54.5 257.5" stroke="#d32f2f" stroke-width="1.6"/><text x="34.0" y="284.0" font-size="11" fill="#222" text-anchor="middle">オ</text><rect x="74" y="222" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="74" y1="238" x2="122" y2="238" stroke="#222" stroke-width="1"/><line x1="74" y1="254" x2="122" y2="254" stroke="#222" stroke-width="1"/><line x1="90" y1="222" x2="90" y2="270" stroke="#222" stroke-width="1"/><line x1="106" y1="222" x2="106" y2="270" stroke="#222" stroke-width="1"/><circle cx="82.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="98.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="114.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="82.0" cy="246.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M93.5 241.5L102.5 250.5M93.5 250.5L102.5 241.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M109.5 241.5L118.5 250.5M109.5 250.5L118.5 241.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="82.0" cy="262.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M93.5 257.5L102.5 266.5M93.5 266.5L102.5 257.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="114.0" cy="262.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><text x="98.0" y="284.0" font-size="11" fill="#222" text-anchor="middle">カ</text><rect x="138" y="222" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="138" y1="238" x2="186" y2="238" stroke="#222" stroke-width="1"/><line x1="138" y1="254" x2="186" y2="254" stroke="#222" stroke-width="1"/><line x1="154" y1="222" x2="154" y2="270" stroke="#222" stroke-width="1"/><line x1="170" y1="222" x2="170" y2="270" stroke="#222" stroke-width="1"/><circle cx="146.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="162.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="178.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M141.5 241.5L150.5 250.5M141.5 250.5L150.5 241.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="162.0" cy="246.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M173.5 241.5L182.5 250.5M173.5 250.5L182.5 241.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="146.0" cy="262.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M157.5 257.5L166.5 266.5M157.5 266.5L166.5 257.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="178.0" cy="262.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><text x="162.0" y="284.0" font-size="11" fill="#222" text-anchor="middle">カ</text><rect x="202" y="222" width="48" height="48" fill="none" stroke="#222" stroke-width="1.5"/><line x1="202" y1="238" x2="250" y2="238" stroke="#222" stroke-width="1"/><line x1="202" y1="254" x2="250" y2="254" stroke="#222" stroke-width="1"/><line x1="218" y1="222" x2="218" y2="270" stroke="#222" stroke-width="1"/><line x1="234" y1="222" x2="234" y2="270" stroke="#222" stroke-width="1"/><circle cx="210.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="226.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="242.0" cy="230.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><path d="M205.5 241.5L214.5 250.5M205.5 250.5L214.5 241.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M221.5 241.5L230.5 250.5M221.5 250.5L230.5 241.5" stroke="#d32f2f" stroke-width="1.6"/><path d="M237.5 241.5L246.5 250.5M237.5 250.5L246.5 241.5" stroke="#d32f2f" stroke-width="1.6"/><circle cx="210.0" cy="262.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="226.0" cy="262.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="242.0" cy="262.0" r="4.8" fill="none" stroke="#222" stroke-width="1.3"/><text x="226.0" y="284.0" font-size="11" fill="#222" text-anchor="middle">キ</text></svg>
+    </li>
+  </ol>
+  <div class="ans">答え：解説の図③を参照のこと。（上の図の16通り。回したもの・うら返したものでもよい）</div>
+  <div class="tip">コツ：解答らんのわくは18個ある。16通り書けたら、同じ形を2回書いていないかを回して確かめる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 2人で乗ったときの共同利益 <span class="type">A・7点｜条件の整理</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1人あたりの得した金額</b>」と「<b>半々で分けた</b>」。→「（別々の合計−2人で乗った代金）÷2」に直して書く。この式に3組の数を入れるだけで決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>共同利益は、この問題だけの言葉。文章の例では、別々なら 2000＋2400＝4400円。2人なら3000円。得は1400円。半分ずつで700円。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1人で乗る代金を書く。Aは1400円、Bは2000円、Cは1600円。</li>
+    <li>3組を表にならべる。
+      <table>
+        <tr><th>組</th><th>別々の合計</th><th>2人で乗る</th><th>得</th><th>1人あたり</th></tr>
+        <tr><td>AとB</td><td>1400＋2000＝3400</td><td>2500</td><td>900</td><td><b>450円</b></td></tr>
+        <tr><td>BとC</td><td>2000＋1600＝3600</td><td>3000</td><td>600</td><td><b>300円</b></td></tr>
+        <tr><td>CとA</td><td>1600＋1400＝3000</td><td>2400</td><td>600</td><td><b>300円</b></td></tr>
+      </table>
+    </li>
+    <li>落としやすい所は、最後の÷2。900円や600円のまま答えると、2人分の得になってしまう。</li>
+  </ol>
+  <div class="ans">答え：AとB…450円，BとC…300円，CとA…300円</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 3人で乗るほうが得か、2人のほうが得かの説明 <span class="type">A・7点｜条件の整理（説明）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3人で乗ると3800円</b>」と「<b>そのことを説明しなさい</b>」。3800円を「3人のときの共同利益」に直して書く（÷3）。→ (1)の450円・300円と大きさをくらべれば説明になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>共同利益が大きい乗り方ほど、その人は得をする。3人で乗るときは、得した金額を3人で同じように分ける。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3人が別々に乗ると 1400＋2000＋1600＝5000円。</li>
+    <li>3人で乗ると3800円。得は 5000−3800＝1200円。</li>
+    <li>1人あたりは 1200÷3＝<b>400円</b>。これが3人で乗るときの共同利益。</li>
+    <li>(1)とくらべる。
+      <table>
+        <tr><th>人</th><th>2人で乗るとき</th><th>3人で乗るとき</th><th>得なのは</th></tr>
+        <tr><td>AとB</td><td>450円</td><td>400円</td><td><b>2人</b>（50円多い）</td></tr>
+        <tr><td>C</td><td>Aとでも、Bとでも300円</td><td>400円</td><td><b>3人</b>（100円多い）</td></tr>
+      </table>
+    </li>
+    <li>落としやすい所は、説明に400円の出し方を書かないこと。式と、くらべた相手の数（450円・300円）を両方書く。</li>
+  </ol>
+  <div class="ans">答え：解説を参照のこと。（説明の例：3人で乗ると、別々に乗るより 5000−3800＝1200円得をする。共同利益は 1200÷3＝400円。AとBは2人で乗ると450円で、400円より多い。だから2人のほうが得。CはAまたはBと2人で乗ると300円で、400円より少ない。だから3人のほうが得。）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 3人とも「3人で乗るほうが得」になる代金 <span class="type">B・7点｜条件の整理（もどして考える）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>AさんもBさんもCさんも</b>」と「<b>より小さい金額</b>」。2人のときの共同利益がいちばん大きいのは450円。→「3人の共同利益が450円より多い」に直して書く。(2)ができていれば式は2本なので、手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>いちばんきびしい人に合わせれば、全員に当てはまる。AとBは2人で乗ると450円得をする。450円をこえれば、300円のCも得をする。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3人の共同利益が450円より多ければよい。3人分の得の合計は 450×3＝<b>1350円</b>より多い。</li>
+    <li>別々に乗ると5000円だった。代金は 5000−1350＝<b>3650円</b>より小さければよい。</li>
+    <li>確かめる。代金がちょうど3650円なら、共同利益は 1350÷3＝450円。AとBは2人のときと同じで、得にならない。だから「3650円より小さい」で合う。</li>
+    <li>考え方のらんには、450×3＝1350 と 5000−1350＝3650 の2つの式と、「AとBの450円をこえればよい」の一言を書く。</li>
+  </ol>
+  <div class="ans">答え：3650</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 立方体の影の形と面積 <span class="type">A・13点｜影と相似</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>高さ2mの電灯Q</b>」と「<b>1辺の長さが1mの立方体</b>」。2mと1mを真横から見た図に置く。→ 相似で「影の長さ＝Pからのきょり」と決まる。上の面の角を、Pから2倍の所へ移せば影がかける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>電灯の高さが、立っている辺の高さの2倍のとき。影の長さは、電灯の真下から辺までのきょりと同じになる。たとえば1mはなれた辺の影は1m。</li>
+    <li>影は、立体が置かれている所の外にできる部分だけを数える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>真横から見た図をかく。三角形QPCと三角形ABCは同じ形。QPは2m、ABは1mで、2：1。だから PB：BC＝<b>1：1</b>。
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 175" style="max-width:300px;width:100%;height:auto;display:block"><line x1="40.0" y1="150.0" x2="230.0" y2="150.0" stroke="#222" stroke-width="1.5"/><line x1="40.0" y1="150.0" x2="40.0" y2="30.0" stroke="#222" stroke-width="2.5"/><line x1="100.0" y1="150.0" x2="100.0" y2="90.0" stroke="#222" stroke-width="2.5"/><line x1="40.0" y1="30.0" x2="160.0" y2="150.0" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="40" cy="30" r="4" fill="#222"/><text x="40.0" y="20.0" font-size="12" fill="#222" text-anchor="middle">Q（電灯）</text><text x="34.0" y="166.0" font-size="12" fill="#222" text-anchor="middle">P</text><text x="100.0" y="166.0" font-size="12" fill="#222" text-anchor="middle">B</text><text x="160.0" y="166.0" font-size="12" fill="#222" text-anchor="middle">C</text><text x="108.0" y="86.0" font-size="12" fill="#222" text-anchor="start">A</text><text x="34.0" y="95.0" font-size="12" fill="#222" text-anchor="end">2m</text><text x="94.0" y="125.0" font-size="12" fill="#222" text-anchor="end">1m</text><text x="70.0" y="145.0" font-size="10" fill="#1565c0" text-anchor="middle">きょり</text><text x="130.0" y="145.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">影</text><line x1="100.0" y1="154.0" x2="160.0" y2="154.0" stroke="#d32f2f" stroke-width="3"/><text x="150.0" y="60.0" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold">きょり：影＝1：1</text></svg>
+    </li>
+    <li>真上から見たマス目にかく。立方体は、Pから右に1mの所にある。上の面の4つの角を、Pからのきょりが2倍の所に移す。右に1・おくに1の角は、右に2・おくに2へ。右に2・おくに1の角は、右に4・おくに2へ。</li>
+    <li>移した4つの点と、立方体の下の角をつなぐ。立方体が置かれているマスをのぞいた所が影。
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 185" style="max-width:330px;width:100%;height:auto;display:block"><line x1="30.0" y1="160.0" x2="30.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="80.0" y1="160.0" x2="80.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="130.0" y1="160.0" x2="130.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="180.0" y1="160.0" x2="180.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="230.0" y1="160.0" x2="230.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="280.0" y1="160.0" x2="280.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="160.0" x2="280.0" y2="160.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="110.0" x2="280.0" y2="110.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="60.0" x2="280.0" y2="60.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="10.0" x2="280.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><polygon points="130.0,160.0 230.0,160.0 230.0,60.0 130.0,60.0 80.0,110.0 130.0,110.0" fill="#dbe9ff" stroke="#d32f2f" stroke-width="2"/><polygon points="80.0,160.0 130.0,160.0 130.0,110.0 80.0,110.0" fill="#fff" stroke="#222" stroke-width="2.5"/><line x1="30.0" y1="160.0" x2="230.0" y2="160.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="30.0" y1="160.0" x2="230.0" y2="60.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="30.0" y1="160.0" x2="130.0" y2="60.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/><circle cx="30" cy="160" r="4" fill="#222"/><text x="22.0" y="176.0" font-size="11" fill="#222" text-anchor="start">P（電灯の真下）</text><text x="105.0" y="139.0" font-size="10" fill="#222" text-anchor="middle">立方体</text><text x="180.0" y="128.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">2×2</text><text x="116.0" y="100.0" font-size="10" fill="#d32f2f" text-anchor="middle">△</text><text x="80.0" y="45.0" font-size="11" fill="#d32f2f" text-anchor="middle">△＝1×1÷2</text></svg>
+    </li>
+    <li>影を、2m×2mの正方形と小さい三角形に分ける。2×2＋1×1÷2＝<b>4.5（m²）</b>。</li>
+    <li>落としやすい所は2つ。左上の小さい三角形を入れ忘れる。立方体が置かれているマスまで数えて5.5にしてしまう。</li>
+  </ol>
+  <div class="ans">答え：図…解説の図②を参照のこと。／面積…4.5m²（図は上の、色をつけた部分）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 正四角すいの影の形と面積 <span class="type">A・13点｜影と相似</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>底面は1辺の長さが2mの正方形</b>」と「<b>高さが1m</b>」。高さがあるのは頂点だけ。→ 頂点の影を1つだけ、Pから2倍の所に置く。底面からはみ出した三角形が影と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正四角すいの頂点は、底面のまん中の真上にある。底面の対角線を2本ひくと、交わった点がまん中。</li>
+    <li>電灯が2m、頂点が1mで、(1)と同じ2：1。頂点の影は、Pからまん中までのきょりを2倍にのばした所にできる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>真上から見たマス目に底面DEFGをかく。Pから右に1mの所から、右に2m・おくに2mの正方形。</li>
+    <li>まん中のOは、Pから右に2・おくに1。2倍にのばすと、頂点の影O′は<b>右に4・おくに2</b>。</li>
+    <li>O′と、底面の角GとFをむすぶ。底面からはみ出した三角形GFO′が影。
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 185" style="max-width:330px;width:100%;height:auto;display:block"><line x1="30.0" y1="160.0" x2="30.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="80.0" y1="160.0" x2="80.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="130.0" y1="160.0" x2="130.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="180.0" y1="160.0" x2="180.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="230.0" y1="160.0" x2="230.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="280.0" y1="160.0" x2="280.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="160.0" x2="280.0" y2="160.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="110.0" x2="280.0" y2="110.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="60.0" x2="280.0" y2="60.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="10.0" x2="280.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><polygon points="180.0,160.0 230.0,60.0 180.0,60.0" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/><polygon points="80.0,160.0 180.0,160.0 180.0,60.0 80.0,60.0" fill="none" stroke="#222" stroke-width="2.5"/><line x1="80.0" y1="160.0" x2="180.0" y2="60.0" stroke="#222" stroke-width="1.5"/><line x1="80.0" y1="60.0" x2="180.0" y2="160.0" stroke="#222" stroke-width="1.5"/><line x1="30.0" y1="160.0" x2="230.0" y2="60.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/><circle cx="30" cy="160" r="4" fill="#222"/><text x="22.0" y="176.0" font-size="11" fill="#222" text-anchor="start">P</text><text x="71.0" y="56.0" font-size="12" fill="#222" text-anchor="middle">D</text><text x="82.0" y="175.0" font-size="12" fill="#222" text-anchor="middle">E</text><text x="184.0" y="175.0" font-size="12" fill="#222" text-anchor="middle">F</text><text x="176.0" y="54.0" font-size="12" fill="#222" text-anchor="middle">G</text><text x="130.0" y="100.0" font-size="12" fill="#222" text-anchor="middle">O</text><text x="242.0" y="54.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">O′</text><circle cx="230" cy="60" r="3.5" fill="#d32f2f"/><circle cx="130" cy="110" r="3" fill="#222"/></svg>
+    </li>
+    <li>底辺をGFの2mと見る。高さは、GからO′までの1m。2×1÷2＝<b>1（m²）</b>。</li>
+    <li>落としやすい所は、底面の正方形まで影に入れてしまうこと。底面の中は立体が置かれているので数えない。</li>
+  </ol>
+  <div class="ans">答え：図…解説の図③を参照のこと。／面積…1m²（図は上の、色をつけた三角形GFO′）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 影が現れなくなる電灯の高さ <span class="type">A・7点｜影と相似</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>影は現れませんでした</b>」と「<b>何m以上</b>」。「頂点の影O′が底面からはみ出さない」に直して書く。→ O′がちょうど辺FGに重なるときの高さを、真横の図の相似で出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>電灯を高くすると、影は短くなる。頂点の影O′は、PとOをむすんだ線の上を、Oのほうへ近づいてくる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>真上から見た図で、PからOを通る線をのばす。辺FGとぶつかる点に印をつける。O′がこの点より内側なら、影は出ない。</li>
+    <li>PからOまでは右に2m。Oから辺FGまでは右に1m。だから、PからOまでのきょりと、Oから印までのきょりは <b>2：1</b>。
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 185" style="max-width:360px;width:100%;height:auto;display:block"><line x1="30.0" y1="160.0" x2="30.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="80.0" y1="160.0" x2="80.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="130.0" y1="160.0" x2="130.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="180.0" y1="160.0" x2="180.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="230.0" y1="160.0" x2="230.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="280.0" y1="160.0" x2="280.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="160.0" x2="280.0" y2="160.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="110.0" x2="280.0" y2="110.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="60.0" x2="280.0" y2="60.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><line x1="30.0" y1="10.0" x2="280.0" y2="10.0" stroke="#aaa" stroke-width="1" stroke-dasharray="3 3"/><polygon points="80.0,160.0 180.0,160.0 180.0,60.0 80.0,60.0" fill="none" stroke="#222" stroke-width="2.5"/><line x1="80.0" y1="160.0" x2="180.0" y2="60.0" stroke="#222" stroke-width="1.2"/><line x1="80.0" y1="60.0" x2="180.0" y2="160.0" stroke="#222" stroke-width="1.2"/><line x1="30.0" y1="160.0" x2="230.0" y2="60.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/><circle cx="30" cy="160" r="4" fill="#222"/><text x="22.0" y="176.0" font-size="11" fill="#222" text-anchor="start">P</text><circle cx="130" cy="110" r="3" fill="#222"/><text x="130.0" y="100.0" font-size="12" fill="#222" text-anchor="middle">O</text><circle cx="180" cy="85" r="4" fill="#d32f2f"/><text x="188.0" y="99.0" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold">ここまでなら影なし</text><text x="61.0" y="165.5" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">②</text><text x="159.0" y="115.5" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">①</text><text x="71.0" y="56.0" font-size="12" fill="#222" text-anchor="middle">D</text><text x="82.0" y="175.0" font-size="12" fill="#222" text-anchor="middle">E</text><text x="184.0" y="175.0" font-size="12" fill="#222" text-anchor="middle">F</text><text x="186.0" y="54.0" font-size="12" fill="#222" text-anchor="middle">G</text></svg>
+    </li>
+    <li>このときを真横から見る。大きい三角形と小さい三角形は同じ形。底辺の比は（2＋1）：1＝3：1。
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 190" style="max-width:260px;width:100%;height:auto;display:block"><line x1="40.0" y1="165.0" x2="205.0" y2="165.0" stroke="#222" stroke-width="1.5"/><line x1="40.0" y1="165.0" x2="40.0" y2="30.0" stroke="#222" stroke-width="2.5"/><line x1="130.0" y1="165.0" x2="130.0" y2="120.0" stroke="#222" stroke-width="2.5"/><line x1="40.0" y1="30.0" x2="175.0" y2="165.0" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="40" cy="30" r="4" fill="#d32f2f"/><text x="48.0" y="32.0" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold">R（電灯）</text><text x="36.0" y="180.0" font-size="12" fill="#222" text-anchor="middle">P</text><text x="138.0" y="116.0" font-size="12" fill="#222" text-anchor="start">O</text><text x="175.0" y="180.0" font-size="12" fill="#222" text-anchor="middle">O′</text><text x="85.0" y="180.0" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">②</text><text x="152.5" y="180.0" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">①</text><text x="125.0" y="146.5" font-size="12" fill="#222" text-anchor="end">1m</text><text x="35.0" y="97.5" font-size="12" fill="#d32f2f" text-anchor="end" font-weight="bold">□m</text></svg>
+    </li>
+    <li>高さも3：1。頂点の高さは1mなので、電灯の高さは 1×3＝<b>3（m）</b>。これより高いと影はもっと短くなる。</li>
+    <li>落としやすい所は、底辺の比を2：1のまま使って2mとすること。大きい三角形の底辺は、2と1をたした3。</li>
+  </ol>
+  <div class="ans">答え：3m以上</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>「すべて書きなさい」は、<b>数で分けてから</b>書き出す。回して同じ形は1つ。</li>
+    <li>問題の中だけの言葉（共同利益）は、<b>例の計算を式の形に直して</b>から使う。</li>
+    <li>電灯と影は、<b>真横から見た図</b>で比を出し、<b>真上から見たマス目</b>に点を移す。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4"><h1 class="dtitle">大問4（あみだくじ・横線の最少本数）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4</span> この回の全体像（担当の大問） <span class="type">A 32点／B 0点／C 0点</span></h2>
+  <table><tr><th>小問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>(1)</td><td>縦線4本のあみだくじを完成させる</td><td>A 7</td><td>下の数字が2・4・1・3 → 各数字が左右に何本ぶん動くかを書く</td></tr>
+  <tr><td>(2)①②③</td><td>下が逆ならびのあみだくじ（縦線3・4・5本）</td><td>A 6+6+6</td><td>「下の数字は大きい順」→ 1から順に右はしへ運ぶ</td></tr>
+  <tr><td>(3)</td><td>縦線100本のときの最少本数</td><td>A 7</td><td>「(2)と同じように」→ 3本・6本・10本をたし算の式に直す</td></tr></table>
+  <p>取り方: 5問とも A。<b>(2)で実際に横線を描いて数える</b>と、(3)のきまりがそのまま出てくる。描いたあとは、全部の数字を指でたどってたしかめる。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 縦線4本のあみだくじを完成させる <span class="type">A・7点｜あみだくじの作図</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>スタートとゴールが同じ数字</b>」と「<b>最も少なくなるように</b>」に丸。下の数字は2・4・1・3。各数字が左右に何本ぶん動くかを図の横に書く → 横線を引く場所が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>横線を1本わたると、<b>となりの縦線へ1本ぶん</b>動く。例のあみだくじでは、1が横線を2本わたって、2本右の縦線に着いている。</li>
+    <li>横線1本で入れかわるのは、となりどうしの2つの数字だけ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>それぞれの数字の動きを表に書く。
+      <table><tr><th>数字</th><th>スタート（上）</th><th>ゴール（下）</th><th>動き</th></tr>
+      <tr><td>1</td><td>左から1本目</td><td>左から3本目</td><td><b>右へ2本</b></td></tr>
+      <tr><td>2</td><td>左から2本目</td><td>左から1本目</td><td>左へ1本</td></tr>
+      <tr><td>3</td><td>左から3本目</td><td>左から4本目</td><td>右へ1本</td></tr>
+      <tr><td>4</td><td>左から4本目</td><td>左から2本目</td><td>左へ2本</td></tr></table></li>
+    <li>まず1を運ぶ。1は右へ2本動く。階段のように下がる横線を2本引く。このとき2は左へ1本動いて、ゴールの2に着く。
+<svg id="q4_1_a" viewBox="0 0 204 136" xmlns="http://www.w3.org/2000/svg" style="max-width:306px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polyline fill="none" stroke="#ffe0b2" stroke-width="11" stroke-linejoin="round" stroke-linecap="round" points="24,34 24,58 76,58 76,82 128,82 128,106"/>
+<line x1="24" y1="34" x2="24" y2="106" stroke="#222" stroke-width="1.6"/>
+<text x="24" y="24" text-anchor="middle" fill="#222">1</text>
+<text x="24" y="126" text-anchor="middle" fill="#222">2</text>
+<line x1="76" y1="34" x2="76" y2="106" stroke="#222" stroke-width="1.6"/>
+<text x="76" y="24" text-anchor="middle" fill="#222">2</text>
+<text x="76" y="126" text-anchor="middle" fill="#222">4</text>
+<line x1="128" y1="34" x2="128" y2="106" stroke="#222" stroke-width="1.6"/>
+<text x="128" y="24" text-anchor="middle" fill="#222">3</text>
+<text x="128" y="126" text-anchor="middle" fill="#222">1</text>
+<line x1="180" y1="34" x2="180" y2="106" stroke="#222" stroke-width="1.6"/>
+<text x="180" y="24" text-anchor="middle" fill="#222">4</text>
+<text x="180" y="126" text-anchor="middle" fill="#222">3</text>
+<line x1="24" y1="58" x2="76" y2="58" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="76" y1="82" x2="128" y2="82" stroke="#d32f2f" stroke-width="2.6"/>
+</svg></li>
+    <li>3と4をたどる。3は2本目の横線で左へ動いて、ゴールの4に着いてしまう。4はまっすぐ下りて、ゴールの3に着く。3と4が入れかわっている。</li>
+    <li>3と4を入れかえる横線を1本たす。場所は右はしの2本の間。高さは<b>2本目の横線より上</b>にする。3は右へ動いてゴールの3に着く。4は左へ2回動いてゴールの4に着く。
+<svg id="q4_1_b" viewBox="0 0 204 136" xmlns="http://www.w3.org/2000/svg" style="max-width:306px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polyline fill="none" stroke="#c8e6c9" stroke-width="11" stroke-linejoin="round" stroke-linecap="round" points="128,34 128,58 180,58 180,106"/>
+<line x1="24" y1="34" x2="24" y2="106" stroke="#222" stroke-width="1.6"/>
+<text x="24" y="24" text-anchor="middle" fill="#222">1</text>
+<text x="24" y="126" text-anchor="middle" fill="#222">2</text>
+<line x1="76" y1="34" x2="76" y2="106" stroke="#222" stroke-width="1.6"/>
+<text x="76" y="24" text-anchor="middle" fill="#222">2</text>
+<text x="76" y="126" text-anchor="middle" fill="#222">4</text>
+<line x1="128" y1="34" x2="128" y2="106" stroke="#222" stroke-width="1.6"/>
+<text x="128" y="24" text-anchor="middle" fill="#222">3</text>
+<text x="128" y="126" text-anchor="middle" fill="#222">1</text>
+<line x1="180" y1="34" x2="180" y2="106" stroke="#222" stroke-width="1.6"/>
+<text x="180" y="24" text-anchor="middle" fill="#222">4</text>
+<text x="180" y="126" text-anchor="middle" fill="#222">3</text>
+<line x1="24" y1="58" x2="76" y2="58" stroke="#222" stroke-width="2.6"/>
+<line x1="76" y1="82" x2="128" y2="82" stroke="#222" stroke-width="2.6"/>
+<line x1="128" y1="58" x2="180" y2="58" stroke="#d32f2f" stroke-width="2.6"/>
+</svg></li>
+    <li>4つともたどって、同じ数字に着くことをたしかめる。横線は3本。1を運ぶのに2本、3を右へ運ぶのに別の1本がいるから、3本より少なくできない。</li>
+    <li>落としやすい所は3本目の高さ。2本目より下に引くと、1がもう1本右へ動いてゴールの3に着いてしまう。</li>
+  </ol>
+  <div class="ans">答え：解説の図Ⅱを参照のこと。（横線は3本。左はしの2本の間と右はしの2本の間に上の段、まん中の2本の間に下の段。上の2つ目の図と同じ）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)①②③</span> 下が逆ならびのあみだくじ（縦線3本・4本・5本） <span class="type">A・6点×3｜あみだくじ・横線の最少本数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>下の数字は大きい順</b>」と「<b>最低何本</b>」に丸。下が逆ならびだから、1は左はしから右はしまで動く → 1から順に右はしへ運ぶ階段を描いて、横線を数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>横線1本で入れかわるのは、<b>となりどうしの2つの数字だけ</b>。1本で3つの数字をまとめて動かすことはできない。</li>
+    <li>逆ならびでは、どの2つの数字も左右が入れかわる。図1なら「1と2」「1と3」「2と3」の3組。だから横線は3本より少なくできない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図1（縦線3本）。まず1を右はしへ運ぶ。階段の形に横線を2本引く。すると2と3は左へ1本ずつずれる。次に2を右へ1本運ぶ。<b>2＋1＝3本</b>。
+<svg id="q4_2_a" viewBox="0 0 256 160" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polyline fill="none" stroke="#ffe0b2" stroke-width="11" stroke-linejoin="round" stroke-linecap="round" points="24,34 24,58 68,58 68,82 112,82 112,130"/>
+<line x1="24" y1="34" x2="24" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="24" y="24" text-anchor="middle" fill="#222">1</text>
+<text x="24" y="150" text-anchor="middle" fill="#222">3</text>
+<line x1="68" y1="34" x2="68" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="68" y="24" text-anchor="middle" fill="#222">2</text>
+<text x="68" y="150" text-anchor="middle" fill="#222">2</text>
+<line x1="112" y1="34" x2="112" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="112" y="24" text-anchor="middle" fill="#222">3</text>
+<text x="112" y="150" text-anchor="middle" fill="#222">1</text>
+<line x1="24" y1="58" x2="68" y2="58" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="68" y1="82" x2="112" y2="82" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="24" y1="106" x2="68" y2="106" stroke="#d32f2f" stroke-width="2.6"/>
+<path d="M126,52 h6 v36 h-6" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="138" y="75.0" fill="#1565c0" font-size="13">1を右へ：2本</text>
+<path d="M126,100 h6 v12 h-6" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="138" y="111.0" fill="#1565c0" font-size="13">2を右へ：1本</text>
+</svg></li>
+    <li>図2（縦線4本）。同じやり方で描く。1を運ぶのに3本。2を運ぶのに2本。3を運ぶのに1本。3＋2＋1＝6本。
+<svg id="q4_2_b" viewBox="0 0 300 232" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polyline fill="none" stroke="#ffe0b2" stroke-width="11" stroke-linejoin="round" stroke-linecap="round" points="24,34 24,58 68,58 68,82 112,82 112,106 156,106 156,202"/>
+<line x1="24" y1="34" x2="24" y2="202" stroke="#222" stroke-width="1.6"/>
+<text x="24" y="24" text-anchor="middle" fill="#222">1</text>
+<text x="24" y="222" text-anchor="middle" fill="#222">4</text>
+<line x1="68" y1="34" x2="68" y2="202" stroke="#222" stroke-width="1.6"/>
+<text x="68" y="24" text-anchor="middle" fill="#222">2</text>
+<text x="68" y="222" text-anchor="middle" fill="#222">3</text>
+<line x1="112" y1="34" x2="112" y2="202" stroke="#222" stroke-width="1.6"/>
+<text x="112" y="24" text-anchor="middle" fill="#222">3</text>
+<text x="112" y="222" text-anchor="middle" fill="#222">2</text>
+<line x1="156" y1="34" x2="156" y2="202" stroke="#222" stroke-width="1.6"/>
+<text x="156" y="24" text-anchor="middle" fill="#222">4</text>
+<text x="156" y="222" text-anchor="middle" fill="#222">1</text>
+<line x1="24" y1="58" x2="68" y2="58" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="68" y1="82" x2="112" y2="82" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="112" y1="106" x2="156" y2="106" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="24" y1="130" x2="68" y2="130" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="68" y1="154" x2="112" y2="154" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="24" y1="178" x2="68" y2="178" stroke="#d32f2f" stroke-width="2.6"/>
+<path d="M170,52 h6 v60 h-6" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="182" y="87.0" fill="#1565c0" font-size="13">1を右へ：3本</text>
+<path d="M170,124 h6 v36 h-6" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="182" y="147.0" fill="#1565c0" font-size="13">2を右へ：2本</text>
+<path d="M170,172 h6 v12 h-6" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="182" y="183.0" fill="#1565c0" font-size="13">3を右へ：1本</text>
+</svg></li>
+    <li>図3（縦線5本）。1を運ぶのに4本。そのあと3本、2本、1本。<b>4＋3＋2＋1＝10本</b>。
+<svg id="q4_2_c" viewBox="0 0 344 306" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polyline fill="none" stroke="#ffe0b2" stroke-width="11" stroke-linejoin="round" stroke-linecap="round" points="24,34 24,56 68,56 68,78 112,78 112,100 156,100 156,122 200,122 200,276"/>
+<line x1="24" y1="34" x2="24" y2="276" stroke="#222" stroke-width="1.6"/>
+<text x="24" y="24" text-anchor="middle" fill="#222">1</text>
+<text x="24" y="296" text-anchor="middle" fill="#222">5</text>
+<line x1="68" y1="34" x2="68" y2="276" stroke="#222" stroke-width="1.6"/>
+<text x="68" y="24" text-anchor="middle" fill="#222">2</text>
+<text x="68" y="296" text-anchor="middle" fill="#222">4</text>
+<line x1="112" y1="34" x2="112" y2="276" stroke="#222" stroke-width="1.6"/>
+<text x="112" y="24" text-anchor="middle" fill="#222">3</text>
+<text x="112" y="296" text-anchor="middle" fill="#222">3</text>
+<line x1="156" y1="34" x2="156" y2="276" stroke="#222" stroke-width="1.6"/>
+<text x="156" y="24" text-anchor="middle" fill="#222">4</text>
+<text x="156" y="296" text-anchor="middle" fill="#222">2</text>
+<line x1="200" y1="34" x2="200" y2="276" stroke="#222" stroke-width="1.6"/>
+<text x="200" y="24" text-anchor="middle" fill="#222">5</text>
+<text x="200" y="296" text-anchor="middle" fill="#222">1</text>
+<line x1="24" y1="56" x2="68" y2="56" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="68" y1="78" x2="112" y2="78" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="112" y1="100" x2="156" y2="100" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="156" y1="122" x2="200" y2="122" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="24" y1="144" x2="68" y2="144" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="68" y1="166" x2="112" y2="166" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="112" y1="188" x2="156" y2="188" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="24" y1="210" x2="68" y2="210" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="68" y1="232" x2="112" y2="232" stroke="#d32f2f" stroke-width="2.6"/>
+<line x1="24" y1="254" x2="68" y2="254" stroke="#d32f2f" stroke-width="2.6"/>
+<path d="M214,50 h6 v78 h-6" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="226" y="94.0" fill="#1565c0" font-size="13">1を右へ：4本</text>
+<path d="M214,138 h6 v56 h-6" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="226" y="171.0" fill="#1565c0" font-size="13">2を右へ：3本</text>
+<path d="M214,204 h6 v34 h-6" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="226" y="226.0" fill="#1565c0" font-size="13">3を右へ：2本</text>
+<path d="M214,248 h6 v12 h-6" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="226" y="259.0" fill="#1565c0" font-size="13">4を右へ：1本</text>
+</svg></li>
+    <li>たしかめ。図3で5をたどる。5は横線を4回わたって左はしに着く。ほかの数字も同じ数字に着く。</li>
+    <li>落としやすい所はルール④。縦線の同じ点から左右に横線を出せない。横線の高さを1本ずつずらして引く。</li>
+  </ol>
+  <div class="ans">答え：図1…3本／図…（例）解説の図Ⅲを参照のこと。　図2…6本／図…（例）解説の図Ⅲを参照のこと。　図3…10本／図…（例）解説の図Ⅲを参照のこと。（横線の引き方は上の図が一例。本数が合っていて、全部の数字が同じ数字に着けばよい）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 縦線100本のときの横線の最少本数 <span class="type">A・7点｜きまりを式にする（1からの和）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>縦線が100本</b>」と「<b>(2)と同じように</b>」に丸。100本は描けない → (2)の3本・6本・10本をたし算の式に直して書く。そのきまりを100本までのばす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1から順にならんだ数の和は「<b>（はじめ＋おわり）×個数÷2</b>」で出せる。たとえば 1＋2＋3＋4 は（1＋4）×4÷2＝10。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(2)の答えを、たし算の式に直して表に書く。
+      <table><tr><th>縦線の本数</th><th>横線の本数の式</th><th>横線の本数</th></tr>
+      <tr><td>3本</td><td>1＋2</td><td>3本</td></tr>
+      <tr><td>4本</td><td>1＋2＋3</td><td>6本</td></tr>
+      <tr><td>5本</td><td>1＋2＋3＋4</td><td>10本</td></tr>
+      <tr><td>100本</td><td><b>1＋2＋…＋99</b></td><td>？</td></tr></table></li>
+    <li>きまりを言葉にする。1を右はしへ運ぶ横線は、縦線の本数より1少ない。100本なら99本。次の2は98本。最後は1本になる。</li>
+    <li>1から99までをたす。
+<pre class="fig">1＋2＋…＋99＝（1＋99）×99÷2
+           ＝100×99÷2
+           ＝<b>4950</b>（本）</pre></li>
+    <li>落としやすい所は、たす数の終わり。縦線3本のときの式は 1＋2 で、最後の数は縦線の本数より1小さい。100までたすと5050になってしまう。</li>
+  </ol>
+  <div class="ans">答え：4950本</div>
+</section>
+</div>

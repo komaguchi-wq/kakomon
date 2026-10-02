@@ -1,0 +1,600 @@
+<!-- generated kakomon hiroo/2024-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（小問集合・チョコレートとガムの買い方）</a></li>
+<li><a href="#3-4-5">大問3・4・5（約数の個数／6人の配置／土地をロープで分ける）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（小問集合・チョコレートとガムの買い方）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 35点／B 11点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)(2)</td><td>計算のくふう・分数のつみ重ね</td><td>A 5+5</td><td>253のなかまにそろえる／外側から1枚ずつはがす</td></tr>
+    <tr><td>1 (3)(4)</td><td>集まりの人数・時計算</td><td>A 5+5</td><td>全体を30にそろえる／角度の差300°</td></tr>
+    <tr><td>1 (5)(6)</td><td>四分円の重なり・直方体の切断</td><td>A 5／B 5</td><td>4つたして正方形をひく／切り口は2枚ずつ増える</td></tr>
+    <tr><td>2</td><td>90円のチョコレートと80円のガム</td><td>A 5+5／B 6</td><td>つるかめ算→代金の式から書き出す</td></tr>
+  </table>
+  <p>取り方: <b>Aの7問（35点）を先に確実に</b>。Bの 1 (6) は「切ると面が2枚増える」と書ければ3つの式をたすだけ。2 (3) は (2) と同じ書き出しに<b>無料のガム</b>を1列足すだけなので、どちらも手を付けたい。（受験者平均60.6点・合格者平均72.3点）</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 253÷8＋25.3×3.25＋11×2.3×5.5 <span class="type">A・5点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>253</b>」「25.3」と「11×2.3」。11×2.3＝25.3 に直して書く → 3つとも253のなかまになり、<b>253でまとめられる</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>÷8 は ×0.125 と同じ。1÷8＝0.125。</li>
+    <li>同じ数をかけている式は、まとめられる。たとえば 7×2＋7×3＝7×5。<b>小数点の位置は、かける相手で調整する</b>（25.3×3.25＝253×0.325）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3つの部分を、253×□ の形に書き直す。
+      <table>
+        <tr><th>もとの式</th><th>253×□ に直す</th></tr>
+        <tr><td>253÷8</td><td>253×0.125</td></tr>
+        <tr><td>25.3×3.25</td><td>253×0.325</td></tr>
+        <tr><td>11×2.3×5.5＝25.3×5.5</td><td>253×0.55</td></tr>
+      </table></li>
+    <li>□の部分をたす。0.125＋0.325＋0.55＝<b>1</b>。</li>
+    <li>253×1＝253。</li>
+    <li>落としやすい所は小数点。25.3を253にしたら、相手は10でわって0.325にする。</li>
+  </ol>
+  <div class="ans">答え：253</div>
+  <div class="miss">今回：253 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 分数が何段も重なった式のア・イ <span class="type">A・5点｜もどして考える計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3/5</b>」と「当てはまる整数」。1÷□＝3/5 の形だから、3/5 を逆数 5/3 に直して書く → <b>外側から1枚ずつはがす</b>と、最後は「整数＋1/整数」に分けるだけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1÷□＝3/5 なら、□は 3/5 の逆数の 5/3。たとえば 1÷2＝1/2 で、1÷(1/2)＝2。</li>
+    <li>ア＋1/イ は「<b>整数＋1より小さい分数</b>」。帯分数に直すと、整数の部分がアになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>いちばん外側をはがす。1÷（全体の分母）＝3/5 だから、全体の分母は 5/3。</li>
+    <li>全体の分母は「1＋1/(ア＋1/イ)」。1をひく。5/3−1＝2/3。</li>
+    <li>1÷(ア＋1/イ)＝2/3。もう一度逆数にする。ア＋1/イ＝<b>3/2</b>。</li>
+    <li>3/2＝1 1/2＝1＋1/2。整数の部分がア、分母がイ。ア＝1、イ＝2。</li>
+    <li>たしかめ。1＋1/2＝3/2。1÷3/2＝2/3。1＋2/3＝5/3。1÷5/3＝3/5。合っている。落としやすい所は、1をひくのを忘れること。</li>
+  </ol>
+  <div class="ans">答え：ア…1・イ…2</div>
+  <div class="miss">今回：ア 1・イ 2 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 算数も国語も好きな児童の数 <span class="type">A・5点｜集まりの人数（割合）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>算数の好きな児童の数の 3/10</b>」と、求めるもの「<b>算数も国語も好きな児童の数</b>」に丸。3/10 は全体の 1/3×3/10＝1/10 に直して書く → 全部が「全体の何分のいくつ」にそろい、44人と比べられる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>分母が3・5・10とばらばらのときは、全体を<b>30</b>（最小公倍数）とおく。算数は10、国語は12、両方は1/10だから3になる。</li>
+    <li>「どちらかが好き」は、算数＋国語−両方。両方好きな人を2回数えているので、1回ひく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>全体を㉚として、表に書きこむ。
+      <table>
+        <tr><th>グループ</th><th>全体を㉚としたとき</th></tr>
+        <tr><td>算数が好き</td><td>⑩</td></tr>
+        <tr><td>国語が好き</td><td>⑫</td></tr>
+        <tr><td>両方好き（⑩の3/10）</td><td><b>③</b></td></tr>
+        <tr><td>どちらかが好き</td><td>⑩＋⑫−③＝⑲</td></tr>
+        <tr><td>どちらも好きでない</td><td>㉚−⑲＝<b>⑪</b>＝44人</td></tr>
+      </table></li>
+    <li>⑪が44人。①は 44÷11＝4人。</li>
+    <li>求めるのは両方好きな③。4×3＝12人。</li>
+    <li>落としやすい所は最後。学年全体は 4×30＝120人だが、<b>聞かれているのは③のほう</b>。答えを書く前に、丸をつけた「求めるもの」を見直す。</li>
+  </ol>
+  <div class="ans">答え：12人</div>
+  <div class="miss">今回：120 ×。120は学年全体の人数（㉚＝4×30）と同じ数。求めるものを取りちがえたのなら「部品を拾えなかった」に当たるが、式が残っていないので答案からは決められない。次は、求めるもの「算数も国語も好きな児童」に丸をつけ、答えを書く直前に丸を見直す。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 4時と5時の間で長針と短針が一直線 <span class="type">A・5点｜時計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>4時と5時の間</b>」と「反対向きに一直線」。一直線は「長針が短針の180°先」に直して書く → 4時の120°おくれから、<b>合わせて300°</b>の差をつける時間を出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>長針は1分に6°、短針は1分に0.5°進む。差は1分に<b>5.5°</b>ずつ広がる（ちぢまる）。</li>
+    <li>4時ちょうどの短針は、12の位置から 30×4＝120°のところにある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>4時ちょうどの時計を描く。長針は短針の120°うしろにいる。
+      <svg viewBox="0 0 300 240" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <circle cx="120" cy="120" r="92" fill="#fff" stroke="#222" stroke-width="2"/>
+        <text x="120" y="50" font-size="14" text-anchor="middle" fill="#222">12</text>
+        <text x="196" y="125" font-size="14" text-anchor="middle" fill="#222">3</text>
+        <text x="120" y="204" font-size="14" text-anchor="middle" fill="#222">6</text>
+        <text x="44" y="125" font-size="14" text-anchor="middle" fill="#222">9</text>
+        <text x="188" y="168" font-size="14" text-anchor="middle" fill="#222">4</text>
+        <line x1="120" y1="120" x2="120" y2="58" stroke="#222" stroke-width="3"/>
+        <line x1="120" y1="120" x2="163" y2="145" stroke="#222" stroke-width="5"/>
+        <line id="q1_4_opp" x1="120" y1="120" x2="59" y2="85" stroke="#1565c0" stroke-width="2" stroke-dasharray="5 4"/>
+        <path d="M120 95 A25 25 0 0 1 141.7 132.5" fill="none" stroke="#d32f2f" stroke-width="2"/>
+        <text x="146" y="104" font-size="13" fill="#d32f2f">120°</text>
+        <text x="222" y="60" font-size="12" fill="#222">長針（12）</text>
+        <text x="222" y="150" font-size="12" fill="#222">短針（4）</text>
+        <text x="4" y="232" font-size="12" fill="#1565c0">青い点線＝短針の反対側（長針のゴール）</text>
+      </svg></li>
+    <li>長針はまず120°追いついて重なる。そこからさらに180°先に出ると一直線。つける差は 120＋180＝<b>300°</b>。</li>
+    <li>1分に5.5°ずつ差がつく。300÷5.5＝600/11＝54 6/11（分）。</li>
+    <li>たしかめ。54 6/11分は5時より前なので、「4時と5時の間」に入っている。落としやすい所は、120°だけで割ってしまうこと（それは重なる時刻）。</li>
+  </ol>
+  <div class="ans">答え：4時54 6/11分</div>
+  <div class="miss">今回：54 6/11 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 正方形の中の4つの四分円と斜線部分 <span class="type">A・5点｜円の重なり</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同じ大きさの四分円を4つ</b>」と図の「10cm」。四分円はどれも正方形のまん中を通る → 半径は対角線の半分。半径×半径＝50 と直して図に置く。<b>4つたして正方形をひく</b>と白い部分が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>半径の長さが分からなくても、<b>半径×半径</b>が分かれば円の面積は出せる。1辺5cmの正方形の対角線が半径なので、半径×半径÷2＝5×5＝25。だから半径×半径＝50。</li>
+    <li>重なりのある図は、全部たすと重なった所だけ2回数えることになる。たした合計から全体をひくと、重なりが残る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>四分円を1つだけ取り出して見る。中心は正方形のかど。半径は、かどからまん中まで。
+      <svg viewBox="0 0 300 250" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <path d="M40 20 L181.4 20 A141.4 141.4 0 0 1 40 161.4 Z" fill="#dbe9ff" stroke="none"/>
+        <rect x="40" y="20" width="200" height="200" fill="none" stroke="#222" stroke-width="2"/>
+        <path d="M181.4 20 A141.4 141.4 0 0 1 40 161.4" fill="none" stroke="#222" stroke-width="2"/>
+        <path d="M140 20 L140 120 L40 120" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <line x1="40" y1="20" x2="140" y2="120" stroke="#d32f2f" stroke-width="2.5"/>
+        <text x="96" y="62" font-size="13" fill="#d32f2f">半径</text>
+        <text x="80" y="15" font-size="12" fill="#1565c0">5cm</text>
+        <text x="8" y="75" font-size="12" fill="#1565c0">5cm</text>
+        <text x="246" y="125" font-size="12" fill="#222">10cm</text>
+        <text x="40" y="242" font-size="12" fill="#d32f2f">半径×半径÷2＝5×5 → 半径×半径＝50</text>
+      </svg></li>
+    <li>四分円1つの面積を出す。50×3.14÷4＝39.25（cm²）。4つ分は 50×3.14＝<b>157</b>（cm²）。</li>
+    <li>4つの四分円を全部かくと、正方形はすきまなくおおわれる。白い4か所は、四分円が2つ重なっている所。
+      <svg viewBox="0 0 300 250" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <rect x="40" y="20" width="200" height="200" fill="#fff" stroke="#222" stroke-width="2"/>
+        <g fill="#ffe0b2" stroke="none">
+          <path id="q1_5_lens" d="M98.6 20 A141.4 141.4 0 0 0 140 120 A141.4 141.4 0 0 0 181.4 20 Z"/>
+          <path d="M98.6 20 A141.4 141.4 0 0 0 140 120 A141.4 141.4 0 0 0 181.4 20 Z" transform="rotate(90 140 120)"/>
+          <path d="M98.6 20 A141.4 141.4 0 0 0 140 120 A141.4 141.4 0 0 0 181.4 20 Z" transform="rotate(180 140 120)"/>
+          <path d="M98.6 20 A141.4 141.4 0 0 0 140 120 A141.4 141.4 0 0 0 181.4 20 Z" transform="rotate(270 140 120)"/>
+        </g>
+        <g fill="none" stroke="#222" stroke-width="1.5">
+          <path d="M181.4 20 A141.4 141.4 0 0 1 40 161.4"/>
+          <path d="M98.6 20 A141.4 141.4 0 0 0 240 161.4"/>
+          <path d="M40 78.6 A141.4 141.4 0 0 1 181.4 220"/>
+          <path d="M240 78.6 A141.4 141.4 0 0 0 98.6 220"/>
+        </g>
+        <text x="140" y="52" font-size="12" text-anchor="middle" fill="#d32f2f">2回</text>
+        <text x="140" y="200" font-size="12" text-anchor="middle" fill="#d32f2f">2回</text>
+        <text x="66" y="125" font-size="12" text-anchor="middle" fill="#d32f2f">2回</text>
+        <text x="214" y="125" font-size="12" text-anchor="middle" fill="#d32f2f">2回</text>
+        <text x="64" y="48" font-size="11" text-anchor="middle" fill="#222">斜線</text>
+        <text x="216" y="48" font-size="11" text-anchor="middle" fill="#222">斜線</text>
+        <text x="64" y="202" font-size="11" text-anchor="middle" fill="#222">斜線</text>
+        <text x="216" y="202" font-size="11" text-anchor="middle" fill="#222">斜線</text>
+        <text x="40" y="242" font-size="12" fill="#d32f2f">色の所＝2回数えた所（白い部分）</text>
+      </svg></li>
+    <li>4つたした157から、正方形 10×10＝100 をひく。157−100＝<b>57</b>（cm²）。これが白い部分の合計。</li>
+    <li>斜線部分は、正方形から白い部分をひく。100−57＝43（cm²）。落としやすい所は、57で止めてしまうこと。</li>
+  </ol>
+  <div class="ans">答え：43cm²</div>
+  <div class="miss">今回：43 ○。用紙には赤で、字をていねいに書くようにという書きこみがある。答えの数字は、ほかの人が読める形で書く。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (6)</span> 直方体を切ると表面積がふえる <span class="type">B・5点｜立体の切断と表面積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>それぞれ平行な面で</b>」と「1400cm²大きく」。1回切ると同じ形の面が2枚増える → 「ア2枚＋イ2枚＝1400」に直して書く。この1行が書けたら、<b>3つの式をたすだけ</b>なので手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>立体を1回切ると、切り口が<b>両側に1枚ずつ</b>、合わせて2枚できる。面アに平行に切れば、面アと同じ形が2枚増える。</li>
+    <li>直方体の表面積は、（ア＋イ＋ウ）×2。同じ形の面が2枚ずつ向かい合っている。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>面アに平行に1回切った図を描く。上と下に分かれて、切り口が2枚できる。
+      <svg viewBox="0 0 320 200" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <g stroke="#222" stroke-width="1.5">
+          <polygon points="30,50 170,50 220,20 80,20" fill="#fff"/>
+          <polygon points="170,50 220,20 220,60 170,90" fill="#fff"/>
+          <rect x="30" y="50" width="140" height="40" fill="#fff"/>
+          <polygon points="30,135 170,135 220,105 80,105" fill="#ffe0b2"/>
+          <polygon points="170,135 220,105 220,145 170,175" fill="#fff"/>
+          <rect x="30" y="135" width="140" height="40" fill="#fff"/>
+        </g>
+        <text x="125" y="40" font-size="13" text-anchor="middle" fill="#222">ア</text>
+        <text x="125" y="125" font-size="12" text-anchor="middle" fill="#d32f2f">切り口（アと同じ形）</text>
+        <text x="228" y="88" font-size="12" fill="#d32f2f">←上の立体の</text>
+        <text x="228" y="103" font-size="12" fill="#d32f2f">　底にも1枚</text>
+        <text x="30" y="195" font-size="12" fill="#d32f2f">1回切る → 同じ形の面が2枚増える</text>
+      </svg></li>
+    <li>3つの切り方を、表に整理する。
+      <table>
+        <tr><th>切り方</th><th>増える面</th><th>増えた面積</th><th>1枚ずつにすると</th></tr>
+        <tr><td>アとイに平行</td><td>ア2枚＋イ2枚</td><td>1400</td><td>ア＋イ＝700</td></tr>
+        <tr><td>イとウに平行</td><td>イ2枚＋ウ2枚</td><td>1000</td><td>イ＋ウ＝500</td></tr>
+        <tr><td>アとウに平行</td><td>ア2枚＋ウ2枚</td><td>1200</td><td>ア＋ウ＝600</td></tr>
+      </table></li>
+    <li>右の列を3つともたす。700＋500＋600＝1800。ここにはア・イ・ウが2回ずつ入っている。</li>
+    <li>直方体の表面積も「ア・イ・ウが2枚ずつ」。だから、<b>1800がそのまま表面積</b>になる。</li>
+    <li>たしかめ。ア＋イ＋ウ＝900だから、ア＝400、イ＝300、ウ＝200。ア＋イ＝700で合っている。</li>
+  </ol>
+  <div class="ans">答え：1800cm²</div>
+  <div class="miss">今回：×。答案の数字は一部が読み取りにくく、用紙にも赤で「6か0かどっち」と書きこみがある。原因は答案からは決められない。解き直すときは、表の「増える面」の列を先に書いて、何枚分をたしたのかを確かめる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 合わせて10個で860円 <span class="type">A・5点｜つるかめ算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>合わせて10個</b>」と「代金は860円」。個数の合計と代金の合計がそろっている → <b>つるかめ算</b>。全部を80円のガムにして、足りない分を10円ずつうめる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>つるかめ算は、全部を片方にそろえてから、1個ずつ取りかえる。ガム1個をチョコレート1個にかえると、代金は 90−80＝<b>10円</b>増える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>10個とも全部ガムにする。80×10＝800円。</li>
+    <li>本当の代金との差を出す。860−800＝60円。</li>
+    <li>1個取りかえると10円増える。60÷10＝<b>6</b>個がチョコレート。ガムは 10−6＝4個。</li>
+    <li>たしかめ。90×6＋80×4＝540＋320＝860円。落としやすい所は、6個がどちらの個数かを取りちがえること。全部ガムから始めたので、6個はチョコレート。</li>
+  </ol>
+  <div class="ans">答え：チョコレート…6個・ガム…4個</div>
+  <div class="miss">今回：チョコレート 6・ガム 4 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 代金がちょうど1200円になる買い方 <span class="type">A・5点｜代金の式から書き出す</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>代金は1200円</b>」と「どちらも少なくとも1個は買う」。(1)とちがって個数の合計が無い → 「9×チョコ＋8×ガム＝120」に直して書く。チョコレートは<b>8の倍数</b>の個数に決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>90×□＋80×△＝1200 は、全部を10でわると 9×□＋8×△＝120 になる。数が小さいほうが調べやすい。</li>
+    <li>120も 8×△ も8でわりきれる。だから 9×□ も<b>8でわりきれる</b>。9は8でわれないので、□が8の倍数になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>式を書く。9×チョコ＋8×ガム＝120。</li>
+    <li>チョコレートの個数を、8の倍数で小さいほうから調べる。
+      <table>
+        <tr><th>チョコ</th><th>9×チョコ</th><th>残り（8×ガム）</th><th>ガム</th><th>使えるか</th></tr>
+        <tr><td>0個</td><td>0</td><td>120</td><td>15個</td><td>×（チョコが0個）</td></tr>
+        <tr><td><b>8個</b></td><td>72</td><td>48</td><td><b>6個</b></td><td>○</td></tr>
+        <tr><td>16個</td><td>144</td><td colspan="3">120をこえるので終わり</td></tr>
+      </table></li>
+    <li>当てはまるのは、チョコレート8個・ガム6個だけ。</li>
+    <li>たしかめ。90×8＋80×6＝720＋480＝1200円。落としやすい所は、チョコレート0個・ガム15個を答えに入れてしまうこと。「少なくとも1個」の丸を見直す。</li>
+  </ol>
+  <div class="ans">答え：チョコレート…8個・ガム…6個</div>
+  <div class="miss">今回：チョコレート 8・ガム 6 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 無料のガムも含めて30個・代金2500円 <span class="type">B・6点｜書き出し＋おまけの条件</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>10個買うごとにガムを1個無料</b>」と「無料でもらえるガムも含めて30個」。代金は(2)と同じく「9×チョコ＋8×ガム＝250」に直して書く。候補は4つだけなので、<b>表に無料の列を足して30個か調べる</b>。手を付けたい問題。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>無料のガムは、<b>チョコレートを10個買うごとに1個</b>。チョコレートが10〜19個なら1個、20〜29個なら2個もらえる。買ったガムの数は関係ない。</li>
+    <li>無料のガムにはお金がかからない。代金2500円の式に入るのは、買ったチョコレートと買ったガムだけ。</li>
+    <li>9×□＋8×△＝250 の□は、8ずつ増やすと次の答えになる。□を8増やすと72増える。△を9へらすと72へる。だから合計は変わらない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>代金の式を書く。90×チョコ＋80×ガム＝2500。10でわって、9×チョコ＋8×ガム＝250。</li>
+    <li>1つ目を見つける。チョコ2個なら 9×2＝18。残りは 250−18＝232。232÷8＝29で、ガム29個。</li>
+    <li>チョコを8個ずつ増やし、ガムを9個ずつへらす。無料のガムの列を足して、合計が30個になるかを調べる。ガムが9個へらせなくなったら終わり。
+      <table>
+        <tr><th>買ったチョコ</th><th>買ったガム</th><th>無料のガム</th><th>合計</th><th>30個か</th></tr>
+        <tr><td>2個</td><td>29個</td><td>0個</td><td>31個</td><td>×</td></tr>
+        <tr><td>10個</td><td>20個</td><td>1個</td><td>31個</td><td>×</td></tr>
+        <tr><td><b>18個</b></td><td>11個</td><td>1個</td><td>30個</td><td>○</td></tr>
+        <tr><td><b>26個</b></td><td>2個</td><td>2個</td><td>30個</td><td>○</td></tr>
+      </table></li>
+    <li>当てはまるのは、チョコレート18個と26個の2つ。「すべて求めなさい」なので、両方書く。</li>
+    <li>たしかめ。90×18＋80×11＝1620＋880＝2500円。90×26＋80×2＝2340＋160＝2500円。どちらも合っている。</li>
+  </ol>
+  <div class="ans">答え：18個・26個</div>
+  <div class="miss">今回：18, 26 ○。大問2は3問とも正解（用紙の小計16点）。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li><b>そのまま式に入らない部品は、形を直して書く</b>。11×2.3→25.3、「一直線」→180°、「平行に切る」→面が2枚増える。</li>
+    <li>個数の合計が無い買い物は、代金の式を10でわって<b>表に書き出す</b>。条件（少なくとも1個・無料も含めて30個）は表の列にする。</li>
+    <li>答えを書く直前に、丸をつけた「求めるもの」を見直す。1 (3) は全体の人数ではなく、両方好きな人数。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（約数の個数／6人の配置／土地をロープで分ける）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">A 30点／B 18点／C 6点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>3</td><td>約数の個数≪X≫</td><td>A 6+6 / B 6</td><td>「約数の個数」→ 素数のかけ算に直す</td></tr>
+    <tr><td>4</td><td>6人を三角形の形に配置</td><td>A 6+6 / B 6</td><td>「隣」→ 配置図で隣の場所を書き出す</td></tr>
+    <tr><td>5</td><td>長方形の土地をロープで分ける</td><td>A 6 / B 6 / C 6</td><td>「辺と平行」→ 面積の比＝辺の長さの比</td></tr>
+  </table>
+  <p>取り方: <b>Aの5問（3 (1)(2)、4 (1)(2)、5 (1)①）を先に確実に</b>。Bの3問は、入口が見えたものから手を付ける。3 (3) は (1) の16を使うので、(1) を確かめてから進む。5 (2) はCなので最後に回す。この回の算数は受験者平均60.6点、合格者平均72.3点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 2024の約数の個数 <span class="type">A・6点｜約数の個数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>約数の個数</b>」と「2024」。2024を<b>素数のかけ算に直して書く</b> → 2が3個、11が1個、23が1個。それぞれの個数に1をたしてかけると、約数の個数が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>約数の個数は、素数のかけ算に直してから出す。たとえば 12＝2×2×3。2は「0個・1個・2個」の3通り、3は「0個・1個」の2通り使える。だから 3×2＝6個。<b>「個数＋1」をかける</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2024を小さい素数で順にわる。
+<pre class="fig">2 ) 2024
+2 ) 1012
+2 )  506
+11 )  253
+       23      2024＝2×2×2×11×23</pre></li>
+    <li>2は3個、11は1個、23は1個。それぞれに1をたす。4と2と2。</li>
+    <li>かける。<b>4×2×2＝16</b>。</li>
+    <li>落としやすい所は253。2でも3でも5でも7でもわれない。11でわると23になる。ここで止めて「253は素数」としない。</li>
+  </ol>
+  <div class="ans">答え：16</div>
+  <div class="miss">今回：8 ×（答案）。知識か計算かは、式が残っていないので答案からは決められない。次は 2024＝2×2×2×11×23 を書き、(3＋1)×(1＋1)×(1＋1) まで式にする。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 約数が5個で100に最も近い数 <span class="type">A・6点｜約数の個数からもどす</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>≪A≫＝5</b>」と「100に最も近い数」。5は 1×5 としか書けない → 「<b>同じ素数を4回かけた数</b>」に直して書く。小さい素数から順に作り、100との差をくらべる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>約数の個数は「個数＋1」のかけ算。5個にするには「4＋1」しかない。つまり素数は1種類で、それを4個かけた数になる。たとえば 16＝2×2×2×2。約数は 1、2、4、8、16 の5個。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>同じ素数を4回かけた数を、小さい順に書く。
+      <table>
+        <tr><th>素数</th><th>4回かけた数</th><th>100との差</th></tr>
+        <tr><td>2</td><td>16</td><td>84</td></tr>
+        <tr><td>3</td><td><b>81</b></td><td><b>19</b></td></tr>
+        <tr><td>5</td><td>625</td><td>525</td></tr>
+      </table>
+      5で100を大きくこえた。ここで書き出しは終わり。</li>
+    <li>差がいちばん小さいのは81。</li>
+    <li>落としやすい所は「100より大きい側」。625も作って、差をくらべてから決める。</li>
+  </ol>
+  <div class="ans">答え：81</div>
+  <div class="miss">今回：81 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> ≪B≫＋≪C≫＋≪2024≫＝20 となる組 <span class="type">B・6点｜約数の個数で場合分け</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>≪B≫＋≪C≫＋≪2024≫＝20</b>」と「<b>1以上50以下</b>」。(1)の16を入れて「≪B≫＋≪C≫＝4」に直して書く → たして4は 1＋3、2＋2、3＋1 の3つだけ。(1)が16と出ていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>約数が1個の数は1だけ。約数が2個の数は素数（2、3、5…）。約数が3個の数は、<b>同じ素数を2回かけた数</b>（4＝2×2 の約数は 1、2、4）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>20−16＝4。BとCの約数の個数をたすと4になる。</li>
+    <li>1から50までの数を、約数の個数で分けて数える。
+      <table>
+        <tr><th>約数の個数</th><th>当てはまる数（50まで）</th><th>何個</th></tr>
+        <tr><td>1個</td><td>1</td><td>1個</td></tr>
+        <tr><td>2個</td><td>2、3、5、7、11、13、17、19、23、29、31、37、41、43、47</td><td><b>15個</b></td></tr>
+        <tr><td>3個</td><td>4、9、25、49</td><td>4個</td></tr>
+      </table></li>
+    <li>BとCの組を、たして4になる分け方ごとに数える。
+      <table>
+        <tr><th>≪B≫</th><th>≪C≫</th><th>式</th><th>組の数</th></tr>
+        <tr><td>1</td><td>3</td><td>1×4</td><td>4通り</td></tr>
+        <tr><td>2</td><td>2</td><td>15×15</td><td><b>225通り</b></td></tr>
+        <tr><td>3</td><td>1</td><td>4×1</td><td>4通り</td></tr>
+      </table></li>
+    <li>たす。4＋225＋4＝233通り。</li>
+    <li>BとCは別の文字。B＝1・C＝4 と、B＝4・C＝1 は別の組として数える。BとCが同じ数（どちらも2など）の組も入れる。</li>
+  </ol>
+  <div class="ans">答え：233通り</div>
+  <div class="miss">今回：空らん ×。この問題は (1) の16から始まる。先に (1) を直してから、たして4になる分け方を3つ書く。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 6人を6つの場所に並べる <span class="type">A・6点｜順列</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>6人の並び方</b>」と「<b>AからFまで名前をつけ</b>」。6つの場所は全部ちがう場所 → 6人を1列に並べるのと同じ。Aから順に、入れる人数を図の場所に書いてかける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ちがう場所に1人ずつ入れるときは、<b>入れる人数を順にかける</b>。3人を3つの場所なら 3×2×1＝6通り。1人入るたびに、残りの人が1人ずつへる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aに入れるのは6人のだれか。6通り。</li>
+    <li>Bは残りの5人。そのあと 4人、3人、2人、1人とへる。</li>
+    <li>かける。<b>6×5×4×3×2×1＝720</b>。</li>
+    <li>落としやすい所は三角形の形。回すと同じに見えるが、Aが先頭と決まっている。回した並びも別のものとして数える。</li>
+  </ol>
+  <div class="ans">答え：720通り</div>
+  <div class="miss">今回：720 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> ブルーとグリーンがAかDかF <span class="type">A・6点｜条件つきの順列</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2人をAかDかFに配置</b>」。2人はブルーとグリーン。配置図のA・D・Fに丸 → 先にこの2人の場所を決める。残りの4人は、あいた4か所に自由に入る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>条件のある人から先に置く。<b>条件のある人の置き方 × 残りの人の並び方</b> で出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ブルーの場所はA・D・Fの3通り。グリーンは残りの2通り。3×2＝6通り。</li>
+    <li>残りの4人を、あいた4か所に入れる。4×3×2×1＝24通り。</li>
+    <li>かける。<b>6×24＝144</b>。</li>
+    <li>落としやすい所は1つ目の式。「3か所から2か所をえらぶ3通り」で止めると、ブルーとグリーンの入れかえが抜ける。</li>
+  </ol>
+  <div class="ans">答え：144通り</div>
+  <div class="miss">今回：144 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> ピンクの隣にレッドとブルー <span class="type">B・6点｜隣の場所で場合分け</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ピンクの隣に</b>」と「隣というのは1m離れている位置」。隣を配置図に直して書く → ブルーはかどにいる。かどの隣は2か所だけ。<b>ピンクの場所が2通りに決まる</b>。ここまで見えたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>場所ごとに、隣の場所を書き出しておく。かど（A・D・F）の隣は2か所。まん中（B・C・E）の隣は4か所。</li>
+    <li>3つのかどは、三角形を回すと重なる。<b>1つのかどで数えて3倍</b>すればよい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ブルーをAに置く。Aの隣はBとC。ピンクはBかCに入る。まずピンクをBに置く。
+      <svg viewBox="0 0 320 250" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+        <g stroke="#222" stroke-width="1.2" stroke-dasharray="4 3" fill="none">
+          <polygon points="50,40 270,40 160,220"/>
+          <polygon points="105,130 215,130 160,40"/>
+        </g>
+        <circle cx="160" cy="220" r="15" fill="#dbe9ff" stroke="#222"/>
+        <circle cx="105" cy="130" r="15" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+        <circle cx="215" cy="130" r="15" fill="#fff" stroke="#1565c0" stroke-dasharray="3 2"/>
+        <circle cx="50" cy="40" r="15" fill="#fff" stroke="#1565c0" stroke-dasharray="3 2"/>
+        <circle cx="160" cy="40" r="15" fill="#fff" stroke="#1565c0" stroke-dasharray="3 2"/>
+        <circle cx="270" cy="40" r="15" fill="#fff" stroke="#222"/>
+        <g text-anchor="middle" fill="#222">
+          <text x="160" y="225">A</text><text x="105" y="135">B</text><text x="215" y="135">C</text>
+          <text x="50" y="45">D</text><text x="160" y="45">E</text><text x="270" y="45">F</text>
+        </g>
+        <text x="182" y="225" fill="#222">ブルー</text>
+        <text x="28" y="135" fill="#d32f2f">ピンク</text>
+        <text x="160" y="16" text-anchor="middle" fill="#1565c0">レッドは C・D・E のどこか</text>
+      </svg></li>
+    <li>Bの隣は A・C・D・E。Aはブルーが使っている。レッドは C・D・E のどこかに入る。</li>
+    <li>グリーンはかどのDかF。グリーンがDのときは、レッドがDに入れない。表にする。
+      <table>
+        <tr><th>グリーン</th><th>レッドが入れる場所</th><th>何通り</th></tr>
+        <tr><td>D</td><td>C、E</td><td>2通り</td></tr>
+        <tr><td>F</td><td>C、D、E</td><td>3通り</td></tr>
+        <tr><td colspan="2">合わせて</td><td><b>5通り</b></td></tr>
+      </table></li>
+    <li>残りの2人（イエローとブラック）は、あいた2か所に入る。2通り。5×2＝10通り。</li>
+    <li>ピンクがCのときも、左右を入れかえただけで10通り。ブルーがAのときは 10＋10＝20通り。</li>
+    <li>ブルーがD、Fのときも同じ数になる。<b>20×3＝60</b>。</li>
+  </ol>
+  <div class="ans">答え：60通り</div>
+  <div class="miss">今回：24 ×（答案）。途中の式が残っていないので、原因は答案からは決められない。次は「ブルーをAに置く → ピンクはBかC」と場所を図に書いてから数える。</div>
+  <div class="tip">コツ：「隣」の条件は、いちばん隣が少ない場所（かど）にいる人から置くと、場合分けが少なくなる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)①</span> 平行なロープで 5：3：1 に分ける <span class="type">A・6点｜面積比＝辺の比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>長方形の辺と平行</b>」と「5mごとにくい」。平行に切ると、たてが同じ長方形にならぶ → 面積の比を「<b>よこの長さの比</b>」に直して書く。90mを 5：3：1 に分ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>たてが同じ長方形は、<b>よこの長さの比がそのまま面積の比</b>になる。たて70mで、よこ50mとよこ10mなら、面積は5倍。</li>
+    <li>ロープはくいに結ぶ。分ける長さは5の倍数になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>比をたす。5＋3＋1＝9。</li>
+    <li>よこ90mを9つに分ける。90÷9＝10m。5つ分は50m、3つ分は30m、1つ分は10m。どれも5の倍数。くいがある。</li>
+    <li>たて70mは9でわり切れない。たてを分ける向きには作れない。よこを分ける。
+      <svg viewBox="0 0 340 250" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+        <rect x="40" y="40" width="270" height="190" fill="none" stroke="#222" stroke-width="1.5"/>
+        <line x1="190" y1="40" x2="190" y2="230" stroke="#d32f2f" stroke-width="2"/>
+        <line x1="280" y1="40" x2="280" y2="230" stroke="#d32f2f" stroke-width="2"/>
+        <g text-anchor="middle" fill="#d32f2f">
+          <text x="115" y="30">50m</text><text x="235" y="30">30m</text><text x="296" y="30">10m</text>
+        </g>
+        <g text-anchor="middle" fill="#222" font-size="15">
+          <text x="115" y="140">5</text><text x="235" y="140">3</text><text x="295" y="140">1</text>
+        </g>
+      </svg></li>
+    <li>落としやすい所は解答らんの書き方。ロープの線だけでなく、<b>かどからの長さ（50m・30m・10m）を3つとも</b>書き入れる。たして90mになるかも見る。</li>
+  </ol>
+  <div class="ans">答え：下の図1（よこ90mを、かどから50m・30m・10mに分ける。たての線2本。解答は例）</div>
+  <div class="miss">今回：×。よこを3つに分ける線が2本かいてあり、上に「10m」と「50m」、その下に「40m」と読める。まん中の長さは字がうすくて読めない。原因は答案からは決められない。次は3つの長さを全部はっきり書き、たして90mになるか確かめる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)②</span> 平行なロープで 12：9：8：6：4：3 に分ける <span class="type">B・6点｜比を表にならべる</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>12：9：8：6：4：3</b>」と「何本かのロープ」。6つに分かれる → たて2本・よこ1本の「<b>3列×2段の表</b>」に直して書く。6つの数が表にならべられたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>たての線とよこの線で分けた土地は、表の形になる。<b>同じ段の面積の比は、よこの長さの比</b>。同じ列の面積の比は、たての長さの比。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>6つの数を2段に分ける。12の半分の6、3分の1の4を見つける。9にも同じことをする。
+      <table>
+        <tr><th></th><th>左</th><th>まん中</th><th>右</th><th>比</th></tr>
+        <tr><td>上の段</td><td>12</td><td>8</td><td>4</td><td>3：2：1</td></tr>
+        <tr><td>下の段</td><td>9</td><td>6</td><td>3</td><td>3：2：1</td></tr>
+        <tr><td>上：下</td><td colspan="3">12：9、8：6、4：3</td><td><b>4：3</b></td></tr>
+      </table></li>
+    <li>よこ90mを 3：2：1 に分ける。90÷6＝15m。45m、30m、15m。</li>
+    <li>たて70mを 4：3 に分ける。70÷7＝10m。40m、30m。</li>
+    <li>どの長さも5の倍数。くいがある。
+      <svg viewBox="0 0 340 250" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+        <rect x="50" y="40" width="270" height="190" fill="none" stroke="#222" stroke-width="1.5"/>
+        <line x1="185" y1="40" x2="185" y2="230" stroke="#d32f2f" stroke-width="2"/>
+        <line x1="275" y1="40" x2="275" y2="230" stroke="#d32f2f" stroke-width="2"/>
+        <line x1="50" y1="149" x2="320" y2="149" stroke="#d32f2f" stroke-width="2"/>
+        <g text-anchor="middle" fill="#d32f2f">
+          <text x="117" y="30">45m</text><text x="230" y="30">30m</text><text x="298" y="30">15m</text>
+          <text x="26" y="99">40m</text><text x="26" y="194">30m</text>
+        </g>
+        <g text-anchor="middle" fill="#222" font-size="15">
+          <text x="117" y="100">12</text><text x="230" y="100">8</text><text x="298" y="100">4</text>
+          <text x="117" y="195">9</text><text x="230" y="195">6</text><text x="298" y="195">3</text>
+        </g>
+      </svg></li>
+  </ol>
+  <div class="ans">答え：下の図2（よこを45m・30m・15m、たてを40m・30mに分ける。たての線2本とよこの線1本。解答は例）</div>
+  <div class="miss">今回：空らん ×。次は6つの数を「3列×2段」の表にならべる所から始める。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> ロープ3本で 6：5：4：3：2：1 に分ける <span class="type">C・6点｜和が同じ組＋ななめの線</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>6：5：4：3：2：1</b>」と「1本以上は長方形の辺と平行」。6＋1、5＋2、4＋3 がどれも7 → 「<b>たて2本で3等分、ななめ1本で切る</b>」に直して書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>比の合計は21。土地は 70×90＝6300m²。<b>比の1は 6300÷21＝300m²</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>よこを30mずつ、たての線2本で3等分する。1つ分は比の7（2100m²）。</li>
+    <li>ななめの線1本で、下側を左から 1、2、3 にする。下側は台形。面積は 300、600、900m²。</li>
+    <li>左はしの高さを5mにする。30m進むごとに10m上がる線にする。高さは 5m、15m、25m、35m。たとえば左の台形は (5＋15)×30÷2＝300m²。両はしの5mと35mは5の倍数。くいがある。
+      <svg viewBox="0 0 360 250" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+        <rect x="50" y="40" width="270" height="190" fill="none" stroke="#222" stroke-width="1.5"/>
+        <line x1="140" y1="40" x2="140" y2="230" stroke="#d32f2f" stroke-width="2"/>
+        <line x1="230" y1="40" x2="230" y2="230" stroke="#d32f2f" stroke-width="2"/>
+        <line x1="50" y1="216" x2="320" y2="135" stroke="#d32f2f" stroke-width="2"/>
+        <g text-anchor="middle" fill="#d32f2f">
+          <text x="95" y="30">30m</text><text x="185" y="30">30m</text><text x="275" y="30">30m</text>
+          <text x="26" y="130">65m</text><text x="26" y="228">5m</text>
+          <text x="341" y="92">35m</text><text x="341" y="188">35m</text>
+        </g>
+        <g text-anchor="middle" fill="#222" font-size="15">
+          <text x="95" y="120">6</text><text x="185" y="110">5</text><text x="275" y="100">4</text>
+          <text x="105" y="224">1</text><text x="185" y="212">2</text><text x="275" y="196">3</text>
+        </g>
+      </svg></li>
+  </ol>
+  <div class="ans">答え：下の図3（よこを30mずつに分けるたての線2本と、左の辺の上から65mの点と右の辺の上から35mの点を結ぶ線1本。解答は例）</div>
+  <div class="miss">今回：空らん ×。C問題。先に 3 (1) と 5 (1)① を取り直す。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>約数の個数は、<b>素数のかけ算に直してから</b>「個数＋1」をかける。逆に個数から数をもどすときも同じ決まりを使う。</li>
+    <li>並べ方は、<b>条件のある人を先に図に置く</b>。「隣」は場所ごとに書き出す。</li>
+    <li>辺と平行に切った土地は、<b>面積の比を長さの比に直す</b>。長さが5の倍数かを最後に見る。</li>
+  </ul>
+</section>
+</div>
