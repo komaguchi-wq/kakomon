@@ -1,0 +1,605 @@
+<!-- generated kakomon sfc/2014-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（計算・食塩水・円柱の容積／旅人算・差集め・円グラフ・面積比／重なる正方形の周りの長さ）</a></li>
+<li><a href="#4-5-6">大問4・5・6（水そうと立体／約束記号／仕事算）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（計算・食塩水・円柱の容積／旅人算・差集め・円グラフ・面積比／重なる正方形の周りの長さ）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 40点／B 10点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)</td><td>□をもどして出す計算</td><td>A 5</td><td>□が分母にある → 「48/□」をひとかたまりで出す</td></tr>
+    <tr><td>1 (2)</td><td>食塩水を3つまぜる</td><td>A 5</td><td>こさが3つ → 食塩の重さに直す</td></tr>
+    <tr><td>1 (3)</td><td>円柱の容積</td><td>A 5</td><td>答えの単位がL → cm³で出して÷1000</td></tr>
+    <tr><td>2 (1)</td><td>池の周りの追いつき</td><td>A 5</td><td>同じ方向 → 速さの差で1周分をわる</td></tr>
+    <tr><td>2 (2)</td><td>ジュースの分け方</td><td>A 5</td><td>「6人分足りない」→ cm³に直す</td></tr>
+    <tr><td>2 (3)</td><td>円グラフと人数</td><td>A 5</td><td>60° → ぶどう以外は300°</td></tr>
+    <tr><td>2 (4)</td><td>辺を2倍にのばした三角形</td><td>A 5</td><td>2倍にのばす → 同じ高さの三角形をさがす</td></tr>
+    <tr><td>3 (1)</td><td>重なる正方形の周り</td><td>A 5</td><td>階段の形 → 大きな正方形の周りと同じ</td></tr>
+    <tr><td>3 (2)(3)</td><td>正方形を30個まで置く</td><td>B 5+5</td><td>1辺が 2、3、4…とふえていく</td></tr>
+  </table>
+  <p>取り方: <b>大問1・2の7問と3 (1)を先に確実に</b>とる。3 (2)(3)は、3 (1)で「大きな正方形の1辺＝2＋3＋4」と書けていれば<b>同じ足し算の続き</b>で出せる。書けていなければ大問4より後を先に回る。この回は全体で8割が目安。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> □が分母にある計算 <span class="type">A・5点｜もどして考える計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は右はしの「<b>＝2</b>」と、□が分母にある「<b>48/□</b>」。□だけを追わず、48/□ をひとかたまりの数に直して書く → 後ろから順にもどせば 48/□ が出て、□が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>□のある式は、計算の順番の<b>逆からもどす</b>。たとえば（6−△）÷3＝1 なら、先に 1×3＝3。次に 6−3＝3 で△が出る。</li>
+    <li>小数÷小数は、両方を同じだけ大きくしてからわる。10.5÷1.75 は 1050÷175 と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>□のない所を先に計算する。10.5÷1.75＝1050÷175＝<b>6</b>。</li>
+    <li>式は「（6−48/□×5/9）÷1 8/9＝2」になった。わり算をもどす。2×1 8/9＝2×17/9＝34/9。</li>
+    <li>かっこの中は「6−（48/□×5/9）＝34/9」。ひき算をもどす。6−34/9＝54/9−34/9＝20/9。</li>
+    <li>「48/□×5/9＝20/9」になった。かけ算をもどす。20/9÷5/9＝<b>4</b>。これが 48/□。</li>
+    <li>48÷□＝4 だから、□は 48÷4＝12。</li>
+    <li>落としやすい所は最後。4 を出した所で止まると、□に4と書いてしまう。48÷4 までやってから答えを書く。</li>
+  </ol>
+  <div class="ans">答え：12</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 3つの食塩水をまぜて8.8% <span class="type">A・5点｜食塩水（食塩の重さ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>12％の食塩水150g</b>」などの3組と「<b>8.8％</b>」。％のままでは式に入らない。それぞれ食塩の重さ（g）に直して書く → できた食塩水の食塩から、分かっている2つをひけば残りが出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>食塩の重さは「食塩水の重さ×こさ」。たとえば10%の食塩水200gなら、食塩は 200×0.1＝20g。</li>
+    <li>まぜても、<b>食塩の重さの合計は変わらない</b>。食塩水の重さも、たした分になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を書く。分かる所から食塩の重さを入れる。
+      <table>
+        <tr><th>食塩水</th><th>重さ</th><th>こさ</th><th>食塩の重さ</th></tr>
+        <tr><td>1つ目</td><td>150g</td><td>12%</td><td>150×0.12＝18g</td></tr>
+        <tr><td>2つ目</td><td>60g</td><td>8%</td><td>60×0.08＝4.8g</td></tr>
+        <tr><td>3つ目</td><td>90g</td><td>□%</td><td><b>？</b></td></tr>
+        <tr><td>できたもの</td><td>300g</td><td>8.8%</td><td>300×0.088＝<b>26.4g</b></td></tr>
+      </table>
+    </li>
+    <li>1つ目と2つ目の食塩をたす。18＋4.8＝22.8g。</li>
+    <li>3つ目の食塩は、全体からひく。26.4−22.8＝<b>3.6g</b>。</li>
+    <li>こさにもどす。3.6÷90＝0.04。だから4%。</li>
+    <li>落としやすい所は、できた食塩水の重さ。150＋60 の210gで計算すると合わない。90gもたして300gにする。</li>
+  </ol>
+  <div class="ans">答え：4</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 円柱の入れ物の容積をLで <span class="type">A・5点｜体積と単位</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>半径10cm</b>」と答えの単位「<b>L</b>」に丸。体積はcm³で出る。そのままでは答えに入らない → ÷1000 に直して書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円柱の体積は「底面積×高さ」。底面積は「半径×半径×3.14」。</li>
+    <li><b>1L＝1000cm³</b>。1辺10cmの立方体の入れ物が、ちょうど1L。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3.14は最後にかける。先に 10×10×20＝2000。</li>
+    <li>2000×3.14＝<b>6280</b>（cm³）。</li>
+    <li>Lに直す。6280÷1000＝6.28（L）。</li>
+    <li>落としやすい所は2つ。「半径」を直径と読んで5×5にしない。6280 のまま答えのらんに書かない。</li>
+  </ol>
+  <div class="ans">答え：6.28</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 池の周りでA君がB君に追いつく <span class="type">A・5点｜旅人算（追いつき）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同じ方向</b>」と「<b>1周多く回って</b>」。「1周多く」は「A君が3000m多く進む」に直して書く → 1分でつく差 60−45 でわれば分が出る。答え方の「何時間何分後」にも丸。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ方向に進むと、1分ごとに<b>速さの差</b>だけはなれていく。毎分60mと毎分45mなら、1分で15mはなれる。</li>
+    <li>池の周りでは、はなれた長さが1周分になったとき、速い人が後ろから追いつく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>単位をそろえる。3km＝<b>3000m</b>。</li>
+    <li>1分でつく差を出す。60−45＝15（m）。</li>
+    <li>3000mの差がつくまでの時間を出す。3000÷15＝<b>200</b>（分）。</li>
+    <li>時間と分に直す。200÷60＝3 あまり 20。だから3時間20分後。</li>
+    <li>落としやすい所は2つ。3kmのまま 3÷15 としない。200分のまま答えを書かない。</li>
+  </ol>
+  <div class="ans">答え：3時間20分後</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> ジュースを250cm³ずつ分けたら6人分足りない <span class="type">A・5点｜差集め算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ちょうど6人分足りなく</b>」。人数のままでは式に入らない。250×6＝1500cm³ の不足に直して書く → 1人あたりの差 100cm³ でわれば人数が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ人数に配るとき、「全体の差÷1人あたりの差＝人数」。たとえば1人10円ずつ多く配って全体で50円多くいるなら、5人。</li>
+    <li>「6人分足りない」は、<b>まちがえた配り方（250cm³）の6人分</b>。150cm³の6人分ではない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2つの配り方をならべて書く。
+      <table>
+        <tr><th>1人あたり</th><th>全員に配ると</th></tr>
+        <tr><td>150cm³</td><td>ちょうど</td></tr>
+        <tr><td>250cm³</td><td><b>1500cm³</b> 足りない（250×6）</td></tr>
+      </table>
+    </li>
+    <li>全員に配るのに必要な量の差は、1500cm³。</li>
+    <li>1人あたりの差は 250−150＝100（cm³）。</li>
+    <li>人数を出す。1500÷100＝<b>15</b>（人）。</li>
+    <li>たしかめ。ジュースは 150×15＝2250cm³。250cm³ずつだと 2250÷250＝9人分。15−9＝6人分足りない。合っている。</li>
+    <li>落としやすい所は不足の量。150×6＝900 にすると 9人になってしまう。</li>
+  </ol>
+  <div class="ans">答え：15人</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 円グラフで「ぶどう」が60° <span class="type">A・5点｜割合（円グラフ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】資料の正体は「<b>一番好きなくだもの</b>の人数の表・ぶどうだけ空らん」。部品は「<b>中心部分の角度は60°</b>」。60°は 60/360＝全体の1/6 に直して書く → 残りの5/6が、表の33＋27＋10人。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円グラフの中心の角は、全部で360°。角度の割合が、そのまま人数の割合になる。90°なら全体の1/4。</li>
+    <li>分かっている人数と、その人数の割合がそろえば、全体は「人数÷割合」で出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ぶどう以外の人数をたす。33＋27＋10＝<b>70</b>（人）。</li>
+    <li>ぶどう以外の角度を出す。360−60＝300（°）。全体の 300/360＝<b>5/6</b>。</li>
+    <li>全体の5/6が70人。全体は 70÷5/6＝70×6/5＝84（人）。</li>
+    <li>たしかめ。ぶどうは 84−70＝14人。14÷84＝1/6。360°の1/6は60°。合っている。</li>
+    <li>落としやすい所は答えるもの。聞かれているのは合計らんのA。ぶどうの14人ではない。</li>
+  </ol>
+  <div class="ans">答え：84</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (4)</span> 三角形ABCの辺を2倍にのばした三角形DEF <span class="type">A・5点｜辺の比と面積の比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>面積が24cm²</b>」と「<b>2倍になるようにのばした</b>」。24は図の三角形ABCの中に書く。「2倍にのばす」は「のばした分も、もとの辺と同じ長さ」に直して図に印をつける → 底辺が同じ長さの三角形が外側にできる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>高さが同じ三角形は、<b>底辺の長さが同じなら面積も同じ</b>。たとえば1つの三角形を、底辺のまん中と頂点を結ぶ線で分けると、面積は半分ずつ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>AとEを線で結ぶ。三角形ABCと三角形ACEをくらべる。底辺BCとCEは同じ長さ。高さも同じ。だから三角形ACEは<b>24cm²</b>。
+<svg viewBox="0 0 320 260" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<polygon points="200,110 205,200 300,235" fill="#ffe0b2"/>
+<polygon points="200,110 300,235 195,20" fill="#c8e6c9"/>
+<polygon points="200,110 110,165 205,200" fill="#dbe9ff"/>
+<polygon points="20,220 300,235 195,20" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="200" y1="110" x2="20" y2="220" stroke="#222" stroke-width="1.5"/>
+<line x1="110" y1="165" x2="300" y2="235" stroke="#222" stroke-width="1.5"/>
+<line x1="205" y1="200" x2="195" y2="20" stroke="#222" stroke-width="1.5"/>
+<line x1="200" y1="110" x2="300" y2="235" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="206" y="108">A</text><text x="100" y="158">B</text><text x="196" y="216">C</text>
+<text x="6" y="232">D</text><text x="304" y="244">E</text><text x="190" y="14">F</text>
+<text x="160" y="165" fill="#222" font-weight="bold">24</text>
+<text x="222" y="190" fill="#d32f2f" font-weight="bold">24</text>
+<text x="222" y="125" fill="#d32f2f" font-weight="bold">24</text>
+<text x="70" y="254" fill="#1565c0">点線＝かき足す線AE</text>
+</svg></li>
+    <li>次に三角形ACEと三角形AEFをくらべる。底辺CAとAFは同じ長さ。高さも同じ。だから三角形AEFも24cm²。</li>
+    <li>外側の三角形FCEは 24＋24＝<b>48</b>（cm²）。三角形ABCの2倍。</li>
+    <li>ほかの2つの外側も同じように考える。三角形FDAも48cm²。三角形EBDも48cm²。</li>
+    <li>全部たす。48×3＋24＝168（cm²）。三角形ABCの7倍。</li>
+    <li>落としやすい所は最後のたし算。外側の3つだけをたして144にしない。まん中の24もたす。</li>
+  </ol>
+  <div class="ans">答え：168cm²</div>
+  <div class="tip">コツ：「辺を2倍にのばした三角形」は、もとの三角形の7倍。3倍にのばす問題でも、同じように頂点を結ぶ線を1本かき足して考える。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 正方形A・B・Cが重なった図形の周りの長さ <span class="type">A・5点｜図形の周りの長さ（辺の移動）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Bの1つの頂点がAの対角線の交点と重なり</b>」と「<b>太線の部分の長さ</b>」。交点は正方形のまん中。だから重なる長さは 2÷2＝1cm と図に置く → でこぼこの辺を外へ動かすと、大きな正方形の周りになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>階段の形の周りの長さは、<b>辺を外へ平行に動かすと長方形の周りと同じ</b>になる。たとえば たて3cm・横5cmの長方形の角を1つ切り取った階段の形は、周りが（3＋5）×2＝16cm のまま。</li>
+    <li>正方形の対角線の交点は、正方形のまん中。辺からのきょりは1辺の半分。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>全体をかこむ大きな正方形を点線でかく。太線のでこぼこは、どれも大きな正方形の辺と平行。外へ動かすと、ちょうど点線の上にならぶ。
+<svg viewBox="0 0 334 320" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<polygon points="40.0,160.0 68.3,131.7 96.6,160.0 68.3,188.3" fill="none" stroke="#222" stroke-width="1"/>
+<polygon points="68.3,160.0 124.9,103.4 181.4,160.0 124.9,216.6" fill="none" stroke="#222" stroke-width="1"/>
+<polygon points="124.9,160.0 209.7,75.1 294.6,160.0 209.7,244.9" fill="none" stroke="#222" stroke-width="1"/>
+<polygon points="40.0,160.0 68.3,131.7 82.4,145.9 124.9,103.4 153.1,131.7 209.7,75.1 294.6,160.0 209.7,244.9 153.1,188.3 124.9,216.6 82.4,174.1 68.3,188.3" fill="#dbe9ff" fill-opacity="0.5" stroke="#222" stroke-width="3"/>
+<polygon points="40.0,160.0 167.3,32.7 294.6,160.0 167.3,287.3" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6 4"/>
+<line x1="124.9" y1="216.6" x2="110.7" y2="230.7" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="110.7" cy="230.7" r="3" fill="#d32f2f"/>
+<line x1="209.7" y1="244.9" x2="167.3" y2="287.3" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="167.3" cy="287.3" r="3" fill="#d32f2f"/>
+<line x1="68.3" y1="188.3" x2="68.3" y2="188.3" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="68.3" cy="188.3" r="3" fill="#d32f2f"/>
+<text x="45.1" y="188.1" fill="#d32f2f" font-weight="bold" text-anchor="end">2cm</text>
+<text x="80.5" y="223.5" fill="#d32f2f" font-weight="bold" text-anchor="end">3cm</text>
+<text x="130.0" y="273.0" fill="#d32f2f" font-weight="bold" text-anchor="end">4cm</text>
+<text x="167.3" y="24.700000000000003" fill="#1565c0" text-anchor="middle">大きな正方形</text>
+<text x="64.3" y="165.0" fill="#222">A</text><text x="120.9" y="165.0" fill="#222">B</text><text x="205.7" y="165.0" fill="#222">C</text>
+</svg></li>
+    <li>大きな正方形の左下の辺を、3つに分けて読む。はじめはAの辺で2cm。</li>
+    <li>次はBの辺。Bは4cmだが、Aのまん中から始まる。Aの半分の1cmがAとかぶる。新しくのびるのは 4−2÷2＝<b>3</b>（cm）。</li>
+    <li>次はCの辺。Cは6cmで、Bのまん中から始まる。Bの半分の2cmがかぶる。新しくのびるのは 6−4÷2＝<b>4</b>（cm）。</li>
+    <li>大きな正方形の1辺は 2＋3＋4＝9（cm）。周りの長さは 9×4＝36（cm）。</li>
+    <li>落としやすい所は、3つの正方形の周りをたす方法。8＋16＋24＝48 から重なりをひこうとすると、ひく長さを数えまちがえやすい。</li>
+  </ol>
+  <div class="ans">答え：36cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 30個目までの正方形を置いたときの周りの長さ <span class="type">B・5点｜図形と規則（等差数列の和）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>8cm，10cm，12cm，……</b>」と「<b>30個目まで</b>」。(1)の 2＋3＋4 の続きを表に直して書く → 1個ふえるごとに、たす数が1ずつ大きくなる。(1)で9cmが出ていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1ずつふえる数の和は「（はじめ＋終わり）×個数÷2」。たとえば 2＋3＋4 は（2＋4）×3÷2＝9。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>4個目（1辺8cm）を置く。3個目のCのまん中から始まる。Cの半分の3cmがかぶる。新しくのびるのは 8−6÷2＝<b>5</b>（cm）。</li>
+    <li>表にする。新しくのびる長さは、いつも「個数＋1」。
+      <table>
+        <tr><th>置いた個数</th><th>1個</th><th>2個</th><th>3個</th><th>4個</th><th>…</th><th>30個</th></tr>
+        <tr><td>新しくのびる長さ（cm）</td><td>2</td><td>3</td><td>4</td><td>5</td><td>…</td><td><b>31</b></td></tr>
+        <tr><td>大きな正方形の1辺（cm）</td><td>2</td><td>5</td><td>9</td><td>14</td><td>…</td><td>？</td></tr>
+      </table>
+    </li>
+    <li>30個のときの1辺は、2から31までの30個の数の和。（2＋31）×30÷2＝<b>495</b>（cm）。</li>
+    <li>周りの長さは 495×4＝1980（cm）。</li>
+  </ol>
+  <div class="ans">答え：1980cm</div>
+  <div class="tip">コツ：終わりの数は30ではなく31。「2から始まって30個」だから、終わりは 2＋29＝31 になる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 周りの長さが416cmになる個数 <span class="type">B・5点｜図形と規則（書き出し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>周りの長さは416cm</b>」。周りのままでは(2)の表に入らない。416÷4＝104cm と、大きな正方形の1辺に直して書く → 2＋3＋4＋… を104になるまで書き出す。(2)の表ができていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(2)の決まりを使う。大きな正方形の1辺は 2＋3＋4＋… と、<b>たす数が1ずつ大きくなる</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1辺を出す。416÷4＝<b>104</b>（cm）。</li>
+    <li>(2)の表の続きを書く。104が出たら終わり。
+      <table>
+        <tr><th>個数</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th></tr>
+        <tr><td>たす数</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+        <tr><td>1辺（cm）</td><td>14</td><td>20</td><td>27</td><td>35</td><td>44</td><td>54</td><td>65</td><td>77</td><td>90</td><td><b>104</b></td></tr>
+      </table>
+    </li>
+    <li>最後にたした数は14。たす数は「個数＋1」だった。だから個数は 14−1＝13（個目）。</li>
+    <li>たしかめ。（2＋14）×13÷2＝104。合っている。</li>
+  </ol>
+  <div class="ans">答え：13</div>
+  <div class="tip">コツ：最後にたした14をそのまま答えにしない。たす数と個数は1ずれている。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ（この3つの大問で繰り返し出た入口）</h2>
+  <ul>
+    <li><b>そのまま式に入らない部品は、形を直して書く</b>。％→食塩のg、3km→3000m、6人分→1500cm³、60°→1/6、周り416cm→1辺104cm。</li>
+    <li>答える単位と答えるものに丸をつける。L、何時間何分後、合計らんのA、□個目。</li>
+    <li>大問3は、(1)で書いた「2＋3＋4」が(2)(3)の<b>表の出だし</b>になる。小さい数で決まりを書いてから大きい数に進む。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4-5-6"><h1 class="dtitle">大問4・5・6（水そうと立体／約束記号／仕事算）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4〜6</span> この回の全体像（担当の大問） <span class="type">A 27点／B 23点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>4</td><td>水そうに立体を入れる</td><td>A 6 / B 6+6</td><td>「底から○cm」→ 正面から見た図に水面の線を引く</td></tr>
+    <tr><td>5</td><td>約束記号（最大公約数・最小公倍数）</td><td>A 5+6 / B 6</td><td>「△」「☆」→ 言葉に直してから計算する</td></tr>
+    <tr><td>6</td><td>仕事算・つるかめ算</td><td>A 5+5 / B 5</td><td>「8日間」「12日間」「36日間」→ 全体を72にする</td></tr>
+  </table>
+  <p>取り方: <b>Aの5問（4(1)・5(1)(2)・6(1)(2)）を先に確実に</b>取る。Bの4(3)と5(3)は、前の小問で出した数（348と27個）がそのまま使える。前の小問が解けていたら手を付ける。6(3)は面積図が描ければ式は1本で終わる。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 立体が全部しずむときの水の量 <span class="type">A・6点｜水そうと体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>底から10cm</b>」と「入れた水の量」。立体の高さは8cmで、10cmより低い。立体は全部しずむ → <b>「水＋立体＝10×10×10」に直して書く</b>。あとは立体の体積をひく。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>水面より下には、水と、しずんだ立体が入っている。だから「<b>水の体積＋しずんだ立体の体積＝水そうの底面積×水面の高さ</b>」になる。</li>
+    <li>柱の体積は「底面積×高さ」。この立体は、台形の面を底面とみると、高さ8cmの柱になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>水そうを正面から見た図を描く。立体は台形に見える。上が6cm、下が8cm、高さが8cm。
+<svg viewBox="0 0 320 310" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+  <rect x="60" y="120" width="160" height="160" fill="#dbe9ff"/>
+  <polygon points="76,280 204,280 172,152 76,152" fill="#fff" stroke="#222" stroke-width="2"/>
+  <polyline points="60,40 60,280 220,280 220,40" fill="none" stroke="#222" stroke-width="2.5"/>
+  <line x1="60" y1="120" x2="220" y2="120" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="124" y="146" text-anchor="middle" fill="#222">6cm</text>
+  <text x="140" y="298" text-anchor="middle" fill="#222">8cm</text>
+  <text x="116" y="222" text-anchor="middle" fill="#222">立体</text>
+  <line x1="90" y1="152" x2="90" y2="280" stroke="#222" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="95" y="250" fill="#222">8cm</text>
+  <line x1="44" y1="120" x2="44" y2="280" stroke="#d32f2f" stroke-width="1.5"/>
+  <line x1="38" y1="120" x2="50" y2="120" stroke="#d32f2f" stroke-width="1.5"/>
+  <line x1="38" y1="280" x2="50" y2="280" stroke="#d32f2f" stroke-width="1.5"/>
+  <text x="36" y="204" text-anchor="end" fill="#d32f2f">10cm</text>
+  <text x="228" y="124" fill="#1565c0">水面</text>
+  <text x="140" y="24" text-anchor="middle" fill="#222">水そうの横はば 10cm</text>
+</svg></li>
+    <li>水面より下の全部の体積を出す。10×10×10＝<b>1000</b>(cm³)。これは水と立体を合わせた体積。</li>
+    <li>立体の体積を出す。台形の面積は (6＋8)×8÷2＝56(cm²)。おくゆきが8cmだから、56×8＝<b>448</b>(cm³)。</li>
+    <li>水の量は 1000−448＝552(cm³)。</li>
+    <li>落としやすい所。1000をそのまま答えにしない。聞かれているのは「入れた水の量」だから、立体の分をひく。</li>
+  </ol>
+  <div class="ans">答え：552cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 水面6cmで立体を取り出す <span class="type">B・6点｜水そうと体積・相似</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>底から6cm</b>」と「<b>水そうから取り出す</b>」。こんどは立体の上2cmが水面から出る。図の高さ6cmに線を引き、<b>そこの横はばを書きこむ</b> → しずんだ部分の体積が出る。ななめの辺の相似が使えそうなら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ななめの辺は、8cm上がる間に横へ2cmずれる（下8cm→上6cm）。だから<b>2cm上がると、横へ0.5cmずれる</b>。相似な三角形で、高さが1/4なら横も1/4になる。</li>
+    <li>立体を取り出すと、水だけが残る。水の体積は変わらない。水面の高さは「水の体積÷水そうの底面積」で出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>正面から見た図に、高さ6cmの水面の線を引く。水面より下の全部の体積は 10×10×6＝600(cm³)。</li>
+    <li>水面の高さでの立体の横はばを出す。上の面から2cm下がった所だから、横はばは 6＋0.5＝<b>6.5</b>(cm)。
+<svg viewBox="0 0 340 310" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+  <rect x="60" y="184" width="160" height="96" fill="#dbe9ff"/>
+  <polygon points="76,280 204,280 172,152 76,152" fill="#fff" stroke="#222" stroke-width="2"/>
+  <polygon points="76,280 204,280 180,184 76,184" fill="#ffe0b2" stroke="#222" stroke-width="2"/>
+  <polyline points="60,40 60,280 220,280 220,40" fill="none" stroke="#222" stroke-width="2.5"/>
+  <line x1="76" y1="184" x2="180" y2="184" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="128" y="202" text-anchor="middle" fill="#d32f2f" font-weight="bold">6.5cm</text>
+  <text x="124" y="146" text-anchor="middle" fill="#222">6cm</text>
+  <text x="140" y="298" text-anchor="middle" fill="#222">8cm</text>
+  <text x="130" y="246" text-anchor="middle" fill="#222">しずんだ部分</text>
+  <line x1="172" y1="152" x2="172" y2="184" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="228" y="166" fill="#1565c0">2cm下がる</text>
+  <text x="228" y="183" fill="#1565c0">→ 0.5cmずれる</text>
+  <line x1="44" y1="184" x2="44" y2="280" stroke="#222" stroke-width="1.5"/>
+  <line x1="38" y1="184" x2="50" y2="184" stroke="#222" stroke-width="1.5"/>
+  <line x1="38" y1="280" x2="50" y2="280" stroke="#222" stroke-width="1.5"/>
+  <text x="36" y="237" text-anchor="end" fill="#222">6cm</text>
+  <text x="140" y="24" text-anchor="middle" fill="#222">水そうの横はば 10cm</text>
+</svg></li>
+    <li>しずんだ部分は、上6.5cm、下8cm、高さ6cmの台形の柱。台形の面積は (6.5＋8)×6÷2＝43.5(cm²)。体積は 43.5×8＝<b>348</b>(cm³)。</li>
+    <li>水の体積は 600−348＝252(cm³)。</li>
+    <li>立体を取り出す。水だけになるから、高さは 252÷(10×10)＝2.52(cm)。</li>
+  </ol>
+  <div class="ans">答え：2.52cm</div>
+  <div class="tip">コツ：ここで出した「下から6cmまでの体積＝348cm³」は、(3)でもう一度使う。図の横にメモしておく。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 立体を持ち上げたときの水面 <span class="type">B・6点｜水そうと体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1Lの水</b>」と「<b>水面から上に2cm</b>」。1Lは1000cm³に直して書く。上の面が水面より2cm上 → しずむのは立体の下から6cmまで。<b>(2)の348cm³と同じ形</b>と気づいたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1L＝1000cm³。</li>
+    <li>立体が底からういていても、決まりは同じ。「<b>水の体積＋しずんだ部分の体積＝水そうの底面積×水面の高さ</b>」。水面より下にあるものを全部たせばよい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>持ち上げたあとの図を描く。立体の高さは8cm。上の面が水面より2cm上だから、水の中にあるのは下から 8−2＝6(cm) まで。
+<svg viewBox="0 0 340 310" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+  <rect x="60" y="64" width="160" height="216" fill="#dbe9ff"/>
+  <polygon points="76,160 204,160 172,32 76,32" fill="#fff" stroke="#222" stroke-width="2"/>
+  <polygon points="76,160 204,160 180,64 76,64" fill="#ffe0b2" stroke="#222" stroke-width="2"/>
+  <polyline points="60,40 60,280 220,280 220,40" fill="none" stroke="#222" stroke-width="2.5"/>
+  <line x1="60" y1="64" x2="220" y2="64" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="128" y="110" text-anchor="middle" fill="#222">しずんだ部分</text>
+  <text x="128" y="128" text-anchor="middle" fill="#d32f2f" font-weight="bold">348cm³</text>
+  <text x="140" y="230" text-anchor="middle" fill="#222">水 1000cm³</text>
+  <line x1="236" y1="32" x2="236" y2="64" stroke="#222" stroke-width="1.5"/>
+  <line x1="230" y1="32" x2="242" y2="32" stroke="#222" stroke-width="1.5"/>
+  <line x1="230" y1="64" x2="242" y2="64" stroke="#222" stroke-width="1.5"/>
+  <text x="246" y="53" fill="#222">2cm</text>
+  <line x1="44" y1="64" x2="44" y2="280" stroke="#d32f2f" stroke-width="1.5"/>
+  <line x1="38" y1="64" x2="50" y2="64" stroke="#d32f2f" stroke-width="1.5"/>
+  <line x1="38" y1="280" x2="50" y2="280" stroke="#d32f2f" stroke-width="1.5"/>
+  <text x="36" y="176" text-anchor="end" fill="#d32f2f">□cm</text>
+  <text x="246" y="80" fill="#1565c0">水面</text>
+  <text x="140" y="300" text-anchor="middle" fill="#222">水そうの横はば 10cm</text>
+</svg></li>
+    <li>(2)でも、水の中にあったのは下から6cmまでだった。しずんだ部分の体積は、(2)と同じ<b>348</b>cm³。</li>
+    <li>水面より下の全部の体積をたす。1000＋348＝<b>1348</b>(cm³)。</li>
+    <li>水面の高さは 1348÷(10×10)＝13.48(cm)。</li>
+    <li>たしかめ。水面がいちばん高いのは、持ち上げる前。立体が全部しずんでいて、(1000＋448)÷(10×10)＝14.48(cm)。水そうの深さ15cmより低いから、水はこぼれていない。1000cm³のまま計算してよい。</li>
+  </ol>
+  <div class="ans">答え：13.48cm</div>
+  <div class="tip">コツ：立体が底についているか、ういているかは気にしなくてよい。「水面より下に、立体が何cm³あるか」だけを見る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> △と☆の計算 <span class="type">A・5点｜約束記号</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は約束の「<b>最大公約数</b>」と「<b>最小公倍数</b>」。式の△の上に「公約数」、☆の上に「公倍数」と書きこむ（直して書く）→ <b>かっこ1つずつを数に直して</b>、最後にたしひきする。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>最大公約数は、2つの数を両方わり切れる数のうち、いちばん大きい数。66と30なら6。</li>
+    <li>最小公倍数は、2つの数の両方の倍数になっている数のうち、いちばん小さい数。<b>32と2なら32</b>（32がもう2の倍数だから）。13と2なら26。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>先に、かっこの中のわり算をする。64÷2＝32。26÷2＝13。</li>
+    <li>4つのかたまりを、1つずつ数に直す。
+      <table>
+        <tr><th>かたまり</th><th>言葉に直す</th><th>数</th></tr>
+        <tr><td>66△30</td><td>66と30の最大公約数</td><td><b>6</b></td></tr>
+        <tr><td>32☆2</td><td>32と2の最小公倍数</td><td><b>32</b></td></tr>
+        <tr><td>13☆2</td><td>13と2の最小公倍数</td><td><b>26</b></td></tr>
+        <tr><td>10△30</td><td>10と30の最大公約数</td><td><b>10</b></td></tr>
+      </table>
+    </li>
+    <li>たしひきする。6＋32−26−10＝2。</li>
+    <li>落としやすい所。△と☆を逆に読むと、全部の数が変わる。式に書きこんだ「公約数」「公倍数」を見てから計算する。</li>
+  </ol>
+  <div class="ans">答え：2</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 30との最大公約数が2になる数 <span class="type">A・6点｜約束記号・倍数の個数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>100以下の整数</b>」と「<b>a△30＝2</b>」。式を「aを2でわった数は、3でも5でもわれない」に直して書く → <b>1から50までで、3の倍数でも5の倍数でもない数</b>を数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>30＝2×3×5。aと30の最大公約数が2だから、aは2でわれる。そして<b>aを2でわった数は、3でも5でもわれない</b>。たとえば a＝12 は、2でわると6。6は3でわれるから、12と30の最大公約数は6になってしまう。</li>
+    <li>3の倍数と5の倍数のならび方は、15個ごとに同じになる（15は3と5の最小公倍数）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>連除法の形を書く。aを2でわった数を□とする。□と15に、1以外の同じ約数があってはいけない。
+<pre class="fig">2 ) a   30
+    □   15      15＝3×5 → □は3の倍数でも5の倍数でもない</pre></li>
+    <li>□の大きさを決める。aは100以下だから、□は 100÷2＝<b>50以下</b>。</li>
+    <li>1から15までを書いて、3の倍数と5の倍数を消す。残るのは8個。
+      <table>
+        <tr><th>□</th><th>残る数（3の倍数でも5の倍数でもない）</th><th>個数</th></tr>
+        <tr><td>1〜15</td><td>1, 2, 4, 7, 8, 11, 13, 14</td><td><b>8個</b></td></tr>
+        <tr><td>16〜30</td><td>16, 17, 19, 22, 23, 26, 28, 29</td><td>8個</td></tr>
+        <tr><td>31〜45</td><td>31, 32, 34, 37, 38, 41, 43, 44</td><td>8個</td></tr>
+        <tr><td>46〜50</td><td>46, 47, 49</td><td>3個</td></tr>
+      </table>
+      50÷15＝3あまり5。15個のまとまりが3回と、あまりの5個（46〜50）で終わり。</li>
+    <li>たす。8×3＋3＝27(個)。□が1つ決まれば、aも1つ決まる。aも27個。</li>
+    <li>落としやすい所。あまりの46〜50を数えわすれると24個になる。48は3の倍数、50は5の倍数だから消える。</li>
+  </ol>
+  <div class="ans">答え：27個</div>
+  <div class="tip">コツ：この表は(3)でそのまま使う。消さずに残しておく。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> (a÷2)☆2＝a になる数 <span class="type">B・6点｜約束記号・倍数の個数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>(2)で求めたaのうち</b>」と「<b>(a÷2)☆2＝a</b>」。a÷2 は(2)の□のこと。式を「□と2の最小公倍数が、□の2倍」に直して書く → <b>□が奇数</b>と決まる。(2)の表が残っていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2との最小公倍数は、相手が奇数か偶数かで変わる。<b>7と2なら14（7の2倍）</b>。4と2なら4（4のまま）。</li>
+    <li>aは□の2倍。だから、最小公倍数が「□の2倍」になる奇数のときだけ、式が合う。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小さい数でためす。□＝4（a＝8）のとき、4と2の最小公倍数は4。8と同じにならない。□＝7（a＝14）のとき、7と2の最小公倍数は14。aと同じになる。</li>
+    <li>当てはまるのは、□が奇数のとき。(2)の表の27個から、奇数だけに○をつける。
+      <table>
+        <tr><th>□</th><th>(2)で残った数のうち奇数</th><th>個数</th></tr>
+        <tr><td>1〜15</td><td>1, 7, 11, 13</td><td>4個</td></tr>
+        <tr><td>16〜30</td><td>17, 19, 23, 29</td><td>4個</td></tr>
+        <tr><td>31〜45</td><td>31, 37, 41, 43</td><td>4個</td></tr>
+        <tr><td>46〜50</td><td>47, 49</td><td>2個</td></tr>
+      </table>
+    </li>
+    <li>たす。4＋4＋4＋2＝<b>14</b>(個)。</li>
+    <li>たしかめ。偶数のほうは 27−14＝13(個)。表の偶数を数えると 4＋4＋4＋1＝13(個)で合う。</li>
+  </ol>
+  <div class="ans">答え：14個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)</span> クレーンAだけで何日目 <span class="type">A・5点｜仕事算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>8日間</b>」「12日間」「36日間」。日数のままでは式に入らない。全体を72として、<b>「1日あたりの仕事の量」に直して書く</b>（72÷日数）→ ひき算でAの1日分が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>仕事算は、全体の仕事の量を、日数の最小公倍数にする。<b>8と12と36の最小公倍数は72</b>。こうすると1日分が全部整数になる。</li>
+    <li>「3本の1日分」から「BとCの1日分」をひくと、Aの1日分が残る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>全体を72として、1日あたりの仕事の量を表に書く。
+      <table>
+        <tr><th>使うクレーン</th><th>かかる日数</th><th>1日あたり</th></tr>
+        <tr><td>AとBとC</td><td>8日間</td><td>72÷8＝9</td></tr>
+        <tr><td>BとC</td><td>12日間</td><td>72÷12＝6</td></tr>
+        <tr><td>Cだけ</td><td>36日間</td><td>72÷36＝2</td></tr>
+      </table>
+    </li>
+    <li>Aの1日分は 9−6＝<b>3</b>。</li>
+    <li>Aだけだと 72÷3＝24(日)。ちょうどわり切れるから、24日目に終わる。</li>
+    <li>落としやすい所。9−6 をせずに、9のままや6のままでわらない。出したいのはAだけの1日分。</li>
+  </ol>
+  <div class="ans">答え：24日目</div>
+  <div class="tip">コツ：Bの1日分も 6−2＝4 と出しておく。(3)で使う。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)</span> Aを5日、残りをBとCで <span class="type">A・5点｜仕事算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ちょうど5日間</b>」と「<b>何日目</b>」。「何日目」に丸。残りの仕事を6でわると、あまりが出る → <b>あまりの分にもう1日かかる</b>。最後に、はじめの5日をたす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)の表から、Aの1日分は3。BとCの1日分は6。</li>
+    <li>わり算にあまりが出たら、<b>あまりの仕事をする日がもう1日いる</b>。たとえば、1日6ずつで15の仕事なら、2日で12。残り3のために3日目も働く。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aが5日間でする仕事は 3×5＝15。</li>
+    <li>残りは 72−15＝<b>57</b>。</li>
+    <li>BとCでわる。57÷6＝9あまり3。9日では3だけ残る。だから 9＋1＝<b>10</b>(日間)かかる。</li>
+    <li>はじめの5日をたす。5＋10＝15(日目)。</li>
+    <li>落としやすい所。あまりを切りすてて14日目にしない。BとCの10日間だけを答えて10日目にもしない。</li>
+  </ol>
+  <div class="ans">答え：15日目</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (3)</span> 1日1本ずつ使って21日間 <span class="type">B・5点｜つるかめ算（面積図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1日ごとにどれか1本だけ</b>」と「<b>Aを使用した日数の2倍</b>」。Aの日数を①、Bの日数を②に直して書く → <b>面積図</b>にする。全部Cだったときの42との差30を、①と②で分ける。面積図が描ければ手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1日分は、Aが3、Bが 6−2＝<b>4</b>、Cが2。</li>
+    <li>面積図は、たてが「1日あたりの仕事」、横が「日数」。面積が仕事の量になる。全部の面積は72。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>面積図を描く。横は合わせて21日。たては A＝3、B＝4、C＝2。Aの横を①、Bの横を②とする。
+<svg viewBox="0 0 380 240" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+  <rect x="50" y="70" width="84" height="30" fill="#ffe0b2"/>
+  <rect x="134" y="40" width="168" height="60" fill="#ffe0b2"/>
+  <rect x="50" y="100" width="294" height="60" fill="#dbe9ff"/>
+  <polygon points="50,160 50,70 134,70 134,40 302,40 302,100 344,100 344,160" fill="none" stroke="#222" stroke-width="2"/>
+  <line x1="134" y1="70" x2="134" y2="160" stroke="#222" stroke-width="1.5"/>
+  <line x1="302" y1="100" x2="302" y2="160" stroke="#222" stroke-width="1.5"/>
+  <line x1="50" y1="100" x2="302" y2="100" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="92" y="178" text-anchor="middle" fill="#222">A ①日</text>
+  <text x="218" y="178" text-anchor="middle" fill="#222">B ②日</text>
+  <text x="323" y="178" text-anchor="middle" fill="#222">C</text>
+  <text x="42" y="120" text-anchor="end" fill="#222">3</text>
+  <text x="218" y="32" text-anchor="middle" fill="#222">4</text>
+  <text x="352" y="135" fill="#222">2</text>
+  <text x="197" y="136" text-anchor="middle" fill="#222">2×21＝42</text>
+  <text x="92" y="90" text-anchor="middle" fill="#d32f2f">1×①</text>
+  <text x="218" y="76" text-anchor="middle" fill="#d32f2f">2×②</text>
+  <line x1="50" y1="196" x2="344" y2="196" stroke="#222" stroke-width="1"/>
+  <line x1="50" y1="190" x2="50" y2="202" stroke="#222" stroke-width="1"/>
+  <line x1="344" y1="190" x2="344" y2="202" stroke="#222" stroke-width="1"/>
+  <text x="197" y="216" text-anchor="middle" fill="#222">合わせて21日</text>
+  <text x="197" y="234" text-anchor="middle" fill="#d32f2f" font-weight="bold">線より上は 72−42＝30</text>
+</svg></li>
+    <li>たて2の高さで横に線を引く。線より下は 2×21＝42。線より上は 72−42＝<b>30</b>。</li>
+    <li>線より上を、①と②で表す。Aの上は (3−2)×①＝①。Bの上は (4−2)×②＝④。合わせて<b>⑤</b>。</li>
+    <li>⑤＝30 だから、①＝30÷5＝6(日)。Bの日数は②だから 6×2＝12(日)。</li>
+    <li>たしかめ。Aが6日、Bが12日、Cが 21−6−12＝3(日)。仕事は 3×6＋4×12＋2×3＝18＋48＋6＝72。合っている。</li>
+  </ol>
+  <div class="ans">答え：12日</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">4〜6</span> まとめ</h2>
+  <ul>
+    <li>水そうの問題は、正面から見た図に水面の線を引く。「水＋しずんだ部分＝底面積×水面の高さ」の1本で、(1)〜(3)が全部解ける。</li>
+    <li>前の小問で出した数を、次の小問で使う。4は348cm³、5は27個の表、6は1日分の3・4・2。図や表は消さずに残す。</li>
+    <li>約束記号や「○日間」は、そのままでは式に入らない。言葉や「1日あたり」に直して書いてから計算する。</li>
+  </ul>
+</section>
+</div>
