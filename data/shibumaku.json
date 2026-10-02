@@ -11864,7 +11864,8 @@
        "jukensha": 44.1,
        "gokakusha": 61.2
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2019-2/sansu.html"
     },
     {
      "id": "shakai",
@@ -13867,7 +13868,8 @@
        "jukensha": 48.9,
        "gokakusha": 76.5
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2018-2/sansu.html"
     },
     {
      "id": "shakai",
@@ -14164,7 +14166,8 @@
        "3 問10": "木材",
        "3 問11": "石炭"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2018-2/shakai.html"
     },
     {
      "id": "rika",
@@ -14689,7 +14692,8 @@
        "二 問7①": "ウ",
        "二 問7②": "キ"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/shibumaku/2018-2/kokugo.html"
     }
    ]
   },

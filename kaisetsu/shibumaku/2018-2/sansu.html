@@ -1,0 +1,646 @@
+<!-- generated kakomon shibumaku/2018-2/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1〜3（数のわくの規則・タイルのはり方・食塩水の出し入れ）</a></li>
+<li><a href="#4-5-6">大問4・5・6（おはじきの規則・円の中の正三角形の作図・色ぬり立方体）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1〜3（数のわくの規則・タイルのはり方・食塩水の出し入れ）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 35点／B 22点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1</td><td>数を入れた正方形（わくの規則）</td><td>A 7+7</td><td>同じ数が「わく」の形にならぶ → わく1周＝外の正方形−内の正方形</td></tr>
+    <tr><td>2</td><td>三角形と正方形のタイルのはり方</td><td>A 7 / B 7+7</td><td>大きい正方形のタイルの置き場所で分ける → 残りは10cmのますごとに2通り</td></tr>
+    <tr><td>3</td><td>食塩水の出し入れ（濃度）</td><td>A 7+7 / B 4+4</td><td>「8%になるたびに」→ 全体の重さと食塩の重さを表で追う</td></tr>
+  </table>
+  <p>取り方: <b>Aの5問（1の2問・2(1)・3(1)(2)）を先に確実に</b>。Bの2(2)(3)は、(1)で「正方形のタイルの場所で分ける」ができたら同じ手で進める。3(3)は(2)の表を続けるだけなので、(2)が合っていれば取りにいく。受験者平均48.9点、合格者平均76.5点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 6番目の正方形の中の「3」の個数 <span class="type">A・7点｜規則性（わくの個数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】図の正体を1行で書く＝「外のわくが全部1。内へ1つ入るごとに1ふえる」。部品は「<b>6番目</b>」と「<b>数字の3</b>」に丸 → 3は外から3つ目のわくにならぶ、と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>わく1周の個数は「外の正方形−内の正方形」で出す。3番目の図の2は、3×3−1×1＝8個。数えても8個。</li>
+    <li>1辺のますの数は、1番目が1、2番目が3、3番目が5。1つ進むと2ますふえる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>6番目の1辺を出す。1、3、5、7、9、11とふえる。6番目は<b>1辺11ます</b>。</li>
+    <li>外から順にわくを書く。1のわくは1辺11。2のわくは1辺9。3のわくは1辺7。
+<svg id="q1_1_a" viewBox="0 0 330 350" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><rect x="0" y="0" width="330" height="350" fill="#fff"/><text x="22" y="18" font-size="14" fill="#222" font-family="sans-serif">6番目（1辺11ます）</text><rect x="22" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="74" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="87.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="100" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="113.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="126" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="139.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="152" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="165.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="178" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="191.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="204" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="217.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="230" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="243.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="256" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="282" y="30" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="47.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="74" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="87.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="100" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="113.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="126" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="139.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="152" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="165.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="178" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="191.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="204" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="217.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="230" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="243.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="256" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="282" y="56" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="73.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="82" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="99.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="82" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="99.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="74" y="82" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="87.0" y="99.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="100" y="82" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="113.0" y="99.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="126" y="82" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="139.0" y="99.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="152" y="82" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="165.0" y="99.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="178" y="82" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="191.0" y="99.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="204" y="82" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="217.0" y="99.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="230" y="82" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="243.0" y="99.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="256" y="82" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="99.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="282" y="82" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="99.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="108" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="125.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="108" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="125.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="74" y="108" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="87.0" y="125.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="100" y="108" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="113.0" y="125.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="126" y="108" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="139.0" y="125.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="152" y="108" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="165.0" y="125.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="178" y="108" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="191.0" y="125.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="204" y="108" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="217.0" y="125.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="230" y="108" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="243.0" y="125.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="256" y="108" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="125.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="282" y="108" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="125.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="134" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="151.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="134" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="151.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="74" y="134" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="87.0" y="151.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="100" y="134" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="113.0" y="151.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="126" y="134" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="139.0" y="151.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">5</text><rect x="152" y="134" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="165.0" y="151.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">5</text><rect x="178" y="134" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="191.0" y="151.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">5</text><rect x="204" y="134" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="217.0" y="151.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="230" y="134" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="243.0" y="151.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="256" y="134" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="151.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="282" y="134" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="151.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="160" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="177.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="160" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="177.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="74" y="160" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="87.0" y="177.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="100" y="160" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="113.0" y="177.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="126" y="160" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="139.0" y="177.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">5</text><rect x="152" y="160" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="165.0" y="177.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">6</text><rect x="178" y="160" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="191.0" y="177.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">5</text><rect x="204" y="160" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="217.0" y="177.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="230" y="160" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="243.0" y="177.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="256" y="160" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="177.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="282" y="160" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="177.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="186" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="203.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="186" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="203.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="74" y="186" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="87.0" y="203.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="100" y="186" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="113.0" y="203.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="126" y="186" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="139.0" y="203.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">5</text><rect x="152" y="186" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="165.0" y="203.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">5</text><rect x="178" y="186" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="191.0" y="203.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">5</text><rect x="204" y="186" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="217.0" y="203.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="230" y="186" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="243.0" y="203.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="256" y="186" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="203.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="282" y="186" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="203.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="212" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="229.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="212" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="229.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="74" y="212" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="87.0" y="229.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="100" y="212" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="113.0" y="229.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="126" y="212" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="139.0" y="229.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="152" y="212" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="165.0" y="229.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="178" y="212" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="191.0" y="229.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="204" y="212" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="217.0" y="229.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">4</text><rect x="230" y="212" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="243.0" y="229.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="256" y="212" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="229.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="282" y="212" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="229.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="238" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="255.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="238" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="255.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="74" y="238" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="87.0" y="255.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="100" y="238" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="113.0" y="255.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="126" y="238" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="139.0" y="255.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="152" y="238" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="165.0" y="255.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="178" y="238" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="191.0" y="255.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="204" y="238" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="217.0" y="255.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="230" y="238" width="26" height="26" fill="#ffe0b2" stroke="#999" stroke-width="0.6"/><text x="243.0" y="255.68" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">3</text><rect x="256" y="238" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="255.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="282" y="238" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="255.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="74" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="87.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="100" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="113.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="126" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="139.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="152" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="165.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="178" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="191.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="204" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="217.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="230" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="243.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="256" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">2</text><rect x="282" y="264" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="281.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="48" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="61.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="74" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="87.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="100" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="113.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="126" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="139.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="152" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="165.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="178" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="191.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="204" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="217.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="230" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="243.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="256" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="269.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="282" y="290" width="26" height="26" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="295.0" y="307.68" font-size="13" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="22" y="30" width="286" height="286" fill="none" stroke="#222" stroke-width="1.6"/><rect x="74" y="82" width="182" height="182" fill="none" stroke="#d32f2f" stroke-width="2.4"/><rect x="100" y="108" width="130" height="130" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/><text x="22" y="338" font-size="14" fill="#d32f2f" font-family="sans-serif">赤いわく＝1辺7ます</text><text x="182" y="338" font-size="14" fill="#1565c0" font-family="sans-serif">青い点線＝1辺5ます</text></svg></li>
+    <li>3のわくの内がわは、1辺5の正方形。ここには4、5、6が入る。</li>
+    <li>7×7−5×5＝49−25＝<b>24</b>。</li>
+    <li>確かめ。まん中の6から外へ数える。5が8個、4が16個、3が24個。1周ごとに8個ふえる。</li>
+    <li>落としやすい所は、7×7＝49で止めること。内がわの25を引くところまでが1セット。</li>
+  </ol>
+  <div class="ans">答え：24個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 偶数が337個ある正方形は何番目か <span class="type">A・7点｜規則性（1つおきのわく）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>偶数が337個</b>」と、例の「<b>3番目の正方形の中には偶数が8個</b>」。337は「奇数」に直して書く → わくの個数は8の倍数だから、まん中の1ますが偶数＝偶数番目と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>わく1周の個数は、まん中から1周目が8個、2周目が16個、3周目が24個。8ずつふえる（3×3−1×1＝8、5×5−3×3＝16、7×7−5×5＝24）。</li>
+    <li>わくの個数はどれも偶数。合計が奇数になるのは、まん中の1ますを数えるときだけ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小さい図で確かめる。4番目は、まん中が4。1周目が3、2周目が2、3周目が1。偶数は1つおきのわくに出てくる。
+<svg id="q1_2_a" viewBox="0 0 340 254" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><rect x="0" y="0" width="340" height="254" fill="#fff"/><text x="20" y="18" font-size="14" fill="#222" font-family="sans-serif">4番目（1辺7ます）</text><rect x="20" y="30" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="50.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="50" y="30" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="65.0" y="50.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="80" y="30" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="95.0" y="50.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="110" y="30" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="125.0" y="50.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="140" y="30" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="155.0" y="50.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="170" y="30" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="185.0" y="50.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="200" y="30" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="215.0" y="50.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="20" y="60" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="80.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="50" y="60" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="65.0" y="80.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="80" y="60" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="95.0" y="80.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="110" y="60" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="125.0" y="80.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="140" y="60" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="155.0" y="80.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="170" y="60" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="185.0" y="80.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="200" y="60" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="215.0" y="80.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="20" y="90" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="110.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="50" y="90" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="65.0" y="110.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="80" y="90" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="95.0" y="110.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">3</text><rect x="110" y="90" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="125.0" y="110.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">3</text><rect x="140" y="90" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="155.0" y="110.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">3</text><rect x="170" y="90" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="185.0" y="110.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="200" y="90" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="215.0" y="110.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="20" y="120" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="140.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="50" y="120" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="65.0" y="140.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="80" y="120" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="95.0" y="140.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">3</text><rect x="110" y="120" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="125.0" y="140.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">4</text><rect x="140" y="120" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="155.0" y="140.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">3</text><rect x="170" y="120" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="185.0" y="140.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="200" y="120" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="215.0" y="140.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="20" y="150" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="170.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="50" y="150" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="65.0" y="170.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="80" y="150" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="95.0" y="170.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">3</text><rect x="110" y="150" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="125.0" y="170.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">3</text><rect x="140" y="150" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="155.0" y="170.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">3</text><rect x="170" y="150" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="185.0" y="170.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="200" y="150" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="215.0" y="170.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="20" y="180" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="200.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="50" y="180" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="65.0" y="200.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="80" y="180" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="95.0" y="200.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="110" y="180" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="125.0" y="200.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="140" y="180" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="155.0" y="200.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="170" y="180" width="30" height="30" fill="#c8e6c9" stroke="#999" stroke-width="0.6"/><text x="185.0" y="200.04" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">2</text><rect x="200" y="180" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="215.0" y="200.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="20" y="210" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="35.0" y="230.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="50" y="210" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="65.0" y="230.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="80" y="210" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="95.0" y="230.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="110" y="210" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="125.0" y="230.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="140" y="210" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="155.0" y="230.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="170" y="210" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="185.0" y="230.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="200" y="210" width="30" height="30" fill="#fff" stroke="#999" stroke-width="0.6"/><text x="215.0" y="230.04" font-size="14" text-anchor="middle" fill="#222" font-weight="normal" font-family="sans-serif">1</text><rect x="20" y="30" width="210" height="210" fill="none" stroke="#222" stroke-width="1.6"/><text x="244" y="60" font-size="14" fill="#222" font-family="sans-serif">まん中の4</text><text x="244" y="80" font-size="14" fill="#d32f2f" font-weight="bold" font-family="sans-serif">1個</text><text x="244" y="125" font-size="14" fill="#222" font-family="sans-serif">2周目の2</text><text x="244" y="145" font-size="14" fill="#d32f2f" font-weight="bold" font-family="sans-serif">16個</text><text x="244" y="195" font-size="14" fill="#222" font-family="sans-serif">合わせて</text><text x="244" y="215" font-size="14" fill="#d32f2f" font-weight="bold" font-family="sans-serif">17個</text></svg></li>
+    <li>337は奇数。まん中の数が偶数のときしか、奇数個にならない。答えは<b>偶数番目</b>。</li>
+    <li>まん中の1個をのぞく。337−1＝336。これが2周目、4周目、6周目…のわくの合計になる。</li>
+    <li>2周目は16個。4周目は32個。16ずつふえる。合計が336になるまで表に書く。336になったら終わり。
+      <table>
+        <tr><th>まん中から何周目</th><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td></tr>
+        <tr><th>わくの個数</th><td>16</td><td>32</td><td>48</td><td>64</td><td>80</td><td>96</td></tr>
+        <tr><th>ここまでの合計</th><td>16</td><td>48</td><td>96</td><td>160</td><td>240</td><td><b>336</b></td></tr>
+      </table></li>
+    <li>いちばん外の偶数は2。2のわくが12周目にある。まん中の数は、2より12大きい。2＋12＝<b>14</b>。偶数のわくを外から書くと 2、4、6、8、10、12 の6つ。まん中はその次の14で、数が合う。</li>
+    <li>落としやすい所は、12を答えにすること。12は「何周目か」で、聞かれているのは「何番目か」。</li>
+  </ol>
+  <div class="ans">答え：14番目</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> たて20cm・横30cmのかべのはり方 <span class="type">A・7点｜場合の数（置き場所で分ける）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>すきまなく重ならないように</b>」と「<b>2種類のタイルを少なくとも1枚は使う</b>」。図3に10cmごとの点線を書きこむ（図に置く）→ 大きい正方形のタイルの置き場所で分ける、と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>図2のタイルは、図2の向きのまま置く。たて20cm・横20cmの場所にちょうど入る。あいた四すみには、三角形のタイルが1枚ずつ入る。</li>
+    <li>向きを変えて、辺をかべにそろえて置くことはできない。タイルの面積は 20×20÷2＝200cm²。14×14＝196 だから、1辺は約14cm。たて20cmに置くと約6cmのすきまが残る。三角形のタイルは、このすきまに入らない。</li>
+    <li>10cmのます1つは、三角形のタイル2枚でうまる。ななめの線の向きで2通りある。</li>
+    <li>回したり裏返したりすると同じになるはり方も、別のはり方として数える（声の教育社の解説の数え方）。左によせた形と右によせた形は、別べつに数える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図3に10cmごとの点線を引く。たて2ます、横3ますになる。</li>
+    <li>正方形のタイルは横に20cmぶん使う。横30cmには1枚しか入らない。置き場所は<b>左によせるか、右によせるか</b>の2つ。
+<svg id="q2_1_a" viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><rect x="0" y="0" width="340" height="200" fill="#fff"/><text x="20" y="20" font-size="13" fill="#222" font-family="sans-serif">左によせる</text><polygon points="20,28 20,68 60,28" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="100,28 60,28 100,68" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="100" y="28" width="40" height="40" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="120.0" y="53.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">ア</text><polygon points="20,108 60,108 20,68" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="100,108 100,68 60,108" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="100" y="68" width="40" height="40" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="120.0" y="93.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">イ</text><polygon points="60,28 100,68 60,108 20,68" fill="#fff" stroke="#222" stroke-width="2.2"/><rect x="20" y="28" width="120" height="80" fill="none" stroke="#222" stroke-width="1.6"/><text x="190" y="20" font-size="13" fill="#222" font-family="sans-serif">右によせる</text><rect x="190" y="28" width="40" height="40" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="210.0" y="53.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">ア</text><polygon points="230,28 230,68 270,28" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="310,28 270,28 310,68" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="190" y="68" width="40" height="40" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="210.0" y="93.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">イ</text><polygon points="230,108 270,108 230,68" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="310,108 310,68 270,108" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="270,28 310,68 270,108 230,68" fill="#fff" stroke="#222" stroke-width="2.2"/><rect x="190" y="28" width="120" height="80" fill="none" stroke="#222" stroke-width="1.6"/><text x="20" y="142" font-size="13" fill="#222" font-family="sans-serif">オレンジの1ます＝三角形2枚。ななめの線は2通り</text><rect x="60" y="150" width="40" height="40" fill="#ffe0b2" stroke="#222" stroke-width="1.4"/><line x1="60" y1="150" x2="100" y2="190" stroke="#d32f2f" stroke-width="2"/><rect x="150" y="150" width="40" height="40" fill="#ffe0b2" stroke="#222" stroke-width="1.4"/><line x1="190" y1="150" x2="150" y2="190" stroke="#d32f2f" stroke-width="2"/></svg></li>
+    <li>左によせたとき。青い三角形は置き方が1通りに決まる。残りはオレンジのます ア・イ。1ますにつき2通りで、2×2＝4通り。</li>
+    <li>右によせたときも同じで4通り。4＋4＝<b>8</b>。</li>
+    <li>落としやすい所は、三角形だけではるはり方を数えること。「少なくとも1枚」だから、正方形のタイルを使わないはり方は入れない。</li>
+  </ol>
+  <div class="ans">答え：8通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> たて20cm・横40cmのかべのはり方 <span class="type">B・7点｜場合の数（置き場所で分ける）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は(1)と変わった「<b>横40cm</b>」と、同じままの「<b>少なくとも1枚は使う</b>」。変わった言葉に丸 → 正方形のタイルが1枚のときと2枚のときに分ける、と決まる。(1)が解けたら同じ手で進める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正方形のタイル1枚は、横に20cmぶん使う。横40cmなら、左・まん中・右の3か所に置ける。2枚ならべることもできる。</li>
+    <li>あいたます1つにつき2通り。4ますあれば 2×2×2×2＝16通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図4に10cmごとの点線を引く。たて2ます、横4ます。</li>
+    <li>正方形のタイルの置き場所を全部かく。1枚なら図③④⑤、2枚なら図⑥。（図の番号とア〜エは声の教育社の解説と同じ）
+<svg id="q2_2_a" viewBox="0 0 342 218" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><rect x="0" y="0" width="342" height="218" fill="#fff"/><text x="14" y="18" font-size="13" fill="#222" font-family="sans-serif">図③ 左に1枚</text><polygon points="14,26 14,62 50,26" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,26 50,26 86,62" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="86" y="26" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="104.0" y="49.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">ア</text><rect x="122" y="26" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="140.0" y="49.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">ウ</text><polygon points="14,98 50,98 14,62" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,98 86,62 50,98" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="86" y="62" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="104.0" y="85.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">イ</text><rect x="122" y="62" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="140.0" y="85.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">エ</text><polygon points="50,26 86,62 50,98 14,62" fill="#fff" stroke="#222" stroke-width="2.2"/><rect x="14" y="26" width="144" height="72" fill="none" stroke="#222" stroke-width="1.6"/><text x="184" y="18" font-size="13" fill="#222" font-family="sans-serif">図④ まん中に1枚</text><rect x="184" y="26" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><polygon points="220,26 220,62 256,26" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="292,26 256,26 292,62" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="292" y="26" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><rect x="184" y="62" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><polygon points="220,98 256,98 220,62" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="292,98 292,62 256,98" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="292" y="62" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><polygon points="256,26 292,62 256,98 220,62" fill="#fff" stroke="#222" stroke-width="2.2"/><rect x="184" y="26" width="144" height="72" fill="none" stroke="#222" stroke-width="1.6"/><text x="14" y="128" font-size="13" fill="#222" font-family="sans-serif">図⑤ 右に1枚</text><rect x="14" y="136" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><rect x="50" y="136" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><polygon points="86,136 86,172 122,136" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="158,136 122,136 158,172" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="14" y="172" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><rect x="50" y="172" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><polygon points="86,208 122,208 86,172" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="158,208 158,172 122,208" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="122,136 158,172 122,208 86,172" fill="#fff" stroke="#222" stroke-width="2.2"/><rect x="14" y="136" width="144" height="72" fill="none" stroke="#222" stroke-width="1.6"/><text x="184" y="128" font-size="13" fill="#222" font-family="sans-serif">図⑥ 2枚</text><polygon points="184,136 184,172 220,136" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="256,136 220,136 256,172" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="256,136 256,172 292,136" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="328,136 292,136 328,172" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="184,208 220,208 184,172" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="256,208 256,172 220,208" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="256,208 292,208 256,172" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="328,208 328,172 292,208" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="220,136 256,172 220,208 184,172" fill="#fff" stroke="#222" stroke-width="2.2"/><polygon points="292,136 328,172 292,208 256,172" fill="#fff" stroke="#222" stroke-width="2.2"/><rect x="184" y="136" width="144" height="72" fill="none" stroke="#222" stroke-width="1.6"/></svg></li>
+    <li>図③はオレンジのますがア〜エの4つ。2×2×2×2＝16通り。図④も図⑤も、オレンジのますは4つで16通り。</li>
+    <li>1枚のときは 16×3＝<b>48通り</b>。</li>
+    <li>図⑥は、残りが全部青い三角形。置き方は1通り。</li>
+    <li>48＋1＝<b>49</b>。</li>
+  </ol>
+  <div class="ans">答え：49通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> たて40cm・横40cmに正方形のタイルをちょうど4枚 <span class="type">B・7点｜場合の数（置き場所で分ける）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>たて40cm、横40cm</b>」と「<b>正方形のタイルはちょうど4枚</b>」。4枚の置き場所を図5にかく（図に置く）→ 置き方の組が決まれば、あとは(2)と同じ数え方。4枚の置き場所が2種類かけなければ後回し。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正方形のタイルのまん中は、10cmごとの点線が交わる点にくる。かべの内がわに、交わる点は 3×3＝9個ある。</li>
+    <li>10cmだけはなれた点どうしには置けない。タイルが重なる。ななめにとなり合う点なら、辺と辺がぴったりつく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図5に10cmごとの点線を引く。たて4ます、横4ます。</li>
+    <li>4枚が重ならない置き方をさがす。見つかるのは2種類。<b>辺によせた4か所</b>（図⑦）と、<b>A〜Eの5か所から4か所</b>（図⑧）。（図の番号と記号は声の教育社の解説と同じ）
+<svg id="q2_3_a" viewBox="0 0 342 360" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><rect x="0" y="0" width="342" height="360" fill="#fff"/><text x="14" y="18" font-size="13" fill="#222" font-family="sans-serif">図⑦ 辺によせた4か所</text><rect x="14" y="26" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="32.0" y="49.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">ア</text><polygon points="50,26 50,62 86,26" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="122,26 86,26 122,62" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="122" y="26" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="140.0" y="49.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">エ</text><polygon points="14,62 14,98 50,62" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="158,62 122,62 158,98" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="14,134 50,134 14,98" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="158,134 158,98 122,134" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="14" y="134" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="32.0" y="157.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">イ</text><polygon points="50,170 86,170 50,134" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="122,170 122,134 86,170" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="122" y="134" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="140.0" y="157.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">ウ</text><polygon points="86,26 122,62 86,98 50,62" fill="#fff" stroke="#222" stroke-width="2.2"/><polygon points="50,62 86,98 50,134 14,98" fill="#fff" stroke="#222" stroke-width="2.2"/><polygon points="122,62 158,98 122,134 86,98" fill="#fff" stroke="#222" stroke-width="2.2"/><polygon points="86,98 122,134 86,170 50,134" fill="#fff" stroke="#222" stroke-width="2.2"/><rect x="14" y="26" width="144" height="144" fill="none" stroke="#222" stroke-width="1.6"/><text x="184" y="18" font-size="13" fill="#222" font-family="sans-serif">図⑧ A〜Eの5か所</text><rect x="184" y="26" width="144" height="144" fill="#fff" stroke="#222" stroke-width="1.6"/><line x1="220" y1="26" x2="220" y2="170" stroke="#999" stroke-width="0.7" stroke-dasharray="3 3"/><line x1="184" y1="62" x2="328" y2="62" stroke="#999" stroke-width="0.7" stroke-dasharray="3 3"/><line x1="256" y1="26" x2="256" y2="170" stroke="#999" stroke-width="0.7" stroke-dasharray="3 3"/><line x1="184" y1="98" x2="328" y2="98" stroke="#999" stroke-width="0.7" stroke-dasharray="3 3"/><line x1="292" y1="26" x2="292" y2="170" stroke="#999" stroke-width="0.7" stroke-dasharray="3 3"/><line x1="184" y1="134" x2="328" y2="134" stroke="#999" stroke-width="0.7" stroke-dasharray="3 3"/><polygon points="220,26 256,62 220,98 184,62" fill="none" stroke="#222" stroke-width="2"/><circle cx="220" cy="62" r="9" fill="#fff"/><text x="220" y="67" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">A</text><polygon points="292,26 328,62 292,98 256,62" fill="none" stroke="#222" stroke-width="2"/><circle cx="292" cy="62" r="9" fill="#fff"/><text x="292" y="67" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">D</text><polygon points="220,98 256,134 220,170 184,134" fill="none" stroke="#222" stroke-width="2"/><circle cx="220" cy="134" r="9" fill="#fff"/><text x="220" y="139" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">B</text><polygon points="292,98 328,134 292,170 256,134" fill="none" stroke="#222" stroke-width="2"/><circle cx="292" cy="134" r="9" fill="#fff"/><text x="292" y="139" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">C</text><polygon points="256,62 292,98 256,134 220,98" fill="none" stroke="#d32f2f" stroke-width="2"/><circle cx="256" cy="98" r="9" fill="#fff"/><text x="256" y="103" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">E</text><text x="14" y="198" font-size="13" fill="#222" font-family="sans-serif">図⑨ A・B・C・D</text><polygon points="14,206 14,242 50,206" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,206 50,206 86,242" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,206 86,242 122,206" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="158,206 122,206 158,242" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="14,278 50,278 14,242" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,278 86,242 50,278" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,278 122,278 86,242" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="158,278 158,242 122,278" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="14,278 14,314 50,278" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,278 50,278 86,314" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,278 86,314 122,278" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="158,278 122,278 158,314" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="14,350 50,350 14,314" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,350 86,314 50,350" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="86,350 122,350 86,314" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="158,350 158,314 122,350" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="50,206 86,242 50,278 14,242" fill="#fff" stroke="#222" stroke-width="2.2"/><text x="50" y="247" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">A</text><polygon points="122,206 158,242 122,278 86,242" fill="#fff" stroke="#222" stroke-width="2.2"/><text x="122" y="247" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">D</text><polygon points="50,278 86,314 50,350 14,314" fill="#fff" stroke="#222" stroke-width="2.2"/><text x="50" y="319" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">B</text><polygon points="122,278 158,314 122,350 86,314" fill="#fff" stroke="#222" stroke-width="2.2"/><text x="122" y="319" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">C</text><rect x="14" y="206" width="144" height="144" fill="none" stroke="#222" stroke-width="1.6"/><text x="184" y="198" font-size="13" fill="#222" font-family="sans-serif">図⑩ B・C・D・E</text><rect x="184" y="206" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="202.0" y="229.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">オ</text><rect x="220" y="206" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="238.0" y="229.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">キ</text><polygon points="256,206 256,242 292,206" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="328,206 292,206 328,242" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><rect x="184" y="242" width="36" height="36" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><text x="202.0" y="265.0" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">カ</text><polygon points="220,242 220,278 256,242" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="328,278 328,242 292,278" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="184,278 184,314 220,278" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="328,278 292,278 328,314" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="184,350 220,350 184,314" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="256,350 256,314 220,350" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="256,350 292,350 256,314" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="328,350 328,314 292,350" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><polygon points="292,206 328,242 292,278 256,242" fill="#fff" stroke="#222" stroke-width="2.2"/><text x="292" y="247" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">D</text><polygon points="220,278 256,314 220,350 184,314" fill="#fff" stroke="#222" stroke-width="2.2"/><text x="220" y="319" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">B</text><polygon points="292,278 328,314 292,350 256,314" fill="#fff" stroke="#222" stroke-width="2.2"/><text x="292" y="319" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">C</text><polygon points="256,242 292,278 256,314 220,278" fill="#fff" stroke="#222" stroke-width="2.2"/><text x="256" y="283" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">E</text><rect x="184" y="206" width="144" height="144" fill="none" stroke="#222" stroke-width="1.6"/></svg></li>
+    <li>図⑦。四すみのますア〜エがあく。2×2×2×2＝16通り。</li>
+    <li>図⑧でEを使わないとき（図⑨）。残りは全部青い三角形で、1通り。</li>
+    <li>図⑧でAを使わないとき（図⑩）。左上のますオ・カ・キがあく。2×2×2＝8通り。B、C、Dを使わないときも同じ形。8×4＝32通り。</li>
+    <li>16＋1＋32＝<b>49</b>。</li>
+  </ol>
+  <div class="ans">答え：49通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> はじめて管Bから水を入れ始める時間 <span class="type">A・7点｜濃度（てんびんの図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>水が300g</b>」と「<b>濃度が12%の食塩水を毎分100g</b>」。水は「0%の食塩水」に直して書く → 0%と12%をまぜて8%にするてんびんの図で、入れた重さが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>てんびんの図では、濃さの差の比と重さの比が逆になる。差が 2：1 なら、重さは 1：2。</li>
+    <li>管Aは毎分100g。入れた重さを100でわると、かかった分が出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>てんびんの図をかく。左のはしが0%の水300g。右のはしが12%の食塩水□g。支点が8%。
+<svg id="q3_1_a" viewBox="0 0 350 178" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><rect x="0" y="0" width="350" height="178" fill="#fff"/><line x1="40" y1="60" x2="310" y2="60" stroke="#222" stroke-width="2.2"/><polygon points="220.0,60 211.0,76 229.0,76" fill="#d32f2f"/><text x="40" y="26" font-size="14" text-anchor="middle" fill="#222" font-family="sans-serif">0%</text><text x="40" y="26" font-size="14" fill="#222" font-family="sans-serif"></text><text x="310" y="26" font-size="14" text-anchor="middle" fill="#222" font-family="sans-serif">12%</text><text x="220.0" y="92" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">8%</text><text x="130.0" y="52" font-size="14" text-anchor="middle" fill="#1565c0" font-family="sans-serif">差 8</text><text x="265.0" y="52" font-size="14" text-anchor="middle" fill="#1565c0" font-family="sans-serif">差 4</text><line x1="40" y1="60" x2="40" y2="110" stroke="#222" stroke-width="1.4"/><rect x="6" y="110" width="68" height="26" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/><text x="40" y="128" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" font-family="sans-serif">水 300g</text><line x1="310" y1="60" x2="310" y2="110" stroke="#222" stroke-width="1.4"/><rect x="276" y="110" width="68" height="26" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/><text x="318" y="128" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-family="sans-serif">g</text><rect x="298" y="117" width="12" height="12" fill="#fff" stroke="#d32f2f" stroke-width="1.6"/><text x="175" y="166" font-size="14" text-anchor="middle" fill="#222" font-family="sans-serif">差の比 2：1 → 重さの比 1：2</text></svg></li>
+    <li>差を出す。8−0＝8。12−8＝4。差の比は 8：4＝2：1。</li>
+    <li>重さの比は逆の 1：2。水300gが1にあたる。□は 300×2＝<b>600g</b>。</li>
+    <li>600÷100＝<b>6</b>。</li>
+    <li>確かめ。食塩は 600×0.12＝72g。全体は 300＋600＝900g。72÷900＝0.08 で8%。落としやすい所は、600で止めること。聞かれているのは「何分後」。</li>
+  </ol>
+  <div class="ans">答え：6分後</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 管Bから2回目に水を入れ終わったときの濃度 <span class="type">A・7点｜濃度（表で追う）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>さらに管Bから水を毎分200g</b>」と「<b>2回目に水を入れ終わったとき</b>」。「さらに」は「管Aも止めない」に直して書く → Bの1分間は全体が300g、食塩が12gふえる、と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>濃度は「食塩÷全体×100」。全体の重さと食塩の重さを、別べつの列で追う。</li>
+    <li>管Aの1分で、食塩は 100×0.12＝12g ふえる。管Bは水だけ。食塩はふえない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を作る。列は「時間・全体・食塩・濃度」。6分後は全体900g。食塩は 900×0.08＝72g。</li>
+    <li>Bの1回目の1分間。全体は 100＋200＝300g ふえる。食塩は12gふえる。7分後は1200gと84g。84÷1200×100＝<b>7%</b>。</li>
+    <li>また8%になるまで、管Aだけで入れる。てんびんの式は 1200×(8−7)＝□×(12−8)。□＝1200÷4＝300g。300÷100＝3分かかる。10分後は1500gと120g。</li>
+    <li>Bの2回目の1分間。11分後は1800gと132g。
+      <table>
+        <tr><th>時間</th><th>全体</th><th>食塩</th><th>濃度</th></tr>
+        <tr><td>6分後</td><td>900g</td><td>72g</td><td>8%（Bを入れ始める）</td></tr>
+        <tr><td>7分後</td><td>1200g</td><td>84g</td><td>7%（Bの1回目が終わる）</td></tr>
+        <tr><td>10分後</td><td>1500g</td><td>120g</td><td>8%（Bを入れ始める）</td></tr>
+        <tr><td>11分後</td><td>1800g</td><td>132g</td><td><b>7 1/3%</b>（Bの2回目が終わる）</td></tr>
+      </table></li>
+    <li>132÷1800×100＝22/3＝<b>7 1/3</b>。</li>
+    <li>落としやすい所は、Bの1分間に管Aの100gを入れわすれること。水200gだけにすると、7分後が1100gになって数が合わなくなる。</li>
+  </ol>
+  <div class="ans">答え：7 1/3%</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)①②</span> 3000gになる時間と、そのときの濃度 <span class="type">B・4点+4点｜濃度（表を続ける）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>食塩水が3000g</b>」と、答え方の「<b>何分後</b>」「何%」の2つ。(2)の表の「全体」の列を3000gまで続ける（図に置く）→ 時間と濃度が同時に決まる。(2)の表が合っていれば取りにいく。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Bの1分間に入るのは、12%の食塩水100gと水200g。合わせると、食塩12gで300g。これは4%の食塩水300gと同じ。</li>
+    <li>4%の300gに12%を300gまぜると、ちょうど8%の600gになる。8%の水そうに8%を足しても、8%のまま。だから、管Aだけで入れる時間は毎回3分になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>11分後の続きを書く。てんびんの式は 1800×(8−22/3)＝□×(12−8)。□＝1200÷4＝300g。3分かかって、14分後に8%。</li>
+    <li>15分後は2400gと180g。180÷2400×100＝7.5%。次の式は 2400×(8−7.5)＝□×(12−8)。また□＝300gで3分。18分後に8%。</li>
+    <li>表にまとめる。全体が3000gになったら終わり。
+      <table>
+        <tr><th>時間</th><th>全体</th><th>食塩</th><th>濃度</th></tr>
+        <tr><td>11分後</td><td>1800g</td><td>132g</td><td>7 1/3%</td></tr>
+        <tr><td>14分後</td><td>2100g</td><td>168g</td><td>8%</td></tr>
+        <tr><td>15分後</td><td>2400g</td><td>180g</td><td>7.5%</td></tr>
+        <tr><td>18分後</td><td>2700g</td><td>216g</td><td>8%</td></tr>
+        <tr><td><b>19分後</b></td><td><b>3000g</b></td><td>228g</td><td><b>7.6%</b></td></tr>
+      </table></li>
+    <li>3000gになるのは、Bの4回目を入れ終わった<b>19分後</b>。</li>
+    <li>濃度は 228÷3000×100＝<b>7.6</b>。</li>
+  </ol>
+  <div class="ans">答え：① 19分後　② 7.6%</div>
+  <div class="tip">コツ：全体の重さは「3分で300g、1分で300g」のくり返し。6分後の900gから、4分ごとに600gずつふえる。表を書く前に、この見通しを立てると速い。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ</h2>
+  <ul>
+    <li>同じ数が「わく」にならぶ図は、わく1周＝外の正方形−内の正方形。まん中から8個、16個、24個と8ずつふえる。</li>
+    <li>タイルのはり方は、いちばん大きいタイルの置き場所で分ける。残りは「1ますにつき2通り」をかける。</li>
+    <li>食塩水の出し入れは、全体と食塩を別べつの列にした表で追う。「さらに」の一言で、入る重さが変わる。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4-5-6"><h1 class="dtitle">大問4・5・6（おはじきの規則・円の中の正三角形の作図・色ぬり立方体）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4〜6</span> この回の全体像（担当の大問） <span class="type">A 21点／B 22点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>4</td><td>2人がおはじきを奇数個・偶数個ずつ取っていく</td><td>A 7＋7</td><td>「9個だけ多く」と残りの「17個」「15個」→ 取った個数の差は 9＋2＝11</td></tr>
+  <tr><td>5</td><td>円の中で正三角形を回す・作図・通らなかった面積</td><td>B 8 / A 7</td><td>「4回回転させたとき」「最初の位置にもどりました」→ 円周を4等分 → 正三角形の1辺は、円にぴったり入る正方形の1辺</td></tr>
+  <tr><td>6</td><td>3つの面をぬった立方体（ぬり方が2通り）</td><td>B 7＋7</td><td>「3つの面」→ 1つの角に集まる3面か、向かい合う2面＋1面か。(2)は偶数・奇数で片方を消す</td></tr>
+  </table>
+  <p>取り方: <b>Aの3問（4の2問と5(2)）を先に確実に</b>。5(1)は、垂直二等分線と正三角形の作図がかければ手を付ける。6は、(1)で<b>ぬり方が2通りある</b>と気づけたら(2)まで進める。気づけなければ後回しにする。受験者平均48.9点・合格者平均76.5点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> おはじきを1,3,5…個と2,4,6…個ずつ取る回数 <span class="type">A・7点｜条件の整理・差を見る</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>9個だけ多く持っている</b>」と「<b>Aさんは17個，Bさんは15個</b>」。残りはAが2個多い。「Bが取った数はAより 9＋2＝11個多い」に直して書く → 同じ回ではBがいつも1個多く取る。回数は11回と見当がつく。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>差の動きを見る。最初はBが9個多い。最後はAが2個多い。差は 9＋2＝11個 動いた。動かしたのは、Bが多く取った分。</li>
+    <li>1回目はAが1個、Bが2個。2回目はAが3個、Bが4個。同じ回では、いつもBが1個多い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2人が取る個数を表に書く。いちばん下に、そこまででBが多く取った個数を書く。
+<table><tr><th></th><th>1回目</th><th>2回目</th><th>3回目</th><th>4回目</th><th>5回目</th><th>…</th><th>11回目</th></tr>
+<tr><td>Aが取る個数</td><td>1</td><td>3</td><td>5</td><td>7</td><td>9</td><td>…</td><td>21</td></tr>
+<tr><td>Bが取る個数</td><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>…</td><td>22</td></tr>
+<tr><td>Bが多く取った個数（ここまで）</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>…</td><td><b>11</b></td></tr></table></li>
+    <li>Bが多く取った個数は 9＋2＝11個。差は1回に1個ずつたまる。<b>11÷1＝11回</b>。</li>
+    <li>「やめる」決まりに合うか確かめる。Aの12回目は23個。残りの17個では足りない。Aはここでやめる。Bの12回目は24個。残りの15個では足りない。Bもここでやめる。合っている。</li>
+    <li>2人の回数がちがう場合を、表で消す。
+<table><tr><th>回数の組</th><th>Bが多く取った個数</th><th>合うか</th></tr>
+<tr><td>Aが3回・Bが4回</td><td>3＋8＝11</td><td>× Aの4回目は7個。17個残っているAは、まだ取れる</td></tr>
+<tr><td>Aが4回・Bが5回</td><td>4＋10＝14</td><td>× 11をこえる。これより回数が多い組もこえる</td></tr>
+<tr><td>Aが1回・Bが3回</td><td>2＋4＋6−1＝11</td><td>× Aの2回目は3個。17個残っているAは、まだ取れる</td></tr>
+<tr><td>AがBより1回多い</td><td>Aのほうが多く取る（例: 5回ずつでBが5個多い。Aの6回目は11個で、Aが逆に多くなる）</td><td>× Bが11個多いことにならない</td></tr>
+<tr><td><b>11回ずつ</b></td><td>11</td><td>○</td></tr></table></li>
+    <li>落としやすい所は、11回と出したあとの確かめ。次に取る個数と残りの個数をくらべる。</li>
+  </ol>
+  <div class="ans">答え：11回</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> Bさんが最初に持っていた個数 <span class="type">A・7点｜奇数の和＝個数×個数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>最初に</b>何個」と、前の文の「<b>9個だけ多く</b>」に丸。Aが取った数を「1から続く奇数11個の和＝11×11」に直して書く → Aの最初、Bの最初の順に決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1から続く奇数の和は、個数×個数。1＋3＝4＝2×2。1＋3＋5＝9＝3×3。正方形にL字を1まわりずつ足す形と同じ。
+<svg viewBox="0 0 360 160" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: 1から続く奇数を4個たすと、1辺4の正方形になる">
+<rect x="40" y="20" width="30" height="30" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<rect x="40" y="50" width="30" height="30" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="40" y="80" width="30" height="30" fill="#c8e6c9" stroke="#222" stroke-width="1"/>
+<rect x="40" y="110" width="30" height="30" fill="#f8d7da" stroke="#222" stroke-width="1"/>
+<rect x="70" y="20" width="30" height="30" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="70" y="50" width="30" height="30" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<rect x="70" y="80" width="30" height="30" fill="#c8e6c9" stroke="#222" stroke-width="1"/>
+<rect x="70" y="110" width="30" height="30" fill="#f8d7da" stroke="#222" stroke-width="1"/>
+<rect x="100" y="20" width="30" height="30" fill="#c8e6c9" stroke="#222" stroke-width="1"/>
+<rect x="100" y="50" width="30" height="30" fill="#c8e6c9" stroke="#222" stroke-width="1"/>
+<rect x="100" y="80" width="30" height="30" fill="#c8e6c9" stroke="#222" stroke-width="1"/>
+<rect x="100" y="110" width="30" height="30" fill="#f8d7da" stroke="#222" stroke-width="1"/>
+<rect x="130" y="20" width="30" height="30" fill="#f8d7da" stroke="#222" stroke-width="1"/>
+<rect x="130" y="50" width="30" height="30" fill="#f8d7da" stroke="#222" stroke-width="1"/>
+<rect x="130" y="80" width="30" height="30" fill="#f8d7da" stroke="#222" stroke-width="1"/>
+<rect x="130" y="110" width="30" height="30" fill="#f8d7da" stroke="#222" stroke-width="1"/>
+<text x="55" y="40" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">1</text>
+<text x="85" y="70" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">3</text>
+<text x="115" y="100" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">5</text>
+<text x="145" y="130" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">7</text>
+<text x="180" y="50" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">1個</text>
+<text x="180" y="70" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">＋3個（L字）</text>
+<text x="180" y="90" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">＋5個（L字）</text>
+<text x="180" y="110" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">＋7個（L字）</text>
+<text x="180" y="136" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">＝4×4＝16個</text>
+</svg>
+</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aが取った個数を出す。1から21までの奇数が11個。<b>11×11＝121個</b>。</li>
+    <li>順に表に書く。
+<table><tr><th>出すもの</th><th>式</th><th>個数</th></tr>
+<tr><td>Aが取った個数</td><td>11×11</td><td>121</td></tr>
+<tr><td>Aの最初の個数</td><td>121＋17（残り）</td><td>138</td></tr>
+<tr><td>Bの最初の個数</td><td>138＋9（9個だけ多い）</td><td><b>147</b></td></tr></table></li>
+    <li>確かめ。Bが取った個数は、Aより11個多い 121＋11＝132個。147−132＝15。Bの残り15個と合っている。</li>
+    <li>落としやすい所は、たす数。17はAの残り。Bの残りの15を121にたさない。</li>
+  </ol>
+  <div class="ans">答え：147個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 円の中で4回まわるともどる正三角形の作図 <span class="type">B・8点｜図形の移動・作図</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>4回回転させたとき</b>」「<b>最初の位置にもどりました</b>」。「円周を4等分」に直して図に置く → 正三角形の1辺は、円にぴったり入る正方形の1辺と決まる。垂直二等分線がかければ手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>回転の中心は、円周上の頂点。次に円周にくる頂点は、中心から1辺分はなれた所に着く。1辺の長さは変わらない。だから円周上の点は、同じはばでならぶ。</li>
+    <li>円にぴったり入る正方形は、直角に交わる2本の直径でかける。直角は、垂直二等分線の作図で作る。</li>
+    <li>正三角形は、1辺の両はしにコンパスの針をさしてかく。半径はその1辺と同じ長さ。2つの弧が交わる点が3つ目の頂点。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>かく前に、円周上の頂点の動きを考える。1回まわるごとに、1辺分だけ先の点へ進む。4回でもとにもどる。だから4つの点は<b>円周を4等分</b>する。4つの点を結ぶと正方形になる。
+<svg viewBox="0 0 360 318" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: 円周上の頂点は円周を4等分する点を順に進む。4点を結ぶと正方形">
+<circle cx="180.0" cy="150.0" r="120.0" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="95.1,234.9 264.9,234.9 264.9,65.1 95.1,65.1" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="95.1,234.9 264.9,234.9 180.0,87.9" fill="#dbe9ff" stroke="#222" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="95.1" cy="234.9" r="3.2" fill="#d32f2f" stroke="#d32f2f" stroke-width="1"/>
+<text x="73.1472" y="252.853" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">①</text>
+<circle cx="264.9" cy="234.9" r="3.2" fill="#d32f2f" stroke="#d32f2f" stroke-width="1"/>
+<text x="272.853" y="252.853" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">②</text>
+<circle cx="264.9" cy="65.1" r="3.2" fill="#d32f2f" stroke="#d32f2f" stroke-width="1"/>
+<text x="272.853" y="59.1472" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">③</text>
+<circle cx="95.1" cy="65.1" r="3.2" fill="#d32f2f" stroke="#d32f2f" stroke-width="1"/>
+<text x="73.1472" y="59.1472" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">④</text>
+<circle cx="180.0" cy="150.0" r="2.0" fill="#222" stroke="#222" stroke-width="1"/>
+<text x="185" y="146" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">O</text>
+<text x="180" y="250.853" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">正三角形の1辺</text>
+<text x="180" y="292" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">円周上の頂点は ①→②→③→④→① と進む</text>
+<text x="180" y="309" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">となりの点までは、どこも正三角形の1辺分</text>
+</svg>
+図1: 正三角形の1辺は、円にぴったり入る正方形の1辺と同じ長さ。</li>
+    <li>Oを通る直線をひく。円と交わる点をP、Qとする。PQは直径。</li>
+    <li>P、Qにコンパスの針をさす。同じ半径で、PQの上側と下側に弧をかく。弧が交わる2つの点を直線で結ぶ。これがPQの垂直二等分線。円と交わる点をR、Sとする。</li>
+    <li>P、S、Q、Rは円周を4等分する点。PSが正方形の1辺になる。</li>
+    <li>P、Sにコンパスの針をさす。半径をPSの長さにして、円の内側に弧をかく。交わる点をTとする。PとS、SとT、TとPを直線で結ぶ。<b>正三角形PST</b>ができる。作図に使った線は消さない。
+<svg viewBox="0 0 360 335" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: 直径PQ、垂直二等分線RS、正方形PSQR、PとSから半径PSの弧の交点T、正三角形PST">
+<circle cx="180.0" cy="172.0" r="125.0" fill="none" stroke="#222" stroke-width="1.4"/>
+<line x1="43.0" y1="172.0" x2="317.0" y2="172.0" stroke="#222" stroke-width="1.4"/>
+<line x1="180.0" y1="33.0" x2="180.0" y2="311.0" stroke="#222" stroke-width="1.4"/>
+<path d="M174.0,98.3 A140.0,140.0 0 0,1 185.0,120.1" fill="none" stroke="#1565c0" stroke-width="1.1"/>
+<path d="M175.0,120.1 A140.0,140.0 0 0,1 186.0,98.3" fill="none" stroke="#1565c0" stroke-width="1.1"/>
+<path d="M185.0,223.9 A140.0,140.0 0 0,1 174.0,245.7" fill="none" stroke="#1565c0" stroke-width="1.1"/>
+<path d="M186.0,245.7 A140.0,140.0 0 0,1 175.0,223.9" fill="none" stroke="#1565c0" stroke-width="1.1"/>
+<polygon points="55.0,172.0 180.0,297.0 305.0,172.0 180.0,47.0" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<path d="M218.9,105.8 A176.8,176.8 0 0,1 230.1,147.4" fill="none" stroke="#1565c0" stroke-width="1.1"/>
+<path d="M204.6,121.9 A176.8,176.8 0 0,1 246.2,133.1" fill="none" stroke="#1565c0" stroke-width="1.1"/>
+<polygon points="55.0,172.0 180.0,297.0 225.8,126.2" fill="none" stroke="#d32f2f" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="180.0" cy="172.0" r="2.2" fill="#222" stroke="#222" stroke-width="1"/>
+<text x="186" y="187" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">O</text>
+<text x="33" y="177" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">P</text>
+<text x="319" y="177" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">Q</text>
+<text x="186" y="41" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">R</text>
+<text x="186" y="313" font-size="14" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">S</text>
+<text x="233.753" y="120.247" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">T</text>
+</svg>
+図2: 青い線が作図に使う線。赤が答えの正三角形PST。</li>
+  </ol>
+  <div class="ans">答え：解説の図を参照のこと。（正三角形PST。直径PQ・垂直二等分線RS・Tを決める弧を残す）</div>
+  <div class="tip">コツ：「何回かでもどる」は、円周を同じはばで分ける合図。4回なら4等分で、正方形の1辺が出発点になる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 正三角形が通らなかった部分の面積 <span class="type">A・7点｜円と正方形の面積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>一辺の長さが10cm</b>」と「<b>通らなかった部分</b>」に丸。10cmは(1)の正方形の1辺として図に置く → 正三角形は正方形の中だけを通る。求めるのは「円−正方形」と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円の面積は、半径×半径×3.14。半径そのものが出なくても、「半径×半径」が分かれば計算できる。</li>
+    <li>円にぴったり入る正方形を対角線で切ると、直角二等辺三角形が4つできる。直角をはさむ2辺は、どちらも円の半径。1つの面積は、半径×半径÷2。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>正三角形が通る所を図にかく。正三角形は、正方形の4つの辺に順につく。回転の中心は、いつも正方形の角。1つの辺についた形から、となりの辺についた形まで回る。2つの辺の間だけで動く。正方形の外には出ない。4つの角で順に回ると、正方形の中はすべて通る。
+<svg viewBox="0 0 360 330" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: 正三角形は正方形の4つの辺に順につく。通らなかった部分は円から正方形をのぞいた所">
+<rect x="0" y="0" width="360" height="330" fill="#fff"/>
+<text x="48" y="16" font-size="13" fill="#222" text-anchor="middle" font-family="sans-serif">1回目</text>
+<circle cx="48" cy="66" r="36" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<polygon points="22.5,91.5 73.5,91.5 73.5,40.5 22.5,40.5" fill="none" stroke="#999" stroke-width="0.8"/>
+<polygon points="22.5,91.5 73.5,91.5 48.0,47.4" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<polygon points="73.5,91.5 73.5,40.5 29.4,66.0" fill="#dbe9ff" stroke="#222" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="73.5" cy="91.5" r="3.2" fill="#d32f2f"/>
+<text x="92" y="71" font-size="14" fill="#222" text-anchor="middle" font-family="sans-serif">→</text>
+<text x="136" y="16" font-size="13" fill="#222" text-anchor="middle" font-family="sans-serif">2回目</text>
+<circle cx="136" cy="66" r="36" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<polygon points="110.5,91.5 161.5,91.5 161.5,40.5 110.5,40.5" fill="none" stroke="#999" stroke-width="0.8"/>
+<polygon points="161.5,91.5 161.5,40.5 117.4,66.0" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<polygon points="161.5,40.5 110.5,40.5 136.0,84.6" fill="#dbe9ff" stroke="#222" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="161.5" cy="40.5" r="3.2" fill="#d32f2f"/>
+<text x="180" y="71" font-size="14" fill="#222" text-anchor="middle" font-family="sans-serif">→</text>
+<text x="224" y="16" font-size="13" fill="#222" text-anchor="middle" font-family="sans-serif">3回目</text>
+<circle cx="224" cy="66" r="36" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<polygon points="198.5,91.5 249.5,91.5 249.5,40.5 198.5,40.5" fill="none" stroke="#999" stroke-width="0.8"/>
+<polygon points="249.5,40.5 198.5,40.5 224.0,84.6" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<polygon points="198.5,40.5 198.5,91.5 242.6,66.0" fill="#dbe9ff" stroke="#222" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="198.5" cy="40.5" r="3.2" fill="#d32f2f"/>
+<text x="268" y="71" font-size="14" fill="#222" text-anchor="middle" font-family="sans-serif">→</text>
+<text x="312" y="16" font-size="13" fill="#222" text-anchor="middle" font-family="sans-serif">4回目</text>
+<circle cx="312" cy="66" r="36" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<polygon points="286.5,91.5 337.5,91.5 337.5,40.5 286.5,40.5" fill="none" stroke="#999" stroke-width="0.8"/>
+<polygon points="286.5,40.5 286.5,91.5 330.6,66.0" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<polygon points="286.5,91.5 337.5,91.5 312.0,47.4" fill="#dbe9ff" stroke="#222" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="286.5" cy="91.5" r="3.2" fill="#d32f2f"/>
+<text x="180" y="124" font-size="12" fill="#222" text-anchor="middle" font-family="sans-serif">点線＝回る前　太い線＝回ったあと　赤い点＝回転の中心</text>
+<circle cx="100" cy="232" r="84" fill="#ffe0b2" stroke="#222" stroke-width="1.4"/>
+<rect x="40.6" y="172.6" width="118.8" height="118.8" fill="#dbe9ff" stroke="#222" stroke-width="1.4"/>
+<text x="100" y="237" font-size="13" fill="#222" text-anchor="middle" font-family="sans-serif">通る所</text>
+<text x="100" y="306.4" font-size="12" fill="#222" text-anchor="middle" font-family="sans-serif">10cm</text>
+<line x1="165" y1="190" x2="204" y2="190" stroke="#d32f2f" stroke-width="1"/>
+<text x="208" y="194" font-size="13" fill="#d32f2f" font-weight="bold" font-family="sans-serif">通らなかった部分</text>
+<text x="208" y="226" font-size="13" fill="#222" font-family="sans-serif">通る所＝正方形の中</text>
+<text x="208" y="248" font-size="13" fill="#d32f2f" font-weight="bold" font-family="sans-serif">求める面積＝円−正方形</text>
+</svg>
+図1: 上は1回目〜4回目の動き。下は通った所をまとめた図。通らなかった部分は<b>円−正方形</b>。</li>
+    <li>正方形の面積を出す。10×10＝100cm²。</li>
+    <li>正方形を対角線で4つに切る。三角形1つは 100÷4＝25cm²。これが「半径×半径÷2」と同じ。だから<b>半径×半径＝25×2＝50</b>。
+<svg viewBox="0 0 360 320" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: 正方形を対角線で4つに切る。1つは半径を2辺とする直角二等辺三角形で25cm²">
+<circle cx="180.0" cy="158.0" r="127.3" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="90.0,248.0 270.0,248.0 270.0,68.0 90.0,68.0" fill="none" stroke="#222" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="180.0,158.0 90.0,248.0 270.0,248.0" fill="#c8e6c9" stroke="#222" stroke-width="1" stroke-linejoin="round"/>
+<line x1="90.0" y1="248.0" x2="270.0" y2="68.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="270.0" y1="248.0" x2="90.0" y2="68.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/>
+<polyline points="172.0,166.0 180.0,174.0 188.0,166.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<circle cx="180.0" cy="158.0" r="2.2" fill="#222" stroke="#222" stroke-width="1"/>
+<text x="175" y="150" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">O</text>
+<text x="110" y="198" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">半径</text>
+<text x="224" y="198" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">半径</text>
+<text x="180" y="228" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">25cm²</text>
+<text x="180" y="263" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">10cm</text>
+<text x="180" y="312" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">三角形1つ＝半径×半径÷2</text>
+</svg>
+図2: 色をつけた三角形は、半径を2辺とする直角二等辺三角形。</li>
+    <li>円の面積は 50×3.14＝157cm²。</li>
+    <li>通らなかった部分は 157−100＝57cm²。</li>
+    <li>落としやすい所は、半径を出そうとして手が止まること。半径は整数にならない。「半径×半径＝50」のまま3.14をかける。</li>
+  </ol>
+  <div class="ans">答え：57cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)</span> 1辺8cmの立方体・赤い面をもつ小さな立方体の個数 <span class="type">B・7点｜色ぬり立方体・場合分け</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3つの面</b>」と「<b>考えられる個数をすべて</b>」に丸。「3つの面」を「1つの角に集まる3面／向かい合う2面＋1面」に直して書く → ぬり方が2通りで、答えも2つと決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>立方体の3つの面のえらび方は2種類だけ。ア＝1つの角に集まる3面（左・下・後ろ）。イ＝向かい合う2面と、その間の1面（上・下・左）。</li>
+    <li>赤い面をもつ個数は「全部−白いまま」で出せる。面ごとに数えるときは、2つの面にまたがる列を2回数えない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ぬり方ア（左・下・後ろ）。白いままの部分は、右・上・手前によせた1辺7cmの立方体。全部は 8×8×8＝512個。白いままは 7×7×7＝343個。赤ありは <b>512−343＝169個</b>。
+<svg viewBox="0 0 360 232" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1: ぬり方ア。左・下・後ろの3面をぬる。白いままは1辺7cmの立方体">
+<polygon points="30.0,205.0 166.0,205.0 166.0,69.0 30.0,69.0" fill="#ffffff" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="30.0,69.0 166.0,69.0 214.0,33.0 78.0,33.0" fill="#ffffff" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="166.0,205.0 214.0,169.0 214.0,33.0 166.0,69.0" fill="#ffffff" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="30.0,205.0 47.0,205.0 47.0,69.0 30.0,69.0" fill="#ffe0b2" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="47.0,205.0 166.0,205.0 166.0,188.0 47.0,188.0" fill="#ffe0b2" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="30.0,69.0 47.0,69.0 95.0,33.0 78.0,33.0" fill="#ffe0b2" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="89.0,37.5 208.0,37.5 214.0,33.0 95.0,33.0" fill="#ffe0b2" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="166.0,205.0 214.0,169.0 214.0,152.0 166.0,188.0" fill="#ffe0b2" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="208.0,156.5 214.0,152.0 214.0,33.0 208.0,37.5" fill="#ffe0b2" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="47.0" y1="205.0" x2="47.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="188.0" x2="166.0" y2="188.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="47.0" y1="69.0" x2="95.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="36.0" y1="64.5" x2="172.0" y2="64.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="172.0" y1="200.5" x2="172.0" y2="64.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="188.0" x2="214.0" y2="152.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="64.0" y1="205.0" x2="64.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="171.0" x2="166.0" y2="171.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="64.0" y1="69.0" x2="112.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="42.0" y1="60.0" x2="178.0" y2="60.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="178.0" y1="196.0" x2="178.0" y2="60.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="171.0" x2="214.0" y2="135.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="81.0" y1="205.0" x2="81.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="154.0" x2="166.0" y2="154.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="81.0" y1="69.0" x2="129.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="48.0" y1="55.5" x2="184.0" y2="55.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="184.0" y1="191.5" x2="184.0" y2="55.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="154.0" x2="214.0" y2="118.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="98.0" y1="205.0" x2="98.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="137.0" x2="166.0" y2="137.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="98.0" y1="69.0" x2="146.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="54.0" y1="51.0" x2="190.0" y2="51.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="190.0" y1="187.0" x2="190.0" y2="51.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="137.0" x2="214.0" y2="101.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="115.0" y1="205.0" x2="115.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="120.0" x2="166.0" y2="120.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="115.0" y1="69.0" x2="163.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="60.0" y1="46.5" x2="196.0" y2="46.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="196.0" y1="182.5" x2="196.0" y2="46.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="120.0" x2="214.0" y2="84.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="132.0" y1="205.0" x2="132.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="103.0" x2="166.0" y2="103.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="132.0" y1="69.0" x2="180.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="66.0" y1="42.0" x2="202.0" y2="42.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="202.0" y1="178.0" x2="202.0" y2="42.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="103.0" x2="214.0" y2="67.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="149.0" y1="205.0" x2="149.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="86.0" x2="166.0" y2="86.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="149.0" y1="69.0" x2="197.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="72.0" y1="37.5" x2="208.0" y2="37.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="208.0" y1="173.5" x2="208.0" y2="37.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="86.0" x2="214.0" y2="50.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<polygon points="30.0,205.0 166.0,205.0 166.0,69.0 30.0,69.0" fill="none" stroke="#222" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="30.0,69.0 166.0,69.0 214.0,33.0 78.0,33.0" fill="none" stroke="#222" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="166.0,205.0 214.0,169.0 214.0,33.0 166.0,69.0" fill="none" stroke="#222" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="98" y="221" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">8cm</text>
+<text x="106.5" y="126.5" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">白いまま</text>
+<text x="106.5" y="142.5" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">1辺7cm</text>
+<text x="228" y="70" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">色つき＝赤い所</text>
+<text x="228" y="90" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">左・下・後ろ</text>
+<text x="228" y="125" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">全部 512個</text>
+<text x="228" y="145" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">白いまま 343個</text>
+<text x="228" y="168" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">赤あり 169個</text>
+</svg>
+図1: ぬり方ア。</li>
+    <li>ぬり方イ（左・上・下）。左の面は 8×8＝64個。上の面は、左の1列をのぞいて 8×7＝56個。下の面も56個。赤ありは <b>64＋56＋56＝176個</b>。
+<svg viewBox="0 0 360 232" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2: ぬり方イ。左・上・下の3面をぬる。左64個、上56個、下56個">
+<polygon points="30.0,205.0 166.0,205.0 166.0,69.0 30.0,69.0" fill="#ffffff" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="30.0,69.0 166.0,69.0 214.0,33.0 78.0,33.0" fill="#ffffff" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="166.0,205.0 214.0,169.0 214.0,33.0 166.0,69.0" fill="#ffffff" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="30.0,205.0 47.0,205.0 47.0,69.0 30.0,69.0" fill="#ffe0b2" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="47.0,205.0 166.0,205.0 166.0,188.0 47.0,188.0" fill="#c8e6c9" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="47.0,86.0 166.0,86.0 166.0,69.0 47.0,69.0" fill="#c8e6c9" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="30.0,69.0 47.0,69.0 95.0,33.0 78.0,33.0" fill="#ffe0b2" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="47.0,69.0 166.0,69.0 214.0,33.0 95.0,33.0" fill="#c8e6c9" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="166.0,205.0 214.0,169.0 214.0,152.0 166.0,188.0" fill="#c8e6c9" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="166.0,86.0 214.0,50.0 214.0,33.0 166.0,69.0" fill="#c8e6c9" stroke="#222" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="47.0" y1="205.0" x2="47.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="188.0" x2="166.0" y2="188.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="47.0" y1="69.0" x2="95.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="36.0" y1="64.5" x2="172.0" y2="64.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="172.0" y1="200.5" x2="172.0" y2="64.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="188.0" x2="214.0" y2="152.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="64.0" y1="205.0" x2="64.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="171.0" x2="166.0" y2="171.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="64.0" y1="69.0" x2="112.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="42.0" y1="60.0" x2="178.0" y2="60.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="178.0" y1="196.0" x2="178.0" y2="60.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="171.0" x2="214.0" y2="135.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="81.0" y1="205.0" x2="81.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="154.0" x2="166.0" y2="154.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="81.0" y1="69.0" x2="129.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="48.0" y1="55.5" x2="184.0" y2="55.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="184.0" y1="191.5" x2="184.0" y2="55.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="154.0" x2="214.0" y2="118.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="98.0" y1="205.0" x2="98.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="137.0" x2="166.0" y2="137.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="98.0" y1="69.0" x2="146.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="54.0" y1="51.0" x2="190.0" y2="51.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="190.0" y1="187.0" x2="190.0" y2="51.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="137.0" x2="214.0" y2="101.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="115.0" y1="205.0" x2="115.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="120.0" x2="166.0" y2="120.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="115.0" y1="69.0" x2="163.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="60.0" y1="46.5" x2="196.0" y2="46.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="196.0" y1="182.5" x2="196.0" y2="46.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="120.0" x2="214.0" y2="84.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="132.0" y1="205.0" x2="132.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="103.0" x2="166.0" y2="103.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="132.0" y1="69.0" x2="180.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="66.0" y1="42.0" x2="202.0" y2="42.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="202.0" y1="178.0" x2="202.0" y2="42.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="103.0" x2="214.0" y2="67.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="149.0" y1="205.0" x2="149.0" y2="69.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="30.0" y1="86.0" x2="166.0" y2="86.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="149.0" y1="69.0" x2="197.0" y2="33.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="72.0" y1="37.5" x2="208.0" y2="37.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="208.0" y1="173.5" x2="208.0" y2="37.5" stroke="#9e9e9e" stroke-width="0.4"/>
+<line x1="166.0" y1="86.0" x2="214.0" y2="50.0" stroke="#9e9e9e" stroke-width="0.4"/>
+<polygon points="30.0,205.0 166.0,205.0 166.0,69.0 30.0,69.0" fill="none" stroke="#222" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="30.0,69.0 166.0,69.0 214.0,33.0 78.0,33.0" fill="none" stroke="#222" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="166.0,205.0 214.0,169.0 214.0,33.0 166.0,69.0" fill="none" stroke="#222" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="98" y="221" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">8cm</text>
+<text x="228" y="70" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">左の面 8×8＝64</text>
+<text x="228" y="92" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">上の面 8×7＝56</text>
+<text x="228" y="112" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">（左の1列をのぞく）</text>
+<text x="228" y="134" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">下の面 8×7＝56</text>
+<text x="228" y="160" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold" font-family="sans-serif">赤あり 176個</text>
+</svg>
+図2: ぬり方イ。</li>
+    <li>答えは2つとも書く。推定配点では(1)は完答。2つそろって7点になる。</li>
+  </ol>
+  <div class="ans">答え：169個・176個</div>
+  <div class="tip">コツ：「3つの面をぬる」と見たら、角に集まる3面か、向かい合う面が入るかで分ける。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)</span> 赤ありが408個のとき、すべての面が白い立方体の個数 <span class="type">B・7点｜偶数・奇数で場合を消す</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>408個</b>」と「<b>すべての面が白い</b>」に丸。408は「偶数」に直して書く → ぬり方アの赤ありは、169のようにいつも奇数。ぬり方はイと決まる。あとは408になる1辺をさがす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ぬり方アの赤ありは「1辺を3回かけた数」どうしのひき算。1辺8なら 512−343＝169。1辺9なら 729−512＝217。となり合う整数は、片方が偶数で片方が奇数。3回かけても偶数は偶数、奇数は奇数のまま。偶数と奇数の差は奇数になる。</li>
+    <li>ぬり方イの赤ありは、(1)と同じ数え方。1辺8なら 8×8＋8×7×2。「1辺×1辺」の3つ分より少しだけ少ない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>408は偶数。ぬり方アは奇数にしかならない。<b>ぬり方はイ</b>。</li>
+    <li>1辺の見当をつける。408÷3＝136。「1辺×1辺」が136に近い数をさがす。12×12＝144 が近い。</li>
+    <li>表で確かめる。408をこえたら終わり。
+<table><tr><th>1辺</th><th>イの赤あり（左の面＋上の面＋下の面）</th><th>408か</th></tr>
+<tr><td>11</td><td>11×11＋11×10×2＝121＋220＝341</td><td>×</td></tr>
+<tr><td><b>12</b></td><td>12×12＋12×11×2＝144＋264＝<b>408</b></td><td>○</td></tr>
+<tr><td>13</td><td>13×13＋13×12×2＝169＋312＝481</td><td>× こえた</td></tr></table></li>
+    <li>白いままの部分は、左の1列と、上下の1だんずつをのぞいた直方体。横は 12−1＝11cm。高さは 12−2＝10cm。おくゆきは12cmのまま。
+<svg viewBox="0 0 360 235" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図: 1辺12cmの立方体を正面から見る。左1列と上下1だんずつをのぞくと、横11・高さ10・おくゆき12の白い直方体">
+<rect x="60" y="30" width="180" height="180" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<rect x="60" y="30" width="15" height="180" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/>
+<rect x="75" y="30" width="165" height="15" fill="#c8e6c9" stroke="#222" stroke-width="0.8"/>
+<rect x="75" y="195" width="165" height="15" fill="#c8e6c9" stroke="#222" stroke-width="0.8"/>
+<rect x="60" y="30" width="180" height="180" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="157.5" y="112" font-size="13" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">白いまま</text>
+<text x="157.5" y="132" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold" font-family="sans-serif">横11×高さ10</text>
+<text x="157.5" y="150" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="normal" font-family="sans-serif">おくゆきは12のまま</text>
+<text x="150" y="227" font-size="12" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">12cm</text>
+<text x="248" y="124" font-size="12" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">12cm</text>
+<text x="67.5" y="24" font-size="11" fill="#222" text-anchor="middle" font-weight="normal" font-family="sans-serif">左1列</text>
+<text x="248" y="42" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">上1だん</text>
+<text x="248" y="207" font-size="11" fill="#222" text-anchor="start" font-weight="normal" font-family="sans-serif">下1だん</text>
+</svg>
+図: 正面から見た図。</li>
+    <li>すべての面が白い立方体は <b>12×11×10＝1320個</b>。</li>
+  </ol>
+  <div class="ans">答え：1320個</div>
+  <div class="tip">コツ：前の小問で場合が2通り出たら、次の小問では片方を消す手がかりをさがす。偶数・奇数はその1つ。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">4〜6</span> まとめ <span class="type">この3問でくり返し出た入口</span></h2>
+  <ul>
+    <li>最初の差と残りの差 → 「取った個数の差」に直して書く（4）。答えのあとに「やめる」決まりで確かめる。</li>
+    <li>「4回回転させたとき」「最初の位置にもどりました」→ 円周を4等分。正方形の1辺が正三角形の1辺（5）。半径は「半径×半径」のまま使う。</li>
+    <li>「考えられる個数をすべて」→ 場合が2通り（6）。次の小問は偶数・奇数で片方を消す。</li>
+  </ul>
+</section>
+</div>

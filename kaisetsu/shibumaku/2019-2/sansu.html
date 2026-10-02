@@ -1,0 +1,670 @@
+<!-- generated kakomon shibumaku/2019-2/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1〜3（約数の逆数の和・トーナメント・会話とグラフの推理）</a></li>
+<li><a href="#4-5-6">大問4〜6（ひし形と円・15°の作図・四角すいの中の三角柱）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1〜3（約数の逆数の和・トーナメント・会話とグラフの推理）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 34点／B 20点／C 5点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1</td><td>約数の逆数をたした数〈A〉</td><td>A 4+4+4 / B 7</td><td>通分すると、分子が「約数の和」になる</td></tr>
+    <tr><td>2</td><td>8チームのトーナメント</td><td>A 7+7 / B 5 / C 5</td><td>準優勝＝決勝戦で負けるチーム。山を左右に分けて見る</td></tr>
+    <tr><td>3</td><td>5人の会話と通学のグラフ</td><td>A 8 / B 8</td><td>「遠い」「近い」を1本の線の上に置く</td></tr>
+  </table>
+  <p>取り方: <b>Aの6問（1(1)の3つ・2(1)(2)・3(1)）を先に確実に</b>。Bの1(2)は、(1)の〈72〉で約数の表を書いていれば同じ形で進められる。3(2)はグラフから4人の数字を出せれば手を付ける。2(3)②はCなので後回しでよい。受験者平均は44.1点、合格者平均は61.2点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)〈8〉</span> 8の約数の逆数の和 <span class="type">A・4点｜約数と逆数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>すべての約数</b>」と「<b>逆数</b>」。約数を小さい順に全部書き、1つずつ分子と分母をひっくり返す（直して書く）→ あとは通分してたすだけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆数は、分子と分母をひっくり返した数。2の逆数は 1/2。1の逆数は1のまま。</li>
+    <li>例の〈6〉は、6の約数 1, 2, 3, 6 の逆数をたしている。1 も 6 も約数に入る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>8の約数を書く。1, 2, 4, 8 の4つ。</li>
+    <li>逆数にしてたす。1 ＋ 1/2 ＋ 1/4 ＋ 1/8。</li>
+    <li>分母を8にそろえる。<b>(8＋4＋2＋1)/8 ＝ 15/8</b>。帯分数に直すと 1 7/8。</li>
+    <li>落としやすい所は、1と8そのものを約数に入れ忘れること。</li>
+  </ol>
+  <div class="ans">答え：1 7/8</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)〈9〉</span> 9の約数の逆数の和 <span class="type">A・4点｜約数と逆数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】〈8〉と同じ。部品は「<b>すべての約数</b>」→ 9の約数 1, 3, 9 を書き、逆数に直して書く。通分した分子を見ると、<b>約数をたした数</b>になっている。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>9の約数は 1, 3, 9 の3つ。3×3 のように同じ数をかけてできる数は、約数の個数が奇数になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>逆数にしてたす。1 ＋ 1/3 ＋ 1/9。</li>
+    <li>分母を9にそろえる。<b>(9＋3＋1)/9 ＝ 13/9</b>。帯分数に直すと 1 4/9。</li>
+    <li>〈8〉の分子は 8＋4＋2＋1。〈9〉の分子は 9＋3＋1。どちらも約数を全部たした数になっている。分母はもとの数。これを〈72〉で使う。</li>
+    <li>落としやすい所は、約分できるかどうかの見落とし。13/9 はこれ以上約分できない。</li>
+  </ol>
+  <div class="ans">答え：1 4/9</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)〈72〉</span> 72の約数の逆数の和 <span class="type">A・4点｜約数の和</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>すべての約数</b>」。72は約数が12個ある → 逆数を1つずつ通分せず、<b>「約数の和÷72」に直して書く</b>。約数は表にして、もれなく出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>〈8〉＝15/8、〈9〉＝13/9。分子は約数の和、分母はもとの数。通分すると、1/2 は 4/8 に、1/4 は 2/8 になる。相手の約数が分子に出てくるので、こうなる。</li>
+    <li>72＝8×9。72の約数は「8の約数」と「9の約数」を1つずつかけた数になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>たてに8の約数、横に9の約数を書く。かけ算の表にする。
+      <table>
+        <tr><th>×</th><th>1</th><th>3</th><th>9</th></tr>
+        <tr><th>1</th><td>1</td><td>3</td><td>9</td></tr>
+        <tr><th>2</th><td>2</td><td>6</td><td>18</td></tr>
+        <tr><th>4</th><td>4</td><td>12</td><td>36</td></tr>
+        <tr><th>8</th><td>8</td><td>24</td><td>72</td></tr>
+        <tr><th>たての和</th><td>15</td><td>45</td><td>135</td></tr>
+      </table>
+      表の中の12個が、72の約数の全部。</li>
+    <li>たての和をたす。15＋45＋135＝<b>195</b>。45は15の3倍、135は15の9倍なので、15×(1＋3＋9)＝15×13 でも出せる。</li>
+    <li>約数の和を72でわる。195/72 を3で約分して <b>65/24</b>。帯分数に直すと 2 17/24。</li>
+    <li>落としやすい所は約分。195と72はどちらも3でわれる。</li>
+  </ol>
+  <div class="ans">答え：2 17/24</div>
+  <div class="tip">コツ：「15×13」は「8の約数の和×9の約数の和」。この形は (2) でそのまま使う。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 〈3240〉を求める <span class="type">B・7点｜約数の和（素数の積）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>〈3240〉</b>」。約数が多すぎて書き出せない → (1)と同じ「<b>約数の和÷3240</b>」に直して書く。約数の和は、3240を素数のかけ算に分けてから出す。(1)で 15×13 に気づいていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>72＝8×9 のとき、約数の和は (1＋2＋4＋8)×(1＋3＋9)。素数ごとにかたまりを作って、和どうしをかける。</li>
+    <li>素数が3種類になっても同じ。かたまりが3つになるだけ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3240を素数でわっていく。3240＝2×2×2×3×3×3×3×5。つまり 8×81×5。</li>
+    <li>かたまりごとに約数の和を出す。
+      <table>
+        <tr><th>かたまり</th><th>約数</th><th>和</th></tr>
+        <tr><td>8</td><td>1, 2, 4, 8</td><td>15</td></tr>
+        <tr><td>81</td><td>1, 3, 9, 27, 81</td><td>121</td></tr>
+        <tr><td>5</td><td>1, 5</td><td>6</td></tr>
+      </table></li>
+    <li>3つの和をかける。<b>15×121×6＝10890</b>。これが3240の約数の和。</li>
+    <li>3240でわる。10890/3240 を約分する。10でわって 1089/324。9でわって <b>121/36</b>。帯分数に直すと 3 13/36。</li>
+  </ol>
+  <div class="ans">答え：3 13/36</div>
+  <div class="tip">コツ：約分は先にしておくと楽になる。15×121×6 と 8×81×5 を見くらべる。15と5をわると、上に3が残る。6と8をわると、上に3、下に4が残る。上の 3×3＝9 と下の81をわると、下に9が残る。121/(4×9)＝121/36。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 番くるわせなしで準優勝できるチーム <span class="type">A・7点｜トーナメントの条件整理</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「番くるわせがない」と「<b>準優勝</b>」。準優勝＝決勝戦で負けたチーム → 「<b>Aがいない方の山でいちばん強いチーム</b>」に直して書く。その山の残り3チームは、自分より弱いチームになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>トーナメント表は、左の4わく（ア〜エ）と右の4わく（オ〜ク）の2つの山に分かれる。それぞれの山で勝ち残った1チームどうしが決勝戦をする。</li>
+    <li>番くるわせがなければ、強いチームが勝つ。山の中でいちばん強いチームが決勝戦に出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>優勝はいつもA。だからAは準優勝にならない。</li>
+    <li>準優勝は、Aがいない方の山でいちばん強いチーム。同じ山に、自分より弱いチームが3つ入る。</li>
+    <li>自分より弱いチームの数を表にする。
+      <table>
+        <tr><th>チーム</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr>
+        <tr><th>自分より弱いチーム</th><td>6</td><td>5</td><td>4</td><td><b>3</b></td><td>2</td><td>1</td><td>0</td></tr>
+        <tr><th>3つ以上ある</th><td>○</td><td>○</td><td>○</td><td>○</td><td>×</td><td>×</td><td>×</td></tr>
+      </table></li>
+    <li>Eはぎりぎり。F, G, H と同じ山に入れば準優勝になる。
+<svg id="q2_1_a" viewBox="0 0 360 215" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif">
+<line x1="30" y1="150" x2="30" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="70" y1="150" x2="70" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="110" y1="150" x2="110" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="150" y1="150" x2="150" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="190" y1="150" x2="190" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="230" y1="150" x2="230" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="270" y1="150" x2="270" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="310" y1="150" x2="310" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="30" y1="120" x2="70" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="50.0" y1="120" x2="50.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="110" y1="120" x2="150" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="130.0" y1="120" x2="130.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="190" y1="120" x2="230" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="210.0" y1="120" x2="210.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="270" y1="120" x2="310" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="290.0" y1="120" x2="290.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="50.0" y1="85" x2="130.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="90.0" y1="85" x2="90.0" y2="50" stroke="#222" stroke-width="1.3"/>
+<line x1="210.0" y1="85" x2="290.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="250.0" y1="85" x2="250.0" y2="50" stroke="#222" stroke-width="1.3"/>
+<line x1="90.0" y1="50" x2="250.0" y2="50" stroke="#222" stroke-width="1.3"/>
+<line x1="170.0" y1="50" x2="170.0" y2="28" stroke="#222" stroke-width="1.3"/>
+<line x1="30" y1="150" x2="30" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="30" y1="120" x2="50.0" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="50.0" y1="120" x2="50.0" y2="85" stroke="#222" stroke-width="3.2"/>
+<line x1="110" y1="150" x2="110" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="110" y1="120" x2="130.0" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="130.0" y1="120" x2="130.0" y2="85" stroke="#222" stroke-width="3.2"/>
+<line x1="190" y1="150" x2="190" y2="120" stroke="#d32f2f" stroke-width="3.2"/>
+<line x1="190" y1="120" x2="210.0" y2="120" stroke="#d32f2f" stroke-width="3.2"/>
+<line x1="210.0" y1="120" x2="210.0" y2="85" stroke="#d32f2f" stroke-width="3.2"/>
+<line x1="270" y1="150" x2="270" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="270" y1="120" x2="290.0" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="290.0" y1="120" x2="290.0" y2="85" stroke="#222" stroke-width="3.2"/>
+<line x1="50.0" y1="85" x2="90.0" y2="85" stroke="#222" stroke-width="3.2"/>
+<line x1="90.0" y1="85" x2="90.0" y2="50" stroke="#222" stroke-width="3.2"/>
+<line x1="210.0" y1="85" x2="250.0" y2="85" stroke="#d32f2f" stroke-width="3.2"/>
+<line x1="250.0" y1="85" x2="250.0" y2="50" stroke="#d32f2f" stroke-width="3.2"/>
+<line x1="90.0" y1="50" x2="170.0" y2="50" stroke="#222" stroke-width="3.2"/>
+<line x1="170.0" y1="50" x2="170.0" y2="28" stroke="#222" stroke-width="3.2"/>
+<text x="30" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">A</text>
+<text x="70" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">B</text>
+<text x="110" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">C</text>
+<text x="150" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">D</text>
+<text x="190" y="167" font-size="15" text-anchor="middle" fill="#d32f2f" font-weight="bold">E</text>
+<text x="230" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">F</text>
+<text x="270" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">G</text>
+<text x="310" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">H</text>
+
+<text x="110" y="196" font-size="13" text-anchor="middle" fill="#1565c0" font-weight="normal">左の山（Aがいる）</text><text x="270" y="196" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="normal">右の山でいちばん強いE</text><text x="120" y="22" font-size="13" text-anchor="middle" fill="#222" font-weight="normal">優勝はA</text><text x="262" y="42" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold">準優勝</text>
+</svg></li>
+    <li>Fは、自分より弱いチームがGとHの2つだけ。同じ山に強いチームが1つは入るので、決勝戦まで行けない。G, H も同じ。答えは B, C, D, E の<b>4チーム</b>。</li>
+    <li>落としやすい所は、Aを数に入れてしまうこと。Aは優勝するので準優勝ではない。</li>
+  </ol>
+  <div class="ans">答え：4チーム</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 番くるわせが1回だけのとき準優勝できるチーム <span class="type">A・7点｜トーナメントの条件整理</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は (1) と変わった「<b>1回だけ起きる</b>」に丸。(1)の4チームに、<b>番くるわせ1回で新しく準優勝になれるチーム</b>を足す。A, F, G, H を1チームずつ調べる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>番くるわせは「どれかの試合」で1回。決勝戦で起きてもよい。</li>
+    <li>決勝戦に出るには、1回戦と2回戦の2回勝つ。弱いチームは、強い相手に当たるたびに番くるわせが1回いる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>B, C, D, E は (1) のままでよい。関係のない試合（たとえばG対H）で番くるわせが起きても、準優勝は変わらない。</li>
+    <li>A。<b>決勝戦で番くるわせ</b>が起きると、Aが負けて準優勝になる。</li>
+    <li>F。1回戦でGに勝つ。2回戦でAに番くるわせで勝つ。決勝戦でBに負ける。これで準優勝。
+<svg id="q2_2_a" viewBox="0 0 360 215" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif">
+<line x1="30" y1="150" x2="30" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="70" y1="150" x2="70" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="110" y1="150" x2="110" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="150" y1="150" x2="150" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="190" y1="150" x2="190" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="230" y1="150" x2="230" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="270" y1="150" x2="270" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="310" y1="150" x2="310" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="30" y1="120" x2="70" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="50.0" y1="120" x2="50.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="110" y1="120" x2="150" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="130.0" y1="120" x2="130.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="190" y1="120" x2="230" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="210.0" y1="120" x2="210.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="270" y1="120" x2="310" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="290.0" y1="120" x2="290.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="50.0" y1="85" x2="130.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="90.0" y1="85" x2="90.0" y2="50" stroke="#222" stroke-width="1.3"/>
+<line x1="210.0" y1="85" x2="290.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="250.0" y1="85" x2="250.0" y2="50" stroke="#222" stroke-width="1.3"/>
+<line x1="90.0" y1="50" x2="250.0" y2="50" stroke="#222" stroke-width="1.3"/>
+<line x1="170.0" y1="50" x2="170.0" y2="28" stroke="#222" stroke-width="1.3"/>
+<line x1="30" y1="150" x2="30" y2="120" stroke="#d32f2f" stroke-width="3.2"/>
+<line x1="30" y1="120" x2="50.0" y2="120" stroke="#d32f2f" stroke-width="3.2"/>
+<line x1="50.0" y1="120" x2="50.0" y2="85" stroke="#d32f2f" stroke-width="3.2"/>
+<line x1="110" y1="150" x2="110" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="110" y1="120" x2="130.0" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="130.0" y1="120" x2="130.0" y2="85" stroke="#222" stroke-width="3.2"/>
+<line x1="190" y1="150" x2="190" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="190" y1="120" x2="210.0" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="210.0" y1="120" x2="210.0" y2="85" stroke="#222" stroke-width="3.2"/>
+<line x1="270" y1="150" x2="270" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="270" y1="120" x2="290.0" y2="120" stroke="#222" stroke-width="3.2"/>
+<line x1="290.0" y1="120" x2="290.0" y2="85" stroke="#222" stroke-width="3.2"/>
+<line x1="50.0" y1="85" x2="90.0" y2="85" stroke="#d32f2f" stroke-width="3.2"/>
+<line x1="90.0" y1="85" x2="90.0" y2="50" stroke="#d32f2f" stroke-width="3.2"/>
+<circle cx="90.0" cy="85" r="7" fill="none" stroke="#d32f2f" stroke-width="1.6"/>
+<line x1="210.0" y1="85" x2="250.0" y2="85" stroke="#222" stroke-width="3.2"/>
+<line x1="250.0" y1="85" x2="250.0" y2="50" stroke="#222" stroke-width="3.2"/>
+<line x1="250.0" y1="50" x2="170.0" y2="50" stroke="#222" stroke-width="3.2"/>
+<line x1="170.0" y1="50" x2="170.0" y2="28" stroke="#222" stroke-width="3.2"/>
+<text x="30" y="167" font-size="15" text-anchor="middle" fill="#d32f2f" font-weight="bold">F</text>
+<text x="70" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">G</text>
+<text x="110" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">A</text>
+<text x="150" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">H</text>
+<text x="190" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">B</text>
+<text x="230" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">C</text>
+<text x="270" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">D</text>
+<text x="310" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">E</text>
+
+<text x="72" y="36" font-size="12" text-anchor="middle" fill="#d32f2f" font-weight="normal">ここで番くるわせ</text><text x="110" y="196" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="normal">FがAに勝って決勝へ</text><text x="270" y="196" font-size="13" text-anchor="middle" fill="#222" font-weight="normal">決勝でBに負ける</text><text x="262" y="42" font-size="13" text-anchor="middle" fill="#222" font-weight="normal">優勝はB</text>
+</svg></li>
+    <li>G。1回戦でHに勝つ。2回戦で強いチームに番くるわせで勝つ。決勝戦で負ければ準優勝。</li>
+    <li>H。1回戦の相手はHより強い。2回戦の相手もHより強い。<b>番くるわせが2回いる</b>ので、決勝戦に出られない。</li>
+    <li>準優勝になれるのは A, B, C, D, E, F, G の7チーム。落としやすい所は、Aを足し忘れること。</li>
+  </ol>
+  <div class="ans">答え：7チーム</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)①</span> トーナメント表の割りふり方は何通りか <span class="type">B・5点｜場合の数（組分け）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1回戦の対戦の組み合わせ</b>」と「2回戦で考えられる対戦の組み合わせ」が同じなら同じもの、という決まり。左右を入れかえても同じ → <b>Aの場所を1つに決めて</b>数える（直して書く）。図2〜図6で決まりが飲みこめたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>6チームから2チームを選ぶ選び方は、6×5÷2＝15通り。順番を区別しないので2でわる。</li>
+    <li>図2と図5は、左の山と右の山を入れかえただけ。だから同じもの。図6は、Aの山に入るチームがちがうので別のもの。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1回戦の4試合を、左から Ⅰ, Ⅱ, Ⅲ, Ⅳ とする。AはⅠに入れると決める。入れかえても同じものになるので、こう決めてよい。
+<svg id="q2_3_a" viewBox="0 0 360 235" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif">
+<line x1="30" y1="150" x2="30" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="70" y1="150" x2="70" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="110" y1="150" x2="110" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="150" y1="150" x2="150" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="190" y1="150" x2="190" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="230" y1="150" x2="230" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="270" y1="150" x2="270" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="310" y1="150" x2="310" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="30" y1="120" x2="70" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="50.0" y1="120" x2="50.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="110" y1="120" x2="150" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="130.0" y1="120" x2="130.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="190" y1="120" x2="230" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="210.0" y1="120" x2="210.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="270" y1="120" x2="310" y2="120" stroke="#222" stroke-width="1.3"/>
+<line x1="290.0" y1="120" x2="290.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="50.0" y1="85" x2="130.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="90.0" y1="85" x2="90.0" y2="50" stroke="#222" stroke-width="1.3"/>
+<line x1="210.0" y1="85" x2="290.0" y2="85" stroke="#222" stroke-width="1.3"/>
+<line x1="250.0" y1="85" x2="250.0" y2="50" stroke="#222" stroke-width="1.3"/>
+<line x1="90.0" y1="50" x2="250.0" y2="50" stroke="#222" stroke-width="1.3"/>
+<line x1="170.0" y1="50" x2="170.0" y2="28" stroke="#222" stroke-width="1.3"/>
+<text x="30" y="167" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">A</text>
+<rect x="64" y="155" width="12" height="12" fill="none" stroke="#222" stroke-width="1.2"/>
+<rect x="104" y="155" width="12" height="12" fill="none" stroke="#222" stroke-width="1.2"/>
+<rect x="144" y="155" width="12" height="12" fill="none" stroke="#222" stroke-width="1.2"/>
+<rect x="184" y="155" width="12" height="12" fill="none" stroke="#222" stroke-width="1.2"/>
+<rect x="224" y="155" width="12" height="12" fill="none" stroke="#222" stroke-width="1.2"/>
+<rect x="264" y="155" width="12" height="12" fill="none" stroke="#222" stroke-width="1.2"/>
+<rect x="304" y="155" width="12" height="12" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="50.0" y="188" font-size="13" text-anchor="middle" fill="#1565c0">Ⅰ</text>
+<text x="130.0" y="188" font-size="13" text-anchor="middle" fill="#1565c0">Ⅱ</text>
+<text x="210.0" y="188" font-size="13" text-anchor="middle" fill="#1565c0">Ⅲ</text>
+<text x="290.0" y="188" font-size="13" text-anchor="middle" fill="#1565c0">Ⅳ</text>
+
+<text x="50" y="212" font-size="12" text-anchor="middle" fill="#d32f2f" font-weight="normal">相手7通り</text><text x="130" y="212" font-size="12" text-anchor="middle" fill="#d32f2f" font-weight="normal">15通り</text><text x="250" y="212" font-size="12" text-anchor="middle" fill="#d32f2f" font-weight="normal">Ⅲ・Ⅳの分け方 3通り</text><text x="110" y="70" font-size="12" text-anchor="middle" fill="#1565c0" font-weight="normal">左の山</text><text x="270" y="70" font-size="12" text-anchor="middle" fill="#1565c0" font-weight="normal">右の山</text>
+</svg></li>
+    <li>Ⅰに入る、Aの相手を選ぶ。残り7チームから1つで <b>7通り</b>。</li>
+    <li>Ⅱに入る2チームを選ぶ。残り6チームから2つで 6×5÷2＝<b>15通り</b>。</li>
+    <li>残った4チームを、ⅢとⅣに2チームずつ分ける。Ⅲの選び方は 4×3÷2＝6通り。ⅢとⅣは入れかえても同じなので、6÷2＝<b>3通り</b>。</li>
+    <li>かけ算する。7×15×3＝315。</li>
+  </ol>
+  <div class="ans">答え：315通り</div>
+  <div class="tip">コツ：最後の「÷2」が決め手。たとえば残りが E, F, G, H のとき、「ⅢがE対F、ⅣがG対H」と「ⅢがG対H、ⅣがE対F」は同じもの。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)②</span> 番くるわせ1回でCが優勝する割りふり方 <span class="type">C・5点｜場合の数（場合分け）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「番くるわせが1回だけ」と「<b>Cチームが優勝</b>」。Cより強いAとBが2チームとも負ける → 「<b>BはAに負け、Aが1回だけ番くるわせで負ける</b>」に直して書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>番くるわせが1回なら、AとBのうち番くるわせで負けるのは1チームだけ。Bは、ふつうに負ける相手がAしかいない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aがどこで負けるかで2つに分ける。
+      <table>
+        <tr><th>場合</th><th>チームの入り方</th><th>数え方</th></tr>
+        <tr><td>(あ) Cの山に A, B がいない</td><td>Cの山は、CとCより弱い3チーム。AとBは反対の山</td><td>Cの1回戦の相手が5通り。同じ山の残り2チームが、4チームから2つで6通り。Aの1回戦の相手が3通り。5×6×3＝<b>90通り</b></td></tr>
+        <tr><td>(い) Cが2回戦でAに勝つ</td><td>AとBが1回戦で当たり、Cと同じ山。反対の山は弱い4チーム</td><td>Cの1回戦の相手が5通り。反対の山の4チームの分け方が3通り。5×3＝<b>15通り</b></td></tr>
+      </table></li>
+    <li>(あ) は、決勝戦でCがAに勝つ割りふり。Aが2回戦で負けてCが決勝戦をふつうに勝つ割りふりも、(あ) の90通りの中に入っている。</li>
+    <li>たす。90＋15＝105。</li>
+  </ol>
+  <div class="ans">答え：105通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 会話から家の遠さの順に並べられるか <span class="type">A・8点｜推理（順序の整理）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【素材文】設問は「できないときは，その理由を説明しなさい」。部品は会話の中の<b>「遠い」「近い」</b>に丸 → 1本の線に学校を書き、5人の家を置く（図に置く）。<b>置く場所が1つに決まらない人</b>がいれば、並べられない。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「AはCより遠い」「DもCより遠い」だけでは、AとDのどちらが遠いかは決まらない。2人を直接くらべた言葉がいる。</li>
+    <li>「通学時間が同じ」は時間の話。歩く速さが分からないので、距離は決まらない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>距離の言葉だけを、会話の順に書き出す。
+      <table>
+        <tr><th>会話</th><th>分かること（学校からの遠さ）</th></tr>
+        <tr><td>1番目（A）</td><td>BはAより遠い</td></tr>
+        <tr><td>2番目（C）</td><td>CはAより近い</td></tr>
+        <tr><td>3番目（D）</td><td>DはCより遠い</td></tr>
+        <tr><td>5番目（E）</td><td>EはDより遠く、Bより近い</td></tr>
+        <tr><td>6番目（B）</td><td>EはAより遠い</td></tr>
+      </table></li>
+    <li>1・2番目から、近い順に C, A, B。5・6番目から、EはAとBの間に入る。近い順に <b>C, A, E, B</b>。</li>
+    <li>Dを置く。3番目と5番目から、DはCより遠く、Eより近い。この間にはAもいる。
+<svg id="q3_1_a" viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif">
+<line x1="30" y1="50" x2="335" y2="50" stroke="#222" stroke-width="1.5"/>
+<line x1="40" y1="43" x2="40" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="40" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">B</text>
+<line x1="115" y1="43" x2="115" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="115" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">E</text>
+<line x1="190" y1="43" x2="190" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="190" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">A</text>
+<line x1="265" y1="43" x2="265" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="265" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">C</text>
+<line x1="330" y1="43" x2="330" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="330" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">学校</text>
+<line x1="125" y1="72" x2="255" y2="72" stroke="#d32f2f" stroke-width="2" stroke-dasharray="5 3"/><line x1="125" y1="66" x2="125" y2="78" stroke="#d32f2f" stroke-width="2"/><line x1="255" y1="66" x2="255" y2="78" stroke="#d32f2f" stroke-width="2"/><text x="190" y="94" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold">Dはこの間のどこか</text><text x="190" y="112" font-size="12" text-anchor="middle" fill="#d32f2f" font-weight="normal">（Aより遠いか近いかは分からない）</text><text x="40" y="16" font-size="12" text-anchor="middle" fill="#1565c0" font-weight="normal">遠い</text><text x="325" y="16" font-size="12" text-anchor="middle" fill="#1565c0" font-weight="normal">近い</text>
+</svg></li>
+    <li>DとAをくらべた言葉は、4番目の「通学時間が同じ」だけ。これは時間の話なので、どちらが遠いかは決まらない。<b>Dの位置が決まらない</b>ので、並べられない。</li>
+    <li>落としやすい所は、4番目の会話を「距離が同じ」と読んでしまうこと。</li>
+  </ol>
+  <div class="ans">答え：（例）Dさんの位置が決まらないので，並べることはできない。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> Aさんの歩く速さのはんい <span class="type">B・8点｜速さとグラフの読み取り</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→資料問題】図1〜図4の正体を1行ずつ書く。図3だけ、たてのじくが「<b>歩く速さ</b>」。会話の部品は「<b>通学時間が同じ</b>」→ Aの時間＝Dの20分に直して書く。4人の距離と速さが出せたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>距離＝速さ×時間。グラフが平らな所は、止まっている時間。歩いた時間には入れない。</li>
+    <li>「〜より速く、〜より遅い」の答えは、会話の「速い」と「遠い・近い」から、上と下を1つずつ決める。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>グラフから数字を出して、表にする。
+      <table>
+        <tr><th>人</th><th>グラフから読むこと</th><th>速さ（分速）</th><th>家から学校まで</th></tr>
+        <tr><td>B</td><td>30分で2100m</td><td>2100÷30＝<b>70m</b></td><td>2100m</td></tr>
+        <tr><td>C</td><td>10分で650m。10分から15分は止まる。25分で着く</td><td>650÷10＝65m</td><td>65×(25−5)＝<b>1300m</b></td></tr>
+        <tr><td>D</td><td>分速70mで20分</td><td>70m</td><td>70×20＝1400m</td></tr>
+        <tr><td>E</td><td>10分で720m</td><td>720÷10＝72m</td><td>グラフからは出ない</td></tr>
+      </table></li>
+    <li>上を決める。1番目の会話で、BはAより速い。Bは分速70m。だからAは<b>分速70mより遅い</b>。</li>
+    <li>Aの時間を決める。4番目の会話で、AとDは通学時間が同じ。Dは20分。だからAも20分。</li>
+    <li>下を決める。2番目の会話で、Aの家はCの1300mより遠い。20分で1300mより長く歩く。1300÷20＝65。だからAは<b>分速65mより速い</b>。
+<svg id="q3_2_a" viewBox="0 0 360 128" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif">
+<line x1="30" y1="50" x2="335" y2="50" stroke="#222" stroke-width="1.5"/>
+<line x1="40" y1="43" x2="40" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="40" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">B</text>
+<line x1="100" y1="43" x2="100" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="100" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">E</text>
+<line x1="160" y1="43" x2="160" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="160" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">D</text>
+<line x1="205" y1="43" x2="205" y2="57" stroke="#d32f2f" stroke-width="1.5"/>
+<text x="205" y="34" font-size="15" text-anchor="middle" fill="#d32f2f" font-weight="bold">A</text>
+<line x1="250" y1="43" x2="250" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="250" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">C</text>
+<line x1="330" y1="43" x2="330" y2="57" stroke="#222" stroke-width="1.5"/>
+<text x="330" y="34" font-size="15" text-anchor="middle" fill="#222" font-weight="normal">学校</text>
+<text x="40" y="76" font-size="12" text-anchor="middle" fill="#222" font-weight="normal">2100m</text><text x="160" y="76" font-size="12" text-anchor="middle" fill="#222" font-weight="normal">1400m</text><text x="250" y="76" font-size="12" text-anchor="middle" fill="#222" font-weight="normal">1300m</text><text x="205" y="76" font-size="14" text-anchor="middle" fill="#d32f2f" font-weight="bold">？</text><line x1="165" y1="96" x2="245" y2="96" stroke="#d32f2f" stroke-width="2"/><line x1="165" y1="90" x2="165" y2="102" stroke="#d32f2f" stroke-width="2"/><line x1="245" y1="90" x2="245" y2="102" stroke="#d32f2f" stroke-width="2"/><text x="205" y="118" font-size="12.5" text-anchor="middle" fill="#d32f2f" font-weight="bold">Aは1300mより遠く、1400mより近い</text>
+</svg></li>
+    <li>たしかめ。Aの距離は 65×20＝1300m より長く、70×20＝1400m より短い。Eの家はDの1400mより遠い。だから6番目の「EはAより遠い」とも合う。</li>
+  </ol>
+  <div class="ans">答え：分速65mより速く，分速70mより遅い</div>
+  <div class="tip">コツ：Cの距離は 65×25 ではない。止まっていた5分をひいて、歩いた20分でかける。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ</h2>
+  <ul>
+    <li>約数をあつかう問題は、小さい数で通分して、分子に何がならぶかを見る。大きい数は素数のかたまりごとの表にする。</li>
+    <li>トーナメントは左右の山に分ける。準優勝は「優勝チームがいない方の山のいちばん」。</li>
+    <li>会話の条件は、距離・速さ・時間のどれの話かを分けて、線や表に置く。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4-5-6"><h1 class="dtitle">大問4〜6（ひし形と円・15°の作図・四角すいの中の三角柱）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4〜6</span> この回の全体像（担当の大問） <span class="type">A 16点／B 16点／C 9点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>4</td><td>ひし形にぴったり入った円</td><td>A 8 / B 8</td><td>60°のひし形 → 対角線をひくと30°・60°・90°の三角形</td></tr>
+    <tr><td>5</td><td>45°を1：2に分ける直線の作図</td><td>C 9</td><td>1：2 → 15°と30°。正三角形をかいて150°を作る</td></tr>
+    <tr><td>6</td><td>四角すいの中の正方形と三角柱</td><td>A 8 / B 8</td><td>側面を正面から見る。次に真横から見る</td></tr>
+  </table>
+  <p>取り方: <b>Aの2問（4(1)・6(1)）を先に確実に</b>。どちらも直角三角形の辺の比（1：2、12：5）を図に書けば出る。Bの4(2)と6(2)は、それぞれ(1)の答えを使う。(1)が出ていれば手を付ける。5の作図はCなので後回しでよい。受験者平均は44.1点、合格者平均は61.2点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> ひし形に入った円とAH：HD <span class="type">A・8点｜30°・60°・90°の三角形</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ひし形</b>」と図の「60°」。対角線をひいて円の中心Oを図に置き、角に30°と60°を書く → <b>正三角形を半分にした形</b>が2つ見えて、辺の比1：2が使える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>30°・60°・90°の直角三角形は、正三角形を半分にした形。いちばん短い辺といちばん長い辺の比は<b>1：2</b>。1辺4cmの正三角形を半分にすると、短い辺は2cm、長い辺は4cm。</li>
+    <li>ひし形の対角線は、角を半分に分ける。2本は直角に交わる。</li>
+    <li>円と辺がくっつく点と中心を結ぶと、辺と直角に交わる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>対角線ACとBDをひく。交わる点が円の中心O。OとHも結ぶ。OHは辺ADと直角に交わる。
+<svg xmlns="http://www.w3.org/2000/svg" id="q4_1_a" viewBox="0 0 400 270" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polygon points="20,30 200,133.9 260,30" fill="#dbe9ff"/>
+<polygon points="200,30 200,133.9 260,30" fill="#ffe0b2"/>
+<circle cx="200" cy="133.9" r="103.9" fill="none" stroke="#222" stroke-width="1.2"/>
+<polygon points="110,185.9 200,237.8 290,82 200,30" fill="none" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="30" x2="380" y2="237.8" stroke="#1565c0" stroke-dasharray="5,4"/>
+<line x1="140" y1="237.8" x2="260" y2="30" stroke="#1565c0" stroke-dasharray="5,4"/>
+<line x1="200" y1="30" x2="200" y2="133.9" stroke="#1565c0" stroke-dasharray="5,4"/>
+<polygon points="20,30 260,30 380,237.8 140,237.8" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M190,30 L190,40 L200,40" fill="none" stroke="#222" stroke-width="1"/>
+<circle cx="200" cy="133.9" r="2.5" fill="#222"/>
+<text x="5" y="28">A</text><text x="265" y="26">D</text><text x="124" y="254">B</text><text x="385" y="250">C</text>
+<text x="195" y="22">H</text><text x="195" y="257">F</text><text x="93" y="194">E</text><text x="296" y="80">G</text>
+<text x="210" y="131">O</text>
+<text x="66" y="47" font-size="12" fill="#d32f2f">30°</text>
+</svg></li>
+    <li>角に度数を書く。角Aは60°で、対角線ACが半分に分ける。角OADは30°。となりの角Dは 180−60＝120°で、対角線BDが半分に分ける。角ODAは60°。</li>
+    <li>三角形ODHを見る。角Hが90°、角Dが60°。正三角形を半分にした形。HDを①とすると、ODは②。</li>
+    <li>三角形AODを見る。角Oが90°、角Aが30°。これも正三角形を半分にした形。<b>いちばん短い辺がOD、いちばん長い辺がAD</b>。ODが②だから、ADは④。
+<svg xmlns="http://www.w3.org/2000/svg" id="q4_1_b" viewBox="0 0 380 225" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polygon points="20,60 260,198.6 260,60" fill="#dbe9ff"/>
+<polygon points="260,60 260,198.6 340,60" fill="#ffe0b2"/>
+<polygon points="20,60 340,60 260,198.6" fill="none" stroke="#222" stroke-width="1.6"/>
+<line x1="260" y1="60" x2="260" y2="198.6" stroke="#222" stroke-width="1.2"/>
+<path d="M250,60 L250,70 L260,70" fill="none" stroke="#222" stroke-width="1"/>
+<path d="M251.3,193.6 L256.3,184.9 L265,189.9" fill="none" stroke="#222" stroke-width="1"/>
+<path d="M20,52 L20,24 L340,24 L340,52" fill="none" stroke="#1565c0" stroke-width="1"/>
+<text x="162" y="18" fill="#1565c0">AD＝④</text>
+<text x="5" y="66">A</text><text x="255" y="52">H</text><text x="346" y="66">D</text><text x="255" y="216">O</text>
+<text x="125" y="52" fill="#d32f2f">AH＝③</text>
+<text x="292" y="52">①</text>
+<text x="308" y="140">②</text>
+<text x="64" y="77" font-size="12">30°</text>
+<text x="298" y="78" font-size="12">60°</text>
+</svg></li>
+    <li>AHは ④−①＝③。AH：HD＝3：1。落としやすい所は最後の比。AH：AD の3：4を書かない。聞かれているのはAHとHD。</li>
+  </ol>
+  <div class="ans">答え：3：1</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 四角形EFGHとひし形ABCDの面積の比 <span class="type">B・8点｜面積の比（小さい三角形を1とする）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>四角形EFGHの面積</b>」と「四角形ABCDの面積」。(1)の3：1を図に置き、<b>すみの小さい三角形を1として面積を書きこむ</b> → 2つの四角形を同じ単位で数えられる。(1)が出ていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>高さが同じ三角形は、面積の比が<b>底辺の比</b>と同じ。底辺が3：1なら、面積も3：1。</li>
+    <li>長方形は、2本の対角線で同じ面積の三角形4つに分かれる。ひし形も同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ODとHGの交わる点をIとする。HとGは、ODをはさんで同じ位置にある。だからHGはODと直角に交わる。</li>
+    <li>三角形OHDは、(1)の三角形AODと同じ形（30°・60°・90°）。(1)では直角の角Oから線OHをおろして、AH：HD＝3：1になった。今度は直角の角Hから線HIをおろした形。同じように <b>OI：ID＝3：1</b>。</li>
+    <li>三角形HIDの面積を1とする。三角形HOIは3。合わせた三角形HODは 1＋3＝4。<br>三角形AOHは、三角形HODと高さOHが同じ。底辺がAH：HD＝3：1だから 4×3＝12。<br>三角形AODは 4＋12＝16。
+<svg xmlns="http://www.w3.org/2000/svg" id="q4_2_a" viewBox="0 0 400 225" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polygon points="20,60 260,198.6 260,60" fill="#dbe9ff"/>
+<polygon points="260,60 260,198.6 320,94.65" fill="#c8e6c9"/>
+<polygon points="260,60 320,94.65 340,60" fill="#ffe0b2"/>
+<polygon points="20,60 340,60 260,198.6" fill="none" stroke="#222" stroke-width="1.6"/>
+<line x1="260" y1="60" x2="260" y2="198.6" stroke="#222" stroke-width="1.2"/>
+<line x1="260" y1="60" x2="320" y2="94.65" stroke="#222" stroke-width="1.2"/>
+<path d="M250,60 L250,70 L260,70" fill="none" stroke="#222" stroke-width="1"/>
+<path d="M311.3,89.65 L306.3,98.3 L315,103.3" fill="none" stroke="#222" stroke-width="1"/>
+<text x="5" y="66">A</text><text x="255" y="52">H</text><text x="346" y="66">D</text><text x="255" y="216">O</text><text x="326" y="106">I</text>
+<text x="100" y="50" font-size="12">AH：HD＝3：1</text>
+<text x="300" y="160" font-size="12" fill="#1565c0">OI：ID＝3：1</text>
+<text x="170" y="112" font-size="18" fill="#d32f2f">12</text>
+<text x="275" y="124" font-size="18" fill="#d32f2f">3</text>
+<text x="301" y="80" font-size="16" fill="#d32f2f">1</text>
+</svg></li>
+    <li>ひし形ABCDは、2本の対角線で三角形AODと同じ三角形4つに分かれる。16×4＝64。</li>
+    <li>四角形EFGHを見る。HFとEGはどちらも円の中心Oを通る直径。同じ長さの対角線がまん中で交わるから、長方形。<br>三角形OHGは、三角形HOI 2つ分で 3×2＝6。長方形は三角形OHGと同じ面積の三角形4つ分で、<b>6×4＝24</b>。
+<svg xmlns="http://www.w3.org/2000/svg" id="q4_2_b" viewBox="0 0 400 270" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polygon points="110,185.9 200,237.8 290,82 200,30" fill="#c8e6c9"/>
+<circle cx="200" cy="133.9" r="103.9" fill="none" stroke="#222" stroke-width="1"/>
+<polygon points="110,185.9 200,237.8 290,82 200,30" fill="none" stroke="#222" stroke-width="1.4"/>
+<line x1="200" y1="30" x2="200" y2="237.8" stroke="#1565c0" stroke-dasharray="5,4"/>
+<line x1="110" y1="185.9" x2="290" y2="82" stroke="#1565c0" stroke-dasharray="5,4"/>
+<line x1="200" y1="133.9" x2="260" y2="30" stroke="#1565c0" stroke-dasharray="2,3"/>
+<polygon points="20,30 260,30 380,237.8 140,237.8" fill="none" stroke="#222" stroke-width="1.6"/>
+<circle cx="200" cy="133.9" r="2.5" fill="#222"/>
+<text x="5" y="28">A</text><text x="265" y="26">D</text><text x="124" y="254">B</text><text x="385" y="250">C</text>
+<text x="195" y="22">H</text><text x="195" y="257">F</text><text x="93" y="194">E</text><text x="296" y="80">G</text>
+<text x="183" y="150">O</text><text x="249" y="74" font-size="12">I</text>
+<text x="212" y="80" font-size="15" fill="#d32f2f">3</text><text x="238" y="100" font-size="15" fill="#d32f2f">3</text>
+<text x="226" y="160" font-size="18" fill="#d32f2f">6</text>
+<text x="165" y="194" font-size="18" fill="#d32f2f">6</text>
+<text x="165" y="118" font-size="18" fill="#d32f2f">6</text>
+</svg></li>
+    <li>四角形EFGH：四角形ABCD＝24：64＝3：8。</li>
+  </ol>
+  <div class="ans">答え：3：8</div>
+  <div class="tip">別の見方：ひし形から四すみの三角形をひく。ADを4とする。1辺1の正三角形を1枚と数えると、ひし形ABCDは32枚。三角形AEHと三角形CFGは1辺3の正三角形で9枚ずつ。三角形DHGと三角形BEFは1枚分ずつ（1辺1の正三角形2枚をならべたひし形の半分）。32−(9＋9＋1＋1)＝12枚。12：32＝3：8。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5</span> 角Bを1：2に分ける直線BDの作図 <span class="type">C・9点｜作図（15°を作る）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>辺BCと辺ACの長さが等しい直角三角形</b>」と「<b>1：2</b>」。角Bの45°を1：2に分け、15°と30°に直して書く → BCから15°の線を作図する問題と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正三角形はコンパスだけでかける。角は60°。直角のとなりにかくと 90＋60＝<b>150°</b>。二等辺三角形のてっぺんが150°なら、残りの角は (180−150)÷2＝15°ずつ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ACを1辺とする正三角形を、三角形ABCの外側にかく。Aを中心に、半径ACの円の一部をかく。Cを中心に、同じ半径の円の一部をかく。交わった点をEとする。</li>
+    <li>BとEを定規で結ぶ。<b>この直線がBD</b>（ACと交わる点がD）。直線の近くに「P」と書く。
+<svg xmlns="http://www.w3.org/2000/svg" id="q5_a" viewBox="0 0 380 245" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polygon points="30,210 190,210 190,50" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M180,210 L180,200 L190,200" fill="none" stroke="#222" stroke-width="1"/>
+<line x1="190" y1="50" x2="328.6" y2="130" stroke="#1565c0" stroke-dasharray="5,4"/>
+<line x1="190" y1="210" x2="328.6" y2="130" stroke="#1565c0" stroke-dasharray="5,4"/>
+<path d="M340.4,104.7 A160,160 0 0 1 312.6,152.8" fill="none" stroke="#1565c0" stroke-width="1"/>
+<path d="M312.6,107.2 A160,160 0 0 1 340.4,155.3" fill="none" stroke="#1565c0" stroke-width="1"/>
+<line x1="30" y1="210" x2="358.5" y2="122" stroke="#d32f2f" stroke-width="2"/>
+<text x="194" y="44">A</text><text x="12" y="216">B</text><text x="194" y="228">C</text><text x="340" y="150">E</text><text x="173" y="162">D</text>
+<text x="92" y="182" fill="#d32f2f">P</text>
+<text x="104" y="207" font-size="12" fill="#d32f2f">15°</text>
+<text x="196" y="184" font-size="12">60°</text>
+<text x="224" y="238" font-size="12" fill="#1565c0">AC＝AE＝CE（正三角形）</text>
+</svg></li>
+    <li>確かめ。角BCEは 90＋60＝150°。CBとCEは同じ長さだから、三角形CEBは二等辺三角形。角CBEは (180−150)÷2＝15°。残りの角DBAは 45−15＝30°で、1：2になっている。</li>
+  </ol>
+  <div class="ans">答え：解説の図を参照のこと。（ACを1辺とする正三角形ACEを外側にかき、BとEを結んだ直線）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)</span> 側面の三角形に入った正方形の1辺FG <span class="type">A・8点｜三角形の中の正方形（相似）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>四角形FHIGが正方形</b>」と図2の「<b>12cm</b>」「10cm」。面ACDを正面から見た図をかき、数字を置く → すみの直角三角形の辺の比12：5で、正方形の1辺が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ形の直角三角形は、直角をはさむ2つの辺の比が同じ。大きい三角形が<b>12：5</b>なら、小さい三角形も12：5。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>面ACDを正面から見た図をかく。CDの真ん中をLとする。ALは12cm。LDは 10÷2＝5cm。
+<svg xmlns="http://www.w3.org/2000/svg" id="q6_1_a" viewBox="0 0 300 300" style="max-width:300px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<rect x="85.5" y="150.9" width="109" height="109.1" fill="#dbe9ff"/>
+<polygon points="194.5,150.9 194.5,260 240,260" fill="#ffe0b2"/>
+<line x1="140" y1="20" x2="140" y2="260" stroke="#1565c0" stroke-dasharray="5,4"/>
+<rect x="85.5" y="150.9" width="109" height="109.1" fill="none" stroke="#222" stroke-width="1.2"/>
+<polygon points="140,20 40,260 240,260" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M140,250 L150,250 L150,260" fill="none" stroke="#1565c0" stroke-width="1"/>
+<text x="135" y="14">A</text><text x="24" y="266">C</text><text x="246" y="266">D</text>
+<text x="80" y="275">H</text><text x="135" y="275">L</text><text x="190" y="275">I</text>
+<text x="68" y="150">F</text><text x="200" y="150">G</text>
+<text x="50" y="126" font-size="12">13cm</text><text x="198" y="126" font-size="12">13cm</text>
+<text x="143" y="112" font-size="11" fill="#1565c0">12cm</text>
+<text x="100" y="212" fill="#d32f2f">⑫</text>
+<text x="176" y="212" fill="#d32f2f">⑫</text>
+<text x="57" y="254" fill="#d32f2f">⑤</text>
+<text x="205" y="254" fill="#d32f2f">⑤</text>
+<path d="M140,280 L140,285 L240,285 L240,280" fill="none" stroke="#1565c0" stroke-width="1"/>
+<text x="176" y="297" font-size="12" fill="#1565c0">5cm</text>
+</svg></li>
+    <li>三角形ALDと三角形GIDを見くらべる。どちらも直角三角形で、角Dが同じ。同じ形。AL：LD＝12：5だから、GI：ID＝12：5。</li>
+    <li>正方形の1辺GIを⑫とする。IDは⑤。左のCHも⑤。CDは <b>⑤＋⑫＋⑤＝㉒</b>。</li>
+    <li>㉒が10cm。FGは⑫だから 10×12/22＝60/11＝5 5/11cm。落としやすい所はCDの長さ。⑤は左右に2つあるので、⑫＋⑤＝⑰にしない。</li>
+  </ol>
+  <div class="ans">答え：5 5/11cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)</span> 三角柱FJH-GKIは四角すいの何倍か <span class="type">B・8点｜真横から見た図・高さを□とおく</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>三角柱FJH-GKI</b>」と「<b>何倍</b>」。CからDの向きに真横から見た図をかき、四角すいの高さを□cmに直して書く → 三角形FJHの高さが□の5/11と分かり、□は最後に消える。(1)が出ていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角柱の体積は 底面積×高さ。この三角柱は、三角形FJHが底面で、<b>FGが高さ</b>。</li>
+    <li>分からない長さは□と書いて進める。「何倍」のわり算で□は消える。たとえば (6×□)÷(2×□)＝3。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>立体を、CからDの向きに真横から見た図をかく。四角すいは底辺10cmの三角形に見える。HとIは重なる。CDの真ん中のLも同じ点に重なる。JとKも重なる。右のななめの辺は(1)のALで12cm。Fは、その辺の上でHから60/11cmの所。
+<svg xmlns="http://www.w3.org/2000/svg" id="q6_2_a" viewBox="0 0 320 320" style="max-width:300px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+<polygon points="40,250 240,250 194.5,150.9" fill="#ffe0b2"/>
+<line x1="140" y1="32" x2="140" y2="250" stroke="#1565c0" stroke-dasharray="5,4"/>
+<line x1="194.5" y1="150.9" x2="194.5" y2="250" stroke="#1565c0" stroke-dasharray="5,4"/>
+<polygon points="140,32 40,250 240,250" fill="none" stroke="#222" stroke-width="1.6"/>
+<line x1="40" y1="250" x2="194.5" y2="150.9" stroke="#222" stroke-width="1.4"/>
+<path d="M140,240 L150,240 L150,250" fill="none" stroke="#1565c0" stroke-width="1"/>
+<path d="M194.5,240 L204.5,240 L204.5,250" fill="none" stroke="#1565c0" stroke-width="1"/>
+<text x="135" y="24">A</text><text x="8" y="268">J（K）</text><text x="226" y="268">H（I・L）</text>
+<text x="135" y="268">O</text><text x="189" y="268">P</text>
+<text x="200" y="146">F（G）</text>
+<rect x="96" y="140" width="10" height="10" fill="none" stroke="#1565c0" stroke-width="1.1"/><text x="108" y="150" font-size="12" fill="#1565c0">cm</text>
+<text x="178" y="88" font-size="12">(1)のAL＝12cm</text>
+<text x="226" y="204" font-size="12">FH＝60/11cm</text>
+<rect x="146" y="212" width="10" height="10" fill="none" stroke="#d32f2f" stroke-width="1.1"/><text x="158" y="222" font-size="12" fill="#d32f2f">×5/11</text>
+<text x="112" y="288" font-size="12">JH＝10cm</text>
+</svg></li>
+    <li>Aの真下の点をO、Fの真下の点をPとする。AOを□cmとする。この図の上で、Aのある大きい直角三角形と、Fのある小さい直角三角形は同じ形。ななめの辺は12cmと60/11cm。比は 12：60/11＝11：5。だからFPは <b>□×5/11</b>（cm）。</li>
+    <li>三角形FJHの面積を出す。底辺JHは10cm。高さはFP。<br>10×□×5/11÷2＝□×25/11（cm²）</li>
+    <li>三角柱の体積を出す。高さはFGの60/11cm。<br>□×25/11×60/11＝□×1500/121（cm³）</li>
+    <li>四角すいの体積を出す。<br>10×10×□÷3＝□×100/3（cm³）</li>
+    <li>三角柱を四角すいでわる。□は消える。<br>1500/121÷100/3＝1500/121×3/100＝45/121（倍）</li>
+  </ol>
+  <div class="ans">答え：45/121倍</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">4〜6</span> まとめ <span class="type">図形の入口</span></h2>
+  <ul>
+    <li>60°や30°が見えたら、<b>正三角形を半分にした形</b>をさがす。辺の比1：2が使える（4）。</li>
+    <li>立体は、<b>面を1つ正面から見た図</b>にかき直す。三角形の中の正方形は、すみの直角三角形の比で決まる（6(1)）。</li>
+    <li>高さが出ない立体の「何倍」は、高さを□と書いて進める。最後のわり算で消える（6(2)）。</li>
+  </ul>
+</section>
+</div>
