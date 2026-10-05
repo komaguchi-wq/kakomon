@@ -117,8 +117,8 @@ function examGroupsOf(data) {
     .map((y) => ({ label: y + '年度', exams: byYear[y] }));
 }
 
-// ---- 試験カードの正誤棒グラフ（全教科の小問を合算。緑=正答率60%以上 / 黄=60%未満 / 灰=未） ----
-const GOOD_RATE = 0.6;   // ★2026-08-23 ユーザー確定・全アプリ共通
+// ---- 試験カードの正誤棒グラフ（全教科の小問を合算。緑=正答率50%以上 / 黄=50%未満 / 灰=未） ----
+const GOOD_RATE = 0.5;   // ★2026-10-05 ユーザー確定 50%に変更（旧0.6=2026-08-23）・全アプリ共通
 function examBarStats(schoolId, ex) {
   let total = 0, attempted = 0, good = 0;
   for (const sub of ex.subjects || []) {
@@ -146,7 +146,7 @@ function unitBarBlock(st) {
   return `
       <div class="unit-card-row">
         <div class="unit-card-info">
-          <div class="unit-card-bar" title="緑=正答率60%以上 / 黄=60%未満 / 灰=未回答">
+          <div class="unit-card-bar" title="緑=正答率50%以上 / 黄=50%未満 / 灰=未回答">
             <div class="unit-card-bar-good" style="width:${pct(st.good)}%"></div>
             <div class="unit-card-bar-low" style="width:${pct(st.low)}%"></div>
           </div>
