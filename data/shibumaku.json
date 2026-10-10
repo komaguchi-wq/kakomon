@@ -14877,7 +14877,14 @@
        "gokakusha": 59.2
       }
      },
-     "kaisetsu": "kaisetsu/shibumaku/2018-1/sansu.html"
+     "kaisetsu": "kaisetsu/shibumaku/2018-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2018-1/sansu/solved_2026-10-10_01.jpg",
+       "small": "2018-1/sansu/solved_2026-10-10_01_small.jpg",
+       "date": "2026-10-10"
+      }
+     ]
     },
     {
      "id": "shakai",
