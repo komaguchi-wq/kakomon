@@ -1,0 +1,687 @@
+<!-- generated kakomon moshi/2026-10-12_so-keiosfc-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（計算・小問集合・白黒カードの規則性）</a></li>
+<li><a href="#4-5-6">大問4・5・6（ロボットの仕事算・折れ線に沿う回転・流水算）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（計算・小問集合・白黒カードの規則性）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 35点／B 12点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1</td><td>計算のくふう・逆算・割合（全体を①）</td><td>A 5×3</td><td>69・46・23 は全部 23 の倍数／かっこの中＝33÷11／男子＋女子＝全体</td></tr>
+  <tr><td>2</td><td>となりあう並び方・値引きと売上・2つの駅（集合）</td><td>A 5×3</td><td>父母をかたまりに／昨日の個数を□／2×2の表に②と⑤</td></tr>
+  <tr><td>3</td><td>白黒カードの表（三角数・ななめの並び）</td><td>A 5／B 6・B 6</td><td>1列目は三角数、ななめ右上へ1ずつへる／3枚の差＝まん中＋1</td></tr></table>
+  <p>取り方: <b>Aの7問（35点）を先に確実に</b>。大問1・2は SFC の前半によくある型で、ここを落とすと後半で取り返しにくい。Bの 3(2) は表を3枚書き足せば出るので手を付ける。3(3) は (2) で見つけた決まりを使う問題なので、(2) が出たら続けて解く。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 69×13＋46×19−23×17 <span class="type">A・5点｜計算のくふう（分配法則）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「69」「46」「<b>23</b>」の3つ。69＝23×3、46＝23×2 に直して書く → 全部が <b>23×（　）</b>の形になり、かっこの中のたし算ひき算だけで答えが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数でくくる（分配法則）。たとえば 6×2＋3×4 は 3×(4＋4)＝24。かけ算が3つ並んだ計算は、まず共通の数をさがす。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>69×13 を 23×3×13＝23×39 に、46×19 を 23×2×19＝23×38 に書き直す。
+<pre class="fig">69×13 ＋ 46×19 − 23×17
+＝23×(3×13 ＋ 2×19 − 17)
+＝23×(39 ＋ 38 − 17)</pre></li>
+    <li>かっこの中を計算する。39＋38−17＝<b>60</b>。</li>
+    <li>23×60＝1380。</li>
+    <li>落としやすい所は 17 の前の「−」。かっこの中に写すとき、記号もいっしょに写す。</li>
+  </ol>
+  <div class="ans">答え：1380</div>
+  <div class="miss">今回：1380 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> (0.825÷11/8＋イ÷5)×11＝33 <span class="type">A・5点｜逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>×11＝33</b>」と「<b>0.825÷11/8</b>」。かっこ全体を□に直して書く → □＝33÷11＝3 と決まる。あとは 0.825 を分数 33/40 にして、3 から引く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆算は外側から1つずつもどす。(□)×11＝33 なら □＝33÷11。</li>
+    <li>0.825＝825/1000。825 と 1000 を 25 でわると 33/40。分数でわる計算は、ひっくり返してかける。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>かっこ全体を□とおく。□×11＝33 → □＝<b>3</b>。</li>
+    <li>0.825÷11/8 を先に計算する。
+<pre class="fig">0.825÷11/8 ＝ 33/40 × 8/11 ＝ 3/5</pre></li>
+    <li>3/5＋イ÷5＝3 → イ÷5＝3−3/5＝12/5。</li>
+    <li>イ＝12/5×5＝<b>12</b>。</li>
+    <li>たしかめ。(0.6＋12÷5)×11＝(0.6＋2.4)×11＝3×11＝33。合っている。</li>
+    <li>落としやすい所は 0.825 の分数化。825÷25＝33、1000÷25＝40 と、25 でわる。</li>
+  </ol>
+  <div class="ans">答え：12</div>
+  <div class="miss">今回：12 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> クラブの男子の人数 <span class="type">A・5点｜割合（全体を①）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>全体の人数の5/9より5人多く</b>」と「<b>2/3より19人少ない</b>」。全体を①として、男子＝(5/9)＋5、女子＝(2/3)−19 に直して書く → 男子＋女子＝① の式が立ち、割合のはみ出た分と人数の差が結びつく。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>男子＋女子＝クラブ全体。全体を①とおくと、割合の部分と人数の部分を分けて整理できる。</li>
+    <li>5/9＋2/3＝5/9＋6/9＝11/9。全体の 11/9 は、全体より 2/9 だけ多い。たとえば全体が 9 人なら 11 人で、2 人多い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>全体を①とおき、男子と女子を書く。
+<pre class="fig">男子 ＝ (5/9) ＋ 5 人
+女子 ＝ (2/3) − 19 人
+男子＋女子 ＝ (11/9) − 14 人 ＝ ①</pre></li>
+    <li>(11/9) は ① より (2/9) 多い。その多い分が 14 人に当たる。</li>
+    <li>①＝14÷2/9＝14×9/2＝<b>63 人</b>。</li>
+    <li>男子＝63×5/9＋5＝35＋5＝<b>40 人</b>。</li>
+    <li>たしかめ。女子＝63×2/3−19＝42−19＝23 人。40＋23＝63 で全体と同じ。</li>
+    <li>落としやすい所は「19人少ない」の −19。＋5 と −19 をたすと −14 になる。</li>
+  </ol>
+  <div class="ans">答え：40</div>
+  <div class="miss">今回：40 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 5人家族の並び方（父母がとなりあう） <span class="type">A・5点｜場合の数（となりあう並び）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>5人家族が1列に並ぶ</b>」と「<b>父母がとなりあう</b>」。父母を1つのかたまりに直して書く → 「かたまり＋子3人」の4つの並べ方に、父母の入れかえ×2 をかければ決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「となりあう」は、2人をひとまとめにして1人分と考える。あとでまとめの中の入れかえ（父母／母父）を ×2 する。</li>
+    <li>3人の並べ方は 3×2×1＝6 通り。4つの並べ方は 4×3×2×1＝24 通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>父母のかたまりが入る場所を書き出す。5つの席のうち、となりどうしの2席は4組。
+<table><tr><th>場所</th><td>父母○○○</td><td>○父母○○</td><td>○○父母○</td><td>○○○父母</td></tr></table></li>
+    <li>残りの3つの席に、長男・次男・三男を並べる。3×2×1＝6 通り。</li>
+    <li>父母のかたまりの中の順は、父母と母父の 2 通り。</li>
+    <li>4×6×2＝<b>48 通り</b>。</li>
+    <li>落としやすい所は最後の ×2。母父の順を忘れると 24 通りで止まる。</li>
+  </ol>
+  <div class="ans">答え：48(通り)</div>
+  <div class="miss">今回：48通り ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 値引きしたお菓子の売り上げ個数 <span class="type">A・5点｜値引きと売上（線分図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>35個増加</b>」と「<b>1800円増加</b>」。昨日の個数を□個、今日を□＋35 個に直して書く → 昨日 120×□ と 今日 100×□＋3500 を線分図でくらべると、□が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>今日の売上は 100×(□＋35)。分けて書くと 100×□＋3500。35 個分の 3500 円を先に切り出す。</li>
+    <li>同じ□個なら、120 円と 100 円の差は 1 個 20 円。□個で 20×□ 円。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>昨日と今日を線分図に書く。今日のほうが 1800 円長い。
+<svg id="q2_2_fig" viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<text x="8" y="36" font-size="13" fill="#222">昨日</text>
+<rect x="50" y="22" width="200" height="20" fill="#dbe9ff" stroke="#222"/>
+<text x="150" y="37" text-anchor="middle" font-size="13" fill="#222">120円×□個</text>
+<text x="8" y="80" font-size="13" fill="#222">今日</text>
+<rect x="50" y="66" width="167" height="20" fill="#dbe9ff" stroke="#222"/>
+<text x="133" y="81" text-anchor="middle" font-size="13" fill="#222">100円×□個</text>
+<rect x="217" y="66" width="63" height="20" fill="#ffe0b2" stroke="#222"/>
+<text x="248" y="81" text-anchor="middle" font-size="12" fill="#222">3500円</text>
+<line x1="250" y1="44" x2="250" y2="64" stroke="#d32f2f" stroke-dasharray="3,2"/>
+<line x1="217" y1="44" x2="217" y2="64" stroke="#1565c0" stroke-dasharray="3,2"/>
+<text x="233" y="58" text-anchor="middle" font-size="11" fill="#1565c0">20×□</text>
+<path d="M250,92 L250,100 L280,100 L280,92" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+<text x="265" y="113" text-anchor="middle" font-size="12" fill="#d32f2f">1800円</text>
+<text x="8" y="113" font-size="12" fill="#222">3500−1800＝1700 が 20×□ の分</text>
+</svg></li>
+    <li>3500 円のうち、1800 円は「増えた分」。残りの 3500−1800＝<b>1700 円</b>が、120×□ と 100×□ の差（20×□）に当たる。</li>
+    <li>□＝1700÷20＝85 個（昨日）。</li>
+    <li>今日は 85＋35＝<b>120 個</b>。</li>
+    <li>たしかめ。昨日 120×85＝10200 円、今日 100×120＝12000 円。差は 1800 円で合っている。</li>
+    <li>落としやすい所は答え方。聞かれているのは「今日」の個数で、85 で止めない。</li>
+  </ol>
+  <div class="ans">答え：120(個)</div>
+  <div class="miss">今回：120個 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> A駅とB駅を両方利用している生徒 <span class="type">A・5点｜集合（2×2の表）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>どちらの駅も利用している</b>」と「<b>どちらの駅も利用していない</b>」の比 2：5。②と⑤に直して 2×2 の表に置く → 表のたて・横の合計（41・30・80）から、②と⑤の差が人数で決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2種類の「利用する／しない」は、たて A・横 B の表（4 マス＋合計）に整理する。A を利用しない人は 80−41＝39 人。</li>
+    <li>「両方」と「どちらも利用しない」の比が 2：5 なら、②と⑤ とおく。⑤−②＝③ が何人かが分かれば ① が出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を書く。両方＝②、どちらも利用しない＝⑤。分からないマスをイとおく。
+<table><tr><th></th><th>A 利用</th><th>A 利用しない</th><th>合計</th></tr>
+<tr><th>B 利用</th><td>②</td><td>イ</td><td>30</td></tr>
+<tr><th>B 利用しない</th><td></td><td>⑤</td><td></td></tr>
+<tr><th>合計</th><td>41</td><td>39</td><td>80</td></tr></table></li>
+    <li>横の行: ②＋イ＝30。たての列: イ＋⑤＝39。</li>
+    <li>2つの式の差をとる。⑤−②＝③ が 39−30＝<b>9 人</b>。</li>
+    <li>①＝9÷3＝3 人。両方利用は ②＝<b>6 人</b>。</li>
+    <li>たしかめ。イ＝30−6＝24、⑤＝15。24＋15＝39 で A を利用しない人数と同じ。</li>
+    <li>落としやすい所は「A を利用しない 39 人」を表に書くこと。41 のままでは差が取れない。</li>
+  </ol>
+  <div class="ans">答え：6(人)</div>
+  <div class="miss">今回：6人 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 100 のカードの場所 <span class="type">A・5点｜規則性（三角数のななめ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】表の正体を1行で書く＝「<b>1列目は 1,3,6,10,15 の三角数</b>、ななめ右上へ 1 ずつへる」。部品は「<b>100がかかれているカード</b>」→ 100 のすぐ上の三角数 105（14段目1列目）から、ななめに 5 もどれば場所が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角数は 1＋2＋…＋n。1, 3, 6, 10, 15, … で、n 番目は n×(n＋1)÷2。13 番目は 91、14 番目は 105。</li>
+    <li>この表では、□段目1列目から ななめ右上へ 1 つ進むごとに、段は 1 へり、列は 1 ふえ、数は 1 へる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表の 1 列目と、ななめの並びをたしかめる。
+<svg id="q3_1_fig" viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<defs><marker id="q3_1_arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1565c0"/></marker></defs>
+<text x="83.0" y="22" text-anchor="middle" font-size="12" fill="#222">1列目</text>
+<text x="129.0" y="22" text-anchor="middle" font-size="12" fill="#222">2列目</text>
+<text x="175.0" y="22" text-anchor="middle" font-size="12" fill="#222">3列目</text>
+<text x="221.0" y="22" text-anchor="middle" font-size="12" fill="#222">4列目</text>
+<text x="267.0" y="22" text-anchor="middle" font-size="12" fill="#222">5列目</text>
+<text x="313.0" y="22" text-anchor="middle" font-size="12" fill="#222">6列目</text>
+<text x="54" y="51.0" text-anchor="end" font-size="12" fill="#222">1段目</text>
+<text x="54" y="85.0" text-anchor="end" font-size="12" fill="#222">2段目</text>
+<text x="54" y="119.0" text-anchor="end" font-size="12" fill="#222">3段目</text>
+<text x="54" y="153.0" text-anchor="end" font-size="12" fill="#222">4段目</text>
+<text x="54" y="187.0" text-anchor="end" font-size="12" fill="#222">5段目</text>
+<rect x="60" y="30" width="46" height="34" fill="#fff" stroke="#222"/><text x="83.0" y="52.0" text-anchor="middle" font-size="14" fill="#222">1</text>
+<rect x="106" y="30" width="46" height="34" fill="#222" stroke="#222"/><text x="129.0" y="52.0" text-anchor="middle" font-size="14" fill="#fff">2</text>
+<rect x="152" y="30" width="46" height="34" fill="#fff" stroke="#222"/><text x="175.0" y="52.0" text-anchor="middle" font-size="14" fill="#222">4</text>
+<rect x="198" y="30" width="46" height="34" fill="#222" stroke="#222"/><text x="221.0" y="52.0" text-anchor="middle" font-size="14" fill="#fff">7</text>
+<rect x="244" y="30" width="46" height="34" fill="#fff" stroke="#222"/><text x="267.0" y="52.0" text-anchor="middle" font-size="14" fill="#222">11</text>
+<rect x="290" y="30" width="46" height="34" fill="#222" stroke="#222"/><text x="313.0" y="52.0" text-anchor="middle" font-size="14" fill="#fff">16</text>
+<rect x="60" y="64" width="46" height="34" fill="#222" stroke="#222"/><text x="83.0" y="86.0" text-anchor="middle" font-size="14" fill="#fff">3</text>
+<rect x="106" y="64" width="46" height="34" fill="#fff" stroke="#222"/><text x="129.0" y="86.0" text-anchor="middle" font-size="14" fill="#222">5</text>
+<rect x="152" y="64" width="46" height="34" fill="#222" stroke="#222"/><text x="175.0" y="86.0" text-anchor="middle" font-size="14" fill="#fff">8</text>
+<rect x="198" y="64" width="46" height="34" fill="#fff" stroke="#222"/><text x="221.0" y="86.0" text-anchor="middle" font-size="14" fill="#222">12</text>
+<rect x="244" y="64" width="46" height="34" fill="#222" stroke="#222"/><text x="267.0" y="86.0" text-anchor="middle" font-size="14" fill="#fff">17</text>
+<rect x="60" y="98" width="46" height="34" fill="#fff" stroke="#222"/><text x="83.0" y="120.0" text-anchor="middle" font-size="14" fill="#222">6</text>
+<rect x="106" y="98" width="46" height="34" fill="#222" stroke="#222"/><text x="129.0" y="120.0" text-anchor="middle" font-size="14" fill="#fff">9</text>
+<rect x="152" y="98" width="46" height="34" fill="#fff" stroke="#222"/><text x="175.0" y="120.0" text-anchor="middle" font-size="14" fill="#222">13</text>
+<rect x="60" y="132" width="46" height="34" fill="#222" stroke="#222"/><text x="83.0" y="154.0" text-anchor="middle" font-size="14" fill="#fff">10</text>
+<rect x="106" y="132" width="46" height="34" fill="#fff" stroke="#222"/><text x="129.0" y="154.0" text-anchor="middle" font-size="14" fill="#222">14</text>
+<rect x="60" y="166" width="46" height="34" fill="#fff" stroke="#222"/><text x="83.0" y="188.0" text-anchor="middle" font-size="14" fill="#222">15</text>
+<rect x="60" y="30" width="46" height="170" fill="none" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="93.0" y1="175.0" x2="257.0" y2="55.0" stroke="#1565c0" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#q3_1_arr)"/>
+<text x="20" y="235" font-size="13" fill="#d32f2f">1列目は 1, 3, 6, 10, 15 ＝ 三角数（1+2+…+段の数）</text>
+<text x="20" y="258" font-size="13" fill="#1565c0">ななめ右上へ進むと 15→14→13→12→11 と 1 ずつへる</text>
+</svg></li>
+    <li>100 に近い三角数をさがす。13 番目 1＋…＋13＝91、14 番目 1＋…＋14＝<b>105</b>。100 は 105 のななめの線の上にある。</li>
+    <li>105 から 100 まで、ななめ右上へ 105−100＝5 つ進む。段は 14−5＝<b>9</b>、列は 1＋5＝6。</li>
+    <li>落としやすい所は向き。段は「へる」、列は「ふえる」。逆にすると 19 段目 になってしまう。</li>
+  </ol>
+  <div class="ans">答え：ア…9、イ…6</div>
+  <div class="miss">今回：ア9・イ6 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 4段目3〜5列目の白と黒の差 <span class="type">B・6点｜規則性（ななめの差）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は「<b>4段目3列目・4段目4列目・4段目5列目</b>」と、例の「<b>白と黒のカードの数の差</b>」。となりの数はいつも白黒が入れかわるので、差＝（左＋右）−まん中 に直して書く。4 段目の続きを 3 枚書き足せば決まる＝手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ななめの線（15,14,13,…）は同じ色で、線が変わるごとに色が入れかわる。だから横に並んだ 3 枚は、白黒白 か 黒白黒。差は（左＋右）−まん中。例の 1,2,4 なら 1＋4−2＝3。</li>
+    <li>表の続きは 1 列目の三角数から書く。6 段目は 21、7 段目は 28、8 段目は 36。そこからななめ右上へ 1 ずつへらす。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>4 段目の続きを書く。5 段目1列目 15 から 14、6 段目 21 から 20・19、7 段目 28 から 27・26・25、8 段目 36 から 35・34・33・32。
+<svg id="q3_2_fig" viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<defs><marker id="q3_2_arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1565c0"/></marker></defs>
+<text x="83.0" y="22" text-anchor="middle" font-size="12" fill="#222">1列目</text>
+<text x="129.0" y="22" text-anchor="middle" font-size="12" fill="#222">2列目</text>
+<text x="175.0" y="22" text-anchor="middle" font-size="12" fill="#222">3列目</text>
+<text x="221.0" y="22" text-anchor="middle" font-size="12" fill="#222">4列目</text>
+<text x="267.0" y="22" text-anchor="middle" font-size="12" fill="#222">5列目</text>
+<text x="54" y="51.0" text-anchor="end" font-size="12" fill="#222">4段目</text>
+<text x="54" y="85.0" text-anchor="end" font-size="12" fill="#222">5段目</text>
+<text x="54" y="119.0" text-anchor="end" font-size="12" fill="#222">6段目</text>
+<text x="54" y="153.0" text-anchor="end" font-size="12" fill="#222">7段目</text>
+<text x="54" y="187.0" text-anchor="end" font-size="12" fill="#222">8段目</text>
+<rect x="60" y="30" width="46" height="34" fill="#222" stroke="#222"/><text x="83.0" y="52.0" text-anchor="middle" font-size="14" fill="#fff">10</text>
+<rect x="106" y="30" width="46" height="34" fill="#fff" stroke="#222"/><text x="129.0" y="52.0" text-anchor="middle" font-size="14" fill="#222">14</text>
+<rect x="152" y="30" width="46" height="34" fill="#222" stroke="#222"/><text x="175.0" y="52.0" text-anchor="middle" font-size="14" fill="#fff">19</text>
+<rect x="198" y="30" width="46" height="34" fill="#fff" stroke="#222"/><text x="221.0" y="52.0" text-anchor="middle" font-size="14" fill="#222">25</text>
+<rect x="244" y="30" width="46" height="34" fill="#222" stroke="#222"/><text x="267.0" y="52.0" text-anchor="middle" font-size="14" fill="#fff">32</text>
+<rect x="60" y="64" width="46" height="34" fill="#fff" stroke="#222"/><text x="83.0" y="86.0" text-anchor="middle" font-size="14" fill="#222">15</text>
+<rect x="106" y="64" width="46" height="34" fill="#222" stroke="#222"/><text x="129.0" y="86.0" text-anchor="middle" font-size="14" fill="#fff">20</text>
+<rect x="152" y="64" width="46" height="34" fill="#fff" stroke="#222"/><text x="175.0" y="86.0" text-anchor="middle" font-size="14" fill="#222">26</text>
+<rect x="198" y="64" width="46" height="34" fill="#222" stroke="#222"/><text x="221.0" y="86.0" text-anchor="middle" font-size="14" fill="#fff">33</text>
+<rect x="60" y="98" width="46" height="34" fill="#222" stroke="#222"/><text x="83.0" y="120.0" text-anchor="middle" font-size="14" fill="#fff">21</text>
+<rect x="106" y="98" width="46" height="34" fill="#fff" stroke="#222"/><text x="129.0" y="120.0" text-anchor="middle" font-size="14" fill="#222">27</text>
+<rect x="152" y="98" width="46" height="34" fill="#222" stroke="#222"/><text x="175.0" y="120.0" text-anchor="middle" font-size="14" fill="#fff">34</text>
+<rect x="60" y="132" width="46" height="34" fill="#fff" stroke="#222"/><text x="83.0" y="154.0" text-anchor="middle" font-size="14" fill="#222">28</text>
+<rect x="106" y="132" width="46" height="34" fill="#222" stroke="#222"/><text x="129.0" y="154.0" text-anchor="middle" font-size="14" fill="#fff">35</text>
+<rect x="60" y="166" width="46" height="34" fill="#222" stroke="#222"/><text x="83.0" y="188.0" text-anchor="middle" font-size="14" fill="#fff">36</text>
+<rect x="152" y="30" width="138" height="34" fill="none" stroke="#d32f2f" stroke-width="3"/>
+<line x1="100" y1="104" x2="158" y2="58" stroke="#1565c0" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#q3_2_arr)"/>
+<line x1="100" y1="138" x2="204" y2="58" stroke="#1565c0" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#q3_2_arr)"/>
+<line x1="100" y1="172" x2="250" y2="58" stroke="#1565c0" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#q3_2_arr)"/>
+<text x="296" y="51.0" font-size="12" fill="#d32f2f">19+32−25</text>
+<text x="20" y="235" font-size="13" fill="#1565c0">21 のななめの線（21,20,19,…）は 右どなりとの差が 6</text>
+<text x="20" y="256" font-size="13" fill="#1565c0">28 のななめの線（28,27,26,25,…）は 右どなりとの差が 7</text>
+<text x="20" y="280" font-size="13" fill="#d32f2f">差 ＝ 19＋32−25 ＝ まん中の 25 に 1 をたした数</text>
+</svg></li>
+    <li>4 段目の 3〜5 列目は 19（黒）・25（白）・32（黒）。</li>
+    <li>差は 19＋32−25＝<b>26</b>。</li>
+    <li>ここで気づいておくこと。右どなりとの差は、ななめの線の出発の段の数と同じ（21 の線は 6、28 の線は 7）。だから 3 枚の差は、いつも<b>まん中の数＋1</b>（25＋1＝26）。(3) で使う。</li>
+  </ol>
+  <div class="ans">答え：ウ…26</div>
+  <div class="miss">今回：26 ○。</div>
+  <div class="tip">コツ：差が「まん中＋1」になる理由。左＝まん中−□、右＝まん中＋（□＋1）なので、左＋右−まん中＝まん中＋1。問題用紙の表に 3 段ぶん書き足すだけで、この決まりが見える。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 差が 70 になる 3 枚の左端 <span class="type">B・6点｜規則性（決まりをもどして使う）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は「<b>差が70になる</b>」と「<b>左端にあるカード</b>」。(2) の決まり「差＝まん中＋1」に直して書く → まん中＝69 と決まり、あとは 69 の場所を (1) と同じ三角数のもどし方でさがすだけ。(2) が出ていれば続けて解く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>横 3 枚の差は、まん中の数＋1（(2) で見つけた決まり）。差が 70 なら、まん中は 70−1＝69。</li>
+    <li>69 に近い三角数は 11 番目の 66 と 12 番目の 78。69 は 78 のななめの線の上にある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>まん中のカードは 70−1＝<b>69</b>。</li>
+    <li>69 の場所をさがす。12 段目1列目の 78 から、ななめ右上へ 78−69＝9 つ。段は 12−9＝3、列は 1＋9＝10。</li>
+    <li>左端は、その 1 つ左。<b>3 段目 9 列目</b>。数は 11 段目1列目の 66 から 8 つ進んだ 66−8＝58。
+<svg id="q3_3_fig" viewBox="0 0 380 270" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;width:100%;height:auto;display:block">
+<defs><marker id="q3_3_arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1565c0"/></marker></defs>
+<text x="86.0" y="22" text-anchor="middle" font-size="12" fill="#222">1列目</text>
+<text x="138.0" y="22" text-anchor="middle" font-size="12" fill="#222">…</text>
+<text x="190.0" y="22" text-anchor="middle" font-size="12" fill="#222">9列目</text>
+<text x="242.0" y="22" text-anchor="middle" font-size="12" fill="#222">10列目</text>
+<text x="294.0" y="22" text-anchor="middle" font-size="12" fill="#222">11列目</text>
+<text x="54" y="52.0" text-anchor="end" font-size="12" fill="#222">3段目</text>
+<text x="54" y="88.0" text-anchor="end" font-size="12" fill="#222">…</text>
+<text x="54" y="124.0" text-anchor="end" font-size="12" fill="#222">11段目</text>
+<text x="54" y="160.0" text-anchor="end" font-size="12" fill="#222">12段目</text>
+<rect x="164" y="30" width="52" height="36" fill="#fff" stroke="#222"/><text x="190.0" y="53.0" text-anchor="middle" font-size="14" fill="#222">58</text>
+<rect x="216" y="30" width="52" height="36" fill="#222" stroke="#222"/><text x="242.0" y="53.0" text-anchor="middle" font-size="14" fill="#fff">69</text>
+<rect x="268" y="30" width="52" height="36" fill="#fff" stroke="#222"/><text x="294.0" y="53.0" text-anchor="middle" font-size="14" fill="#222">81</text>
+<rect x="60" y="102" width="52" height="36" fill="#fff" stroke="#222"/><text x="86.0" y="125.0" text-anchor="middle" font-size="14" fill="#222">66</text>
+<rect x="60" y="138" width="52" height="36" fill="#222" stroke="#222"/><text x="86.0" y="161.0" text-anchor="middle" font-size="14" fill="#fff">78</text>
+<rect x="164" y="30" width="156" height="36" fill="none" stroke="#d32f2f" stroke-width="3"/>
+<line x1="106" y1="144" x2="222" y2="60" stroke="#1565c0" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#q3_3_arr)"/>
+<line x1="106" y1="108" x2="170" y2="60" stroke="#1565c0" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#q3_3_arr)"/>
+<text x="116" y="110" font-size="12" fill="#1565c0">−9</text>
+<text x="116" y="86" font-size="12" fill="#1565c0">−8</text>
+<text x="20" y="200" font-size="13" fill="#d32f2f">まん中は 70−1＝69。78（12段目1列目）から 9 つ上</text>
+<text x="20" y="222" font-size="13" fill="#1565c0">左はしの 58 は 66（11段目1列目）から 8 つ上 → 3段目 9列目</text>
+<text x="20" y="246" font-size="13" fill="#222">たしかめ: 58＋81−69＝70</text>
+</svg></li>
+    <li>たしかめ。右端は 13 段目1列目の 91 からななめに 10 進んだ 91−10＝81。58＋81−69＝70 で合っている。</li>
+  </ol>
+  <div class="ans">答え：エ…3、オ…9</div>
+  <div class="miss">今回：空欄だった ×（エ・オとも）。決め手は (2) の 19＋32−25 を「差＝まん中＋1」という決まりに直すこと。そうすれば 70−1＝69 の場所さがしに変わり、69 に近い三角数 78（12段目1列目）からもどせる。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>数が 3 つ並んだ計算や割合の文は、<b>共通の数（23／全体①）</b>でそろえてから式にする。</li>
+    <li>文章題は □ か表に置く。値引きは線分図、2 種類の「する／しない」は 2×2 の表。</li>
+    <li>表の規則性は<b>1 列目の三角数</b>から。ななめの線で場所をもどし、(2) で見つけた決まりを (3) に使う。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4-5-6"><h1 class="dtitle">大問4・5・6（ロボットの仕事算・折れ線に沿う回転・流水算）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4〜6</span> この回の全体像（担当の大問） <span class="type">A 23点／B 24点／C 6点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>4</td><td>ロボットの仕事算（2つの式→比→つるかめ算）</td><td>A 5・A 6・B 6</td><td>「倉庫全部」を2通りの式に／全体を200に／7：3 の区間を平均31に</td></tr>
+  <tr><td>5</td><td>折れ線に沿う棒・三角形の回転</td><td>A 6・B 6・C 6</td><td>中心が変わるたびに「中心・半径・何度」／3 と 6 の直角三角形＝正三角形の半分</td></tr>
+  <tr><td>6</td><td>流水算（3そうの船）</td><td>A 6・B 6・B 6</td><td>向かい合うなら速さの和、同じ向きなら差（流れが消える）</td></tr></table>
+  <p>取り方: <b>Aの4問（23点）を先に確実に</b>。Bは 4(3)・6(2) のように手順が短いものから。C の 5(3) は後回し。この回全体では A 58点／B 36点／C 6点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> ロボットA1体とB1体が運べる量の比 <span class="type">A・5点｜仕事算（2つの式をそろえる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>A4体とB6体で運び出すと5時間</b>」と「<b>A3体とB2体で運び出すと8時間</b>」。どちらも「倉庫全部の荷物」の式に直して書く → A×20＋B×30 と A×24＋B×16 が同じ量になり、AとBの比が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>運んだ荷物の量は（1時間に運ぶ量）×（時間）。A4体とB6体が5時間なら、A1体で20時間分、B1体で30時間分と同じ量になる。</li>
+    <li>同じ量を2通りに書いたら、両方にある分を消す。たとえば A×20＋B×30＝A×24＋B×16 なら、A×20 と B×16 を両方から引いて B×14＝A×4。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>A1体・B1体が1時間に運ぶ量を A、B と書く。倉庫全部を2通りで書く。
+<pre class="fig">(A×4＋B×6)×5 ＝ A×20＋B×30
+(A×3＋B×2)×8 ＝ A×24＋B×16</pre></li>
+    <li>両方にある分を消す。A は右のほうが 24−20＝4 多い。B は左のほうが 30−16＝14 多い。だから <b>A×4＝B×14</b>。</li>
+    <li>A×4＝B×14 → A：B＝14：4＝<b>7：2</b>。</li>
+    <li>たしかめ。A＝7、B＝2 とすると (28＋12)×5＝200、(21＋4)×8＝200。同じ量になる。</li>
+    <li>落としやすい所は比の向き。A×4＝B×14 のとき、A：B は 14：4 と数が入れかわる。</li>
+  </ol>
+  <div class="ans">答え：7：2</div>
+  <div class="miss">今回：7：2 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> A2体とB8体では何時間何分か <span class="type">A・6点｜仕事算（全体を200に）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>A2体とB8体</b>」と聞かれ方「何時間何分」に丸。(1) の 7 と 2 を使って、倉庫全部を <b>200</b> に直して書く → 200÷（1時間に運ぶ量）で時間が出る。最後に「分」に直す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>全体の量は (1) の比から作れる。A＝⑦、B＝② とすると、(⑦×4＋②×6)×5＝㊵×5＝200。</li>
+    <li>2/3 時間は 40 分。1時間＝60分だから 60×2/3＝40。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>A＝⑦、B＝② として倉庫全部を出す。(⑦×4＋②×6)×5＝<b>200</b>。A3体・B2体の式でも (21＋4)×8＝200 で同じ。</li>
+    <li>A2体とB8体が1時間に運ぶ量は ⑦×2＋②×8＝14＋16＝30。</li>
+    <li>200÷30＝6 2/3（時間）。</li>
+    <li>2/3 時間＝40分 → <b>6時間40分</b>。</li>
+    <li>落としやすい所は 2/3 時間の直し方。60分×2/3＝40分で、「6.66時間」で止めない。</li>
+  </ol>
+  <div class="ans">答え：6(時間)40(分)</div>
+  <div class="miss">今回：6時間40分 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> B5体のみで運んだ時間 <span class="type">B・6点｜仕事算（平均→つるかめ算）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「合計9時間30分」と「<b>時間の比が7：3</b>」。A4体だけ・A4体＋B5体・B5体だけ の3区間を1本の線に置き、1時間の量 28・38・10 を上に書く → 比が決まっている前の2区間は「<b>平均31</b>」の1区間にまとめられ、31 と 10 のつるかめ算になる。手を付ける合図は、この「7：3 を1つにまとめる」が見えたとき。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1時間に運ぶ量は、A4体＝⑦×4＝28、B5体＝②×5＝10、両方＝38。全体は (2) の 200。</li>
+    <li>時間の比が 7：3 の2区間は、1つの平均にまとめられる。(28×7＋38×3)÷(7＋3)＝(196＋114)÷10＝31。7時間と3時間でも 3.5時間と1.5時間でも、平均は同じ31になる。</li>
+    <li>つるかめ算は「全部が31だったら」から始める。31×9.5＝294.5。本当は200だから、多すぎる分を「1時間を10に入れかえると21減る」で割る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3区間を1本の線に置く。
+<svg id="q4_3_fig" viewBox="0 0 360 96" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<text x="79" y="14" text-anchor="middle" font-size="12" fill="#222">1時間に 28</text>
+<text x="163" y="14" text-anchor="middle" font-size="13" fill="#222">38</text>
+<text x="264" y="14" text-anchor="middle" font-size="13" fill="#222">10</text>
+<rect x="20" y="22" width="118" height="24" fill="#dbe9ff" stroke="#222"/>
+<rect x="138" y="22" width="50" height="24" fill="#ffe0b2" stroke="#222"/>
+<rect x="188" y="22" width="152" height="24" fill="#c8e6c9" stroke="#222"/>
+<text x="79" y="39" text-anchor="middle" font-size="12" fill="#222">A4体だけ</text>
+<text x="163" y="39" text-anchor="middle" font-size="12" fill="#222">両方</text>
+<text x="264" y="39" text-anchor="middle" font-size="12" fill="#222">B5体だけ</text>
+<text x="79" y="62" text-anchor="middle" font-size="13" fill="#222">⑦</text>
+<text x="163" y="62" text-anchor="middle" font-size="13" fill="#222">③</text>
+<text x="264" y="62" text-anchor="middle" font-size="13" fill="#d32f2f">？時間</text>
+<path d="M20,70 L20,78 L188,78 L188,70" fill="none" stroke="#1565c0" stroke-dasharray="3,2"/>
+<text x="104" y="90" text-anchor="middle" font-size="12" fill="#1565c0">まとめて 平均31</text>
+<text x="264" y="90" text-anchor="middle" font-size="12" fill="#222">合計9.5時間・荷物200</text>
+</svg></li>
+    <li>前の2区間を「平均31」の1区間にまとめる。(28×7＋38×3)÷10＝<b>31</b>。</li>
+    <li>全部が 31 だったら、31×9.5＝294.5。200 より 94.5 多い。</li>
+    <li>1時間を 31 から 10 に入れかえると 21 減る。94.5÷21＝<b>4.5時間</b>。
+<table><tr><th></th><th>平均31の時間</th><th>10の時間</th><th>量</th></tr>
+<tr><td>全部が31なら</td><td>9.5</td><td>0</td><td>294.5</td></tr>
+<tr><td>本当</td><td>5</td><td>4.5</td><td>200</td></tr>
+<tr><td>差</td><td colspan="2">1時間入れかえるごとに 21 減る</td><td>94.5</td></tr></table></li>
+    <li>4.5時間＝4時間30分。</li>
+    <li>たしかめ。残り 9.5−4.5＝5時間を 7：3 に分けると 3.5時間と1.5時間。28×3.5＋38×1.5＋10×4.5＝98＋57＋45＝200。</li>
+  </ol>
+  <div class="ans">答え：4(時間)30(分)</div>
+  <div class="miss">今回：4時間30分 ○。</div>
+  <div class="tip">コツ：比の①で式を作っても出る。A4体だけを⑦時間、両方を③時間とおくと、B5体だけは 9.5−⑩ 時間。28×⑦＋38×③＋10×(9.5−⑩)＝200 から 210×①＝105、①＝0.5。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 折れ線ABCに沿って回る2cmの棒が通る部分の面積 <span class="type">A・6点｜棒の回転（通る部分の面積）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「2cmの棒アイ」と「<b>棒の端がCと重なるまで</b>」。回転の中心が イ→ア(B)→イ と変わるたびに、図に「中心・半径2・何度」を書きこむ（図に置く） → 180°・90°・180° の3つのおうぎ形が見え、重なりをまとめると <b>正方形＋四分円2つ</b> になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>棒が端を中心に回ると、通る部分はおうぎ形。半径は棒の長さの 2cm。</li>
+    <li>おうぎ形の面積は 半径×半径×3.14×（中心角÷360）。90° なら 2×2×3.14×90/360＝3.14。</li>
+    <li>重なった部分は1回だけ数える。半円2つと四分円1つが、Bのまわりの 2×2 の正方形で重なっている。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>回転を3回に分けて図に書く。①ABのまん中のイを中心に、アが 180° 回ってBに着く。②B(ア)を中心に、イが 90° 回ってBCの上に着く。③イを中心に、アが 180° 回ってCに着く。
+<svg id="q5_1_fig" viewBox="0 0 230 190" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;width:100%;height:auto;display:block">
+<path d="M60,70 A40,40 0 0 1 100,110 A40,40 0 0 1 140,150 L60,150 Z" fill="#dbe9ff" stroke="none"/>
+<rect x="60" y="110" width="40" height="40" fill="#ffe0b2" stroke="#1565c0" stroke-dasharray="3,2"/>
+<path d="M60,110 A40,40 0 0 1 100,150" fill="none" stroke="#1565c0" stroke-dasharray="3,2"/>
+<path d="M60,70 A40,40 0 0 1 100,110" fill="none" stroke="#222" stroke-width="1.5"/>
+<path d="M100,110 A40,40 0 0 1 140,150" fill="none" stroke="#222" stroke-width="1.5"/>
+<line x1="60" y1="70" x2="60" y2="150" stroke="#222" stroke-width="1.5"/>
+<line x1="60" y1="150" x2="150" y2="150" stroke="#222" stroke-width="1.5"/>
+<line x1="60" y1="70" x2="60" y2="110" stroke="#d32f2f" stroke-width="4"/>
+<text x="48" y="68" font-size="12" fill="#222">A</text>
+<text x="66" y="84" font-size="11" fill="#d32f2f">ア</text>
+<text x="66" y="107" font-size="11" fill="#d32f2f">イ</text>
+<text x="48" y="162" font-size="12" fill="#222">B</text>
+<text x="150" y="162" font-size="12" fill="#222">C</text>
+<text x="40" y="92" font-size="11" fill="#222">2</text>
+<text x="40" y="132" font-size="11" fill="#222">2</text>
+<text x="76" y="168" font-size="11" fill="#222">2</text>
+<text x="116" y="168" font-size="11" fill="#222">2</text>
+<text x="70" y="98" font-size="11" fill="#d32f2f">90°</text>
+<text x="104" y="140" font-size="11" fill="#d32f2f">90°</text>
+<text x="66" y="134" font-size="11" fill="#1565c0">2×2</text>
+<text x="150" y="80" font-size="11" fill="#222">①イ中心 180°</text>
+<text x="150" y="96" font-size="11" fill="#222">②B中心 90°</text>
+<text x="150" y="112" font-size="11" fill="#222">③イ中心 180°</text>
+</svg></li>
+    <li>通る部分は「ABの右側の半円」＋「Bを中心にした四分円」＋「BCの上側の半円」。重なりをまとめると、<b>上の四分円＋2×2の正方形＋右の四分円</b>。</li>
+    <li>四分円2つ＝2×2×3.14×90/360×2＝6.28。正方形＝2×2＝4。</li>
+    <li>6.28＋4＝<b>10.28</b>。</li>
+    <li>落としやすい所は、半円・四分円・半円を重なりごとたすこと（15.7 になる）。重なりは図で見てから式にする。</li>
+  </ol>
+  <div class="ans">答え：10.28(cm²)</div>
+  <div class="miss">今回：10.28 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 折れ線DEFに沿って回る6cmの棒が通る部分の周りの長さ <span class="type">B・6点｜棒の回転（周りの長さ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「DE＝9cm」「<b>6cmの棒ウエ</b>」と、聞かれ方「<b>周りの長さ</b>」に丸。エの位置 9−6＝3cm を図に書く → 回転の中心は エ(J)→ウ(K) の2回。JE＝3・JK＝6 の直角三角形は正三角形の半分で、60°・30° が決まる。手を付ける合図は「3 と 6 で正三角形の半分」が見えたとき。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>直角三角形で、短い辺が斜辺の半分なら正三角形の半分。角は 30° と 60°。JE＝3、JK＝6 がこの形。</li>
+    <li>周りの長さに入るのは外側の線だけ。おうぎ形どうしが重なって内側に入った弧は数えない。</li>
+    <li>弧の長さは 直径×3.14×（中心角÷360）。半径6なら 12×3.14×（中心角÷360）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>エの位置を J と書く（JE＝9−6＝3）。J を中心にウが時計回りに回り、EF に当たる点を K。JK＝6、JE＝3 → 角KJE＝60°、角EKJ＝30°。ウが回った角度は 180−60＝120°。</li>
+    <li>次は K を中心にエ(J)が回り、EF 上の点 M で止まる。回った角度は 180−30＝150°。
+<svg id="q5_2_fig" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<path d="M40,90 A60,60 0 0 1 92,120 A60,60 0 0 1 152,180 L92,180 L40,150 Z" fill="#dbe9ff" stroke="none"/>
+<path d="M92,120 A60,60 0 0 1 92,180" fill="none" stroke="#1565c0" stroke-dasharray="3,2"/>
+<line x1="40" y1="150" x2="92" y2="120" stroke="#1565c0" stroke-dasharray="3,2"/>
+<line x1="92" y1="120" x2="92" y2="180" stroke="#1565c0" stroke-dasharray="3,2"/>
+<path d="M40,90 A60,60 0 0 1 92,120" fill="none" stroke="#d32f2f" stroke-width="2"/>
+<path d="M92,120 A60,60 0 0 1 152,180" fill="none" stroke="#d32f2f" stroke-width="2"/>
+<line x1="40" y1="90" x2="40" y2="180" stroke="#222" stroke-width="1.5"/>
+<line x1="40" y1="180" x2="280" y2="180" stroke="#222" stroke-width="1.5"/>
+<line x1="40" y1="150" x2="92" y2="180" stroke="#d32f2f" stroke-width="2"/>
+<line x1="92" y1="180" x2="152" y2="180" stroke="#d32f2f" stroke-width="2"/>
+<line x1="40" y1="90" x2="40" y2="150" stroke="#d32f2f" stroke-width="3"/>
+<text x="28" y="92" font-size="12" fill="#222">D</text>
+<text x="28" y="192" font-size="12" fill="#222">E</text>
+<text x="282" y="192" font-size="12" fill="#222">F</text>
+<text x="26" y="154" font-size="12" fill="#222">J</text>
+<text x="88" y="194" font-size="12" fill="#222">K</text>
+<text x="96" y="116" font-size="12" fill="#222">L</text>
+<text x="148" y="194" font-size="12" fill="#222">M</text>
+<text x="44" y="123" font-size="11" fill="#222">6</text>
+<text x="30" y="170" font-size="11" fill="#222">3</text>
+<text x="70" y="160" font-size="11" fill="#222">6</text>
+<text x="118" y="194" font-size="11" fill="#222">6</text>
+<text x="66" y="108" font-size="11" fill="#d32f2f">60°</text>
+<text x="104" y="160" font-size="11" fill="#d32f2f">90°</text>
+<text x="43" y="168" font-size="9" fill="#222">60°</text>
+<text x="58" y="178" font-size="9" fill="#222">30°</text>
+<text x="170" y="110" font-size="11" fill="#222">外側＝赤の線だけ</text>
+<text x="170" y="126" font-size="11" fill="#1565c0">点線の弧は内側</text>
+</svg></li>
+    <li>2つのおうぎ形の重なりを見る。J と K を中心にした半径6の円が交わる点を L とすると、JK＝JL＝KL＝6 で正三角形。外側に出る弧は、J の弧のうち D→L の <b>60°</b>（120−60）と、K の弧のうち L→M の <b>90°</b>（150−60）。</li>
+    <li>周り＝弧2つ＋直線3本（DJ＝6、JK＝6、KM＝6）。三角形JEK のところはへこんでいて、EJ・EK は周りに入らない。</li>
+    <li>弧＝6×2×3.14×(60/360＋90/360)＝12×3.14×150/360＝15.7。15.7＋6×3＝<b>33.7</b>。</li>
+  </ol>
+  <div class="ans">答え：33.7(cm)</div>
+  <div class="miss">今回：84.78 と書いていた ×（正解 33.7）。聞かれているのは面積でなく「周りの長さ」。決め手は「周りの長さ」に丸をつけ、図のどの線が外側かを決めてから式を作ること。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 折れ線GHIに沿って回る直角二等辺三角形が通る部分の面積 <span class="type">C・6点｜図形の回転（通る部分の面積）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。合図は「<b>オカ＝カキ＝6cm</b>」の直角二等辺三角形と「<b>はじめてオがHIに重なるまで</b>」。回転の中心は カ→キ の2回で、2回目の半径は斜辺オキ。斜辺×斜辺＝72 に直して書く → 30° と 105° のおうぎ形＋三角形1つの面積になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>直角二等辺三角形の斜辺×斜辺は、斜辺を1辺にした正方形の面積。この正方形は三角形4つ分だから (6×6÷2)×4＝72。半径が分からなくても「半径×半径」が分かればおうぎ形の面積は出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1回目: カ(N)を中心に回り、キが HI に着く点を P。NH＝9−6＝3、NP＝6 → 正三角形の半分で角PNH＝60°。回った角度は 30°（オが通るおうぎ形NOG も 30°）。</li>
+    <li>2回目: P(キ)を中心に回り、オが HI に着く点を Q。角NPH＝30°、三角形の角キ＝45° → 角OPQ＝180−(30＋45)＝<b>105°</b>。半径は斜辺オキで、半径×半径＝72。
+<svg id="q5_3_fig" viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<path d="M40,110 A60,60 0 0 1 70,118 A84.85,84.85 0 0 1 177,200 L92,200 L40,170 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.2"/>
+<line x1="40" y1="110" x2="100" y2="170" stroke="#888" stroke-dasharray="3,2"/>
+<line x1="100" y1="170" x2="40" y2="170" stroke="#888" stroke-dasharray="3,2"/>
+<line x1="40" y1="170" x2="70" y2="118" stroke="#222" stroke-width="1.5"/>
+<line x1="70" y1="118" x2="92" y2="200" stroke="#222" stroke-width="1.5"/>
+<line x1="40" y1="170" x2="92" y2="200" stroke="#222" stroke-width="1.5"/>
+<line x1="40" y1="100" x2="40" y2="200" stroke="#222" stroke-width="1.5"/>
+<line x1="40" y1="200" x2="290" y2="200" stroke="#222" stroke-width="1.5"/>
+<text x="26" y="112" font-size="12" fill="#222">G</text>
+<text x="46" y="108" font-size="11" fill="#d32f2f">オ</text>
+<text x="26" y="212" font-size="12" fill="#222">H</text>
+<text x="284" y="212" font-size="12" fill="#222">I</text>
+<text x="24" y="174" font-size="12" fill="#222">N</text>
+<text x="104" y="174" font-size="11" fill="#888">キ</text>
+<text x="88" y="214" font-size="12" fill="#222">P</text>
+<text x="72" y="114" font-size="12" fill="#222">O</text>
+<text x="172" y="214" font-size="12" fill="#222">Q</text>
+<text x="30" y="188" font-size="11" fill="#222">3</text>
+<text x="42" y="150" font-size="11" fill="#222">6</text>
+<text x="46" y="128" font-size="11" fill="#d32f2f">30°</text>
+<text x="96" y="192" font-size="11" fill="#d32f2f">105°</text>
+<text x="46" y="184" font-size="9" fill="#222">60°</text>
+<text x="72" y="188" font-size="9" fill="#222">45°</text>
+<text x="185" y="170" font-size="11" fill="#222">半径×半径＝72</text>
+<text x="185" y="186" font-size="11" fill="#888">点線＝はじめの三角形</text>
+</svg></li>
+    <li>通る部分＝おうぎ形NOG(30°)＋三角形NOP＋おうぎ形PQO(105°)。6×6×3.14×30/360＋72×3.14×105/360＋6×6÷2＝3.14×(3＋21)＋18＝24×3.14＋18＝<b>93.36</b>。</li>
+  </ol>
+  <div class="ans">答え：93.36(cm²)</div>
+  <div class="miss">今回：空欄（採点の印なし）。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)</span> 船CがRに着いたときの船Bとの距離 <span class="type">A・6点｜流水算（向かい合う2そう）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>船Bとすれ違ってから4分後にRに着き</b>」と、BとCの静水時の速さ 150・330。Bは上り（−流れ）、Cは下り（＋流れ）に直して書く → 向かい合う2そうの速さの和で流れが消え、<b>480×4</b> で決まる。流れの速さが分からなくても出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>上りの速さ＝静水時−流れ、下りの速さ＝静水時＋流れ。</li>
+    <li>向かい合って進む2そうの速さの和は、流れの分が打ち消し合う。(150−□)＋(330＋□)＝480。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>流れを毎分□m と書く。Bの上り 150−□、Cの下り 330＋□。</li>
+    <li>すれ違ったあと、2そうは反対向きに進む。1分に 480m ずつはなれる。</li>
+    <li>4分後に Cが Rに着く。480×4＝<b>1920</b>。</li>
+    <li>落としやすい所は、先に流れの速さを求めようとして止まること。和を作れば□は消える。</li>
+  </ol>
+  <div class="ans">答え：1920(m)</div>
+  <div class="miss">今回：1920 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)</span> 川の流れの速さ <span class="type">B・6点｜流水算（同じ向きの追いつき）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Rで引き返してから6900m進んだとき</b>」と「<b>船Cより2220m下流</b>」。Cが引き返した時を0分として、Bはそのとき 1920m 先（(1)の答え）と図に置く → Cは Bに追いつき 2220m 追いこすまで、1920＋2220＝4140m を速さの差 180 でつめる。時間23分が出れば、6900÷23 が上りの速さ。手を付ける合図は「同じ向きの2そうの差」が見えたとき。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ向きに進む2そうの速さの差は、流れが消える。(330−□)−(150−□)＝180。</li>
+    <li>追いつき・追いこしは「差の道のり÷速さの差」。4140÷180＝23（分）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Cが Rで引き返した時を 0分として、BとCの動きを1本の線に置く。
+<svg id="q6_2_fig" viewBox="0 0 360 110" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<line x1="20" y1="60" x2="340" y2="60" stroke="#222" stroke-width="1.5"/>
+<text x="20" y="100" font-size="11" fill="#222">下流 P側</text>
+<text x="300" y="100" font-size="11" fill="#222">上流 Q側</text>
+<line x1="40" y1="50" x2="40" y2="70" stroke="#222"/>
+<text x="36" y="44" font-size="12" fill="#222">R</text>
+<line x1="40" y1="84" x2="270" y2="84" stroke="#222" stroke-width="1.5"/>
+<path d="M264,80 L270,84 L264,88" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="150" y="80" text-anchor="middle" font-size="11" fill="#222">C 6900m（23分）</text>
+<line x1="104" y1="36" x2="196" y2="36" stroke="#222" stroke-width="1.5"/>
+<path d="M190,32 L196,36 L190,40" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="150" y="30" text-anchor="middle" font-size="11" fill="#222">B（同じ23分）</text>
+<line x1="104" y1="50" x2="104" y2="70" stroke="#1565c0" stroke-dasharray="3,2"/>
+<line x1="196" y1="50" x2="196" y2="70" stroke="#1565c0" stroke-dasharray="3,2"/>
+<line x1="270" y1="50" x2="270" y2="70" stroke="#222"/>
+<text x="72" y="56" text-anchor="middle" font-size="11" fill="#d32f2f">1920m</text>
+<text x="233" y="56" text-anchor="middle" font-size="11" fill="#d32f2f">2220m</text>
+<text x="150" y="56" text-anchor="middle" font-size="10" fill="#1565c0">Bが進んだ分</text>
+</svg></li>
+    <li>Cが Bより多く進んだ道のりは 1920＋2220＝<b>4140</b>。</li>
+    <li>速さの差は (330−□)−(150−□)＝180。4140÷180＝<b>23分</b>。</li>
+    <li>Cは 23分で 6900m 上った。6900÷23＝300。Cの上りの速さは毎分300m。</li>
+    <li>流れ＝330−300＝30。</li>
+    <li>たしかめ。Bの上りは 150−30＝120。23分で 120×23＝2760。Cの 6900 との差は 4140 で合っている。</li>
+  </ol>
+  <div class="ans">答え：(毎分)30(m)</div>
+  <div class="miss">今回：毎分30 ○。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (3)</span> 船着き場PとQの距離 <span class="type">B・6点｜流水算（速さの差×時間）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>船AはQに着き</b>」（Cが6900m進んだのと同じ時）と「<b>7分後に船CはQに着いた</b>」。この瞬間の A・C・B の位置を1本の線に置く（Aは Q、Cは Qの 300×7 手前、Bはさらに 2220 手前） → AとBの差 4320 ＝ 速さの差 90 × 出発からの分。その分数に Aの上り 210 をかければ PQ。手を付ける合図は「同時に出発した2そうの差」が見えたとき。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Aの上り 240−30＝210、Bの上り 150−30＝120。差は 90。同時に Pを出たから、差の道のり＝90×（分）。</li>
+    <li>Cはあと 7分で Qに着く。上り 300 だから、Qまで 300×7＝2100m のところにいる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aが Qに着いた瞬間を1本の線に置く。
+<svg id="q6_3_fig" viewBox="0 0 360 100" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<line x1="20" y1="60" x2="340" y2="60" stroke="#222" stroke-width="1.5"/>
+<line x1="20" y1="50" x2="20" y2="70" stroke="#222"/>
+<line x1="340" y1="50" x2="340" y2="70" stroke="#222"/>
+<text x="14" y="44" font-size="12" fill="#222">P</text>
+<text x="344" y="44" font-size="12" fill="#222">Q</text>
+<circle cx="340" cy="60" r="4" fill="#222"/>
+<text x="326" y="86" font-size="11" fill="#222">A</text>
+<circle cx="273" cy="60" r="4" fill="#222"/>
+<text x="268" y="86" font-size="11" fill="#222">C</text>
+<circle cx="203" cy="60" r="4" fill="#222"/>
+<text x="198" y="86" font-size="11" fill="#222">B</text>
+<text x="304" y="44" text-anchor="middle" font-size="10" fill="#222">300×7＝2100</text>
+<text x="238" y="44" text-anchor="middle" font-size="10" fill="#222">2220</text>
+<path d="M203,92 L203,97 L340,97 L340,92" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<text x="70" y="98" font-size="11" fill="#d32f2f">差 4320＝90×分</text>
+<text x="60" y="44" font-size="10" fill="#222">PQ＝210×分</text>
+</svg></li>
+    <li>Bは Qの手前 2100＋2220＝<b>4320</b>m。Aは Qにいる。</li>
+    <li>AとBの差は 1分に 90 ずつ広がった。4320÷90＝<b>48分</b>。これが Pを出てからの時間。</li>
+    <li>PQ＝Aの上り 210×48＝10080。</li>
+    <li>たしかめ。Bは 48分で 120×48＝5760。10080−5760＝4320 で合っている。</li>
+  </ol>
+  <div class="ans">答え：10080(m)</div>
+  <div class="miss">今回：空欄（採点の印なし）。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">4〜6</span> まとめ <span class="type">この3つの大問で繰り返し出た入口</span></h2>
+  <ul>
+    <li>「比が決まっている区間」は平均で1つにまとめる（4(3)）。すると、つるかめ算の形になる。</li>
+    <li>回転の問題は、中心が変わるたびに「中心・半径・何度」を図に書く。3 と 6 の直角三角形は正三角形の半分（5(2)・5(3)）。</li>
+    <li>流水算は、向かい合うなら「和」、同じ向きなら「差」。どちらも流れが消える（6(1)・6(2)）。</li>
+  </ul>
+</section>
+</div>
