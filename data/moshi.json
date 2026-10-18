@@ -7096,7 +7096,14 @@
        "C": 0
       }
      },
-     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/shakai.html"
+     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/shakai.html",
+     "solvedPages": [
+      {
+       "full": "2026-10-18_gohan-2/shakai/solved_2026-10-18_01.jpg",
+       "small": "2026-10-18_gohan-2/shakai/solved_2026-10-18_01_small.jpg",
+       "date": "2026-10-18"
+      }
+     ]
     },
     {
      "id": "rika",
@@ -7491,7 +7498,14 @@
        "C": 4
       }
      },
-     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/rika.html"
+     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/rika.html",
+     "solvedPages": [
+      {
+       "full": "2026-10-18_gohan-2/rika/solved_2026-10-18_01.jpg",
+       "small": "2026-10-18_gohan-2/rika/solved_2026-10-18_01_small.jpg",
+       "date": "2026-10-18"
+      }
+     ]
     },
     {
      "id": "kokugo",
