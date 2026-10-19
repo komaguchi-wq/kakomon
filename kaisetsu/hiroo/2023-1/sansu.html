@@ -1,0 +1,702 @@
+<!-- generated kakomon hiroo/2023-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（逆算・周期・通過算・面積比・表面積の6題＋円卓の正直者と嘘つき）</a></li>
+<li><a href="#3-4-5">大問3・4・5（鉄球とあふれる水・長方形の折り返し・立方体の切断）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（逆算・周期・通過算・面積比・表面積の6題＋円卓の正直者と嘘つき）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 40点／B 6点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1</td><td>□の逆算・1/7の小数・本の残りページ・電車の通過算・6等分した長方形の面積比・立方体をのせた表面積</td><td>A 5+5+5+5+5+5</td><td>右から順にもどす／6けたのくり返し／残りの残り／追いこしは差・すれちがいは和／たてを⑫にする／増えた面積は小さい立方体の4面</td></tr>
+  <tr><td>2</td><td>円卓の正直者と嘘つき者。「はい」と答える人数</td><td>A 5+5 ／ B 6</td><td>嘘つき者は本当が「いいえ」のときに「はい」。座り方を全部書いて1人ずつ○×</td></tr></table>
+  <p>取り方: <b>大問1の6題（30点）は全部取る</b>。大問2の(1)(2)は座り方が1〜2通りしかないので、図を書けばA。(3)は嘘つき者の分かれ方（3人まとまり／2＋1／1人ずつ）を表にすれば取れる。受験者平均67.2点・合格者平均81.3点。声の教育社の解説はこの回は省略なので、途中の式はこのカードのものを使う。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> □の逆算（分数） <span class="type">A・5点｜逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>□にあてはまる数</b>」と、右はしの「<b>＝2/21</b>」。式の外側から順に、ひとまとまりを○として「○×2/7−1 1/3＝2/21」に直して書く → いちばん外の計算から1つずつもどせる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆算は計算の順番の逆。最後に引いた 1 1/3 を、先にたしてもどす。2/21＋1 1/3＝2/21＋28/21＝30/21＝10/7。</li>
+    <li>÷2/7 は ×7/2 と同じ。10/7×7/2＝5 のように、約分してから計算する。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>｛ ｝全体を○とおいて、外側からもどす。
+<pre class="fig">○×2/7 − 1 1/3 ＝ 2/21
+○×2/7 ＝ 2/21 ＋ 28/21 ＝ 30/21 ＝ 10/7
+○ ＝ 10/7 ÷ 2/7 ＝ 10/7 × 7/2 ＝ 5</pre></li>
+    <li>｛ ｝の中は 11−7×（　）＝5。だから 7×（　）＝11−5＝<b>6</b>。（　）＝6/7。</li>
+    <li>（　）の中は 11/14＋□＝6/7。6/7＝12/14 に直して、□＝12/14−11/14＝<b>1/14</b>。</li>
+    <li>たしかめ。11/14＋1/14＝6/7。7×6/7＝6。11−6＝5。5×2/7＝10/7。10/7−4/3＝30/21−28/21＝2/21。合う。</li>
+    <li>落としやすい所: 「11−7×（　）＝5」で、11−5 をせずに 5÷7 としてしまう。ひき算のもどしは「11から何を引いたか」を先に出す。</li>
+  </ol>
+  <div class="ans">答え：1/14</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 1/7 の小数第1024位 <span class="type">A・5点｜周期</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1/7を小数で</b>」と「<b>小数第1024位</b>」。1÷7 をわり算して、くり返す数字の列を余白に書く（図に置く）→ 1024 を列の長さでわった余りで、何番目の数字かが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1÷7＝0.142857142857…。「142857」の<b>6けた</b>がくり返す。わり算の余りが1にもどった所で、くり返しが始まる。</li>
+    <li>周期の問題は「何番目か÷周期」の余りを見る。余り0なら周期の最後の数字。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1÷7 を筆算して、くり返しの列を書く。
+<pre class="fig">1/7＝0.142857 142857 142857 …
+周期＝6けた（1 4 2 8 5 7）</pre></li>
+    <li>1024÷6＝170 余り <b>4</b>。170回くり返したあとの4番目の数字。</li>
+    <li>「1 4 2 8 5 7」の4番目は 8。</li>
+    <li>落としやすい所: 余りが0のときに「0番目」と考えて止まる。余り0は周期の最後（6番目の7）。今回は余り4なので、そのまま4番目。</li>
+  </ol>
+  <div class="ans">答え：8</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 100ページの本の残りページ <span class="type">A・5点｜割合（残りの残り）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>全体の1/5</b>」と「<b>残りのページの3/4</b>」。2日目の3/4は「全体の」ではなく「残りの」なので、1日目の残りを先に数に直して書く → 残り80ページの3/4、と順に計算できる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「残りの3/4を読んだ」なら、まだ残っているのは残りの 1−3/4＝1/4。80ページの1/4は20ページ。</li>
+    <li>線分図にすると、「全体」と「残り」のどちらをもとにしているかが見える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1日目。100×1/5＝20ページ読む。残りは 100−20＝<b>80ページ</b>。</li>
+    <li>2日目。残り80ページの3/4＝60ページ読む。</li>
+    <li>あと残りは 80−60＝<b>20ページ</b>。
+<pre class="fig">全体100 ├──20──┤────────80────────┤
+                      ├──60(3/4)──┤─20─┤</pre></li>
+    <li>落としやすい所: 2日目を「全体の3/4＝75ページ」と読む。「残りの」の3字に丸をつけてから式を書く。</li>
+  </ol>
+  <div class="ans">答え：20ページ</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 追いこしとすれちがいから電車Aの速さ <span class="type">A・5点｜通過算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>追いついてから追い抜くまで65秒</b>」と「<b>出会ってからすれ違うまで13秒</b>」。どちらも進む長さは 250＋400＝650m。追いこしは「速さの差」、すれちがいは「速さの和」に直して書く → 和と差から、Aの速さが出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>電車どうしの追いこし・すれちがいで進む道のりは、2つの長さの和。650m。</li>
+    <li>追いこしは差で進む（650÷65＝10m/秒）。すれちがいは和で進む（650÷13＝50m/秒）。</li>
+    <li>和と差が分かれば、大きい方＝（和＋差）÷2。追いこす側のAが速い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>進む道のりを出す。250＋400＝650m。
+<pre class="fig">追いこし: 650m ÷ 65秒 ＝ 10m/秒 … A−B（差）
+すれちがい: 650m ÷ 13秒 ＝ 50m/秒 … A＋B（和）</pre></li>
+    <li>Aの速さ＝（50＋10）÷2＝<b>30m/秒</b>。Bは 50−30＝20m/秒。</li>
+    <li>時速に直す。30×60×60＝108000m＝<b>108km</b>。</li>
+    <li>たしかめ。差は 30−20＝10。650÷10＝65秒。合う。</li>
+    <li>落としやすい所: 秒速→時速の直し。×60 を1回で止めると「分速1800m」になる。秒→分→時で ×60 を2回。</li>
+  </ol>
+  <div class="ans">答え：時速108km</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 6等分した長方形と対角線の面積比 <span class="type">A・5点｜面積比（台形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>6等分</b>」と「<b>対角線を1本だけ</b>」。横の1列を1、たてを12として図に置く → 対角線は1列ごとに 12÷6＝2 ずつ下がるので、斜線部分の高さが全部整数で書ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>対角線は長方形の角から角へまっすぐ。横に1列進むごとに、同じ分だけ下がる。たてを12にすると、1列で2下がる。</li>
+    <li>台形の面積＝（上底＋下底）×高さ÷2。横が1なら、（上底＋下底）÷2 だけで出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>たて12・横1×6列で図を書き、対角線が各列の線と交わる高さを書きこむ。
+<svg xmlns="http://www.w3.org/2000/svg" id="q1_5_fig" viewBox="0 0 380 190" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <polygon points="40,20 90,40 90,140 40,140" fill="#dbe9ff"/>
+  <polygon points="190,80 240,100 240,140 190,140" fill="#ffe0b2"/>
+  <rect x="40" y="20" width="300" height="120" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="90" y1="20" x2="90" y2="140" stroke="#222"/><line x1="140" y1="20" x2="140" y2="140" stroke="#222"/>
+  <line x1="190" y1="20" x2="190" y2="140" stroke="#222"/><line x1="240" y1="20" x2="240" y2="140" stroke="#222"/>
+  <line x1="290" y1="20" x2="290" y2="140" stroke="#222"/>
+  <line x1="40" y1="20" x2="340" y2="140" stroke="#222" stroke-width="1.5"/>
+  <text x="22" y="85" fill="#222">12</text>
+  <text x="60" y="162" fill="#222">1</text><text x="110" y="162" fill="#222">1</text><text x="160" y="162" fill="#222">1</text>
+  <text x="210" y="162" fill="#222">1</text><text x="260" y="162" fill="#222">1</text><text x="310" y="162" fill="#222">1</text>
+  <text x="94" y="36" fill="#d32f2f">2</text>
+  <text x="176" y="112" fill="#d32f2f">6</text>
+  <text x="244" y="124" fill="#d32f2f">4</text>
+  <text x="48" y="100" fill="#d32f2f" font-weight="bold">11</text>
+  <text x="206" y="128" fill="#d32f2f" font-weight="bold">5</text>
+  <text x="40" y="182" fill="#1565c0">対角線は1列ごとに2ずつ下がる</text>
+</svg></li>
+    <li>左はしの斜線部分。列全体（1×12＝12）から、右上の三角形（1×2÷2＝1）を引く。12−1＝<b>11</b>。</li>
+    <li>4列目の斜線部分。左の高さ6、右の高さ4の台形。（6＋4）×1÷2＝<b>5</b>。</li>
+    <li>大きい方：小さい方＝11：5。</li>
+    <li>落としやすい所: 左はしを「台形」と見ずに三角形と数える。左はしは列全体から小さな三角形を引いた形。</li>
+  </ol>
+  <div class="ans">答え：11：5</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (6)</span> 立方体をのせたときの表面積 <span class="type">A・5点｜表面積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>表面積が294cm²の大きい立方体</b>」と「<b>組み合わせた立体の表面積が330cm²</b>」。増えた 330−294＝36cm² を「小さい立方体の側面4つ分」に直して書く → 小さい立方体の1面が出て、1辺が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>立方体の表面積は 1面×6。294÷6＝49＝7×7 なので、大きい立方体の1辺は7cm。（この問題では使わない数だが、確かめに役立つ）</li>
+    <li>上にのせると、小さい立方体の底面はかくれる。でも大きい立方体の上面も同じ分だけかくれて、小さい立方体の上面が代わりに見える。だから増えるのは<b>側面4つ分だけ</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>増えた面積を出す。330−294＝<b>36cm²</b>。</li>
+    <li>36は小さい立方体の側面4つ分。1面は 36÷4＝9cm²。9＝3×3 なので、1辺は<b>3cm</b>。</li>
+    <li>体積は 3×3×3＝27cm³。</li>
+    <li>たしかめ。小さい立方体の表面積は 9×6＝54。かくれるのは小さい方の底面9と大きい方の上面9。294＋54−9−9＝330。合う。</li>
+    <li>落としやすい所: 増えた36を「6面分」と見て 36÷6＝6 とする。上面と底面は差し引きゼロで、増えるのは4面。</li>
+  </ol>
+  <div class="ans">答え：27cm³</div>
+</section>
+
+<section class="card card-overview">
+  <h2><span class="qid">2</span> 全体像（円卓の正直者と嘘つき者） <span class="type">A 5+5 ／ B 6</span></h2>
+  <p>正直者は本当のことを、嘘つき者は本当でないことを答える。だから<b>嘘つき者が「はい」と言うのは、本当の答えが「いいえ」のとき</b>。この1行を余白に書いてから、座り方を図にして、1人ずつ「両隣はだれか → 本当の答え → その人の答え」をたどる。(1)(2)は座り方が少ないので全部書く。(3)は嘘つき者3人の分かれ方で場合分けする。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 3人の円卓で「はい」と答える人数 <span class="type">A・5点｜論理（円卓）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>【正直者】が2人と【嘘つき者】が1人</b>」と質問「<b>両隣の人はどちらも【嘘つき者】ですか？</b>」。3人の円卓は「両隣＝自分以外の2人」に直して書く → だれから見ても両隣に正直者が入るので、本当の答えは全員「いいえ」。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3人で円卓に座ると、だれの両隣も「残りの2人」。座り方は1通りしかない。</li>
+    <li>本当の答えが「いいえ」のとき、正直者は「いいえ」、嘘つき者は「はい」と言う。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3人を 正・正・嘘 と置く。1人ずつ両隣を書く。
+<table><tr><th>人</th><th>両隣</th><th>両隣とも嘘つき者？（本当）</th><th>答え</th></tr>
+<tr><td>正直者①</td><td>正・嘘</td><td>いいえ</td><td>いいえ</td></tr>
+<tr><td>正直者②</td><td>正・嘘</td><td>いいえ</td><td>いいえ</td></tr>
+<tr><td>嘘つき者</td><td>正・正</td><td>いいえ</td><td><b>はい</b></td></tr></table></li>
+    <li>「はい」と答えるのは嘘つき者の1人だけ。</li>
+    <li>落としやすい所: 嘘つき者の答えを本当の答えのまま「いいえ」と書く。嘘つき者の行は答えをひっくり返す。</li>
+  </ol>
+  <div class="ans">答え：1人</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 5人の円卓で正しい文をすべて選ぶ <span class="type">A・5点｜論理（場合分け）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>【正直者】が3人と【嘘つき者】が2人</b>」と、各文の「<b>どの座り方であっても</b>」「<b>座り方がある</b>」。嘘つき者2人が「となり合う」「はなれる」の2通りを図に置く → 2つの座り方で人数を数えれば、4つの文の○×が全部決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>5人のうち嘘つき者2人の座り方は、回して同じものを除くと「となり合う」「1人はさんではなれる」の2通りだけ。5人の円卓では、はなれ方は1種類しかない。</li>
+    <li>「どの座り方であっても」の文は、2通りのどちらでも成り立つときだけ○。「座り方がある」の文は、どちらか1つで成り立てば○。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2つの座り方を書く。番号は時計回り。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 205" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13" id="q2_2_fig">
+  <text x="95" y="16" text-anchor="middle" fill="#222" font-weight="bold">座り方A（嘘がとなり合う）</text>
+  <circle cx="95" cy="118" r="55" fill="none" stroke="#999" stroke-dasharray="4 3"/>
+  <circle cx="95.0" cy="63.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="95.0" y="67.5" text-anchor="middle" fill="#222">正</text>
+  <text x="95.0" y="46.0" text-anchor="middle" fill="#1565c0" font-size="11">1</text>
+  <circle cx="147.3" cy="101.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="147.3" y="105.5" text-anchor="middle" fill="#222">正</text>
+  <text x="167.3" y="98.5" text-anchor="middle" fill="#1565c0" font-size="11">2</text>
+  <circle cx="127.3" cy="162.5" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="127.3" y="167.0" text-anchor="middle" fill="#222">正</text>
+  <text x="139.7" y="183.5" text-anchor="middle" fill="#1565c0" font-size="11">3</text>
+  <circle cx="62.7" cy="162.5" r="13" fill="#ffe0b2" stroke="#222" stroke-width="1.2"/>
+  <text x="62.7" y="167.0" text-anchor="middle" fill="#222">嘘</text>
+  <text x="50.3" y="183.5" text-anchor="middle" fill="#1565c0" font-size="11">4</text>
+  <circle cx="42.7" cy="101.0" r="13" fill="#ffe0b2" stroke="#222" stroke-width="1.2"/>
+  <text x="42.7" y="105.5" text-anchor="middle" fill="#222">嘘</text>
+  <text x="22.7" y="98.5" text-anchor="middle" fill="#1565c0" font-size="11">5</text>
+  <text x="285" y="16" text-anchor="middle" fill="#222" font-weight="bold">座り方B（嘘がはなれる）</text>
+  <circle cx="285" cy="118" r="55" fill="none" stroke="#999" stroke-dasharray="4 3"/>
+  <circle cx="285.0" cy="63.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="285.0" y="67.5" text-anchor="middle" fill="#222">正</text>
+  <text x="285.0" y="46.0" text-anchor="middle" fill="#1565c0" font-size="11">1</text>
+  <circle cx="337.3" cy="101.0" r="13" fill="#ffe0b2" stroke="#222" stroke-width="1.2"/>
+  <text x="337.3" y="105.5" text-anchor="middle" fill="#222">嘘</text>
+  <text x="357.3" y="98.5" text-anchor="middle" fill="#1565c0" font-size="11">2</text>
+  <circle cx="317.3" cy="162.5" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="317.3" y="167.0" text-anchor="middle" fill="#222">正</text>
+  <text x="329.7" y="183.5" text-anchor="middle" fill="#1565c0" font-size="11">3</text>
+  <circle cx="252.7" cy="162.5" r="13" fill="#ffe0b2" stroke="#222" stroke-width="1.2"/>
+  <text x="252.7" y="167.0" text-anchor="middle" fill="#222">嘘</text>
+  <text x="240.3" y="183.5" text-anchor="middle" fill="#1565c0" font-size="11">4</text>
+  <circle cx="232.7" cy="101.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="232.7" y="105.5" text-anchor="middle" fill="#222">正</text>
+  <text x="212.7" y="98.5" text-anchor="middle" fill="#1565c0" font-size="11">5</text>
+</svg></li>
+    <li>座り方Aで、3つの質問に「はい」と答える人を数える。
+<table><tr><th>人</th><th>両隣</th><th>両方とも正直者？</th><th>両方とも嘘つき者？</th><th>1人ずつ？</th></tr>
+<tr><td>1 正</td><td>嘘・正</td><td>いいえ</td><td>いいえ</td><td>はい</td></tr>
+<tr><td>2 正</td><td>正・正</td><td>はい</td><td>いいえ</td><td>いいえ</td></tr>
+<tr><td>3 正</td><td>正・嘘</td><td>いいえ</td><td>いいえ</td><td>はい</td></tr>
+<tr><td>4 嘘</td><td>正・嘘</td><td>はい</td><td>はい</td><td>いいえ</td></tr>
+<tr><td>5 嘘</td><td>嘘・正</td><td>はい</td><td>はい</td><td>いいえ</td></tr>
+<tr><td>「はい」の人数</td><td></td><td>3人</td><td>2人</td><td><b>2人</b></td></tr></table></li>
+    <li>座り方Bでも同じように数える。
+<table><tr><th>人</th><th>両隣</th><th>両方とも正直者？</th><th>両方とも嘘つき者？</th><th>1人ずつ？</th></tr>
+<tr><td>1 正</td><td>正・嘘</td><td>いいえ</td><td>いいえ</td><td>はい</td></tr>
+<tr><td>2 嘘</td><td>正・正</td><td>いいえ</td><td>はい</td><td>はい</td></tr>
+<tr><td>3 正</td><td>嘘・嘘</td><td>いいえ</td><td>はい</td><td>いいえ</td></tr>
+<tr><td>4 嘘</td><td>正・正</td><td>いいえ</td><td>はい</td><td>はい</td></tr>
+<tr><td>5 正</td><td>嘘・正</td><td>いいえ</td><td>いいえ</td><td>はい</td></tr>
+<tr><td>「はい」の人数</td><td></td><td><b>0人</b></td><td>3人</td><td><b>4人</b></td></tr></table></li>
+    <li>(ア) 座り方Bでは0人 → どの座り方でも、とは言えない。×。<br>(イ) Aで2人・Bで3人 → どちらでも1人以上いる。○。<br>(ウ) Bで4人になる座り方がある。○。<br>(エ) 1人ずつ？に「はい」は2人か4人 → 1人になる座り方は無い。×。</li>
+    <li>落としやすい所: 「座り方がある」と「どの座り方であっても」の読み分け。(ア)は座り方Aだけ見ると3人いて○に見える。Bまで見てから決める。</li>
+  </ol>
+  <div class="ans">答え：イ・ウ</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 10人の円卓で「はい」の最小と最大 <span class="type">B・6点｜論理（最大・最小）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>【正直者】が7人，【嘘つき者】が3人</b>」と質問「<b>両隣に【正直者】と【嘘つき者】が1人ずついますか？</b>」。「はい」と言う人を「両隣が正・嘘の正直者」と「両隣が正・正か嘘・嘘の嘘つき者」に直して書く → 嘘つき者3人を「まとめる／ばらす」で人数が変わる。(2)の表ができていれば手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>この質問で「はい」と言うのは2種類。正直者で両隣が正・嘘の人。嘘つき者で両隣が正・正か嘘・嘘の人（本当は「いいえ」だから）。</li>
+    <li>嘘つき者3人の分かれ方は「3人まとまり」「2人＋1人」「1人ずつ」の3通り。あとは、嘘つき者のかたまりの間に正直者が1人だけの所があるかどうかで数が変わる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>最小と最大の座り方を図にして、「はい」の人に印をつける。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 222" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13" id="q2_3_fig">
+  <text x="95" y="16" text-anchor="middle" fill="#222" font-weight="bold">最小（嘘を3人まとめる）</text>
+  <circle cx="95" cy="118" r="55" fill="none" stroke="#999" stroke-dasharray="4 3"/>
+  <circle cx="95.0" cy="63.0" r="13" fill="#ffe0b2" stroke="#222" stroke-width="1.2"/>
+  <text x="95.0" y="67.5" text-anchor="middle" fill="#222">嘘</text>
+  <text x="95.0" y="46.0" text-anchor="middle" fill="#1565c0" font-size="11">1</text>
+  <circle cx="127.3" cy="73.5" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="127.3" y="78.0" text-anchor="middle" fill="#222">嘘</text>
+  <text x="139.7" y="60.5" text-anchor="middle" fill="#1565c0" font-size="11">2</text>
+  <circle cx="147.3" cy="101.0" r="13" fill="#ffe0b2" stroke="#222" stroke-width="1.2"/>
+  <text x="147.3" y="105.5" text-anchor="middle" fill="#222">嘘</text>
+  <text x="167.3" y="98.5" text-anchor="middle" fill="#1565c0" font-size="11">3</text>
+  <circle cx="147.3" cy="135.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="147.3" y="139.5" text-anchor="middle" fill="#222">正</text>
+  <text x="167.3" y="145.5" text-anchor="middle" fill="#1565c0" font-size="11">4</text>
+  <circle cx="127.3" cy="162.5" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="127.3" y="167.0" text-anchor="middle" fill="#222">正</text>
+  <text x="139.7" y="183.5" text-anchor="middle" fill="#1565c0" font-size="11">5</text>
+  <circle cx="95.0" cy="173.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="95.0" y="177.5" text-anchor="middle" fill="#222">正</text>
+  <text x="95.0" y="198.0" text-anchor="middle" fill="#1565c0" font-size="11">6</text>
+  <circle cx="62.7" cy="162.5" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="62.7" y="167.0" text-anchor="middle" fill="#222">正</text>
+  <text x="50.3" y="183.5" text-anchor="middle" fill="#1565c0" font-size="11">7</text>
+  <circle cx="42.7" cy="135.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="42.7" y="139.5" text-anchor="middle" fill="#222">正</text>
+  <text x="22.7" y="145.5" text-anchor="middle" fill="#1565c0" font-size="11">8</text>
+  <circle cx="42.7" cy="101.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="42.7" y="105.5" text-anchor="middle" fill="#222">正</text>
+  <text x="22.7" y="98.5" text-anchor="middle" fill="#1565c0" font-size="11">9</text>
+  <circle cx="62.7" cy="73.5" r="13" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="62.7" y="78.0" text-anchor="middle" fill="#222">正</text>
+  <text x="50.3" y="60.5" text-anchor="middle" fill="#1565c0" font-size="11">10</text>
+  <text x="285" y="16" text-anchor="middle" fill="#222" font-weight="bold">最大（嘘をはなす）</text>
+  <circle cx="285" cy="118" r="55" fill="none" stroke="#999" stroke-dasharray="4 3"/>
+  <circle cx="285.0" cy="63.0" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="285.0" y="67.5" text-anchor="middle" fill="#222">嘘</text>
+  <text x="285.0" y="46.0" text-anchor="middle" fill="#1565c0" font-size="11">1</text>
+  <circle cx="317.3" cy="73.5" r="13" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="317.3" y="78.0" text-anchor="middle" fill="#222">正</text>
+  <text x="329.7" y="60.5" text-anchor="middle" fill="#1565c0" font-size="11">2</text>
+  <circle cx="337.3" cy="101.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="337.3" y="105.5" text-anchor="middle" fill="#222">正</text>
+  <text x="357.3" y="98.5" text-anchor="middle" fill="#1565c0" font-size="11">3</text>
+  <circle cx="337.3" cy="135.0" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="337.3" y="139.5" text-anchor="middle" fill="#222">嘘</text>
+  <text x="357.3" y="145.5" text-anchor="middle" fill="#1565c0" font-size="11">4</text>
+  <circle cx="317.3" cy="162.5" r="13" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="317.3" y="167.0" text-anchor="middle" fill="#222">正</text>
+  <text x="329.7" y="183.5" text-anchor="middle" fill="#1565c0" font-size="11">5</text>
+  <circle cx="285.0" cy="173.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="285.0" y="177.5" text-anchor="middle" fill="#222">正</text>
+  <text x="285.0" y="198.0" text-anchor="middle" fill="#1565c0" font-size="11">6</text>
+  <circle cx="252.7" cy="162.5" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="252.7" y="167.0" text-anchor="middle" fill="#222">嘘</text>
+  <text x="240.3" y="183.5" text-anchor="middle" fill="#1565c0" font-size="11">7</text>
+  <circle cx="232.7" cy="135.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="232.7" y="139.5" text-anchor="middle" fill="#222">正</text>
+  <text x="212.7" y="145.5" text-anchor="middle" fill="#1565c0" font-size="11">8</text>
+  <circle cx="232.7" cy="101.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="232.7" y="105.5" text-anchor="middle" fill="#222">正</text>
+  <text x="212.7" y="98.5" text-anchor="middle" fill="#1565c0" font-size="11">9</text>
+  <circle cx="252.7" cy="73.5" r="13" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="252.7" y="78.0" text-anchor="middle" fill="#222">正</text>
+  <text x="240.3" y="60.5" text-anchor="middle" fill="#1565c0" font-size="11">10</text>
+  <text x="40" y="214" fill="#d32f2f" font-size="12">赤いふち＝「はい」と答える人</text>
+</svg></li>
+    <li>最小: 嘘つき者3人をまとめる（1・2・3）。真ん中の2は両隣が嘘・嘘 → 「はい」。両はしの1と3は両隣が正・嘘 → 本当は「はい」なので「いいえ」。かたまりの両どなりの正直者（4と10）は両隣が正・嘘 → 「はい」。合計 1＋2＝<b>3人</b>。</li>
+    <li>最大: 嘘つき者をばらして、どの嘘つき者も両隣が正・正にする（1・4・7。正直者の間は2人・2人・3人）。嘘つき者3人は全員「はい」。嘘つき者のとなりの正直者6人（2・3・5・6・8・10）は両隣が正・嘘 → 「はい」。9だけ両隣が正・正 → 「いいえ」。合計 3＋6＝<b>9人</b>。</li>
+    <li>ほかの分かれ方も確かめる。終わりの条件は「3通りの分かれ方×正直者1人だけの間があるかどうか」を全部書いたら終わり。
+<table><tr><th>嘘つき者の分かれ方</th><th>嘘つき者の「はい」</th><th>正直者の「はい」</th><th>合計</th></tr>
+<tr><td>3人まとまり</td><td>1</td><td>2</td><td><b>3</b></td></tr>
+<tr><td>2人＋1人（間はどちらも2人以上）</td><td>1</td><td>4</td><td>5</td></tr>
+<tr><td>2人＋1人（間に正直者1人だけの所がある）</td><td>1</td><td>2</td><td>3</td></tr>
+<tr><td>1人ずつ（間はどれも2人以上）</td><td>3</td><td>6</td><td><b>9</b></td></tr>
+<tr><td>1人ずつ（正直者1人だけの間が1つ）</td><td>3</td><td>4</td><td>7</td></tr>
+<tr><td>1人ずつ（正直者1人だけの間が2つ）</td><td>3</td><td>2</td><td>5</td></tr></table>
+3より少ない座り方も、9より多い座り方も無い。</li>
+  </ol>
+  <div class="ans">答え：最小…3人・最大…9人</div>
+  <div class="tip">コツ：嘘つき者が「はい」になる条件を先に1行で書く。あとは「嘘つき者をまとめると減る・ばらすと増える」で最小と最大の見当をつけ、表で全部の分かれ方を確かめる。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ <span class="type">この回で繰り返した入口</span></h2>
+  <ul>
+    <li>「残りの」「増えた分」のように、<b>何をもとにした数か</b>に丸をつけてから式にする（1(3)・1(6)）。</li>
+    <li>比の問題はたてや横を<b>整数で割り切れる数</b>（12）におく（1(5)）。</li>
+    <li>論理は「嘘つき者は本当が『いいえ』のとき『はい』」を先に書き、座り方を図にして1人ずつ○×（大問2）。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（鉄球とあふれる水・長方形の折り返し・立方体の切断）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">A 36点／B 12点／C 6点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>3</td><td>いっぱいの容器に鉄球を入れてあふれる水（体積の比）</td><td>A 6+6 ／ B 6</td><td>「取り出す」で空きができる → あふれ＝入れた分−空き を作業ごとに表に</td></tr>
+  <tr><td>4</td><td>長方形を折って頂点Aを辺CD上に重ねる</td><td>A 6+6+6</td><td>折り返しで同じ長さ・直角 → 直角のまわりに同じ形の直角三角形が2つ</td></tr>
+  <tr><td>5</td><td>立方体を2つの平面で切る（切り口の図と体積）</td><td>A 6 ／ B 6 ／ C 6</td><td>同じ面の2点を結ぶ・平行な面の切り口は平行・中心を通る切り口は半分</td></tr></table>
+  <p>取り方: <b>Aの6問（36点）を先に確実に</b>。3(3)は式が1本になれば表で数えるだけのB。5(2)①は切断の決まり2つで線を引けるB。5(2)②は記述つきのCなので本番では後回しにして、残り時間で①の図から考える。受験者平均67.2点・合格者平均81.3点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 小と中の鉄球の体積比 <span class="type">A・6点｜あふれた水と体積（丸数字で整理）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>水がいっぱいに入っている</b>」と「作業②であふれた水の量は作業①であふれた水の量の<b>2倍</b>」。小1個を①と置き、あふれた水＝入れた体積−取り出してできた空き に直して書く → 作業②の式から中1個の体積が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>いっぱいの容器に物をしずめると、物の体積と同じだけ水があふれる。小1個が①なら、15個で⑮あふれる。</li>
+    <li>鉄球を取り出すと、その体積の分だけ水面が下がって空きができる。次に入れた体積から空きを引いた残りがあふれる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小1個を①と書く。作業ごとに「空き・入れた・あふれ」の表を作る。
+<table><tr><th>作業</th><th>取り出してできた空き</th><th>入れた体積</th><th>あふれた水</th></tr>
+<tr><td>①</td><td>0</td><td>小15個＝⑮</td><td>⑮</td></tr>
+<tr><td>②</td><td>⑮</td><td>中15個</td><td><b>⑮の2倍＝㉚</b></td></tr></table></li>
+    <li>作業②: 中15個−⑮＝㉚。中15個＝㉚＋⑮＝㊺。</li>
+    <li>中1個＝㊺÷15＝③。</li>
+    <li>小：中＝①：③＝<b>1：3</b>。</li>
+    <li>落としやすい所: 取り出した分の空き⑮を引き忘れて、中15個＝㉚とする。「取り出す」の文を見たら、空きを先に書く。</li>
+  </ol>
+  <div class="ans">答え：1：3</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 作業④のあとの小の鉄球の個数 <span class="type">A・6点｜あふれた水と体積（表の続き）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「作業③は作業①と<b>同じ</b>」と「大のみをすべて取り出し…小を<b>できる限り入れる</b>」。作業③の行で大1個の体積を出し、作業④は「空き＝大10個分を小で埋める」に直して書く → 入れられる小の個数が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「できる限り入れる」＝空きがちょうど埋まるまで入れる。小1個①で空き㊿なら50個。</li>
+    <li>容器の中に残っている鉄球を数え忘れない。作業③で入れた小10個は、作業④でも中にある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表に作業③④の行を足す。
+<table><tr><th>作業</th><th>取り出してできた空き</th><th>入れた体積</th><th>あふれた水</th></tr>
+<tr><td>③</td><td>中15個＝㊺</td><td>小10個＝⑩＋大10個</td><td><b>⑮（①と同じ）</b></td></tr>
+<tr><td>④</td><td>大10個＝㊿</td><td>小□個</td><td>0（あふれない）</td></tr></table></li>
+    <li>作業③: ⑩＋大10個−㊺＝⑮。大10個＝⑮＋㊺−⑩＝㊿。大1個＝⑤。</li>
+    <li>作業④: 空き㊿を小①で埋める。㊿÷①＝50個入る。</li>
+    <li>容器の中の小＝作業③の10個＋50個＝<b>60個</b>。</li>
+    <li>落としやすい所: 答えを50個にする。問いは「容器の中にある小の鉄球は全部で」。作業③で入れた10個が残っている。</li>
+  </ol>
+  <div class="ans">答え：60個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 作業⑤で入れた中と大の個数の組み合わせ <span class="type">B・6点｜整数の組を数える（表）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「作業②の<b>1/3</b>」と「それぞれ<b>少なくとも1個</b>」。作業⑤の行を「③×中＋⑤×大−60＝⑩」に直して書く → 3×中＋5×大＝70 の整数の組を表で数える問題に変わる。式が1本になれば数えるだけなので、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3×中＋5×大＝70 の組は、大を1個ずつ増やして、残り（70−5×大）が3でわり切れるものを拾う。大2個なら残り60で中20個。</li>
+    <li>大を3個増やすと 5×3＝15 減る。中は 15÷3＝5個減る。1組見つかれば「大＋3、中−5」でたどれる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>作業⑤: 小60個（60）を取り出す → 空き60。中a個と大b個を入れる。あふれ＝③×a＋⑤×b−60。</li>
+    <li>あふれは作業②の㉚の1/3＝⑩。3×a＋5×b＝60＋10＝<b>70</b>。</li>
+    <li>大b を 1 から順に入れて、70−5×b が3でわり切れるものだけ残す。
+<table><tr><th>大 b</th><td>1</td><td><b>2</b></td><td>3</td><td>4</td><td><b>5</b></td><td>…</td><td><b>8</b></td><td>…</td><td><b>11</b></td><td>…</td><td>14</td></tr>
+<tr><th>70−5×b</th><td>65</td><td>60</td><td>55</td><td>50</td><td>45</td><td></td><td>30</td><td></td><td>15</td><td></td><td>0</td></tr>
+<tr><th>中 a</th><td>×</td><td><b>20</b></td><td>×</td><td>×</td><td><b>15</b></td><td></td><td><b>10</b></td><td></td><td><b>5</b></td><td></td><td>0 ×（中が0個）</td></tr></table>
+    大は 2、5、8、11、14 と3個ずつ増える。大15個以上は 5×15＝75 で70をこえるので終わり。</li>
+    <li>大14個は中が0個で「少なくとも1個」に合わない。残りは（中, 大）＝(20, 2)(15, 5)(10, 8)(5, 11) の<b>4通り</b>。</li>
+    <li>落としやすい所: (0, 14) を数えて5通りにする。「それぞれ少なくとも1個」に丸をつけてから数える。</li>
+  </ol>
+  <div class="ans">答え：4通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)(2)</span> 折り返してできる辺DFの長さ <span class="type">A・6点＋6点｜折り返しと相似（直角のまわりの2つの直角三角形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直線BEを折り目として折った</b>」と「頂点Aが<b>辺CD上の点Fと重なりました</b>」。折る前と後で同じ長さ（EA＝EF、BA＝BF）と直角（角EFB＝90°）を図に置く → Fのまわりに同じ形の直角三角形が2つ（EDFとFCB）でき、比で解ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>折り返した図形はもとと同じ形。EA＝EF、BA＝BF、角EFB＝角EAB＝90°。</li>
+    <li>直角のまわりに直角三角形が2つ。角DFE＋角CFB＝180°−90°＝90°。三角形EDFの角DEF＋角DFE も90°。だから角DEF＝角CFB（図の●）。三角形EDFと三角形FCBは同じ形（相似）。</li>
+    <li>同じ形なら、短い辺：斜めの辺 がそろう。ED：EF＝FC：FB。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1) 図に数を置く。AD＝BC＝8cm なので AE＝AD−ED＝8−3＝5cm。EF＝AE＝5cm。BF＝AB＝10cm。
+<svg id="q4_1_fig" viewBox="0 0 420 360" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="200,40 284,40 284,152" fill="#ffe0b2" stroke="none"/>
+<polygon points="284,152 284,320 60,320" fill="#dbe9ff" stroke="none"/>
+<rect x="60" y="40" width="224" height="280" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="60" y1="320" x2="200" y2="40" stroke="#222" stroke-width="2"/>
+<line x1="200" y1="40" x2="284" y2="152" stroke="#222" stroke-width="2"/>
+<line x1="60" y1="320" x2="284" y2="152" stroke="#222" stroke-width="2"/>
+<polyline points="276.8,142.4 267.2,149.6 274.4,159.2" fill="none" stroke="#222" stroke-width="1.5"/>
+<g font-size="18" font-family="sans-serif" fill="#222">
+<text x="40" y="36">A</text><text x="292" y="36">D</text><text x="40" y="338">B</text><text x="292" y="338">C</text>
+<text x="192" y="30">E</text><text x="296" y="162">F</text>
+</g>
+<g font-size="16" font-family="sans-serif" fill="#1565c0" text-anchor="middle">
+<text x="130" y="30">5</text><text x="242" y="30">3</text><text x="36" y="186">10</text><text x="172" y="346">8</text>
+<text x="252" y="110">5</text><text x="150" y="246">10</text>
+</g>
+<g font-size="17" font-family="sans-serif" fill="#d32f2f" font-weight="bold" text-anchor="middle">
+<text x="312" y="104">DF＝4</text><text x="312" y="244">FC＝6</text>
+</g>
+<g font-size="13" font-family="sans-serif" fill="#222" text-anchor="middle">
+<text x="218" y="60">●</text><text x="272" y="184">●</text><text x="275" y="124">○</text><text x="100" y="306">○</text>
+</g>
+</svg></li>
+    <li>ED：EF＝3：5。だから FC：FB も 3：5。FC＝10×3/5＝<b>6cm</b>。</li>
+    <li>DF＝DC−FC＝10−6＝<b>4cm</b>。</li>
+    <li>たしかめ。三角形EDFは 3・4・5、三角形FCBは 6・8・10。同じ形で合っている。</li>
+    <li>(2) 同じ手順。AE＝36−10＝26cm＝EF。BF＝39cm。ED：EF＝10：26＝5：13。FC＝39×5/13＝15cm。</li>
+    <li>DF＝39−15＝<b>24cm</b>。たしかめ: 三角形EDFは 10・24・26、三角形FCBは 15・36・39。どちらも 5・12・13 の形。</li>
+    <li>落としやすい所: ED：EF を FC：FB でなく FB：FC と逆に合わせる。「直角をはさむ短い辺：斜めの辺」で向きをそろえる。EF＝AE に気づかないと比が作れない。</li>
+  </ol>
+  <div class="ans">答え：(1) 4cm　(2) 24cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> AD＝2890、AE＝2023のときの DF：FC <span class="type">A・6点｜折り返しと相似（長さを使わず比だけ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>AD＝2890cm</b>」「<b>AE＝2023cm</b>」。長さのまま使わず、ED：EF の比に直して書く → FC：FB が同じ比になり、FB＝DF＋FC から DF：FC が決まる。ABの長さは無くてよい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2023＝7×17×17、2890＝10×17×17（289＝17×17）。AE：AD＝7：10 なので、ED は 10−7＝③。</li>
+    <li>(1)(2)と同じく、三角形EDFと三角形FCBは同じ形。ED：EF＝FC：FB。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ED＝2890−2023＝867cm。867÷289＝3、2023÷289＝7。ED：EF＝867：2023＝<b>3：7</b>。</li>
+    <li>FC：FB も 3：7。FC＝③、FB＝⑦ と置く。
+<svg id="q4_3_fig" viewBox="0 0 420 350" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="228,40 300,40 300,192" fill="#ffe0b2" stroke="none"/>
+<polygon points="300,192 300,306 60,306" fill="#dbe9ff" stroke="none"/>
+<rect x="60" y="40" width="240" height="266" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="60" y1="306" x2="228" y2="40" stroke="#222" stroke-width="2"/>
+<line x1="228" y1="40" x2="300" y2="192" stroke="#222" stroke-width="2"/>
+<line x1="60" y1="306" x2="300" y2="192" stroke="#222" stroke-width="2"/>
+<polyline points="295.7,183 286.7,187.3 291,196.3" fill="none" stroke="#222" stroke-width="1.5"/>
+<g font-size="18" font-family="sans-serif" fill="#222">
+<text x="40" y="36">A</text><text x="306" y="36">D</text><text x="40" y="324">B</text><text x="306" y="324">C</text>
+<text x="220" y="30">E</text><text x="310" y="200">F</text>
+</g>
+<g font-size="15" font-family="sans-serif" fill="#1565c0" text-anchor="middle">
+<text x="144" y="30">⑦</text><text x="266" y="30">③</text>
+<text x="248" y="122">⑦</text><text x="166" y="266">⑦</text>
+</g>
+<g font-size="17" font-family="sans-serif" fill="#d32f2f" font-weight="bold" text-anchor="middle">
+<text x="340" y="122">DF＝④</text><text x="340" y="256">FC＝③</text>
+</g>
+<g font-size="13" font-family="sans-serif" fill="#222" text-anchor="middle">
+<text x="248" y="62">●</text><text x="288" y="214">●</text><text x="295" y="172">○</text><text x="98" y="300">○</text>
+</g>
+</svg></li>
+    <li>FB＝BA＝DC＝DF＋FC。DF＝⑦−③＝④。</li>
+    <li>DF：FC＝④：③＝<b>4：3</b>。</li>
+    <li>たしかめ。(1)の数でやると ED：EF＝3：5 → FC＝③、FB＝⑤、DF＝②。DF：FC＝2：3＝4：6 で(1)の 4cm：6cm と合う。</li>
+    <li>落としやすい所: 2890 や 2023 で割り算や辺の長さの計算を始める。AE：ED＝7：3 に直したら、あとは比だけで終わる。</li>
+  </ol>
+  <div class="ans">答え：4：3</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 3点A，C，Fで切ったときの点Hを含む立体 <span class="type">A・6点｜立体の切断（かどの三角すい）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3点A，C，Fを通る平面</b>」と「<b>点Hを含む立体</b>」。A・C・F は頂点Bのとなりの3点 → 切り落とされるのはかどの三角すい B-ACF と図に置く → Hを含む立体＝立方体−三角すい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1つの頂点のとなりの3点を通る平面で切ると、かどの三角すいが落ちる。体積＝底面積×高さ÷3。</li>
+    <li>「何倍」と聞かれたら、立方体の1辺を1として体積1で計算する。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>三角すい B-ACF をかく。底面は三角形ABF（1×1÷2＝1/2）、高さは BC＝1。
+<svg id="q5_1_fig" viewBox="0 0 400 380" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="60,120 350,50 260,320" fill="#ffe0b2" fill-opacity="0.7" stroke="none"/>
+<g stroke="#222" stroke-width="2" fill="none">
+<polygon points="60,120 260,120 260,320 60,320"/>
+<polyline points="60,120 150,50 350,50 260,120"/>
+<line x1="350" y1="50" x2="350" y2="250"/><line x1="260" y1="320" x2="350" y2="250"/>
+</g>
+<g stroke="#222" stroke-width="2" stroke-dasharray="6,4" fill="none">
+<polyline points="150,50 150,250 350,250"/><line x1="150" y1="250" x2="60" y2="320"/>
+</g>
+<g stroke="#d32f2f" stroke-width="2.5" fill="none"><polygon points="60,120 350,50 260,320"/></g>
+<g font-size="18" font-family="sans-serif" fill="#222">
+<text x="40" y="118">A</text><text x="266" y="140">B</text><text x="358" y="46">C</text><text x="138" y="42">D</text>
+<text x="40" y="338">E</text><text x="266" y="340">F</text><text x="358" y="258">G</text><text x="128" y="246">H</text>
+</g>
+<text x="60" y="368" font-size="15" font-family="sans-serif" fill="#d32f2f" font-weight="bold">三角すい B-ACF を切り落とす</text>
+</svg></li>
+    <li>三角すいの体積＝1/2×1÷3＝<b>1/6</b>。</li>
+    <li>Hを含む立体＝1−1/6＝<b>5/6</b>。立方体の 5/6 倍。</li>
+    <li>落としやすい所: 切り落とした 1/6 倍を答えにする。問いは「点Hを含む」方。</li>
+  </ol>
+  <div class="ans">答え：5/6倍</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)①</span> 2つの平面で切ったときの切断面の辺（作図） <span class="type">B・6点｜立体の切断（切り口の作図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3点D，I，Jを通る平面</b>」と「<b>点Hを含む立体</b>」の切断面。決まり2つ（同じ面の2点は結ぶ／平行な面の切り口は平行）で D・I・J の切り口を図に置く → 四角形DIFJ。ACF の切り口と交わる線 P-F を足し、P-I 側を消せば完成。決まり通りに線を引くだけなので、手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ面にある2点は結ぶ。D と I は上の面、D と J は左の面（ADHE）。</li>
+    <li>平行な面には平行な切り口。上の面の DI と平行な線を、下の面の J から引く。</li>
+    <li>2つの平面で切るときは、両方の平面にある2点を結んだ線が、2つの切り口の交わる線になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>D と I（上の面）を結ぶ。J から DI と平行に引くと、ちょうど F に着く（I は BC の真ん中、J は EH の真ん中で、ずれ方が同じ）。D-J、I-F も結ぶ。切り口は<b>四角形DIFJ</b>（ひし形）。
+<svg id="q5_2_fig1" viewBox="0 0 400 380" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="150,50 305,85 260,320 105,285" fill="#dbe9ff" fill-opacity="0.75" stroke="none"/>
+<g stroke="#222" stroke-width="2" fill="none">
+<polygon points="60,120 260,120 260,320 60,320"/>
+<polyline points="60,120 150,50 350,50 260,120"/>
+<line x1="350" y1="50" x2="350" y2="250"/><line x1="260" y1="320" x2="350" y2="250"/>
+</g>
+<g stroke="#222" stroke-width="2" stroke-dasharray="6,4" fill="none">
+<polyline points="150,50 150,250 350,250"/><line x1="150" y1="250" x2="60" y2="320"/>
+</g>
+<g stroke="#1565c0" stroke-width="2.5" fill="none"><polygon points="150,50 305,85 260,320 105,285"/></g>
+<circle cx="305" cy="85" r="4" fill="#222"/><circle cx="105" cy="285" r="4" fill="#222"/>
+<g font-size="18" font-family="sans-serif" fill="#222">
+<text x="40" y="118">A</text><text x="266" y="140">B</text><text x="358" y="46">C</text><text x="138" y="42">D</text>
+<text x="40" y="338">E</text><text x="266" y="340">F</text><text x="358" y="258">G</text><text x="128" y="246">H</text>
+<text x="312" y="104">I</text><text x="112" y="304">J</text>
+</g>
+<g font-size="14" font-family="sans-serif" fill="#1565c0" font-weight="bold">
+<text x="170" y="40">DI</text><text x="110" y="368">JF は DI と平行（Jから引く）</text>
+</g>
+</svg></li>
+    <li>三角形ACF の切り口と DIFJ は、上の面で AC と DI が交わる点 P と、共通の点 F の2か所で出会う。<b>P-F を結ぶ</b>。これが2つの切り口の交わる線。</li>
+    <li>Hを含む立体に残る辺を実線にする: D-P、P-C、C-F、F-J、J-D、P-F。P-I の側（三角形PIF より B に近い側）は切り落とされる方なので、実線にしない。
+<svg id="q5_2_fig2" viewBox="0 0 400 350" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="150,50 253,73 260,320 105,285" fill="#dbe9ff" fill-opacity="0.75" stroke="none"/>
+<polygon points="253,73 350,50 260,320" fill="#ffe0b2" fill-opacity="0.75" stroke="none"/>
+<g stroke="#222" stroke-width="2" fill="none">
+<polygon points="60,120 260,120 260,320 60,320"/>
+<polyline points="60,120 150,50 350,50 260,120"/>
+<line x1="350" y1="50" x2="350" y2="250"/><line x1="260" y1="320" x2="350" y2="250"/>
+</g>
+<g stroke="#222" stroke-width="2" stroke-dasharray="6,4" fill="none">
+<polyline points="150,50 150,250 350,250"/><line x1="150" y1="250" x2="60" y2="320"/>
+</g>
+<g stroke="#999" stroke-width="1.5" stroke-dasharray="4,3" fill="none"><line x1="60" y1="120" x2="253" y2="73"/><line x1="253" y1="73" x2="305" y2="85"/></g>
+<g stroke="#d32f2f" stroke-width="3" fill="none"><polyline points="150,50 253,73 350,50 260,320 105,285 150,50"/><line x1="253" y1="73" x2="260" y2="320"/></g>
+<circle cx="253" cy="73" r="4" fill="#d32f2f"/><circle cx="305" cy="85" r="4" fill="#222"/><circle cx="105" cy="285" r="4" fill="#222"/>
+<g font-size="18" font-family="sans-serif" fill="#222">
+<text x="40" y="118">A</text><text x="266" y="140">B</text><text x="358" y="46">C</text><text x="138" y="42">D</text>
+<text x="40" y="338">E</text><text x="266" y="340">F</text><text x="358" y="258">G</text><text x="128" y="246">H</text>
+<text x="312" y="104">I</text><text x="112" y="304">J</text>
+</g>
+<text x="238" y="66" font-size="18" font-family="sans-serif" fill="#d32f2f" font-weight="bold">P</text>
+</svg></li>
+  </ol>
+  <div class="ans">答え：右の図（実線は D→P→C、C→F、F→J、J→D、P→F。P は上の面で AC と DI が交わる点）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)②</span> 2つの平面で切ったときの点Hを含む立体の体積（記述） <span class="type">C・6点｜立体の切断（体積・記述）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>点Hを含む立体</b>」と①でかいた切り口。合図は「DIJ の切り口の対角線 DF は立方体の対角線＝<b>中心を通る</b>」→ DIJ の平面は立方体を半分にする。半分から、ACF が削る三角すい F-PIC を引く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>四角柱を斜めに切った立体の体積＝底面積×（4本の高さの平均）。底面1、高さが 1・1/2・0・1/2 なら 1×（2÷4）＝1/2。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>前の面 ABFE を底面と見る。立体 ABFE-DIFJ は四角柱を斜めに切った形。高さは AD＝1、BI＝1/2、F＝0、EJ＝1/2。体積＝1×（1＋1/2＋0＋1/2）÷4＝<b>1/2</b>。Hを含む側（立体DIC-JFGH）も 1−1/2＝1/2。
+<svg id="q5_2_fig4" viewBox="0 0 400 380" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="60,120 260,120 260,320 60,320" fill="#c8e6c9" fill-opacity="0.8" stroke="none"/>
+<polygon points="150,50 305,85 260,320 105,285" fill="#dbe9ff" fill-opacity="0.6" stroke="none"/>
+<g stroke="#222" stroke-width="2" fill="none">
+<polygon points="60,120 260,120 260,320 60,320"/>
+<polyline points="60,120 150,50 350,50 260,120"/>
+<line x1="350" y1="50" x2="350" y2="250"/><line x1="260" y1="320" x2="350" y2="250"/>
+</g>
+<g stroke="#222" stroke-width="2" stroke-dasharray="6,4" fill="none">
+<polyline points="150,50 150,250 350,250"/><line x1="150" y1="250" x2="60" y2="320"/>
+</g>
+<g stroke="#1565c0" stroke-width="2.5" fill="none"><polygon points="150,50 305,85 260,320 105,285"/></g>
+<g stroke="#d32f2f" stroke-width="4" fill="none">
+<line x1="60" y1="120" x2="150" y2="50"/><line x1="260" y1="120" x2="305" y2="85"/><line x1="60" y1="320" x2="105" y2="285"/>
+</g>
+<circle cx="260" cy="320" r="5" fill="#d32f2f"/>
+<g font-size="18" font-family="sans-serif" fill="#222">
+<text x="40" y="118">A</text><text x="266" y="140">B</text><text x="358" y="46">C</text><text x="138" y="42">D</text>
+<text x="40" y="338">E</text><text x="266" y="340">F</text><text x="358" y="258">G</text><text x="128" y="246">H</text>
+<text x="312" y="104">I</text><text x="112" y="304">J</text>
+</g>
+<g font-size="15" font-family="sans-serif" fill="#d32f2f" font-weight="bold">
+<text x="92" y="76">AD＝1</text><text x="300" y="130">BI＝1/2</text><text x="20" y="300">EJ＝1/2</text><text x="292" y="340">F＝0</text>
+</g>
+<g font-size="14" font-family="sans-serif" fill="#2e7d32" font-weight="bold">
+<text x="160" y="190">底面ABFE</text><text x="160" y="210">（面積1）</text>
+</g>
+<text x="40" y="368" font-size="14" font-family="sans-serif" fill="#222">体積＝1×（1＋1/2＋0＋1/2）÷4＝1/2</text>
+</svg></li>
+    <li>ACF の平面がこの半分から削るのは、三角すい F-PIC（底面は上の面の三角形PIC、頂点F、高さ1）。上の面で AD と IC は平行、AD：IC＝2：1 → AP：PC＝2：1。P から辺IC までは 1−2/3＝1/3。三角形PIC＝1/2×1/3÷2＝1/12。三角すい＝1/12×1÷3＝<b>1/36</b>。
+<svg id="q5_2_fig3" viewBox="0 0 330 320" style="max-width:300px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="193,127 260,160 260,60" fill="#ffe0b2" stroke="none"/>
+<rect x="60" y="60" width="200" height="200" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="60" y1="260" x2="260" y2="60" stroke="#222" stroke-width="2"/>
+<line x1="60" y1="60" x2="260" y2="160" stroke="#1565c0" stroke-width="2"/>
+<line x1="193" y1="127" x2="260" y2="127" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,3"/>
+<circle cx="193" cy="127" r="4" fill="#d32f2f"/>
+<g font-size="18" font-family="sans-serif" fill="#222">
+<text x="40" y="280">A</text><text x="268" y="280">B</text><text x="268" y="56">C</text><text x="40" y="56">D</text>
+<text x="268" y="166">I</text>
+</g>
+<text x="176" y="118" font-size="18" font-family="sans-serif" fill="#d32f2f" font-weight="bold">P</text>
+<g font-size="14" font-family="sans-serif" fill="#1565c0" text-anchor="middle">
+<text x="160" y="52">AD＝1</text><text x="290" y="112">IC＝1/2</text>
+<text x="226" y="146">1/3</text>
+</g>
+<g font-size="14" font-family="sans-serif" fill="#222" text-anchor="middle">
+<text x="118" y="206">AP：PC＝2：1</text>
+</g>
+</svg></li>
+    <li>1/2−1/36＝18/36−1/36＝17/36。立方体の 17/36 倍。</li>
+  </ol>
+  <div class="ans">答え：17/36倍（求め方は🔍の1〜3のとおり。DIJ の切り口で半分、そこから三角すい F-PIC の 1/36 を引く）</div>
+  <div class="tip">コツ：記述らんには「DIJ の平面は立方体の中心を通るので体積は半分」「そこから三角すい F-PIC（AP：PC＝2：1）を引く」の2行と式 1/2−1/36＝17/36 を書く。①の図の P がそのまま使える。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ <span class="type">この3つの大問で繰り返し出た入口</span></h2>
+  <ul>
+    <li>「水がいっぱい」「取り出す」→ あふれ＝入れた体積−空き を作業ごとに表に置く。</li>
+    <li>折り返し → 同じ長さ・直角を図に置く。直角のまわりの2つの直角三角形は同じ形。</li>
+    <li>切断 → 同じ面の2点を結ぶ・平行な面は平行・中心を通る切り口は体積を半分にする。</li>
+  </ul>
+</section>
+</div>
