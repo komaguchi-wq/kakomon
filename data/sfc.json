@@ -13212,7 +13212,14 @@
        "6(3)": "24分後"
       }
      },
-     "kaisetsu": "kaisetsu/sfc/2013-1/sansu.html"
+     "kaisetsu": "kaisetsu/sfc/2013-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2013-1/sansu/solved_2026-10-19_01.jpg",
+       "small": "2013-1/sansu/solved_2026-10-19_01_small.jpg",
+       "date": "2026-10-19"
+      }
+     ]
     },
     {
      "id": "shakai",
@@ -13764,7 +13771,14 @@
        "4 問4": "A 4・B 8"
       }
      },
-     "kaisetsu": "kaisetsu/sfc/2013-1/rika.html"
+     "kaisetsu": "kaisetsu/sfc/2013-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2013-1/rika/solved_2026-10-19_01.jpg",
+       "small": "2013-1/rika/solved_2026-10-19_01_small.jpg",
+       "date": "2026-10-19"
+      }
+     ]
     },
     {
      "id": "kokugo",
@@ -14887,7 +14901,14 @@
        "5 問4": "3・5",
        "5 問5": "3"
       }
-     }
+     },
+     "solvedPages": [
+      {
+       "full": "2012-1/rika/solved_2026-10-19_01.jpg",
+       "small": "2012-1/rika/solved_2026-10-19_01_small.jpg",
+       "date": "2026-10-19"
+      }
+     ]
     },
     {
      "id": "kokugo",
