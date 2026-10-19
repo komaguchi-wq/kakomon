@@ -1,0 +1,564 @@
+<!-- generated kakomon hiroo/2024-ms/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1〜3（ゴロム定規・回転体の体積・荷物の運び方）</a></li>
+<li><a href="#4">大問4（折り紙を折って切る・正多角形の作図と角度）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1〜3（ゴロム定規・回転体の体積・荷物の運び方）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 43点／B 31点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1</td><td>ゴロム定規（どの距離もちがう目盛り）</td><td>A 5+6／B 12</td><td>目盛りを「すきま」の数に直す</td></tr>
+    <tr><td>2</td><td>回転体の体積（円周率3）</td><td>A 8+8／B 9</td><td>軸に垂直な線が半径。円すいをたす・ひく</td></tr>
+    <tr><td>3</td><td>荷物の運び方（場合の数）</td><td>A 8+8／B 10</td><td>助手がAを運ぶ場所で分ける</td></tr>
+  </table>
+  <p>取り方: <b>Aの6問（43点）を先に確実に</b>。Bの 2 (3) と 3 (3) は、前の小問の答えをそのまま使う問題なので手を付けたい。1 (3) は書き出しに時間がかかる。<b>最後に回す</b>。（受験者平均53.6点・合格者平均70.1点）</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 目盛り4個・長さ6のゴロム定規 <span class="type">A・5点｜条件の整理（書き出し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>すべて異なる</b>」と「目盛りが4個」「長さは6」。目盛り4個は、すきま3つに直して書く → たして6になる、ちがう3つの数は<b>1・2・3だけ</b>。あとは並べる順を決める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>両はしの0と6も目盛りに数える。例の定規は 0・1・3 で3個。だから4個なら、中に入れるのは<b>2個</b>。</li>
+    <li>測れる長さは、となりどうしだけではない。はなれた目盛りの間も測れる。0・1・3 なら、1と2と3の3つ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>すきまは3つ。たして6。全部ちがう数。当てはまるのは 1＋2＋3 だけ。</li>
+    <li>並べる順をためす。となりの2つをたした数が、すきまの数と同じになったら消す。
+      <table>
+        <tr><th>すきまの順</th><th>となりの2つをたす</th><th>結果</th></tr>
+        <tr><td>1・2・3</td><td>1＋2＝3（すきまの3と同じ）</td><td>×</td></tr>
+        <tr><td>2・1・3</td><td>2＋1＝3（すきまの3と同じ）</td><td>×</td></tr>
+        <tr><td><b>1・3・2</b></td><td>1＋3＝4、3＋2＝5</td><td>○</td></tr>
+      </table>
+      3がはしにあると、残りの1と2がとなりになる。だから3はまん中に決まる。</li>
+    <li>すきま 1・3・2 を目盛りに直す。0、1、4、6。
+<svg id="q1_1_a" viewBox="0 0 280 82" xmlns="http://www.w3.org/2000/svg" style="max-width:280px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<line x1="20" y1="30" x2="260" y2="30" stroke="#222" stroke-width="1.6"/>
+<line x1="20" y1="30" x2="20" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="20" y="68" text-anchor="middle" fill="#222">0</text>
+<line x1="60" y1="30" x2="60" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="60" y="68" text-anchor="middle" fill="#222">1</text>
+<circle cx="100" cy="30" r="2" fill="#222"/>
+<circle cx="140" cy="30" r="2" fill="#222"/>
+<line x1="180" y1="30" x2="180" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="180" y="68" text-anchor="middle" fill="#222">4</text>
+<circle cx="220" cy="30" r="2" fill="#222"/>
+<line x1="260" y1="30" x2="260" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="260" y="68" text-anchor="middle" fill="#222">6</text>
+<text x="40.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">1</text>
+<text x="120.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">3</text>
+<text x="220.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">2</text>
+</svg></li>
+    <li>解答冊子の図1は、置けない場所に×をつける方法。まん中の3は、左右が3と3で同じになる。1に置くと、2と5にも置けない。残りは4。同じ答えになる。</li>
+    <li>たしかめ。測れる長さは 1・3・2・4・5・6。全部ちがう。落としやすい所は、間違いの例のように、はなれた目盛りの間を調べ忘れること。</li>
+  </ol>
+  <div class="ans">答え：解説の図1を参照のこと。（目盛りは 0・1・4・6。左右を逆にした 0・2・5・6 も同じ定規）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 目盛り5個・長さ11のゴロム定規を2通り <span class="type">A・6点｜条件の整理（書き出し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「目盛りが5個」「<b>長さは11</b>」と「2通り」。すきま4つに直して書く → たして11になる、ちがう4つの数は<b>1・2・3・5だけ</b>。となりに置けない組を先に消す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ちがう4つの数をいちばん小さく選ぶと 1＋2＋3＋4＝10。11には1足りない。4を5に変えた 1・2・3・5 だけが当てはまる。</li>
+    <li>となりの2つをたした長さも測れる。その数がすきまの数と同じなら、同じ距離が2か所できる。たとえば 1 と 2 がとなりだと、3が2か所になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>すきま 1・2・3・5 で、となりに置けない組を表に書く。
+      <table>
+        <tr><th>組</th><th>たすと</th><th>となりに置けるか</th></tr>
+        <tr><td>1と2</td><td>3（すきまの3と同じ）</td><td>×</td></tr>
+        <tr><td>2と3</td><td>5（すきまの5と同じ）</td><td>×</td></tr>
+        <tr><td>1と3／1と5／2と5／3と5</td><td>4／6／7／8</td><td>○</td></tr>
+      </table></li>
+    <li><b>2のとなりに置けるのは5だけ</b>。となりが1つしかないので、2ははしに決まる。そのとなりが5。</li>
+    <li>残りの1と3の順で2通り。「2・5・1・3」と「2・5・3・1」。</li>
+    <li>目盛りに直す。2・5・1・3 は 0、2、7、8、11。2・5・3・1 は右から読むと 1・3・5・2 で、0、1、4、9、11。
+<svg id="q1_2_a" viewBox="0 0 326 160" xmlns="http://www.w3.org/2000/svg" style="max-width:326px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<line x1="20" y1="30" x2="306" y2="30" stroke="#222" stroke-width="1.6"/>
+<line x1="20" y1="30" x2="20" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="20" y="68" text-anchor="middle" fill="#222">0</text>
+<line x1="46" y1="30" x2="46" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="46" y="68" text-anchor="middle" fill="#222">1</text>
+<circle cx="72" cy="30" r="2" fill="#222"/>
+<circle cx="98" cy="30" r="2" fill="#222"/>
+<line x1="124" y1="30" x2="124" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="124" y="68" text-anchor="middle" fill="#222">4</text>
+<circle cx="150" cy="30" r="2" fill="#222"/>
+<circle cx="176" cy="30" r="2" fill="#222"/>
+<circle cx="202" cy="30" r="2" fill="#222"/>
+<circle cx="228" cy="30" r="2" fill="#222"/>
+<line x1="254" y1="30" x2="254" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="254" y="68" text-anchor="middle" fill="#222">9</text>
+<circle cx="280" cy="30" r="2" fill="#222"/>
+<line x1="306" y1="30" x2="306" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="306" y="68" text-anchor="middle" fill="#222">11</text>
+<text x="33.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">1</text>
+<text x="85.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">3</text>
+<text x="189.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">5</text>
+<text x="280.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">2</text>
+<line x1="20" y1="108" x2="306" y2="108" stroke="#222" stroke-width="1.6"/>
+<line x1="20" y1="108" x2="20" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="20" y="146" text-anchor="middle" fill="#222">0</text>
+<circle cx="46" cy="108" r="2" fill="#222"/>
+<line x1="72" y1="108" x2="72" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="72" y="146" text-anchor="middle" fill="#222">2</text>
+<circle cx="98" cy="108" r="2" fill="#222"/>
+<circle cx="124" cy="108" r="2" fill="#222"/>
+<circle cx="150" cy="108" r="2" fill="#222"/>
+<circle cx="176" cy="108" r="2" fill="#222"/>
+<line x1="202" y1="108" x2="202" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="202" y="146" text-anchor="middle" fill="#222">7</text>
+<line x1="228" y1="108" x2="228" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="228" y="146" text-anchor="middle" fill="#222">8</text>
+<circle cx="254" cy="108" r="2" fill="#222"/>
+<circle cx="280" cy="108" r="2" fill="#222"/>
+<line x1="306" y1="108" x2="306" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="306" y="146" text-anchor="middle" fill="#222">11</text>
+<text x="46.0" y="99" text-anchor="middle" fill="#d32f2f" font-weight="bold">2</text>
+<text x="137.0" y="99" text-anchor="middle" fill="#d32f2f" font-weight="bold">5</text>
+<text x="215.0" y="99" text-anchor="middle" fill="#d32f2f" font-weight="bold">1</text>
+<text x="267.0" y="99" text-anchor="middle" fill="#d32f2f" font-weight="bold">3</text>
+</svg></li>
+    <li>たしかめ。3つ分をたした長さも書く。上の定規は 1・3・5・2・4・8・7・9・10・11。下の定規は 2・5・1・3・7・6・4・8・9・11。どちらも全部ちがう。</li>
+    <li>測れない長さがあってもよい（上は6、下は10が測れない）。落としやすい所は、左右を逆にしただけの定規を2通り目にしてしまうこと。</li>
+  </ol>
+  <div class="ans">答え：解説の図2，図3を参照のこと。（目盛りは 0・1・4・9・11 と 0・2・7・8・11。左右を逆にかいても同じ定規）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 目盛り6個・長さ17のゴロム定規を4通り <span class="type">B・12点｜条件の整理（書き出し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>長さは17</b>」と「4通り」。目盛り6個は、すきま5つに直して書く → たして17の組は<b>2組だけ</b>。(2) と同じ作業だが候補が多い。ほかのA問題を取ってからもどる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ちがう5つの数をいちばん小さく選ぶと 1＋2＋3＋4＋5＝15。17には2足りない。<b>2を足す方法は2つ</b>。5を7にした 1・2・3・4・7 と、4と5を1ずつ大きくした 1・2・3・5・6。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>組ごとに、となりに置けない組を書く。(2) と同じ作業。
+      <table>
+        <tr><th>すきまの組</th><th>となりに置けない組</th><th>分かること</th></tr>
+        <tr><td>1・2・3・4・7</td><td>1と2（3）、1と3（4）、3と4（7）</td><td>1のとなりは4か7。3のとなりは2か7</td></tr>
+        <tr><td>1・2・3・5・6</td><td>1と2（3）、2と3（5）、1と5（6）</td><td>1のとなりは3か6。2のとなりは5か6</td></tr>
+      </table></li>
+    <li>残った並べ方をためす。2つ分、3つ分、4つ分をたした数を書く。同じ数が出たら消す。合うのは<b>各組2つずつ</b>。
+      <table>
+        <tr><th>すきまの順</th><th>目盛り</th></tr>
+        <tr><td>1・3・6・2・5</td><td>0、1、4、10、12、17</td></tr>
+        <tr><td>1・3・6・5・2</td><td>0、1、4、10、15、17</td></tr>
+        <tr><td>1・7・3・2・4</td><td>0、1、8、11、13、17</td></tr>
+        <tr><td>1・7・4・2・3</td><td>0、1、8、12、14、17</td></tr>
+      </table>
+<svg id="q1_3_a" viewBox="0 0 346 316" xmlns="http://www.w3.org/2000/svg" style="max-width:346px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<line x1="20" y1="30" x2="326" y2="30" stroke="#222" stroke-width="1.6"/>
+<line x1="20" y1="30" x2="20" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="20" y="68" text-anchor="middle" fill="#222">0</text>
+<line x1="38" y1="30" x2="38" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="38" y="68" text-anchor="middle" fill="#222">1</text>
+<circle cx="56" cy="30" r="2" fill="#222"/>
+<circle cx="74" cy="30" r="2" fill="#222"/>
+<line x1="92" y1="30" x2="92" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="92" y="68" text-anchor="middle" fill="#222">4</text>
+<circle cx="110" cy="30" r="2" fill="#222"/>
+<circle cx="128" cy="30" r="2" fill="#222"/>
+<circle cx="146" cy="30" r="2" fill="#222"/>
+<circle cx="164" cy="30" r="2" fill="#222"/>
+<circle cx="182" cy="30" r="2" fill="#222"/>
+<line x1="200" y1="30" x2="200" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="200" y="68" text-anchor="middle" fill="#222">10</text>
+<circle cx="218" cy="30" r="2" fill="#222"/>
+<line x1="236" y1="30" x2="236" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="236" y="68" text-anchor="middle" fill="#222">12</text>
+<circle cx="254" cy="30" r="2" fill="#222"/>
+<circle cx="272" cy="30" r="2" fill="#222"/>
+<circle cx="290" cy="30" r="2" fill="#222"/>
+<circle cx="308" cy="30" r="2" fill="#222"/>
+<line x1="326" y1="30" x2="326" y2="52" stroke="#222" stroke-width="1.6"/>
+<text x="326" y="68" text-anchor="middle" fill="#222">17</text>
+<text x="29.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">1</text>
+<text x="65.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">3</text>
+<text x="146.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">6</text>
+<text x="218.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">2</text>
+<text x="281.0" y="21" text-anchor="middle" fill="#d32f2f" font-weight="bold">5</text>
+<line x1="20" y1="108" x2="326" y2="108" stroke="#222" stroke-width="1.6"/>
+<line x1="20" y1="108" x2="20" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="20" y="146" text-anchor="middle" fill="#222">0</text>
+<line x1="38" y1="108" x2="38" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="38" y="146" text-anchor="middle" fill="#222">1</text>
+<circle cx="56" cy="108" r="2" fill="#222"/>
+<circle cx="74" cy="108" r="2" fill="#222"/>
+<line x1="92" y1="108" x2="92" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="92" y="146" text-anchor="middle" fill="#222">4</text>
+<circle cx="110" cy="108" r="2" fill="#222"/>
+<circle cx="128" cy="108" r="2" fill="#222"/>
+<circle cx="146" cy="108" r="2" fill="#222"/>
+<circle cx="164" cy="108" r="2" fill="#222"/>
+<circle cx="182" cy="108" r="2" fill="#222"/>
+<line x1="200" y1="108" x2="200" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="200" y="146" text-anchor="middle" fill="#222">10</text>
+<circle cx="218" cy="108" r="2" fill="#222"/>
+<circle cx="236" cy="108" r="2" fill="#222"/>
+<circle cx="254" cy="108" r="2" fill="#222"/>
+<circle cx="272" cy="108" r="2" fill="#222"/>
+<line x1="290" y1="108" x2="290" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="290" y="146" text-anchor="middle" fill="#222">15</text>
+<circle cx="308" cy="108" r="2" fill="#222"/>
+<line x1="326" y1="108" x2="326" y2="130" stroke="#222" stroke-width="1.6"/>
+<text x="326" y="146" text-anchor="middle" fill="#222">17</text>
+<text x="29.0" y="99" text-anchor="middle" fill="#d32f2f" font-weight="bold">1</text>
+<text x="65.0" y="99" text-anchor="middle" fill="#d32f2f" font-weight="bold">3</text>
+<text x="146.0" y="99" text-anchor="middle" fill="#d32f2f" font-weight="bold">6</text>
+<text x="245.0" y="99" text-anchor="middle" fill="#d32f2f" font-weight="bold">5</text>
+<text x="308.0" y="99" text-anchor="middle" fill="#d32f2f" font-weight="bold">2</text>
+<line x1="20" y1="186" x2="326" y2="186" stroke="#222" stroke-width="1.6"/>
+<line x1="20" y1="186" x2="20" y2="208" stroke="#222" stroke-width="1.6"/>
+<text x="20" y="224" text-anchor="middle" fill="#222">0</text>
+<line x1="38" y1="186" x2="38" y2="208" stroke="#222" stroke-width="1.6"/>
+<text x="38" y="224" text-anchor="middle" fill="#222">1</text>
+<circle cx="56" cy="186" r="2" fill="#222"/>
+<circle cx="74" cy="186" r="2" fill="#222"/>
+<circle cx="92" cy="186" r="2" fill="#222"/>
+<circle cx="110" cy="186" r="2" fill="#222"/>
+<circle cx="128" cy="186" r="2" fill="#222"/>
+<circle cx="146" cy="186" r="2" fill="#222"/>
+<line x1="164" y1="186" x2="164" y2="208" stroke="#222" stroke-width="1.6"/>
+<text x="164" y="224" text-anchor="middle" fill="#222">8</text>
+<circle cx="182" cy="186" r="2" fill="#222"/>
+<circle cx="200" cy="186" r="2" fill="#222"/>
+<line x1="218" y1="186" x2="218" y2="208" stroke="#222" stroke-width="1.6"/>
+<text x="218" y="224" text-anchor="middle" fill="#222">11</text>
+<circle cx="236" cy="186" r="2" fill="#222"/>
+<line x1="254" y1="186" x2="254" y2="208" stroke="#222" stroke-width="1.6"/>
+<text x="254" y="224" text-anchor="middle" fill="#222">13</text>
+<circle cx="272" cy="186" r="2" fill="#222"/>
+<circle cx="290" cy="186" r="2" fill="#222"/>
+<circle cx="308" cy="186" r="2" fill="#222"/>
+<line x1="326" y1="186" x2="326" y2="208" stroke="#222" stroke-width="1.6"/>
+<text x="326" y="224" text-anchor="middle" fill="#222">17</text>
+<text x="29.0" y="177" text-anchor="middle" fill="#d32f2f" font-weight="bold">1</text>
+<text x="101.0" y="177" text-anchor="middle" fill="#d32f2f" font-weight="bold">7</text>
+<text x="191.0" y="177" text-anchor="middle" fill="#d32f2f" font-weight="bold">3</text>
+<text x="236.0" y="177" text-anchor="middle" fill="#d32f2f" font-weight="bold">2</text>
+<text x="290.0" y="177" text-anchor="middle" fill="#d32f2f" font-weight="bold">4</text>
+<line x1="20" y1="264" x2="326" y2="264" stroke="#222" stroke-width="1.6"/>
+<line x1="20" y1="264" x2="20" y2="286" stroke="#222" stroke-width="1.6"/>
+<text x="20" y="302" text-anchor="middle" fill="#222">0</text>
+<line x1="38" y1="264" x2="38" y2="286" stroke="#222" stroke-width="1.6"/>
+<text x="38" y="302" text-anchor="middle" fill="#222">1</text>
+<circle cx="56" cy="264" r="2" fill="#222"/>
+<circle cx="74" cy="264" r="2" fill="#222"/>
+<circle cx="92" cy="264" r="2" fill="#222"/>
+<circle cx="110" cy="264" r="2" fill="#222"/>
+<circle cx="128" cy="264" r="2" fill="#222"/>
+<circle cx="146" cy="264" r="2" fill="#222"/>
+<line x1="164" y1="264" x2="164" y2="286" stroke="#222" stroke-width="1.6"/>
+<text x="164" y="302" text-anchor="middle" fill="#222">8</text>
+<circle cx="182" cy="264" r="2" fill="#222"/>
+<circle cx="200" cy="264" r="2" fill="#222"/>
+<circle cx="218" cy="264" r="2" fill="#222"/>
+<line x1="236" y1="264" x2="236" y2="286" stroke="#222" stroke-width="1.6"/>
+<text x="236" y="302" text-anchor="middle" fill="#222">12</text>
+<circle cx="254" cy="264" r="2" fill="#222"/>
+<line x1="272" y1="264" x2="272" y2="286" stroke="#222" stroke-width="1.6"/>
+<text x="272" y="302" text-anchor="middle" fill="#222">14</text>
+<circle cx="290" cy="264" r="2" fill="#222"/>
+<circle cx="308" cy="264" r="2" fill="#222"/>
+<line x1="326" y1="264" x2="326" y2="286" stroke="#222" stroke-width="1.6"/>
+<text x="326" y="302" text-anchor="middle" fill="#222">17</text>
+<text x="29.0" y="255" text-anchor="middle" fill="#d32f2f" font-weight="bold">1</text>
+<text x="101.0" y="255" text-anchor="middle" fill="#d32f2f" font-weight="bold">7</text>
+<text x="200.0" y="255" text-anchor="middle" fill="#d32f2f" font-weight="bold">4</text>
+<text x="254.0" y="255" text-anchor="middle" fill="#d32f2f" font-weight="bold">2</text>
+<text x="299.0" y="255" text-anchor="middle" fill="#d32f2f" font-weight="bold">3</text>
+</svg></li>
+    <li>たしかめの例。0、1、4、10、12、17 で測れる長さは 1・3・6・2・5・4・9・8・7・10・11・13・12・16・17 の15個。全部ちがう。</li>
+  </ol>
+  <div class="ans">答え：解説の図4を参照のこと。（目盛りは 0・1・4・10・12・17／0・1・4・10・15・17／0・1・8・11・13・17／0・1・8・12・14・17。左右を逆にかいても同じ定規）</div>
+  <div class="tip">コツ：4通りそろわなくても、たしかめが済んだ定規から解答用紙にかく。となりに置けない組で消したあとも、候補は各組10通りほど残る。時間を決めて切り上げる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 三角形ABCを直線mのまわりに回す <span class="type">A・8点｜回転体（円すい−円すい）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>円周率は3として</b>」に丸。「2cm」「3cm」は図に置く。Cから直線mに引いた点線の3cmが半径 → <b>大きい円すいから小さい円すいをひく</b>形に決まる。高さの差がABの2cm。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円すいの体積は、半径×半径×円周率×高さ×1/3。</li>
+    <li>底面が同じ円すいどうしのひき算は、<b>高さの差</b>だけで計算できる。たとえば高さ5cmと高さ3cmなら、高さ2cmの円すい1つ分と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>点線が直線mとぶつかる点をPと書く。CPの3cmが半径になる。
+<svg id="q2_1_a" viewBox="0 0 250 215" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<polygon points="150,28 150,108 30,172" fill="#dbe9ff"/>
+<polygon points="150,108 150,172 30,172" fill="#ffe0b2"/>
+<line x1="150" y1="8" x2="150" y2="200" stroke="#222" stroke-width="1.4"/>
+<polygon points="150,28 150,108 30,172" fill="none" stroke="#222" stroke-width="1.8"/>
+<line x1="30" y1="172" x2="150" y2="172" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<polyline points="141,172 141,163 150,163" fill="none" stroke="#222" stroke-width="1"/>
+<line x1="157" y1="28" x2="157" y2="108" stroke="#d32f2f" stroke-width="2.4"/>
+<text x="164" y="66" fill="#d32f2f" font-weight="bold">2cm</text>
+<text x="164" y="82" fill="#d32f2f" font-size="11">高さの差</text>
+<text x="163" y="145" fill="#222">□cm</text>
+<text x="90" y="190" text-anchor="middle" fill="#1565c0">半径3cm</text>
+<text x="170" y="32" fill="#222">A</text><text x="158" y="122" fill="#222">B</text><text x="158" y="186" fill="#222">P</text><text x="14" y="176" fill="#222">C</text>
+<text x="144" y="12" text-anchor="end" fill="#222" font-style="italic">m</text>
+</svg></li>
+    <li>三角形ACPを回すと大きい円すい。三角形BCPを回すと小さい円すい。求める立体は、大きい円すいから小さい円すいを取りのぞいた形。</li>
+    <li>BPを□cmとする。大きい円すいの高さは 2＋□。小さい円すいの高さは □。ひくと□が消える。<b>高さの差は2cm</b>。</li>
+    <li>3×3×3×2×1/3＝18。</li>
+    <li>落としやすい所はBPの長さ。図に書かれていないが、ひき算で消えるので出さなくてよい。</li>
+  </ol>
+  <div class="ans">答え：18cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 直角三角形DEFを斜辺のまわりに回す <span class="type">A・8点｜回転体（円すい＋円すい）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直角三角形DEF</b>」と「3cm」「4cm」「5cm」。Eから直線mに垂直な線を引いて図に置く → その長さが半径で、<b>円すい2つを合わせた形</b>に決まる。半径は面積から出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>直角三角形で、いちばん長い辺を底辺にしたときの高さは、<b>面積を2通りに表して</b>出す。3×4÷2＝6。底辺を5にすると、高さは 6×2÷5＝2.4。</li>
+    <li>半径が同じ円すい2つは、高さをたしてまとめて計算できる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Eから直線mに垂直な線を引く。ぶつかる点をQと書く。EQが半径になる。
+<svg id="q2_2_a" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<polygon points="140,24 44,96 140,96" fill="#dbe9ff"/>
+<polygon points="140,224 44,96 140,96" fill="#c8e6c9"/>
+<line x1="140" y1="6" x2="140" y2="244" stroke="#222" stroke-width="1.4"/>
+<polygon points="140,24 44,96 140,224" fill="none" stroke="#222" stroke-width="1.8"/>
+<line x1="44" y1="96" x2="140" y2="96" stroke="#d32f2f" stroke-width="2.2" stroke-dasharray="6 4"/>
+<polyline points="131,96 131,105 140,105" fill="none" stroke="#222" stroke-width="1"/>
+<polyline points="51.2,90.6 56.6,97.8 49.4,103.2" fill="none" stroke="#222" stroke-width="1"/>
+<text x="98" y="90" text-anchor="middle" fill="#d32f2f" font-weight="bold">2.4cm</text>
+<text x="78" y="52" text-anchor="middle" fill="#222">3cm</text>
+<text x="70" y="172" text-anchor="middle" fill="#222">4cm</text>
+<text x="192" y="130" fill="#222">5cm</text>
+<text x="148" y="66" fill="#1565c0">□cm</text>
+<text x="148" y="170" fill="#1565c0">△cm</text>
+<text x="148" y="24" fill="#222">D</text><text x="28" y="100" fill="#222">E</text><text x="148" y="232" fill="#222">F</text><text x="146" y="100" fill="#222">Q</text>
+<text x="134" y="12" text-anchor="end" fill="#222" font-style="italic">m</text>
+<path d="M184,30 q8,96 0,192" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="3 3"/>
+</svg></li>
+    <li>三角形DEFの面積は 3×4÷2＝6cm²。DFの5cmを底辺にする。高さEQは 6×2÷5＝<b>2.4cm</b>。</li>
+    <li>上は三角形DEQを回した円すい。下は三角形FEQを回した円すい。高さは□cmと△cmで、合わせて5cm。</li>
+    <li>2.4×2.4×3×5×1/3＝28.8。</li>
+    <li>落としやすい所は半径。3cmや4cmは軸に垂直ではないので、半径に使えない。</li>
+  </ol>
+  <div class="ans">答え：28.8cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 長方形GHIJを対角線のまわりに回す <span class="type">B・9点｜回転体（折り返し・相似）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>長方形GHIJ</b>」と「12cm」「16cm」。Jを直線mの左側に折り返して図に置く → 重なった形の外側だけ回せばよい。12：16＝3：4 で<b>図2と同じ形</b>と見えたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>軸の右側にある部分は、軸で左側に折り返して回しても、できる立体は同じ。1回転すると同じ場所を通る。</li>
+    <li>形が同じで長さが4倍の立体は、体積が 4×4×4＝<b>64倍</b>。長さが2倍なら 2×2×2＝8倍。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>三角形GIJを直線mで折り返す。Jの行き先をJ′と書く。HIとGJ′が交わる点をR、Rから直線mに垂直に下ろした点をSと書く。
+<svg id="q2_3_a" viewBox="0 0 340 290" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<polygon points="180,24 64.8,110.4 90,144 180,144" fill="#dbe9ff"/>
+<polygon points="90,144 180,144 180,264" fill="#ffe0b2"/>
+<line x1="180" y1="6" x2="180" y2="284" stroke="#222" stroke-width="1.4"/>
+<polygon points="180,24 64.8,110.4 180,264 295.2,177.6" fill="none" stroke="#222" stroke-width="1.8"/>
+<polyline points="180,24 64.8,177.6 180,264" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="90" y1="144" x2="180" y2="144" stroke="#d32f2f" stroke-width="2.4"/>
+<text x="142" y="138" text-anchor="middle" fill="#d32f2f" font-weight="bold">7.5cm</text>
+<text x="108" y="58" text-anchor="middle" fill="#222">12cm</text>
+<text x="60" y="128" text-anchor="end" fill="#222">16cm</text>
+<text x="187" y="100" fill="#222">10cm</text>
+<text x="187" y="215" fill="#222">10cm</text>
+<text x="188" y="24" fill="#222">G</text><text x="48" y="110" fill="#222">H</text><text x="188" y="274" fill="#222">I</text><text x="301" y="184" fill="#222">J</text>
+<text x="44" y="186" fill="#1565c0">J′</text><text x="67" y="152" fill="#d32f2f">R</text><text x="186" y="149" fill="#222">S</text>
+<text x="174" y="12" text-anchor="end" fill="#222" font-style="italic">m</text>
+</svg></li>
+    <li>回すのは、三角形GHIと三角形GJ′Iを合わせた形。RSを境に上下が同じ形になる。だから、<b>四角形GHRSを回した立体の2倍</b>。</li>
+    <li>四角形GHRSは、三角形GHIから三角形RISを取った形。「三角形GHIの回転体」から「三角形RISの円すい」をひく。</li>
+    <li>長さを出す。三角形GHIは3辺が 3：4：5。GI＝12×5/3＝20cm。Sはまん中なので GS＝IS＝10cm。三角形RISも同じ形で、RS＝10×3/4＝7.5cm。</li>
+    <li>三角形GHIは、(2) の三角形DEFの4倍の大きさ（3cm→12cm）。回転体は 28.8×64＝1843.2cm³。</li>
+    <li>三角形RISの円すいは 7.5×7.5×3×10×1/3＝562.5cm³。</li>
+    <li>(1843.2−562.5)×2＝2561.4。</li>
+  </ol>
+  <div class="ans">答え：2561.4cm³</div>
+  <div class="tip">コツ：「考え方も書きなさい」とある。答案には「折り返すので四角形GHRSの2倍」「(2) の64倍」「円すいRISをひく」の3つを式といっしょに書く。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 3つの荷物A・B・Cの運び方 <span class="type">A・8点｜場合の数（前の結果を使う）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→条件文】部品は博士の言葉「<b>玄関に置いた荷物がはじめてなくなるタイミングで場合分け</b>」。2つ目のAの場所に直して書く → AA○○○○、A△△A○○、A○○○○A の3つに分かれ、中身は<b>2つの荷物の運び方</b>で数えられる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>書き方の決まり。同じ文字の1つ目が博士、2つ目が助手。AABB は「博士A→助手A→博士B→助手B」。</li>
+    <li>助手は上からしか取れない。Aはいちばん下にある。<b>助手がAを運ぶのは、Aの上に何もないとき</b>。だから、2つのAの間に出てくる荷物は、その間に全部トラックに運ばれている。</li>
+    <li>2つの荷物の運び方は2通り（AABB と ABBA）。会話文に書いてある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3つの荷物は6文字。1文字目は博士のA。2つ目のAの場所で3つに分ける。
+      <table>
+        <tr><th>形</th><th>入るもの</th><th>通り</th></tr>
+        <tr><td>AA○○○○</td><td>○○○○はBとCの運び方。BBCC・BCCB</td><td>2</td></tr>
+        <tr><td>A△△A○○</td><td>△△はBB。○○はCC</td><td>1</td></tr>
+        <tr><td>A○○○○A</td><td>○○○○はBとCの運び方。BBCC・BCCB</td><td>2</td></tr>
+      </table></li>
+    <li>たす。2＋1＋2＝<b>5通り</b>。</li>
+    <li>全部書くと AABBCC・AABCCB・ABBACC・ABBCCA・ABCCBA。落としやすい所は ABACBC のような形。Bがまだ玄関にあるのに、助手は下のAを運べない。</li>
+  </ol>
+  <div class="ans">答え：5通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 4つの荷物A〜Dの運び方 <span class="type">A・8点｜場合の数（前の結果を使う）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→条件文】部品は「<b>3つの荷物の運び方と2つの荷物の運び方が利用できる</b>」。会話の4パターンを表に直して書く → 2つのAの間と後ろに、<b>(1) までの答え（1・2・5通り）</b>を入れてかけるだけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>これまでの答え。荷物1つは1通り、2つは2通り、3つは5通り。文字がB・C・Dに変わっても通りの数は同じ。</li>
+    <li>2つのAの間の運び方1つにつき、後ろの運び方が全部ある。だから<b>かけ算</b>。間が2通り、後ろが2通りなら 2×2＝4通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>4つの荷物は8文字。2つ目のAの場所で4つに分ける。
+      <table>
+        <tr><th>形</th><th>2つのAの間</th><th>後ろ</th><th>通り</th></tr>
+        <tr><td>AA○○○○○○</td><td>なし</td><td>荷物3つ → 5</td><td>5</td></tr>
+        <tr><td>A△△A○○○○</td><td>荷物1つ（BB）→ 1</td><td>荷物2つ → 2</td><td>1×2＝2</td></tr>
+        <tr><td>A△△△△A○○</td><td>荷物2つ → 2</td><td>荷物1つ → 1</td><td>2×1＝2</td></tr>
+        <tr><td>A○○○○○○A</td><td>荷物3つ → 5</td><td>なし</td><td>5</td></tr>
+      </table></li>
+    <li>たす。(5＋2)×2＝<b>14通り</b>。</li>
+    <li>落としやすい所は3番目の形。△△△△はBとCの運び方なので、1通りではなく2通りある。</li>
+  </ol>
+  <div class="ans">答え：14通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 5つの荷物A〜Eの運び方 <span class="type">B・10点｜場合の数（前の結果を使う）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→条件文】部品は「<b>5つの荷物</b>」と「考え方も書きなさい」に丸。2つ目のAの場所は5か所。表に直して書く → (2) の表に<b>1行足すだけ</b>。(1)(2) が出ていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>これまでの答え。荷物1つは1通り、2つは2通り、3つは5通り、<b>4つは14通り</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>5つの荷物は10文字。2つ目のAの場所で5つに分ける。間と後ろの荷物は、合わせて4つ。
+      <table>
+        <tr><th>形</th><th>2つのAの間</th><th>後ろ</th><th>通り</th></tr>
+        <tr><td>AA○○○○○○○○</td><td>なし</td><td>荷物4つ → 14</td><td>14</td></tr>
+        <tr><td>A△△A○○○○○○</td><td>荷物1つ → 1</td><td>荷物3つ → 5</td><td>1×5＝5</td></tr>
+        <tr><td>A△△△△A○○○○</td><td>荷物2つ → 2</td><td>荷物2つ → 2</td><td><b>2×2＝4</b></td></tr>
+        <tr><td>A△△△△△△A○○</td><td>荷物3つ → 5</td><td>荷物1つ → 1</td><td>5×1＝5</td></tr>
+        <tr><td>A○○○○○○○○A</td><td>荷物4つ → 14</td><td>なし</td><td>14</td></tr>
+      </table></li>
+    <li>たす。(14＋5)×2＋4＝<b>42通り</b>。</li>
+    <li>まん中の行だけ相手がいない。×2 の外に出して、4を1回だけたす。</li>
+  </ol>
+  <div class="ans">答え：42通り</div>
+  <div class="tip">コツ：考え方のらんには「助手がAを運ぶ場所で5つに分ける」と書き、上の表と式を写す。(2) の14通りがちがうと、ここもずれる。先に (2) を確かめる。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ</h2>
+  <ul>
+    <li>大問1: 目盛りの場所ではなく、<b>すきまの数</b>で考える。たす数が決まると、使う数の組が決まる。</li>
+    <li>大問2: 回転体は、軸に<b>垂直な線</b>を引いて半径を出す。同じ半径の円すいは、高さをまとめる。</li>
+    <li>大問3: 前の小問の答えを部品に使う。<b>2つ目のAの場所</b>で分けて、間と後ろをかける。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4"><h1 class="dtitle">大問4（折り紙を折って切る・正多角形の作図と角度）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4</span> この回の全体像（担当の大問） <span class="type">A 16点／B 0点／C 10点</span></h2>
+  <table><tr><th>小問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>(1)</td><td>別の折り方で正方形を作る図をかく</td><td>A 8</td><td>完成図の折り目が「たて・横」→ 半分、また半分</td></tr>
+  <tr><td>(2)</td><td>正八角形・正六角形の折り方の角度</td><td>A 8</td><td>「正八角形」「正六角形」→ 360÷8、360÷6</td></tr>
+  <tr><td>(3)</td><td>正三角形になる折り方を自分でかく</td><td>C 10</td><td>完成図の折り目の本数を図3とくらべる</td></tr></table>
+  <p>取り方: <b>(1)と(2)の16点を先に取る</b>。3問とも同じ見方で解ける。折った紙には、<b>もとの紙の中心が集まる角</b>がある。その角から同じ長さをとって切ると、開いた形が決まる。(3)は図を何枚もかく問題。ほかの大問の見直しが終わってから手を付ける。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 図1とは別の折り方で正方形を作る <span class="type">A・8点｜折って切る作図</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は「<b>図1とは別の方法</b>」と、完成図の点線（たてと横の折り目）。正体を1行「半分に折って、また半分」と書く → 折った形は<b>左上の小さい正方形</b>に決まる。切り口は図1と同じで、紙の中心から同じ長さをとる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>開いた図の点線は、折り目のあと。図1の完成図は点線がななめ（対角線）。この問題の完成図は点線がたてと横。折り目がちがうと、正方形の向きが変わる。</li>
+    <li>2回折ると、紙は4枚重ねになる。紙の中心に集まる角は 360÷4＝90度。この角をはさむ2辺から同じ長さをとって切ると、開いたときに4つの辺が同じ長さになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>問題の1つ目の図を見る。左半分の長方形を、横の点線で下から上へ折る。できる形は、紙の左上にある小さい正方形。これを太い線でかく。</li>
+    <li>紙の中心がどこに来たかをさがす。小さい正方形の<b>右下のかど</b>が、もとの紙の中心になる。</li>
+    <li>右下のかどから、下の辺と右の辺に同じ長さをとる。その2点を通るまっすぐな線が切り口。等しい長さの印も2か所につける。
+<svg viewBox="0 0 370 200" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" id="q4_1_a"><text x="20" y="16" font-size="12" fill="#222" text-anchor="start">折った形と切り口</text><polygon points="20,174 160,174 160,34 20,34" fill="none" stroke="#222" stroke-width="0.8"/><polygon points="90,104 48.0,104 90,62.0" fill="#ffe0b2" stroke="none"/><polygon points="20,104 90,104 90,34 20,34" fill="none" stroke="#222" stroke-width="2.4" stroke-linejoin="round"/><line x1="24.9" y1="127.1" x2="108.9" y2="43.1" stroke="#d32f2f" stroke-width="2"/><line x1="70.8" y1="108.2" x2="70.8" y2="99.8" stroke="#d32f2f" stroke-width="1.5"/><line x1="67.2" y1="108.2" x2="67.2" y2="99.8" stroke="#d32f2f" stroke-width="1.5"/><line x1="85.8" y1="84.7" x2="94.2" y2="84.7" stroke="#d32f2f" stroke-width="1.5"/><line x1="85.8" y1="81.2" x2="94.2" y2="81.2" stroke="#d32f2f" stroke-width="1.5"/><circle cx="90" cy="104" r="3.5" fill="#d32f2f"/><text x="96" y="118" font-size="11" fill="#d32f2f" text-anchor="start">紙の中心（90°）</text><text x="111.0" y="69.0" font-size="11" fill="#d32f2f" text-anchor="start">切り口</text><text x="178" y="108" font-size="16" fill="#222" text-anchor="start">＝</text><text x="210" y="16" font-size="12" fill="#222" text-anchor="start">開いた形</text><polygon points="210,174 350,174 350,34 210,34" fill="none" stroke="#222" stroke-width="0.8"/><polygon points="280,62.0 322.0,104 280,146.0 238.0,104" fill="#dbe9ff" stroke="#d32f2f" stroke-width="2"/><line x1="280" y1="174" x2="280" y2="34" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="5 3"/><line x1="210" y1="104" x2="350" y2="104" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="5 3"/></svg></li>
+    <li>たしかめ。切り取った直角二等辺三角形を、横の折り目、たての折り目の順に開く。4つ集まって、かどが上下左右を向いた正方形になる。完成図と同じ。</li>
+    <li>落としやすい所は、切り口を左上のかどの側に入れてしまうこと。中心は右下のかどなので、そちら側を切る。</li>
+  </ol>
+  <div class="ans">答え：解説の図Ⅰ㋑を参照のこと。（左上の小さい正方形を太線でかき、その右下のかどから同じ長さの所を結ぶ切り口をかく。同じ長さの印もつける）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 正八角形・正六角形の折り方の角度①② <span class="type">A・8点｜折り紙と角度</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>正八角形</b>」「<b>正六角形</b>」。それぞれ 360÷8＝45度、360÷6＝60度に直して、図の紙の中心の角に書く。①は等しい長さの印がある二等辺三角形の底角で出る。②は60度がそのまま答えになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正八角形は、中心から頂点に線を引くと、同じ二等辺三角形8つに分かれる。中心の角は 360÷8＝45度。正六角形なら 360÷6＝60度。</li>
+    <li>二等辺三角形は、残りの2つの角が同じ大きさ。頂角が45度なら、(180−45)÷2 で出る。</li>
+    <li>折って重なる角は、同じ大きさ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>①から。図2の3番目の図で、三角形の右はしのとがった点が紙の中心。ここに45度と書く。
+<svg viewBox="0 0 330 215" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" id="q4_2_a"><text x="20" y="16" font-size="12" fill="#222" text-anchor="start">図2の3番目の図に書きこむ</text><polygon points="20,194 180,194 180,34 20,34" fill="none" stroke="#222" stroke-width="0.8"/><polygon points="100,114 50.4,114 64.9,78.9" fill="#ffe0b2" stroke="none"/><polygon points="20,34 20,114 100,114" fill="none" stroke="#222" stroke-width="2.4" stroke-linejoin="round"/><line x1="34.4" y1="152.6" x2="86.7" y2="26.3" stroke="#222" stroke-width="1.6"/><line x1="77.2" y1="118.8" x2="77.2" y2="109.2" stroke="#d32f2f" stroke-width="1.5"/><line x1="73.2" y1="118.8" x2="73.2" y2="109.2" stroke="#d32f2f" stroke-width="1.5"/><line x1="80.5" y1="101.3" x2="87.3" y2="94.5" stroke="#d32f2f" stroke-width="1.5"/><line x1="77.7" y1="98.4" x2="84.4" y2="91.7" stroke="#d32f2f" stroke-width="1.5"/><circle cx="100" cy="114" r="3.5" fill="#d32f2f"/><text x="108" y="118" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold">紙の中心 360÷8＝45°</text><text x="57.4" y="109" font-size="12" fill="#222" text-anchor="start">①</text><text x="108" y="138" font-size="12" fill="#d32f2f" text-anchor="start">①＝(180−45)÷2＝67.5°</text></svg></li>
+    <li>切り口で切り取る三角形には、等しい長さの印が2つある。頂角45度の二等辺三角形になる。①はその底角。<br>(180−45)÷2＝<b>67.5度</b></li>
+    <li>次に②。図3の1番目の図で、紙の中心は長方形の右の辺のまん中。半分に折った紙では、中心のまわりは180度ある。</li>
+    <li>開くと正六角形になる。だから、この180度を60度ずつ3つに折り重ねている。赤い点線は、下から1つ目の60度の区切り。②は右の辺と赤い点線の間の角なので <b>60度</b>。
+<svg viewBox="0 0 330 225" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" id="q4_2_b"><text x="20" y="16" font-size="12" fill="#222" text-anchor="start">図3の1番目の図：中心のまわりを3つに分ける</text><polygon points="20,204 190,204 190,34 20,34" fill="none" stroke="#222" stroke-width="0.8"/><polygon points="105,119 31.4,76.5 20,69.9" fill="none" stroke="none"/><polygon points="105,119 105.0,171.7 100.4,171.5 95.8,170.9 91.4,169.9 87.0,168.5 82.7,166.8 78.7,164.6 74.8,162.2 71.1,159.4 67.7,156.3 64.6,152.9 61.8,149.2 59.4,145.3" fill="#ffe0b2" stroke="none"/><polygon points="105,119 59.4,145.3 57.2,141.3 55.5,137.0 54.1,132.6 53.1,128.2 52.5,123.6 52.3,119.0 52.5,114.4 53.1,109.8 54.1,105.4 55.5,101.0 57.2,96.7 59.4,92.7" fill="#dbe9ff" stroke="none"/><polygon points="105,119 59.4,92.7 61.8,88.8 64.6,85.1 67.7,81.7 71.1,78.6 74.8,75.8 78.7,73.4 82.7,71.2 87.0,69.5 91.4,68.1 95.8,67.1 100.4,66.5 105.0,66.3" fill="#c8e6c9" stroke="none"/><line x1="20" y1="76.5" x2="105" y2="76.5" stroke="#888" stroke-width="0.8" stroke-dasharray="3 3"/><line x1="20" y1="119.0" x2="105" y2="119.0" stroke="#888" stroke-width="0.8" stroke-dasharray="3 3"/><line x1="20" y1="161.5" x2="105" y2="161.5" stroke="#888" stroke-width="0.8" stroke-dasharray="3 3"/><polygon points="20,204 105,204 105,34 20,34" fill="none" stroke="#222" stroke-width="2.4" stroke-linejoin="round"/><line x1="105" y1="119" x2="20" y2="168.1" stroke="#d32f2f" stroke-width="1.8" stroke-dasharray="6 3"/><line x1="105" y1="119" x2="31.4" y2="76.5" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="5 3"/><circle cx="31.4" cy="76.5" r="3.5" fill="#222"/><circle cx="105" cy="204" r="3.5" fill="#222"/><circle cx="105" cy="119" r="3.5" fill="#d32f2f"/><text x="88.0" y="152.4" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">60°</text><text x="71.0" y="123.0" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">60°</text><text x="88.0" y="93.6" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">60°</text><text x="113" y="123" font-size="12" fill="#d32f2f" text-anchor="start">紙の中心</text><text x="113" y="155.3" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold">← ここが②＝60°</text><text x="113" y="206" font-size="11" fill="#222" text-anchor="start">この角が</text><text x="113" y="219" font-size="11" fill="#222" text-anchor="start">上の●に重なる</text><text x="113.2" y="72.2" font-size="11" fill="#222" text-anchor="start">3つとも 360÷6</text></svg></li>
+    <li>たしかめ。赤い点線で折ると、右下のかどは60度の2つ分だけ回る。中心から右下のかどまでは、紙の1辺の半分。回った先は、上から4分の1の点線の上にちょうど乗る。図の●の位置と合う。</li>
+    <li>落としやすい所は、①を45度と答えてしまうこと。45度は中心の角。①は切り口の側の角。</li>
+  </ol>
+  <div class="ans">答え：①67.5度　②60度</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 開くと正三角形になる折り方をかく <span class="type">C・10点｜折って切る作図</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">本番では後回し。【資料問題】部品は「<b>正三角形がかかれた折り紙の折り目</b>」。点線の本数を図3の正六角形とくらべ、正体を1行「図3より折り目が1回分少ない」と書く → <b>図3の2番目の図で止めて切る</b>と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正三角形は、中心から3つの頂点に線を引くと、頂角 360÷3＝120度の二等辺三角形3つに分かれる。120度は、(2)の60度の2つ分。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図3の1番目、2番目の図をそのままかく。半分に折った長方形を、赤い点線で折り上げた形まで。3番目の折りはしない。
+<svg viewBox="0 0 370 190" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" id="q4_3_a"><text x="20" y="16" font-size="12" fill="#222" text-anchor="start">1つ目の図</text><text x="215" y="16" font-size="12" fill="#222" text-anchor="start">2つ目の図（ここで止める）</text><polygon points="20,164 144,164 144,40 20,40" fill="none" stroke="#222" stroke-width="0.8"/><line x1="20" y1="71.0" x2="82" y2="71.0" stroke="#888" stroke-width="0.8" stroke-dasharray="3 3"/><polygon points="20,164 82,164 82,40 20,40" fill="none" stroke="#222" stroke-width="2.4" stroke-linejoin="round"/><line x1="82" y1="102" x2="20" y2="137.8" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="5 3"/><circle cx="28.3" cy="71.0" r="3" fill="#222"/><circle cx="82" cy="164" r="3" fill="#222"/><defs><marker id="q4_3_ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#222"/></marker></defs><path d="M75.8,156.6 Q35.5,133.0 32.4,78.4" fill="none" stroke="#222" stroke-width="1.3" marker-end="url(#q4_3_ah)"/><text x="88" y="124.6" font-size="11" fill="#d32f2f" text-anchor="start">60°</text><text x="172" y="108" font-size="16" fill="#222" text-anchor="start">→</text><polygon points="228,164 352,164 352,40 228,40" fill="none" stroke="#222" stroke-width="0.8"/><polygon points="228,137.8 290,102 290,40 228,40" fill="#fff" stroke="#222" stroke-width="2.4" stroke-linejoin="round"/><line x1="228" y1="71.0" x2="290" y2="71.0" stroke="#888" stroke-width="0.8" stroke-dasharray="3 3"/><polygon points="290,102 236.3,71.0 205.3,124.7 228,137.8" fill="#ffe0b2" stroke="#222" stroke-width="2.4" stroke-linejoin="round"/><circle cx="236.3" cy="71.0" r="3" fill="#222"/></svg></li>
+    <li>この形で、紙の中心に集まる角は 60×2＝<b>120度</b>。中心から、右の辺の上向きと、折り上げた紙の下の辺に、同じ長さをとる。その2点を通る線が切り口。等しい長さの印もつける。
+<svg viewBox="0 0 370 190" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" id="q4_3_b"><text x="20" y="16" font-size="12" fill="#222" text-anchor="start">3つ目の図（切り口を入れる）</text><text x="215" y="16" font-size="12" fill="#222" text-anchor="start">開いた形</text><polygon points="40,164 164,164 164,40 40,40" fill="none" stroke="#222" stroke-width="0.8"/><polygon points="40,137.8 102,102 102,40 40,40" fill="#fff" stroke="#222" stroke-width="2.4" stroke-linejoin="round"/><polygon points="102,102 48.3,71.0 17.3,124.7 40,137.8" fill="#ffe0b2" stroke="#222" stroke-width="2.4" stroke-linejoin="round"/><polygon points="102,102 102,58.6 64.4,123.7" fill="#dbe9ff" fill-opacity="0.85" stroke="none"/><line x1="102" y1="102" x2="64.4" y2="123.7" stroke="#222" stroke-width="2.4"/><line x1="102" y1="102" x2="102" y2="58.6" stroke="#222" stroke-width="2.4"/><line x1="102" y1="102" x2="48.3" y2="71.0" stroke="#222" stroke-width="2.4"/><line x1="47.5" y1="153.0" x2="113.3" y2="39.1" stroke="#d32f2f" stroke-width="2"/><line x1="98.3" y1="81.8" x2="105.7" y2="81.8" stroke="#d32f2f" stroke-width="1.5"/><line x1="98.3" y1="78.8" x2="105.7" y2="78.8" stroke="#d32f2f" stroke-width="1.5"/><line x1="86.4" y1="115.3" x2="82.7" y2="108.9" stroke="#d32f2f" stroke-width="1.5"/><line x1="83.7" y1="116.8" x2="80.0" y2="110.4" stroke="#d32f2f" stroke-width="1.5"/><circle cx="102" cy="102" r="3.5" fill="#d32f2f"/><text x="109" y="106" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold">中心 120°</text><text x="186" y="108" font-size="16" fill="#222" text-anchor="start">＝</text><polygon points="228,164 352,164 352,40 228,40" fill="none" stroke="#222" stroke-width="0.8"/><polygon points="290,58.6 252.4,123.7 327.6,123.7" fill="#dbe9ff" stroke="#d32f2f" stroke-width="2"/><line x1="290" y1="164" x2="290" y2="40" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="5 3"/><line x1="290" y1="102" x2="228" y2="137.8" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="5 3"/><line x1="290" y1="102" x2="352" y2="137.8" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="5 3"/><text x="228" y="182" font-size="11" fill="#222" text-anchor="start">中心のまわりは 120°が3つ</text></svg></li>
+    <li>たしかめ。切り取った形は頂角120度の二等辺三角形。開くと3つ集まって正三角形になる。折り目は、たての線と、ななめ下への2本。問題の完成図と同じ。</li>
+  </ol>
+  <div class="ans">答え：解説の図Ⅳを参照のこと。（図3の1番目・2番目と同じ図をかき、3つ目の図で、紙の中心から右の辺と折り上げた紙の下の辺に同じ長さをとって切り口をかく）</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">4</span> まとめ</h2>
+  <ul>
+    <li>折って切る問題は、まず<b>紙の中心がどこに来たか</b>に印をつける。</li>
+    <li>中心の角は「360÷頂点の数」。正方形90度、正八角形45度、正六角形60度、正三角形120度。</li>
+    <li>切り口は、中心の角をはさむ2辺から<b>同じ長さ</b>をとる。完成図の点線の本数が、折る回数の手がかりになる。</li>
+  </ul>
+</section>
+</div>

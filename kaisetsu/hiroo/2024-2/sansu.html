@@ -1,0 +1,491 @@
+<!-- generated kakomon hiroo/2024-2/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（小問集合6題・ウソ発見器の割合）</a></li>
+<li><a href="#3-4-5">大問3・4・5（折り返しの角度／分数の値の場合の数／最小公倍数の得点）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（小問集合6題・ウソ発見器の割合）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 46点／B 0点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)(2)</td><td>計算のくふう／比の□</td><td>A 5+5</td><td>同じ「×71」が3つ／□が内側に2つ</td></tr>
+    <tr><td>1 (3)(4)</td><td>倍数の個数／ニュートン算</td><td>A 5+5</td><td>「5でも7でも割り切れない」／「毎分20人の割合で増えて」</td></tr>
+    <tr><td>1 (5)(6)</td><td>円と角度／ボトルの水</td><td>A 5+5</td><td>「接して」→ 中心と結ぶ／さかさまにした空気の部分</td></tr>
+    <tr><td>2</td><td>ウソ発見器（割合・つるかめ算）</td><td>A 5+5+6</td><td>「99%」と「6%」は何の何%か</td></tr>
+  </table>
+  <p>取り方: 9問とも難易度A。<b>ここの46点を先に固める</b>。受験者平均は58.1点、合格者平均は70.4点。大問2は文が長いが、<b>ウソの回数と真実の回数を分けて書けば</b>かけ算とたし算だけで進む。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 5×71−(21×71+31×71)÷13 <span class="type">A・5点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は3回出てくる「<b>×71</b>」と「<b>÷13</b>」。×71に丸をつけ、かっこの中を「(21＋31)×71」に直して書く → 52÷13＝4 が先に出て、71のかけ算は1回ですむ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数をかけているものどうしは、まとめられる。21個の71と31個の71を合わせると、<b>52個の71</b>になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>かっこの中をまとめる。21×71＋31×71＝(21＋31)×71＝52×71。</li>
+    <li>÷13を先にする。52÷13＝4。かっこの部分は <b>4×71</b> になる。</li>
+    <li>全体は 5×71−4×71。5個の71から4個の71をひく。残りは1個の71。</li>
+    <li>落としやすい所。21×71や31×71を先に計算すると、4けたの筆算が3回になる。同じ数を見つけてから手を動かす。</li>
+  </ol>
+  <div class="ans">答え：71</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 5：□＝□：125 <span class="type">A・5点｜比の性質</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同じ数が入る</b>」。□は内側に2つならぶ → 「□×□＝5×125」に直して書く。同じ数を2回かけて625になる数をさがせば決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>比の式では、<b>内側どうしの積と外側どうしの積が同じ</b>になる。たとえば 2：3＝4：6 なら、3×4＝12、2×6＝12。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>外側をかける。5×125＝625。</li>
+    <li>内側は □×□。これが625と同じになる。</li>
+    <li>一の位が5だから、□の一の位も5。15×15＝225、<b>25×25＝625</b>。□は25。</li>
+    <li>たしかめ。5：25＝1：5。25：125＝1：5。同じ比になっている。</li>
+    <li>落としやすい所。625÷2 にはしない。□×□ は「同じ数を2回かける」。</li>
+  </ol>
+  <div class="ans">答え：25</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 200以下で5でも7でも割り切れない整数 <span class="type">A・5点｜倍数の個数（ベン図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>5でも7でも割り切れない</b>」と「<b>200以下</b>」。「割り切れない」に丸 → 「200個−（5か7で割り切れる数）」に直して書く。割り切れる数のほうが数えやすい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>5の倍数の個数と7の倍数の個数をたすと、<b>35の倍数を2回数えている</b>。35は5でも7でも割り切れるから。重なりの分を1回ひく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3種類の倍数の個数を、わり算で出して表に書く。
+      <table>
+        <tr><th>数える数</th><th>式</th><th>個数</th></tr>
+        <tr><td>5の倍数</td><td>200÷5＝40</td><td>40個</td></tr>
+        <tr><td>7の倍数</td><td>200÷7＝28余り4</td><td>28個</td></tr>
+        <tr><td>5でも7でも割り切れる数（35の倍数）</td><td>200÷35＝5余り25</td><td><b>5個</b></td></tr>
+      </table>
+    </li>
+    <li>5か7で割り切れる数は、40＋28−5＝<b>63個</b>。</li>
+    <li>全部の200個から63個をひく。200−63＝137個。</li>
+    <li>落としやすい所。答えを63個で止めてしまう。丸をつけた「割り切れない」を、答えを書く前に見直す。</li>
+  </ol>
+  <div class="ans">答え：137個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 遊園地の行列と入場口 <span class="type">A・5点｜ニュートン算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>毎分20人の割合で人数が増えて</b>」と「<b>4つ開くと，20分で行列がなくなり</b>」。400÷20＝「1分に20人へる」に直して書く → 増える20人をたすと、入場口4つから1分に入る人数が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>行列は、入る人でへり、新しく来る人でふえる。<b>1分にへる人数＝入場する人数−ならぶ人数</b>。たとえば1分に40人入り20人来るなら、行列は20人へる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1分あたりの人数を表にまとめる。先に入場口4つの行を、左からうめる。
+      <table>
+        <tr><th>入場口</th><th>1分に行列がへる人数</th><th>1分にならぶ人数</th><th>1分に入場する人数</th></tr>
+        <tr><td>4つ</td><td>400÷20＝20人</td><td>20人</td><td>20＋20＝<b>40人</b></td></tr>
+        <tr><td>6つ</td><td>60−20＝<b>40人</b></td><td>20人</td><td>10×6＝60人</td></tr>
+      </table>
+    </li>
+    <li>入場口4つで1分に40人入る。1つの入場口からは、40÷4＝<b>10人</b>。</li>
+    <li>入場口6つなら、1分に 10×6＝60人入る。来る20人をひく。行列は1分に40人へる。</li>
+    <li>はじめの400人がなくなるまでの時間は、400÷40＝10分。</li>
+    <li>落としやすい所。400÷20＝20人を、そのまま「入場口4つ分」としてしまう。20人は「へった分」で、入った人数はそれより20人多い。</li>
+  </ol>
+  <div class="ans">答え：10分後</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 正方形の中の2つの円と∠ACB <span class="type">A・5点｜円と角度</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>点Cで互いに接していて</b>」と「<b>点A，Bで正方形と接しています</b>」。「接して」に丸 → 2つの円の中心を図に置き、A・B・Cと結ぶ。半径どうしで二等辺三角形が2つできる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円が直線に接するとき、中心と接する点を結んだ半径は、その直線と<b>垂直</b>になる。</li>
+    <li>2つの円が接するとき、2つの中心と接する点は<b>一直線</b>にならぶ。</li>
+    <li>三角形の外側の角は、となりにない2つの内側の角の和と同じ。二等辺三角形なら、その半分ずつになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小さい円の中心をP、大きい円の中心をQとして図に置く。正方形の左下の角をD、右上の角をEとする。PとA、QとBを結ぶ。
+      <svg viewBox="0 0 360 350" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="14">
+        <rect x="30" y="25" width="300" height="300" fill="none" stroke="#222" stroke-width="1.5"/>
+        <rect x="30" y="265.3" width="59.7" height="59.7" fill="#ffe0b2"/>
+        <rect x="214" y="25" width="116" height="116" fill="#dbe9ff"/>
+        <rect x="30" y="25" width="300" height="300" fill="none" stroke="#222" stroke-width="1.5"/>
+        <circle cx="89.7" cy="265.3" r="59.7" fill="none" stroke="#222" stroke-width="1.5"/>
+        <circle cx="214" cy="141" r="116" fill="none" stroke="#222" stroke-width="1.5"/>
+        <line x1="30" y1="325" x2="330" y2="25" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="30" y1="265.3" x2="89.7" y2="265.3" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="214" y1="25" x2="214" y2="141" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="30" y1="265.3" x2="131.9" y2="223.1" stroke="#222" stroke-width="2"/>
+        <line x1="214" y1="25" x2="131.9" y2="223.1" stroke="#222" stroke-width="2"/>
+        <circle cx="89.7" cy="265.3" r="3" fill="#222"/>
+        <circle cx="214" cy="141" r="3" fill="#222"/>
+        <circle cx="131.9" cy="223.1" r="3" fill="#d32f2f"/>
+        <text x="14" y="270">A</text>
+        <text x="209" y="18">B</text>
+        <text x="142" y="221" fill="#d32f2f">C</text>
+        <text x="14" y="340">D</text>
+        <text x="334" y="22">E</text>
+        <text x="93" y="283">P</text>
+        <text x="221" y="158">Q</text>
+        <text x="44" y="283" font-size="12" fill="#d32f2f">45°</text>
+        <text x="220" y="108" font-size="12" fill="#d32f2f">45°</text>
+      </svg>
+    </li>
+    <li>色をつけた四角形を見る。小さい円は左と下の辺に接している。たてもよこも半径の長さだから正方形になる。大きい円の右上も同じ。P・Qはどちらも<b>対角線DEの上</b>にある。接する点Cも同じ線の上にある。</li>
+    <li>対角線は正方形の角を半分に分ける。角APDと角BQEは、どちらも45度。</li>
+    <li>三角形PCAを見る。PAとPCは小さい円の半径で、同じ長さ。二等辺三角形になる。外側の角APDが45度だから、角PCAは 45÷2＝<b>22.5度</b>。</li>
+    <li>三角形QBCも同じ。QBとQCが半径で、角QCBは 45÷2＝22.5度。</li>
+    <li>D・P・C・Q・Eは一直線。Cのまわりの180度から2つをひく。180−22.5×2＝135度。</li>
+    <li>落としやすい所。ACとCBを一直線に見てしまう。Cで少し折れている。中心を結んだ線のほうが一直線。</li>
+  </ol>
+  <div class="ans">答え：135度</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (6)</span> ボトルの容積と水の体積の比 <span class="type">A・5点｜水の深さと体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>高さ21cm</b>」と、さかさまの「<b>15cm</b>」。21−15＝「空気の高さ6cm」に直して右の図に置く → 水は高さ12cm、空気は高さ6cmの同じ太さの柱になり、高さの比で体積がくらべられる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ボトルをさかさまにしても、<b>水の体積も空気の体積も変わらない</b>。形のわからない口の部分は、まっすぐな部分に追い出して考える。</li>
+    <li>底面積が同じ柱の体積の比は、高さの比と同じ。高さ12cmと6cmなら 2：1。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>左の図では、水が底から12cmのまっすぐな柱になっている（ア）。右の図では、空気が上のまっすぐな部分に集まる（イ）。イの高さは 21−15＝<b>6cm</b>。
+      <svg viewBox="0 0 360 250" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+        <rect x="40" y="110" width="80" height="120" fill="#dbe9ff"/>
+        <path d="M40 230 L40 60 Q40 40 65 36 L65 20 L95 20 L95 36 Q120 40 120 60 L120 230 Z" fill="none" stroke="#222" stroke-width="1.5"/>
+        <line x1="40" y1="110" x2="120" y2="110" stroke="#222" stroke-width="1.5"/>
+        <text x="73" y="175">ア</text>
+        <line x1="135" y1="110" x2="135" y2="230" stroke="#222" stroke-width="1"/>
+        <line x1="130" y1="110" x2="140" y2="110" stroke="#222"/><line x1="130" y1="230" x2="140" y2="230" stroke="#222"/>
+        <text x="142" y="190">12cm</text>
+        <path d="M220 80 L300 80 L300 190 Q300 210 275 214 L275 230 L245 230 L245 214 Q220 210 220 190 Z" fill="#dbe9ff"/>
+        <rect x="220" y="20" width="80" height="60" fill="#ffe0b2"/>
+        <path d="M220 20 L300 20 L300 190 Q300 210 275 214 L275 230 L245 230 L245 214 Q220 210 220 190 Z" fill="none" stroke="#222" stroke-width="1.5"/>
+        <line x1="220" y1="80" x2="300" y2="80" stroke="#222" stroke-width="1.5"/>
+        <text x="253" y="55">イ</text>
+        <line x1="205" y1="20" x2="205" y2="80" stroke="#d32f2f" stroke-width="1"/>
+        <line x1="200" y1="20" x2="210" y2="20" stroke="#d32f2f"/><line x1="200" y1="80" x2="210" y2="80" stroke="#d32f2f"/>
+        <text x="168" y="55" fill="#d32f2f">6cm</text>
+        <line x1="205" y1="80" x2="205" y2="230" stroke="#222" stroke-width="1"/>
+        <line x1="200" y1="230" x2="210" y2="230" stroke="#222"/>
+        <text x="166" y="150">15cm</text>
+        <line x1="318" y1="20" x2="318" y2="230" stroke="#222" stroke-width="1"/>
+        <line x1="313" y1="20" x2="323" y2="20" stroke="#222"/><line x1="313" y1="230" x2="323" y2="230" stroke="#222"/>
+        <text x="322" y="130">21cm</text>
+      </svg>
+    </li>
+    <li>アとイは底面積が同じ。体積の比は高さの比になる。ア：イ＝12：6＝<b>2：1</b>。</li>
+    <li>アは水の体積。イは空気の体積。ボトルの容積は、水と空気を合わせた 2＋1＝3。</li>
+    <li>容積と水の比は 3：2。</li>
+    <li>落としやすい所。答える順は「容積：水」。2：3 と逆に書かない。21：12 や 21：15 も使えない。口の部分は太さがちがうから。</li>
+  </ol>
+  <div class="ans">答え：3：2</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> ウソ発見器について正しいもの <span class="type">A・5点｜条件の整理</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ウソだったときは99％で光り</b>」と「<b>真実だったときは6％で光ります</b>」。「ウソでも1%は光らない」「真実でも6%は光る」に直して書く → この2行と合うかどうかで①〜④に○×がつく。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>99%は「100回のうち99回くらい」という割合。<b>100%ではない</b>から、起こらないこともある。前の結果で次の結果が決まることもない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>①〜④を、直して書いた2行とくらべて表にする。
+      <table>
+        <tr><th>番号</th><th>書いてあること</th><th>くらべた結果</th><th>○×</th></tr>
+        <tr><td>①</td><td>ウソをついても光らないときがある</td><td>ウソでも1%は光らない</td><td><b>○</b></td></tr>
+        <tr><td>②</td><td>ウソ2回で、2回とも光らないときがある</td><td>1回目も2回目も、光らないことがある</td><td><b>○</b></td></tr>
+        <tr><td>③</td><td>99回目まで光ったので、100回目は絶対に光らない</td><td>100回目も99%で光る</td><td>×</td></tr>
+        <tr><td>④</td><td>光ったため、ウソをついている</td><td>真実でも6%は光る</td><td>×</td></tr>
+      </table>
+    </li>
+    <li>③は「99%」を「100回のうち、ちょうど99回」と読んだまちがい。④は真実のときの6%を見落としている。</li>
+    <li>落としやすい所。問題は「<b>すべて選び</b>」。①だけで止めない。4つ全部に○×をつけてから答える。</li>
+  </ol>
+  <div class="ans">答え：①・②</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 1万回のうち200回ウソのとき光った回数 <span class="type">A・5点｜割合</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1万回発言</b>」と「<b>200回ウソ</b>」。10000−200＝「真実9800回」に直して書く → 99%は200回に、6%は9800回にかける。2つをたすと光った回数になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>割合は「何の」何%かで、かける相手が変わる。99%は<b>ウソの回数</b>の99%。6%は<b>真実の回数</b>の6%。1万回の99%ではない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ウソと真実を分けて表に書く。
+      <table>
+        <tr><th>発言</th><th>回数</th><th>光る割合</th><th>光った回数</th></tr>
+        <tr><td>ウソ</td><td>200回</td><td>99%</td><td>200×0.99＝<b>198回</b></td></tr>
+        <tr><td>真実</td><td>10000−200＝9800回</td><td>6%</td><td>9800×0.06＝<b>588回</b></td></tr>
+      </table>
+    </li>
+    <li>光った回数をたす。198＋588＝786回。</li>
+    <li>落としやすい所。真実のときに光った588回をたし忘れる。問題は「何回光ったか」で、ウソのときだけではない。</li>
+  </ol>
+  <div class="ans">答え：786回</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 1万回で3390回光ったときのウソの回数 <span class="type">A・6点｜つるかめ算（消去算）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1万回発言</b>」と「<b>3390回光りました</b>」。合計の回数と合計の光った回数がある → 「全部真実なら600回光る」に直して書く。3390回との差を、1回ぶんの差0.93でわる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2種類の合計が2つ分かっているときは、つるかめ算が使える。全部を片方にして、<b>1つ入れかえるといくつ変わるか</b>を見る。</li>
+    <li>真実1回をウソ1回に入れかえる。光る回数は 0.99−0.06＝<b>0.93回</b>ぶんふえる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1万回が全部真実だったとする。光る回数は 10000×0.06＝<b>600回</b>。</li>
+    <li>実際は3390回。差は 3390−600＝2790回。</li>
+    <li>真実1回をウソ1回に入れかえるたびに、0.93回ぶんふえる。入れかえる回数は 2790÷0.93＝<b>3000回</b>。これがウソの回数。</li>
+    <li>たしかめを表で書く。
+      <table>
+        <tr><th>発言</th><th>回数</th><th>光った回数</th></tr>
+        <tr><td>ウソ</td><td>3000回</td><td>3000×0.99＝2970回</td></tr>
+        <tr><td>真実</td><td>7000回</td><td>7000×0.06＝420回</td></tr>
+        <tr><td>合計</td><td>10000回</td><td>2970＋420＝<b>3390回</b></td></tr>
+      </table>
+    </li>
+    <li>落としやすい所。2790÷0.93 の小数点。2790÷93＝30 を出してから100倍する。たしかめの表まで書けば、けたのずれに気づける。</li>
+  </ol>
+  <div class="ans">答え：3000回</div>
+  <div class="tip">コツ：声の教育社の解説は、ウソをa回、真実をb回とした消去算。a＋b＝10000 の両側を0.06倍して600回を出し、3390回との差2790回をa×0.93とする。出てくる数は上のつるかめ算と同じ。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ</h2>
+  <ul>
+    <li>「〜ない」数を聞かれたら、<b>全体からひく形</b>に直して書く（1 (3)）。答えの直前に丸を見直す。</li>
+    <li>形のわからない部分は、<b>分かる形に追い出す</b>（1 (6)の空気6cm）。円は中心と接する点を結ぶ（1 (5)）。</li>
+    <li>割合は「<b>何の</b>何%か」を先に書く。ウソの回数と真実の回数を表で分ける（大問2）。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（折り返しの角度／分数の値の場合の数／最小公倍数の得点）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">A 12点／B 36点／C 6点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>3</td><td>四角形を2回折る・角度</td><td>A 6+6 / B 6</td><td>「折った」→ 重なる角と辺に同じ印</td></tr>
+  <tr><td>4</td><td>分数の値は何通りか</td><td>B 6+6 / C 6</td><td>「値は何通り」→ 分子の選び方から、同じ積の組を引く</td></tr>
+  <tr><td>5</td><td>五角形に1〜6を入れる・最小公倍数の合計</td><td>B 6+6+6</td><td>「67点」は奇数 → 奇数だけの三角形をさがす</td></tr></table>
+  <p>取り方: <b>3 (1)(2) を先に確実に</b>取る。Bは、5 (1) と 4 (1)(2) が書き出しで進められる。3 (3) は<b>正三角形に気づけたら</b>手を付ける。4 (3) は後回しでよい。受験者平均は58.1点、合格者平均は70.4点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 2回折った四角形の角ADB <span class="type">A・6点｜折り返しと平行線</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>点Aが点Cに重なるように折った</b>」と「<b>直線BDを折り目として折る</b>」。折り目を「角を半分にする線」に直して図に書く → 40度が20度に、20度が10度に分かれる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>紙を折ると、重なる角は<b>同じ大きさ</b>になる。BAがBCに重なるなら、折り目は角ABCのまん中を通る。</li>
+    <li>平行な2本の線にななめの線が交わると、錯角は同じ大きさ。ADとBCが平行だから、角ADBと角DBCは同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1回目の折り目はBE。BAがBCに重なる。角ABEと角CBEはどちらも 40÷2＝20度。図に書きこむ。</li>
+    <li>2回目の折り目はBD。AはBE上のPに重なる。BAがBPに重なる。角ABDと角PBDはどちらも 20÷2＝10度。</li>
+    <li>角DBCは 10＋20＝<b>30度</b>。</li>
+    <li>ADとBCは平行。角ADBは角DBCと錯角で同じ。角ADBは30度。
+<svg viewBox="0 0 430 290" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:360px;width:100%;height:auto;display:block"><line x1="282.8" y1="49.9" x2="30.0" y2="262.0" stroke="#222" stroke-width="1.6"/><line x1="30.0" y1="262.0" x2="360.0" y2="262.0" stroke="#222" stroke-width="1.6"/><line x1="360.0" y1="262.0" x2="397.4" y2="49.9" stroke="#222" stroke-width="1.6"/><line x1="397.4" y1="49.9" x2="282.8" y2="49.9" stroke="#222" stroke-width="1.6"/><line x1="30.0" y1="262.0" x2="382.6" y2="133.7" stroke="#222" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="30.0" y1="262.0" x2="397.4" y2="49.9" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="5 4"/><text x="274.8" y="43.9" font-size="13" fill="#222" text-anchor="middle">A</text><text x="407.4" y="45.9" font-size="13" fill="#222" text-anchor="middle">D</text><text x="18.0" y="268.0" font-size="13" fill="#222" text-anchor="middle">B</text><text x="370.0" y="274.0" font-size="13" fill="#222" text-anchor="middle">C</text><text x="394.6" y="137.7" font-size="13" fill="#222" text-anchor="middle">E</text><text x="127.9" y="196.7" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="bold">10°</text><text x="139.0" y="215.9" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="bold">10°</text><text x="123.8" y="251.1" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">20°</text><text x="337.2" y="68.9" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">30°</text><text x="180.0" y="280.0" font-size="12" fill="#222" text-anchor="middle">10＋20＝30°</text><text x="340.1" y="41.9" font-size="11" fill="#222" text-anchor="middle">平行</text><text x="255.0" y="280.0" font-size="11" fill="#222" text-anchor="middle">平行</text></svg></li>
+    <li>落としやすい所。20度をそのまま答えにしない。BDは、20度をさらに半分にする線。</li>
+  </ol>
+  <div class="ans">答え：30度</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 角DAPの大きさ <span class="type">A・6点｜折り目と垂直</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>点Aが直線BE上の点Pと重なります</b>」。AとPを線で結んで図に置く → <b>APは折り目BDと垂直</b>に交わる。あとは三角形の残りの角を出すだけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>折って重なる2つの点を結ぶと、その線は<b>折り目と垂直</b>に交わる。折り目は、その線のまん中を通る。</li>
+    <li>三角形の3つの角をたすと180度。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>AとPを結ぶ。BDと交わる所に直角の印をつける。
+<svg viewBox="0 0 430 290" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:360px;width:100%;height:auto;display:block"><line x1="282.8" y1="49.9" x2="30.0" y2="262.0" stroke="#222" stroke-width="1.6"/><line x1="30.0" y1="262.0" x2="360.0" y2="262.0" stroke="#222" stroke-width="1.6"/><line x1="360.0" y1="262.0" x2="397.4" y2="49.9" stroke="#222" stroke-width="1.6"/><line x1="397.4" y1="49.9" x2="282.8" y2="49.9" stroke="#222" stroke-width="1.6"/><line x1="30.0" y1="262.0" x2="382.6" y2="133.7" stroke="#222" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="30.0" y1="262.0" x2="397.4" y2="49.9" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="5 4"/><line x1="282.8" y1="49.9" x2="340.1" y2="149.1" stroke="#d32f2f" stroke-width="1.8"/><text x="274.8" y="43.9" font-size="13" fill="#222" text-anchor="middle">A</text><text x="407.4" y="45.9" font-size="13" fill="#222" text-anchor="middle">D</text><text x="18.0" y="268.0" font-size="13" fill="#222" text-anchor="middle">B</text><text x="370.0" y="274.0" font-size="13" fill="#222" text-anchor="middle">C</text><text x="394.6" y="137.7" font-size="13" fill="#222" text-anchor="middle">E</text><text x="353.1" y="165.1" font-size="13" fill="#222" text-anchor="middle">P</text><circle cx="340.1" cy="149.1" r="2.5" fill="#222"/><polyline points="318.4,95.5 314.4,88.6 307.4,92.6" fill="none" stroke="#d32f2f" stroke-width="1.3"/><text x="337.2" y="68.9" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">30°</text><text x="312.8" y="69.8" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">60°</text><text x="290.2" y="97.8" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">90°</text></svg></li>
+    <li>A、D、交わった点の3つでできる三角形を見る。Dの角は(1)の30度。交わった点の角は90度。</li>
+    <li>角DAPは 180−(30＋90)＝<b>60度</b>。</li>
+    <li>落としやすい所。Pの場所を正確にかけなくても解ける。使うのは直角の印と30度だけ。</li>
+  </ol>
+  <div class="ans">答え：60度</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 角BCDの大きさ <span class="type">B・6点｜正三角形と二等辺三角形</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>AB＝CB</b>」と、Aと重なる「<b>点P</b>」。同じ長さの辺に印をつけて図に置く → BA＝BP＝BC、DA＝DP。(2)の60度から<b>三角形APDが正三角形</b>と気づけたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2つの辺が同じ長さで、角の1つが60度の三角形は<b>正三角形</b>。3つの辺が全部同じ長さになる。</li>
+    <li>二等辺三角形の底角は (180−頂角)÷2。頂角が20度なら、底角は80度。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>DAとDPは折って重なる辺。同じ長さ。角DAPは60度。三角形APDは正三角形。角APDは60度で、PA＝PD。</li>
+    <li>BA、BP、BCは全部同じ長さ。角ABPと角CBPは20度。三角形BPAと三角形BPCは、同じ形の二等辺三角形。底角は (180−20)÷2＝80度。PA＝PC も分かる。</li>
+    <li>Pのまわりは1周360度。角DPCは 360−(60＋80＋80)＝<b>140度</b>。
+<svg viewBox="0 0 430 290" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:360px;width:100%;height:auto;display:block"><polygon points="282.8,49.9 340.1,149.1 397.4,49.9" fill="#c8e6c9" stroke="none"/><line x1="282.8" y1="49.9" x2="30.0" y2="262.0" stroke="#222" stroke-width="1.6"/><line x1="30.0" y1="262.0" x2="360.0" y2="262.0" stroke="#222" stroke-width="1.6"/><line x1="360.0" y1="262.0" x2="397.4" y2="49.9" stroke="#222" stroke-width="1.6"/><line x1="397.4" y1="49.9" x2="282.8" y2="49.9" stroke="#222" stroke-width="1.6"/><line x1="30.0" y1="262.0" x2="340.1" y2="149.1" stroke="#222" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="340.1" y1="149.1" x2="282.8" y2="49.9" stroke="#d32f2f" stroke-width="1.8"/><line x1="340.1" y1="149.1" x2="397.4" y2="49.9" stroke="#d32f2f" stroke-width="1.8"/><line x1="340.1" y1="149.1" x2="360.0" y2="262.0" stroke="#d32f2f" stroke-width="1.8"/><text x="274.8" y="43.9" font-size="13" fill="#222" text-anchor="middle">A</text><text x="407.4" y="45.9" font-size="13" fill="#222" text-anchor="middle">D</text><text x="18.0" y="268.0" font-size="13" fill="#222" text-anchor="middle">B</text><text x="370.0" y="274.0" font-size="13" fill="#222" text-anchor="middle">C</text><circle cx="340.1" cy="149.1" r="2.5" fill="#222"/><text x="340.1" y="129.1" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">60°</text><text x="298.5" y="129.1" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">80°</text><text x="313.3" y="174.1" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">80°</text><text x="347.1" y="159.1" font-size="10" fill="#d32f2f" text-anchor="start" font-weight="bold">140°</text><text x="322.0" y="146.0" font-size="12" fill="#222" text-anchor="middle">P</text><text x="337.0" y="246.7" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">80°</text><text x="360.0" y="200.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">20°</text><text x="90.6" y="231.0" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">20°</text><text x="99.3" y="256.3" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">20°</text><text x="40.0" y="24.0" font-size="12" fill="#222" text-anchor="start">BA＝BP＝BC</text><text x="40.0" y="42.0" font-size="12" fill="#d32f2f" text-anchor="start">PA＝PD＝PC（赤）</text></svg></li>
+    <li>PD＝PA、PA＝PC。だから PD＝PC。三角形PCDは二等辺三角形。角PCDは (180−140)÷2＝20度。</li>
+    <li>角BCDは、角BCPと角PCDをたす。80＋20＝100度。</li>
+  </ol>
+  <div class="ans">答え：100度</div>
+  <div class="tip">コツ：折る問題は、角だけでなく<b>同じ長さの辺</b>にも印をつける。Pから出る3本（PA・PD・PC）が同じ長さだと分かると、二等辺三角形が見える。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 1〜6を分母と分子に3個ずつ入れた値 <span class="type">B・6点｜同じ積の組を引く</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1から6の数を1つずつ</b>」と「<b>Pの値は何通り</b>」。「入れ方」でなく「値」に丸 → 分子の3個の選び方20通りから、<b>同じ値になる組</b>を引く。20通りなら書き出せるので手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>6個から3個を選ぶ選び方は (6×5×4)÷(3×2×1)＝20通り。分子の3個を決めると、分母の3個も決まる。</li>
+    <li>ちがう数の組でも、かけた答えが同じことがある。<b>1×6＝2×3</b>。<b>2×6＝3×4</b>。この組を入れかえても、分数の値は変わらない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>分子に入れる3個の選び方を数える。20通り。</li>
+    <li>同じ値になる組をさがす。1×6 と 2×3 が分子と分母に分かれているときは、入れかえても同じ値。2×6 と 3×4 のときも同じ。</li>
+    <li>表に書き出す。左と右は、分子も分母も積が同じ。
+<table><tr><th>分子（分母は残りの3個）</th><th>入れかえた分子</th><th>分子の積</th></tr>
+<tr><td>1×6×4</td><td>2×3×4</td><td>24</td></tr>
+<tr><td>1×6×5</td><td>2×3×5</td><td>30</td></tr>
+<tr><td>2×6×1</td><td>3×4×1</td><td>12</td></tr>
+<tr><td>2×6×5</td><td>3×4×5</td><td>60</td></tr></table>
+    同じ値のペアは<b>4組</b>。ほかに同じ積になる組はないので、ここで終わり。</li>
+    <li>20通りのうち、4通りがだぶっている。20−4＝16通り。</li>
+  </ol>
+  <div class="ans">答え：16通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 整数になるSは、いつも何の倍数か <span class="type">B・6点｜約分できない5</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Sの値が整数となるように</b>」と「<b>最も大きい整数</b>」。1〜6の中の5に丸 → 5はほかのどの数とも約分できない。整数にするには<b>5は分子に置く</b>しかない。5に気づけたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>分数が整数になるのは、約分で分母が全部消えるとき。</li>
+    <li>5は、1・2・3・4・6のどれとも、1以外に同じ約数がない。だから5は<b>約分で消えない</b>。分母に5があると整数にならない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>5を分子に入れる。残りの 1・2・3・4・6 で、分母が消える入れ方をさがす。</li>
+    <li>分子が 4×5×6、分母が 1×2×3 のとき。約分すると 2×5×2＝20。</li>
+    <li>分子が 2×5×6、分母が 1×3×4 のとき。約分すると 1×5×1＝5。</li>
+    <li>分子の5は消えずに残る。だから整数になるSは、いつも<b>5の倍数</b>。</li>
+    <li>Sが5になることがある。5は、5より大きい数の倍数ではない。いちばん大きい「ある整数」は5。</li>
+  </ol>
+  <div class="ans">答え：5</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 1〜8を分母と分子に4個ずつ入れた値 <span class="type">C・6点｜5と7の場所で場合分け</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">本番では後回し。【条件文】部品は「<b>1から8の数を1つずつ</b>」。約分できない5と7に丸 → <b>5と7が分子か分母か</b>で4つに分けて、(1)と同じ数え方をする。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>5と7は、ほかの数と約分できない。5と7の場所がちがえば、<b>値もちがう</b>。4つの場合は別々に数えてたせる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>5と7が両方分子のとき。残りの 1・2・3・4・6・8 から、分子に入れる2個を選ぶ。(6×5)÷(2×1)＝15通り。積が同じ組は 1×6＝2×3、1×8＝2×4、2×6＝3×4、3×8＝4×6 の4つ。15−4＝<b>11通り</b>。両方分母のときも11通り。</li>
+    <li>5が分子、7が分母のとき。残りから分子の3個を選ぶ。20通り。3個の積が同じになる組を表に書く。
+<table><tr><th>3個の積</th><th>分子の3個</th><th>だぶり</th></tr>
+<tr><td>12</td><td>1×2×6、1×3×4</td><td>1</td></tr>
+<tr><td>24</td><td>1×3×8、1×4×6、2×3×4</td><td>2</td></tr>
+<tr><td>48</td><td>1×6×8、2×3×8、2×4×6</td><td>2</td></tr>
+<tr><td>96</td><td>2×6×8、3×4×8</td><td>1</td></tr></table>
+    だぶりは全部で6。20−6＝<b>14通り</b>。7が分子、5が分母のときも14通り。</li>
+    <li>全部たす。(11＋14)×2＝50通り。</li>
+  </ol>
+  <div class="ans">答え：50通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 得点が67点になる入れ方 <span class="type">B・6点｜奇数の得点と最小公倍数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>得点が67点</b>」と「<b>最小公倍数</b>」。67を「奇数」に直して書く → 最小公倍数が奇数になるのは、<b>3つとも奇数（1・3・5）の三角形</b>だけ。3のとなりに1と5が入る。ここまで見えたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3つの数に偶数が1つでもあると、最小公倍数は<b>偶数</b>になる。1と2と3なら6。</li>
+    <li>偶数だけをたした合計は偶数。合計が奇数の67なら、奇数の三角形が少なくとも1つある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>空いている○に名前をつける。中心がア、上がイ、左下がウ、右下がエ。
+<svg viewBox="0 0 200 186" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:200px;width:100%;height:auto;display:block"><polygon points="100.0,92.0 41.0,72.8 100.0,30.0" fill="#ffe0b2"/><polygon points="100.0,92.0 63.6,142.2 41.0,72.8" fill="#ffe0b2"/><line x1="100.0" y1="30.0" x2="159.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="100.0" y1="30.0" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="159.0" y1="72.8" x2="136.4" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="159.0" y1="72.8" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="136.4" y1="142.2" x2="63.6" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="136.4" y1="142.2" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="63.6" y1="142.2" x2="41.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="63.6" y1="142.2" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="41.0" y1="72.8" x2="100.0" y2="30.0" stroke="#222" stroke-width="1.3"/><line x1="41.0" y1="72.8" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><circle cx="100.0" cy="30.0" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="100.0" y="35.0" font-size="14" fill="#222" text-anchor="middle">イ</text><circle cx="159.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="159.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">6</text><circle cx="136.4" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="136.4" y="147.2" font-size="14" fill="#222" text-anchor="middle">エ</text><circle cx="63.6" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="63.6" y="147.2" font-size="14" fill="#222" text-anchor="middle">ウ</text><circle cx="41.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="41.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">3</text><circle cx="100.0" cy="92.0" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="100.0" y="97.0" font-size="14" fill="#222" text-anchor="middle">ア</text><text x="100.0" y="178.0" font-size="11" fill="#222" text-anchor="middle">3をふくむ三角形は色の2つ</text></svg></li>
+    <li>奇数は1・3・5の3つだけ。奇数だけの三角形は、3をふくむ色の三角形のどちらか。「アとイ」か「アとウ」に、1と5が入る。</li>
+    <li>アが5だとする。5つの三角形が全部5の倍数になる。合計も5の倍数になる。67は5の倍数ではない。だから<b>アは1</b>。</li>
+    <li>ア＝1、イ＝5 のとき。残りの2と4をウとエに入れて、合計を出す。どちらの入れ方も67点。
+<svg viewBox="0 0 400 188" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:360px;width:100%;height:auto;display:block"><line x1="100.0" y1="30.0" x2="159.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="100.0" y1="30.0" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="159.0" y1="72.8" x2="136.4" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="159.0" y1="72.8" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="136.4" y1="142.2" x2="63.6" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="136.4" y1="142.2" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="63.6" y1="142.2" x2="41.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="63.6" y1="142.2" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="41.0" y1="72.8" x2="100.0" y2="30.0" stroke="#222" stroke-width="1.3"/><line x1="41.0" y1="72.8" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><text x="119.7" y="68.9" font-size="11" fill="#1565c0" text-anchor="middle">30</text><text x="131.8" y="106.3" font-size="11" fill="#1565c0" text-anchor="middle">12</text><text x="100.0" y="129.4" font-size="11" fill="#1565c0" text-anchor="middle">4</text><text x="68.2" y="106.3" font-size="11" fill="#1565c0" text-anchor="middle">6</text><text x="80.3" y="68.9" font-size="11" fill="#1565c0" text-anchor="middle">15</text><circle cx="100.0" cy="30.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="1.4"/><text x="100.0" y="35.0" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">5</text><circle cx="159.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="159.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">6</text><circle cx="136.4" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="136.4" y="147.2" font-size="14" fill="#222" text-anchor="middle">4</text><circle cx="63.6" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="63.6" y="147.2" font-size="14" fill="#222" text-anchor="middle">2</text><circle cx="41.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="41.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">3</text><circle cx="100.0" cy="92.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="1.4"/><text x="100.0" y="97.0" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">1</text><line x1="300.0" y1="30.0" x2="359.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="300.0" y1="30.0" x2="300.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="359.0" y1="72.8" x2="336.4" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="359.0" y1="72.8" x2="300.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="336.4" y1="142.2" x2="263.6" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="336.4" y1="142.2" x2="300.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="263.6" y1="142.2" x2="241.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="263.6" y1="142.2" x2="300.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="241.0" y1="72.8" x2="300.0" y2="30.0" stroke="#222" stroke-width="1.3"/><line x1="241.0" y1="72.8" x2="300.0" y2="92.0" stroke="#222" stroke-width="1.3"/><text x="319.7" y="68.9" font-size="11" fill="#1565c0" text-anchor="middle">30</text><text x="331.8" y="106.3" font-size="11" fill="#1565c0" text-anchor="middle">6</text><text x="300.0" y="129.4" font-size="11" fill="#1565c0" text-anchor="middle">4</text><text x="268.2" y="106.3" font-size="11" fill="#1565c0" text-anchor="middle">12</text><text x="280.3" y="68.9" font-size="11" fill="#1565c0" text-anchor="middle">15</text><circle cx="300.0" cy="30.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="1.4"/><text x="300.0" y="35.0" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">5</text><circle cx="359.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="359.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">6</text><circle cx="336.4" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="336.4" y="147.2" font-size="14" fill="#222" text-anchor="middle">2</text><circle cx="263.6" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="263.6" y="147.2" font-size="14" fill="#222" text-anchor="middle">4</text><circle cx="241.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="241.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">3</text><circle cx="300.0" cy="92.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="1.4"/><text x="300.0" y="97.0" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">1</text><text x="100.0" y="180.0" font-size="11" fill="#222" text-anchor="middle">15＋30＋12＋4＋6＝67</text><text x="300.0" y="180.0" font-size="11" fill="#222" text-anchor="middle">15＋30＋6＋4＋12＝67</text></svg></li>
+    <li>ア＝1、ウ＝5 のときも調べる。イ＝2、エ＝4 なら 6＋6＋12＋20＋15＝59点。イ＝4、エ＝2 なら 12＋12＋6＋10＋15＝55点。どちらも67にならない。答えは4の2つ。</li>
+  </ol>
+  <div class="ans">答え：解説の図②，図③を参照のこと。（中心が1、上が5。下の2つは「左下2・右下4」と「左下4・右下2」。🔍の4の図）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)①</span> 得点の最大値 <span class="type">B・6点｜中心に5を置く</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>最大値</b>」と、ルールの「<b>3つの頂点</b>」。中心の数は5つの三角形全部に入る、と図に置く → 中心に、ほかの数と同じ約数がない<b>5</b>を置く。全部の三角形が5倍になる。(1)が解けたら続けて手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1以外に同じ約数がない数どうしの最小公倍数は、<b>かけ算</b>になる。5と4と6なら、4と6の最小公倍数12に5をかけて60。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>中心に5を入れる。まわりは 1・2・3・4・6。それぞれの三角形は「5×（となり合う2つの最小公倍数）」になる。</li>
+    <li>となり合う2つの最小公倍数を大きくする。いちばん大きいのは12。4と6、4と3で作れる。<b>4の両どなりに3と6</b>を置く。</li>
+    <li>残りは1と2。6のとなりに1、3のとなりに2を置く。6と1で6、1と2で2、2と3で6。合わせて14。逆に置くと 6＋2＋3＝11 で小さい。</li>
+    <li>合計は 60＋30＋10＋30＋60＝190点。
+<svg viewBox="0 0 200 188" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:200px;width:100%;height:auto;display:block"><line x1="100.0" y1="30.0" x2="159.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="100.0" y1="30.0" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="159.0" y1="72.8" x2="136.4" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="159.0" y1="72.8" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="136.4" y1="142.2" x2="63.6" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="136.4" y1="142.2" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="63.6" y1="142.2" x2="41.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="63.6" y1="142.2" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="41.0" y1="72.8" x2="100.0" y2="30.0" stroke="#222" stroke-width="1.3"/><line x1="41.0" y1="72.8" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><text x="119.7" y="68.9" font-size="11" fill="#1565c0" text-anchor="middle">60</text><text x="131.8" y="106.3" font-size="11" fill="#1565c0" text-anchor="middle">30</text><text x="100.0" y="129.4" font-size="11" fill="#1565c0" text-anchor="middle">10</text><text x="68.2" y="106.3" font-size="11" fill="#1565c0" text-anchor="middle">30</text><text x="80.3" y="68.9" font-size="11" fill="#1565c0" text-anchor="middle">60</text><circle cx="100.0" cy="30.0" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="100.0" y="35.0" font-size="14" fill="#222" text-anchor="middle">4</text><circle cx="159.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="159.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">6</text><circle cx="136.4" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="136.4" y="147.2" font-size="14" fill="#222" text-anchor="middle">1</text><circle cx="63.6" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="63.6" y="147.2" font-size="14" fill="#222" text-anchor="middle">2</text><circle cx="41.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="41.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">3</text><circle cx="100.0" cy="92.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="1.4"/><text x="100.0" y="97.0" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">5</text><text x="100.0" y="180.0" font-size="11" fill="#222" text-anchor="middle">60＋30＋10＋30＋60＝190</text></svg></li>
+  </ol>
+  <div class="ans">答え：最大値…190／図…（例）　解説の図④を参照のこと。（中心が5。まわりは順に 4・6・1・2・3。🔍の4の図は一例）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)②</span> 得点の最小値 <span class="type">B・6点｜中心に1を置く</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>最小値</b>」。中心の数は5つの三角形全部に入る、と図に置く → 中心に<b>1</b>を置く。1は最小公倍数を大きくしない。まわりは、倍数どうしをとなりにする。①と同じ見方なので続けて手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>片方がもう片方の倍数なら、最小公倍数は<b>大きいほうの数のまま</b>。2と4なら4。3と6なら6。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>中心に1を入れる。まわりは 2・3・4・5・6。それぞれの三角形は、となり合う2つの最小公倍数になる。</li>
+    <li>2と4をとなりにする。最小公倍数は4。3と6をとなりにする。最小公倍数は6。</li>
+    <li>5は、どの数ととなりでもかけ算になる。<b>小さい2と3ではさむ</b>。10と15。</li>
+    <li>残った4と6がとなりになる。最小公倍数は12。合計は 4＋10＋15＋6＋12＝47点。
+<svg viewBox="0 0 200 188" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="max-width:200px;width:100%;height:auto;display:block"><line x1="100.0" y1="30.0" x2="159.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="100.0" y1="30.0" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="159.0" y1="72.8" x2="136.4" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="159.0" y1="72.8" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="136.4" y1="142.2" x2="63.6" y2="142.2" stroke="#222" stroke-width="1.3"/><line x1="136.4" y1="142.2" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="63.6" y1="142.2" x2="41.0" y2="72.8" stroke="#222" stroke-width="1.3"/><line x1="63.6" y1="142.2" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><line x1="41.0" y1="72.8" x2="100.0" y2="30.0" stroke="#222" stroke-width="1.3"/><line x1="41.0" y1="72.8" x2="100.0" y2="92.0" stroke="#222" stroke-width="1.3"/><text x="119.7" y="68.9" font-size="11" fill="#1565c0" text-anchor="middle">4</text><text x="131.8" y="106.3" font-size="11" fill="#1565c0" text-anchor="middle">10</text><text x="100.0" y="129.4" font-size="11" fill="#1565c0" text-anchor="middle">15</text><text x="68.2" y="106.3" font-size="11" fill="#1565c0" text-anchor="middle">6</text><text x="80.3" y="68.9" font-size="11" fill="#1565c0" text-anchor="middle">12</text><circle cx="100.0" cy="30.0" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="100.0" y="35.0" font-size="14" fill="#222" text-anchor="middle">4</text><circle cx="159.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="159.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">2</text><circle cx="136.4" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="136.4" y="147.2" font-size="14" fill="#222" text-anchor="middle">5</text><circle cx="63.6" cy="142.2" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="63.6" y="147.2" font-size="14" fill="#222" text-anchor="middle">3</text><circle cx="41.0" cy="72.8" r="13" fill="#fff" stroke="#222" stroke-width="1.4"/><text x="41.0" y="77.8" font-size="14" fill="#222" text-anchor="middle">6</text><circle cx="100.0" cy="92.0" r="13" fill="#fff" stroke="#d32f2f" stroke-width="1.4"/><text x="100.0" y="97.0" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">1</text><text x="100.0" y="180.0" font-size="11" fill="#222" text-anchor="middle">4＋10＋15＋6＋12＝47</text></svg></li>
+  </ol>
+  <div class="ans">答え：最小値…47／図…（例）　解説の図⑤を参照のこと。（中心が1。まわりは順に 4・2・5・3・6。🔍の4の図は一例）</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ</h2>
+  <ul>
+    <li>折る問題は、重なる<b>角と辺に同じ印</b>をつける。重なる2点を結ぶと、折り目と垂直になる。</li>
+    <li>「値は何通り」は、選び方を数えてから、<b>積が同じ組</b>のだぶりを引く。</li>
+    <li>最小公倍数の合計は、全部の三角形に入る<b>中心の数</b>から決める。</li>
+  </ul>
+</section>
+</div>
