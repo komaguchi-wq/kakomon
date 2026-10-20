@@ -5168,7 +5168,14 @@
        "gokakusha": 31.5
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2025-1/rika.html"
+     "kaisetsu": "kaisetsu/hiroo/2025-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2025-1/rika/solved_2026-10-20_01.jpg",
+       "small": "2025-1/rika/solved_2026-10-20_01_small.jpg",
+       "date": "2026-10-20"
+      }
+     ]
     },
     {
      "id": "kokugo",
@@ -7024,7 +7031,14 @@
        "gokakusha": 33.0
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2024-2/rika.html"
+     "kaisetsu": "kaisetsu/hiroo/2024-2/rika.html",
+     "solvedPages": [
+      {
+       "full": "2024-2/rika/solved_2026-10-20_01.jpg",
+       "small": "2024-2/rika/solved_2026-10-20_01_small.jpg",
+       "date": "2026-10-20"
+      }
+     ]
     },
     {
      "id": "kokugo",
