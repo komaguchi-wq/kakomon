@@ -4724,7 +4724,24 @@
        "gokakusha": 68.9
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2025-1/sansu.html"
+     "kaisetsu": "kaisetsu/hiroo/2025-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2025-1/sansu/solved_2026-10-22_01.jpg",
+       "small": "2025-1/sansu/solved_2026-10-22_01_small.jpg",
+       "date": "2026-10-22"
+      },
+      {
+       "full": "2025-1/sansu/solved_2026-10-22_02.jpg",
+       "small": "2025-1/sansu/solved_2026-10-22_02_small.jpg",
+       "date": "2026-10-22"
+      },
+      {
+       "full": "2025-1/sansu/solved_2026-10-22_03.jpg",
+       "small": "2025-1/sansu/solved_2026-10-22_03_small.jpg",
+       "date": "2026-10-22"
+      }
+     ]
     },
     {
      "id": "shakai",
@@ -10092,7 +10109,19 @@
        "gokakusha": 81.3
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2023-1/sansu.html"
+     "kaisetsu": "kaisetsu/hiroo/2023-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2023-1/sansu/solved_2026-10-22_01.jpg",
+       "small": "2023-1/sansu/solved_2026-10-22_01_small.jpg",
+       "date": "2026-10-22"
+      },
+      {
+       "full": "2023-1/sansu/solved_2026-10-22_02.jpg",
+       "small": "2023-1/sansu/solved_2026-10-22_02_small.jpg",
+       "date": "2026-10-22"
+      }
+     ]
     },
     {
      "id": "shakai",
