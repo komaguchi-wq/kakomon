@@ -4276,7 +4276,14 @@
        "gokakusha": 30.9
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2025-2/rika.html"
+     "kaisetsu": "kaisetsu/hiroo/2025-2/rika.html",
+     "solvedPages": [
+      {
+       "full": "2025-2/rika/solved_2026-10-24_01.jpg",
+       "small": "2025-2/rika/solved_2026-10-24_01_small.jpg",
+       "date": "2026-10-24"
+      }
+     ]
     },
     {
      "id": "kokugo",
