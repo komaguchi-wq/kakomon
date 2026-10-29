@@ -10707,7 +10707,14 @@
        "gokakusha": 61.3
       }
      },
-     "kaisetsu": "kaisetsu/shibumaku/2020-1/sansu.html"
+     "kaisetsu": "kaisetsu/shibumaku/2020-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2020-1/sansu/solved_2026-10-29_01.jpg",
+       "small": "2020-1/sansu/solved_2026-10-29_01_small.jpg",
+       "date": "2026-10-29"
+      }
+     ]
     },
     {
      "id": "shakai",
@@ -11695,7 +11702,14 @@
        "gokakusha": 56.0
       }
      },
-     "kaisetsu": "kaisetsu/shibumaku/2020-1/kokugo.html"
+     "kaisetsu": "kaisetsu/shibumaku/2020-1/kokugo.html",
+     "solvedPages": [
+      {
+       "full": "2020-1/kokugo/solved_2026-10-29_01.jpg",
+       "small": "2020-1/kokugo/solved_2026-10-29_01_small.jpg",
+       "date": "2026-10-29"
+      }
+     ]
     }
    ]
   },
