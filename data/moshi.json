@@ -6469,6 +6469,13 @@
       "7(2)",
       "7(3)"
      ],
+     "solvedPages": [
+      {
+       "full": "2026-10-18_gohan-2/sansu/solved_2026-10-18_01.jpg",
+       "small": "2026-10-18_gohan-2/sansu/solved_2026-10-18_01_small.jpg",
+       "date": "2026-10-18"
+      }
+     ],
      "nanido": {
       "src": "claude",
       "answers": {
@@ -6606,14 +6613,7 @@
        "C": 12
       }
      },
-     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/sansu.html",
-     "solvedPages": [
-      {
-       "full": "2026-10-18_gohan-2/sansu/solved_2026-10-18_01.jpg",
-       "small": "2026-10-18_gohan-2/sansu/solved_2026-10-18_01_small.jpg",
-       "date": "2026-10-18"
-      }
-     ]
+     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/sansu.html"
     },
     {
      "id": "shakai",
@@ -6783,6 +6783,13 @@
       "3 (4)1",
       "3 (4)2",
       "3 (4)3"
+     ],
+     "solvedPages": [
+      {
+       "full": "2026-10-18_gohan-2/shakai/solved_2026-10-18_01.jpg",
+       "small": "2026-10-18_gohan-2/shakai/solved_2026-10-18_01_small.jpg",
+       "date": "2026-10-18"
+      }
      ],
      "nanido": {
       "src": "claude",
@@ -7096,14 +7103,7 @@
        "C": 0
       }
      },
-     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/shakai.html",
-     "solvedPages": [
-      {
-       "full": "2026-10-18_gohan-2/shakai/solved_2026-10-18_01.jpg",
-       "small": "2026-10-18_gohan-2/shakai/solved_2026-10-18_01_small.jpg",
-       "date": "2026-10-18"
-      }
-     ]
+     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/shakai.html"
     },
     {
      "id": "rika",
@@ -7235,6 +7235,13 @@
       "6(3)②",
       "6(3)③",
       "6(3)④"
+     ],
+     "solvedPages": [
+      {
+       "full": "2026-10-18_gohan-2/rika/solved_2026-10-18_01.jpg",
+       "small": "2026-10-18_gohan-2/rika/solved_2026-10-18_01_small.jpg",
+       "date": "2026-10-18"
+      }
      ],
      "nanido": {
       "src": "claude",
@@ -7498,14 +7505,7 @@
        "C": 4
       }
      },
-     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/rika.html",
-     "solvedPages": [
-      {
-       "full": "2026-10-18_gohan-2/rika/solved_2026-10-18_01.jpg",
-       "small": "2026-10-18_gohan-2/rika/solved_2026-10-18_01_small.jpg",
-       "date": "2026-10-18"
-      }
-     ]
+     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/rika.html"
     },
     {
      "id": "kokugo",
@@ -7647,6 +7647,13 @@
       "4 問七",
       "4 問八",
       "4 問九"
+     ],
+     "solvedPages": [
+      {
+       "full": "2026-10-18_gohan-2/kokugo/solved_2026-10-18_01.jpg",
+       "small": "2026-10-18_gohan-2/kokugo/solved_2026-10-18_01_small.jpg",
+       "date": "2026-10-18"
+      }
      ],
      "nanido": {
       "src": "claude",
@@ -7840,12 +7847,1127 @@
        "C": 0
       }
      },
-     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/kokugo.html",
+     "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/kokugo.html"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03_so-shibumaku-1",
+   "year": 2026,
+   "label": "渋谷幕張①",
+   "group": "学校別サピックスオープン（2026年11月）",
+   "roundNote": "2026年11月3日実施",
+   "ansOnly": false,
+   "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-moshi-01",
+   "imgBaseLocal": "../kakomon-img-moshi-01",
+   "subjects": [
+    {
+     "id": "sansu",
+     "name": "算数",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_01_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_02_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_03.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_03_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_04.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_04_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_05.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_05_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_06.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_06_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_07.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_07_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_08.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_08_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_09.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_09_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/q_10.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/q_10_small.jpg"
+      }
+     ],
+     "sheetPages": [],
+     "explPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/e_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/e_01_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/e_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/e_02_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/sansu/e_03.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/e_03_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "2(1)",
+      "2(2)①",
+      "2(2)②",
+      "2(3)",
+      "3(1)",
+      "3(2)あ",
+      "3(2)い",
+      "4(1)",
+      "4(2)",
+      "4(3)",
+      "5(1)①",
+      "5(1)②",
+      "5(2)"
+     ],
+     "nanido": {
+      "src": "sapix",
+      "answers": {
+       "1(1)": "15，16，18，20，24",
+       "1(2)": "（A4，B4，A1），（A5，B3，A2），（A3，B4，A5），（A4，B3，A5），（A6，B2，A5）の5通り",
+       "1(3)": "100(通り)",
+       "2(1)": "○…25(枚)　△…40(枚)　□…56(枚)",
+       "2(2)①": "13(回目)",
+       "2(2)②": "○…9(枚)　△…74(枚)　□…42(枚)",
+       "2(3)": "2000",
+       "3(1)": "480(cm³)",
+       "3(2)あ": "24",
+       "3(2)い": "42",
+       "4(1)": "15.7(cm)",
+       "4(2)": "29.83(cm)",
+       "4(3)": "22.765(cm)",
+       "5(1)①": "36(cm²)",
+       "5(1)②": "72(cm²)",
+       "5(2)": "84(cm²)"
+      },
+      "q": {
+       "1(1)": [
+        "",
+        5
+       ],
+       "1(2)": [
+        "",
+        7
+       ],
+       "1(3)": [
+        "",
+        8
+       ],
+       "2(1)": [
+        "",
+        4
+       ],
+       "2(2)①": [
+        "",
+        4
+       ],
+       "2(2)②": [
+        "",
+        5
+       ],
+       "2(3)": [
+        "",
+        7
+       ],
+       "3(1)": [
+        "",
+        8
+       ],
+       "3(2)あ": [
+        "",
+        6
+       ],
+       "3(2)い": [
+        "",
+        6
+       ],
+       "4(1)": [
+        "",
+        5
+       ],
+       "4(2)": [
+        "",
+        7
+       ],
+       "4(3)": [
+        "",
+        8
+       ],
+       "5(1)①": [
+        "",
+        5
+       ],
+       "5(1)②": [
+        "",
+        7
+       ],
+       "5(2)": [
+        "",
+        8
+       ]
+      }
+     },
      "solvedPages": [
       {
-       "full": "2026-10-18_gohan-2/kokugo/solved_2026-10-18_01.jpg",
-       "small": "2026-10-18_gohan-2/kokugo/solved_2026-10-18_01_small.jpg",
-       "date": "2026-10-18"
+       "full": "2026-11-03_so-shibumaku-1/sansu/solved_2026-11-03_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/sansu/solved_2026-11-03_01_small.jpg",
+       "date": "2026-11-03"
+      }
+     ]
+    },
+    {
+     "id": "shakai",
+     "name": "社会",
+     "minutes": 45,
+     "maxScore": 75,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_01_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_02_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_03.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_03_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_04.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_04_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_05.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_05_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_06.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_06_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_07.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_07_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_08.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_08_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_09.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_09_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_10.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_10_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_11.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_11_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_12.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_12_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_13.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_13_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_14.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_14_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_15.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_15_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_16.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_16_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_17.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_17_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_18.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_18_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_19.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_19_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_20.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_20_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/q_21.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/q_21_small.jpg"
+      }
+     ],
+     "sheetPages": [],
+     "explPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/e_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/e_01_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/e_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1 問1(1)",
+      "1 問1(2)",
+      "1 問2",
+      "1 問3",
+      "1 問4",
+      "1 問5",
+      "1 問6",
+      "1 問7",
+      "1 問8",
+      "1 問9",
+      "1 問10",
+      "2 問1",
+      "2 問2",
+      "2 問3",
+      "2 問4",
+      "2 問5",
+      "2 問6",
+      "2 問7",
+      "2 問8",
+      "2 問9",
+      "2 問10",
+      "2 問11",
+      "3 問1",
+      "3 問2",
+      "3 問3",
+      "3 問4",
+      "3 問5",
+      "3 問6(1)",
+      "3 問6(2)",
+      "3 問7(1)",
+      "3 問7(2)",
+      "3 問8"
+     ],
+     "nanido": {
+      "src": "sapix",
+      "answers": {
+       "1 問1(1)": "婦人",
+       "1 問1(2)": "3",
+       "1 問2": "あまりにも安い金額での落札は，求める品質を満たさない可能性があるから。",
+       "1 問3": "2",
+       "1 問4": "4",
+       "1 問5": "6",
+       "1 問6": "1",
+       "1 問7": "(学校内では)酒やたばこ(を扱わないため，店員が)年齢確認(を行う必要がないこと。)",
+       "1 問8": "2",
+       "1 問9": "4",
+       "1 問10": "第2子や第3子以降(がいる家庭。)",
+       "2 問1": "2",
+       "2 問2": "4",
+       "2 問3": "藤原不比等",
+       "2 問4": "左遷〔右に出る者がいない〕",
+       "2 問5": "関白",
+       "2 問6": "管領",
+       "2 問7": "4",
+       "2 問8": "南朝側も征夷大将軍を任命したから。",
+       "2 問9": "家宣の将軍継承の正当性を示すため，父親の綱重を征夷大将軍にするように朝廷に働きかけた。(43字)",
+       "2 問10": "当初は幕府の復興を目指していたが，秀吉が軍事的にも政治的にも勢力を拡大していったため，秀吉の臣下に下ることにした。(57字)",
+       "2 問11": "2",
+       "3 問1": "4",
+       "3 問2": "酷暑日",
+       "3 問3": "都市化が進み，建物やアスファルトが熱を蓄えることで，気温が低下しにくくなるから。(40字)",
+       "3 問4": "6",
+       "3 問5": "3",
+       "3 問6(1)": "五箇山に降る雪はより水分が多く湿っているため重いから。",
+       "3 問6(2)": "カルデラ",
+       "3 問7(1)": "礼文島",
+       "3 問7(2)": "別子銅山に近く，銅などの金属を含む森が育ちにくい土壌。",
+       "3 問8": "2"
+      },
+      "q": {
+       "1 問1(1)": [
+        "",
+        2
+       ],
+       "1 問1(2)": [
+        "",
+        2
+       ],
+       "1 問2": [
+        "",
+        3
+       ],
+       "1 問3": [
+        "",
+        2
+       ],
+       "1 問4": [
+        "",
+        2
+       ],
+       "1 問5": [
+        "",
+        2
+       ],
+       "1 問6": [
+        "",
+        2
+       ],
+       "1 問7": [
+        "",
+        3
+       ],
+       "1 問8": [
+        "",
+        2
+       ],
+       "1 問9": [
+        "",
+        2
+       ],
+       "1 問10": [
+        "",
+        3
+       ],
+       "2 問1": [
+        "",
+        2
+       ],
+       "2 問2": [
+        "",
+        2
+       ],
+       "2 問3": [
+        "",
+        2
+       ],
+       "2 問4": [
+        "",
+        3
+       ],
+       "2 問5": [
+        "",
+        2
+       ],
+       "2 問6": [
+        "",
+        2
+       ],
+       "2 問7": [
+        "",
+        2
+       ],
+       "2 問8": [
+        "",
+        3
+       ],
+       "2 問9": [
+        "",
+        3
+       ],
+       "2 問10": [
+        "",
+        3
+       ],
+       "2 問11": [
+        "",
+        2
+       ],
+       "3 問1": [
+        "",
+        2
+       ],
+       "3 問2": [
+        "",
+        2
+       ],
+       "3 問3": [
+        "",
+        3
+       ],
+       "3 問4": [
+        "",
+        2
+       ],
+       "3 問5": [
+        "",
+        2
+       ],
+       "3 問6(1)": [
+        "",
+        3
+       ],
+       "3 問6(2)": [
+        "",
+        3
+       ],
+       "3 問7(1)": [
+        "",
+        2
+       ],
+       "3 問7(2)": [
+        "",
+        3
+       ],
+       "3 問8": [
+        "",
+        2
+       ]
+      }
+     },
+     "solvedPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/solved_2026-11-03_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/solved_2026-11-03_01_small.jpg",
+       "date": "2026-11-03"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/shakai/solved_2026-11-03_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/shakai/solved_2026-11-03_02_small.jpg",
+       "date": "2026-11-03"
+      }
+     ]
+    },
+    {
+     "id": "rika",
+     "name": "理科",
+     "minutes": 45,
+     "maxScore": 75,
+     "rtl": false,
+     "questionPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_01_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_02_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_03.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_03_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_04.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_04_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_05.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_05_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_06.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_06_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_07.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_07_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_08.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_08_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_09.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_09_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_10.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_10_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_11.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_11_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_12.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_12_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_13.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_13_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_14.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_14_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_15.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_15_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_16.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_16_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_17.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_17_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_18.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_18_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/q_19.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/q_19_small.jpg"
+      }
+     ],
+     "sheetPages": [],
+     "explPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/e_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/e_01_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/e_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/e_02_small.jpg"
+      }
+     ],
+     "questions": [
+      "1(1)",
+      "1(2)",
+      "1(3)",
+      "1(4)①",
+      "1(4)②",
+      "1(5)",
+      "1(6)",
+      "1(7)",
+      "1(8)①",
+      "1(8)②",
+      "1(9)I",
+      "1(9)II",
+      "1(9)III",
+      "2(1)",
+      "2(2)",
+      "2(3)①",
+      "2(3)②",
+      "2(4)",
+      "2(5)",
+      "2(6)①",
+      "2(6)②",
+      "2(7)",
+      "2(8)",
+      "2(9)",
+      "2(10)",
+      "3(1)",
+      "3(2)",
+      "3(3)",
+      "3(4)",
+      "3(5)",
+      "3(6)①",
+      "3(6)②",
+      "3(6)③",
+      "3(6)④",
+      "3(7)",
+      "3(8)",
+      "3(9)",
+      "3(10)",
+      "3(11)"
+     ],
+     "nanido": {
+      "src": "sapix",
+      "answers": {
+       "1(1)": "エ",
+       "1(2)": "イ",
+       "1(3)": "ろ紙にふくまれた水分やろうとに付着した水分の蒸発。",
+       "1(4)①": "96.6(g)",
+       "1(4)②": "4.8(g)",
+       "1(5)": "ア",
+       "1(6)": "ウ",
+       "1(7)": "移動…下 理由…種結晶の一部が溶け，まわりのホウ酸水よりも密度が大きくなるから。",
+       "1(8)①": "エ",
+       "1(8)②": "3.6(気圧)",
+       "1(9)I": "64.6",
+       "1(9)II": "19.4",
+       "1(9)III": "0.23",
+       "2(1)": "エ",
+       "2(2)": "イ",
+       "2(3)①": "ア",
+       "2(3)②": "イ",
+       "2(4)": "ア",
+       "2(5)": "ア",
+       "2(6)①": "1.45(mm)",
+       "2(6)②": "ウ",
+       "2(7)": "エ",
+       "2(8)": "下図（作図：P・Qからの光がメガネの屈折面で外側へ屈折し観察者の目の中心へ向かう。P′Q′はPQより内側）",
+       "2(9)": "イ",
+       "2(10)": "ウ",
+       "3(1)": "ア",
+       "3(2)": "ウ",
+       "3(3)": "ウ",
+       "3(4)": "エ",
+       "3(5)": "エ",
+       "3(6)①": "速く",
+       "3(6)②": "大きく",
+       "3(6)③": "長く",
+       "3(6)④": "遅く",
+       "3(7)": "ウ",
+       "3(8)": "イ・オ",
+       "3(9)": "ア",
+       "3(10)": "イ",
+       "3(11)": "光合成"
+      },
+      "q": {
+       "1(1)": [
+        "",
+        1
+       ],
+       "1(2)": [
+        "",
+        2
+       ],
+       "1(3)": [
+        "",
+        2
+       ],
+       "1(4)①": [
+        "",
+        2
+       ],
+       "1(4)②": [
+        "",
+        2
+       ],
+       "1(5)": [
+        "",
+        2
+       ],
+       "1(6)": [
+        "",
+        2
+       ],
+       "1(7)": [
+        "",
+        2
+       ],
+       "1(8)①": [
+        "",
+        2
+       ],
+       "1(8)②": [
+        "",
+        2
+       ],
+       "1(9)I": [
+        "",
+        2
+       ],
+       "1(9)II": [
+        "",
+        2
+       ],
+       "1(9)III": [
+        "",
+        2
+       ],
+       "2(1)": [
+        "",
+        2
+       ],
+       "2(2)": [
+        "",
+        2
+       ],
+       "2(3)①": [
+        "",
+        2
+       ],
+       "2(3)②": [
+        "",
+        2
+       ],
+       "2(4)": [
+        "",
+        2
+       ],
+       "2(5)": [
+        "",
+        2
+       ],
+       "2(6)①": [
+        "",
+        2
+       ],
+       "2(6)②": [
+        "",
+        2
+       ],
+       "2(7)": [
+        "",
+        2
+       ],
+       "2(8)": [
+        "",
+        3
+       ],
+       "2(9)": [
+        "",
+        2
+       ],
+       "2(10)": [
+        "",
+        2
+       ],
+       "3(1)": [
+        "",
+        2
+       ],
+       "3(2)": [
+        "",
+        2
+       ],
+       "3(3)": [
+        "",
+        2
+       ],
+       "3(4)": [
+        "",
+        2
+       ],
+       "3(5)": [
+        "",
+        2
+       ],
+       "3(6)①": [
+        "",
+        1
+       ],
+       "3(6)②": [
+        "",
+        1
+       ],
+       "3(6)③": [
+        "",
+        1
+       ],
+       "3(6)④": [
+        "",
+        1
+       ],
+       "3(7)": [
+        "",
+        2
+       ],
+       "3(8)": [
+        "",
+        2
+       ],
+       "3(9)": [
+        "",
+        2
+       ],
+       "3(10)": [
+        "",
+        2
+       ],
+       "3(11)": [
+        "",
+        3
+       ]
+      }
+     },
+     "solvedPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/solved_2026-11-03_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/solved_2026-11-03_01_small.jpg",
+       "date": "2026-11-03"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/rika/solved_2026-11-03_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/rika/solved_2026-11-03_02_small.jpg",
+       "date": "2026-11-03"
+      }
+     ]
+    },
+    {
+     "id": "kokugo",
+     "name": "国語",
+     "minutes": 50,
+     "maxScore": 100,
+     "rtl": true,
+     "questionPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_03.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_04.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_05.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_06.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_07.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_08.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_09.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_10.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_11.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_11_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_12.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_12_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_13.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_13_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_14.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_14_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_15.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_15_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_16.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_16_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_17.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_17_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_18.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_18_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_19.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_19_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_20.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_20_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_21.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_21_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/q_22.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/q_22_small.jpg"
+      }
+     ],
+     "sheetPages": [],
+     "explPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/e_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/e_01_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/e_02.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/e_02_small.jpg"
+      },
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/e_03.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/e_03_small.jpg"
+      }
+     ],
+     "questions": [
+      "一 問一a",
+      "一 問一b",
+      "一 問一c",
+      "一 問二",
+      "一 問三",
+      "一 問四",
+      "一 問五",
+      "一 問六",
+      "一 問七",
+      "一 問八",
+      "一 問九",
+      "二 問一a",
+      "二 問一b",
+      "二 問一c",
+      "二 問二i",
+      "二 問二ii",
+      "二 問三",
+      "二 問四",
+      "二 問五",
+      "二 問六",
+      "二 問七",
+      "二 問八",
+      "二 問九"
+     ],
+     "nanido": {
+      "src": "sapix",
+      "answers": {
+       "一 問一a": "額面",
+       "一 問一b": "よそお",
+       "一 問一c": "察知",
+       "一 問二": "イ",
+       "一 問三": "オ",
+       "一 問四": "エ",
+       "一 問五": "イ",
+       "一 問六": "オ",
+       "一 問七": "子供たちに押し付ける形になっているものの、現実にいる友だちとその気持ちについて考えるという点で、人が他者を思いやるときにすべきことと近いから。",
+       "一 問八": "他者の考えを意識したり、意図して肯定したりするのではなく、自分の考えに素直でいることが、自分を肯定することだということ。",
+       "一 問九": "イ",
+       "二 問一a": "病身",
+       "二 問一b": "ひた",
+       "二 問一c": "礼",
+       "二 問二i": "オ",
+       "二 問二ii": "ウ",
+       "二 問三": "エ",
+       "二 問四": "まだ生きていた鳥を死なせた自分をみつ子がとがめるのは、みつ子が病弱なため瀕死の鳥に肩入れしたからなのかもしれないということ。",
+       "二 問五": "イ・オ",
+       "二 問六": "ア",
+       "二 問七": "イ",
+       "二 問八": "生きている鳥を好きな人のために死なせるという罪と、自分の罪をなかったことにするために人目につかない墓を作ったという罪。",
+       "二 問九": "ア・オ"
+      },
+      "q": {
+       "一 問一a": [
+        "",
+        2
+       ],
+       "一 問一b": [
+        "",
+        2
+       ],
+       "一 問一c": [
+        "",
+        2
+       ],
+       "一 問二": [
+        "",
+        2
+       ],
+       "一 問三": [
+        "",
+        2
+       ],
+       "一 問四": [
+        "",
+        5
+       ],
+       "一 問五": [
+        "",
+        5
+       ],
+       "一 問六": [
+        "",
+        5
+       ],
+       "一 問七": [
+        "",
+        9
+       ],
+       "一 問八": [
+        "",
+        10
+       ],
+       "一 問九": [
+        "",
+        5
+       ],
+       "二 問一a": [
+        "",
+        2
+       ],
+       "二 問一b": [
+        "",
+        2
+       ],
+       "二 問一c": [
+        "",
+        2
+       ],
+       "二 問二i": [
+        "",
+        2
+       ],
+       "二 問二ii": [
+        "",
+        2
+       ],
+       "二 問三": [
+        "",
+        5
+       ],
+       "二 問四": [
+        "",
+        8
+       ],
+       "二 問五": [
+        "",
+        4
+       ],
+       "二 問六": [
+        "",
+        5
+       ],
+       "二 問七": [
+        "",
+        5
+       ],
+       "二 問八": [
+        "",
+        10
+       ],
+       "二 問九": [
+        "",
+        4
+       ]
+      }
+     },
+     "solvedPages": [
+      {
+       "full": "2026-11-03_so-shibumaku-1/kokugo/solved_2026-11-03_01.jpg",
+       "small": "2026-11-03_so-shibumaku-1/kokugo/solved_2026-11-03_01_small.jpg",
+       "date": "2026-11-03"
       }
      ]
     }
