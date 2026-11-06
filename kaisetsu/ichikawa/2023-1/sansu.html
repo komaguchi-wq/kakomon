@@ -1,0 +1,554 @@
+<!-- generated kakomon ichikawa/2023-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（計算・年齢算・植木算・割合と比／流水算／図形上の点の移動と角度）</a></li>
+<li><a href="#4-5">大問4・5（円すいの展開図とひも／マス目の○●の規則）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（計算・年齢算・植木算・割合と比／流水算／図形上の点の移動と角度）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 54点／B 6点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1</td><td>(1)分数と小数の計算 (2)年齢算 (3)校庭の周りの植木算 (4)水を移す割合と比</td><td>A 6+6+6+6</td><td>小数は分数に直す／年齢の差は変わらない／間かくは最大公約数／減った水＝ふえた水</td></tr>
+  <tr><td>2</td><td>川の流水算（出会い・静水時の速さの比・流れが1.5倍）</td><td>A 6+6+6</td><td>25分は下り30分の 5/6／時間の比→速さの逆比／出会いの速さの和では流れが消える</td></tr>
+  <tr><td>3</td><td>正三角形＋正方形の辺上を動く3点（出会いの回数・重なる時間・止まったときの角度）</td><td>A 6+6 / B 6</td><td>5cmごとの●を打つ／同じ速さは合流したら離れない／300秒後の場所は「あまり」で</td></tr></table>
+  <p>取り方: <b>大問1・2の7問と3の(1)(2)はすべてA</b>。計算は分数のままていねいに。3(3)は2点の場所を図に置けたら角度だけの問題になるので、場所が置けた時点で手を付ける。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 分数と小数のまざった計算 <span class="type">A・6点｜四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1.25</b>」と「<b>6 1/2÷2/3</b>」。1.25 は 5/4 に、÷2/3 は ×3/2 に直して書く → 小かっこの中が分数だけになり、計算の順番（小かっこ→中かっこ→22/7 をかける）どおりに進められる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>小数は分数に直す。1.25＝1 1/4＝5/4。0.25 が 1/4 と同じだから。</li>
+    <li>分数のわり算は、わる数をひっくり返してかけ算。6 1/2÷2/3＝13/2×3/2。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>わり算を先に。13/2×3/2＝39/4。</li>
+    <li>小かっこの中をたす。5/4＋39/4＝44/4＝11。</li>
+    <li>中かっこの中。11−2＝9。</li>
+    <li>最後に 22/7×9＝198/7。帯分数に直して 28 2/7。</li>
+    <li>落としやすい所は、1.25 と 6 1/2 を先にたしてしまうこと。<b>わり算が先</b>。</li>
+  </ol>
+  <div class="ans">答え：28 2/7</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 3人の年齢（3倍・5倍→2倍になる年） <span class="type">A・6点｜年齢算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Bさんの年齢がAさんの年齢の2倍になる年</b>」と「<b>Cさんの年齢は48歳</b>」。今年の3人を ①③⑤ で図に置く → 何年たっても年齢の差は変わらないので、差 ② を手がかりに「その年」のAが出る。48歳は今年でなく「その年」のC。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>年齢の差は何年たっても同じ。たとえば 8歳と24歳の差16は、8年後の16歳と32歳でも16。</li>
+    <li>「BがAの2倍」の年は、BとAの差がそのままAの年齢と同じ。2倍−1倍＝1倍。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>今年の年齢を A＝①、B＝③、C＝⑤ と書く。BとAの差は ③−①＝②。
+    <table><tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+    <tr><td>今年</td><td>①</td><td>③</td><td>⑤</td></tr>
+    <tr><td>BがAの2倍の年</td><td><b>②</b>（差と同じ）</td><td>④</td><td>⑤＋①＝<b>⑥</b>＝48歳</td></tr></table></li>
+    <li>その年のAは差と同じ ②。今年の①から①ふえている。だから「その年」は ①年後。</li>
+    <li>その年のCは ⑤＋①＝⑥。これが48歳だから ①＝48÷6＝8歳。</li>
+    <li>今年のBは ③＝8×3＝24歳。</li>
+    <li>たしかめ。8年後は A16・B32・C48。B は A の2倍で、C は48歳。合っている。</li>
+    <li>落としやすい所は、48歳を今年のCと読んで ⑤＝48 としてしまうこと。</li>
+  </ol>
+  <div class="ans">答え：24歳</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 校庭の周りに等間隔で木を植える <span class="type">A・6点｜植木算・最大公約数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>等間隔</b>」「<b>できるだけ少なく</b>」と、角にも木。間かくは 4つの長さの<b>最大公約数</b>に直して書く → 本数は「周りの長さ÷間かく」。周りの長さは、へこんだ2辺を外側へ動かして長方形にすると一気に出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>角に木があり、どの辺も同じ間かくで割り切れるなら、間かくは辺の長さの公約数。いちばん少なくするなら最大公約数。</li>
+    <li>輪のように一周に植えるとき、本数＝周りの長さ÷間かく。はしが無いので＋1はしない。たとえば周り12m・間かく3mなら4本。</li>
+    <li>L字の周りは、へこみの2辺を外へ動かしても長さが変わらない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>4つの長さを連除法にかける。
+<pre class="fig"> 2 ) 104  52  156  182
+13 )  52  26   78   91
+       4   2    6    7     → 間かく＝2×13＝26m</pre></li>
+    <li>周りの長さ。図の ア（たて 156−104＝52m）と イ（横 182−52＝130m）を外側へ動かすと、たて156m・横182mの長方形の周りと同じ。（156＋182）×2＝<b>676m</b>。
+    <svg id="q1_3_fig" viewBox="0 0 380 312" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;width:100%;height:auto;display:block">
+<defs><marker id="q1_3_ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1565c0"/></marker></defs>
+<polygon points="70.0,30.0 324.8,30.0 324.8,248.4 252.0,248.4 252.0,175.6 70.0,175.6" fill="#dbe9ff" stroke="#222" stroke-width="2"/>
+<line x1="70" y1="175.6" x2="70" y2="248.4" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="70" y1="248.4" x2="252.0" y2="248.4" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="197" y="20" font-size="14" text-anchor="middle" fill="#222">182m</text>
+<text x="62" y="103" font-size="14" text-anchor="end" fill="#222">104m</text>
+<text x="331" y="144" font-size="14" fill="#222">156m</text>
+<text x="288" y="266" font-size="14" text-anchor="middle" fill="#222">52m</text>
+<text x="161" y="168" font-size="14" text-anchor="middle" fill="#d32f2f">イ 182−52＝130m</text>
+<text x="258" y="200" font-size="14" fill="#d32f2f">ア</text>
+<text x="258" y="218" font-size="13" fill="#d32f2f">156−104</text>
+<text x="258" y="234" font-size="13" fill="#d32f2f">＝52m</text>
+<path d="M161,184 L161,240" stroke="#1565c0" stroke-width="2" marker-end="url(#q1_3_ar)"/>
+<path d="M244,212 L78,212" stroke="#1565c0" stroke-width="2" marker-end="url(#q1_3_ar)"/>
+<text x="70" y="288" font-size="13" fill="#1565c0">ア・イを外側へ動かすと長方形になる</text>
+<text x="70" y="307" font-size="14" fill="#d32f2f">まわり＝（156＋182）×2＝676m</text>
+</svg></li>
+    <li>本数は 676÷26＝26本。</li>
+    <li>たしかめ。6つの辺を26で割ると 7・6・2・2・5・4。合計26で合っている。</li>
+    <li>落としやすい所は、図に書いていない 130m と 52m の辺。この2つも26で割り切れるかを見てから答える。</li>
+  </ol>
+  <div class="ans">答え：26本</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> AからBに水を移す→容積の比 <span class="type">A・6点｜割合と比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>AからBにいくらか水を移した</b>」。Aから減った水＝Bにふえた水、と直して書く → （Aの容積）×（7/8−19/25）＝（Bの容積）×（9/10−4/5）の形になり、あとは逆比。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>移した水は同じ1つの量。Aでは「容積の何分のいくつ減ったか」、Bでは「容積の何分のいくつふえたか」で表せる。</li>
+    <li>A×2＝B×3 のとき、A：B＝3：2。かける数が小さいほうが大きい（逆比）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aの減った割合。7/8−19/25＝175/200−152/200＝<b>23/200</b>。</li>
+    <li>Bのふえた割合。9/10−4/5＝9/10−8/10＝<b>1/10</b>。</li>
+    <li>A×23/200＝B×1/10。逆比にする。A：B＝1/10：23/200。</li>
+    <li>200倍して整数に。A：B＝20：23。</li>
+    <li>たしかめ。A＝20、B＝23 とすると、移した水は 20×23/200＝2.3、23×1/10＝2.3 で同じ。</li>
+    <li>落としやすい所は、23/200：1/10 とそのまま比にしてしまうこと。<b>かける数は逆にする</b>。</li>
+  </ol>
+  <div class="ans">答え：20：23</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> B君がQからPまで上る時間 <span class="type">A・6点｜流水算・出会い</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>A君は30分</b>」と「<b>25分後に出会い</b>」。25分は A君の下り30分の 5/6、と直して書く → A君は PQ の 5/6 を進み、残りの 1/6 を B君が25分で上った。PQ 全部なら 25×6。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ速さで進むなら、時間と道のりは比例する。30分で6進む人は、25分で5進む。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>PQ を 6 とおく。A君は30分で6下るから、25分では 5。出会った所は Q から 1 の所。
+    <svg id="q2_1_fig" viewBox="0 0 360 140" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<text x="40" y="20" font-size="13" fill="#222">P（上流）</text><text x="340" y="20" font-size="13" fill="#222" text-anchor="end">Q（下流）</text>
+<line x1="40" y1="40" x2="340" y2="40" stroke="#222" stroke-width="2"/>
+<line x1="40" y1="34" x2="40" y2="46" stroke="#222" stroke-width="2"/><line x1="340" y1="34" x2="340" y2="46" stroke="#222" stroke-width="2"/>
+<text x="190" y="35" font-size="12" fill="#222" text-anchor="middle">PQ＝6（A君は30分で下る）</text>
+<line x1="290" y1="30" x2="290" y2="98" stroke="#d32f2f" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="40" y1="60" x2="290" y2="60" stroke="#1565c0" stroke-width="3"/><text x="165" y="78" font-size="13" fill="#1565c0" text-anchor="middle">A君 25分で下る＝30分の5/6 → 5</text>
+<line x1="290" y1="92" x2="340" y2="92" stroke="#d32f2f" stroke-width="3"/><text x="340" y="108" font-size="13" fill="#d32f2f" text-anchor="end">B君は25分で上る → 1</text>
+<text x="284" y="132" font-size="13" fill="#d32f2f" text-anchor="end">出会った所 R（Qから6分の1）</text>
+</svg></li>
+    <li>B君はその 1 を25分で上った。PQ の 6 なら 25×6＝<b>150分</b>。</li>
+    <li>落としやすい所は、B君の「下り60分」をここで使おうとすること。60分を使うのは(2)から。</li>
+  </ol>
+  <div class="ans">答え：150分</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> A君とB君の静水時の速さの比 <span class="type">A・6点｜流水算・速さの比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>B君は60分</b>」（下り）と(1)で出した「<b>150分</b>」（上り）。同じ PQ だから、時間の比 60：150＝2：5 を速さの比 5：2 に直して書く → 静水＝（5＋2）÷2、流れ＝（5−2）÷2 が出る。流れは A君にも共通。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ道のりなら、速さの比は時間の逆比。時間が 2：5 なら速さは 5：2。</li>
+    <li>下り＝静水＋流れ、上り＝静水−流れ。だから 静水＝（下り＋上り）÷2、流れ＝（下り−上り）÷2。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>B君の時間は 下り60分：上り150分＝2：5。速さは逆比で 下り5：上り2。</li>
+    <li>B君の静水＝（5＋2）÷2＝3.5、流れ＝（5−2）÷2＝<b>1.5</b>。</li>
+    <li>PQ の長さは 5×60＝300。A君は30分で下るから、下りの速さは 300÷30＝10。</li>
+    <li>A君の静水＝10−1.5＝8.5。
+    <table><tr><th></th><th>下り</th><th>上り</th><th>静水</th><th>流れ</th></tr>
+    <tr><td>A君</td><td>10</td><td>7</td><td><b>8.5</b></td><td>1.5</td></tr>
+    <tr><td>B君</td><td>5</td><td>2</td><td><b>3.5</b></td><td>1.5</td></tr></table></li>
+    <li>A：B＝8.5：3.5＝17：7。</li>
+    <li>落としやすい所は、流れの速さを A君の下り10からひき忘れて 10：3.5 とすること。</li>
+  </ol>
+  <div class="ans">答え：17：7</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 流れが1.5倍の日に出会うまでの時間 <span class="type">A・6点｜流水算・出会い</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>流れの速さが通常時の1.5倍</b>」と「<b>何分後に出会う</b>」。出会う時間は 道のり÷速さの和、と直して書く → A君は下り（＋流れ）、B君は上り（−流れ）。和をとると流れが消えるので、流れが変わっても答えは変わらない。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>向かい合って進む2人が出会うまでの時間＝道のり÷（2人の速さの和）。</li>
+    <li>（静水A＋流れ）＋（静水B−流れ）＝静水A＋静水B。流れは足してひくので消える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>速さの和＝A君の静水＋B君の静水＝8.5＋3.5＝<b>12</b>。流れの大きさは関係ない。</li>
+    <li>道のりは 300。300÷12＝25分後。</li>
+    <li>たしかめ。流れは 1.5×1.5＝2.25。A君の下り 8.5＋2.25＝10.75、B君の上り 3.5−2.25＝1.25。和は 12 で同じ。</li>
+    <li>落としやすい所は、1.5倍につられて速さを全部計算し直すこと。<b>和では流れが消える</b>と気づけば1行で終わる。</li>
+  </ol>
+  <div class="ans">答え：25分後</div>
+  <div class="tip">コツ：B君の上りの速さ 1.25 はまだ 0 より大きい。もし流れが静水より速いと上れなくなるので、そこだけ頭の中で確かめる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> QとRが5分間で出会う回数 <span class="type">A・6点｜点の移動・出会いの周期</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>辺BCのちょうど真ん中から</b>」「<b>Dから</b>」と、Qは時計まわり・Rは反時計まわり。図に進む向きの矢印と 5cm ごとの●を置く → QとRの間の道のりが●を数えるだけで30cmと出て、あとは出会いの計算。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>向かい合って進む2点が出会うまでの時間＝間の道のり÷速さの和。毎秒1cmどうしなら ÷2。</li>
+    <li>六角形 ABCDEF の周りは 10＋10＋5＋5＋5＋5＝40cm。CF は中の線なので入れない。</li>
+    <li>1回出会ったあと、次に出会うのは 2点合わせて1周分（40cm）進んだとき。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に 5cm ごとの●を打つ。Q は真ん中→B→A→F→E、R は D→E と向かい合って進む。間は 5＋10＋5＋5＋5＝<b>30cm</b>。
+    <svg id="q3_1_fig" viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><line x1="30.0" y1="235.0" x2="230.0" y2="235.0" stroke="#222" stroke-width="2"/><line x1="230.0" y1="235.0" x2="130.0" y2="61.8" stroke="#222" stroke-width="2"/><line x1="130.0" y1="61.8" x2="30.0" y2="235.0" stroke="#222" stroke-width="2"/><line x1="230.0" y1="235.0" x2="316.6" y2="185.0" stroke="#222" stroke-width="2"/><line x1="316.6" y1="185.0" x2="266.6" y2="98.4" stroke="#222" stroke-width="2"/><line x1="266.6" y1="98.4" x2="180.0" y2="148.4" stroke="#222" stroke-width="2"/><line x1="180.0" y1="148.4" x2="230.0" y2="235.0" stroke="#222" stroke-width="2" stroke-dasharray="4 3"/><text x="130.0" y="53.8" font-size="14" fill="#222" text-anchor="middle">A</text><text x="20.0" y="251.0" font-size="14" fill="#222" text-anchor="middle">B</text><text x="238.0" y="251.0" font-size="14" fill="#222" text-anchor="middle">C</text><text x="328.6" y="190.0" font-size="14" fill="#222" text-anchor="middle">D</text><text x="274.6" y="92.4" font-size="14" fill="#222" text-anchor="middle">E</text><text x="168.0" y="146.4" font-size="14" fill="#222" text-anchor="middle">F</text><polyline points="130.0,235.0 30.0,235.0 130.0,61.8 180.0,148.4 266.6,98.4 316.6,185.0" fill="none" stroke="#d32f2f" stroke-width="5" opacity="0.45"/><circle cx="130.0" cy="235.0" r="3" fill="#222"/><circle cx="180.0" cy="148.4" r="3" fill="#222"/><circle cx="80.0" cy="148.4" r="3" fill="#222"/><circle cx="130.0" cy="235.0" r="5" fill="#d32f2f"/><text x="130.0" y="253.0" font-size="13" fill="#d32f2f" text-anchor="middle">Q・P スタート</text><circle cx="316.6" cy="185.0" r="5" fill="#d32f2f"/><text x="326.6" y="207.0" font-size="13" fill="#d32f2f" text-anchor="end">R スタート</text><text x="70.0" y="142.4" font-size="12" fill="#222" text-anchor="middle">5</text><text x="45.0" y="185.7" font-size="12" fill="#222" text-anchor="middle">5</text><text x="30" y="18" font-size="13" fill="#d32f2f">QとRの間＝5＋10＋5＋5＋5＝30cm</text><text x="30" y="36" font-size="13" fill="#222">●と●の間はどこも5cm（辺の半分＝5cm）</text><text x="100.0" y="227.0" font-size="13" fill="#222" text-anchor="middle">Q←</text><text x="160.0" y="227.0" font-size="13" fill="#222" text-anchor="middle">→P</text></svg></li>
+    <li>1回目の出会いは 30÷（1＋1）＝15秒後。</li>
+    <li>そのあとは 40÷（1＋1）＝<b>20秒ごと</b>。15、35、55、…秒後。</li>
+    <li>5分＝300秒。（300−15）÷20＝14あまり5。1回目の15秒後を足して 14＋1＝15回。</li>
+    <li>落としやすい所は、周りの長さに CF の5cmを入れて45cmにすること。CF の上は点が通らない。</li>
+  </ol>
+  <div class="ans">答え：15回</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> PとRが重なっていた時間 <span class="type">A・6点｜点の移動・最小公倍数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>毎秒1cm</b>」（PもRも同じ速さ）と「<b>重なっていたのは何秒間</b>」。P と R が同じ道を同じ向きに通る部分 F→A→B→C を図に太く書く → 同じ速さだから、F に同時に来れば C まで25秒間ずっと重なる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ速さで同じ向きに進む2点は、一度並ぶと離れない。並んでいる時間＝いっしょに通る道の長さ÷速さ。</li>
+    <li>P は1周30cm（30秒）、R は1周40cm（40秒）。30と40の最小公倍数120秒ごとに、2点はまったく同じ動きをくり返す。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>P は三角形を C→A→B の向きに、R は六角形を D→E→F→A→B→C の向きに回る。2点がいっしょに通るのは <b>F→A→B→C の25cm</b>。入口は F、出口は C。
+    <svg id="q3_2_fig" viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><line x1="30.0" y1="235.0" x2="230.0" y2="235.0" stroke="#222" stroke-width="2"/><line x1="230.0" y1="235.0" x2="130.0" y2="61.8" stroke="#222" stroke-width="2"/><line x1="130.0" y1="61.8" x2="30.0" y2="235.0" stroke="#222" stroke-width="2"/><line x1="230.0" y1="235.0" x2="316.6" y2="185.0" stroke="#222" stroke-width="2"/><line x1="316.6" y1="185.0" x2="266.6" y2="98.4" stroke="#222" stroke-width="2"/><line x1="266.6" y1="98.4" x2="180.0" y2="148.4" stroke="#222" stroke-width="2"/><line x1="180.0" y1="148.4" x2="230.0" y2="235.0" stroke="#222" stroke-width="2" stroke-dasharray="4 3"/><text x="130.0" y="53.8" font-size="14" fill="#222" text-anchor="middle">A</text><text x="20.0" y="251.0" font-size="14" fill="#222" text-anchor="middle">B</text><text x="238.0" y="251.0" font-size="14" fill="#222" text-anchor="middle">C</text><text x="328.6" y="190.0" font-size="14" fill="#222" text-anchor="middle">D</text><text x="274.6" y="92.4" font-size="14" fill="#222" text-anchor="middle">E</text><text x="168.0" y="146.4" font-size="14" fill="#222" text-anchor="middle">F</text><line x1="180.0" y1="148.4" x2="130.0" y2="61.8" stroke="#d32f2f" stroke-width="5"/><line x1="130.0" y1="61.8" x2="30.0" y2="235.0" stroke="#d32f2f" stroke-width="5"/><line x1="30.0" y1="235.0" x2="230.0" y2="235.0" stroke="#d32f2f" stroke-width="5"/><circle cx="180.0" cy="148.4" r="5" fill="#d32f2f"/><text x="190.0" y="164.4" font-size="12" fill="#d32f2f" text-anchor="start">10秒後に合流</text><text x="230.0" y="269.0" font-size="12" fill="#d32f2f" text-anchor="middle">35秒後 Cで別れる</text><text x="30" y="18" font-size="13" fill="#d32f2f">重なる道＝F→A→B→C＝5＋10＋10＝25cm</text><text x="30" y="36" font-size="13" fill="#222">Pは三角形（1周30cm）、Rは六角形（1周40cm）</text></svg></li>
+    <li>最初の120秒で、F に来る時刻をならべる。
+    <table><tr><th></th><th>F に来る時刻（秒後）</th></tr>
+    <tr><td>P（1周30秒）</td><td><b>10</b>・40・70・100</td></tr>
+    <tr><td>R（1周40秒）</td><td><b>10</b>・50・90</td></tr></table>
+    同時に F に来るのは10秒後だけ。</li>
+    <li>10秒後に F で合流し、25cm を進んで35秒後に C で別れる。120秒のうち重なるのは <b>25秒間</b>。</li>
+    <li>300秒は 120×2＋60。あまりの60秒（240〜300秒）にも 250〜275秒の重なりが入る。25×3＝75秒間。</li>
+    <li>落としやすい所は、あまりの60秒を数え忘れて 25×2＝50 とすること。「あまり」の中に10〜35秒が入るかを見る。</li>
+  </ol>
+  <div class="ans">答え：75秒間</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 5分後に止まったときの角CTP <span class="type">B・6点｜角度（正三角形・二等辺三角形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>5分後に3つの点が止まった</b>」と「<b>PEとRCの交わる点をT</b>」。300秒後の P と R の場所を先に図に置く → P は BC の真ん中、R は AB の真ん中。この2点が置けたら、あとは角度だけの問題なので手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正三角形の頂点から向かいの辺の真ん中へ引いた線は、角を半分にする。60÷2＝30度。</li>
+    <li>2辺の長さが同じ三角形（二等辺三角形）は、底の2つの角が同じ。</li>
+    <li>三角形の3つの角の和は180度。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>P の場所。300÷30＝10 でちょうど10周。スタートの <b>BC の真ん中</b>にいる。</li>
+    <li>R の場所。300÷40＝7あまり20。D から20cm 進んで D→E→F→A→（5cm）。<b>AB の真ん中</b>にいる。</li>
+    <li>角BCR。R は AB の真ん中だから CR は正三角形の真ん中の線。角BCR＝60÷2＝<b>30度</b>。
+    <svg id="q3_3_fig" viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><line x1="30.0" y1="235.0" x2="230.0" y2="235.0" stroke="#222" stroke-width="2"/><line x1="230.0" y1="235.0" x2="130.0" y2="61.8" stroke="#222" stroke-width="2"/><line x1="130.0" y1="61.8" x2="30.0" y2="235.0" stroke="#222" stroke-width="2"/><line x1="230.0" y1="235.0" x2="316.6" y2="185.0" stroke="#222" stroke-width="2"/><line x1="316.6" y1="185.0" x2="266.6" y2="98.4" stroke="#222" stroke-width="2"/><line x1="266.6" y1="98.4" x2="180.0" y2="148.4" stroke="#222" stroke-width="2"/><line x1="180.0" y1="148.4" x2="230.0" y2="235.0" stroke="#222" stroke-width="2" stroke-dasharray="4 3"/><text x="130.0" y="53.8" font-size="14" fill="#222" text-anchor="middle">A</text><text x="20.0" y="251.0" font-size="14" fill="#222" text-anchor="middle">B</text><text x="238.0" y="251.0" font-size="14" fill="#222" text-anchor="middle">C</text><text x="328.6" y="190.0" font-size="14" fill="#222" text-anchor="middle">D</text><text x="274.6" y="92.4" font-size="14" fill="#222" text-anchor="middle">E</text><text x="168.0" y="146.4" font-size="14" fill="#222" text-anchor="middle">F</text><line x1="130.0" y1="235.0" x2="266.6" y2="98.4" stroke="#d32f2f" stroke-width="2"/><line x1="80.0" y1="148.4" x2="230.0" y2="235.0" stroke="#d32f2f" stroke-width="2"/><line x1="180.0" y1="148.4" x2="130.0" y2="235.0" stroke="#1565c0" stroke-width="2" stroke-dasharray="5 3"/><circle cx="130.0" cy="235.0" r="4" fill="#222"/><text x="130.0" y="253.0" font-size="14" fill="#222" text-anchor="middle">P</text><circle cx="80.0" cy="148.4" r="4" fill="#222"/><text x="68.0" y="148.4" font-size="14" fill="#222" text-anchor="middle">R</text><circle cx="166.6" cy="198.4" r="4" fill="#d32f2f"/><text x="147" y="204" font-size="14" fill="#d32f2f" text-anchor="middle">T</text><text x="200" y="229" font-size="12" fill="#d32f2f" text-anchor="middle">30°</text><text x="150" y="229" font-size="12" fill="#d32f2f" text-anchor="middle">45°</text><text x="170" y="219" font-size="13" fill="#d32f2f" text-anchor="middle">105°</text><text x="214.0" y="193.7" font-size="12" fill="#1565c0" text-anchor="middle">5</text><text x="217.3" y="117.4" font-size="12" fill="#1565c0" text-anchor="middle">5</text><text x="30" y="18" font-size="13" fill="#222">300秒後：PはBCの真ん中、RはABの真ん中</text><text x="30" y="36" font-size="13" fill="#1565c0">FP＝FC＝FE＝5cm（三角形PCFは正三角形）</text></svg></li>
+    <li>三角形PCF。PC＝5cm、CF＝5cm、間の角C＝60度だから正三角形。FP＝FC＝FE＝5cm。</li>
+    <li>三角形FPE は FP＝FE の二等辺三角形。角PFE＝60＋90＝150度。角FPE＝（180−150）÷2＝15度。</li>
+    <li>角TPC＝角FPC−角FPE＝60−15＝<b>45度</b>。</li>
+    <li>三角形TPC で、角CTP＝180−（30＋45）＝105度。</li>
+  </ol>
+  <div class="ans">答え：105度</div>
+  <div class="tip">コツ：点の場所は「周期でわったあまり」で決める。R の 20cm は、5cm ごとの●を4つ数えれば AB の真ん中とすぐ分かる。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>割合・時間・長さは「同じもの」を見つけて比に直す（移した水・同じ道のり・同じ速さ）。</li>
+    <li>図形の周りは、へこみを外へ出す／5cmごとの●を打つ、と数える前に図を整える。</li>
+    <li>動く点の場所は「1周の時間でわったあまり」で決める。重なり・出会いは周期ごとに数えて最後に「あまり」の中を確かめる。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4-5"><h1 class="dtitle">大問4・5（円すいの展開図とひも／マス目の○●の規則）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4〜5</span> この回の全体像（担当の大問） <span class="type">A 6点／B 27点／C 7点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>4</td><td>円すい（底面の半径2cm・母線6cm）の展開図の作図・ひもの長さ・ひもで囲む面積</td><td>B 6+7+7</td><td>「半径2cm・母線6cm」→ 中心角は 360×2÷6＝120°。ひもは展開図の上では直線</td></tr>
+  <tr><td>5</td><td>マス目に○●を入れる規則（左と上が同じなら●・ちがえば○）</td><td>A 6 ／ B 7 ／ C 7</td><td>4行4列を書き切る → 4行4列の区画どうしも同じ決まりで並ぶ</td></tr></table>
+  <p>取り方: <b>5(1)を先に確実に</b>。4は(1)の展開図（半径6cm・中心角120°）が3問の土台になる。(2)はひもを直線に引いて正三角形の半分を使う。(3)と5(2)は手が動くほうから。5(3)は後回しでよい。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 円すいの展開図をコンパスと定規でかく <span class="type">B・6点｜円すいの展開図の作図</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>半径2cm</b>」「<b>母線の長さが6cm</b>」。中心角＝360×2÷6＝120° に直して書く → かくのは<b>半径6cm・中心角120°のおうぎ形</b>と半径2cmの円。120°は分度器なしで、正三角形の60°のとなり（180−60）として作る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円すいの側面の展開図はおうぎ形。半径は母線と同じ。中心角は「360×底面の半径÷母線」。半径2cm・母線6cmなら 360×2÷6＝120°。おうぎ形の弧の長さと底面の円周が同じ長さになるから。</li>
+    <li>コンパスで同じ長さを3回とると、2cmの3倍＝6cm。2つの点から6cmの円の一部をかいて交わる点をとれば、1辺6cmの正三角形（角は60°）ができる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>直線を引き、左はしをアとする。XY（2cm）をコンパスにとり、アから順に点を打つ。</li>
+    <li>アから3番目の点をウとする（アウ＝6cm）。アとウを中心に半径6cmの円の一部をかき、交わった点をエとする。三角形アウエは1辺6cmの正三角形。だから角エウイ＝180−60＝<b>120°</b>。</li>
+    <li>ウを中心に、エから右へ半径6cmの弧をかく。弧が直線と交わる点がオ（ウから3目もり）。おうぎ形ウエオが側面。
+<svg id="q4_1_fig" viewBox="0 0 520 275" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13" style="max-width:420px;width:100%;height:auto;display:block">
+<path d="M188 215 L104.0 69.5 A168 168 0 0 1 356 215 Z" fill="#dbe9ff" stroke="#d32f2f" stroke-width="2"/>
+<circle cx="412" cy="215" r="56" fill="#dbe9ff" stroke="#d32f2f" stroke-width="2"/>
+<line x1="12" y1="215" x2="488" y2="215" stroke="#222" stroke-width="1.5"/>
+<line x1="76" y1="208" x2="76" y2="222" stroke="#222" stroke-width="1.5"/>
+<line x1="132" y1="208" x2="132" y2="222" stroke="#222" stroke-width="1.5"/>
+<line x1="188" y1="208" x2="188" y2="222" stroke="#222" stroke-width="1.5"/>
+<line x1="244" y1="208" x2="244" y2="222" stroke="#222" stroke-width="1.5"/>
+<line x1="300" y1="208" x2="300" y2="222" stroke="#222" stroke-width="1.5"/>
+<line x1="356" y1="208" x2="356" y2="222" stroke="#222" stroke-width="1.5"/>
+<line x1="412" y1="208" x2="412" y2="222" stroke="#222" stroke-width="1.5"/>
+<line x1="20" y1="215" x2="104.0" y2="69.5" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<path d="M132.4 90.2 A168 168 0 0 0 71.9 55.2" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<path d="M136.1 55.2 A168 168 0 0 0 75.6 90.2" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<path d="M210.0 215.0 A22 22 0 0 0 177.0 195.9" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<text x="194.0" y="189.0" fill="#d32f2f" font-size="12" text-anchor="start" font-weight="normal">120°</text>
+<text x="14.0" y="239.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">ア</text>
+<text x="182.0" y="239.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">ウ</text>
+<text x="350.0" y="239.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">オ</text>
+<text x="406.0" y="239.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">カ</text>
+<text x="490.0" y="220.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">イ</text>
+<text x="94.0" y="61.5" fill="#222" font-size="13" text-anchor="start" font-weight="normal">エ</text>
+<text x="38.0" y="259.0" fill="#1565c0" font-size="11" text-anchor="start" font-weight="normal">2cm</text>
+<text x="94.0" y="259.0" fill="#1565c0" font-size="11" text-anchor="start" font-weight="normal">2cm</text>
+<text x="150.0" y="259.0" fill="#1565c0" font-size="11" text-anchor="start" font-weight="normal">2cm</text>
+<text x="110.0" y="146.3" fill="#222" font-size="12" text-anchor="start" font-weight="normal">6cm</text>
+<text x="32.0" y="136.3" fill="#1565c0" font-size="12" text-anchor="start" font-weight="normal">6cm</text>
+<text x="398.0" y="153.0" fill="#d32f2f" font-size="11" text-anchor="start" font-weight="normal">半径2cm</text>
+<text x="248.0" y="115.0" fill="#d32f2f" font-size="12" text-anchor="start" font-weight="normal">おうぎ形ウエオ</text>
+<text x="248.0" y="131.0" fill="#d32f2f" font-size="12" text-anchor="start" font-weight="normal">＝側面</text>
+<circle cx="412" cy="215" r="2" fill="#222"/>
+</svg></li>
+    <li>オから1目もり右の点をカとし、カを中心に半径2cmの円をかく。オで弧に接する。これが底面。</li>
+    <li>たしかめ。弧の長さ 6×2×3.14×120÷360＝12.56cm。底面の円周 2×2×3.14＝12.56cm。同じになる。</li>
+  </ol>
+  <div class="ans">答え：解説の図1を参照のこと。（半径6cm・中心角120°のおうぎ形と、弧のはしで接する半径2cmの円。上の図のとおり）</div>
+  <div class="tip">コツ：作図は「どの長さをコンパスでとったか」が見えるように、交わりの弧や目もりの印は消さずに残す。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> Aから1周してAに戻る最短のひも <span class="type">B・7点｜円すいのひも（最短距離）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Aから再びAに戻る</b>」「<b>最短距離</b>」。展開図に直して書く → ひもは<b>展開図の上では直線</b>。(1)のおうぎ形（中心角120°）の弧の両はしAとA′を結んだ長さを出す。「1辺2cmの正三角形の高さ1.73cm」は、最後のかけ算で使う合図。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>立体の表面を通る最短の線は、展開図では直線になる。</li>
+    <li>1辺6cmの正三角形を半分にした直角三角形は、3つの角が30°・60°・90°。短い辺3cm、長い辺は正三角形の高さ。1辺2cmのときの高さが1.73cmだから、1辺6cmなら 1.73×3＝5.19cm。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>展開図（半径6cm・中心角120°）をかく。弧の両はしをA、A′として直線で結ぶ。これがひも。
+<svg id="q4_2_fig" viewBox="0 0 330 262" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13" style="max-width:360px;width:100%;height:auto;display:block">
+<path d="M110 230 L20.0 74.1 A180 180 0 0 1 290.0 230.0 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+<line x1="20.0" y1="74.1" x2="290.0" y2="230.0" stroke="#d32f2f" stroke-width="3"/>
+<line x1="110" y1="230" x2="155.0" y2="152.1" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<polyline points="148.1,148.1 144.1,155.0 151.0,159.0" fill="none" stroke="#222" stroke-width="1.2"/>
+<path d="M130.0 230.0 A20 20 0 0 0 120.0 212.7" fill="none" stroke="#222" stroke-width="1"/>
+<path d="M120.0 212.7 A20 20 0 0 0 100.0 212.7" fill="none" stroke="#222" stroke-width="1"/>
+<text x="134.0" y="222.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">60°</text>
+<text x="94.0" y="206.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">60°</text>
+<text x="98.0" y="248.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">O</text>
+<text x="296.0" y="235.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">A</text>
+<text x="4.0" y="72.1" fill="#222" font-size="13" text-anchor="start" font-weight="normal">A′</text>
+<text x="159.0" y="144.1" fill="#d32f2f" font-size="13" text-anchor="start" font-weight="normal">M</text>
+<text x="188.0" y="248.0" fill="#222" font-size="12" text-anchor="start" font-weight="normal">6cm</text>
+<text x="27.0" y="156.1" fill="#222" font-size="12" text-anchor="start" font-weight="normal">6cm</text>
+<text x="102.5" y="193.0" fill="#1565c0" font-size="12" text-anchor="start" font-weight="normal">3cm</text>
+<text x="196.0" y="224.0" fill="#d32f2f" font-size="12" text-anchor="start" font-weight="normal">5.19cm</text>
+<text x="40.0" y="40.0" fill="#d32f2f" font-size="12" text-anchor="start" font-weight="bold">ひも AA′＝5.19×2</text>
+</svg></li>
+    <li>AA′のまん中をMとして、OとMを結ぶ。OMはAA′と直角に交わる。角AOM＝120÷2＝60°。</li>
+    <li>三角形OAMは、1辺6cmの正三角形を半分にした形。OM＝3cm、<b>AM＝1.73×3＝5.19cm</b>。</li>
+    <li>ひも＝AA′＝5.19×2＝10.38cm。</li>
+    <li>手を付ける目安: 展開図でAとA′を直線で結ぶ図がかけたら進める。1.73をそのまま2倍にしない。「1辺2cm」の3倍の正三角形だから、高さも3倍。</li>
+  </ol>
+  <div class="ans">答え：10.38cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> AとBから2本のひもをかけて囲んだ斜線部分 <span class="type">B・7点｜おうぎ形から三角形を引く</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ABが底面の直径</b>」と「<b>高さが1cmの正三角形の面積を0.58cm²</b>」。展開図に直して書く → Bは弧のまん中（Aから60°）。ひもは2本とも直線になり、斜線＝<b>おうぎ形OAB（60°）−三角形4つ</b>で出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ABが底面の直径なら、展開図ではBが弧のまん中。おうぎ形OABの中心角は 120÷2＝60°。</li>
+    <li>Bのひもも(2)と同じく直線。Aのひもは OBのまん中を直角に通り、Bのひもは OAのまん中を直角に通る（(2)のMと同じ理由）。</li>
+    <li>高さが3倍の正三角形は、面積が 3×3＝9倍。高さ1cmで0.58cm²なら、高さ3cmで 0.58×9＝5.22cm²。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>展開図にAのひも（A′A）とBのひも（Bから下へOAに直角・Bから左へOA′に直角）を引く。2本の交点をXとする。斜線部分は、弧ABとAX、BXで囲まれた所。
+<svg id="q4_3a_fig" viewBox="0 0 350 262" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13" style="max-width:360px;width:100%;height:auto;display:block">
+<path d="M110 230 L20.0 74.1 A180 180 0 0 1 290.0 230.0 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+<path d="M290.0 230.0 L200.0 178.0 L200.0 74.1 A180 180 0 0 1 290.0 230.0 Z" fill="#ffe0b2" stroke="none"/>
+<line x1="110" y1="230" x2="200.0" y2="74.1" stroke="#222" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="20.0" y1="74.1" x2="290.0" y2="230.0" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="200.0" y1="74.1" x2="200.0" y2="230.0" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="200.0" y1="74.1" x2="65.0" y2="152.1" stroke="#d32f2f" stroke-width="2.5"/>
+<path d="M130.0 230.0 A20 20 0 0 0 120.0 212.7" fill="none" stroke="#222" stroke-width="1"/>
+<text x="134.0" y="222.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">60°</text>
+<text x="98.0" y="248.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">O</text>
+<text x="296.0" y="235.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">A</text>
+<text x="4.0" y="72.1" fill="#222" font-size="13" text-anchor="start" font-weight="normal">A′</text>
+<text x="196.0" y="66.1" fill="#222" font-size="13" text-anchor="start" font-weight="normal">B</text>
+<text x="206.0" y="198.0" fill="#d32f2f" font-size="13" text-anchor="start" font-weight="bold">X</text>
+<text x="228.0" y="150.0" fill="#d32f2f" font-size="12" text-anchor="start" font-weight="bold">斜線</text>
+<text x="212.0" y="26.0" fill="#d32f2f" font-size="12" text-anchor="start" font-weight="normal">Aのひも＝A′A</text>
+<text x="212.0" y="42.0" fill="#d32f2f" font-size="12" text-anchor="start" font-weight="normal">Bのひも＝Bから2本</text>
+</svg></li>
+    <li>斜線＝おうぎ形OAB−白い部分。白い部分は、OとXを結ぶと★の三角形4つに分かれる。角XOA＝60÷2＝30°、OAのまん中までが3cm。直角と30°の三角形は正三角形の半分で、3cmがその正三角形の高さにあたる。4つとも同じ形。
+<svg id="q4_3b_fig" viewBox="0 0 350 262" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13" style="max-width:360px;width:100%;height:auto;display:block">
+<path d="M110 230 L20.0 74.1 A180 180 0 0 1 290.0 230.0 Z" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<polygon points="110.0,230.0 200.0,230.0 200.0,178.0" fill="#c8e6c9" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+<polygon points="200.0,230.0 290.0,230.0 200.0,178.0" fill="#c8e6c9" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+<polygon points="110.0,230.0 155.0,152.1 200.0,178.0" fill="#c8e6c9" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+<polygon points="155.0,152.1 200.0,74.1 200.0,178.0" fill="#c8e6c9" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M290.0 230.0 L200.0 178.0 L200.0 74.1 A180 180 0 0 1 290.0 230.0 Z" fill="#ffe0b2" stroke="none"/>
+<line x1="20.0" y1="74.1" x2="290.0" y2="230.0" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="200.0" y1="74.1" x2="200.0" y2="230.0" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="200.0" y1="74.1" x2="65.0" y2="152.1" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="110" y1="230" x2="200.0" y2="178.0" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="110" y1="230" x2="200.0" y2="74.1" stroke="#222" stroke-width="1" stroke-dasharray="3 3"/>
+<polyline points="192.0,230.0 192.0,222.0 200.0,222.0" fill="none" stroke="#222" stroke-width="1.2"/>
+<polyline points="151.0,159.0 157.9,163.0 161.9,156.1" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="164.0" y="217.7" fill="#222" font-size="12" text-anchor="start" font-weight="normal">★</text>
+<text x="224.0" y="217.7" fill="#222" font-size="12" text-anchor="start" font-weight="normal">★</text>
+<text x="149.0" y="191.7" fill="#222" font-size="12" text-anchor="start" font-weight="normal">★</text>
+<text x="179.0" y="139.7" fill="#222" font-size="12" text-anchor="start" font-weight="normal">★</text>
+<text x="98.0" y="248.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">O</text>
+<text x="296.0" y="235.0" fill="#222" font-size="13" text-anchor="start" font-weight="normal">A</text>
+<text x="4.0" y="72.1" fill="#222" font-size="13" text-anchor="start" font-weight="normal">A′</text>
+<text x="196.0" y="66.1" fill="#222" font-size="13" text-anchor="start" font-weight="normal">B</text>
+<text x="206.0" y="198.0" fill="#d32f2f" font-size="13" text-anchor="start" font-weight="bold">X</text>
+<text x="140.0" y="248.0" fill="#1565c0" font-size="12" text-anchor="start" font-weight="normal">3cm</text>
+<text x="230.0" y="248.0" fill="#1565c0" font-size="12" text-anchor="start" font-weight="normal">3cm</text>
+<text x="98.5" y="189.0" fill="#1565c0" font-size="12" text-anchor="start" font-weight="normal">3cm</text>
+<path d="M144.0 230.0 A34 34 0 0 0 139.4 213.0" fill="none" stroke="#222" stroke-width="1"/>
+<text x="148.0" y="224.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">30°</text>
+<text x="212.0" y="26.0" fill="#1565c0" font-size="12" text-anchor="start" font-weight="bold">白い部分＝★4つ</text>
+<text x="212.0" y="42.0" fill="#1565c0" font-size="11" text-anchor="start" font-weight="normal">★＝高さ3cmの正三角形</text>
+<text x="212.0" y="56.0" fill="#1565c0" font-size="11" text-anchor="start" font-weight="normal">　　の半分</text>
+</svg></li>
+    <li>★1個＝高さ3cmの正三角形の半分＝<b>5.22÷2＝2.61cm²</b>。</li>
+    <li>おうぎ形OAB＝6×6×3.14×60÷360＝18.84cm²。</li>
+    <li>斜線＝18.84−2.61×4＝8.4cm²。</li>
+  </ol>
+  <div class="ans">答え：8.4cm²</div>
+  <div class="tip">コツ：手を付ける目安は、(2)でひもが直線になる図がかけたこと。★の分け方が2分で見えなければ、5(2)に移る。「高さ1cmの正三角形の面積」は「高さ3cm→9倍」で使う合図。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 4行4列まで○●を入れる <span class="type">A・6点｜規則どおりに書く</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>左のマス目と上のマス目に同じ記号</b>」→●、「異なる記号」→○。「<b>同じ→●、ちがう→○</b>」と短く直して書き、2行目から左から右へ順にうめる。1行目と1列目は全部○と決まっている。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>見るのは「左」と「上」の2マスだけ。例の2行2列は、左○・上○で同じだから●。●と●も「同じ」だから●になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2行目: 3列目は左●・上○ → ちがう → ○。4列目は左○・上○ → 同じ → ●。2行目は ○●○●。</li>
+    <li>3行目: 2列目は左○・上● → ○。3列目は左○・上○ → ●。4列目は左●・上● → ●。3行目は ○○●●。</li>
+    <li>4行目: 2列目は左○・上○ → ●。3列目は左●・上● → ●。4列目は左●・上● → ●。4行目は <b>○●●●</b>。
+<svg id="q5_1_fig" viewBox="0 0 330 200" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13" style="max-width:300px;width:100%;height:auto;display:block">
+<line x1="36" y1="24" x2="196" y2="24" stroke="#222" stroke-width="1.2"/>
+<line x1="36" y1="24" x2="36" y2="184" stroke="#222" stroke-width="1.2"/>
+<line x1="36" y1="64" x2="196" y2="64" stroke="#222" stroke-width="1.2"/>
+<line x1="76" y1="24" x2="76" y2="184" stroke="#222" stroke-width="1.2"/>
+<line x1="36" y1="104" x2="196" y2="104" stroke="#222" stroke-width="1.2"/>
+<line x1="116" y1="24" x2="116" y2="184" stroke="#222" stroke-width="1.2"/>
+<line x1="36" y1="144" x2="196" y2="144" stroke="#222" stroke-width="1.2"/>
+<line x1="156" y1="24" x2="156" y2="184" stroke="#222" stroke-width="1.2"/>
+<line x1="36" y1="184" x2="196" y2="184" stroke="#222" stroke-width="1.2"/>
+<line x1="196" y1="24" x2="196" y2="184" stroke="#222" stroke-width="1.2"/>
+<text x="4.0" y="48.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">1行</text>
+<text x="46.0" y="16.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">1列</text>
+<text x="4.0" y="88.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">2行</text>
+<text x="86.0" y="16.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">2列</text>
+<text x="4.0" y="128.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">3行</text>
+<text x="126.0" y="16.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">3列</text>
+<text x="4.0" y="168.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">4行</text>
+<text x="166.0" y="16.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">4列</text>
+<circle cx="56.0" cy="44.0" r="11" fill="none" stroke="#222" stroke-width="2"/>
+<circle cx="96.0" cy="44.0" r="11" fill="none" stroke="#222" stroke-width="2"/>
+<circle cx="136.0" cy="44.0" r="11" fill="none" stroke="#222" stroke-width="2"/>
+<circle cx="176.0" cy="44.0" r="11" fill="none" stroke="#222" stroke-width="2"/>
+<circle cx="56.0" cy="84.0" r="11" fill="none" stroke="#222" stroke-width="2"/>
+<circle cx="96.0" cy="84.0" r="11" fill="#222"/>
+<circle cx="136.0" cy="84.0" r="11" fill="none" stroke="#d32f2f" stroke-width="2"/>
+<circle cx="176.0" cy="84.0" r="11" fill="#d32f2f"/>
+<circle cx="56.0" cy="124.0" r="11" fill="none" stroke="#222" stroke-width="2"/>
+<circle cx="96.0" cy="124.0" r="11" fill="none" stroke="#d32f2f" stroke-width="2"/>
+<circle cx="136.0" cy="124.0" r="11" fill="#d32f2f"/>
+<circle cx="176.0" cy="124.0" r="11" fill="#d32f2f"/>
+<circle cx="56.0" cy="164.0" r="11" fill="none" stroke="#222" stroke-width="2"/>
+<circle cx="96.0" cy="164.0" r="11" fill="#d32f2f"/>
+<circle cx="136.0" cy="164.0" r="11" fill="#d32f2f"/>
+<circle cx="176.0" cy="164.0" r="11" fill="#d32f2f"/>
+<text x="206.0" y="48.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">黒＝はじめから</text>
+<text x="206.0" y="66.0" fill="#d32f2f" font-size="11" text-anchor="start" font-weight="normal">赤＝書きこむ8個</text>
+<text x="206.0" y="96.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">同じ→●</text>
+<text x="206.0" y="114.0" fill="#222" font-size="11" text-anchor="start" font-weight="normal">ちがう→○</text>
+</svg></li>
+    <li>落としやすい所: ●と●を「ちがう」と思って○にしない。同じ記号なら●。</li>
+  </ol>
+  <div class="ans">答え：右の図（1行目 ○○○○・2行目 ○●○●・3行目 ○○●●・4行目 ○●●●。上の図のとおり）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 16行16列の中の○の個数 <span class="type">B・7点｜4行4列の区画のくり返し</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>16行目16列目まで</b>」「<b>○の個数</b>」。256個を1つずつ書かず、<b>4行4列の区画</b>に直して書く → 区画の並び方が(1)の○●の形と同じになり、○は区画ごとに数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)の4行4列（○が9個）をAと呼ぶ。上も左もAの区画は、全部●になる。これをBと呼ぶ。理由: Aの4行目も4列目も ○●●● で、角のマス（5行5列）は左○・上○ → ●。そのあとは左も上も●ばかりで、●が続く。5〜8行目・5〜8列目を実際に書いても全部●。</li>
+    <li>区画の並び方も、マスの決まりと同じ。上と左が「AとA」→B、「AとB」→A、「BとB」→B。Aを○、Bを●と見れば、(1)の図そのもの。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>いちばん上の行といちばん左の列にならぶ区画はA。どれも、その区画の1行目と1列目が全部○になり、(1)と同じ始まり方になるから。</li>
+    <li>区画を4×4に並べる。(1)の図と同じ並びになる。
+<table>
+<tr><th>区画</th><th>1〜4列</th><th>5〜8列</th><th>9〜12列</th><th>13〜16列</th></tr>
+<tr><th>1〜4行</th><td><b>A</b></td><td><b>A</b></td><td><b>A</b></td><td><b>A</b></td></tr>
+<tr><th>5〜8行</th><td><b>A</b></td><td>B</td><td><b>A</b></td><td>B</td></tr>
+<tr><th>9〜12行</th><td><b>A</b></td><td><b>A</b></td><td>B</td><td>B</td></tr>
+<tr><th>13〜16行</th><td><b>A</b></td><td>B</td><td>B</td><td>B</td></tr>
+</table></li>
+    <li>Aは<b>9個</b>。Aの中の○は9個。○＝9×9＝<b>81個</b>。</li>
+    <li>手を付ける目安: 5行目を数マス書いて「○○○○…」と(1)の1行目と同じ形が始まるのに気づけたら進める。気づけなければ後回し。</li>
+  </ol>
+  <div class="ans">答え：81個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> ○が1000個以上になる最小の あ <span class="type">C・7点｜区画のくり返し（大きな数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>1000個以上</b>」「<b>最も小さいもの</b>」。(2)の16行16列（○81個）を1つの区画Pに直して書く → <b>64行64列で○は81×9＝729個</b>。1000個までの残りを、4行4列の区画Aで足す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>16行16列の区画Pも、Aと同じ形（1行目・1列目が○、ほかのふちは●）。だからPを4×4に並べても(1)と同じ並び。P9個・Q7個。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>64行64列まで: Pが9個 → ○＝81×9＝729個。</li>
+    <li>65〜68行目と65〜68列目の帯を足す。帯には区画Aが 16＋16＝32個（右下の角だけB）。○＝9×32＝288個。68行68列で 729＋288＝<b>1017個</b>。1000個をこえる。
+<table>
+<tr><th>区画</th><th>1〜16列</th><th>17〜32列</th><th>33〜48列</th><th>49〜64列</th><th>65〜68列</th></tr>
+<tr><th>1〜16行</th><td><b>P</b></td><td><b>P</b></td><td><b>P</b></td><td><b>P</b></td><td>A×4</td></tr>
+<tr><th>17〜32行</th><td><b>P</b></td><td>Q</td><td><b>P</b></td><td>Q</td><td>A×4</td></tr>
+<tr><th>33〜48行</th><td><b>P</b></td><td><b>P</b></td><td>Q</td><td>Q</td><td>A×4</td></tr>
+<tr><th>49〜64行</th><td><b>P</b></td><td>Q</td><td>Q</td><td>Q</td><td>A×4</td></tr>
+<tr><th>65〜68行</th><td>A×4</td><td>A×4</td><td>A×4</td><td>A×4</td><td>B</td></tr>
+</table></li>
+    <li>1つ手前の67行67列は、68行目と68列目の分がへる。Aの4行目・4列目に○は1個ずつだから 1×32＝32個。1017−32＝985個で1000個に足りない。だから<b>68</b>。</li>
+  </ol>
+  <div class="ans">答え：68</div>
+</section>
+</div>
