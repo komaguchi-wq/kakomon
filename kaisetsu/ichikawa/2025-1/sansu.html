@@ -1,0 +1,572 @@
+<!-- generated kakomon ichikawa/2025-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（小問5つ＋遊園地の行列のニュートン算）</a></li>
+<li><a href="#3-4-5">大問3・4・5（時間割のルール／3つの円の中心の移動と作図／約数の個数で駒を動かす）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（小問5つ＋遊園地の行列のニュートン算）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 37点／B 6点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1</td><td>小問5つ（逆算・食塩水・立方体の切断・速さと比・面積の二等分）</td><td>A 5+5+5+5+5</td><td>どれも条件を「式に入る形」に直してから。切断は段ごとに上から見た図、面積は「二等分＝まん中を通る」</td></tr>
+  <tr><td>2</td><td>遊園地の行列（ニュートン算）</td><td>A 6+6 / B 6</td><td>「1分あたり」を <b>並ぶ人−売る人＝1分の増減</b> に直し、時刻ごとの人数の表を書く</td></tr></table>
+  <p>取り方: 大問1の5問と2(1)(3)の<b>A 37点を先に確実に</b>。2(2)は(1)の表をそのまま続ければ出るので、表が書けていれば取りにいく。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> □のある計算（逆算） <span class="type">A・5点｜逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>□にあてはまる数</b>」と、□の無いかたまり「<b>5×(2.5＋2 1/3＋1/6)</b>」。□の無い所を先に計算して1つの数に直して書く → 式が「○＋4×□＝45」の形になり、もどして考えられる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆算は、□の入っていない所を先に全部計算する。□のある所は最後まで残す。</li>
+    <li>小数と分数がまざったら分数にそろえる。2.5＝5/2、2 1/3＝7/3。分母を6にそろえると 15/6＋14/6＋1/6。</li>
+    <li>分数でわるのは、逆数をかけるのと同じ。7÷5/8＝7×8/5。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>中かっこの中を計算する。2.5＋2 1/3＋1/6＝15/6＋14/6＋1/6＝30/6＝5。5×5＝25。</li>
+    <li>7÷5/8＝7×8/5＝56/5＝11.2。式は（11.2＋4×□）＋25＝45 になる。</li>
+    <li>もどす。11.2＋4×□＝45−25＝20。4×□＝20−11.2＝8.8。</li>
+    <li>□＝8.8÷4＝<b>2.2</b>。</li>
+    <li>たしかめ。11.2＋4×2.2＝20。20＋25＝45。合う。</li>
+    <li>落としやすい所: 7÷5/8 を 7×5/8 にしない。わり算は逆数をかける。</li>
+  </ol>
+  <div class="ans">答え：2.2</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 食塩水を移して食塩の重さを同じにする <span class="type">A・5点｜濃度</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>溶けている食塩の重さが同じ</b>」と「<b>Bに入っている食塩水の濃度</b>」。食塩水でなく食塩の重さに直して書く → 食塩の合計16gを8gずつに分ける話になる。最後に食塩÷食塩水。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>食塩の重さ＝食塩水の重さ×濃度。50gの20%なら 50×0.2＝10g。</li>
+    <li>食塩水を移しても、2つの容器の食塩の合計は変わらない。10＋6＝16g のまま。</li>
+    <li>濃度＝食塩÷食塩水×100。8gの食塩が50gの食塩水にあれば 8÷50×100＝16%。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>食塩の重さを出す。A は 50×0.2＝10g、B は 40×0.15＝6g。合計 16g。</li>
+    <li>同じにする＝<b>8gずつ</b>。A は 10−8＝2g 減らす。</li>
+    <li>A の食塩水□gに食塩が2g。A は20%だから □×0.2＝2 → □＝<b>10g</b> 移した。</li>
+    <li>表にまとめる。
+      <table><tr><th></th><th>食塩水</th><th>食塩</th></tr>
+      <tr><td>Bのはじめ</td><td>40g</td><td>6g</td></tr>
+      <tr><td>Aから移す</td><td>＋10g</td><td>＋2g</td></tr>
+      <tr><td>Bのあと</td><td>50g</td><td>8g</td></tr></table></li>
+    <li>B の濃度は 8÷50×100＝16%。</li>
+    <li>落としやすい所: 聞かれているのは B の濃度。移した10gを答えにしない。</li>
+  </ol>
+  <div class="ans">答え：16%</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 27個の立方体を3点を通る平面で切る <span class="type">A・5点｜立体の切断</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3点P，Q，Rを通る平面</b>」と「<b>何個切断されるか</b>」。Rはかどでなく、右の面の上の辺の点。同じ面にある2点をまっすぐ結んで三角形PRQを図に置く → 数えるのは段ごとに上から見た図で。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ面にある2点は、まっすぐ結べる。PとRは上の面、RとQは右の面、QとPは前の面にある。切り口は三角形PRQ。Rは上の面の右の辺にあり、おくのかどから1cm手前の点（かどではない）。</li>
+    <li>切り口の面が中を通る小さな立方体だけが切られる。段ごとに、その段の上の面の切り口と下の面の切り口にはさまれたマスを数える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に PR・RQ・QP を引く。上の面の切り口は P から R へ、右に3マス進むあいだに おくへ2マス進む線。1段下がるごとに、同じ向きのまま右へ1マスずれる（Q の側へ寄る）。</li>
+    <li>上から見た図を3枚書く。上段は、上の面の切り口（赤）と、1段下の面の切り口（青の点線・1マス右にずれる）にはさまれたマスが切られる。
+        <svg viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="11">
+<text x="20" y="12" font-size="10" fill="#555">上から見た図（下が手前）。赤＝上の面の切り口、青点線＝下の面の切り口</text>
+<rect x="20" y="80" width="30" height="30" fill="#ffe0b2"/>
+<rect x="50" y="80" width="30" height="30" fill="#ffe0b2"/>
+<rect x="80" y="80" width="30" height="30" fill="#ffe0b2"/>
+<rect x="50" y="50" width="30" height="30" fill="#ffe0b2"/>
+<rect x="80" y="50" width="30" height="30" fill="#ffe0b2"/>
+<line x1="20" y1="110" x2="20" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="20" x2="110" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="50" y1="110" x2="50" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="50" x2="110" y2="50" stroke="#222" stroke-width="1"/>
+<line x1="80" y1="110" x2="80" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="80" x2="110" y2="80" stroke="#222" stroke-width="1"/>
+<line x1="110" y1="110" x2="110" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="110" x2="110" y2="110" stroke="#222" stroke-width="1"/>
+<line x1="20" y1="110" x2="110" y2="50" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="50" y1="110" x2="110" y2="70" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="20" cy="110" r="2.5" fill="#222"/><text x="8" y="114">P</text>
+<circle cx="110" cy="50" r="2.5" fill="#222"/><text x="114" y="54">R</text>
+<text x="65" y="126" text-anchor="middle">上段（5個）</text>
+<rect x="165" y="80" width="30" height="30" fill="#ffe0b2"/>
+<rect x="195" y="80" width="30" height="30" fill="#ffe0b2"/>
+<rect x="195" y="50" width="30" height="30" fill="#ffe0b2"/>
+<line x1="135" y1="110" x2="135" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="135" y1="20" x2="225" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="165" y1="110" x2="165" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="135" y1="50" x2="225" y2="50" stroke="#222" stroke-width="1"/>
+<line x1="195" y1="110" x2="195" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="135" y1="80" x2="225" y2="80" stroke="#222" stroke-width="1"/>
+<line x1="225" y1="110" x2="225" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="135" y1="110" x2="225" y2="110" stroke="#222" stroke-width="1"/>
+<line x1="165" y1="110" x2="225" y2="70" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="195" y1="110" x2="225" y2="90" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="180" y="126" text-anchor="middle">中段（3個）</text>
+<rect x="310" y="80" width="30" height="30" fill="#ffe0b2"/>
+<line x1="250" y1="110" x2="250" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="250" y1="20" x2="340" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="280" y1="110" x2="280" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="250" y1="50" x2="340" y2="50" stroke="#222" stroke-width="1"/>
+<line x1="310" y1="110" x2="310" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="250" y1="80" x2="340" y2="80" stroke="#222" stroke-width="1"/>
+<line x1="340" y1="110" x2="340" y2="20" stroke="#222" stroke-width="1"/>
+<line x1="250" y1="110" x2="340" y2="110" stroke="#222" stroke-width="1"/>
+<line x1="310" y1="110" x2="340" y2="90" stroke="#d32f2f" stroke-width="2.5"/>
+<circle cx="340" cy="110" r="2.5" fill="#222"/><text x="344" y="114">Q</text>
+<text x="295" y="126" text-anchor="middle">下段（1個）</text>
+</svg></li>
+    <li>上段 5個、中段 3個、下段 1個（Q のかど）。</li>
+    <li>5＋3＋1＝<b>9個</b>。</li>
+    <li>落としやすい所: R をかどと見て、上の面に対角線を引くこと。R はおくのかどより1cm手前。また、線が点 R にふれるだけの上段の右上のマスは数えない。</li>
+  </ol>
+  <div class="ans">答え：9個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 2人がQで速さを変えてRへ <span class="type">A・5点｜速さと比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>AはBより5分早くQに着き</b>」と「<b>Pを出発して35分後にRに着き</b>」。PQ間の速さの比 60:48 を時間の比 4:5 に直して書く → 差の1が5分でBのPQが25分、QRは残り10分と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ道のりなら、速さの比と時間の比は逆になる。速さ 5:4 なら時間は 4:5。速い方が短い時間で着く。</li>
+    <li>分速＝道のり÷時間。1800m を10分なら分速180m。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>PQ間の速さの比は 60:48＝5:4。時間の比は <b>4:5</b>。</li>
+    <li>差の1が5分。A は 5×4＝20分、B は 5×5＝<b>25分</b>で Q に着く。</li>
+    <li>B は P から35分後に R。QR にかかった時間は 35−25＝10分。
+      <table><tr><th></th><th>PQ</th><th>QR</th><th>合計</th></tr>
+      <tr><td>B</td><td>25分</td><td>10分</td><td>35分</td></tr></table></li>
+    <li>QR は 1800m。1800÷10＝分速180m。</li>
+    <li>落としやすい所: 「35分後」は P を出てからの時間。QR だけの時間と読まない。</li>
+  </ol>
+  <div class="ans">答え：分速180m</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 台形を二等分する2本の直線 <span class="type">A・5点｜面積の二等分</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>平行四辺形EFCDの面積を二等分する直線m</b>」と「<b>CGの長さが2cm</b>」。二等分する線は平行四辺形のまん中Oを通る、と図に置く → Oで点対称だから AE＝CG＝2cm と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>平行四辺形のまん中（対角線の交点）を通る直線は、面積を二等分する。逆に、二等分する直線はまん中を通る。</li>
+    <li>まん中Oを中心に180°回すと、平行四辺形はぴったり重なる。辺EDは辺CFに重なる。</li>
+    <li>台形の面積＝（上底＋下底）×高さ÷2。高さが同じ平行四辺形と比べるなら、「（上底＋下底）÷2」と「底辺」を比べる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>l は DC に平行。だから EFCD は平行四辺形で、ED＝FC＝<b>4cm</b>。</li>
+    <li>m は EFCD のまん中 O を通る。O を中心に180°回すと、直線 ED は直線 CF に重なり、直線 m はそのまま。だから A は G に重なる。<b>AE＝CG＝2cm</b>。
+        <svg viewBox="0 0 360 175" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="11">
+        <polygon points="70,40 120,40 170,140 20,140" fill="#dbe9ff"/>
+        <polygon points="120,40 220,40 270,140 170,140" fill="#ffe0b2"/>
+        <polygon points="70,40 220,40 270,140 20,140" fill="none" stroke="#222" stroke-width="1.5"/>
+        <line x1="20" y1="140" x2="340" y2="140" stroke="#222" stroke-width="1.5"/>
+        <line x1="105" y1="10" x2="182.5" y2="165" stroke="#222" stroke-width="1.5"/>
+        <line x1="45" y1="30" x2="345" y2="150" stroke="#222" stroke-width="1.5"/>
+        <circle cx="195" cy="90" r="3" fill="#d32f2f"/><text x="200" y="86" fill="#d32f2f">O（まん中）</text>
+        <circle cx="132.5" cy="65" r="2.5" fill="#222"/><text x="136.5" y="77">H</text>
+        <circle cx="257.5" cy="115" r="2.5" fill="#222"/><text x="245.5" y="111">I</text>
+        <text x="100" y="18" font-style="italic">l</text><text x="40" y="24" font-style="italic">m</text>
+        <text x="10" y="155">B</text><text x="64" y="34">A</text><text x="116" y="34">E</text><text x="216" y="34">D</text>
+        <text x="166" y="155">F</text><text x="266" y="155">C</text><text x="318" y="155">G</text>
+        <text x="95" y="30" text-anchor="middle" fill="#d32f2f" font-weight="bold">2</text>
+        <text x="170" y="30" text-anchor="middle">4</text>
+        <text x="95" y="168" text-anchor="middle" fill="#d32f2f" font-weight="bold" font-size="12">BF＝？</text>
+        <text x="220" y="168" text-anchor="middle">4</text>
+        <text x="295" y="168" text-anchor="middle" fill="#d32f2f" font-weight="bold">2</text>
+        </svg></li>
+    <li>別紙の解説は、三角形 AHE と三角形 GIC の合同（EH＝CI、角が等しい）で AE＝GC を出している。同じこと。</li>
+    <li>l は台形 ABCD を二等分する。だから台形 ABFE と平行四辺形 EFCD の面積は同じ。高さも同じ。（AE＋BF）÷2＝ED＝4 → AE＋BF＝8。</li>
+    <li>BF＝8−2＝6cm。</li>
+    <li>落としやすい所: 台形の「上底＋下底」は ÷2 してから平行四辺形の底辺4と比べる。AE＋BF＝4 としない。</li>
+  </ol>
+  <div class="ans">答え：6cm</div>
+  <div class="tip">コツ：「平行四辺形の面積を二等分する直線」と見たら、まん中（対角線の交点）に点を打つ。そこを中心にひっくり返すと、等しい長さが見つかる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 10時に並んでいる人数 <span class="type">A・6点｜ニュートン算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は売る「<b>1分あたり7人</b>」と、並ぶ「<b>最初の30分間は1分あたり3人ずつ，次の20分間は1分あたり10人ずつ</b>」。1分の増減（3−7＝−4人、10−7＝＋3人）に直して書く → 時刻ごとの人数の表が作れる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>並んでいる人数の変化＝並ぶ人−売る人（1分あたり）。売る人の方が多ければ減る。1分で 3−7＝−4人 なら、30分で 120人減る。</li>
+    <li>30分と20分のくり返し。表は「時刻・1分の増減・人数」の3列で書くと、(2)(3)でもそのまま使える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1分の増減を出す。最初の30分は 3−7＝<b>−4人</b>。次の20分は 10−7＝＋3人。</li>
+    <li>時刻ごとの表を書く。
+      <table><tr><th>時刻</th><th>1分の増減</th><th>何分</th><th>人数</th></tr>
+      <tr><td>9:00</td><td></td><td></td><td>200人</td></tr>
+      <tr><td>9:30</td><td>−4人</td><td>30分</td><td>200−120＝80人</td></tr>
+      <tr><td>9:50</td><td>＋3人</td><td>20分</td><td>80＋60＝140人</td></tr>
+      <tr><td>10:00</td><td>−4人</td><td>10分</td><td><b>140−40＝100人</b></td></tr></table></li>
+    <li>落としやすい所: 10時は 9:50 から10分だけ。30分まるごと 120人を引かない。</li>
+  </ol>
+  <div class="ans">答え：100人</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 初めて行列がなくなる時刻 <span class="type">B・6点｜ニュートン算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>初めていなくなった</b>」＝人数が0になる最初の時刻。(1)の表をそのまま続けて書く → 減る30分の途中で<b>0を切る区間</b>が見つかる。表が(1)で書けていれば、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>人数が0になるのは、減る区間（−4人/分）の途中だけ。区間の始まりの人数÷4 で、何分でなくなるかが出る。</li>
+    <li>減る区間の終わりまで人が残っていれば、その区間では0にならない。次の区間へ進む。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を続ける。
+      <table><tr><th>時刻</th><th>1分の増減</th><th>何分</th><th>人数</th></tr>
+      <tr><td>10:00</td><td></td><td></td><td>100人</td></tr>
+      <tr><td>10:20</td><td>−4人</td><td>20分</td><td>100−80＝20人（まだ残る）</td></tr>
+      <tr><td>10:40</td><td>＋3人</td><td>20分</td><td>20＋60＝80人</td></tr>
+      <tr><td>？</td><td>−4人</td><td>□分</td><td>80 → 0人</td></tr></table></li>
+    <li>9:50 から始まった減る30分は 10:20 で終わり、20人残る。ここでは0にならない。</li>
+    <li>10:40 からの減る区間で、80÷4＝<b>20分</b>で0になる。</li>
+    <li>10時40分＋20分＝<b>11時0分</b>。</li>
+  </ol>
+  <div class="ans">答え：11時0分</div>
+  <div class="tip">コツ：「初めていなくなる」は、減る区間ごとに「始まりの人数÷4」を区間の長さ（30分）と比べる。30分より短くなった区間が答えの区間。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 窓口を追加した時刻 <span class="type">A・6点｜ニュートン算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1分あたり5人に入場券を販売する窓口を追加</b>」と「<b>10時に初めていなくなりました</b>」。10時までに「並んだ人の合計」と「売った人の合計」に直して書く → 差が追加窓口の売った人数＝何分開いたか。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>10時に0人＝「最初の200人＋10時までに並んだ人」を全部売り終えた。</li>
+    <li>売った合計＝元の窓口 7人×60分＋追加窓口 5人×□分。元の窓口は9時から10時までずっと売っている。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>10時までに並んだ人。3×30＋10×20＋3×10＝320人。全部で 200＋320＝<b>520人</b>。</li>
+    <li>元の窓口が売った人。7×60＝420人。残り 520−420＝100人 が追加窓口の分。
+      <table><tr><th></th><th>人数</th></tr>
+      <tr><td>売る人の合計（10時に0人）</td><td>520人</td></tr>
+      <tr><td>元の窓口（60分）</td><td>420人</td></tr>
+      <tr><td>追加窓口（□分）</td><td>100人</td></tr></table></li>
+    <li>100÷5＝<b>20分</b>。10時−20分＝9時40分。</li>
+    <li>たしかめ。9:40 の人数は 80＋3×10＝110人。窓口は合わせて 7＋5＝12人/分。9:40〜9:50 は 10−12＝−2人/分 で 110−20＝90人。9:50〜10:00 は 3−12＝−9人/分 で 90−90＝0人。途中で0にならず、ちょうど10時に0。</li>
+    <li>落としやすい所: 元の窓口の「60分」を忘れない。追加窓口の分だけ計算すると人数が合わない。</li>
+  </ol>
+  <div class="ans">答え：9時40分</div>
+  <div class="tip">コツ：別の見方。追加窓口が無ければ 10時に 100人残る（(1)の答え）。その100人を追加窓口が売ったと考えても 100÷5＝20分。(1)の表が生きる。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>条件を「式に入る形」に直す: 食塩水→食塩の重さ／速さの比→時間の比／1分あたり→1分の増減。</li>
+    <li>数える・追う問題は表か段ごとの図に置く: 切断は上から見た図を3枚、行列は時刻ごとの人数の表。</li>
+    <li>「面積を二等分する直線」は平行四辺形のまん中を通る。まん中で180°回して等しい長さをさがす。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（時間割のルール／3つの円の中心の移動と作図／約数の個数で駒を動かす）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（大問3〜5） <span class="type">A 24点／B 33点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>3</td><td>時間割のルール（条件の整理・場合の数）</td><td>A 6+6 / B 6</td><td>ルールに番号をふる。「次の日にはない」「4時間目のみ」で決まるマスから埋める</td></tr>
+  <tr><td>4</td><td>3つの円の中心が回る（周期・作図・角度）</td><td>A 6 / B 7+7</td><td>1周の秒数を先に出す（P 4秒・Q 8秒・R 8秒＋12秒）。秒数を「1周で割った余り」に直すと位置が出る</td></tr>
+  <tr><td>5</td><td>約数の個数で駒を動かす（平方数・群数列・0の個数）</td><td>A 6 / B 6+7</td><td>「約数が奇数個」＝平方数。平方数で区切って組にする</td></tr></table>
+  <p>取り方: <b>Aの4問（3(1)・3(2)(i)・4(1)・5(1)）を先に確実に</b>。Bの中では 5(2)（群数列の定番）と 4(3)（余りで位置を出してから角度を見る）が手を付けやすい。4(2) の作図は「コンパス1回」の条件で時間を取られやすいので、他が終わってから。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 水曜が決まっているときの火曜の時間割 <span class="type">A・6点｜条件の整理・選択</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品はルールの「<b>その教科は次の日にはない</b>」と、水曜3時間目の「<b>国語</b>」。ルールに①〜⑥と番号をふり、ア〜エを1つずつ×にしていく → 残った1つが答え。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>選択問題は「正しいものをさがす」より「ルールにぶつかるものを消す」ほうが速い。消す理由は1つ見つかれば十分。</li>
+    <li>「1日2時間以上あった教科は次の日にはない」は、2日をセットで見る決まり。火曜に2時間なら、水曜を見る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ルールに番号をふる。①算数は毎日2時間 ②国理社は5日で3時間以上 ③水曜に国語と社会 ④理科は4時間目だけ ⑤2時間以上の次の日はなし ⑥同じ教科は連続しない。</li>
+    <li>ア〜エを表で消す。
+<table><tr><th>選択肢</th><th>火曜の中身</th><th>ぶつかるルール</th><th>判定</th></tr>
+<tr><td>ア</td><td>算・社・国・算</td><td>算数2時間、理科なし、国社1時間ずつ、連続なし</td><td><b>○</b></td></tr>
+<tr><td>イ</td><td>国・算・国・算</td><td>国語が2時間 → ⑤で水曜に国語はだめ。でも水曜3時間目は国語</td><td>×</td></tr>
+<tr><td>ウ</td><td>算・理・国・算</td><td>理科が2時間目（④理科は4時間目だけ）</td><td>×</td></tr>
+<tr><td>エ</td><td>国・算・社・理</td><td>算数が1時間だけ（①毎日2時間）</td><td>×</td></tr></table></li>
+    <li>残ったアが答え。落としやすい所は、イを「国語が2回あるだけ」で見のがすこと。<b>2時間あったら次の日を見る</b>、と決めておく。</li>
+  </ol>
+  <div class="ans">答え：ア</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)(i)</span> 月曜が「算・国・算・国」のときの火曜 <span class="type">A・6点｜条件の整理</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は月曜の「<b>国語</b>」が2時間と、「<b>水曜日には国語と社会がある</b>」。月曜の国語2時間を「火曜に国語なし」に直して書く → 火曜は算・算のほかに社・理から選ぶだけになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1日は4コマ。算数が2コマなので、残りは2コマだけ。入る教科をしぼるときは「入れないもの」を先に消す。</li>
+    <li>算数は連続できないので、算数2コマの置き方は「1と3」「1と4」「2と4」の3通りしかない。理科が4時間目に入れば「1と3」に決まる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>水曜を先に埋める。国語1つ・社会1つ・算数2つで4コマ → 水曜の中身は{算,算,国,社}。</li>
+    <li>月曜に国語が2時間 → <b>火曜に国語はなし</b>。火曜の残り2コマは、社・理の中から選ぶ。</li>
+    <li>社・社は×。火曜に社会が2時間なら水曜に社会を入れられないが、水曜には社会がある。理・理も×（理科は4時間目だけ）。だから火曜は 算・算・社・理。</li>
+    <li>理科を4時間目に置く。算数2つは連続できないので1時間目と3時間目。残った2時間目が社会。
+<table><tr><th></th><th>月</th><th>火</th><th>水</th></tr>
+<tr><td>1時間目</td><td>算</td><td>算</td><td>算・国・社のどれか</td></tr>
+<tr><td>2時間目</td><td>国</td><td>社</td><td>〃</td></tr>
+<tr><td>3時間目</td><td>算</td><td>算</td><td>〃</td></tr>
+<tr><td>4時間目</td><td>国</td><td>理</td><td>〃</td></tr></table></li>
+    <li>落としやすい所は「社・社がだめな理由」を飛ばすこと。水曜の社会とセットで消す。</li>
+  </ol>
+  <div class="ans">答え：1時間目…算数　2時間目…社会　3時間目…算数　4時間目…理科</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)(ii)</span> 時間割は何通り作れるか <span class="type">B・6点｜場合の数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>5日間で3時間以上</b>」と「<b>理科はすべて4時間目のみ</b>」。国理社の合計を 20−算数10＝10時間 に直して書く → 1教科だけ4時間、あとは3時間ずつ。理科の入れる4時間目をさがせば木・金が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「それぞれ3時間以上」で合計が10なら、3＋3＋3＝9で1時間余る。余りの1時間がどれか1教科に乗る。</li>
+    <li>場合の数は、決まる所を先に埋めて、自由な所だけ数える。数える所どうしが関係しなければ、かけ算でよい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>理科の入れる場所をさがす。月曜4時間目は国語、水曜は{算,算,国,社}で理科なし。残る4時間目は火・木・金の3つ。理科は3時間以上なので、<b>火・木・金の4時間目はすべて理科</b>。</li>
+    <li>木曜・金曜は 算・算・理 と、あと1コマ（ア・イとする）。理科が4時間目、算数は連続できないので 算・ア・算・理 の形に決まる。
+<table><tr><th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th></tr>
+<tr><td>1時間目</td><td>算</td><td>算</td><td rowspan="4">算2つ＋<br>国・社<br>（6通り）</td><td>算</td><td>算</td></tr>
+<tr><td>2時間目</td><td>国</td><td>社</td><td>ア</td><td>イ</td></tr>
+<tr><td>3時間目</td><td>算</td><td>算</td><td>算</td><td>算</td></tr>
+<tr><td>4時間目</td><td>国</td><td>理</td><td>理</td><td>理</td></tr></table></li>
+    <li>水曜の並べ方。算数2つの位置は「1と3」「1と4」「2と4」の3通り。残り2コマに国語・社会を入れる順が2通り。3×2＝6通り。</li>
+    <li>ア・イの決め方。国語は月曜2＋水曜1＝3時間で足りている。社会は火曜1＋水曜1＝2時間なので、ア・イに社会が1つ以上いる。(国,社)(社,国)(社,社)の<b>3通り</b>。(国,国)は社会が2時間のままで×。</li>
+    <li>木曜の社会は1時間なので、金曜に社会があってもルール⑤にぶつからない。全部で 6×3＝18通り。</li>
+  </ol>
+  <div class="ans">答え：18通り</div>
+  <div class="tip">コツ：「合計10時間を3教科で3時間以上ずつ」と見たら、余りの1時間がどこに乗るかを先に考える。ここでは理科の置き場所が3つしかないので、余りは国語か社会に乗る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 3つの円が初めて最初の位置にそろう時刻 <span class="type">A・6点｜円周と周期</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>秒速3.14cm</b>」と、中心が回る円の半径「<b>2cm</b>」「4cm」「4cm→6cm」。半径を「1周の秒数」に直して書く（直径×3.14÷3.14＝直径） → 1周の秒数は直径の数と同じ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円周＝直径×3.14。秒速3.14cmなら、1周の秒数＝直径×3.14÷3.14＝直径。半径2cmなら4秒。</li>
+    <li>「初めて同じ位置」は3つ全部がそろう最初の時刻。それぞれが最初の位置にもどる時刻の中で、共通する最小のもの。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1周の秒数を表にする。
+<table><tr><th>点</th><th>回る円の半径</th><th>直径</th><th>1周の秒数</th></tr>
+<tr><td>P</td><td>2cm（Aのまわり）</td><td>4cm</td><td><b>4秒</b></td></tr>
+<tr><td>Q</td><td>4cm（Bのまわり）</td><td>8cm</td><td><b>8秒</b></td></tr>
+<tr><td>R</td><td>4cm（Aのまわり）→6cm（Bのまわり）</td><td>8cm→12cm</td><td>8秒→12秒（1セット20秒）</td></tr></table></li>
+    <li>Rは円Aを1周した8秒後に、いったん最初の位置にもどる（そこから円Bのまわりへ出発する）。</li>
+    <li>8秒後: Pは4秒×2で2周、Qは1周、Rは円Aを1周。3つとも最初の位置 → 8秒後。</li>
+    <li>落としやすい所は、Rを「20秒で1セット」とだけ見て20秒後と答えること。Rは8秒後の時点でも最初の位置にいる。</li>
+  </ol>
+  <div class="ans">答え：8秒後</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 42秒後の中心Qをコンパス1回で作図 <span class="type">B・7点｜点の移動・作図</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>42秒後</b>」と「<b>コンパス…1回以下</b>」。42秒を「1周の秒数で割った余り」に直して書く → Qは円Bを1/4周した位置＝Bの真下4cm。それをコンパス1回でどう取るかが本番。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>反時計まわりに1/4周すると、左にいた点は真下へ、右にいた点は真上へ動く。時計の針と逆向きに90°。</li>
+    <li>直角をはさむ2辺がそれぞれ同じ直角三角形は合同。合同なら残りの辺の長さも角も同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>42秒後の位置を余りで出す。P: 42÷4＝10余り2 → 半周 → Aの左。R: 1セット8＋12＝20秒。42÷20＝2余り2 → 円Aを2秒＝1/4周 → Aの真上4cm。Q: 42÷8＝5余り2 → <b>1/4周 → Bの真下4cm</b>。</li>
+    <li>問題の図にQの場所を書く。Bの真下4cmで、BQはABと直角。分度器なし・コンパス1回でこれを取る工夫をさがす。
+<svg viewBox="0 0 440 270" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<circle cx="100" cy="130" r="60" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="300" cy="130" r="100" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="300" cy="130" r="80" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="100" cy="130" r="80" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="60" cy="130" r="20" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="100" cy="50" r="20" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="300" cy="210" r="20" fill="none" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="100" y1="130" x2="300" y2="130" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+<line x1="100" y1="130" x2="100" y2="50" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+<line x1="300" y1="130" x2="300" y2="210" stroke="#d32f2f" stroke-width="1.2" stroke-dasharray="5 3"/>
+<rect x="100" y="118" width="12" height="12" fill="none" stroke="#1565c0" stroke-width="1"/>
+<rect x="288" y="130" width="12" height="12" fill="none" stroke="#d32f2f" stroke-width="1"/>
+<g fill="#222"><circle cx="100" cy="130" r="2.5"/><circle cx="300" cy="130" r="2.5"/><circle cx="60" cy="130" r="2.5"/><circle cx="100" cy="50" r="2.5"/><circle cx="200" cy="130" r="3" fill="#1565c0"/><circle cx="300" cy="210" r="2.5" fill="#d32f2f"/></g>
+<text x="104" y="146">A</text><text x="304" y="124">B</text><text x="50" y="121">P</text><text x="96" y="40" text-anchor="middle">R</text>
+<text x="200" y="150" text-anchor="middle" fill="#1565c0">S</text>
+<text x="324" y="218" fill="#d32f2f" font-weight="bold">Q</text>
+<text x="76" y="95" text-anchor="end" fill="#1565c0">4cm</text><text x="150" y="124" text-anchor="middle" fill="#1565c0">5cm</text><text x="250" y="124" text-anchor="middle" fill="#1565c0">5cm</text>
+<text x="306" y="176" fill="#d32f2f">4cm</text>
+</svg></li>
+    <li>AとBを結ぶ。ABは 4＋2＋4＝10cm（Rの中心はAから4cm、Qの中心はBから4cm、円Rと円Qがくっついて2cm）。円Bは半径5cmなので、ABのまん中の点Sで円Bと交わる。</li>
+    <li>三角形RAS（4cm・5cm・直角）と三角形QBS（4cm・5cm・直角）は合同。だから<b>SR＝SQで、R・S・Qは一直線</b>。QはSをはさんでRのちょうど反対側にある。</li>
+    <li>作図の手順。①直線ABをひき、円Bとの交点をSとする。②直線RSをひく。③コンパスをSに置き、半径SRの円をかく。直線RSとこの円が交わる点のうち、Rの反対側がQ。近くに「Q」と書く。
+<svg viewBox="0 0 440 292" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<circle cx="100" cy="130" r="60" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="300" cy="130" r="100" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="60" cy="130" r="20" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="100" cy="50" r="20" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="200" cy="130" r="128.1" fill="none" stroke="#d32f2f" stroke-width="1.8"/>
+<line x1="100" y1="130" x2="300" y2="130" stroke="#1565c0" stroke-width="1.6"/>
+<line x1="100" y1="50" x2="300" y2="210" stroke="#1565c0" stroke-width="1.6"/>
+<g fill="#222"><circle cx="100" cy="130" r="2.5"/><circle cx="300" cy="130" r="2.5"/><circle cx="60" cy="130" r="2.5"/><circle cx="100" cy="50" r="2.5"/><circle cx="200" cy="130" r="3" fill="#1565c0"/><circle cx="300" cy="210" r="3.5" fill="#d32f2f"/></g>
+<text x="104" y="146">A</text><text x="304" y="124">B</text><text x="50" y="121">P</text><text x="96" y="40" text-anchor="middle">R</text>
+<text x="196" y="150" text-anchor="middle" fill="#1565c0">S</text>
+<text x="308" y="226" fill="#d32f2f" font-weight="bold">Q</text>
+<text x="20" y="270" fill="#1565c0">①直線AB → 円Bとの交点がS　②直線RS</text>
+<text x="20" y="287" fill="#d32f2f">③Sを中心に半径SRの円 → 直線RSとの交点がQ</text>
+</svg></li>
+  </ol>
+  <div class="ans">答え：解説の図2を参照のこと。（直線ABと円Bの交点Sを中心に半径SRの円をかき、直線RSと交わる点のうちRの反対側がQ）</div>
+  <div class="tip">コツ：「コンパス1回」と見たら、同じ長さを1か所だけ移せばよい形をさがす。ここでは「SをはさんでRの反対側に同じ長さ」。Sが円Bの上にあることに気づくのが入口。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 角RQBが160°のときの角PAB <span class="type">B・7点｜点の移動・角度</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2024秒から2025秒の間</b>」と「<b>角RQB＝160°</b>」。2024秒を余りに直して書く（P・Qは余り0＝最初の位置、Rは2024÷20 余り4＝円Aを半周） → 3点の位置が決まる。見るのはそこから1秒未満の動きだけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1秒に進む角度＝360°÷1周の秒数。RとQ（1周8秒）は1秒に45°、P（1周4秒）は1秒に90°。Pは2倍の角度を動く。</li>
+    <li>同じ半径の円を同じ速さで同じ向きに回る2点は、いつも同じ角度だけ動く。だから2点を結んだ線の向きは変わらない。</li>
+    <li>平行な2本の線にななめの線を引くと、同じ側にできる内側の角の和は180°。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2024秒後の位置。P: 2024÷4＝506 → 最初の位置（Aの右）。Q: 2024÷8＝253 → 最初の位置（Bの左）。R: 2024÷20＝101余り4 → 円Aを4秒＝半周 → <b>Aの左4cm</b>。</li>
+    <li>そのあと少し動かす。RとQは半径4cmの円を同じ速さで反時計まわり → どちらも同じ角度だけ下へ下がる。だから R′Q′ は AB と平行のまま。
+<svg viewBox="-15 25 430 222" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+<circle cx="100" cy="130" r="60" fill="none" stroke="#222" stroke-width="1.2"/>
+<circle cx="300" cy="130" r="100" fill="none" stroke="#222" stroke-width="1.2"/>
+<circle cx="100" cy="130" r="40" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="100" cy="130" r="80" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="300" cy="130" r="80" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="0" y1="130" x2="400" y2="130" stroke="#222" stroke-width="1"/>
+<circle cx="140" cy="130" r="20" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<circle cx="20" cy="130" r="20" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<circle cx="220" cy="130" r="20" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<circle cx="130.6" cy="104.3" r="20" fill="none" stroke="#d32f2f" stroke-width="1.6"/>
+<circle cx="24.8" cy="157.4" r="20" fill="none" stroke="#d32f2f" stroke-width="1.6"/>
+<circle cx="224.8" cy="157.4" r="20" fill="none" stroke="#d32f2f" stroke-width="1.6"/>
+<line x1="24.8" y1="157.4" x2="224.8" y2="157.4" stroke="#d32f2f" stroke-width="1.4"/>
+<line x1="224.8" y1="157.4" x2="300" y2="130" stroke="#1565c0" stroke-width="1.4"/>
+<line x1="100" y1="130" x2="24.8" y2="157.4" stroke="#1565c0" stroke-width="1.4"/>
+<line x1="100" y1="130" x2="130.6" y2="104.3" stroke="#1565c0" stroke-width="1.4"/>
+<path d="M 276.0 130 A 24 24 0 0 0 277.4 138.2" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<path d="M 76.0 130 A 24 24 0 0 0 77.4 138.2" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<path d="M 124 130 A 24 24 0 0 0 118.4 114.6" fill="none" stroke="#d32f2f" stroke-width="1.2"/><path d="M 129 130 A 29 29 0 0 0 122.2 111.4" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<path d="M 202.8 157.4 A 22 22 0 1 1 245.5 149.8" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<g fill="#222"><circle cx="100" cy="130" r="2.5"/><circle cx="300" cy="130" r="2.5"/><circle cx="140" cy="130" r="2"/><circle cx="20" cy="130" r="2"/><circle cx="220" cy="130" r="2"/>
+<circle cx="130.6" cy="104.3" r="2.5" fill="#d32f2f"/><circle cx="24.8" cy="157.4" r="2.5" fill="#d32f2f"/><circle cx="224.8" cy="157.4" r="2.5" fill="#d32f2f"/></g>
+<text x="104" y="124">A</text><text x="304" y="124">B</text>
+<text x="146" y="146">P</text><text x="16" y="124" text-anchor="end">R</text><text x="216" y="124" text-anchor="end">Q</text>
+<text x="136.6" y="98.3" fill="#d32f2f">P'</text>
+<text x="18.8" y="175.4" fill="#d32f2f" text-anchor="end">R'</text>
+<text x="232.8" y="177.4" fill="#d32f2f">Q'</text>
+<text x="190" y="150" fill="#d32f2f" text-anchor="end" font-size="12">160°</text>
+<text x="268" y="150" fill="#1565c0" font-size="12">○</text><text x="66" y="150" fill="#1565c0" font-size="12">○</text>
+<text x="-10" y="40" font-size="11" fill="#555">うすい色＝2024秒後、赤＝少し動いたあと</text><text x="-10" y="240" font-size="11" fill="#555">Aの二重の弧＝○の2倍</text>
+</svg></li>
+    <li>角R′Q′B＝160°。R′Q′とABが平行なので、角Q′BA＝180−160＝<b>20°</b>。QはBのまわりを20°動いた。</li>
+    <li>Pは同じ時間に2倍の角度を動く。20×2＝40°。角PAB＝40°。</li>
+    <li>確かめ。Qが20°動く時間は 20÷45＝4/9秒。1秒未満なので「2024秒から2025秒の間」に合う。</li>
+  </ol>
+  <div class="ans">答え：40度</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 1〜20のうち駒が置かれるマスの数 <span class="type">A・6点｜約数の個数・平方数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>約数の個数が奇数個</b>」と「偶数個」。「奇数個」を「<b>平方数</b>（1,4,9,16,…）」に直して書く → 平方数のマスでは1つ右、それ以外は2つ右。あとは1から順に進めるだけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>約数はふつう「1と12」「2と6」「3と4」のようにペアになるので偶数個。平方数だけ「6と6」のペアが1つに重なり、奇数個になる。36の約数は 1,2,3,4,6,9,12,18,36 の9個。</li>
+    <li>20までの平方数は 1,4,9,16。25は20より大きい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1は平方数 → 1つ右の2へ。2は約数が偶数個 → 2つ右の4へ。4は平方数 → 1つ右の5へ。</li>
+    <li>同じように進めて書き出す。□が平方数。
+<pre class="fig">[1]→2→[4]→5→7→[9]→10→12→14→[16]→17→19→21…</pre></li>
+    <li>20以下のマスを数える。1,2,4,5,7,9,10,12,14,16,17,19 の<b>12マス</b>。</li>
+    <li>落としやすい所は、平方数のマスから「2つ右」へ進めること。先に1,4,9,16に印をつけてから進める。</li>
+  </ol>
+  <div class="ans">答え：12マス</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 100回目に置かれるマスの数字 <span class="type">B・6点｜群数列</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>100回目</b>」と「1のマスに駒を置いたときを<b>1回目</b>」。並びを「平方数で区切った組」に直して書く（1｜2,4｜5,7,9｜10,12,14,16｜…） → n組はn個で、最後がn×n。100回目が何組の何番目かが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>平方数の次のマスから次の平方数までを1組にする。n組は n×n で終わり、個数はn個。3組は 5,7,9 の3個で、最後が3×3＝9。</li>
+    <li>1組からn組までの個数は 1＋2＋…＋n。13組までなら (1＋13)×13÷2＝91。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>組に分けて表にする。
+<table><tr><th>組</th><th>置かれるマス</th><th>個数</th><th>最後</th></tr>
+<tr><td>1組</td><td>1</td><td>1</td><td>1×1＝1</td></tr>
+<tr><td>2組</td><td>2, 4</td><td>2</td><td>2×2＝4</td></tr>
+<tr><td>3組</td><td>5, 7, 9</td><td>3</td><td>3×3＝9</td></tr>
+<tr><td>4組</td><td>10, 12, 14, 16</td><td>4</td><td>4×4＝16</td></tr>
+<tr><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+<tr><td>n組</td><td>前の平方数＋1 から2ずつ</td><td>n</td><td>n×n</td></tr></table></li>
+    <li>100回目が何組か。1〜13組の合計は <b>91個</b>。14組を足すと 91＋14＝105 で100をこえる → 100回目は14組の 100−91＝9番目。</li>
+    <li>14組の最初は 13×13＋1＝170。2ずつ増えるので、9番目は 170＋2×(9−1)＝<b>186</b>。</li>
+    <li>確かめ。14組の最後は 170＋2×13＝196＝14×14。合っている。</li>
+  </ol>
+  <div class="ans">答え：186</div>
+  <div class="tip">コツ：(1)で書いた並びに平方数の印があれば、組の区切りはすぐ見える。「何組の何番目」の形にしてから数える。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 101〜200の置かれなかったマスの積の末尾の0 <span class="type">B・7点｜0の個数（2×5）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>駒が置かれなかったマス</b>」と「<b>0が何個連続</b>」。「0の個数」を「2×5の組の数＝5の個数」に直して書く（2は偶数がたくさんあって余る） → 置かれなかったマスのうち、5の倍数だけ調べればよい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>一の位から続く0の個数は、かけた数の中の「2×5」の組の数。2のほうが多いときは、5の個数を数えるだけでよい。</li>
+    <li>25＝5×5、125＝5×5×5 のように、5が2個・3個かくれている数がある。5の倍数を見つけたら、5で何回割れるかを数える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>101〜200を組に分ける。10組の最後は10×10＝100なので、101は11組の最初。置かれるマスは組ごとに「奇数ばかり」「偶数ばかり」が交互になる。</li>
+    <li>置かれなかったマス＝各組で飛ばされた数。
+<table><tr><th>組</th><th>置かれたマス</th><th>置かれなかったマス</th><th>その中の5の倍数</th></tr>
+<tr><td>11組</td><td>101, 103, …, 121（奇数）</td><td>102, 104, …, 120（偶数）</td><td>110, 120</td></tr>
+<tr><td>12組</td><td>122, 124, …, 144（偶数）</td><td>123, 125, …, 143（奇数）</td><td><b>125</b>, 135</td></tr>
+<tr><td>13組</td><td>145, 147, …, 169（奇数）</td><td>146, 148, …, 168（偶数）</td><td>150, 160</td></tr>
+<tr><td>14組</td><td>170, 172, …, 196（偶数）</td><td>171, 173, …, 195（奇数）</td><td>175, 185, 195</td></tr>
+<tr><td>15組</td><td>197, 199</td><td>198, 200</td><td>200</td></tr></table></li>
+    <li>偶数がたくさん入るので、2は5より多い。数えるのは5の個数だけ。</li>
+    <li>5の個数。125＝5×5×5 で3個。150＝2×3×5×5、175＝5×5×7、200＝2×2×2×5×5 で2個ずつ。残りの6個（110,120,135,160,185,195）は1個ずつ。</li>
+    <li>1×6＋2×3＋3×1＝<b>15個</b>。</li>
+  </ol>
+  <div class="ans">答え：15個</div>
+  <div class="tip">コツ：「置かれなかったマス」は組ごとに奇数か偶数のどちらかにそろう。表に「奇数／偶数」と書くだけで、5の倍数の拾いもれが減る。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ（この回で繰り返し出た入口）</h2>
+  <ul>
+    <li>ルールが6つ並ぶ問題は、番号をふって「決まるマス」から埋める。選択肢は消す理由1つで×（大問3）。</li>
+    <li>円を回る点は「1周の秒数」を先に出し、経過時間を「1周で割った余り」に直すと位置が出る（大問4）。</li>
+    <li>「約数が奇数個」は平方数。平方数で区切って組にすると、100回目も0の個数も同じ表で片づく（大問5）。</li>
+  </ul>
+</section>
+</div>
