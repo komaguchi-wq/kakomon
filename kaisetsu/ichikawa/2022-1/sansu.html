@@ -1,0 +1,565 @@
+<!-- generated kakomon ichikawa/2022-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（計算・文章題・角度／正方形の転がり／食塩水）</a></li>
+<li><a href="#4">大問4（覆面算 ABC＋DEF＋GHI＝2022・各位の和としぼりこみ・場合の数）</a></li>
+<li><a href="#5">大問5（10で割るか3倍して2をたす操作・一の位の追いかけ）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（計算・文章題・角度／正方形の転がり／食塩水）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 30点／B 24点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1</td><td>計算・文字式・ニュートン算・角度</td><td>A 6+6+6 ／ B 6</td><td>(1)小数→分数、(2)Aを①、(3)「入れ続けて」→減る速さの比、(4)正五角形の108°・72°を書く</td></tr>
+  <tr><td>2</td><td>正方形の転がり（作図と面積）</td><td>A 6 ／ B 6</td><td>回転の中心が C→P→Q→F と6cmずつ動く。半径は 6cm と対角線の2種類</td></tr>
+  <tr><td>3</td><td>食塩水の濃度（てんびん）</td><td>A 6 ／ B 6+6</td><td>(1)2:1:1 を 200g・100g・100g に、(2)(3)「相手を変える」「重さを入れかえる」の形</td></tr></table>
+  <p>取り方: <b>Aの5問（1(1)〜(3)・2(1)・3(1)）を先に確実に</b>。Bは 1(4) と 3(2)(3) は計算が軽いので手を付け、2(2) は (1) の図が正しく描けたときだけ進む。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 分数と小数のまざった四則計算 <span class="type">A・6点｜四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2022÷120</b>」と「<b>2.75÷3/4</b>」。小数は分数に直して書く（2.75＝11/4）。<b>3つのかっこを先に</b>それぞれ計算し、最後に ÷ と × を1本の式にして約分する。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1/3＋1/9＋1/27 は分母を27にそろえる。9/27＋3/27＋1/27＝13/27。</li>
+    <li>分数のわり算は、ひっくり返してかける。117/20 ÷ 13/27 ＝ 117/20 × 27/13。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>左のかっこ。2022÷120 は 6 で約分して 337/20。337/20 − 11 ＝ 337/20 − 220/20 ＝ 117/20。</li>
+    <li>まん中のかっこ。1/3＋1/9＋1/27 ＝ 13/27。</li>
+    <li>右のかっこ。2.75÷3/4 ＝ 11/4 × 4/3 ＝ 11/3。4 − 11/3 ＝ 12/3 − 11/3 ＝ 1/3。</li>
+    <li>1本にする。117/20 × 27/13 × 1/3。<b>117 と 13 を約分して 9</b>、27 と 3 を約分して 9。9×9/20 ＝ 81/20 ＝ 4 1/20。</li>
+    <li>落としやすい所: 2022÷120 を小数 16.85 で進めると、あとの分数と合わせにくい。分数のまま持つ。</li>
+  </ol>
+  <div class="ans">答え：4 1/20</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 3つの商品の値段 <span class="type">A・6点｜文字式（①におきかえ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Aの値段より40円高く</b>」「<b>2倍より30円安く</b>」。Aを①として、B＝①＋40、C＝②−30 に直して書く → 代金の合計が ① と円だけの式になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「①＋40円」を2個買うと ②＋80円。「②−30円」を3個買うと ⑥−90円。個数は ○ にも円にもかける。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表に整理する。
+      <table><tr><th>商品</th><th>1個の値段</th><th>個数</th><th>代金</th></tr>
+      <tr><td>A</td><td>①</td><td>1個</td><td>①</td></tr>
+      <tr><td>B</td><td>①＋40</td><td>2個</td><td>②＋80</td></tr>
+      <tr><td>C</td><td>②−30</td><td>3個</td><td>⑥−90</td></tr>
+      <tr><td>合計</td><td></td><td></td><td><b>⑨−10</b>＝2690</td></tr></table></li>
+    <li>⑨ ＝ 2690＋10 ＝ 2700。① ＝ 2700÷9 ＝ <b>300円</b>。</li>
+    <li>確かめ。A300円、B340円、C570円。300＋680＋1710＝2690。合う。</li>
+    <li>落としやすい所: ＋80 と −90 を合わせると −10。2690 から 10 を「ひく」のではなく「たす」。</li>
+  </ol>
+  <div class="ans">答え：300円</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 水を入れながら排水する水そう <span class="type">A・6点｜ニュートン算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>毎分10Lの割合で水を入れ続けています</b>」と「Aのみで9分」「Bのみで24分」。空になる時間は「出す量−入る10L」＝<b>減る速さ</b>の話に直して書く → 減る速さの比は時間の逆比 24:9＝8:3 と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ量を9分と24分で減らす → 1分に減る量の比は、時間の逆比。24:9 ＝ 8:3。</li>
+    <li>排水管が出す量 ＝ 1分に減る量 ＋ 入ってくる10L。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1分に減る量を、A＝⑧、B＝③ とおく。出す量は 10L をたした形で表に書く。
+      <table><tr><th></th><th>1分に減る量</th><th>入る量</th><th>1分に出す量</th></tr>
+      <tr><td>A</td><td>⑧</td><td>10L</td><td>⑧＋10</td></tr>
+      <tr><td>B</td><td>③</td><td>10L</td><td>③＋10</td></tr>
+      <tr><td>差</td><td>⑤</td><td></td><td><b>⑤＝5L</b></td></tr></table></li>
+    <li>「AはBより1分あたり5L多く出す」→ ⑤＝5L → ①＝1L。</li>
+    <li>Aで減らすと1分に 8L。9分で空 → 容量は <b>8×9＝72L</b>。</li>
+    <li>確かめ。Bは1分に 3L 減る。3×24＝72L。合う。</li>
+    <li>落としやすい所: 9分と24分をそのまま「出す量の比」にしない。入る10Lがあるので、比になるのは「減る量」。</li>
+  </ol>
+  <div class="ans">答え：72L</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 長方形と正五角形の重なり・印の角の和 <span class="type">B・6点｜角度（三角形の外角）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>正五角形</b>」と「<b>角の大きさの和</b>」。正五角形は 1つの角108°・外角72° を図に置く。印は2つとも辺が交わる点にあるので、ア・イを別々に出さず、<b>三角形で和を作る</b>。108と72を書いて三角形が見えたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正五角形の外角は 360÷5＝72°、1つの角は 180−72＝108°。</li>
+    <li>三角形の外角は、となり合わない2つの角の和。</li>
+    <li>長方形の向かい合う辺は平行。平行な2本の線を1本の線が横切ると、Zの形の角（錯角）は等しい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>記号をつける。下の交点を P、ア の向かい側の角を ア′（対頂角で等しい）。正五角形の右のかどを A、Aから下りる辺と長方形の辺が交わる点を B。
+      <svg id="q1_4_fig" viewBox="0 0 490 378" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<path d="M216.8,318.0 L197.6,328.8 A22,22 0 0 1 194.8,318.0 Z" fill="#ffe0b2" stroke="none"/>
+<path d="M216.8,318.0 L236.0,307.2 A22,22 0 0 1 238.8,318.0 Z" fill="#ffe0b2" stroke="none"/>
+<path d="M253.0,51.2 L270.8,64.1 A22,22 0 0 1 233.8,61.9 Z" fill="#dbe9ff" stroke="none"/>
+<path d="M444.5,190.3 L426.7,177.3 A22,22 0 0 1 463.6,179.5 Z" fill="#dbe9ff" stroke="none"/>
+<path d="M328.3,255.4 L323.4,270.6 A16,16 0 0 1 314.4,263.2 Z" fill="#c8e6c9" stroke="none"/>
+<path d="M328.3,255.4 L333.3,240.2 A16,16 0 0 1 342.3,247.6 Z" fill="#c8e6c9" stroke="none"/>
+<path d="M367.6,134.4 L380.6,143.9 A16,16 0 0 1 362.7,149.7 Z" fill="#ffe0b2" stroke="none"/>
+<path d="M308.0,318.0 L312.3,304.7 A14,14 0 0 0 294.0,318.0 Z" fill="#fff" stroke="none"/>
+<polygon points="211.5,21.0 367.6,134.4 308.0,318.0 115.0,318.0 55.4,134.4" fill="none" stroke="#222" stroke-width="1.6"/>
+<polygon points="280.0,36.0 385.2,223.5 119.2,372.8 14.0,185.3" fill="none" stroke="#222" stroke-width="1.6"/>
+<polygon points="216.8,318.0 308.0,318.0 328.3,255.4" fill="none" stroke="#d32f2f" stroke-width="3"/>
+<line x1="367.64027991436484" y1="134.44609235503538" x2="444.45263344052023" y2="190.2535338679698" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="6,4"/>
+<line x1="385.217227126002" y1="223.4948935729059" x2="477.5912657929408" y2="171.65700070151362" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="6,4"/>
+<line x1="444.45263344052023" y1="190.2535338679698" x2="468.72314327176866" y2="207.887091436744" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="6,4"/>
+<path d="M197.6,328.8 A22,22 0 0 1 194.8,318.0" fill="none" stroke="#222" stroke-width="1.3"/>
+<path d="M236.0,307.2 A22,22 0 0 1 238.8,318.0" fill="none" stroke="#222" stroke-width="1.3"/>
+<path d="M270.8,64.1 A22,22 0 0 1 233.8,61.9" fill="none" stroke="#222" stroke-width="1.3"/>
+<path d="M426.7,177.3 A22,22 0 0 1 463.6,179.5" fill="none" stroke="#222" stroke-width="1.3"/>
+<path d="M323.4,270.6 A16,16 0 0 1 314.4,263.2" fill="none" stroke="#222" stroke-width="1.3"/>
+<path d="M333.3,240.2 A16,16 0 0 1 342.3,247.6" fill="none" stroke="#222" stroke-width="1.3"/>
+<path d="M380.6,143.9 A16,16 0 0 1 362.7,149.7" fill="none" stroke="#222" stroke-width="1.3"/>
+<path d="M312.3,304.7 A14,14 0 0 0 294.0,318.0" fill="none" stroke="#222" stroke-width="1.3"/>
+<text x="178.8" y="334.0" font-size="17" fill="#d32f2f" text-anchor="middle" font-weight="bold">ア</text>
+<text x="262.8" y="313.0" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="normal">ア′</text>
+<text x="255.0" y="91.2" font-size="17" fill="#d32f2f" text-anchor="middle" font-weight="bold">イ</text>
+<text x="446.5" y="164.3" font-size="15" fill="#d32f2f" text-anchor="middle" font-weight="normal">イ′</text>
+<text x="284.0" y="298.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">108°</text>
+<text x="383.6" y="136.4" font-size="12" fill="#222" text-anchor="start" font-weight="normal">▲72°</text>
+<text x="373.6" y="124.4" font-size="14" fill="#222" text-anchor="start" font-weight="normal">A</text>
+<text x="342.3" y="271.4" font-size="14" fill="#222" text-anchor="start" font-weight="normal">B</text>
+<text x="452.5" y="208.3" font-size="14" fill="#222" text-anchor="start" font-weight="normal">C</text>
+<text x="306.3" y="275.4" font-size="11" fill="#222" text-anchor="middle" font-weight="normal">●</text>
+<text x="350.3" y="241.4" font-size="11" fill="#222" text-anchor="middle" font-weight="normal">●</text>
+<text x="220.8" y="338.0" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">P</text>
+<text x="20.0" y="225.3" font-size="12" fill="#555" text-anchor="start" font-weight="normal">長方形</text>
+<text x="95.4" y="254.4" font-size="12" fill="#555" text-anchor="start" font-weight="normal">正五角形</text>
+</svg></li>
+    <li>赤い三角形（P・正五角形のかど・B）。角は ア′・108°・●。180−108＝72 だから、<b>ア＋●＝72</b>。</li>
+    <li>正五角形の A につながる上の辺を、A の先にのばす。長方形の P・B を通る辺ものばして、交わる点を C。三角形ABC で、A の角は正五角形の外角 72°（▲）、B の角は ●（対頂角）。</li>
+    <li>C の外側の角 イ′ は三角形ABC の外角。<b>イ′＝●＋72</b>。長方形の2辺は平行だから、Zの形で イ′＝イ。</li>
+    <li>ア＋イ ＝ ア＋（●＋72）＝（ア＋●）＋72 ＝ 72＋72 ＝ 144°。</li>
+  </ol>
+  <div class="ans">答え：144度</div>
+  <div class="tip">コツ：「2つの角の和」を聞かれたら、片方ずつ出せなくてよい。ア＋● と ●＋72 のように、同じ角（●）を通して2つをつなぐ。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 転がる正方形の辺ADが通る部分の作図 <span class="type">A・6点｜図形の移動（作図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>滑らないように1回転</b>」と「<b>ADが通過した部分</b>」。回転の中心は直線についている右下のかど。C→P→Q→F と6cmずつ右へ移る、と図に置く → 中心ごとに A と D がえがく弧をコンパスで描けば決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>転がる正方形は、直線についている右下のかどを中心に 90° ずつ回る。4回で1回転、右に 6×4＝24cm 進む。</li>
+    <li>中心から点までの長さは変わらないので、点は円の弧をえがく。半径は 辺の6cm か、対角線（AC）の2種類。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>直線上に、Cから6cmごとに点 P・Q を打つ（F はもうある）。中心は <b>C→P→Q→F</b> の順。
+      <svg id="q2_1_fig" viewBox="0 0 380 170" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<defs><pattern id="q2_1_h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#d32f2f" stroke-width="1.4"/></pattern></defs>
+<path d="M16.0,62.0 A93.3,93.3 0 0 1 148.0,62.0 A66.0,66.0 0 0 1 181.0,70.8 A66.0,66.0 0 0 1 214.0,62.0 A93.3,93.3 0 0 1 346.0,62.0 L280.0,62.0 A66.0,66.0 0 0 0 214.0,128.0 L148.0,128.0 A66.0,66.0 0 0 0 82.0,62.0 Z" fill="url(#q2_1_h)" stroke="#d32f2f" stroke-width="1.8"/>
+<line x1="2" y1="128" x2="379" y2="128" stroke="#222" stroke-width="1.5"/>
+<text x="4" y="124" font-size="12" fill="#222" font-style="italic">l</text>
+<rect x="16" y="62.0" width="66.0" height="66.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<rect x="280.0" y="62.0" width="66.0" height="66.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<path d="M82.0,62.0 L280.0,62.0 M148.0,62.0 L148.0,128.0 M214.0,62.0 L214.0,128.0" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="12.0" y="57.0" font-size="12" fill="#222" text-anchor="middle">A</text>
+<text x="86.0" y="57.0" font-size="12" fill="#222" text-anchor="middle">D</text>
+<text x="12.0" y="142.0" font-size="12" fill="#222" text-anchor="middle">B</text>
+<text x="86.0" y="142.0" font-size="12" fill="#222" text-anchor="middle">C</text>
+<text x="276.0" y="57.0" font-size="12" fill="#222" text-anchor="middle">E</text>
+<text x="350.0" y="57.0" font-size="12" fill="#222" text-anchor="middle">H</text>
+<text x="276.0" y="142.0" font-size="12" fill="#222" text-anchor="middle">F</text>
+<text x="350.0" y="142.0" font-size="12" fill="#222" text-anchor="middle">G</text>
+<line x1="82.0" y1="128.0" x2="16.0" y2="62.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/>
+<line x1="82.0" y1="128.0" x2="82.0" y2="62.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/>
+<line x1="148.0" y1="128.0" x2="148.0" y2="62.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/>
+<line x1="214.0" y1="128.0" x2="148.0" y2="128.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/>
+<line x1="280.0" y1="128.0" x2="214.0" y2="128.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/>
+<line x1="280.0" y1="128.0" x2="214.0" y2="62.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/>
+<circle cx="82.0" cy="128" r="2.6" fill="#1565c0"/>
+<text x="82.0" y="158" font-size="11" fill="#1565c0" text-anchor="middle">①C</text>
+<circle cx="148.0" cy="128" r="2.6" fill="#1565c0"/>
+<text x="148.0" y="158" font-size="11" fill="#1565c0" text-anchor="middle">②P</text>
+<circle cx="214.0" cy="128" r="2.6" fill="#1565c0"/>
+<text x="214.0" y="158" font-size="11" fill="#1565c0" text-anchor="middle">③Q</text>
+<circle cx="280.0" cy="128" r="2.6" fill="#1565c0"/>
+<text x="280.0" y="158" font-size="11" fill="#1565c0" text-anchor="middle">④F</text>
+<text x="148.0" y="142" font-size="11" fill="#222" text-anchor="middle">P</text>
+<text x="214.0" y="142" font-size="11" fill="#222" text-anchor="middle">Q</text>
+<text x="49.0" y="142" font-size="10" fill="#555" text-anchor="middle">6cm</text>
+</svg></li>
+    <li>1回目（中心C）。A は<b>半径AC（対角線）</b>の弧で右上へ、D は半径6cmの弧で P へ。AD はこの2つの弧の間を通る。</li>
+    <li>2回目（中心P）。D は中心そのもので動かない。A は半径6cmの四分円で Q へ。</li>
+    <li>3回目（中心Q）。A は中心。D は半径6cmの四分円で Q の真上へ。2回目と3回目の四分円は重なる。</li>
+    <li>4回目（中心F）。A は半径6cmの弧で E へ、D は半径FH（対角線）の弧で H へ。</li>
+    <li>弧で囲まれた部分に斜線。落としやすい所: 1回目と4回目で、対角線の長さの弧を忘れない（Aの通り道は6cmより外側）。</li>
+  </ol>
+  <div class="ans">答え：解説の図を参照のこと。（中心を C・P・Q・F の順に取り、半径6cmの弧4本と、対角線の長さ（AC・FH）の弧2本で囲まれた部分に斜線）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> ADが通った部分の面積 <span class="type">B・6点｜図形の移動（面積）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1辺の長さが1cmの正三角形の面積は0.43cm²</b>」。これは斜線の中に<b>正三角形がかくれている</b>合図 → まん中の重なりを 正三角形＋おうぎ形 に分ける。両はしは「大きい四分円−小さい四分円」。(1)の図が描けていれば計算だけなので手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正方形の面積は 対角線×対角線÷2。6×6＝36 だから、対角線×対角線＝72。半径が対角線の四分円は 72×3.14÷4。</li>
+    <li>正三角形の辺が6倍なら、面積は 6×6＝36倍。</li>
+    <li>半径6cmの円が2つ、中心どうし6cmはなれて交わる。交点と2つの中心を結ぶと、3辺とも6cmの正三角形。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>斜線を5つに分ける。両はしの濃い部分2か所、まん中の 30° のおうぎ形2か所、正三角形1か所。
+      <svg id="q2_2_fig" viewBox="0 0 380 190" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<path d="M16.0,62.0 A93.3,93.3 0 0 1 148.0,62.0 L148.0,128.0 A66.0,66.0 0 0 0 82.0,62.0 Z" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<path d="M214.0,62.0 A93.3,93.3 0 0 1 346.0,62.0 L280.0,62.0 A66.0,66.0 0 0 0 214.0,128.0 Z" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<path d="M148.0,128.0 L148.0,62.0 L128.7,81.3 A66.0,66.0 0 0 0 148.0,128.0 Z" fill="#ffb74d" stroke="#222" stroke-width="1"/>
+<path d="M16.0,62.0 L82.0,62.0 A66.0,66.0 0 0 0 35.3,81.3 Z" fill="none" stroke="#d32f2f" stroke-width="1.4" stroke-dasharray="4,3"/>
+<text x="140.3" y="103.8" font-size="13" fill="#222" text-anchor="middle">★</text>
+<text x="33.6" y="77.4" font-size="13" fill="#d32f2f" text-anchor="middle">★</text>
+<path d="M132.6,92.8 Q82.0,25.7 42.4,70.8" fill="none" stroke="#d32f2f" stroke-width="1.3" marker-end="url(#q2_2_ar)"/>
+<defs><marker id="q2_2_ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#d32f2f"/></marker></defs>
+<path d="M148.0,128.0 L148.0,62.0 A66.0,66.0 0 0 1 181.0,70.8 Z" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<path d="M214.0,128.0 L181.0,70.8 A66.0,66.0 0 0 1 214.0,62.0 Z" fill="#dbe9ff" stroke="#222" stroke-width="1"/>
+<path d="M148.0,128.0 L181.0,70.8 L214.0,128.0 Z" fill="#c8e6c9" stroke="#222" stroke-width="1"/>
+<line x1="2" y1="128" x2="379" y2="128" stroke="#222" stroke-width="1.5"/>
+<text x="4" y="124" font-size="12" fill="#222" font-style="italic">l</text>
+<rect x="16" y="62.0" width="66.0" height="66.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<rect x="280.0" y="62.0" width="66.0" height="66.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="12.0" y="57.0" font-size="12" fill="#222" text-anchor="middle">A</text>
+<text x="86.0" y="57.0" font-size="12" fill="#222" text-anchor="middle">D</text>
+<text x="12.0" y="142.0" font-size="12" fill="#222" text-anchor="middle">B</text>
+<text x="86.0" y="142.0" font-size="12" fill="#222" text-anchor="middle">C</text>
+<text x="276.0" y="57.0" font-size="12" fill="#222" text-anchor="middle">E</text>
+<text x="350.0" y="57.0" font-size="12" fill="#222" text-anchor="middle">H</text>
+<text x="276.0" y="142.0" font-size="12" fill="#222" text-anchor="middle">F</text>
+<text x="350.0" y="142.0" font-size="12" fill="#222" text-anchor="middle">G</text>
+<path d="M82.0,62.0 L280.0,62.0" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="82.0" y1="128" x2="16" y2="62.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/>
+<line x1="280.0" y1="128" x2="346.0" y2="62.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="82.0" y="28.7" font-size="11" fill="#222" text-anchor="middle">濃い：9×3.14</text>
+<text x="280.0" y="28.7" font-size="11" fill="#222" text-anchor="middle">濃い：9×3.14</text>
+<text x="181.0" y="110.4" font-size="10" fill="#222" text-anchor="middle">正三角形</text>
+<text x="181.0" y="122.5" font-size="10" fill="#222" text-anchor="middle">15.48</text>
+<text x="159.0" y="74.1" font-size="9" fill="#222" text-anchor="middle">30°</text>
+<text x="203.0" y="74.1" font-size="9" fill="#222" text-anchor="middle">30°</text>
+<text x="181.0" y="158" font-size="11" fill="#222" text-anchor="middle">うすい：3×3.14 が2つ（P・Qと交点で正三角形）</text>
+<text x="148.0" y="142" font-size="11" fill="#222" text-anchor="middle">P</text>
+<text x="214.0" y="142" font-size="11" fill="#222" text-anchor="middle">Q</text>
+<text x="29.2" y="112.6" font-size="9" fill="#1565c0" text-anchor="middle">AC</text>
+</svg></li>
+    <li>濃い部分。右下の★を左上の★へ移すと、<b>半径ACの四分円から半径6cmの四分円を引いた形</b>。72×3.14÷4 − 36×3.14÷4 ＝ 18×3.14 − 9×3.14 ＝ 9×3.14。</li>
+    <li>まん中。P と Q の四分円の交点に、P・Q から線を引くと 1辺6cmの正三角形。残りは 90−60＝30° のおうぎ形が2つ。1つは 6×6×3.14×30/360 ＝ 3×3.14。</li>
+    <li>正三角形。0.43×36 ＝ 15.48。</li>
+    <li>合計。9×3.14×2 ＋ 3×3.14×2 ＋ 15.48 ＝ <b>24×3.14＋15.48</b> ＝ 75.36＋15.48 ＝ 90.84。</li>
+    <li>落としやすい所: 3.14 のかけ算は最後に1回だけ。18 と 6 を先にたして 24×3.14。</li>
+  </ol>
+  <div class="ans">答え：90.84cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 3つを混ぜてできる7%の食塩水 <span class="type">A・6点｜濃度（食塩の重さ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2:1:1の割合</b>」と「<b>濃度7%</b>」。割合は 200g・100g・100g の重さに直して書く → 食塩の重さの合計で式が立つ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>食塩の重さ ＝ 食塩水の重さ × 濃度。混ぜても食塩の合計は変わらない。400g の 7% なら 400×0.07＝28g。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表に書く。
+      <table><tr><th></th><th>食塩水</th><th>濃度</th><th>食塩</th></tr>
+      <tr><td>A</td><td>200g</td><td>5%</td><td>10g</td></tr>
+      <tr><td>B</td><td>100g</td><td>8%</td><td>8g</td></tr>
+      <tr><td>C</td><td>100g</td><td>？</td><td><b>28−18＝10g</b></td></tr>
+      <tr><td>全部</td><td>400g</td><td>7%</td><td>28g</td></tr></table></li>
+    <li>C の食塩は 10g。100g の中の 10g だから、10÷100×100 ＝ <b>10%</b>。</li>
+    <li>落としやすい所: 2:1:1 を 2g・1g・1g で計算すると 0.28g などの小数になる。100g 単位にすると楽。</li>
+  </ol>
+  <div class="ans">答え：10%</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> Bのつもりが C を同じ重さだけ混ぜた <span class="type">B・6点｜濃度（てんびん・比）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Cを ア g</b>」（相手だけ変わり、重さは同じ）と「<b>1.5%高く</b>」。Aとの濃度の差を 3（8−5）と 5（10−5）に直して書く → 混ぜる重さが同じなら、上がり幅も 3:5 と決まる。(1)で10%が出ていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>てんびん。5% の100g に ア g を混ぜると、濃度は 5 から「相手との差 × ア/(100＋ア)」だけ上がる。重さの組が同じなら、この割合は同じ。相手が 8% なら差3、10% なら差5。</li>
+    <li>てんびんのうでの長さの比は、重さの逆比。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>上がり幅を比で書く。
+      <table><tr><th></th><th>相手</th><th>5%との差</th><th>上がり幅</th></tr>
+      <tr><td>予定</td><td>B 8%</td><td>3</td><td>③</td></tr>
+      <tr><td>実際</td><td>C 10%</td><td>5</td><td>⑤</td></tr>
+      <tr><td>差</td><td></td><td></td><td><b>②＝1.5%</b></td></tr></table></li>
+    <li>①＝1.5÷2＝0.75%。予定の上がり幅は 0.75×3＝2.25%。予定の濃度は 5＋2.25＝7.25%。</li>
+    <li>予定のてんびん。5% から 2.25、8% までの残りは 8−7.25＝0.75。うでの長さは 2.25:0.75＝<b>3:1</b>。</li>
+    <li>重さは逆比で 1:3。A が 100g だから、ア ＝ 100×3 ＝ 300。</li>
+    <li>確かめ。A100g（食塩5g）＋B300g（24g）＝29g÷400g＝7.25%。A100g＋C300g（30g）＝35g÷400g＝8.75%。差は 1.5%。合う。</li>
+  </ol>
+  <div class="ans">答え：300</div>
+  <div class="tip">コツ：「同じ重さで相手だけ変える」と見たら、上がり幅の比＝相手との差の比。ア を先に求めようとせず、差の 1.5% から ① を出す。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> AとBの重さを入れかえて混ぜた <span class="type">B・6点｜濃度（てんびん・対称）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Aを イ g、Bを100g</b>」（重さを入れかえ）と「<b>1%高く</b>」。入れかえ＝てんびんの支点が 5 と 8 のまん中について<b>左右対称</b>、と直して書く → 2つの濃度の和が 5＋8＝13 と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>5% と 8% を a g と b g で混ぜたときと、b g と a g で混ぜたとき。5 からの距離と 8 からの距離が入れかわる。たとえば 5 から 1 上がる組なら、入れかえると 8 から 1 下がる。</li>
+    <li>和と差が分かれば和差算。和13・差1 → 6 と 7。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>予定（A100g・B イg）の濃度を 8−□、実際（A イg・B100g）の濃度を 5＋□ とおく。□は同じ。</li>
+    <li>実際のほうが 1% 高い。（5＋□）−（8−□）＝1 → □×2＝4 → <b>□＝2</b>。予定は 6%、実際は 7%。</li>
+    <li>予定のてんびん。6% は 5 から 1、8 から 2。うでの長さ 1:2 → 重さは逆比で A:B＝<b>2:1</b>。</li>
+    <li>A が 100g だから、イ ＝ 100÷2 ＝ 50。</li>
+    <li>確かめ。A100g（5g）＋B50g（4g）＝9g÷150g＝6%。A50g（2.5g）＋B100g（8g）＝10.5g÷150g＝7%。差は 1%。合う。</li>
+  </ol>
+  <div class="ans">答え：50</div>
+  <div class="tip">コツ：「重さを入れかえる」と見たら、2つの濃度は 5 と 8 のまん中（6.5）をはさんで対称。(2)とちがい、まず濃度の和を出す。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>「〜より○円高い」「〜を入れ続ける」「2:1:1」のような言葉は、①・減る速さ・200g に<b>直して書いて</b>から式にする（1(2)(3)・3(1)）。</li>
+    <li>角度・濃度で「和」「差」を聞かれたら、片方ずつ出さずに<b>同じもの（●・□）でつなぐ</b>（1(4)・3(3)）。</li>
+    <li>転がる図形は、まず中心の移り方を直線上に打つ。半径は 辺 と 対角線 の2種類（2(1)(2)）。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4"><h1 class="dtitle">大問4（覆面算 ABC＋DEF＋GHI＝2022・各位の和としぼりこみ・場合の数）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4</span> この回の全体像（大問4） <span class="type">A 9点／B 15点／C 0点</span></h2>
+  <table><tr><th>空らん</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>ア・イ・ウ</td><td>3けた＋3けた＋3けた＝2022 の筆算。各位の3つの和の候補</td><td>A 3+3+3</td><td>「異なる数」→ <b>3つの和は 3以上24以下</b>。一の位が2になる和、くり上がり1か2をたして2になる和、と位ごとに順にしぼる</td></tr>
+  <tr><td>エ・オ・カ・キ</td><td>候補を1通りにしぼる</td><td>B 3+3+3+3</td><td>「異なる9つの数」→ <b>9個の和は 36以上45以下</b>。3つの位の和をたして、この範囲に入る組だけ残す</td></tr>
+  <tr><td>ク</td><td>A＝7のとき、残りの入れ方は何通り</td><td>B 3</td><td>「A＝7」→ D＋G＝12 に直す。<b>使う数の組を先に決めて、並べ方（3×2×1）をあとでかける</b></td></tr>
+  </table>
+  <p>取り方: <b>ア〜ウのA 9点は、筆算の横に「3〜24」を書けば順に出る</b>。エ〜キは会話文がヒント（「異なる9つの数」）を言ってくれているBで、「9個の和は36〜45」の1行が書ければ4問まとめて取れる。クは組の分け方2通りを見つけてから数える。前の空らんの答えを次で使う問題なので、ア〜ウを急いで間違えると後ろまで崩れる。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 ア・イ・ウ</span> 各位の3つの和として考えられる値 <span class="type">A・9点｜筆算の各位とくり上がり</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>0から9までの数</b>」と「<b>一の位の数のみに着目</b>」。異なる3つの数の和の範囲「3〜24」を筆算の横に書く（図に置く）→ 一の位が2になる和は12か22に決まる。十・百の位は、下からのくり上がりをたしてから同じことをする。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>異なる3つの数の和は、いちばん小さくて 0＋1＋2＝3、いちばん大きくて 9＋8＋7＝24。</li>
+    <li>たし算の筆算では、その位の和の「一の位」が答えのその位になる。十の位以上はくり上がる。たとえば 4＋8＋9＝21 なら、1を書いて2をくり上げる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>筆算の横に「3つの和は3〜24」と書く。位ごとに、何がたされて何になるかを書き出す。
+<pre class="fig">      A  B  C
+      D  E  F
+   +) G  H  I
+   ───────────
+   2  0  2  2
+一の位: C＋F＋I ＝ □2 の形
+十の位: B＋E＋H ＋ くり上がり ＝ □2 の形
+百の位: A＋D＋G ＋ くり上がり ＝ 20</pre></li>
+    <li>一の位。C＋F＋I は 3〜24 で、一の位が2。当てはまるのは <b>12 と 22</b>。これがア。</li>
+    <li>十の位。一の位から 1 か 2 がくり上がる。B＋E＋H にそれをたした一の位が2になればよい。つまり B＋E＋H の一の位は 1 か 0。3〜24 の中では 10・11・20・21。これがイ。</li>
+    <li>百の位。十の位の和は、小さくて 10＋1＝11、大きくて 21＋2＝23。だから百の位へのくり上がりも 1 か 2。答えは 2022 なので、A＋D＋G にくり上がりをたすと <b>20</b>。A＋D＋G は 19 か 18。これがウ。
+<table><tr><th>位</th><th>3つの和</th><th>くり上がりを入れた条件</th><th>候補</th></tr>
+<tr><td>一</td><td>3〜24</td><td>一の位が2</td><td>12，22</td></tr>
+<tr><td>十</td><td>3〜24</td><td>＋1か＋2 で一の位が2</td><td>10，11，20，21</td></tr>
+<tr><td>百</td><td>3〜24</td><td>＋1か＋2 で 20</td><td>18，19</td></tr></table></li>
+    <li>落としやすい所は、くり上がりを「1だけ」と思いこむこと。一の位の和が22なら2くり上がる。だからイは2つでなく4つある。</li>
+  </ol>
+  <div class="ans">答え：ア 12，22／イ 10，11，20，21／ウ 18，19</div>
+  <div class="tip">コツ：「答えが複数ある場合はすべて答えなさい」とあるので、1つ見つけて終わりにしない。範囲「3〜24」の中を、一の位の条件で全部ひろう。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 エ・オ・カ・キ</span> 各位の和を1通りにしぼる・使わない数 <span class="type">B・12点｜9個の和の範囲でしぼる</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>異なる9つの数が入る</b>」。これを「<b>9個の和は 36以上45以下</b>」に直して書く（0〜9の合計45から、使わない1つを引いた数）。3つの位の和をたしてこの範囲に入る組だけが残る。ア〜ウが出ていれば計算は3行なので、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>0から9までの10個の和は 45。（0＋9）×10÷2 で出せる。9個だけ使うなら、45から使わない1つを引く。使わないのが9なら 36、0なら 45。だから9個の和は 36〜45。</li>
+    <li>C＋F＋I と B＋E＋H と A＋D＋G をぜんぶたすと、9個の文字の和になる。位ごとの和の候補を、この1本の式でつなぐ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ア〜ウの候補と「9個の和は 36〜45」を並べて書く。
+<table><tr><th>位の和</th><th>候補（ア〜ウ）</th></tr>
+<tr><td>C＋F＋I</td><td>12，22</td></tr>
+<tr><td>B＋E＋H</td><td>10，11，20，21</td></tr>
+<tr><td>A＋D＋G</td><td>18，19</td></tr>
+<tr><td>3つをたした和</td><td><b>36 以上 45 以下</b></td></tr></table></li>
+    <li>まず C＋F＋I が 22 だとすると、残り6個（B・E・H・A・D・G）の和は 36−22＝14 から 45−22＝23 まで。ところが B＋E＋H は10以上、A＋D＋G は18以上で、たすと 28以上になる。23をこえるので合わない。だから <b>C＋F＋I＝12</b>。これがエ。</li>
+    <li>C＋F＋I＝12 なので、十の位へのくり上がりは1。B＋E＋H に1をたした一の位が2 → B＋E＋H は 11 か 21。残り6個の和は 36−12＝24 から 45−12＝33 まで。21 だと A＋D＋G の18をたして 39 で33をこえる。だから <b>B＋E＋H＝11</b>。これがオ。
+<table><tr><th>C＋F＋I</th><th>残り6個の和</th><th>B＋E＋H＋A＋D＋G の最小</th><th>合うか</th></tr>
+<tr><td>22</td><td>14〜23</td><td>10＋18＝28</td><td>× こえる</td></tr>
+<tr><td>12</td><td>24〜33</td><td>11＋18＝29</td><td>○（21＋18＝39 は×）</td></tr></table></li>
+    <li>十の位の和は 11＋1＝12。百の位へのくり上がりは1。A＋D＋G＋1＝20 なので A＋D＋G＝19。これがカ。</li>
+    <li>9個の和は 12＋11＋19＝42。使わない数は 45−42＝3。これがキ。</li>
+    <li>たしかめ。会話文の最初の例 674＋674＋674 は同じ数を使っているので、ここでは候補にならない。3を使わない組で、たとえば 701＋452＋869＝2022 が作れる。</li>
+  </ol>
+  <div class="ans">答え：エ 12／オ 11／カ 19／キ 3</div>
+  <div class="tip">コツ：「0〜9から異なる9つ」と見たら、「全部の和は 36〜45」と先に1行書く。位ごとの候補をこの1本でつなぐと、場合分けが一気に消える。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 ク</span> A＝7のとき、残りの入れ方は何通り <span class="type">B・3点｜組を決めてから並べ方をかける</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Aが7のとき</b>」。カの A＋D＋G＝19 から「<b>D＋G＝12</b>」に直して書く。使える数は3と7を除いた 0，1，2，4，5，6，8，9。この中で2つの和が12になる組は4と8だけなので、残り6個を 11 と 12 の組に分けるだけになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3つの数を3つの場所（B・E・H）に入れる並べ方は 3×2×1＝6通り。たとえば 0，2，9 を B・E・H に入れるなら、Bに3通り、Eに残り2通り、Hは1通り。</li>
+    <li>数える順番は「どの数を使うか（組）」を先に決め、「どこに入れるか（並べ方）」をあとでかける。組ごとに並べ方の数は同じなので、組の数×並べ方で出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>使う数を書き出す。キより3は使わない。Aに7を使ったので、残りは 0，1，2，4，5，6，8，9 の8個。</li>
+    <li>D＋G＝19−7＝12。残りの8個から2つで12になるのは <b>4と8</b> だけ（3＋9 は3が使えない、6＋6 は同じ数、5＋7 は7が使用済み）。</li>
+    <li>残った 0，1，2，5，6，9 を、B＋E＋H＝11 の組と C＋F＋I＝12 の組に分ける。和が11になる3つは 0＋2＋9 と 0＋5＋6 の2つだけ。残りの3つがそれぞれ 1＋5＋6＝12、1＋2＋9＝12 になるので、分け方は <b>2通り</b>。
+<table><tr><th>D・G（和12）</th><th>B・E・H の組（和11）</th><th>C・F・I の組（和12）</th></tr>
+<tr><td>4，8</td><td>0，2，9</td><td>1，5，6</td></tr>
+<tr><td>4，8</td><td>0，5，6</td><td>1，2，9</td></tr></table></li>
+    <li>1つの分け方ごとに並べ方を数える。D・G は 2通り、B・E・H は 6通り、C・F・I は 6通り。2×6×6＝72通り。</li>
+    <li>分け方が2通りあるので、72×2＝144通り。</li>
+    <li>たしかめ。上の表の1行目で 701＋452＋869 を計算すると 2022。合っている。</li>
+  </ol>
+  <div class="ans">答え：144</div>
+  <div class="tip">コツ：「和が11になる3つ」をさがすときは、いちばん小さい0を入れる場合と入れない場合に分けると、もれなく数えられる（0を入れないと、1＋2＋5＝8、1＋2＋6＝9 の次に小さいのは 1＋2＋9＝12 と 1＋5＋6＝12 で、11は作れない）。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">4</span> まとめ <span class="type">この大問で繰り返し出た入口</span></h2>
+  <ul>
+    <li>「異なる数」と見たら、<b>和の範囲（3つなら3〜24、9つなら36〜45）を先に1行書く</b>。候補はこの範囲でしぼる。</li>
+    <li>筆算は位ごとに「和＋くり上がり」で見る。くり上がりは1とは限らない（和が22なら2）。</li>
+    <li>場合の数は「使う数の組」を先に決め、並べ方（3×2×1）をあとでかける。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="5"><h1 class="dtitle">大問5（10で割るか3倍して2をたす操作・一の位の追いかけ）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">5</span> この回の全体像（担当の大問） <span class="type">A 10点／B 6点／C 6点</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>5 (1)</td><td>1と2に操作を5回。矢印で順に書く</td><td>A 5＋5</td><td>「5回行ったあと」→ 矢印を5本かいて1回ずつ計算</td></tr>
+    <tr><td>5 (2)</td><td>1〜100で「10で割る」を1回もしない数</td><td>B 6</td><td>「10で割る」＝一の位が0になる → 一の位だけを表で追う</td></tr>
+    <tr><td>5 (3)</td><td>「10で割る」をちょうど1回だけする数</td><td>C 6</td><td>割ったあとの数が(2)の仲間なら、もう割らない</td></tr>
+  </table>
+  <p>取り方: <b>(1)の2問は計算5回だけ。先に取り切る</b>。(2)は(1)(ii)で「80→8」を見た直後だから、「一の位が0になるか」の話だと気づけば表1枚で出る。(3)は(2)の答えを使ううえに、十の位まで調べる必要があるので後回し。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)(i)</span> 1に操作を5回行う <span class="type">A・5点｜操作の追跡</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>10の倍数のときは10で割り</b>」と「<b>5回行ったあと</b>」。操作は1回ごとに矢印で横に書き、矢印の数を5本と決めて丸 → 10の倍数が出た所だけ割り算になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「3倍して2を加える」は、3×□＋2 のこと。1なら 3×1＋2＝5。5なら 3×5＋2＝17。</li>
+    <li>10の倍数かどうかは、一の位が0かどうかで見る。17 も 53 も一の位が 0 ではないので、3倍して2をたす。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>はじめの数 1 を左に書き、矢印を5本引く。1回ごとに「一の位は0か」を見てから計算する。
+<table>
+  <tr><th>はじめ</th><th>1回目</th><th>2回目</th><th>3回目</th><th>4回目</th><th>5回目</th></tr>
+  <tr><td>1</td><td>5</td><td>17</td><td>53</td><td>161</td><td><b>485</b></td></tr>
+</table></li>
+    <li>一の位は 1・5・7・3・1 と進み、0 は一度も出ない。5回とも 3×□＋2 のまま。161×3＋2＝485。</li>
+    <li>落としやすい所: 矢印は5本、数は6個。「数が5個になったら終わり」にすると、161 で止まって1回足りない。</li>
+  </ol>
+  <div class="ans">答え：485</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)(ii)</span> 2に操作を5回行う <span class="type">A・5点｜操作の追跡（10で割る回が入る）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は(i)と同じ「<b>5回行ったあと</b>」と、はじめの数が「<b>2</b>」に変わった所に丸。矢印を5本引いて順に計算する → 途中で一の位が 0 の数が出たら、そこだけ ÷10 になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>10の倍数かどうかは、一の位が0かどうかで見る。80 は10の倍数だから 80÷10＝8。3倍して2をたす方ではない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>はじめの数 2 を左に書き、矢印を5本引く。
+<table>
+  <tr><th>はじめ</th><th>1回目</th><th>2回目</th><th>3回目</th><th>4回目</th><th>5回目</th></tr>
+  <tr><td>2</td><td>8</td><td>26</td><td><b>80</b></td><td>8（80÷10）</td><td><b>26</b></td></tr>
+</table></li>
+    <li>3回目に 80 が出る。一の位が 0 なので、4回目は 80÷10＝8。5回目は 3×8＋2＝26。</li>
+    <li>落としやすい所: 80 を見て、くせで 3×80＋2＝242 とすると、あとが全部くるう。1回ごとに「一の位は0か」を先に見る。</li>
+  </ol>
+  <div class="ans">答え：26</div>
+  <div class="tip">コツ：8→26→80→8→26 と同じ数がもどってくる。(2)(3)で「一の位だけを追う」見方につながる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 「10で割る」を1回も行わない数 <span class="type">B・6点｜一の位の追いかけ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1から100まで</b>」と「<b>10で割るという操作を1回も行わない</b>」。「10で割る」を「一の位が0になる」に直して書く → 一の位だけを表で追えば決まる。(1)で 80→8 を見ていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>奇数を3倍しても奇数。2をたしても奇数。たとえば 7→23→71。だから奇数は、何回操作しても一の位が0にならない。</li>
+    <li>3倍して2をたしたあとの一の位は、もとの一の位だけで決まる。12→38 も 32→98 も、一の位は 2→8。十の位は関係ない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>奇数（一の位が 1・3・5・7・9）は、10で割る操作を1回もしない。</li>
+    <li>偶数は一の位だけを表で追う。0 が出たら「割る」。同じ数字にもどったら終わり。
+<table>
+  <tr><th>はじめの一の位</th><th>1回目</th><th>2回目</th><th>3回目</th><th>10で割る？</th></tr>
+  <tr><td>2</td><td>8</td><td>6</td><td>0</td><td>割る</td></tr>
+  <tr><td>4</td><td>4</td><td>4</td><td>4</td><td><b>割らない</b>（ずっと4）</td></tr>
+  <tr><td>6</td><td>0</td><td></td><td></td><td>割る</td></tr>
+  <tr><td>8</td><td>6</td><td>0</td><td></td><td>割る</td></tr>
+  <tr><td>0</td><td colspan="3">はじめから10の倍数</td><td>割る</td></tr>
+</table></li>
+    <li>1回も割らないのは、一の位が <b>1・3・4・5・7・9 の6通り</b>。十の位は 0〜9 の10通りずつ（4、14、…、94 のように）。</li>
+    <li>全部で 10×6＝60個。たしかめ: 100 は一の位が 0 だから、数えない。</li>
+  </ol>
+  <div class="ans">答え：60個</div>
+  <div class="tip">コツ：「10で割る」「10の倍数」と見たら、一の位だけの話に直す。一の位 4 は 3×4＋2＝14 で 4 にもどる、と1回計算して確かめると表が信じられる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 「10で割る」をちょうど1回だけ行う数 <span class="type">C・6点｜一の位と十の位の追いかけ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ちょうど1回だけ</b>」。「1回だけ」を「<b>10で割ったあとの数が(2)の仲間</b>（一の位 1・3・4・5・7・9）」に直して書く。本番では後回し。(2)が出ていて時間が残ったら、一の位 2 の10個を書き出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>一の位が同じで十の位だけがちがう2つの数（12と32）を3倍すると、十の位もちがう数になる。32×3 は 30×3＋2×3 と分けられる。十の位に加わる 3×0、3×1、…、3×9 の一の位は 0・3・6・9・2・5・8・1・4・7 と全部ちがう。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>一の位が 2 の数（02、12、…、92）を、10で割るところまで進めて表にする。割ったあとの数の一の位を見る。
+<table>
+  <tr><th>はじめ</th><th>→</th><th>→</th><th>→（10の倍数）</th><th>10で割ったあと</th><th>もう割らない？</th></tr>
+  <tr><td>02</td><td>08</td><td>26</td><td>80</td><td>8</td><td>割る</td></tr>
+  <tr><td>12</td><td>38</td><td>116</td><td>350</td><td>35</td><td>○</td></tr>
+  <tr><td>22</td><td>68</td><td>206</td><td>620</td><td>62</td><td>割る</td></tr>
+  <tr><td>32</td><td>98</td><td>296</td><td>890</td><td>89</td><td>○</td></tr>
+  <tr><td>42</td><td>128</td><td>386</td><td>1160</td><td>116</td><td>割る</td></tr>
+  <tr><td>52</td><td>158</td><td>476</td><td>1430</td><td>143</td><td>○</td></tr>
+  <tr><td>62</td><td>188</td><td>566</td><td>1700</td><td>170</td><td>割る</td></tr>
+  <tr><td>72</td><td>218</td><td>656</td><td>1970</td><td>197</td><td>○</td></tr>
+  <tr><td>82</td><td>248</td><td>746</td><td>2240</td><td>224</td><td>○</td></tr>
+  <tr><td>92</td><td>278</td><td>836</td><td>2510</td><td>251</td><td>○</td></tr>
+</table></li>
+    <li>割ったあとの一の位は 8・5・2・9・6・3・0・7・4・1 で、0〜9 が1回ずつ出る。(2)の仲間（1・3・4・5・7・9）になるのは <b>10個のうち6個</b>。</li>
+    <li>一の位が 6・8・0 の数も同じく6個ずつ。たとえば 10、20、…、100 は割ると 1、2、…、10 で、仲間は 1・3・4・5・7・9 の6個。全部で 6×4＝24個。</li>
+  </ol>
+  <div class="ans">答え：24個</div>
+  <div class="tip">コツ：(2)の答え（一の位 1・3・4・5・7・9）をそのまま使う問題。(2)が出ていないなら手を付けない。100 は 100→10→1 で2回割るので数えない。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">5</span> まとめ <span class="type">この大問で繰り返した入口</span></h2>
+  <ul>
+    <li>「10で割る」「10の倍数」は、一の位が0かどうかの話。一の位だけを表で追う。</li>
+    <li>操作の回数は矢印の本数で数える。数の個数は回数＋1。</li>
+    <li>(3)のような「ちょうど1回」は、1回目のあとが「もう起きない形」になる数をさがす。</li>
+  </ul>
+</section>
+</div>
