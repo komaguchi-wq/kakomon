@@ -1,0 +1,919 @@
+<!-- generated kakomon ichikawa/2026-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（小問集合5問＋流水算の故障）</a></li>
+<li><a href="#3-4">大問3・4（正三角形の列の経路の数・定規だけの作図）</a></li>
+<li><a href="#5">大問5（位の数をかけ合わせる操作・条件の整理）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（小問集合5問＋流水算の故障）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 32点／B 11点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th><th>描く図・表</th></tr>
+    <tr><td>1 (1)</td><td>□の逆算（小数と分数）</td><td>A 5</td><td>0.625 → 5/8 に直してから、外側からもどす</td><td>もどす順を1行ずつ</td></tr>
+    <tr><td>1 (2)</td><td>食塩水のやりとり（A→B→A）</td><td>A 5</td><td>「Bから出してもBの濃度は変わらない」→ 5%は50g入れた直後のBの濃度</td><td>やりとりの表＋てんびん</td></tr>
+    <tr><td>1 (3)</td><td>4グループの平均は少なくとも何点か</td><td>B 5</td><td>「いずれか一方だけ」が3つつながる → ○×は2通りだけ</td><td>○×の表</td></tr>
+    <tr><td>1 (4)</td><td>五角形を貼り合わせて1周</td><td>A 5</td><td>つなぎ目の外側の角 150° → 外角30°の正十二角形</td><td>つなぎ目の角の図</td></tr>
+    <tr><td>1 (5)</td><td>直方体を3点で切った小さい方の体積</td><td>A 5</td><td>向かい合う面の切り口は平行 → すい台＝大きいすい−小さいすい</td><td>切り口の図＋のばした図</td></tr>
+    <tr><td>2 (1)〜(3)</td><td>流水算。エンジンの故障で流される</td><td>A 6+6 / B 6</td><td>「修理している間も流された」→ ふだんの時間との差が「流された時間＋もどす時間」</td><td>線の図＋比の表</td></tr>
+  </table>
+  <p>取り方: <b>1 (1)(2)(4)(5)と2 (1)(2)のA6問＝32点を先に確実に</b>。1 (3)は表を2行書けば決まるので、Bの中では先。2 (3)は2 (2)の図に下りの分を1つ足すだけで、(2)が合っていれば手を付ける価値がある。受験者平均53.4点の回。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 0.625×（□−2/3）÷1/3＝1 の□ <span class="type">A・5点｜逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>□にあてはまる数</b>」と、式の外側にある「<b>÷1/3＝1</b>」。0.625 は 5/8 に直して書く（直して書く）→ あとは外側から順に、÷ は ×、× は ÷ でもどす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆算は、計算した順の反対からもどす。「÷1/3 をして1になった」なら、その前は 1×1/3。たとえば 6÷2＝3 なら、6＝3×2。</li>
+    <li>0.125＝1/8。だから 0.625 は 1/8 が5つ分で <b>5/8</b>。小数のまま分数でわると、途中で止まる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>0.625 を 5/8 に書きかえる。式は 5/8×（□−2/3）÷1/3＝1。</li>
+    <li>いちばん外側の ÷1/3 をもどす。
+<pre class="fig">5/8×（□−2/3）＝1×1/3＝1/3</pre></li>
+    <li>次に ×5/8 をもどす。わり算はひっくり返してかける。
+<pre class="fig">□−2/3＝1/3÷5/8＝1/3×8/5＝8/15</pre></li>
+    <li>最後に −2/3 をもどす。通分して 2/3＝10/15。
+<pre class="fig">□＝8/15＋10/15＝18/15＝6/5＝1 1/5</pre></li>
+    <li>たしかめ。1 1/5−2/3＝18/15−10/15＝8/15。8/15×5/8＝1/3。1/3÷1/3＝1。合っている。落としやすいのは、18/15 を約分せずに書くところと、答えを帯分数に直し忘れるところ。</li>
+  </ol>
+  <div class="ans">答え：1 1/5</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 食塩水をAからB、BからAへ移す <span class="type">A・5点｜濃度（やりとり・てんびん）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>BからAに何gか移し</b>」と「<b>Bの食塩水の濃度は5%</b>」。Bから出してもBの濃度は変わらないから、この5%は「Aから50g入れた直後のB」の濃度として表に置く（図に置く）→ Bの食塩の重さが分かり、Aの濃度が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>食塩水をくみ出しても、残りの濃度は変わらない。5%の200gから75gくんでも、残りは5%のまま。</li>
+    <li>食塩の重さ＝食塩水の重さ×濃度。2%の150gなら、食塩は 150×0.02＝3g。</li>
+    <li>2つの食塩水を混ぜるときは<b>てんびん</b>。濃度の差の比が 1：2 なら、重さの比はその逆で 2：1。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>やりとりを表に書く。分からない濃度はア、イと置く。
+<table><tr><th>いつ</th><th>A</th><th>B</th></tr>
+<tr><td>はじめ</td><td>ア% 300g</td><td>2% 150g（食塩3g）</td></tr>
+<tr><td>AからBへ50g</td><td>ア% 250g</td><td><b>5%</b> 200g（食塩10g）</td></tr>
+<tr><td>BからAへ□g</td><td>11% （250＋□）g</td><td>5% （200−□）g</td></tr></table></li>
+    <li>50g入れたあとのBは、5%の200g。食塩は 200×0.05＝10g。もとの3gをひくと、Aから来た50gの中に食塩が 10−3＝7g。</li>
+    <li>Aの濃度アは 7÷50＝0.14 → <b>14%</b>。</li>
+    <li>BからAへもどす。14%の250gと5%の□gを混ぜて11%。てんびんを書く。
+<svg viewBox="0 0 360 170" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="てんびん図。14%の250gと5%の□gを混ぜて11%。差3と6の逆比で重さは2：1">
+<g font-family="sans-serif" font-size="12">
+<line x1="40" y1="60" x2="320" y2="60" stroke="#222" stroke-width="2"/>
+<line x1="40" y1="52" x2="40" y2="92" stroke="#222" stroke-width="2"/>
+<line x1="320" y1="52" x2="320" y2="92" stroke="#222" stroke-width="2"/>
+<polygon points="133.3,60.0 125.3,78.0 141.3,78.0" fill="#d32f2f"/>
+<text x="40" y="40" text-anchor="middle" fill="#222">14%</text>
+<text x="133.3" y="40" text-anchor="middle" fill="#d32f2f" font-weight="bold">11%</text>
+<text x="320" y="40" text-anchor="middle" fill="#222">5%</text>
+<text x="86.7" y="110" text-anchor="middle" fill="#1565c0">差 3</text>
+<text x="226.7" y="110" text-anchor="middle" fill="#1565c0">差 6</text>
+<text x="40" y="135" text-anchor="middle" fill="#222">250g</text>
+<text x="320" y="135" text-anchor="middle" fill="#d32f2f" font-weight="bold">□g</text>
+<text x="180" y="160" text-anchor="middle" fill="#222" font-size="11">差の比 3：6＝1：2 → 重さの比は逆の 2：1</text></g>
+</svg></li>
+    <li>濃度の差は 14−11＝3 と 11−5＝6。重さの比は逆の 2：1。250gが2にあたるから、□＝250÷2＝125g。（式で書くなら 250×3＝□×6。）</li>
+    <li>たしかめ。食塩は 250×0.14＋125×0.05＝35＋6.25＝41.25g。375gの11%は 41.25g。合っている。落としやすいのは、5%を「最後のB」だけの話と思って、2段目に使えないところ。</li>
+  </ol>
+  <div class="ans">答え：125g</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 4グループ100人の平均は少なくとも何点以上か <span class="type">B・5点｜条件の整理・平均</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は3回出てくる「<b>いずれか一方のグループだけ全員が80点以上</b>」と、聞かれ方「<b>少なくとも何点以上</b>」。「一方だけ」は、Aが○ならBは×、Bが×ならCは○…と表に置く（図に置く）→ ○×の組は2通りしかない。2通りと見えたら、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「少なくとも何点以上」は、<b>いちばん低くなる場合の平均</b>を出せばよい。全員が60点以上なので、いちばん低い点は60点。</li>
+    <li>「全員が80点以上」でないグループは、「80点未満の人が1人はいる」というだけ。だから全員60点でもよい。</li>
+    <li>平均は 合計÷人数。人数がちがうグループは、点数×人数をたしてから100でわる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aが○（全員80点以上）だとして、条件を順にたどる。AかBの一方だけ → Bは×。BかCの一方だけ → Cは○。CかDの一方だけ → Dは×。Aが×なら、すべて反対になる。
+<table><tr><th></th><th>A（15人）</th><th>B（20人）</th><th>C（25人）</th><th>D（40人）</th></tr>
+<tr><td>場合ア</td><td>○ 80点以上</td><td>× </td><td>○ 80点以上</td><td>×</td></tr>
+<tr><td>場合イ</td><td>×</td><td>○ 80点以上</td><td>×</td><td>○ 80点以上</td></tr></table></li>
+    <li>いちばん低くするには、○のグループは全員ちょうど80点、×のグループは全員60点にする。</li>
+    <li>場合アの平均を出す。
+<pre class="fig">（80×15＋60×20＋80×25＋60×40）÷100
+＝（1200＋1200＋2000＋2400）÷100＝68</pre></li>
+    <li>場合イの平均を出す。
+<pre class="fig">（60×15＋80×20＋60×25＋80×40）÷100
+＝（900＋1600＋1500＋3200）÷100＝72</pre></li>
+    <li>低いほうは68点。どの場合でも、平均はこれより低くならない。だから<b>少なくとも68点以上</b>。</li>
+  </ol>
+  <div class="ans">答え：68点以上</div>
+  <div class="tip">コツ：「少なくとも」「多くとも」と聞かれたら、いちばん極端な場合（全員ぎりぎりの点）を作って計算する。人数の多いD（40人）が60点になる場合アのほうが低くなる、と見当をつけてから計算すると速い。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 五角形を貼り合わせて最初の1枚に重なるのは何枚目か <span class="type">A・5点｜角度・正多角形の外角</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>角アの大きさが30度</b>」と、聞かれ方「<b>初めて最初の五角形とぴったり重なる</b>」。つなぎ目に集まる角（90°と 30＋90＝120°）を図に置く → 残りの角イが、上の辺が作る正多角形の内角。外角が分かれば 360÷外角 で枚数が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>五角形ABCDEの角Aは、三角形の30°と正方形の90°を合わせて <b>120°</b>。正方形の角D・Eは90°。</li>
+    <li>正多角形は、1つの外角が分かれば 360÷外角 で辺の数が出る。外角が30°なら 360÷30＝12 で正十二角形。</li>
+    <li>1周ぴったりで元にもどるなら、次の1枚が最初の1枚に重なる。12枚で1周なら、重なるのは13枚目。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図2の2枚目は、1枚目のED に 2枚目のAB を合わせて貼ってある。つなぎ目（1枚目のE＝2枚目のA）に集まる角を書きこむ。
+<svg viewBox="0 0 400 250" style="max-width:400px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="五角形を3枚貼り合わせた図。つなぎ目の角イは360−90−120＝150度、赤い上の辺は1枚ごとに30度回る">
+<g font-family="sans-serif" font-size="12">
+<polygon points="60.0,120.0 29.0,173.7 60.0,182.0 122.0,182.0 122.0,120.0" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<line x1="60.0" y1="120.0" x2="60.0" y2="182.0" stroke="#222" stroke-width="1" stroke-dasharray="4 3"/>
+<polygon points="122.0,120.0 122.0,182.0 153.0,173.7 206.7,142.7 175.7,89.0" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+<line x1="122.0" y1="120.0" x2="153.0" y2="173.7" stroke="#222" stroke-width="1" stroke-dasharray="4 3"/>
+<polygon points="175.7,89.0 206.7,142.7 229.4,120.0 260.4,66.3 206.7,35.3" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<line x1="175.7" y1="89.0" x2="229.4" y2="120.0" stroke="#222" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="60.0" y1="120.0" x2="122.0" y2="120.0" stroke="#d32f2f" stroke-width="3"/>
+<line x1="122.0" y1="120.0" x2="175.7" y2="89.0" stroke="#d32f2f" stroke-width="3"/>
+<line x1="175.7" y1="89.0" x2="206.7" y2="35.3" stroke="#d32f2f" stroke-width="3"/>
+<text x="50.0" y="116.0" fill="#222">A</text>
+<text x="124.0" y="114.0" fill="#222">E</text>
+<text x="126.0" y="194.0" fill="#222">D</text>
+<text x="48.0" y="194.0" fill="#222">C</text>
+<text x="15.0" y="179.7" fill="#222">B</text>
+<polyline points="113.0,120.0 113.0,129.0 122.0,129.0" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="92.0" y="144.0" fill="#1565c0" font-size="11">90°</text>
+<path d="M122.0 136.0 A16 16 0 0 0 135.9 112.0" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="128.0" y="150.0" fill="#1565c0" font-size="11">120°</text>
+<path d="M98.0 120.0 A24 24 0 0 1 142.8 108.0" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+<text x="118.0" y="90.0" text-anchor="middle" fill="#d32f2f" font-weight="bold">イ＝150°</text>
+<line x1="122.0" y1="120.0" x2="162.0" y2="120.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+<path d="M156.0 120.0 A34 34 0 0 0 151.4 103.0" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+<text x="162.0" y="115.0" fill="#1565c0" font-size="11">30°</text>
+<text x="20" y="235" fill="#222" font-size="11">赤い辺（AE）が正多角形の辺。イ＝内角、30°＝外角（1枚ごとに回る角）</text></g>
+</svg></li>
+    <li>つなぎ目の1周は360°。1枚目の角E＝90°、2枚目の角A＝120°。残りの角イは 360−90−120＝<b>150°</b>。</li>
+    <li>赤い辺（各五角形のAE）はどれも同じ長さで、つなぎ目の角はどこも150°。だから赤い辺は正多角形を作る。内角150°の外角は 180−150＝30°。360÷30＝12 → 正十二角形。</li>
+    <li>五角形を12枚貼るとちょうど1周する。13枚目が最初の五角形にぴったり重なる。落としやすいのは、12枚目と答えてしまうところ。「12枚で1周、重なるのは次の1枚」と数える。</li>
+  </ol>
+  <div class="ans">答え：13枚目</div>
+  <div class="tip">コツ：「同じ形を同じ向きに貼って1周」と見たら、1枚ごとに何度回るか（＝外角）をさがす。ここでは30°ずつ回るから 360÷30＝12枚で1周。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 直方体をP・Q・Eを通る平面で切った小さい方の体積 <span class="type">A・5点｜立体の切断・すい台</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3点P，Q，Eを通る平面で切って</b>」と「<b>小さい方の立体の体積</b>」。DP＝2cm、CQ＝4cm は PH＝4cm、QG＝2cm に直して図に書く → 向かい合う面の切り口は平行。Qから PE に平行な線を引けば、4つ目の点Rが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>向かい合う面（面AEHDと面BFGC）にできる切り口の線は<b>平行</b>。だから PE と QR は平行。</li>
+    <li>三角すいの体積は 底面積×高さ÷3。先を切り落とした形（すい台）は、<b>大きい三角すい−小さい三角すい</b>で出す。</li>
+    <li>平行な線で切った三角形は相似。PH：HE＝4：10＝2：5 なら、QG：GR も 2：5。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>切り口を描く。Qから PE と平行に線を引き、辺FGと交わる点をRとする。PH：HE＝4：10＝2：5 だから QG：GR＝2：5。QG＝2cm なので GR＝5cm。
+<svg viewBox="0 0 380 250" style="max-width:380px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="直方体をP・Q・Eを通る平面で切った図。切り口は四角形ERQP。PE と QR が平行で、GR＝5cm">
+<g font-family="sans-serif" font-size="12">
+<polygon points="28.0,232.0 215.0,193.8 266.0,121.5 130.0,87.5" fill="#ffe0b2" fill-opacity="0.7" stroke="none"/>
+<line x1="28.0" y1="130.0" x2="164.0" y2="130.0" stroke="#222" stroke-width="1.5"/>
+<line x1="164.0" y1="130.0" x2="164.0" y2="232.0" stroke="#222" stroke-width="1.5"/>
+<line x1="164.0" y1="232.0" x2="28.0" y2="232.0" stroke="#222" stroke-width="1.5"/>
+<line x1="28.0" y1="232.0" x2="28.0" y2="130.0" stroke="#222" stroke-width="1.5"/>
+<line x1="164.0" y1="130.0" x2="266.0" y2="53.5" stroke="#222" stroke-width="1.5"/>
+<line x1="266.0" y1="53.5" x2="266.0" y2="155.5" stroke="#222" stroke-width="1.5"/>
+<line x1="266.0" y1="155.5" x2="164.0" y2="232.0" stroke="#222" stroke-width="1.5"/>
+<line x1="28.0" y1="130.0" x2="130.0" y2="53.5" stroke="#222" stroke-width="1.5"/>
+<line x1="130.0" y1="53.5" x2="266.0" y2="53.5" stroke="#222" stroke-width="1.5"/>
+<line x1="28.0" y1="232.0" x2="130.0" y2="155.5" stroke="#222" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="130.0" y1="155.5" x2="266.0" y2="155.5" stroke="#222" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="130.0" y1="155.5" x2="130.0" y2="53.5" stroke="#222" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="28.0" y1="232.0" x2="130.0" y2="87.5" stroke="#d32f2f" stroke-width="2.2"/>
+<line x1="130.0" y1="87.5" x2="266.0" y2="121.5" stroke="#d32f2f" stroke-width="2.2"/>
+<line x1="266.0" y1="121.5" x2="215.0" y2="193.8" stroke="#d32f2f" stroke-width="2.2"/>
+<line x1="28.0" y1="232.0" x2="215.0" y2="193.8" stroke="#d32f2f" stroke-width="2.2"/>
+<circle cx="130.0" cy="87.5" r="3" fill="#d32f2f"/>
+<circle cx="266.0" cy="121.5" r="3" fill="#d32f2f"/>
+<circle cx="215.0" cy="193.8" r="3" fill="#d32f2f"/>
+<text x="16.0" y="134.0" fill="#222" font-weight="normal">A</text>
+<text x="168.0" y="142.0" fill="#222" font-weight="normal">B</text>
+<text x="270.0" y="49.5" fill="#222" font-weight="normal">C</text>
+<text x="118.0" y="49.5" fill="#222" font-weight="normal">D</text>
+<text x="16.0" y="244.0" fill="#222" font-weight="normal">E</text>
+<text x="168.0" y="244.0" fill="#222" font-weight="normal">F</text>
+<text x="271.0" y="167.5" fill="#222" font-weight="normal">G</text>
+<text x="116.0" y="167.5" fill="#222" font-weight="normal">H</text>
+<text x="116.0" y="91.5" fill="#d32f2f" font-weight="bold">P</text>
+<text x="272.0" y="125.5" fill="#d32f2f" font-weight="bold">Q</text>
+<text x="219.0" y="207.8" fill="#d32f2f" font-weight="bold">R</text>
+<text x="116.0" y="74.5" fill="#222" font-size="11">2</text>
+<text x="116.0" y="125.5" fill="#1565c0" font-size="11">4</text>
+<text x="274.0" y="91.5" fill="#222" font-size="11">4</text>
+<text x="274.0" y="142.5" fill="#1565c0" font-size="11">2</text>
+<text x="91.0" y="207.8" fill="#1565c0" font-size="11">10</text>
+<text x="250.5" y="172.6" fill="#1565c0" font-size="11">5</text>
+<text x="96.0" y="248.0" fill="#222" font-size="11">8</text>
+<text x="14.0" y="181.0" fill="#222" font-size="11">6</text>
+<text x="150" y="18" fill="#1565c0" font-size="11">PE と QR は平行（向かい合う面の切り口）</text></g>
+</svg></li>
+    <li>小さい方の立体は、E・H・G・R・P・Q を頂点とする立体。三角形PEH（底10cm・高さ4cm）と三角形QRG（底5cm・高さ2cm）は平行で、大きさは 2：1。三角すいの先を切ったすい台になっている。</li>
+    <li>PQ・HG・ER をのばすと、1つの点Oで交わる。三角形EFR と三角形OGR は FR＝GR＝5cm で合同だから、OG＝EF＝<b>8cm</b>。OH＝8＋8＝16cm。
+<svg viewBox="0 0 470 250" style="max-width:470px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PQ・HG・ERをのばして交わる点O。小さい方の立体は三角すいO-PEHから三角すいO-QRGを取り除いたもの。OG＝8cm">
+<g font-family="sans-serif" font-size="12">
+<line x1="28.0" y1="130.0" x2="164.0" y2="130.0" stroke="#222" stroke-width="1.5"/>
+<line x1="164.0" y1="130.0" x2="164.0" y2="232.0" stroke="#222" stroke-width="1.5"/>
+<line x1="164.0" y1="232.0" x2="28.0" y2="232.0" stroke="#222" stroke-width="1.5"/>
+<line x1="28.0" y1="232.0" x2="28.0" y2="130.0" stroke="#222" stroke-width="1.5"/>
+<line x1="164.0" y1="130.0" x2="266.0" y2="53.5" stroke="#222" stroke-width="1.5"/>
+<line x1="266.0" y1="53.5" x2="266.0" y2="155.5" stroke="#222" stroke-width="1.5"/>
+<line x1="266.0" y1="155.5" x2="164.0" y2="232.0" stroke="#222" stroke-width="1.5"/>
+<line x1="28.0" y1="130.0" x2="130.0" y2="53.5" stroke="#222" stroke-width="1.5"/>
+<line x1="130.0" y1="53.5" x2="266.0" y2="53.5" stroke="#222" stroke-width="1.5"/>
+<line x1="28.0" y1="232.0" x2="130.0" y2="155.5" stroke="#222" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="130.0" y1="155.5" x2="266.0" y2="155.5" stroke="#222" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="130.0" y1="155.5" x2="130.0" y2="53.5" stroke="#222" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="28.0" y1="232.0" x2="130.0" y2="87.5" stroke="#d32f2f" stroke-width="2"/>
+<line x1="130.0" y1="87.5" x2="266.0" y2="121.5" stroke="#d32f2f" stroke-width="2"/>
+<line x1="266.0" y1="121.5" x2="215.0" y2="193.8" stroke="#d32f2f" stroke-width="2"/>
+<line x1="28.0" y1="232.0" x2="215.0" y2="193.8" stroke="#d32f2f" stroke-width="2"/>
+<line x1="266.0" y1="121.5" x2="402.0" y2="155.5" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 3"/>
+<line x1="266.0" y1="155.5" x2="402.0" y2="155.5" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 3"/>
+<line x1="215.0" y1="193.8" x2="402.0" y2="155.5" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 3"/>
+<polygon points="130.0,87.5 28.0,232.0 130.0,155.5" fill="#dbe9ff" fill-opacity="0.7" stroke="#1565c0" stroke-width="1"/>
+<polygon points="266.0,121.5 215.0,193.8 266.0,155.5" fill="#c8e6c9" fill-opacity="0.8" stroke="#1565c0" stroke-width="1"/>
+<circle cx="130.0" cy="87.5" r="3" fill="#d32f2f"/>
+<circle cx="266.0" cy="121.5" r="3" fill="#d32f2f"/>
+<circle cx="215.0" cy="193.8" r="3" fill="#d32f2f"/>
+<circle cx="402.0" cy="155.5" r="3" fill="#d32f2f"/>
+<text x="16.0" y="134.0" fill="#222" font-weight="normal">A</text>
+<text x="168.0" y="142.0" fill="#222" font-weight="normal">B</text>
+<text x="270.0" y="49.5" fill="#222" font-weight="normal">C</text>
+<text x="118.0" y="49.5" fill="#222" font-weight="normal">D</text>
+<text x="16.0" y="244.0" fill="#222" font-weight="normal">E</text>
+<text x="168.0" y="244.0" fill="#222" font-weight="normal">F</text>
+<text x="271.0" y="167.5" fill="#222" font-weight="normal">G</text>
+<text x="116.0" y="167.5" fill="#222" font-weight="normal">H</text>
+<text x="116.0" y="91.5" fill="#d32f2f" font-weight="bold">P</text>
+<text x="272.0" y="125.5" fill="#d32f2f" font-weight="bold">Q</text>
+<text x="219.0" y="207.8" fill="#d32f2f" font-weight="bold">R</text>
+<text x="408.0" y="159.5" fill="#d32f2f" font-weight="bold">O</text>
+<text x="116.0" y="125.5" fill="#1565c0" font-size="11">4</text>
+<text x="274.0" y="142.5" fill="#1565c0" font-size="11">2</text>
+<text x="91.0" y="207.8" fill="#1565c0" font-size="11">10</text>
+<text x="250.5" y="172.6" fill="#1565c0" font-size="11">5</text>
+<text x="198.0" y="169.5" fill="#1565c0" font-size="11">8</text>
+<text x="334.0" y="169.5" fill="#1565c0" font-size="11">8</text>
+<text x="96.0" y="248.0" fill="#222" font-size="11">8</text>
+<text x="150" y="18" fill="#1565c0" font-size="11">PQ・HG・ER をのばすと O で交わる</text>
+<text x="150" y="34" fill="#222" font-size="11">大きい三角すい O-PEH − 小さい三角すい O-QRG</text></g>
+</svg></li>
+    <li>大きい三角すい O-PEH。底面は三角形PEH、高さは OH＝16cm。
+<pre class="fig">10×4÷2×16÷3＝320/3（cm³）</pre></li>
+    <li>小さい三角すい O-QRG。底面は三角形QRG、高さは OG＝8cm。
+<pre class="fig">5×2÷2×8÷3＝40/3（cm³）</pre></li>
+    <li>ひく。320/3−40/3＝280/3＝<b>93 1/3</b>cm³。たしかめ。直方体は 8×10×6＝480cm³ で、その半分240cm³より小さい。小さい方で合っている。落としやすいのは、OG を R の位置から出さずに適当に決めるところ。FR＝GR だから OG＝EF。</li>
+  </ol>
+  <div class="ans">答え：93 1/3cm³</div>
+  <div class="tip">コツ：切り口の形が分かったら「どの2つの面が平行か」を見る。平行な2面にはさまれた立体で、断面が相似の三角形なら、すい台として「大きいすい−小さいすい」。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 船の静水時の速さ <span class="type">A・6点｜流水算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>7.2km</b>」と「<b>上りは45分，下りは30分</b>」。答えは分速何mだから、7.2kmは7200mに直して書く（直して書く）→ 上りと下りの速さが出て、静水時の速さはその平均。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>上りの速さ＝静水時−流れ、下りの速さ＝静水時＋流れ。だから<b>静水時＝（上り＋下り）÷2</b>、流れ＝（下り−上り）÷2。たとえば上り160・下り240なら、静水時200・流れ40。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>7.2km＝7200m。上りの速さは 7200÷45＝分速160m。下りの速さは 7200÷30＝分速240m。</li>
+    <li>静水時の速さは（160＋240）÷2＝<b>分速200m</b>。</li>
+    <li>流れの速さも出しておく。（240−160）÷2＝分速40m。(2)(3)で使うので、余白に「上り160・下り240・流れ40」と書いておく。落としやすいのは、kmをmに直し忘れて 7.2÷45 とするところ。</li>
+  </ol>
+  <div class="ans">答え：分速200m</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 上りで故障。修理にかかった時間 <span class="type">A・6点｜流水算・速さと比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>修理している間も船は流されたため</b>」と「<b>65分かかりました</b>」。ふだんの上り45分との差 65−45＝20分 を「流された時間＋もどす時間」に直して書く → 同じ道のりを 40 と 160 で進むから、時間の比 4：1 で20分を分ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>修理中はエンジンが止まっているので、船は<b>流れの速さ 分速40m</b>で下流へもどる。もどった分を上り直す速さは、上りの速さ 分速160m。</li>
+    <li>同じ道のりなら、時間の比は速さの逆比。速さが 40：160＝1：4 なら、時間は 4：1。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>線の図を書く。故障した地点をP、流されて止まった地点をQとする。
+<svg viewBox="0 0 360 172" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AからBへ上る線の図。Pで故障してQまで流され、QからPへ上りなおす。黒い部分の合計が45分、PQの往復が20分">
+<g font-family="sans-serif" font-size="12">
+<line x1="30" y1="30" x2="30" y2="120" stroke="#222" stroke-width="1.2"/>
+<text x="30" y="22" text-anchor="middle" fill="#222">A</text>
+<line x1="200" y1="30" x2="200" y2="120" stroke="#222" stroke-width="1.2"/>
+<text x="200" y="22" text-anchor="middle" fill="#222">Q</text>
+<line x1="260" y1="30" x2="260" y2="120" stroke="#222" stroke-width="1.2"/>
+<text x="260" y="22" text-anchor="middle" fill="#222">P</text>
+<line x1="330" y1="30" x2="330" y2="120" stroke="#222" stroke-width="1.2"/>
+<text x="330" y="22" text-anchor="middle" fill="#222">B</text>
+<line x1="30" y1="40" x2="330" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="30" y1="60" x2="260" y2="60" stroke="#222" stroke-width="1.8"/><polygon points="260,60 253,56 253,64" fill="#222"/><text x="145.0" y="55" text-anchor="middle" fill="#222" font-size="11">上る 160</text>
+<line x1="260" y1="82" x2="200" y2="82" stroke="#d32f2f" stroke-width="1.8" stroke-dasharray="4 3"/><polygon points="200,82 207,78 207,86" fill="#d32f2f"/><text x="190.0" y="78" text-anchor="middle" fill="#d32f2f" font-size="11">流される 40（修理中）</text>
+<line x1="200" y1="104" x2="260" y2="104" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="4 3"/><polygon points="260,104 253,100 253,108" fill="#1565c0"/><text x="190.0" y="100" text-anchor="middle" fill="#1565c0" font-size="11">上る 160（もどす）</text>
+<line x1="260" y1="104" x2="330" y2="104" stroke="#222" stroke-width="1.8"/><polygon points="330,104 323,100 323,108" fill="#222"/>
+<text x="30" y="145" fill="#222" font-size="11">黒＝ふつうの上り1回分 45分　赤＋青＝余計にかかった 20分</text>
+<text x="30" y="162" fill="#222" font-size="11">同じ道のり PQ を 40 と 160 で進む → 時間の比 4：1</text></g>
+</svg></li>
+    <li>A→P と P→B（黒い矢印）をつなぐと、ふつうの上り1回分＝45分。だから余計にかかった 65−45＝<b>20分</b>は、P→Q（流される）と Q→P（上り直す）の合計。</li>
+    <li>PQの道のりは同じ。速さは 40 と 160 で 1：4。だから時間は 4：1。</li>
+    <li>流された時間（＝修理の時間）は 20×4/5＝<b>16分</b>。</li>
+    <li>たしかめ。16分で 40×16＝640m 流される。640÷160＝4分で上り直す。16＋4＝20分。合っている。落としやすいのは、20分をそのまま修理の時間と答えるところ。</li>
+  </ol>
+  <div class="ans">答え：16分間</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 上り下りで1回ずつ故障。修理時間の合計 <span class="type">B・6点｜流水算・速さと比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>往復で100分かかりました</b>」と「<b>修理にかかった時間が同じ</b>」。ふだんの往復75分との差 25分 を「余計にかかった時間」に直して書く → 修理を⑫とおくと、上り下りのロスの合計が ㉕＝25分。(2)が合っていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>上りの余計な時間＝修理の時間＋流された分をもどす時間。(2)から、その比は <b>4：1</b>。</li>
+    <li>下りは、流されている間も目的地に近づいている。だから下りの余計な時間＝修理の時間−「流された道のりをふつうに下る時間」。速さは 40：240＝1：6 だから、時間の比は 6：1。</li>
+    <li>4：1 と 6：1 の両方で割りやすいように、修理の時間を⑫とおく（4と6の最小公倍数）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>往復の図を書く。上りも下りも、同じ区間RSで流されたことにして描く。
+<svg viewBox="0 0 360 222" style="max-width:360px;width:100%;height:auto;display:block;margin:6px 0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="往復の線の図。上りはRで故障してSまで流されSからRへもどす。下りもRで故障してSまで流される。流された区間RSを普通に下れば②">
+<g font-family="sans-serif" font-size="12">
+<line x1="30" y1="30" x2="30" y2="190" stroke="#222" stroke-width="1.2"/>
+<text x="30" y="22" text-anchor="middle" fill="#222">A</text>
+<line x1="180" y1="30" x2="180" y2="190" stroke="#222" stroke-width="1.2"/>
+<text x="180" y="22" text-anchor="middle" fill="#222">S</text>
+<line x1="240" y1="30" x2="240" y2="190" stroke="#222" stroke-width="1.2"/>
+<text x="240" y="22" text-anchor="middle" fill="#222">R</text>
+<line x1="330" y1="30" x2="330" y2="190" stroke="#222" stroke-width="1.2"/>
+<text x="330" y="22" text-anchor="middle" fill="#222">B</text>
+<text x="12" y="62" fill="#222" font-size="11">上り</text>
+<line x1="30" y1="58" x2="240" y2="58" stroke="#222" stroke-width="1.8"/><polygon points="240,58 233,54 233,62" fill="#222"/>
+<line x1="240" y1="78" x2="180" y2="78" stroke="#d32f2f" stroke-width="1.8" stroke-dasharray="4 3"/><polygon points="180,78 187,74 187,82" fill="#d32f2f"/><text x="210.0" y="74" text-anchor="middle" fill="#d32f2f" font-size="11">⑫ 流される</text>
+<line x1="180" y1="98" x2="240" y2="98" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="4 3"/><polygon points="240,98 233,94 233,102" fill="#1565c0"/><text x="210.0" y="94" text-anchor="middle" fill="#1565c0" font-size="11">③ もどす</text>
+<line x1="240" y1="98" x2="330" y2="98" stroke="#222" stroke-width="1.8"/><polygon points="330,98 323,94 323,102" fill="#222"/>
+<text x="12" y="134" fill="#222" font-size="11">下り</text>
+<line x1="330" y1="130" x2="240" y2="130" stroke="#222" stroke-width="1.8"/><polygon points="240,130 247,126 247,134" fill="#222"/>
+<line x1="240" y1="150" x2="180" y2="150" stroke="#d32f2f" stroke-width="1.8" stroke-dasharray="4 3"/><polygon points="180,150 187,146 187,154" fill="#d32f2f"/><text x="210.0" y="146" text-anchor="middle" fill="#d32f2f" font-size="11">⑫ 流される</text>
+<line x1="180" y1="150" x2="30" y2="150" stroke="#222" stroke-width="1.8"/><polygon points="30,150 37,146 37,154" fill="#222"/>
+<line x1="240" y1="170" x2="180" y2="170" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="4 3"/><polygon points="180,170 187,166 187,174" fill="#1565c0"/><text x="200.0" y="166" text-anchor="middle" fill="#1565c0" font-size="11">② ふつうに下れば</text>
+<text x="30" y="212" fill="#222" font-size="11">上り ⑫＋③＝⑮　下り ⑫−②＝⑩　合計 ㉕＝25分</text></g>
+</svg></li>
+    <li>修理の時間を⑫とおいて、ロスを表にする。
+<table><tr><th></th><th>修理（流される）</th><th>流された分の時間</th><th>余計にかかった時間</th></tr>
+<tr><td>上り</td><td>⑫</td><td>もどすのに ⑫×1/4＝③</td><td>⑫＋③＝<b>⑮</b></td></tr>
+<tr><td>下り</td><td>⑫</td><td>ふつうに下れば ⑫×1/6＝②</td><td>⑫−②＝⑩</td></tr>
+<tr><td>合計</td><td>㉔</td><td></td><td>㉕＝25分</td></tr></table></li>
+    <li>㉕が 100−75＝25分 にあたる。だから ①＝1分。</li>
+    <li>修理は1回⑫＝12分。上りと下りの合計は 12×2＝<b>24分</b>。</li>
+    <li>たしかめ。上りは 45＋12＋3＝60分、下りは 30＋12−2＝40分。合わせて100分。合っている。</li>
+  </ol>
+  <div class="ans">答え：24分間</div>
+  <div class="tip">コツ：下りの故障は「流されても進んでいる」ので、ロスは修理の時間より短い。「ふつうに下ればその道のりに何分かかるか」をひく。ここを上りと同じ「＋」にすると 25分が合わなくなる。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>「変わらないもの」をさがす。食塩水はくみ出しても濃度が変わらない（1 (2)）。貼り合わせは1枚ごとに回る角が変わらない（1 (4)）。</li>
+    <li>ふだんとの差を「余計にかかった時間」として取り出し、比で分ける（2 (2)(3)）。</li>
+    <li>切断は「向かい合う面の切り口は平行」で4つ目の点を決め、すい台は大きいすい−小さいすい（1 (5)）。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4"><h1 class="dtitle">大問3・4（正三角形の列の経路の数・定規だけの作図）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜4</span> この回の全体像（大問3・4） <span class="type">A 21点／B 15点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>3</td><td>横一列の正三角形を、全部の頂点を1回ずつ通ってSからGへ。会話文の空らんア〜ク</td><td>A 3点×7（ア〜キ）／ B 3点（ク）</td><td>「すべての頂点をちょうど1回ずつ」→ Sから出る線は2本だけ。最初の1歩で場合分け</td></tr>
+  <tr><td>4</td><td>定規だけで作図（円の中の長方形／もう1つの円の中心）</td><td>B 6点＋6点</td><td>「定規のみ」「6回まで」→ 中心Oを通る線＝直径を2本引く</td></tr>
+  </table>
+  <p>取り方: <b>大問3のア〜キは図をなぞれば全部取れる</b>（21点）。クは表を10個まで埋めるだけなので、ア〜キが合っていればそのまま取れる。大問4は「直径2本で長方形」「直径の両はしを見こむ角は直角」の2つを知っていれば6回で描ける。受験者平均は53.4点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 ア・イ・ウ</span> 正三角形が2個・3個・4個のときの経路の数 <span class="type">A・3点×3｜場合の数（なぞって数える）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>すべての頂点をちょうど1回ずつ通り</b>」と「<b>ゴールGまで</b>」。Sから出る線は上と横の2本だけなので、「上に行く」「横に行く」の2つに分けて図に赤でなぞる。2個・3個・4個は、なぞって数えるだけで決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「頂点を1回ずつ全部通る」は、点を飛ばしてもだめ、同じ点にもどってもだめ。線のほうは使い残してよい。2個の図なら、S→上→下→G と S→下→上→G の2本で全部。</li>
+    <li>場合分けの軸は「Sの次にどこへ行くか」。Sから出る線は2本なので、場合は2つで足りる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2個のとき。Sの次に上の点へ行く経路と、横の点へ行く経路を1本ずつなぞる。全部で2通り（ア）。
+<svg id="q3_1_a" viewBox="0 0 178 79" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<text x="4" y="12" font-size="11" fill="#222">2個 → 2通り（赤い線が経路）</text>
+<line x1="10.0" y1="60.6" x2="30.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="10.0" y1="60.6" x2="50.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="26.0" x2="50.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="26.0" x2="70.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="50.0" y1="60.6" x2="70.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<polyline points="10.0,60.6 30.0,26.0 50.0,60.6 70.0,26.0" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="10.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="30.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="50.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="70.0" cy="26.0" r="2.2" fill="#222"/>
+<text x="6.0" y="73.6" font-size="11" fill="#222">S</text>
+<text x="73.0" y="22.0" font-size="11" fill="#222">G</text>
+<line x1="94.0" y1="60.6" x2="114.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="94.0" y1="60.6" x2="134.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="114.0" y1="26.0" x2="134.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="114.0" y1="26.0" x2="154.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="134.0" y1="60.6" x2="154.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<polyline points="94.0,60.6 134.0,60.6 114.0,26.0 154.0,26.0" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="94.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="114.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="134.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="154.0" cy="26.0" r="2.2" fill="#222"/>
+<text x="90.0" y="73.6" font-size="11" fill="#222">S</text>
+<text x="157.0" y="22.0" font-size="11" fill="#222">G</text>
+</svg></li>
+    <li>3個のとき。Sの次に上へ行くと、残りは2個の形と同じで2通り。Sの次に横へ行くと、点を全部通る道は1通りだけ。合わせて <b>2＋1＝3通り</b>（イ）。
+<svg id="q3_1_b" viewBox="0 0 322 79" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<text x="4" y="12" font-size="11" fill="#222">3個 → 3通り</text>
+<line x1="10.0" y1="60.6" x2="30.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="10.0" y1="60.6" x2="50.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="26.0" x2="50.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="26.0" x2="70.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="50.0" y1="60.6" x2="70.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="50.0" y1="60.6" x2="90.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="70.0" y1="26.0" x2="90.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<polyline points="10.0,60.6 30.0,26.0 50.0,60.6 70.0,26.0 90.0,60.6" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="10.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="30.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="50.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="70.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="90.0" cy="60.6" r="2.2" fill="#222"/>
+<text x="6.0" y="73.6" font-size="11" fill="#222">S</text>
+<text x="89.0" y="73.6" font-size="11" fill="#222">G</text>
+<line x1="114.0" y1="60.6" x2="134.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="114.0" y1="60.6" x2="154.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="134.0" y1="26.0" x2="154.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="134.0" y1="26.0" x2="174.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="154.0" y1="60.6" x2="174.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="154.0" y1="60.6" x2="194.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="174.0" y1="26.0" x2="194.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<polyline points="114.0,60.6 134.0,26.0 174.0,26.0 154.0,60.6 194.0,60.6" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="114.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="134.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="154.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="174.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="194.0" cy="60.6" r="2.2" fill="#222"/>
+<text x="110.0" y="73.6" font-size="11" fill="#222">S</text>
+<text x="193.0" y="73.6" font-size="11" fill="#222">G</text>
+<line x1="218.0" y1="60.6" x2="238.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="218.0" y1="60.6" x2="258.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="238.0" y1="26.0" x2="258.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="238.0" y1="26.0" x2="278.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="258.0" y1="60.6" x2="278.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="258.0" y1="60.6" x2="298.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="278.0" y1="26.0" x2="298.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<polyline points="218.0,60.6 258.0,60.6 238.0,26.0 278.0,26.0 298.0,60.6" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="218.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="238.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="258.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="278.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="298.0" cy="60.6" r="2.2" fill="#222"/>
+<text x="214.0" y="73.6" font-size="11" fill="#222">S</text>
+<text x="297.0" y="73.6" font-size="11" fill="#222">G</text>
+</svg></li>
+    <li>4個のとき。上へ行くと3個の形で3通り。横へ行くと1通り。合わせて <b>3＋1＝4通り</b>（ウ）。
+<svg id="q3_1_c" viewBox="0 0 506 79" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<text x="4" y="12" font-size="11" fill="#222">4個 → 4通り</text>
+<line x1="10.0" y1="60.6" x2="30.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="10.0" y1="60.6" x2="50.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="26.0" x2="50.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="26.0" x2="70.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="50.0" y1="60.6" x2="70.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="50.0" y1="60.6" x2="90.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="70.0" y1="26.0" x2="90.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="70.0" y1="26.0" x2="110.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="90.0" y1="60.6" x2="110.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<polyline points="10.0,60.6 30.0,26.0 50.0,60.6 70.0,26.0 90.0,60.6 110.0,26.0" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="10.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="30.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="50.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="70.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="90.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="110.0" cy="26.0" r="2.2" fill="#222"/>
+<text x="6.0" y="73.6" font-size="11" fill="#222">S</text>
+<text x="113.0" y="22.0" font-size="11" fill="#222">G</text>
+<line x1="134.0" y1="60.6" x2="154.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="134.0" y1="60.6" x2="174.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="154.0" y1="26.0" x2="174.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="154.0" y1="26.0" x2="194.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="174.0" y1="60.6" x2="194.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="174.0" y1="60.6" x2="214.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="194.0" y1="26.0" x2="214.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="194.0" y1="26.0" x2="234.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="214.0" y1="60.6" x2="234.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<polyline points="134.0,60.6 154.0,26.0 174.0,60.6 214.0,60.6 194.0,26.0 234.0,26.0" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="134.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="154.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="174.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="194.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="214.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="234.0" cy="26.0" r="2.2" fill="#222"/>
+<text x="130.0" y="73.6" font-size="11" fill="#222">S</text>
+<text x="237.0" y="22.0" font-size="11" fill="#222">G</text>
+<line x1="258.0" y1="60.6" x2="278.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="258.0" y1="60.6" x2="298.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="278.0" y1="26.0" x2="298.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="278.0" y1="26.0" x2="318.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="298.0" y1="60.6" x2="318.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="298.0" y1="60.6" x2="338.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="318.0" y1="26.0" x2="338.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="318.0" y1="26.0" x2="358.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="338.0" y1="60.6" x2="358.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<polyline points="258.0,60.6 278.0,26.0 318.0,26.0 298.0,60.6 338.0,60.6 358.0,26.0" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="258.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="278.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="298.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="318.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="338.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="358.0" cy="26.0" r="2.2" fill="#222"/>
+<text x="254.0" y="73.6" font-size="11" fill="#222">S</text>
+<text x="361.0" y="22.0" font-size="11" fill="#222">G</text>
+<line x1="382.0" y1="60.6" x2="402.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="382.0" y1="60.6" x2="422.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="402.0" y1="26.0" x2="422.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="402.0" y1="26.0" x2="442.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="422.0" y1="60.6" x2="442.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="422.0" y1="60.6" x2="462.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="442.0" y1="26.0" x2="462.0" y2="60.6" stroke="#222" stroke-width="1"/>
+<line x1="442.0" y1="26.0" x2="482.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<line x1="462.0" y1="60.6" x2="482.0" y2="26.0" stroke="#222" stroke-width="1"/>
+<polyline points="382.0,60.6 422.0,60.6 402.0,26.0 442.0,26.0 462.0,60.6 482.0,26.0" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="382.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="402.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="422.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="442.0" cy="26.0" r="2.2" fill="#222"/>
+<circle cx="462.0" cy="60.6" r="2.2" fill="#222"/>
+<circle cx="482.0" cy="26.0" r="2.2" fill="#222"/>
+<text x="378.0" y="73.6" font-size="11" fill="#222">S</text>
+<text x="485.0" y="22.0" font-size="11" fill="#222">G</text>
+</svg></li>
+    <li>落としやすい所: 「横へ行く」経路は、Sのとなりの上の点を飛ばしやすい。なぞったあとに、通っていない点が残っていないかを数える。</li>
+  </ol>
+  <div class="ans">答え：ア 2、イ 3、ウ 4</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 エ・オ・カ・キ</span> 5個のとき、Sの次にA／Bへ行った場合 <span class="type">A・3点×4｜場合の数（小さい形にもどす）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>スタートSの次に頂点Aを通った場合</b>」と「<b>正三角形が□個つながっているときと同じ</b>」。Sと線SAを手でかくして、Aを新しいスタートと見る（図に置く）。残った正三角形の数を数えれば、ア〜ウで出した数がそのまま使える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Aから出る線は、右下の点と右どなりの点への2本。Sから出る線と同じ形。だから「Aから先」は、三角形が1個少ない問題と同じになる。</li>
+    <li>行ける道が1本しか残っていない点は、通り方が1つに決まる。決まった所を先に赤でなぞると、残りが小さくなる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Sの次にA。Sと線SAをかくすと、Aから右は正三角形 <b>4個</b> の形（エ＝4）。4個のときは4通りだったので、AからGまでは4通り（オ＝4）。
+<svg id="q3_2_a" viewBox="0 0 280 83" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<polygon points="30.0,30.0 50.0,64.6 70.0,30.0" fill="#dbe9ff" stroke="none"/>
+<polygon points="50.0,64.6 70.0,30.0 90.0,64.6" fill="#dbe9ff" stroke="none"/>
+<polygon points="70.0,30.0 90.0,64.6 110.0,30.0" fill="#dbe9ff" stroke="none"/>
+<polygon points="90.0,64.6 110.0,30.0 130.0,64.6" fill="#dbe9ff" stroke="none"/>
+<line x1="10.0" y1="64.6" x2="30.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="10.0" y1="64.6" x2="50.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="30.0" x2="50.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="30.0" x2="70.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="50.0" y1="64.6" x2="70.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="50.0" y1="64.6" x2="90.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="70.0" y1="30.0" x2="90.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="70.0" y1="30.0" x2="110.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="90.0" y1="64.6" x2="110.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="90.0" y1="64.6" x2="130.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="30.0" x2="130.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<polyline points="10.0,64.6 30.0,30.0" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="10.0" cy="64.6" r="2.2" fill="#222"/>
+<circle cx="30.0" cy="30.0" r="2.2" fill="#222"/>
+<circle cx="50.0" cy="64.6" r="2.2" fill="#222"/>
+<circle cx="70.0" cy="30.0" r="2.2" fill="#222"/>
+<circle cx="90.0" cy="64.6" r="2.2" fill="#222"/>
+<circle cx="110.0" cy="30.0" r="2.2" fill="#222"/>
+<circle cx="130.0" cy="64.6" r="2.2" fill="#222"/>
+<text x="6.0" y="77.6" font-size="11" fill="#222">S</text>
+<text x="129.0" y="77.6" font-size="11" fill="#222">G</text>
+<text x="26.0" y="24.0" font-size="11" fill="#d32f2f" font-weight="bold">A</text>
+<text x="142" y="35" font-size="11" fill="#d32f2f">Aを新しいスタートと見る</text><text x="142" y="51" font-size="11" fill="#1565c0">色の部分＝正三角形4個</text><text x="142" y="67" font-size="11" fill="#1565c0">→ ウと同じ 4通り</text>
+</svg></li>
+    <li>Sの次にB。Sのとなりの上の点をC、その右の上の点をDと名前を付ける（Cは、1つ前の図でAと呼んだ場所）。Cに行けるのは、もうBからだけ。だからB→Cに決まる。Cから次に行けるのはDだけ。S→B→C→D までが1本に決まる。</li>
+    <li>Dから右は正三角形 <b>2個</b> の形（カ＝2）。2個のときは2通りだったので、DからGまでは2通り（キ＝2）。
+<svg id="q3_2_b" viewBox="0 0 280 83" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<polygon points="70.0,30.0 90.0,64.6 110.0,30.0" fill="#dbe9ff" stroke="none"/>
+<polygon points="90.0,64.6 110.0,30.0 130.0,64.6" fill="#dbe9ff" stroke="none"/>
+<line x1="10.0" y1="64.6" x2="30.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="10.0" y1="64.6" x2="50.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="30.0" x2="50.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="30.0" y1="30.0" x2="70.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="50.0" y1="64.6" x2="70.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="50.0" y1="64.6" x2="90.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="70.0" y1="30.0" x2="90.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="70.0" y1="30.0" x2="110.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="90.0" y1="64.6" x2="110.0" y2="30.0" stroke="#222" stroke-width="1"/>
+<line x1="90.0" y1="64.6" x2="130.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="30.0" x2="130.0" y2="64.6" stroke="#222" stroke-width="1"/>
+<polyline points="10.0,64.6 50.0,64.6 30.0,30.0 70.0,30.0" fill="none" stroke="#d32f2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="10.0" cy="64.6" r="2.2" fill="#222"/>
+<circle cx="30.0" cy="30.0" r="2.2" fill="#222"/>
+<circle cx="50.0" cy="64.6" r="2.2" fill="#222"/>
+<circle cx="70.0" cy="30.0" r="2.2" fill="#222"/>
+<circle cx="90.0" cy="64.6" r="2.2" fill="#222"/>
+<circle cx="110.0" cy="30.0" r="2.2" fill="#222"/>
+<circle cx="130.0" cy="64.6" r="2.2" fill="#222"/>
+<text x="6.0" y="77.6" font-size="11" fill="#222">S</text>
+<text x="129.0" y="77.6" font-size="11" fill="#222">G</text>
+<text x="46.0" y="78.6" font-size="11" fill="#d32f2f" font-weight="bold">B</text>
+<text x="26.0" y="24.0" font-size="11" fill="#d32f2f" font-weight="bold">C</text>
+<text x="66.0" y="24.0" font-size="11" fill="#d32f2f" font-weight="bold">D</text>
+<text x="142" y="27" font-size="11" fill="#d32f2f">Cに行けるのはBからだけ</text><text x="142" y="43" font-size="11" fill="#d32f2f">→ S→B→C→D は決まり</text><text x="142" y="59" font-size="11" fill="#1565c0">色の部分＝正三角形2個</text><text x="142" y="75" font-size="11" fill="#1565c0">→ アと同じ 2通り</text>
+</svg></li>
+    <li>5個のとき全部で 4＋2＝6通り。落としやすい所: カを「3個」と数えないこと。Dから右に残る三角形は2個だけ。かくした部分を手でおさえたまま、残りを数える。</li>
+  </ol>
+  <div class="ans">答え：エ 4、オ 4、カ 2、キ 2</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 ク</span> 正三角形が10個のときの経路の数 <span class="type">B・3点｜場合の数（表で積み上げ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>10個つながっているとき</b>」と、会話で分かった決まり「Aを通ると<b>1個少ない形</b>・Bを通ると3個少ない形」。表を2個から順に「1つ前＋3つ前」で10個まで埋めれば決まる（直して書く）。ア〜キが合っていれば、たし算だけで取れる問題。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>5個のときの6通りは「4個のとき（Aを通る）＋2個のとき（Bを通る）」。6個のときも同じで「5個のとき＋3個のとき」。つまり、ある数のときの経路の数は「1つ前の数のとき＋3つ前の数のとき」になる。</li>
+    <li>表で積み上げるときは、使う2つのますに印を付ける。見るますを1つまちがえると、あとが全部ずれる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を書く。上の行に正三角形の数、下の行に経路の数。2・3・4個には 2・3・4 を入れる。</li>
+    <li>5個＝4個＋2個＝4＋2＝6。6個＝5個＋3個＝6＋3＝9。7個＝9＋4＝13。</li>
+    <li>8個＝13＋6＝19。9個＝19＋9＝28。10個＝28＋13＝<b>41</b>。
+<table><tr><th>正三角形の数（個）</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+<tr><th>経路の数（通り）</th><td>2</td><td>3</td><td>4</td><td>6</td><td>9</td><td>13</td><td>19</td><td>28</td><td><b>41</b></td></tr>
+<tr><th>どう出したか</th><td>数えた</td><td>数えた</td><td>数えた</td><td>4＋2</td><td>6＋3</td><td>9＋4</td><td>13＋6</td><td>19＋9</td><td>28＋13</td></tr></table></li>
+    <li>たしかめ。5個の6通りは、会話の「Aを通ると4通り、Bを通ると2通り」の合計と同じ。表の出だし3つが合っていれば、あとはたし算だけ。</li>
+  </ol>
+  <div class="ans">答え：41</div>
+  <div class="tip">コツ：「全部の点を1回ずつ通る道の数」は、数が大きいときに直接は数えない。小さい数で数えて、ふえ方の決まりを見つけ、表で積み上げる。会話文の問題は、会話そのものがその手順になっている。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 円の中に、Aを頂点にもつ長方形を定規だけで <span class="type">B・6点｜作図（定規のみ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>定規のみ</b>」「使用回数は6回まで」と、求めるもの「<b>Aを頂点の1つとする長方形</b>」に丸。定規で位置が決まる線は、Aと中心Oを通る線＝直径。直径を2本引いて4つの端を結べば長方形。2＋4＝6回。「直径2本」が思いつかなければ後回し。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2本の対角線の長さが等しく、おたがいの真ん中で交わる四角形は長方形。円の直径はどれも同じ長さで、どれも中心Oで半分に分かれる。だから直径2本を対角線にすれば長方形になる。</li>
+    <li>定規だけの作図でできるのは「2つの点を通る直線を引く」ことだけ。はじめに使える点は O と A の2つ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>①AとOを定規で結び、反対側の円周までのばす。これが <b>直径AB</b>。</li>
+    <li>②Oを通る別の直線を引き、円周との交点をC、Dとする。これが直径CD。向きはどこでもよいが、ABと重ねない。
+<svg id="q4_1_a" viewBox="0 0 300 270" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<circle cx="150" cy="125" r="100" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="150.0" cy="125.0" r="3" fill="#222"/>
+<text x="136.0" y="120.0" font-size="12" fill="#222">O</text>
+<circle cx="231.9" cy="67.6" r="3" fill="#222"/>
+<text x="237.9" y="63.6" font-size="12" fill="#222">A</text>
+<line x1="231.9" y1="67.6" x2="68.1" y2="182.4" stroke="#1565c0" stroke-width="2"/>
+<line x1="63.4" y1="75.0" x2="236.6" y2="175.0" stroke="#1565c0" stroke-width="2"/>
+<circle cx="68.1" cy="182.4" r="3" fill="#222"/>
+<circle cx="63.4" cy="75.0" r="3" fill="#222"/>
+<circle cx="236.6" cy="175.0" r="3" fill="#222"/>
+<text x="54.1" y="194.4" font-size="12" fill="#222">B</text>
+<text x="49.4" y="73.0" font-size="12" fill="#222">C</text>
+<text x="240.6" y="189.0" font-size="12" fill="#222">D</text>
+<text x="195.0" y="110.3" font-size="12" fill="#1565c0" font-weight="bold">①</text>
+<text x="102.7" y="94.0" font-size="12" fill="#1565c0" font-weight="bold">②</text>
+<text x="10.0" y="243.0" font-size="11" fill="#1565c0">①AからOを通って反対側へ＝直径AB</text>
+<text x="10.0" y="258.0" font-size="11" fill="#1565c0">②Oを通るもう1本＝直径CD</text>
+</svg></li>
+    <li>③〜⑥ A→C→B→D→A の順に4本結ぶ。<b>長方形ACBD</b> ができる。定規は 2＋4＝6回。
+<svg id="q4_1_b" viewBox="0 0 300 270" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<circle cx="150" cy="125" r="100" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="150.0" cy="125.0" r="3" fill="#222"/>
+<text x="136.0" y="120.0" font-size="12" fill="#222">O</text>
+<circle cx="231.9" cy="67.6" r="3" fill="#222"/>
+<text x="237.9" y="63.6" font-size="12" fill="#222">A</text>
+<line x1="231.9" y1="67.6" x2="68.1" y2="182.4" stroke="#1565c0" stroke-width="1.5"/>
+<line x1="63.4" y1="75.0" x2="236.6" y2="175.0" stroke="#1565c0" stroke-width="1.5"/>
+<line x1="231.9" y1="67.6" x2="63.4" y2="75.0" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="63.4" y1="75.0" x2="68.1" y2="182.4" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="68.1" y1="182.4" x2="236.6" y2="175.0" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="236.6" y1="175.0" x2="231.9" y2="67.6" stroke="#d32f2f" stroke-width="2.5"/>
+<circle cx="68.1" cy="182.4" r="3" fill="#222"/>
+<circle cx="63.4" cy="75.0" r="3" fill="#222"/>
+<circle cx="236.6" cy="175.0" r="3" fill="#222"/>
+<text x="54.1" y="194.4" font-size="12" fill="#222">B</text>
+<text x="49.4" y="73.0" font-size="12" fill="#222">C</text>
+<text x="240.6" y="189.0" font-size="12" fill="#222">D</text>
+<text x="141.7" y="65.3" font-size="12" fill="#d32f2f" font-weight="bold">③</text>
+<text x="49.7" y="132.7" font-size="12" fill="#d32f2f" font-weight="bold">④</text>
+<text x="146.3" y="194.7" font-size="12" fill="#d32f2f" font-weight="bold">⑤</text>
+<text x="240.3" y="125.3" font-size="12" fill="#d32f2f" font-weight="bold">⑥</text>
+<text x="10.0" y="243.0" font-size="11" fill="#d32f2f">③〜⑥ A→C→B→D→A と結ぶ</text>
+<text x="10.0" y="258.0" font-size="11" fill="#222">対角線AB＝CD・真ん中Oで交わる → 長方形</text>
+</svg></li>
+    <li>落としやすい所: 長方形の辺を「ABに平行な線」で描こうとしないこと。定規だけでは平行な線は正確に引けない。使える道具は「Oを通る線」だけ。</li>
+  </ol>
+  <div class="ans">答え：解説の図1を参照のこと。（AとOを通る直径ABと、Oを通るもう1本の直径CDを引き、A・C・B・Dを順に結んだ長方形ACBD。定規6回）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 2つの円が交わるとき、円Pの中心を定規だけで <span class="type">B・6点｜作図（定規のみ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>円Oと2点で交わっている</b>」と求めるもの「<b>中心Pを作図</b>」に丸。中心＝直径2本の交わる点なので、円Pの直径を2本作る → 円Oの直径を引いて、交点A・Bに直角を作る（「直径を見こむ角は直角」の逆向き）。(1)が描けたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>直径の両はしと円周上の点を結ぶと、その角は直角。たとえば円Oの直径BDと円周上の点Aなら、角BADは90度。</li>
+    <li>逆に、円周上の3点A・B・Eで角BAEが直角なら、BEはその円の直径。この「逆」を円Pで使う。</li>
+    <li>円の中心は、直径と直径が交わる点。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2つの円の交点を上からA、Bとする。①AからOを通して円Oの反対側まで引き、交点をC。②BからOを通して引き、交点をD。円Oの直径AC・BDができた。</li>
+    <li>③DからAを通ってそのままのばし、円Pとの交点をE。④CからBを通ってのばし、円Pとの交点をF。
+<svg id="q4_2_a" viewBox="0 0 420 315" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<circle cx="120" cy="150" r="95" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="285" cy="150" r="125" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="120.0" cy="150.0" r="3" fill="#222"/>
+<text x="106.0" y="145.0" font-size="12" fill="#222">O</text>
+<line x1="182.5" y1="78.5" x2="57.5" y2="221.5" stroke="#1565c0" stroke-width="2"/>
+<line x1="182.5" y1="221.5" x2="57.5" y2="78.5" stroke="#1565c0" stroke-width="2"/>
+<line x1="57.5" y1="78.5" x2="387.5" y2="78.5" stroke="#1565c0" stroke-width="2"/>
+<line x1="57.5" y1="221.5" x2="387.5" y2="221.5" stroke="#1565c0" stroke-width="2"/>
+<circle cx="57.5" cy="221.5" r="3" fill="#222"/>
+<circle cx="57.5" cy="78.5" r="3" fill="#222"/>
+<circle cx="387.5" cy="78.5" r="3" fill="#222"/>
+<circle cx="387.5" cy="221.5" r="3" fill="#222"/>
+<text x="43.5" y="235.5" font-size="12" fill="#222">C</text>
+<text x="43.5" y="76.5" font-size="12" fill="#222">D</text>
+<text x="392.5" y="76.5" font-size="12" fill="#222">E</text>
+<text x="392.5" y="235.5" font-size="12" fill="#222">F</text>
+<polyline points="182.5,86.5 174.5,86.5 174.5,78.5" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<polyline points="182.5,213.5 174.5,213.5 174.5,221.5" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<circle cx="182.5" cy="78.5" r="3" fill="#222"/>
+<circle cx="182.5" cy="221.5" r="3" fill="#222"/>
+<text x="178.5" y="71.5" font-size="12" fill="#222">A</text>
+<text x="178.5" y="236.5" font-size="12" fill="#222">B</text>
+<text x="160.2" y="110.2" font-size="12" fill="#1565c0" font-weight="bold">①</text>
+<text x="160.2" y="199.8" font-size="12" fill="#1565c0" font-weight="bold">②</text>
+<text x="285.0" y="73.5" font-size="12" fill="#1565c0" font-weight="bold">③</text>
+<text x="285.0" y="236.5" font-size="12" fill="#1565c0" font-weight="bold">④</text>
+<text x="8.0" y="294.0" font-size="11" fill="#1565c0">①②円Oの直径AC・BD　③④DA・CBをのばして円Pまで（E・F）</text>
+<text x="8.0" y="309.0" font-size="11" fill="#d32f2f">BDが直径 → 角BADは直角 → 角BAEも直角</text>
+</svg></li>
+    <li>BDは円Oの直径なので、<b>角BADは直角</b>。DAEは一直線なので、角BAEも直角。A・B・Eは円Pの上の点なので、BEは円Pの直径。同じように、角ABCが直角 → 角ABFも直角 → AFも円Pの直径。</li>
+    <li>⑤AとFを結ぶ。⑥BとEを結ぶ。交わった点が <b>P</b>。Pと書きこむ。定規は6回。
+<svg id="q4_2_b" viewBox="0 0 420 315" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<circle cx="120" cy="150" r="95" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="285" cy="150" r="125" fill="none" stroke="#222" stroke-width="1.5"/>
+<circle cx="120.0" cy="150.0" r="3" fill="#222"/>
+<text x="106.0" y="145.0" font-size="12" fill="#222">O</text>
+<line x1="182.5" y1="78.5" x2="57.5" y2="221.5" stroke="#1565c0" stroke-width="1.2"/>
+<line x1="182.5" y1="221.5" x2="57.5" y2="78.5" stroke="#1565c0" stroke-width="1.2"/>
+<line x1="57.5" y1="78.5" x2="387.5" y2="78.5" stroke="#1565c0" stroke-width="1.2"/>
+<line x1="57.5" y1="221.5" x2="387.5" y2="221.5" stroke="#1565c0" stroke-width="1.2"/>
+<line x1="182.5" y1="78.5" x2="387.5" y2="221.5" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="182.5" y1="221.5" x2="387.5" y2="78.5" stroke="#d32f2f" stroke-width="2.5"/>
+<circle cx="57.5" cy="221.5" r="3" fill="#222"/>
+<circle cx="57.5" cy="78.5" r="3" fill="#222"/>
+<circle cx="387.5" cy="78.5" r="3" fill="#222"/>
+<circle cx="387.5" cy="221.5" r="3" fill="#222"/>
+<text x="43.5" y="235.5" font-size="12" fill="#222">C</text>
+<text x="43.5" y="76.5" font-size="12" fill="#222">D</text>
+<text x="392.5" y="76.5" font-size="12" fill="#222">E</text>
+<text x="392.5" y="235.5" font-size="12" fill="#222">F</text>
+<circle cx="182.5" cy="78.5" r="3" fill="#222"/>
+<circle cx="182.5" cy="221.5" r="3" fill="#222"/>
+<text x="178.5" y="71.5" font-size="12" fill="#222">A</text>
+<text x="178.5" y="236.5" font-size="12" fill="#222">B</text>
+<circle cx="285.0" cy="150.0" r="4" fill="#d32f2f"/>
+<text x="269.0" y="142.0" font-size="13" fill="#d32f2f" font-weight="bold">P</text>
+<text x="332.0" y="192.6" font-size="12" fill="#d32f2f" font-weight="bold">⑤</text>
+<text x="332.0" y="115.4" font-size="12" fill="#d32f2f" font-weight="bold">⑥</text>
+<text x="8.0" y="294.0" font-size="11" fill="#d32f2f">⑤AF　⑥BE　角BAE・角ABFが直角だから BE・AF は円Pの直径</text>
+<text x="8.0" y="309.0" font-size="11" fill="#222">直径2本の交わる点＝中心P</text>
+</svg></li>
+    <li>落としやすい所: ③④は「DからA」「CからB」の向きにのばす。AからDの側にのばしても円Pには届かない。Pの文字を書き忘れると、作図が合っていても答えにならない。</li>
+  </ol>
+  <div class="ans">答え：解説の図2を参照のこと。（円Oの直径AC・BDを引き、DA・CBをのばして円Pと交わる点E・Fをとる。AFとBEの交わる点がP。定規6回）</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜4</span> まとめ</h2>
+  <ul>
+    <li>「全部の点を1回ずつ通る」数え上げは、スタートから出る線の本数で場合分けして、小さい形にもどす。</li>
+    <li>ふえ方の決まり（1つ前＋3つ前）が見えたら、表で積み上げる。出だしの3つを数えまちがえないことがすべて。</li>
+    <li>定規だけの作図は「中心を通る線＝直径」から。長方形も円の中心も、直径2本で決まる。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="5"><h1 class="dtitle">大問5（位の数をかけ合わせる操作・条件の整理）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">5</span> この回の全体像（担当の大問） <span class="type">A 7点／B 7点／C 7点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>5 (1)</td><td>10〜99に1回操作して現れない数</td><td>A 7</td><td>十の位ごとに「出てくる数の範囲」を表にする</td></tr>
+  <tr><td>5 (2)</td><td>300以上・2回で1になる最小の数</td><td>B 7</td><td>「1になる直前の数」は10・100・1000… → 1回目の結果を決める</td></tr>
+  <tr><td>5 (3)</td><td>2026以上・3回で1になる2番目と4番目</td><td>C 7</td><td>20PQ → ★ → 10 → 1 の形にして、★を3つにしぼる</td></tr></table>
+  <p>取り方: <b>(1)は表を書けば決まる</b>。(2)は「300以上なら1回目は27以上」が見えたら手を付ける。(3)は(2)と同じ逆算を2回重ねる問題で、時間が残ったときだけ。操作のルールは<b>「十の位×十の位＋一の位」</b>と自分の言葉で書き直してから始める。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 10〜99に1回操作して現れない最小の数 <span class="type">A・7点｜条件の整理・書き出し</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>十の位の数を2回かけ合わせた数</b>」と「<b>現れない数の中で最も小さい数</b>」。操作を「十の位×十の位＋一の位」に直して書く → 十の位ごとに出てくる数の範囲を表にすると、すき間が1か所見える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>十の位が同じ10個の数は、操作後が連続した10個になる。たとえば40〜49なら、4×4＝16に一の位の0〜9をたすので16〜25。</li>
+    <li>同じ数を2回かけた数（平方数）は 1・4・9・16・25・36・49・64・81。表の左の列になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>操作を2けたの数の形で書く。「十の位×十の位＋一の位」。例の 27 で確かめると 2×2＋7＝11 で合う。</li>
+    <li>十の位ごとに、いちばん小さい数（一の位が0）といちばん大きい数（一の位が9）を表にする。
+<table><tr><th>十の位</th><th>一の位0のとき</th><th>一の位9のとき</th><th>出てくる数</th></tr>
+<tr><td>1</td><td>1</td><td>10</td><td>1〜10</td></tr>
+<tr><td>2</td><td>4</td><td>13</td><td>4〜13</td></tr>
+<tr><td>3</td><td>9</td><td>18</td><td>9〜18</td></tr>
+<tr><td>4</td><td>16</td><td>25</td><td>16〜25</td></tr>
+<tr><td>5</td><td>25</td><td><b>34</b></td><td>25〜34</td></tr>
+<tr><td>6</td><td>36</td><td>45</td><td>36〜45</td></tr>
+<tr><td>7</td><td>49</td><td>58</td><td>49〜58</td></tr></table></li>
+    <li>範囲がつながらない所をさがす。5の行は34で終わり、6の行は36から始まる。<b>35だけがどの行にも入らない</b>。1〜34はすべてどこかの行に入っている。</li>
+    <li>落としやすい所: 4の行の25と5の行の25のように、重なる数はある。重なりはすき間ではない。また10→1のように1けたの数も現れるので、1〜9を答えにしない。</li>
+  </ol>
+  <div class="ans">答え：35</div>
+  <div class="tip">コツ：この表は(2)(3)でも使う。「1回の操作で10になる2けたの数は19・26・31」も、この表の1・2・3の行から読める。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 300以上で2回操作して1になる最小の数 <span class="type">B・7点｜逆算（1になる直前の数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>300以上</b>」と「<b>2回操作を行って1</b>」。「2回で1」は「1回目で、1になる直前の数（10・100…）になる」に直して書く → 300以上の1回目は27以上なので、1回目の結果は100に決まる。27以上が出せたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1回の操作で1になる数は 10・100・1000…。1×1＝1、1×1×1＝1 で、ほかの位が0だから。</li>
+    <li>300以上の数は百の位が3以上。百の位の分だけで 3×3×3＝27 になるので、1回目の結果は27以上。たとえば300→27、301→28。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「2回で1」をさかのぼって書く。もとの数 → ★ → 1。★は10・100・1000…のどれか。</li>
+    <li>★を決める。1回目の結果は27以上なので★＝10はない。小さい数からさがすので、まず3けたで考える。3けたの数の1回目は 999 でも 9×9×9＋9×9＋9＝819 で、1000にとどかない。だから<b>★＝100</b>。</li>
+    <li>いちばん小さい数がほしいので、百の位は3にする。十の位をA、一の位をBとして式を書く。
+<pre class="fig">3×3×3 ＋ A×A ＋ B ＝ 100
+   27  ＋ A×A ＋ B ＝ 100  →  A×A ＋ B ＝ 73</pre></li>
+    <li>Bは0〜9なので、A×Aは64〜73の平方数。表で確かめる。
+<table><tr><th>A</th><th>A×A</th><th>B＝73−A×A</th><th>Bは0〜9か</th></tr>
+<tr><td>7</td><td>49</td><td>24</td><td>×（大きすぎ）</td></tr>
+<tr><td>8</td><td>64</td><td><b>9</b></td><td>○</td></tr>
+<tr><td>9</td><td>81</td><td>ひけない</td><td>×</td></tr></table>
+A＝8・B＝9 だけ。もとの数は389。</li>
+    <li>確かめ。389 → 27＋64＋9＝100 → 1×1×1＋0＋0＝1。2回で1になる。</li>
+  </ol>
+  <div class="ans">答え：389</div>
+  <div class="tip">コツ：「□回操作して1」と見たら、ゴールの1からさかのぼる。1の直前は10・100・1000…の3つくらいしかないので、もとの数の範囲（27以上など）とつき合わせれば1つに決まる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 2026以上で3回操作して1になる数の2番目と4番目 <span class="type">C・7点｜逆算の場合分け</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>2026以上</b>」と「<b>3回操作を行って1</b>」。(2)と同じさかのぼりで、2回目の数は10に決まる（下の📚）→ 千の位2・百の位0の「20PQ」から順に、1回目の結果を場合分けする。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>20PQ の1回目は 2×2×2×2＝16 に P×P＋Q をたした数で、16〜106。16〜106 の数に1回操作しても、大きくて 9×9＋9＝90 なので、2回目が100になることはなく<b>10に決まる</b>。この範囲で「1回の操作で10になる数」は、(1)の表から 19・26・31 の3つ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>さかのぼりの形を書く。20PQ → ★ → 10 → 1。★は19・26・31。16をひくと P×P＋Q は 3・10・15。</li>
+    <li>P×P＋Q になる組を表にして、4けたの数に直す。
+<table><tr><th>P×P＋Q</th><th>（P, Q）</th><th>4けたの数</th></tr>
+<tr><td>3</td><td>(0,3) (1,2)</td><td>2003・2012</td></tr>
+<tr><td>10</td><td>(1,9) (2,6) (3,1)</td><td>2019・<b>2026</b>・2031</td></tr>
+<tr><td>15</td><td>(3,6)</td><td>2036</td></tr></table>
+小さい順にならべると 2003・2012・2019・2026・2031・2036。2026以上は 2026・2031・2036 の3つなので、<b>2番目は2031</b>。</li>
+    <li>4番目は次の 21PQ でいちばん小さい数。1回目は 16＋1×1×1＝17 に P×P＋Q をたす。★が19・26・31 なので P×P＋Q は 2・9・14。いちばん小さいのは (P,Q)＝(0,2) の 2102。確かめ: 2102 → 19 → 10 → 1。</li>
+  </ol>
+  <div class="ans">答え：2番目…2031・4番目…2102</div>
+  <div class="tip">コツ：20PQ の3つで止まらず、4番目は百の位が1に上がることに気づけるか。「P×P＋Q＝2」は (0,2) と (1,1) の2通りあり、小さいのは十の位0の方。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">5</span> まとめ</h2>
+  <ul>
+    <li>操作のルールは、自分の言葉（十の位×十の位＋一の位）に書き直してから使う。</li>
+    <li>「□回操作して1」は、ゴールの1からさかのぼる。1の直前は10・100・1000…。</li>
+    <li>もとの数の範囲（27以上・16〜106）を先に出すと、さかのぼる候補が1〜3個にしぼれる。</li>
+  </ul>
+</section>
+</div>
