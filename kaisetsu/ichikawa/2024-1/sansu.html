@@ -1,0 +1,565 @@
+<!-- generated kakomon ichikawa/2024-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（計算・濃度・条件整理・場合の数・12等分の円／3で割った余りで進む図）</a></li>
+<li><a href="#3-4-5">大問3・4・5（円の作図と面積の規則・逆回りの時計算・ニュートン算と条件の整理）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（計算・濃度・条件整理・場合の数・12等分の円／3で割った余りで進む図）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 34点／B 11点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1 (1)〜(5)</td><td>四則計算／濃度／条件の整理／座り方の場合の数／12等分の円の面積</td><td>A 6+6+6+6 ／ B 6（(4)）</td><td>小数は分数に・食塩の重さを表に・「昨年4組」から表をうめる・大人の席を先に決める・中心Oと結ぶ</td></tr>
+  <tr><td>2 (1)〜(3)</td><td>3で割った余りで進む図（整数の性質）</td><td>A 5+5 ／ B 5（(3)）</td><td>ゴールに入る矢印の本数を数え、「前の数＝3×次の数＋余り」でもどす</td></tr></table>
+  <p>取り方: <b>大問1の(1)(2)(3)(5)と大問2の(1)(2)の A 34点を先に確実に</b>。1 (4) は「大人の席の決め方が2通り」と見えたら手を付ける。2 (3) は (2) の計算をそのまま使えるので、(2) が解けたら続けて取りにいく。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 小数と分数のまざった四則計算 <span class="type">A・6点｜四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>7/2×0.8</b>」と、かっこの外の「<b>÷6</b>」。0.8 は 4/5 に直して書く → かっこの中を先に片づけ、最後は<b>分母を60にそろえて</b>たし引きする。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>小数と分数がまざったら、分数にそろえる。0.8＝8/10＝4/5。</li>
+    <li>計算の順番は、かっこの中 → かけ算・わり算 → たし算・ひき算。÷6 はかっこの中が終わってからかける。</li>
+    <li>分母 10・15・20 の最小公倍数は 60。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>かっこの中を計算する。7/2×4/5＝14/5。14/5−1＝14/5−5/5＝9/5。</li>
+    <li>÷6 をする。9/5÷6＝9/5×1/6＝3/10。</li>
+    <li>式は 2−3/10＋4/15−1/20 になった。分母を60にそろえる。
+      <table><tr><th>2</th><th>3/10</th><th>4/15</th><th>1/20</th></tr><tr><td>120/60</td><td>18/60</td><td>16/60</td><td>3/60</td></tr></table></li>
+    <li>120−18＋16−3＝115。115/60 を 5 で約分して 23/12。帯分数に直すと <b>1 11/12</b>。</li>
+    <li>落としやすい所: ÷6 をかっこの中の 9/5 だけでなく「2」にもかけてしまう。約分 115/60 を忘れて終わる。</li>
+  </ol>
+  <div class="ans">答え：1 11/12</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 食塩を加え、捨て、水を加える <span class="type">A・6点｜濃度（食塩の重さを追う）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>食塩を10g加えて</b>」と「<b>できた食塩水を10g捨てます</b>」。段階ごとに「食塩水の重さ・食塩の重さ・濃さ」を表に置く → <b>捨てても濃さは変わらない</b>ので、残った食塩の重さから最後の食塩水の重さがもどせる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>食塩の重さ＝食塩水の重さ×濃さ。4%の食塩水110gなら、110×0.04＝4.4g。</li>
+    <li>食塩水を捨てると、食塩水も食塩も減る。でも濃さは同じ。12%の食塩水を10g捨てても、残りは12%のまま。</li>
+    <li>水を加えても、食塩の重さは変わらない。濃さだけ下がる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>段階ごとの表を書く。食塩の重さを1列目に追う。
+      <table><tr><th>段階</th><th>食塩水 (g)</th><th>食塩 (g)</th><th>濃さ</th></tr>
+      <tr><td>はじめ</td><td>110</td><td>110×0.04＝4.4</td><td>4%</td></tr>
+      <tr><td>食塩を10g加える</td><td>120</td><td>4.4＋10＝14.4</td><td>14.4÷120＝12%</td></tr>
+      <tr><td>10g捨てる</td><td>110</td><td>110×0.12＝<b>13.2</b></td><td>12%</td></tr>
+      <tr><td>水を加える</td><td>□</td><td>13.2（変わらない）</td><td>4%</td></tr></table></li>
+    <li>最後の行で「□×0.04＝13.2」。□＝13.2÷0.04＝<b>330</b>g。</li>
+    <li>加えた水は、330−110＝220g。</li>
+    <li>たしかめ。330×0.04＝13.2。捨てたあとの食塩と同じ。</li>
+    <li>落としやすい所: 捨てたあとも食塩を 14.4g のままにする。捨てた10gの中にも食塩（1.2g）が入っている。</li>
+  </ol>
+  <div class="ans">答え：220g</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 4人の会話から今年の組を決める <span class="type">A・6点｜条件の整理（表）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は言い切りの言葉「<b>昨年4組だった</b>」（D）と「<b>昨年も今年も偶数組</b>」（B）。昨年・今年×A〜Dの表に置く → D昨年＝4 → B昨年＝2 → B今年＝4 と、数字が1つずつ決まっていく。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1〜4組のうち偶数組は 2組と4組。</li>
+    <li>「どの2人も同じ組にいない」→ 表の同じ年の行に、同じ数字は1回しか出ない。</li>
+    <li>「4人中3人が違う組」で、Cは同じ組。だから変わったのは <b>A・B・Dの3人全員</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を書く。D の昨年に 4。B は昨年も偶数で、4 は D が使っている → B の昨年は 2。</li>
+    <li>B は変わった人で、今年も偶数。2 はもう使えない → B の今年は 4。</li>
+    <li>C は昨年も今年も同じ組。残りは 1組か3組 → 2通りに分けて表をうめる。
+      <table><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+      <tr><td>昨年（C＝1のとき）</td><td>3</td><td>2</td><td>1</td><td>4</td></tr>
+      <tr><td>今年</td><td><b>2</b></td><td>4</td><td>1</td><td>3</td></tr>
+      <tr><td>昨年（C＝3のとき）</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+      <tr><td>今年</td><td><b>2</b></td><td>4</td><td>3</td><td>1</td></tr></table>
+      今年の A と D には残りの2つの数字が入る。A も D も昨年と違う組にする。</li>
+    <li>C＝1 のとき、今年の残りは 2と3。A は昨年3だから今年は 2。D は 3。<br>C＝3 のとき、今年の残りは 1と2。A は昨年1だから今年は 2。D は 1。</li>
+    <li>どちらでも A の今年は 2組。</li>
+    <li>落としやすい所: 「変わった3人」に C を入れてしまう。C の言葉で C は同じ組と決まっている。</li>
+  </ol>
+  <div class="ans">答え：2組</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 7人乗りの車の座り方 <span class="type">B・6点｜場合の数（席を先に決める）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>運転席には大人</b>」と「<b>各列とも子どもが座る隣に最低1人の大人</b>」。大人3人の席を先に図に置く → 「席の決め方」が2通りに決まってから、だれが座るかのならべ方をかける。席の決め方が2通りと見えたら、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「どの席を大人にするか」と「どの大人・どの子どもが座るか」は別に数えて、かけ算する。</li>
+    <li>3人のならべ方は 3×2×1＝6通り。4人のならべ方は 4×3×2×1＝24通り。</li>
+    <li>「子どもの隣に大人が最低1人」→ 子どもだけの列を作れない。3人がけの列は、端の子どもの隣が1席しかないことに気をつける。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>運転席は大人。残りの大人は2人。</li>
+    <li>1列目のもう1席（運転席の隣）を大人にすると、残りの大人は1人。2列目か3列目が子どもだけになる → だめ。1列目の左は子ども。</li>
+    <li>残りの大人2人は、2列目に1人・3列目に1人。</li>
+    <li>3列目は3席。大人が端に座ると、反対の端の子どもの隣は子どもになる → だめ。<b>3列目の大人はまん中</b>。</li>
+    <li>2列目は左右どちらでもよい。席の決め方は次の2通り。
+      <table><tr><th>列</th><th>決め方①</th><th>決め方②</th></tr>
+      <tr><td>1列目</td><td>子ども・大人（運転席）</td><td>子ども・大人（運転席）</td></tr>
+      <tr><td>2列目</td><td>大人・子ども</td><td>子ども・大人</td></tr>
+      <tr><td>3列目</td><td>子ども・大人・子ども</td><td>子ども・大人・子ども</td></tr></table></li>
+    <li>決め方①で、大人3人の座り方は 3×2×1＝6通り。子ども4人は 4×3×2×1＝24通り。6×24＝<b>144</b>通り。</li>
+    <li>決め方②も同じ144通り。144×2＝288通り。</li>
+  </ol>
+  <div class="ans">答え：288通り</div>
+  <div class="tip">コツ：座り方の問題は「席の形を決める」→「人をならべる」の2段。先に席の形だけを図に描くと、2通りしかないことが見える。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 12等分した円の中の灰色部分 <span class="type">A・6点｜面積（中心と結ぶ・30°）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>円周を12等分する点</b>」と「<b>半径2cm</b>」。中心Oと灰色の頂点を結ぶ（図に置く）→ Oのまわりは<b>30°ずつ</b>なので、正三角形と直角の形に切れて、A何枚・B何枚かが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>12等分 → 中心の角は 360÷12＝30°。点2つ分で60°（半径2本と結ぶと正三角形）、3つ分で90°（直角）。</li>
+    <li>対角線が垂直に交わる四角形の面積は、対角線×対角線÷2。たとえば対角線 2cm と 2cm なら 2×2÷2＝2cm²。</li>
+    <li>正三角形の1辺を2倍にすると、面積は 2×2＝4倍。1辺2cm の正三角形は、1辺1cm の正三角形 4枚分。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>O と A・B・C・E・F を結ぶ。灰色は 四角形ABOF・三角形OBC・三角形OEF・三角形OCE の4つに分かれる。
+      <svg id="q1_5_fig1" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><circle cx="180" cy="185" r="130" fill="none" stroke="#222" stroke-width="1.5"/><polygon points="180.0,55.0 245.0,72.4 180,185 115.0,72.4" fill="#dbe9ff" stroke="#222" stroke-width="1.5" /><polygon points="180,185 115.0,72.4 67.4,250.0" fill="#ffe0b2" stroke="#222" stroke-width="1.5" /><polygon points="180,185 292.6,250.0 245.0,72.4" fill="#ffe0b2" stroke="#222" stroke-width="1.5" /><polygon points="180,185 67.4,250.0 292.6,250.0" fill="#c8e6c9" stroke="#222" stroke-width="1.5" /><line x1="115.0" y1="72.4" x2="245.0" y2="72.4" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,4"/><line x1="180.0" y1="55.0" x2="180" y2="185" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,4"/><circle cx="310.0" cy="185.0" r="3.5" fill="#222"/> <circle cx="292.6" cy="120.0" r="3.5" fill="#222"/> <circle cx="245.0" cy="72.4" r="3.5" fill="#222"/> <circle cx="180.0" cy="55.0" r="3.5" fill="#222"/> <circle cx="115.0" cy="72.4" r="3.5" fill="#222"/> <circle cx="67.4" cy="120.0" r="3.5" fill="#222"/> <circle cx="50.0" cy="185.0" r="3.5" fill="#222"/> <circle cx="67.4" cy="250.0" r="3.5" fill="#222"/> <circle cx="115.0" cy="297.6" r="3.5" fill="#222"/> <circle cx="180.0" cy="315.0" r="3.5" fill="#222"/> <circle cx="245.0" cy="297.6" r="3.5" fill="#222"/> <circle cx="292.6" cy="250.0" r="3.5" fill="#222"/><circle cx="180" cy="185" r="3.5" fill="#222"/><text x="180.0" y="45.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">A</text><text x="103.0" y="68.4" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">B</text><text x="257.0" y="68.4" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">F</text><text x="54.400000000000006" y="258.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">C</text><text x="305.6" y="258.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">E</text><text x="180.0" y="337.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">D</text><text x="192" y="201" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">O</text><text x="180" y="125" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">2cm²</text><text x="123" y="172" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">2</text><text x="237" y="172" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">2</text><text x="180" y="228" font-size="14" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">？</text><text x="222" y="135" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="middle" font-family="sans-serif">2cm</text><text x="160" y="95" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="middle" font-family="sans-serif">2cm</text><text x="180" y="348" font-size="12" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">30°ずつ区切った点・OとA,B,C,E,Fを結ぶ</text></svg></li>
+    <li>四角形ABOF。B から F は点2つ分なので、三角形OBF は正三角形。BF＝2cm。AO＝2cm は BF と垂直 → 2×2÷2＝<b>2cm²</b>。</li>
+    <li>三角形OBC と 三角形OEF。角BOC は点3つ分で90°、辺は 2cm。2つ合わせると1辺2cmの正方形 → 2×2＝4cm²。</li>
+    <li>ここまでで 2＋4＝6cm²。1辺1cm の正方形 A は 1cm² だから、A が 6枚分 → あ＝6。</li>
+    <li>残りの三角形OCE。下の点 D と結ぶ。角COD は点2つ分 → 三角形OCD は1辺2cmの正三角形。CE と OD の交わる点を M とする。C と E は OD をはさんで左右対称なので、CM は OD に垂直。正三角形OCD を CM で折るとぴたりと重なるから、M は OD のまん中。三角形OCE は三角形OCM の2倍、三角形OCD も三角形OCM の2倍 → <b>三角形OCE＝三角形OCD</b>。
+      <svg id="q1_5_fig2" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><circle cx="180" cy="185" r="130" fill="none" stroke="#222" stroke-width="1.5"/><polygon points="180,185 67.4,250.0 292.6,250.0" fill="#c8e6c9" stroke="#222" stroke-width="1.5" /><polygon points="180,185 67.4,250.0 180.0,315.0" fill="none" stroke="#d32f2f" stroke-width="2" stroke-dasharray="6,4"/><line x1="180" y1="185" x2="180.0" y2="315.0" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,4"/><circle cx="310.0" cy="185.0" r="3.5" fill="#222"/> <circle cx="292.6" cy="120.0" r="3.5" fill="#222"/> <circle cx="245.0" cy="72.4" r="3.5" fill="#222"/> <circle cx="180.0" cy="55.0" r="3.5" fill="#222"/> <circle cx="115.0" cy="72.4" r="3.5" fill="#222"/> <circle cx="67.4" cy="120.0" r="3.5" fill="#222"/> <circle cx="50.0" cy="185.0" r="3.5" fill="#222"/> <circle cx="67.4" cy="250.0" r="3.5" fill="#222"/> <circle cx="115.0" cy="297.6" r="3.5" fill="#222"/> <circle cx="180.0" cy="315.0" r="3.5" fill="#222"/> <circle cx="245.0" cy="297.6" r="3.5" fill="#222"/> <circle cx="292.6" cy="250.0" r="3.5" fill="#222"/><circle cx="180" cy="185" r="3.5" fill="#222"/><circle cx="180" cy="250.0" r="3.5" fill="#d32f2f"/><text x="54.400000000000006" y="258.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">C</text><text x="305.6" y="258.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">E</text><text x="180.0" y="337.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">D</text><text x="192" y="179" font-size="15" font-weight="bold" fill="#222" text-anchor="middle" font-family="sans-serif">O</text><text x="192" y="244.0" font-size="15" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">M</text><text x="172" y="220" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle" font-family="sans-serif">1</text><text x="172" y="288" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle" font-family="sans-serif">1</text><text x="180" y="22" font-size="12" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">三角形OCE（緑）＝三角形OCD（赤の正三角形）</text><text x="180" y="348" font-size="12" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">Mは OD のまん中 → OCM と DCM は同じ大きさ</text></svg></li>
+    <li>1辺2cm の正三角形は、1辺1cm の正三角形 B の 4枚分 → い＝4。</li>
+    <li>落としやすい所: 三角形OCE を正方形の仲間に入れようとする。OCE は「正三角形の形に変える」側。</li>
+  </ol>
+  <div class="ans">答え：あ…6・い…4</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> Aに111を入れたとき、どこで終わるか <span class="type">A・5点｜整数の性質（操作をたどる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は操作の決まり「<b>余りが0であれば右</b>、1なら右ななめ上、2なら上」と「<b>進んだ先の○に商を書き入れる</b>」。111÷3 から順に、○に商を書きこみながら進む（図に置く）→ 2回で上の列に着く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3で割った余りは 0・1・2 の3通り。だから進む向きも3通り。</li>
+    <li>B から見て、右は C、右ななめ上は G、上は F。上の列（E〜H）に着いたら終わり。</li>
+    <li>次の○に書くのは「商」。例の 15 なら、B に 5、F に 1。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>111÷3＝37 余り0 → 右へ。B に 37。</li>
+    <li>37÷3＝12 余り1 → 右ななめ上へ。G に 12。
+      <svg id="q2_1_fig" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><defs><marker id="q2_1_fig_ar_d32f2f" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#d32f2f"/></marker><marker id="q2_1_fig_ar_1565c0" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1565c0"/></marker><marker id="q2_1_fig_ar_7b1fa2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7b1fa2"/></marker></defs><line x1="50.0" y1="150.0" x2="150.0" y2="150.0" stroke="#222" stroke-width="1.5"/><line x1="150.0" y1="150.0" x2="250.0" y2="150.0" stroke="#222" stroke-width="1.5"/><line x1="250.0" y1="150.0" x2="350.0" y2="150.0" stroke="#222" stroke-width="1.5"/><line x1="50.0" y1="40.0" x2="150.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="150.0" y1="40.0" x2="250.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="250.0" y1="40.0" x2="350.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="50.0" y1="150.0" x2="50.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="150.0" y1="150.0" x2="150.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="250.0" y1="150.0" x2="250.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="350.0" y1="150.0" x2="350.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="50.0" y1="150.0" x2="150.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="150.0" y1="150.0" x2="250.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="250.0" y1="150.0" x2="350.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="70.0" y1="150.0" x2="130.0" y2="150.0" stroke="#d32f2f" stroke-width="3" marker-end="url(#q2_1_fig_ar_d32f2f)"/><line x1="163.5" y1="135.2" x2="236.5" y2="54.8" stroke="#d32f2f" stroke-width="3" marker-end="url(#q2_1_fig_ar_d32f2f)"/><circle cx="50" cy="150" r="17" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/><text x="50" y="182" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">A</text><text x="50" y="155" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">111</text><circle cx="150" cy="150" r="17" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/><text x="150" y="182" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">B</text><text x="150" y="155" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">37</text><circle cx="250" cy="150" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="250" y="182" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">C</text><circle cx="350" cy="150" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="350" y="182" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">D</text><circle cx="50" cy="40" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="50" y="16" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">E</text><circle cx="150" cy="40" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="150" y="16" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">F</text><circle cx="250" cy="40" r="17" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/><text x="250" y="16" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">G</text><text x="250" y="45" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">12</text><circle cx="350" cy="40" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="350" y="16" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">H</text><text x="100" y="196" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">あまり0→右</text><text x="245" y="100" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="start" font-family="sans-serif">あまり1→右ななめ上</text></svg></li>
+    <li>G は上の列。ここで終了。</li>
+    <li>落としやすい所: 余り1の「右ななめ上」を「上」と取りちがえて F と答える。向きの決まりを図のそばに書いておく。</li>
+  </ol>
+  <div class="ans">答え：場所…G・整数…12</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> Dで終わる整数の個数 <span class="type">A・5点｜整数の性質（倍数の個数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>最後にDに進んで終了する</b>」と「<b>1から2024までに何個</b>」。D までの道を図に置く → A→B→C→D は<b>右へ3回＝余り0が3回</b>。「27の倍数の個数」に直して書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>右へ進むのは余り0のときだけ。D に着く道は A→B→C→D の1本。</li>
+    <li>3で3回続けて割り切れる数は 3×3×3＝27 の倍数。例: 27→9→3→1 で、D に 1 が書かれる。</li>
+    <li>1から2024までの□の倍数の個数は、2024÷□ の商。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>A の数が3で割り切れて B へ。B の数も割り切れて C へ。C の数も割り切れて D へ。</li>
+    <li>A の数は、3で3回割り切れる数 → <b>27の倍数</b>。</li>
+    <li>2024÷27＝<b>74 余り26</b>。1から2024までに 74個。</li>
+    <li>落としやすい所: 「3の倍数」674個と答える。それでは右へ1回しか進めない。</li>
+  </ol>
+  <div class="ans">答え：74個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> Gで終わる整数の個数 <span class="type">B・5点｜整数の性質（道が2本・逆にたどる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>最後にGに進んで終了する</b>」。G に入る矢印を図に置く → <b>B から（余り1）と C から（余り2）の2本</b>。それぞれ「A の数の形」に直して書いて数え、たす。(2) の 2024÷27 がそのまま使えるので、(2) が解けたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>G に来る道は2本。道1 A→B→G（B で余り1）と、道2 A→B→C→G（C で余り2）。</li>
+    <li>逆にたどるときは「前の数＝3×次の数＋余り」。例: G＝12 ← B＝3×12＋1＝37 ← A＝37×3＝111。</li>
+    <li>G に書かれる数には 0 も入る。A＝3 なら B＝1、1÷3＝0 余り1 で G に 0。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>G に入る矢印を図で確かめる。
+      <svg id="q2_3_fig" viewBox="0 0 400 215" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><defs><marker id="q2_3_fig_ar_d32f2f" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#d32f2f"/></marker><marker id="q2_3_fig_ar_1565c0" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1565c0"/></marker><marker id="q2_3_fig_ar_7b1fa2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7b1fa2"/></marker></defs><line x1="50.0" y1="150.0" x2="150.0" y2="150.0" stroke="#222" stroke-width="1.5"/><line x1="150.0" y1="150.0" x2="250.0" y2="150.0" stroke="#222" stroke-width="1.5"/><line x1="250.0" y1="150.0" x2="350.0" y2="150.0" stroke="#222" stroke-width="1.5"/><line x1="50.0" y1="40.0" x2="150.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="150.0" y1="40.0" x2="250.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="250.0" y1="40.0" x2="350.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="50.0" y1="150.0" x2="50.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="150.0" y1="150.0" x2="150.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="250.0" y1="150.0" x2="250.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="350.0" y1="150.0" x2="350.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="50.0" y1="150.0" x2="150.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="150.0" y1="150.0" x2="250.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="250.0" y1="150.0" x2="350.0" y2="40.0" stroke="#222" stroke-width="1.5"/><line x1="163.5" y1="135.2" x2="236.5" y2="54.8" stroke="#d32f2f" stroke-width="3" marker-end="url(#q2_3_fig_ar_d32f2f)"/><line x1="170.0" y1="150.0" x2="230.0" y2="150.0" stroke="#1565c0" stroke-width="3" marker-end="url(#q2_3_fig_ar_1565c0)"/><line x1="250.0" y1="130.0" x2="250.0" y2="60.0" stroke="#1565c0" stroke-width="3" marker-end="url(#q2_3_fig_ar_1565c0)"/><line x1="70.0" y1="150.0" x2="130.0" y2="150.0" stroke="#7b1fa2" stroke-width="3" marker-end="url(#q2_3_fig_ar_7b1fa2)"/><circle cx="50" cy="150" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="50" y="182" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">A</text><circle cx="150" cy="150" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="150" y="182" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">B</text><circle cx="250" cy="150" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="250" y="182" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">C</text><circle cx="350" cy="150" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="350" y="182" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">D</text><circle cx="50" cy="40" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="50" y="16" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">E</text><circle cx="150" cy="40" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="150" y="16" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">F</text><circle cx="250" cy="40" r="17" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/><text x="250" y="16" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">G</text><text x="250" y="45" font-size="13" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">□</text><circle cx="350" cy="40" r="17" fill="#fff" stroke="#222" stroke-width="1.5"/><text x="350" y="16" font-size="14" font-weight="normal" fill="#222" text-anchor="middle" font-family="sans-serif">H</text><text x="183" y="92" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="end" font-family="sans-serif">あまり1</text><text x="260" y="100" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="start" font-family="sans-serif">あまり2</text><text x="76" y="128" font-size="11" font-weight="bold" fill="#7b1fa2" text-anchor="start" font-family="sans-serif">共通・あまり0</text><text x="110" y="207" font-size="12" font-weight="bold" fill="#d32f2f" text-anchor="middle" font-family="sans-serif">道1 A→B→G（赤）</text><text x="290" y="207" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="middle" font-family="sans-serif">道2 A→B→C→G（青）</text></svg></li>
+    <li>道1 A→B→G。G の数を□とする。B の数は 3×□＋1。A の数は (3×□＋1)×3＝<b>9×□＋3</b>。</li>
+    <li>9×□＋3 が 2024 以下になる□を数える。2024÷9＝224 余り8 → □は 0〜224 の <b>225個</b>。（□＝224 なら A＝2019。□＝225 なら 2028 で2024をこえる。）</li>
+    <li>道2 A→B→C→G。G の数を△とする。C の数は 3×△＋2。B の数は (3×△＋2)×3。A の数はさらに×3で 27×△＋18。</li>
+    <li>27×△＋18 が 2024 以下になる△を数える。(2) の 2024÷27＝74 余り26 から、△は 0〜74 の 75個。（△＝74 なら A＝2016。△＝75 なら 2043 でこえる。）
+      <table><tr><th>道</th><th>A の数の形</th><th>2024以下になる個数</th></tr>
+      <tr><td>道1 A→B→G</td><td>9×□＋3</td><td>□＝0〜224 → 225個</td></tr>
+      <tr><td>道2 A→B→C→G</td><td>27×△＋18</td><td>△＝0〜74 → 75個</td></tr></table></li>
+    <li>たして 225＋75＝300個。</li>
+  </ol>
+  <div class="ans">答え：300個</div>
+  <div class="tip">コツ：「最後に○○で終わる数」は、ゴールから逆にたどって「3×（次の数）＋余り」の形を作る。道が2本あれば形も2つ。□＝0 を数え落とすと 224個・74個になるので、小さい方の端を確かめる。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>言い切りの条件（「昨年4組」「運転席は大人」「捨てる」）は、表や図に先に置く。置いた所から1つずつ決まる。</li>
+    <li>円を12等分 → 中心と結んで30°の形にする。正三角形（60°）と直角（90°）が出たら、面積は正方形・正三角形の何枚分に直せる。</li>
+    <li>操作でたどる問題は、ゴールに入る矢印の本数を数え、「前の数＝3×次の数＋余り」で逆にたどる。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（円の作図と面積の規則・逆回りの時計算・ニュートン算と条件の整理）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">A 18点／B 37点／C 0点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>3</td><td>円の中に半分の円を2つずつかき加える規則（作図・面積・比）</td><td>A 6 ／ B 6+6</td><td>1回ごとに「半径が半分・個数が2倍」→ 面積の合計は半分。表に書く</td></tr>
+    <tr><td>4</td><td>長針が逆回りする時計。二等分の状態 X・Y・Z</td><td>A 6 ／ B 6+6</td><td>「二等分」＝3本の針のどれかが他の2本のまん中。長針6度・短針0.5度を図に置く</td></tr>
+    <tr><td>5</td><td>ニュートン算（牛と豚）→ 日数の整数の組 → 放つ順番</td><td>A 6 ／ B 6+7</td><td>「1日に食べる量＝100÷日数＋1日に生える量」に直す</td></tr>
+  </table>
+  <p>取り方: <b>Aの3問（3(1)・4(1)・5(1)）を先に確実に</b>。Bは、3(2)(3)と5(2)(3)は前の小問が出ていれば表を1〜2行足すだけ。4(2)(3)は「まん中の針」の見方が分かれば取れるが、6枚の図を全部かこうとすると時間がかかる。合格者平均は非公表（目安は受験者平均＋8点）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 1番目の図を完成させる作図 <span class="type">A・6点｜作図（円）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は1番目の図の正体「<b>半分の大きさの円が2つ、横にならぶ</b>」と、問題の図「<b>右の円はすでにある</b>」。足りないのは左の円 → 中心は A をはさんで B の反対側、同じ長さの所。この長さをコンパスで写す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円をかくには、中心と半径の2つが決まればよい。</li>
+    <li>同じ長さを写すのはコンパスの仕事。たとえば AB の長さを A の左に写すには、A にはりをさして半径 AB の円の一部をかく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>定規で、2つの円の中心 A と B を通る直線を引く。左の円の中心も、この直線の上にある。</li>
+    <li>A にはりをさし、半径を AB の長さにして、左側に円の一部をかく。直線と交わった点を C とする。AC＝AB になる。</li>
+    <li>C にはりをさし、半径を CA の長さにして円をかく。これが左の円。作図に使った直線と円の一部は消さない。
+<svg viewBox="0 0 360 220" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <circle id="q3_1_big" cx="150" cy="110" r="80" fill="none" stroke="#222" stroke-width="1.5"/>
+  <circle id="q3_1_right" cx="190" cy="110" r="40" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line id="q3_1_line" x1="40" y1="110" x2="300" y2="110" stroke="#1565c0" stroke-width="1.2"/>
+  <path id="q3_1_arc" d="M119.4,84.3 A40,40 0 0 0 119.4,135.7" fill="none" stroke="#1565c0" stroke-width="1.5"/>
+  <circle id="q3_1_new" cx="110" cy="110" r="40" fill="none" stroke="#d32f2f" stroke-width="2.5"/>
+  <circle cx="150" cy="110" r="2.5" fill="#222"/>
+  <circle cx="190" cy="110" r="2.5" fill="#222"/>
+  <circle cx="110" cy="110" r="2.5" fill="#d32f2f"/>
+  <text x="150" y="126" font-size="12" text-anchor="middle" fill="#222">A</text>
+  <text x="190" y="126" font-size="12" text-anchor="middle" fill="#222">B</text>
+  <text x="100" y="100" font-size="12" text-anchor="middle" fill="#d32f2f">C</text>
+  <text x="240" y="60" font-size="11" fill="#1565c0">① AとBを通る直線</text>
+  <text x="240" y="80" font-size="11" fill="#1565c0">② Aを中心に半径ABの</text>
+  <text x="250" y="94" font-size="11" fill="#1565c0">円の一部 → 交点C</text>
+  <text x="240" y="150" font-size="11" fill="#d32f2f">③ Cを中心に半径CA</text>
+  <text x="250" y="164" font-size="11" fill="#d32f2f">の円をかく</text>
+</svg></li>
+    <li>落としやすい所: コンパスだけで左の円をかいても、中心 C をどう決めたかが残らない。直線と円の一部（作図の線）を残して、C が決まった理由を見せる。</li>
+  </ol>
+  <div class="ans">答え：解説の図1を参照のこと。（A と B を通る直線を引き、A を中心に半径 AB の円の一部をかいて直線との交点を C とし、C を中心に半径 CA の円をかく）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 3番目の図の灰色の面積 <span class="type">B・6点｜円の面積・規則性</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>半径2cm</b>」と「<b>奇数回目の操作でかき加える円は灰色</b>」「偶数回目…は白色」。操作1回ごとに「半径が半分・個数が2倍」に直して表に書く → 3番目の灰色は「灰 − 白 ＋ 灰」のたしひきで出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>半径が半分になると、円の面積は 4分の1。それが2個だから、合計は前の回の半分。たとえば半径1の円が2個（2×3.14）→ 半径 1/2 の円が4個（1×3.14）。
+<svg viewBox="0 0 360 120" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <circle id="q3_2_one" cx="60" cy="55" r="40" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+  <text x="60" y="110" font-size="11" text-anchor="middle" fill="#222">半径1が1個：1×3.14</text>
+  <path d="M112,55 L140,55" stroke="#222" stroke-width="1.5"/>
+  <path d="M135,50 L142,55 L135,60" fill="none" stroke="#222" stroke-width="1.5"/>
+  <circle cx="200" cy="55" r="40" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle id="q3_2_half1" cx="180" cy="55" r="20" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+  <circle id="q3_2_half2" cx="220" cy="55" r="20" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+  <text x="200" y="110" font-size="11" text-anchor="middle" fill="#222">半径 1/2 が2個：1/2×3.14</text>
+  <text x="262" y="50" font-size="11" fill="#d32f2f">合計は</text>
+  <text x="262" y="66" font-size="11" fill="#d32f2f">前の半分</text>
+</svg></li>
+    <li>3.14 は最後まで かけない。「□×3.14」の □ だけをたしひきする。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>かき加える円を、回ごとに表にする。色は 奇数回目＝灰、偶数回目＝白。
+<table>
+  <tr><th>何番目</th><th>円の半径</th><th>個数</th><th>色</th><th>面積の合計</th></tr>
+  <tr><td>1番目</td><td>2÷2＝1cm</td><td>2個</td><td>灰</td><td>1×1×3.14×2＝<b>2×3.14</b></td></tr>
+  <tr><td>2番目</td><td>1÷2＝1/2cm</td><td>4個</td><td>白</td><td>1/2×1/2×3.14×4＝<b>1×3.14</b></td></tr>
+  <tr><td>3番目</td><td>1/2÷2＝1/4cm</td><td>8個</td><td>灰</td><td>1/4×1/4×3.14×8＝<b>1/2×3.14</b></td></tr>
+</table></li>
+    <li>白い円は灰色の円の中にかくので、灰色から白をひく。その白い円の中に、また灰色をかき加える。</li>
+    <li>3番目の図の灰色＝（2 − 1 ＋ 1/2）×3.14＝3/2×3.14＝4.71（cm²）。</li>
+    <li>落としやすい所: 「2番目の白をひく」を忘れて 2＋1/2 としない。色の順（灰→白→灰）を表の列に書いておけば、たすかひくかで迷わない。</li>
+  </ol>
+  <div class="ans">答え：4.71cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 5番目の図の白と灰色の面積の比 <span class="type">B・6点｜円の面積の比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>5番目の図</b>」と「<b>白色と灰色の比</b>」。(2)の表を5番目まで2行のばし、灰色は「たす・ひく」を交互に（直して書く）→ 白は円全体 4×3.14 から灰色をひけば出る。(2)が合っていれば、手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円全体の面積は 2×2×3.14＝4×3.14。白と灰色を合わせると、いつも円全体。</li>
+    <li>比を出すときは 3.14 を消して、分数どうしをくらべる。たとえば 21/8 : 11/8＝21 : 11。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を2行のばす。
+<table>
+  <tr><th>何番目</th><th>円の半径</th><th>個数</th><th>色</th><th>面積の合計</th></tr>
+  <tr><td>4番目</td><td>1/4÷2＝1/8cm</td><td>16個</td><td>白</td><td>1/8×1/8×3.14×16＝<b>1/4×3.14</b></td></tr>
+  <tr><td>5番目</td><td>1/8÷2＝1/16cm</td><td>32個</td><td>灰</td><td>1/16×1/16×3.14×32＝<b>1/8×3.14</b></td></tr>
+</table></li>
+    <li>5番目の灰色＝（3/2 − 1/4 ＋ 1/8）×3.14＝11/8×3.14（cm²）。</li>
+    <li>5番目の白＝円全体 − 灰色＝（4 − 11/8）×3.14＝21/8×3.14（cm²）。</li>
+    <li>白 : 灰＝21/8 : 11/8＝21 : 11。</li>
+    <li>確かめ。21＋11＝32 で、4＝32/8。白と灰を合わせると円全体になっている。</li>
+  </ol>
+  <div class="ans">答え：21：11</div>
+  <div class="tip">コツ：「半径が半分・個数が2倍」の操作は、かき加える面積が毎回半分になる。2、1、1/2、1/4、1/8 と書けば、計算は たしひきだけで終わる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> はじめて状態Xになる時刻 <span class="type">A・6点｜時計算（長針が逆回り）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は長針の「<b>反時計回りに動きます</b>」と「<b>SとLが作る角をAが二等分</b>」。長針6度・短針0.5度を図に置き、二等分を「<b>Aの右の角＝Aの左の角</b>」に直して書く → 60＋0.5×□＝6×□−180 の式になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>長針は1分に 360÷60＝6度、短針は1分に 360÷12÷60＝0.5度 動く。この時計は長針だけ逆回り。</li>
+    <li>8時の短針は「6」から 360÷12×2＝60度 先。A（6）から見て、短針は時計回りの側（図では左）にある。長針は12から逆回りに「6」を通りこし、反対側（図では右）に来る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図をかく。□分後、短針の側（図の左）の角アは 60＋0.5×□（度）。長針の側（図の右）の角イは 6×□−180（度）。長針は12から「6」まで180度回り、そこから先に進んだ分だけが角イになる。
+<svg viewBox="0 0 360 220" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <circle id="q4_1_face" cx="110" cy="110" r="90" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="110" y1="26" x2="110" y2="20" stroke="#222" stroke-width="1.5"/>
+  <line x1="152" y1="37.3" x2="155" y2="32.1" stroke="#222" stroke-width="1"/>
+  <line x1="182.7" y1="68" x2="187.9" y2="65" stroke="#222" stroke-width="1"/>
+  <line x1="194" y1="110" x2="200" y2="110" stroke="#222" stroke-width="1.5"/>
+  <line x1="182.7" y1="152" x2="187.9" y2="155" stroke="#222" stroke-width="1"/>
+  <line x1="152" y1="182.7" x2="155" y2="187.9" stroke="#222" stroke-width="1"/>
+  <line x1="110" y1="194" x2="110" y2="200" stroke="#222" stroke-width="1.5"/>
+  <line x1="68" y1="182.7" x2="65" y2="187.9" stroke="#222" stroke-width="1"/>
+  <line x1="37.3" y1="152" x2="32.1" y2="155" stroke="#222" stroke-width="1"/>
+  <line x1="26" y1="110" x2="20" y2="110" stroke="#222" stroke-width="1.5"/>
+  <line x1="37.3" y1="68" x2="32.1" y2="65" stroke="#222" stroke-width="1"/>
+  <line x1="68" y1="37.3" x2="65" y2="32.1" stroke="#222" stroke-width="1"/>
+  <text x="110" y="15" font-size="11" text-anchor="middle" fill="#222">12</text>
+  <text x="208" y="114" font-size="11" text-anchor="middle" fill="#222">3</text>
+  <text x="110" y="216" font-size="11" text-anchor="middle" fill="#222">6</text>
+  <text x="12" y="114" font-size="11" text-anchor="middle" fill="#222">9</text>
+  <line id="q4_1_A" x1="110" y1="110" x2="110" y2="190" stroke="#222" stroke-width="1.5"/>
+  <text x="118" y="186" font-size="11" fill="#222">A</text>
+  <line id="q4_1_S0" x1="110" y1="110" x2="40.7" y2="150" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="18" y="168" font-size="10" fill="#1565c0">8時のS</text>
+  <line id="q4_1_L0" x1="110" y1="110" x2="110" y2="30" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="114" y="40" font-size="10" fill="#1565c0">8時のL</text>
+  <line id="q4_1_S" x1="110" y1="110" x2="48.6" y2="118.8" stroke="#222" stroke-width="3"/>
+  <text x="40" y="112" font-size="12" fill="#222">S</text>
+  <line id="q4_1_L" x1="110" y1="110" x2="189.2" y2="121.4" stroke="#222" stroke-width="2"/>
+  <text x="184" y="138" font-size="12" fill="#222">L</text>
+  <path id="q4_1_arcA" d="M110,140 A30,30 0 0 1 80.3,114.3" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+  <text x="80" y="148" font-size="11" fill="#d32f2f">ア</text>
+  <path id="q4_1_arcB" d="M110,140 A30,30 0 0 0 139.7,114.3" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+  <text x="132" y="148" font-size="11" fill="#d32f2f">イ</text>
+  <text x="222" y="60" font-size="11" fill="#222">L：反時計回りに 6度/分</text>
+  <text x="222" y="78" font-size="11" fill="#222">S：時計回りに 0.5度/分</text>
+  <text x="222" y="106" font-size="11" fill="#d32f2f">ア＝60＋0.5×□</text>
+  <text x="222" y="124" font-size="11" fill="#d32f2f">イ＝6×□−180</text>
+  <text x="222" y="152" font-size="11" fill="#222">X：ア＝イ のとき</text>
+</svg></li>
+    <li>ア＝イ だから、60＋0.5×□＝6×□−180。両方から 0.5×□ をひき、180 をたす。6×□−0.5×□＝60＋180。</li>
+    <li>5.5×□＝240。□＝240÷5.5＝43 7/11（分）。</li>
+    <li>確かめ。長針は 6×43 7/11＝261 9/11度 回り、「6」から 81 9/11度 先。短針も 60＋0.5×43 7/11＝81 9/11度。同じになった。</li>
+    <li>落としやすい所: イを「6×□」のままにして −180 を忘れる。長針が「6」に着くのは30分後で、答えはそれより後だと先に見当をつけておく。</li>
+  </ol>
+  <div class="ans">答え：43 7/11分後</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 90分間に起こる X・Y・Z の順 <span class="type">B・6点｜針の位置関係の整理</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>90分間</b>」と X・Y・Z の「<b>二等分する</b>」。3つとも「3本の針のどれかが、他の2本のちょうどまん中」に直して書く → まん中が A なら X、S なら Y、L なら Z。速い長針の動きにそって、起こる順に時刻を出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>二等分する角は、大きいほうの角でもよい（問題の例の右の図は、L と S が上にあり、A は下を回る大きいほうの角を二等分している）。</li>
+    <li>X＝A がまん中、Y＝S がまん中、Z＝L がまん中。長針 L は1時間で1周（逆回り）するので、短針 S と A の両方を追いこす。長針と短針の間は1分に 6＋0.5＝6.5度 変わる。長針と A の間は1分に 6度 変わる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>8時の針の並びを図に置く。時計回りに A（6）→ S（8）→ L（12）の順。長針は逆回りだから、まず S に向かって近づく。</li>
+    <li>「まん中の針」が入れかわる順に、起こる状態を表にする。時刻は「まん中の針から両側までの角が同じ」の式で出す（□は分）。
+<table>
+  <tr><th>順</th><th>針のようす</th><th>まん中の針</th><th>状態</th><th>何分後</th></tr>
+  <tr><td>1</td><td>L が S に近づく。S が L と A のまん中に</td><td>S</td><td><b>Y</b></td><td>60＋0.5×□＝120−6.5×□ → 8 4/7分</td></tr>
+  <tr><td>2</td><td>L が S を追いこし、A と S のまん中に</td><td>L</td><td><b>Z</b></td><td>180−6×□＝6.5×□−120 → 24分</td></tr>
+  <tr><td>3</td><td>L が A（6）を追いこす（8時30分）。A が S と L のまん中に</td><td>A</td><td><b>X</b></td><td>(1)より 43 7/11分</td></tr>
+  <tr><td>4</td><td>L が12側へ進み、大きいほうの角で A と S のまん中に</td><td>L</td><td><b>Z</b></td><td>(3)より 52.8分</td></tr>
+  <tr><td>5</td><td>9時。L は12、S は9、A は6。S が L と A のまん中（90度ずつ）</td><td>S</td><td><b>Y</b></td><td>60分</td></tr>
+  <tr><td>6</td><td>L が S をもう一度追いこし、A と S のまん中に</td><td>L</td><td><b>Z</b></td><td>9時から□分: 180−6×□＝6.5×□−90 → 21.6 → 81.6分</td></tr>
+</table>
+終わりの条件: 81.6分の Z のあと、90分（9時30分・L が「6」に重なる）までに次の状態は来ない。</li>
+    <li>順に並べる。Y→Z→X→Z→Y→Z。</li>
+    <li>確かめ。長針の節目は、S を追いこす（約18分）→ A に重なる（30分）→ 12 にもどる（60分）→ また S を追いこす（約74分）。表の6つの時刻が、この節目の間にちゃんと入っている。30分から74分の間には X・Z・Y の3つが入る。</li>
+  </ol>
+  <div class="ans">答え：Y→Z→X→Z→Y→Z</div>
+  <div class="tip">コツ：6枚の図を全部かく前に、長針の節目（S を追いこす・A に重なる・12 にもどる）を書き出し、その間にどの針がまん中に来るかを式で確かめる。1つの区間に状態が2つ3つ入ることもある。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 2回目の状態Zの時刻 <span class="type">B・6点｜時計算（2回目）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2回目の状態Z</b>」。(2)の表から、2回目の Z は <b>8時30分のすぐあと</b> → 長針が A に重なる8時30分を0分にして、長針が A と短針の（大きいほうの角の）まん中に来るまでを式にする。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>8時30分の短針は「6」から 2.5目もり先。360÷12×2.5＝75度。A と短針の大きいほうの角は 360−75＝285度。</li>
+    <li>長針は A から1分に6度はなれ、短針は反対側へ1分に0.5度 はなれる。長針と短針の間（大きいほうの角）は1分に 6.5度ちぢむ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>8時30分の図をかく。長針 L は A に重なり、短針 S は75度先。長針はここから12側（逆回り）へ進む。
+<svg viewBox="0 0 360 220" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <circle id="q4_3_face" cx="110" cy="110" r="90" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="110" y1="26" x2="110" y2="20" stroke="#222" stroke-width="1.5"/>
+  <line x1="152" y1="37.3" x2="155" y2="32.1" stroke="#222" stroke-width="1"/>
+  <line x1="182.7" y1="68" x2="187.9" y2="65" stroke="#222" stroke-width="1"/>
+  <line x1="194" y1="110" x2="200" y2="110" stroke="#222" stroke-width="1.5"/>
+  <line x1="182.7" y1="152" x2="187.9" y2="155" stroke="#222" stroke-width="1"/>
+  <line x1="152" y1="182.7" x2="155" y2="187.9" stroke="#222" stroke-width="1"/>
+  <line x1="110" y1="194" x2="110" y2="200" stroke="#222" stroke-width="1.5"/>
+  <line x1="68" y1="182.7" x2="65" y2="187.9" stroke="#222" stroke-width="1"/>
+  <line x1="37.3" y1="152" x2="32.1" y2="155" stroke="#222" stroke-width="1"/>
+  <line x1="26" y1="110" x2="20" y2="110" stroke="#222" stroke-width="1.5"/>
+  <line x1="37.3" y1="68" x2="32.1" y2="65" stroke="#222" stroke-width="1"/>
+  <line x1="68" y1="37.3" x2="65" y2="32.1" stroke="#222" stroke-width="1"/>
+  <text x="110" y="15" font-size="11" text-anchor="middle" fill="#222">12</text>
+  <text x="208" y="114" font-size="11" text-anchor="middle" fill="#222">3</text>
+  <text x="110" y="216" font-size="11" text-anchor="middle" fill="#222">6</text>
+  <text x="12" y="114" font-size="11" text-anchor="middle" fill="#222">9</text>
+  <line id="q4_3_A" x1="110" y1="110" x2="110" y2="196" stroke="#222" stroke-width="1.5"/>
+  <text x="118" y="196" font-size="11" fill="#222">A</text>
+  <line id="q4_3_L" x1="110" y1="110" x2="110" y2="172" stroke="#222" stroke-width="3"/>
+  <text x="96" y="176" font-size="12" fill="#222">L</text>
+  <line id="q4_3_S" x1="110" y1="110" x2="50.1" y2="126" stroke="#222" stroke-width="3"/>
+  <text x="40" y="124" font-size="12" fill="#222">S</text>
+  <path id="q4_3_small" d="M110,132 A22,22 0 0 1 88.7,115.7" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="66" y="152" font-size="10" fill="#1565c0">75度</text>
+  <path id="q4_3_big" d="M110,146 A36,36 0 1 0 75.2,119.3" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+  <text x="124" y="80" font-size="11" fill="#d32f2f">285度</text>
+  <path id="q4_3_Larrow" d="M128,165 A58,58 0 0 0 160,135" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <path d="M154,133 L161,134 L159,141" fill="none" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="222" y="60" font-size="11" fill="#222">8時30分：L は A に重なる</text>
+  <text x="222" y="78" font-size="11" fill="#222">S は「6」から 75度先</text>
+  <text x="222" y="106" font-size="11" fill="#d32f2f">A から L まで：6×□</text>
+  <text x="222" y="124" font-size="11" fill="#d32f2f">L から S まで：285−6.5×□</text>
+  <text x="222" y="152" font-size="11" fill="#222">Z：この2つが同じとき</text>
+</svg></li>
+    <li>□分後、A から L までは 6×□（度）。L から S までは、285度から 6.5×□ へった分で、285−6.5×□（度）。</li>
+    <li>L がまん中だから、6×□＝285−6.5×□。12.5×□＝285。□＝285÷12.5＝22.8（分）。</li>
+    <li>8時からは、30＋22.8＝52.8（分後）。</li>
+    <li>確かめ。(2)の表の4番目の Z と同じ。また、1回目の Z（24分）より後で、X（43 7/11分）より後になっている。</li>
+  </ol>
+  <div class="ans">答え：52.8分後</div>
+  <div class="tip">コツ：「2回目」は、はじめから数えるより、直前の分かりやすい時刻（長針が A に重なる8時30分）を0分にして計算する。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 牛1頭・豚1頭が1日に食べる草の量 <span class="type">A・6点｜ニュートン算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>100kg</b>」と「<b>草は1日に決まった量だけ生え</b>」。3つの放ち方を「<b>1日に食べる量＝100÷日数＋1日に生える量</b>」に直して書く（1日あたりに直す）→ 3本の式の見くらべで決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ニュートン算の決まり: 食べた量の全部＝はじめの100kg＋その間に生えた量。日数でわると「1日に食べる量＝100÷日数＋1日に生える量」。たとえば牛1頭が25日なら、100÷25＝4 で、牛1頭＝4kg＋生える量。</li>
+    <li>生える量を「生」と書いて、式をそろえる。生は3本の式に共通に入る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3つの放ち方を、1日あたりの式に直して表に書く。
+<table>
+  <tr><th>放ち方</th><th>日数</th><th>100÷日数</th><th>1日に食べる量の式</th></tr>
+  <tr><td>牛1頭</td><td>25日</td><td>4kg</td><td>牛＝<b>4＋生</b></td></tr>
+  <tr><td>豚2頭</td><td>100日</td><td>1kg</td><td>豚×2＝<b>1＋生</b></td></tr>
+  <tr><td>牛1頭と豚3頭</td><td>10日</td><td>10kg</td><td>牛＋豚×3＝<b>10＋生</b></td></tr>
+</table></li>
+    <li>1行目と3行目を見くらべる。ちがいは豚3頭分で、10−4＝6kg。豚1頭は 6÷3＝2kg。</li>
+    <li>2行目に入れる。2×2＝4 が 1＋生 だから、生＝4−1＝3kg。</li>
+    <li>1行目に入れる。牛＝4＋3＝7kg。</li>
+    <li>確かめ。牛1頭と豚3頭で1日に 7＋6＝13kg。10日で130kg。はじめの100kg＋10日分の30kg＝130kg で合う。</li>
+    <li>落としやすい所: 「豚2頭で100日」を、豚1頭の式に勝手に直さない。2頭のまま「豚×2」と書いておけば、あとで÷2 するだけ。</li>
+  </ol>
+  <div class="ans">答え：牛…7kg・豚…2kg</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 22日で食べ終えるときの牛の日数 <span class="type">B・6点｜整数の組をさがす</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>毎日最低1頭</b>」と「<b>ちょうど22日後</b>」。22日で食べた草の合計を 100＋3×22＝166kg に直して書く → 7×牛の日数＋2×豚の日数＝166 の整数の組を、日数22以下でさがす。(1)が合っていれば表で片づく。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)より 牛は1日7kg、豚は1日2kg、草は1日3kg生える。22日間に生えた草は 3×22＝66kg。食べた合計は 100＋66＝166kg。</li>
+    <li>「7×□＋2×△＝166」で、166 も 2×△ も偶数。だから 7×□ も偶数で、□は偶数。たとえば □＝21 だと 7×21＝147 で奇数になり合わない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>牛を放った日数を□日、豚を放った日数を△日として、式を書く。7×□＋2×△＝166。</li>
+    <li>□は偶数で22以下。大きいほうから2ずつ減らして△を出す。△が22をこえたら終わり。
+<table>
+  <tr><th>□（牛の日数）</th><th>7×□</th><th>残り＝2×△</th><th>△（豚の日数）</th><th>22日以下か</th></tr>
+  <tr><td>22</td><td>154</td><td>12</td><td><b>6</b></td><td>○</td></tr>
+  <tr><td>20</td><td>140</td><td>26</td><td><b>13</b></td><td>○</td></tr>
+  <tr><td>18</td><td>126</td><td>40</td><td><b>20</b></td><td>○</td></tr>
+  <tr><td>16</td><td>112</td><td>54</td><td>27</td><td>×（22をこえる）</td></tr>
+</table></li>
+    <li>「毎日最低1頭」も見る。22日のどの日も牛か豚がいるには、□＋△が22以上。22＋6、20＋13、18＋20 はどれも22以上で合う。</li>
+    <li>牛の日数は 18日・20日・22日。</li>
+  </ol>
+  <div class="ans">答え：18日・20日・22日</div>
+  <div class="tip">コツ：「□と△が両方22以下」が終わりの条件。表は大きいほうから書くと、22をこえた所で止められる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 牛18日のときの放ち方 <span class="type">B・7点｜条件の整理（順番）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>最も少ない日数</b>」＝牛18日・豚20日と、「<b>すべての草を食べ終えると生えてこない</b>」。1日ごとの草の増減（A＝−6、B＝−4、C＝＋1）に直して書く → 途中で草が0にならない順をさがす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1日の草の変化＝生える3kg−食べる量。A（牛と豚）は 3−9＝−6kg、B（牛だけ）は 3−7＝−4kg、C（豚だけ）は 3−2＝＋1kg。C の日だけ草が増える。</li>
+    <li>毎日1頭以上なので、A・B・C の日数を合わせて22日。牛がいる日は A＋B＝18、豚がいる日は A＋C＝20。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>日数を決める。A＋B＋C＝22 と A＋B＝18 から C＝4。A＋C＝20 から A＝16。残りの B＝2。つまり A が16日、B が2日、C が4日。</li>
+    <li>草の増減を確かめる。16×（−6）＋2×（−4）＋4×（＋1）＝−96−8＋4＝−100。はじめの100kgが、22日目にちょうど0になる。</li>
+    <li>順番を考える。A と B を先にすると、100−96−8 で途中で足りなくなる。草が足りなくなると、もう生えてこない。だから、増える C を先に置く。
+<table>
+  <tr><th>順番</th><th>日数</th><th>1日の変化</th><th>終わったときの草</th></tr>
+  <tr><td>C（豚だけ）</td><td>4日</td><td>＋1</td><td>100＋4＝<b>104</b>kg</td></tr>
+  <tr><td>A（牛と豚）</td><td>16日</td><td>−6</td><td>104−96＝8kg</td></tr>
+  <tr><td>B（牛だけ）</td><td>2日</td><td>−4</td><td>8−8＝<b>0</b>kg</td></tr>
+</table></li>
+    <li>途中で0にならず、22日目にちょうど食べ終わる。答えは1つでよいので、C×4→A×16→B×2。</li>
+    <li>落としやすい所: 日数の組（A16・B2・C4）を出して満足しない。「順番」まで聞かれている。</li>
+  </ol>
+  <div class="ans">答え：C×4→A×16→B×2</div>
+  <div class="tip">コツ：「食べ終えると生えてこない」は「途中で0にしてはいけない」の合図。減る日と増える日があるなら、増える日を先に置くと安全に進む。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ <span class="type">この3問で繰り返し出た入口</span></h2>
+  <ul>
+    <li>規則で増えていく図は「何番目／半径／個数／色／面積」の表に。面積の合計は1回ごとに半分。</li>
+    <li>時計算の「二等分」は「3本の針のどれかが他の2本のまん中」。まん中に来る針が A・S・L のどれかで X・Y・Z が決まる。2回目は直前の分かりやすい時刻を0分にする。</li>
+    <li>ニュートン算は「1日に食べる量＝はじめの量÷日数＋1日に生える量」に直す。日数の組が出たら、増える日を先に置く順番まで答える。</li>
+  </ul>
+</section>
+</div>
