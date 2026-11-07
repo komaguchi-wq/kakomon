@@ -6865,7 +6865,19 @@
        "5(3)": "68"
       }
      },
-     "kaisetsu": "kaisetsu/ichikawa/2023-1/sansu.html"
+     "kaisetsu": "kaisetsu/ichikawa/2023-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2023-1/sansu/solved_2026-11-07_01.jpg",
+       "small": "2023-1/sansu/solved_2026-11-07_01_small.jpg",
+       "date": "2026-11-07"
+      },
+      {
+       "full": "2023-1/sansu/solved_2026-11-07_02.jpg",
+       "small": "2023-1/sansu/solved_2026-11-07_02_small.jpg",
+       "date": "2026-11-07"
+      }
+     ]
     },
     {
      "id": "shakai",
@@ -7128,7 +7140,14 @@
        "gokakusha": null
       }
      },
-     "kaisetsu": "kaisetsu/ichikawa/2023-1/shakai.html"
+     "kaisetsu": "kaisetsu/ichikawa/2023-1/shakai.html",
+     "solvedPages": [
+      {
+       "full": "2023-1/shakai/solved_2026-11-07_01.jpg",
+       "small": "2023-1/shakai/solved_2026-11-07_01_small.jpg",
+       "date": "2026-11-07"
+      }
+     ]
     },
     {
      "id": "rika",
@@ -7349,7 +7368,14 @@
        "gokakusha": null
       }
      },
-     "kaisetsu": "kaisetsu/ichikawa/2023-1/rika.html"
+     "kaisetsu": "kaisetsu/ichikawa/2023-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2023-1/rika/solved_2026-11-07_01.jpg",
+       "small": "2023-1/rika/solved_2026-11-07_01_small.jpg",
+       "date": "2026-11-07"
+      }
+     ]
     },
     {
      "id": "kokugo",
@@ -7765,7 +7791,19 @@
        "gokakusha": null
       }
      },
-     "kaisetsu": "kaisetsu/ichikawa/2022-2/sansu.html"
+     "kaisetsu": "kaisetsu/ichikawa/2022-2/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2022-2/sansu/solved_2026-11-07_01.jpg",
+       "small": "2022-2/sansu/solved_2026-11-07_01_small.jpg",
+       "date": "2026-11-07"
+      },
+      {
+       "full": "2022-2/sansu/solved_2026-11-07_02.jpg",
+       "small": "2022-2/sansu/solved_2026-11-07_02_small.jpg",
+       "date": "2026-11-07"
+      }
+     ]
     },
     {
      "id": "shakai",
