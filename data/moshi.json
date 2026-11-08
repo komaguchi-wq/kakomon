@@ -6477,7 +6477,7 @@
       }
      ],
      "nanido": {
-      "src": "claude",
+      "src": "kobetsuba",
       "answers": {
        "1(1)": "1/2",
        "1(2)": "5.4",
@@ -6508,55 +6508,103 @@
       "q": {
        "1(1)": [
         "A",
-        5
+        5,
+        null,
+        [
+         "v5G5b1i15VQ"
+        ]
        ],
        "1(2)": [
         "A",
-        5
+        5,
+        null,
+        [
+         "aMLBtNGSFII"
+        ]
        ],
        "2(1)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "1XwRpFGEYZk"
+        ]
        ],
        "2(2)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "w_KJjI0eZf8"
+        ]
        ],
        "2(3)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "XYV5SAK8NKo"
+        ]
        ],
        "2(4)": [
-        "B",
-        6
+        "A",
+        6,
+        null,
+        [
+         "ikT9bCcGqzQ"
+        ]
        ],
        "2(5)": [
         "A",
         6
        ],
        "2(6)": [
-        "B",
-        6
+        "A",
+        6,
+        null,
+        [
+         "2GcbumZ-nfE"
+        ]
        ],
        "3(1)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "fWi4otMu2ho"
+        ]
        ],
        "3(2)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "h5T_nOJfuyo"
+        ]
        ],
        "3(3)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "IQqICVLalEw"
+        ]
        ],
        "3(4)": [
-        "B",
-        6
+        "A",
+        6,
+        null,
+        [
+         "oYtMNh-iPKc"
+        ]
        ],
        "3(5)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "Cp2UXM1viYE"
+        ]
        ],
        "3(6)": [
         "B",
@@ -6564,54 +6612,104 @@
        ],
        "4(1)": [
         "A",
-        7
+        7,
+        null,
+        [
+         "ntrnyYpnjmQ"
+        ]
        ],
        "4(2)": [
         "B",
-        7
+        7,
+        null,
+        [
+         "-ZTjPLe4Fgg"
+        ]
        ],
        "5(1)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "5OdGvu6ql-c"
+        ]
        ],
        "5(2)": [
-        "A",
-        6
+        "B",
+        6,
+        null,
+        [
+         "dOxJ2rkt3Uk"
+        ]
        ],
        "5(3)": [
         "B",
-        6
+        6,
+        null,
+        [
+         "dOxJ2rkt3Uk"
+        ]
        ],
        "6(1)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "KHIgmVw8Zz8"
+        ]
        ],
        "6(2)①": [
         "B",
-        6
+        6,
+        null,
+        [
+         "xBUh0F_59SU"
+        ]
        ],
        "6(2)②": [
-        "C",
-        6
+        "B",
+        6,
+        null,
+        [
+         "dIwRclCCxZg"
+        ]
        ],
        "7(1)": [
         "A",
-        6
+        6,
+        null,
+        [
+         "YN5HPfBmf8Y"
+        ]
        ],
        "7(2)": [
         "B",
-        6
+        6,
+        null,
+        [
+         "Nq_2JQlMmHc"
+        ]
        ],
        "7(3)": [
-        "C",
-        6
+        "B",
+        6,
+        null,
+        [
+         "84zkx4RGN3E"
+        ]
        ]
       },
       "sums": {
-       "A": 89,
+       "A": 101,
        "B": 49,
-       "C": 12
-      }
+       "C": 0
+      },
+      "pointVideos": [
+       {
+        "title": "講評（全体）",
+        "youtubeId": "mh2-Q0nQRrY"
+       }
+      ]
      },
      "kaisetsu": "kaisetsu/moshi/2026-10-18_gohan-2/sansu.html"
     },
