@@ -1,0 +1,943 @@
+<!-- generated kakomon moshi/2026-11-08_gohan-3/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（計算2問と小問集合6問）</a></li>
+<li><a href="#3-4">大問3・4（図形の小問集合・集合算）</a></li>
+<li><a href="#5-6-7">大問5・6・7（2人の間の距離のグラフ・直角三角形の回転体・色つきカードの3けた）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（計算2問と小問集合6問）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（大問1〜7） <span class="type">A 86点／B 53点／C 11点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>1</td><td>計算2問（四則・逆算）</td><td>A 5×2</td><td>小数を分数に直す。逆算はかっこを1つの箱にする</td></tr>
+    <tr><td>2</td><td>小問集合6問（数列の和・約束記号・比・日付・倍数・通過算）</td><td>A 5×4／B 5×2</td><td>条件の言葉を「〜に直して書く」。(4)(6)は図や表を書いてから</td></tr>
+    <tr><td>3</td><td>図形集合（角度・おうぎ形・平行四辺形・立方体の切断・影・水そう）</td><td>A 5×3／B 5×3／C 5</td><td>回転は同じ角、相似は比を図に書きこむ。切断・影・水そうは真横・真上・正面の図に直す</td></tr>
+    <tr><td>4</td><td>集合算（的当てと輪投げ）</td><td>A 6／B 6×2</td><td>参加者を㉑とおいて、的○×・輪○×の表に入れる</td></tr>
+    <tr><td>5</td><td>速さとグラフ（図書館と駅・2人の間の距離）</td><td>A 6×2／B 6</td><td>折れ目ごとに「だれが動いているか」を書く。1人ならその人の速さ、2人なら速さの和</td></tr>
+    <tr><td>6</td><td>回転体の体積</td><td>A 3+6+6／B 6</td><td>軸までの垂線が半径。切り取った台形は 大きい立体−小さい立体（体積比1:8）</td></tr>
+    <tr><td>7</td><td>色つきカードで3けたの整数（3の倍数）</td><td>A 4×2／B 4／C 6</td><td>数字の並びと色の並びを分けて数える。3の倍数＝各位の和が3の倍数</td></tr>
+  </table>
+  <p>取り方: <b>Aの86点を先に確実に</b>（大問1・2の計算と小問、3の(1)(2)(6)①、5の(1)(2)、6の(1)(2)①、7の(1)）。Bは手が動くものから（2の(4)(6)、3の(3)〜(5)など）。Cの3(6)②・7(2)②は後回しにしてよい。大問1・2は全体の40点ぶんで、ここを落とさないことがこの回の土台になる。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 小数と分数のまじった四則計算 <span class="type">A・5点｜四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は小数「<b>0.6・2.25・5.6・3.4</b>」→ 全部分数に直して書く（3/5・9/4・28/5・17/5）。「<b>÷0.6×2.25</b>」も「×5.6÷3.4」も約分がよくきく。だから答えは整数に落ち着く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>小数→分数の定番: 0.6＝3/5、2.25＝2 1/4＝9/4、5.6＝28/5、3.4＝17/5。</li>
+    <li>分数でわる＝逆数をかける。÷0.6 は ×5/3、÷3.4 は ×5/17。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>前のかっこ。1.6−1 1/3＝8/5−4/3＝24/15−20/15＝<b>4/15</b>。</li>
+    <li>÷0.6×2.25 は ×5/3×9/4。4/15×5/3×9/4＝1。</li>
+    <li>後ろのかっこ。0.5＋5/7＝1/2＋5/7＝7/14＋10/14＝17/14。</li>
+    <li>×5.6÷3.4 は ×28/5×5/17。17/14×28/5×5/17＝<b>2</b>。</li>
+    <li>1＋2＝3。落としやすい所は 2.25＝9/4 と 1 1/3＝4/3 の直し。ここを先に余白に書く。</li>
+  </ol>
+  <div class="ans">答え：3</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> かっこの中に□がある逆算 <span class="type">A・5点｜逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>□÷100</b>」と右端の「<b>＝8/11</b>」→ かっこ全体を1つの箱に直して書き、右端から順にもどす。箱が出たら、最後に □÷100 を □/100 とみて □ を出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆算は「最後にした計算」からもどす。例: 10÷箱＝2 なら 箱＝10÷2。<b>a÷箱＝b のとき 箱＝a÷b</b>（b÷a ではない）。</li>
+    <li>先に計算できる所（2 2/5÷3 5/6）は、もどす前に1つの数にしておく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>先に計算できる所。2 2/5÷3 5/6＝12/5×6/23＝72/115。式は「72/115÷（箱）−16/23＝8/11」になる。</li>
+    <li>最後の計算は「−16/23」。もどすと 72/115÷（箱）＝8/11＋16/23＝184/253＋176/253＝<b>360/253</b>。</li>
+    <li>「72/115÷箱＝360/253」→ 箱＝72/115÷360/253＝72/115×253/360＝<b>11/25</b>。</li>
+    <li>箱の中身。□/100＋17/40＝11/25 → □/100＝11/25−17/40＝88/200−85/200＝3/200。</li>
+    <li>□＝3/200×100＝3/2＝1 1/2。確かめ: 1.5÷100＝0.015、0.015＋0.425＝0.44＝11/25。合う。落としやすい所は手順3で 360/253÷72/115 と逆にしてしまうこと。</li>
+  </ol>
+  <div class="ans">答え：1 1/2</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 2けたで4で割って3あまる数の和 <span class="type">A・5点｜等差数列の和</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2けた</b>」と「<b>4で割って3あまる</b>」→「4の倍数＋3」に直して、小さい方から書く: 11、15、19、…、99。等差数列だから、和は（最初＋最後）×個数÷2 で出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>等差数列の和＝（はじめ＋終わり）×個数÷2。例: 1＋2＋3＋4＝(1＋4)×4÷2＝10。</li>
+    <li>個数＝（終わり−はじめ）÷差＋1。「＋1」を忘れると1つ少なくなる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>4で割って3あまる数をならべる。3、7、11、15、…。2けたで最小は 11（3番目）、最大は 99（25番目。99＝4×24＋3）。</li>
+    <li>個数は 25−3＋1＝<b>23個</b>。(99−11)÷4＋1 でも 23。</li>
+    <li>和は (11＋99)×23÷2＝110×23÷2＝<b>1265</b>。</li>
+    <li>落としやすい所は個数の「＋1」と、99 を入れ忘れること（99÷4＝24あまり3 で入る）。</li>
+  </ol>
+  <div class="ans">答え：1265</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> A●B＝(A＋B)×B の約束記号 <span class="type">A・5点｜約束記号</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は約束「<b>A●B＝(A＋B)×B</b>」と「<b>C●5/7＝6 11/49</b>」→ Aの場所にC、Bの場所に5/7を入れて、ふつうの式に直して書く: (C＋5/7)×5/7＝6 11/49。あとは逆算。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>約束記号は、例（5●7＝(5＋7)×7＝84）で「どこに何が入るか」を確かめる。後ろの数が「たす」と「かける」の<b>両方</b>に使われている。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>式に直す。(C＋5/7)×5/7＝6 11/49。</li>
+    <li>×5/7 をもどす。C＋5/7＝6 11/49÷5/7＝305/49×7/5＝61/7＝<b>8 5/7</b>。</li>
+    <li>＋5/7 をもどす。C＝8 5/7−5/7＝<b>8</b>。</li>
+    <li>確かめ: (8＋5/7)×5/7＝61/7×5/7＝305/49＝6 11/49。合う。落としやすい所は、5/7 を「たす」か「かける」の片方だけにしてしまうこと。</li>
+  </ol>
+  <div class="ans">答え：8</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 3本のテープから同じ長さを切り取る <span class="type">A・5点｜比をそろえる</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3m</b>」と「<b>□cmずつ切り取った</b>」→ 3m は 300cm に直して書く。Aは5/9が残る → 切り取ったのは4/9で、A:□＝9:4。B・Cも比にして、□の数をそろえる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「もとの5/9になった」＝切り取ったのは 4/9。もと:切り取り＝9:4。例: もとが 90cm なら 40cm 切り取って 50cm が残る。</li>
+    <li>3つの比で同じもの（□）をそろえるときは、□ の数を<b>最小公倍数</b>（4と2と4 → 4）にする。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>もとの長さと切り取った長さ（□）の比を、1本ずつ表に書く。
+      <table>
+        <tr><th></th><th>A</th><th>B</th><th>C</th><th>□</th></tr>
+        <tr><td>Aだけ</td><td>9</td><td></td><td></td><td>4</td></tr>
+        <tr><td>Bだけ</td><td></td><td>3</td><td></td><td>2</td></tr>
+        <tr><td>Cだけ</td><td></td><td></td><td>5</td><td>4</td></tr>
+        <tr><td>□を4にそろえる</td><td>9</td><td>6</td><td>5</td><td>4</td></tr>
+      </table></li>
+    <li>A＋B＋C＝9＋6＋5＝20 が 300cm。切り取った長さは 300×4/20＝<b>60cm</b>。</li>
+    <li>確かめ: 比の1つ分は 300÷20＝15cm。A＝135、B＝90、C＝75。135−60＝75（135の5/9）、90−60＝30（90の1/3）、75−60＝15（75の1/5）。合う。</li>
+    <li>落としやすい所は「5/9になった」を「5/9切り取った」と読むこと。残りと切り取りを図の上で分けてから比を書く。</li>
+  </ol>
+  <div class="ans">答え：60</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (4)</span> 5月13日と10月20日のちょうど真ん中の日付 <span class="type">B・5点｜日付の計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>5月13日と10月20日</b>」と「<b>ちょうど真ん中</b>」→ 10月20日を「5月□日」に直して書く（前の月の日数をたす）。真ん中は2つの日の平均。月の日数が表に書けるなら、足し算だけで出るので手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>真ん中の日付＝2つの日付の<b>平均</b>。同じ月の「□日」にそろえれば平均が取れる。例: 5月1日と5月9日の真ん中は (1＋9)÷2＝5 → 5月5日。</li>
+    <li>月の日数: 5月31・6月30・7月31・8月31・9月30。「にしむくさむらい」（2・4・6・9・11月が小の月）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>10月20日を1か月ずつ前にずらす。ずらすたびに、前の月の日数をたす。
+      <table>
+        <tr><th>日付</th><th>10月20日</th><th>9月50日</th><th>8月81日</th><th>7月112日</th><th>6月142日</th><th>5月173日</th></tr>
+        <tr><td>たした日数</td><td></td><td>＋30（9月）</td><td>＋31（8月）</td><td>＋31（7月）</td><td>＋30（6月）</td><td>＋31（5月）</td></tr>
+      </table></li>
+    <li>真ん中は (13＋173)÷2＝<b>93</b> → 5月93日。</li>
+    <li>5月93日をふつうの日付にもどす。93−31＝62 → 6月62日。62−30＝32 → 7月32日。32−31＝1 → <b>8月1日</b>。</li>
+    <li>確かめ: 93−13＝80、173−93＝80。どちらからも80日はなれている。</li>
+  </ol>
+  <div class="ans">答え：ア…8、イ…1</div>
+  <div class="tip">コツ：日付を「同じ月の□日」に直すと、あとは数の平均と同じになる。2つの日の差が奇数のときは「ちょうど真ん中」の日は無いので、問題文の「ちょうど」が成り立つかも確かめになる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (5)</span> 7の倍数と17の倍数がとなり合う2回目 <span class="type">A・5点｜倍数の書き出し</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>7の倍数と17の倍数が連続して並ぶ</b>」と「<b>小さい方の数</b>」→ 少ない方の17の倍数を書き出し、その前後の数（−1と＋1）が7の倍数かを調べる、に直す。2回目が見つかったら終わり。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>17の倍数は100までに5個、7の倍数は14個。<b>少ない方を書き出して</b>、その前後が相手の倍数かを調べる方が速い。</li>
+    <li>「連続して並ぶ」＝となり合う＝差が1。17の倍数の前か後ろのどちらでもよい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>17の倍数と、その前後の数を表に書く。
+      <table>
+        <tr><th>17の倍数</th><th>前の数</th><th>後の数</th><th>7の倍数は？</th></tr>
+        <tr><td>17</td><td>16</td><td>18</td><td>なし</td></tr>
+        <tr><td>34</td><td>33</td><td>35</td><td>35（1回目: 34、35）</td></tr>
+        <tr><td>51</td><td>50</td><td>52</td><td>なし</td></tr>
+        <tr><td>68</td><td>67</td><td>69</td><td>なし</td></tr>
+        <tr><td>85</td><td>84</td><td>86</td><td><b>84</b>（2回目: 84、85）</td></tr>
+      </table></li>
+    <li>2回目は 84、85。小さい方の数は <b>84</b>。</li>
+    <li>落としやすい所は答えの向き。1回目は17の倍数（34）が小さい側だったが、2回目は7の倍数（84）が小さい側になる。85 と書かない。</li>
+  </ol>
+  <div class="ans">答え：84</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (6)</span> 2本の列車がトンネルを通過する <span class="type">B・5点｜通過算（速さの比）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>11号車の先頭</b>」と「<b>10号車の先頭</b>」→「先頭から10両分＝200m」「9両分＝180m」に直して図に置く（号車の番号−1）。同じ時間に進んだ道のりの比が速さの比。2つの場面が図に描けるなら手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>列車が「入り切る」＝列車の長さ分（20×12＝240m）だけ先頭が進んだとき。</li>
+    <li>「○号車の先頭」は、1号車の先頭から（○−1）両分後ろ。例: 3号車の先頭は 2両分＝40m 後ろ。</li>
+    <li>同じ時間に進んだ道のりの比＝<b>速さの比</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2つの場面を図に描く。両方の先頭が入口にそろった時刻を0とする。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="11">
+  <text x="4" y="13" fill="#222" font-weight="bold">場面1 Aの最後尾が入り切ったとき</text>
+  <rect id="q2_6_t1" x="70" y="20" width="180" height="70" fill="#dbe9ff" stroke="#1565c0" stroke-dasharray="4 3"/>
+  <text x="8" y="40" fill="#222">A</text>
+  <rect x="70" y="28" width="48" height="14" fill="#ffe0b2" stroke="#222"/>
+  <text x="124" y="40" fill="#d32f2f">240m進んだ（12両分）</text>
+  <text x="8" y="72" fill="#222">B</text>
+  <rect x="62" y="60" width="48" height="14" fill="#c8e6c9" stroke="#222"/>
+  <text x="116" y="72" fill="#d32f2f">200m進んだ（10両分）</text>
+  <text x="58" y="104" fill="#222">入口</text>
+  <text x="238" y="104" fill="#222">出口</text>
+  <text x="70" y="120" fill="#d32f2f" font-weight="bold">速さの比 A:B＝240:200＝6:5</text>
+  <text x="4" y="143" fill="#222" font-weight="bold">場面2 Bの先頭が出口に来たとき</text>
+  <rect id="q2_6_t2" x="70" y="150" width="180" height="70" fill="#dbe9ff" stroke="#1565c0" stroke-dasharray="4 3"/>
+  <text x="8" y="171" fill="#222">A</text>
+  <line x1="70" y1="156" x2="286" y2="156" stroke="#1565c0" stroke-dasharray="3 2"/>
+  <text x="150" y="169" fill="#1565c0">⑥</text>
+  <rect x="238" y="160" width="48" height="14" fill="#ffe0b2" stroke="#222"/>
+  <text x="290" y="171" fill="#d32f2f">180m（9両分）</text>
+  <text x="8" y="203" fill="#222">B</text>
+  <line x1="70" y1="188" x2="250" y2="188" stroke="#1565c0" stroke-dasharray="3 2"/>
+  <text x="150" y="201" fill="#1565c0">⑤</text>
+  <rect x="202" y="192" width="48" height="14" fill="#c8e6c9" stroke="#222"/>
+  <text x="58" y="234" fill="#222">入口</text>
+  <text x="238" y="234" fill="#222">出口</text>
+  <text x="70" y="247" fill="#d32f2f" font-weight="bold">⑥−⑤＝①＝180m → トンネル＝⑤＝900m</text>
+</svg></li>
+    <li>場面1。Aが入り切った → Aは 240m 進んだ。そのときBは11号車の先頭が入口 → Bは 10両分＝200m 進んだ。同じ時間だから、速さの比は A:B＝240:200＝<b>6:5</b>。</li>
+    <li>場面2。Aの10号車の先頭が出口 → Aの先頭は出口から 9両分＝180m 先。Aが進んだ道のりは「トンネル＋180m」。Bは先頭が出口 → 進んだ道のりは「トンネル」。</li>
+    <li>場面2も同じ時間だから、道のりの比は 6:5。⑥−⑤＝①＝180m。トンネルは ⑤＝180×5＝<b>900m</b>。</li>
+    <li>確かめ: Aは 900＋180＝1080m、Bは 900m。1080:900＝6:5。合う。</li>
+  </ol>
+  <div class="ans">答え：900</div>
+  <div class="tip">コツ：「○号車の先頭」を見たら、その場で「（○−1）両分＝□m」と書き直す。11号車を 11両分、10号車を 10両分 とすると、速さの比も答えもずれる。</div>
+</section>
+</div>
+<div class="daimon" id="3-4"><h1 class="dtitle">大問3・4（図形の小問集合・集合算）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜4</span> 大問3・4の全体像 <span class="type">A 21点／B 27点／C 5点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>3 (1)(2)</td><td>長方形の回転と角／おうぎ形と長方形の重なり</td><td>A 5+5</td><td>「回転」→同じ角を置く／「差」→共通部分をたして全体の差に</td></tr>
+  <tr><td>3 (3)</td><td>平行四辺形の3等分と斜線部分</td><td>B 5</td><td>Aから出る三角形が 1:2:3 の相似 → 面積①④⑨</td></tr>
+  <tr><td>3 (4)</td><td>直方体を30回切断・表面積が10倍</td><td>B 5</td><td>1回で増える面積は 50 か 80 の2種類 → つるかめ算</td></tr>
+  <tr><td>3 (5)</td><td>ライトでできる板の影</td><td>B 5</td><td>真横から見た図と真上から見た図に分ける</td></tr>
+  <tr><td>3 (6)①②</td><td>段のある容器を傾けてこぼれる水</td><td>A 5／C 5</td><td>正面の図に水面の線を引く（①は45°、②はGKと平行）</td></tr>
+  <tr><td>4 (1)〜(3)</td><td>的当てと輪投げの集合算</td><td>A 6／B 6+6</td><td>参加者を㉑とおいて表に入れる</td></tr></table>
+  <p>取り方: <b>Aの4問（3(1)(2)(6)①・4(1)＝21点）を先に確実に</b>。Bは 3(4) のつるかめ算と 4(2)(3) の表が手が動きやすい。3(3)(5)は図が描けたら取りにいく。3(6)②は後回しでよい。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 長方形を回転させてできる角 <span class="type">A・5点｜回転と二等辺三角形</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>対角線ACが辺ABに重なるように回転</b>」と、図の「<b>26°</b>」（辺ADと辺AD′の間）。26°は回転した角なので、同じ26°を角CAC′にも置く（図に置く）→ C′はABの延長上にあるので、角CAB＝26°と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>回転では、どの頂点も同じ角度だけ回る。ADがAD′まで回った角と、ACがAC′まで回った角は同じ。</li>
+    <li>回転しても長さは変わらない。AC＝AC′だから、三角形ACC′は二等辺三角形。底角は（180−頂角）÷2。たとえば頂角が40°なら底角は70°。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に書きこむ。AC′は辺ABの上にある。角CAC′＝角DAD′＝26°。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 250" style="max-width:360px;width:100%;height:auto;display:block" id="q3_1_fig">
+<rect x="120" y="20" width="90" height="185" fill="none" stroke="#222" stroke-width="2"/>
+<polygon points="120,20 200.9,59.5 119.8,225.7 38.9,186.3" fill="none" stroke="#222" stroke-width="1.5"/>
+<line x1="120" y1="20" x2="210" y2="205" stroke="#222" stroke-width="1.5"/>
+<line x1="210" y1="205" x2="119.8" y2="225.7" stroke="#d32f2f" stroke-width="2"/>
+<path d="M 150 20 A 30 30 0 0 1 147 34.7" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="154" y="32" font-size="12" fill="#222">26°</text>
+<path d="M 133 47 A 30 30 0 0 1 120 50" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+<text x="124" y="66" font-size="12" fill="#d32f2f" font-weight="bold">26°</text>
+<path d="M 196 176 A 32 32 0 0 1 178 205" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="172" y="190" font-size="12" fill="#222">64</text>
+<path d="M 186 192 A 26 26 0 0 1 188 210" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+<text x="180" y="226" font-size="12" fill="#d32f2f" font-weight="bold">ア</text>
+<text x="106" y="16" font-size="14" fill="#222">A</text>
+<text x="214" y="16" font-size="14" fill="#222">D</text>
+<text x="104" y="210" font-size="14" fill="#222">B</text>
+<text x="216" y="214" font-size="14" fill="#222">C</text>
+<text x="204" y="72" font-size="14" fill="#222">D′</text>
+<text x="20" y="192" font-size="14" fill="#222">B′</text>
+<text x="104" y="240" font-size="14" fill="#222">C′</text>
+<text x="226" y="120" font-size="12" fill="#d32f2f" font-weight="bold">AC＝AC′</text>
+</svg></li>
+    <li>三角形ABCで、角ACB＝180−（26＋90）＝<b>64°</b>。</li>
+    <li>三角形ACC′は AC＝AC′ の二等辺三角形。角ACC′＝（180−26）÷2＝<b>77°</b>。</li>
+    <li>アは、角ACC′から角ACBを引いた残り。77−64＝13°。</li>
+    <li>落としやすい所は、26°をどの角に置くか。26°は角DACではなく、回転した角DAD′。角DAC＝26°と読むと、角ACBが26°になって答えがずれる。</li>
+  </ol>
+  <div class="ans">答え：13</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> おうぎ形と長方形の重なり <span class="type">A・5点｜面積の差</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>アとイの部分の面積の差</b>」と「半径8cm・中心角90度」「6cm・12cm」。差は、共通部分ウを両方にたして「<b>おうぎ形−長方形</b>」に直して書く → 2つの面積を出すだけで決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>重なった2つの図形の「はみ出し」どうしの差は、図形全体の差と同じ。ア−イ＝（ア＋ウ）−（イ＋ウ）。共通のウは引き算で消える。</li>
+    <li>おうぎ形の面積＝半径×半径×3.14×中心角÷360。中心角90度なら、円の1/4。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に共通部分ウを書く。おうぎ形＝ア＋ウ、長方形＝イ＋ウ。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 230" style="max-width:360px;width:100%;height:auto;display:block" id="q3_2_fig">
+<path d="M 30 80 L 30 40 A 160 160 0 0 1 135.8 80 Z" fill="#ffe0b2" stroke="none"/>
+<path d="M 135.8 80 A 160 160 0 0 1 190 200 L 270 200 L 270 80 Z" fill="#dbe9ff" stroke="none"/>
+<path d="M 30 200 L 30 40 A 160 160 0 0 1 190 200 Z" fill="none" stroke="#222" stroke-width="2"/>
+<rect x="30" y="80" width="240" height="120" fill="none" stroke="#222" stroke-width="2"/>
+<text x="16" y="86" font-size="14" fill="#222">A</text>
+<text x="16" y="212" font-size="14" fill="#222">B</text>
+<text x="274" y="212" font-size="14" fill="#222">C</text>
+<text x="274" y="86" font-size="14" fill="#222">D</text>
+<text x="60" y="64" font-size="14" fill="#222">ア</text>
+<text x="228" y="146" font-size="14" fill="#222">イ</text>
+<text x="100" y="146" font-size="14" fill="#222">ウ</text>
+<text x="40" y="140" font-size="12" fill="#222">6cm</text>
+<text x="140" y="218" font-size="12" fill="#222">12cm</text>
+<text x="80" y="110" font-size="12" fill="#222" transform="rotate(-45 80 110)">8cm</text>
+<text x="40" y="36" font-size="12" fill="#d32f2f" font-weight="bold">おうぎ形＝ア＋ウ</text>
+<text x="170" y="36" font-size="12" fill="#1565c0" font-weight="bold">長方形＝イ＋ウ</text>
+</svg></li>
+    <li>おうぎ形の面積。8×8×3.14÷4＝<b>50.24</b>cm²。先に 8×8÷4＝16 を出して、16×3.14 にすると速い。</li>
+    <li>長方形の面積。6×12＝72cm²。</li>
+    <li>差は、大きい方から引く。72−50.24＝<b>21.76</b>cm²。長方形の方が大きいので、イの方がアより大きい。</li>
+    <li>落としやすい所は、ア・イを別々に出そうとして止まること。ウは出さなくてよい。</li>
+  </ol>
+  <div class="ans">答え：21.76</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 平行四辺形の3等分と斜線部分 <span class="type">B・5点｜相似と面積比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>図の記号は同じ長さ</b>」→ ADとBCが3等分と図に書く。3本の平行な線と対角線ACで、Aから出る三角形が1:2:3の相似 → 面積を①④⑨とおき、「<b>斜線部分の面積の合計が182cm²</b>」を○の数に直す。平行な3本と対角線が見えたら手をつける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>相似比が 1:2:3 なら、面積比は 1:4:9。たとえば1辺が2倍の正方形は面積が4倍。</li>
+    <li>同じ頂点から出る三角形は、底辺の比＝面積の比。平行四辺形は対角線で面積が半分ずつ。</li>
+    <li>平行四辺形は点対称。対角線の交点を中心に180度回すと、ぴったり重なる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>記号をつける。ADの3等分点をE・F、BCの3等分点をG・H。EB・FG・DHは平行。対角線ACとの交点をI・J・K。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 190" style="max-width:360px;width:100%;height:auto;display:block" id="q3_3_fig">
+<polygon points="70,20 130,20 102.5,57.5" fill="#dbe9ff" stroke="none"/>
+<polygon points="20,170 80,170 135,95 102.5,57.5" fill="#dbe9ff" stroke="none"/>
+<polygon points="190,20 250,20 167.5,132.5 135,95" fill="#dbe9ff" stroke="none"/>
+<polygon points="250,20 200,170 167.5,132.5" fill="#dbe9ff" stroke="none"/>
+<polygon points="70,20 250,20 200,170 20,170" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="130" y1="20" x2="20" y2="170" stroke="#222" stroke-width="1.5"/>
+<line x1="190" y1="20" x2="80" y2="170" stroke="#222" stroke-width="1.5"/>
+<line x1="250" y1="20" x2="140" y2="170" stroke="#222" stroke-width="1.5"/>
+<line x1="70" y1="20" x2="200" y2="170" stroke="#222" stroke-width="1.5"/>
+<text x="58" y="16" font-size="13" fill="#222">A</text>
+<text x="124" y="16" font-size="13" fill="#222">E</text>
+<text x="184" y="16" font-size="13" fill="#222">F</text>
+<text x="254" y="16" font-size="13" fill="#222">D</text>
+<text x="6" y="184" font-size="13" fill="#222">B</text>
+<text x="74" y="184" font-size="13" fill="#222">G</text>
+<text x="134" y="184" font-size="13" fill="#222">H</text>
+<text x="204" y="184" font-size="13" fill="#222">C</text>
+<text x="86" y="62" font-size="12" fill="#222">I</text>
+<text x="117" y="101" font-size="12" fill="#222">J</text>
+<text x="149" y="140" font-size="12" fill="#222">K</text>
+<text x="96" y="40" font-size="12" fill="#d32f2f" font-weight="bold">①</text>
+<text x="62" y="138" font-size="12" fill="#d32f2f" font-weight="bold">⑤</text>
+<text x="190" y="72" font-size="12" fill="#d32f2f" font-weight="bold">⑤</text>
+<text x="208" y="116" font-size="12" fill="#d32f2f" font-weight="bold">③</text>
+<text x="124" y="60" font-size="11" fill="#1565c0">④−①</text>
+</svg></li>
+    <li>三角形AIE・AJF・AKDは相似。相似比は AE:AF:AD＝1:2:3。面積は <b>①・④・⑨</b>。</li>
+    <li>三角形AKDと三角形CKHも相似。AD:CH＝3:1 だから AK:KC＝3:1。三角形DKCの面積は ⑨×1/3＝③。</li>
+    <li>平行四辺形ABCD＝三角形ACD×2＝（⑨＋③）×2＝㉔。</li>
+    <li>斜線部分を○で書く。台形FJKD＝⑨−④＝⑤。点対称だから台形GJIBも⑤。三角形AIE＝①、三角形DKC＝③。合計は ⑤＋⑤＋①＋③＝<b>⑭</b>。</li>
+    <li>⑭＝182 → ①＝182÷14＝13。平行四辺形は 13×24＝312cm²。</li>
+  </ol>
+  <div class="ans">答え：312</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (4)</span> 直方体を30回切断して表面積が10倍 <span class="type">B・5点｜切断と表面積・つるかめ算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>合計30回切断</b>」「<b>表面積の合計がもとの10倍</b>」「アに平行な面では□回」。1回の切断で増える面積に直して書く → アに平行なら 5×5×2＝50、イ・ウに平行なら 5×8×2＝80 の2種類。増えた合計が出れば、つるかめ算になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1回切ると、切り口が2面できる。増える面積は切り口×2。たとえば 5×5 の面に平行に切れば 25×2＝50。</li>
+    <li>10倍になった → 増えた分は、もとの9倍。</li>
+    <li>つるかめ算は「全部80だとしたら」から始める。合計との差を（80−50）で割る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>もとの表面積。5×5×2＋5×8×4＝50＋160＝210cm²。増えた分は 210×9＝<b>1890</b>cm²。</li>
+    <li>1回で増える面積を表にする。イとウは、どちらも切り口が 5×8 で同じ。
+<table><tr><th>どの面に平行か</th><th>切り口</th><th>1回で増える面積</th></tr>
+<tr><td>ア（5×5）</td><td>25cm²</td><td><b>50cm²</b></td></tr>
+<tr><td>イ・ウ（5×8）</td><td>40cm²</td><td><b>80cm²</b></td></tr></table></li>
+    <li>30回全部が80だとすると 80×30＝2400。実際は1890。差は 2400−1890＝510。</li>
+    <li>1回を80から50に変えると30減る。510÷30＝17回。これがアに平行な回数。</li>
+    <li>確かめ。50×17＋80×13＝850＋1040＝1890。合っている。</li>
+  </ol>
+  <div class="ans">答え：17</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (5)</span> ライトでできる板の影の面積 <span class="type">B・5点｜影と相似</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→条件文】部品は「<b>床に対して垂直に立っている</b>」と「<b>直線BEと直線QEは垂直に交わって</b>」。真横から見た図と真上から見た図に分けて書く（図に置く）→ 相似が2組見えて、影の台形の高さと下の辺が決まる。真横の図で 9:21 が出たら手をつける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>点のライトで板の影ができると、真横から見れば「ライト→板の上の辺→床」が1本の直線。ライトの三角形と板の三角形は相似。</li>
+    <li>真上から見ると、光はQからB・Cへまっすぐ進む。影の遠い辺FGは板BCと平行。影は台形になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>真横から見る（BEの方向から）。板は高さ9の線、棒は高さ21の線。棒から板までの床の距離はQE＝16。Pから板の上の辺を通る光が床に着く点をGとする。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 190" style="max-width:360px;width:100%;height:auto;display:block" id="q3_5_side">
+<line x1="40" y1="170" x2="320" y2="170" stroke="#222" stroke-width="2"/>
+<polygon points="104,170 188,170 188,107" fill="#ffe0b2" stroke="none"/>
+<line x1="300" y1="170" x2="300" y2="23" stroke="#222" stroke-width="2"/>
+<line x1="188" y1="170" x2="188" y2="107" stroke="#222" stroke-width="3"/>
+<line x1="300" y1="23" x2="104" y2="170" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6,4"/>
+<text x="296" y="18" font-size="13" fill="#222">P</text>
+<text x="296" y="186" font-size="13" fill="#222">Q</text>
+<text x="176" y="186" font-size="13" fill="#222">C(B)</text>
+<text x="166" y="104" font-size="13" fill="#222">D(A)</text>
+<text x="96" y="186" font-size="13" fill="#222">G</text>
+<text x="306" y="100" font-size="12" fill="#222">21</text>
+<text x="192" y="142" font-size="12" fill="#222">9</text>
+<text x="236" y="164" font-size="12" fill="#222">16</text>
+<text x="130" y="164" font-size="12" fill="#d32f2f" font-weight="bold">12</text>
+<text x="60" y="40" font-size="12" fill="#1565c0">GC:GQ＝9:21＝3:7</text>
+<text x="60" y="58" font-size="12" fill="#d32f2f" font-weight="bold">GC:CQ＝3:4</text>
+</svg></li>
+    <li>三角形GCDと三角形GQPは相似。GC:GQ＝9:21＝3:7。だから GC:CQ＝3:4。真横の図ではCからQまで16 なので <b>GC＝16×3/4＝12</b>cm。影は板から12cm先まで。</li>
+    <li>真上から見る。QからB・Cを通る線が、Eから12先の線（H）でF・Gにぶつかる。三角形QBCと三角形QFGは相似。比は QE:QH＝16:28＝4:7。<b>FG＝8×7/4＝14</b>cm。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 240" style="max-width:360px;width:100%;height:auto;display:block" id="q3_5_top">
+<polygon points="163,132 219,132 203.25,216 105.25,216" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+<line x1="240" y1="20" x2="105.25" y2="216" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6,4"/>
+<line x1="240" y1="20" x2="203.25" y2="216" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6,4"/>
+<line x1="240" y1="20" x2="240" y2="216" stroke="#222" stroke-width="1.2" stroke-dasharray="3,3"/>
+<line x1="163" y1="132" x2="240" y2="132" stroke="#222" stroke-width="3"/>
+<line x1="90" y1="216" x2="240" y2="216" stroke="#222" stroke-width="1" stroke-dasharray="3,3"/>
+<circle cx="240" cy="20" r="3" fill="#222"/>
+<text x="246" y="24" font-size="13" fill="#222">Q</text>
+<text x="246" y="136" font-size="13" fill="#222">E</text>
+<text x="246" y="220" font-size="13" fill="#222">H</text>
+<text x="150" y="128" font-size="13" fill="#222">B</text>
+<text x="214" y="128" font-size="13" fill="#222">C</text>
+<text x="94" y="232" font-size="13" fill="#222">F</text>
+<text x="200" y="232" font-size="13" fill="#222">G</text>
+<text x="184" y="126" font-size="11" fill="#222">8</text>
+<text x="226" y="128" font-size="11" fill="#222">3</text>
+<text x="244" y="80" font-size="12" fill="#222">16</text>
+<text x="244" y="178" font-size="12" fill="#d32f2f" font-weight="bold">12</text>
+<text x="146" y="212" font-size="12" fill="#d32f2f" font-weight="bold">14</text>
+<text x="20" y="40" font-size="12" fill="#1565c0">QE:QH＝16:28＝4:7</text>
+</svg></li>
+    <li>影は台形BCGF。上の辺8、下の辺14、高さ12。（8＋14）×12÷2＝132cm²。</li>
+    <li>図の「3cm」（CからEまで）は影の位置を決めるだけ。面積の計算には使わない。</li>
+  </ol>
+  <div class="ans">答え：132</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (6)①</span> 容器を45度傾けてこぼれる水 <span class="type">A・5点｜水そうを傾ける</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>EFを床につけたまま</b>」「<b>45度傾け</b>」「こぼれた水の体積」。正面から見た図（上が6×4、下が3×6）に直して書き、Bから45°の線を引く（図に置く）→ こぼれた分＝線より上の台形×奥行き10 と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>容器を傾けても、水面は床と平行のまま。容器の図の中では、水面の線が傾いて見える。45°傾けたら、水面は容器のふちと45°。</li>
+    <li>45°の線は「横に4進めば下に4」。1マスずつ同じだけ進む。</li>
+    <li>こぼれる水＝水面より上にあった水。奥行きが同じなら、正面の面積×奥行き。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>正面から見た図を描く。左の辺BFが10、上の辺BCが6、段KJまでの深さが4、段の幅は3。奥行きは10。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 190" style="max-width:300px;width:100%;height:auto;display:block" id="q3_6_1_fig">
+<polygon points="30,20 114,20 114,76 72,76 72,160 30,160" fill="#dbe9ff" stroke="none"/>
+<polygon points="30,20 114,20 114,76 86,76" fill="#fff" stroke="none"/>
+<polygon points="30,20 114,20 114,76 72,76 72,160 30,160" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="30" y1="20" x2="86" y2="76" stroke="#d32f2f" stroke-width="2"/>
+<path d="M 48 20 A 18 18 0 0 1 42.7 32.7" fill="none" stroke="#222" stroke-width="1"/>
+<text x="50" y="36" font-size="11" fill="#222">45°</text>
+<text x="18" y="18" font-size="13" fill="#222">B</text>
+<text x="118" y="18" font-size="13" fill="#222">C</text>
+<text x="118" y="82" font-size="13" fill="#222">K</text>
+<text x="60" y="88" font-size="13" fill="#222">J</text>
+<text x="18" y="174" font-size="13" fill="#222">F</text>
+<text x="74" y="174" font-size="13" fill="#222">G</text>
+<text x="66" y="14" font-size="11" fill="#222">6</text>
+<text x="118" y="52" font-size="11" fill="#222">4</text>
+<text x="52" y="72" font-size="11" fill="#d32f2f" font-weight="bold">4</text>
+<text x="96" y="72" font-size="11" fill="#d32f2f" font-weight="bold">2</text>
+<text x="12" y="120" font-size="11" fill="#222">10</text>
+<text x="34" y="132" font-size="10" fill="#1565c0">残る水</text>
+<text x="72" y="52" font-size="10" fill="#d32f2f" font-weight="bold">こぼれる</text>
+</svg></li>
+    <li>アの向きに傾けると、Bがいちばん低い角になる。水面はBを通る。Bから45°で下に4進むと、段JKにぶつかる。横も4。その点はJから1、Kから2。</li>
+    <li>こぼれた部分は台形。上の辺6、下の辺2、高さ4。（6＋2）×4÷2＝<b>16</b>cm²。</li>
+    <li>奥行き10をかける。16×10＝<b>160</b>cm³。</li>
+    <li>落としやすい所は、45°の線が段JKで止まること。下の部屋（3×6）の水はこぼれない。</li>
+  </ol>
+  <div class="ans">答え：160</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (6)②</span> KLが床につくまで傾けてこぼれる水 <span class="type">C・5点｜水そうを傾ける・2つの水面</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>GHを床につけたまま</b>」「<b>KLが床につくまで</b>」。床につく辺GKを正面の図に引き、水面はGKと平行と置く（図に置く）→ 上の部屋と下の部屋で水面が別になる、と見えた人だけ手をつける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「KLが床につくまで」＝正面の図でGとKの両方が床にある。だから水面はGKと平行。GKは「横3・上6」の向き。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>正面の図にGKを引く。GからKは横3・上6（1:2の向き）。水面はこれと平行。
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 190" style="max-width:300px;width:100%;height:auto;display:block" id="q3_6_2_fig">
+<polygon points="114,20 114,76 86,76" fill="#dbe9ff" stroke="none"/>
+<polygon points="30,160 72,160 72,76" fill="#dbe9ff" stroke="none"/>
+<polygon points="30,20 114,20 114,76 72,76 72,160 30,160" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="72" y1="160" x2="114" y2="76" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6,4"/>
+<line x1="114" y1="20" x2="86" y2="76" stroke="#d32f2f" stroke-width="2"/>
+<line x1="72" y1="76" x2="30" y2="160" stroke="#d32f2f" stroke-width="2"/>
+<text x="18" y="18" font-size="13" fill="#222">B</text>
+<text x="118" y="18" font-size="13" fill="#222">C</text>
+<text x="118" y="82" font-size="13" fill="#222">K</text>
+<text x="60" y="88" font-size="13" fill="#222">J</text>
+<text x="84" y="88" font-size="13" fill="#d32f2f" font-weight="bold">N</text>
+<text x="18" y="174" font-size="13" fill="#222">F</text>
+<text x="74" y="174" font-size="13" fill="#222">G</text>
+<text x="96" y="72" font-size="11" fill="#d32f2f" font-weight="bold">2</text>
+<text x="118" y="52" font-size="11" fill="#222">4</text>
+<text x="76" y="122" font-size="11" fill="#222">6</text>
+<text x="47" y="177" font-size="11" fill="#222">3</text>
+<text x="96" y="130" font-size="11" fill="#1565c0">GK（床）</text>
+<text x="34" y="60" font-size="11" fill="#222">こぼれる</text>
+</svg></li>
+    <li>上の部屋の水面は、いちばん低い角Cを通る。Cから横1・下2の向きに進むと、段JKの上でKから2の点Nに着く。残る水は三角形CNK＝2×4÷2＝<b>4</b>cm²。</li>
+    <li>下の部屋の水は、段の角Jを越えないと上の部屋に出られない。だから下の部屋の水面はJを通る。Jから横3・下6の向きに進むとFに着く。残る水は三角形FGJ＝3×6÷2＝<b>9</b>cm²。</li>
+    <li>正面の面積は 6×4＋3×6＝42cm²。残った水は 4＋9＝13cm²。こぼれた水は（42−13）×10＝290cm³。</li>
+  </ol>
+  <div class="ans">答え：290</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 両方当てた人と両方外した人の比 <span class="type">A・6点｜集合算・割合をそろえる</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ゲームに参加した人数の21分の4</b>」と「<b>ゲームに参加した人数の7分の2</b>」。もとにする量はどちらも参加した人数 → 参加者を㉑に直して書く → 両方×＝④、両方○＝⑥ と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「〜の△分の□」は、もとにする量を分母でそろえる。21と7の最小公倍数は21。参加者を㉑とおくと、4/21→④、2/7→⑥。</li>
+    <li>集合の問題は、的当て○×・輪投げ○×の表に整理する。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>参加者を㉑とおく。両方×（②）は④、両方○（③）は <b>⑥</b>。</li>
+    <li>聞かれているのは「両方○：両方×」。⑥：④＝<b>3：2</b>。</li>
+    <li>落としやすい所は、順番。先に書くのは「的に当て、輪も入れた」の方。2：3にしない。</li>
+  </ol>
+  <div class="ans">答え：3:2</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 輪を入れた人数 <span class="type">B・6点｜集合算・表と差</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>的に当てた人数と輪を入れた人数の比は5：6</b>」と「<b>的は当てたが輪を外した人数より46人多く</b>」。表に入れて、的○の合計を[5]、輪○の合計を[6]と置く（図に置く）→ 2つの合計の差が46と決まる。表に「△＋46」が置けたら手をつける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>表の「合計」の行と列は、中のますの和。同じ⑥と△が両方に入っていれば、差は残りの部分だけ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>わかったこと①④と(1)を表に入れる。的○で輪×の人数を△とすると、的×で輪○は△＋46。
+<table><tr><th></th><th>輪○</th><th>輪×</th><th>合計</th></tr>
+<tr><th>的○</th><td>⑥</td><td>△</td><td><b>[5]</b></td></tr>
+<tr><th>的×</th><td>△＋46</td><td>④</td><td></td></tr>
+<tr><th>合計</th><td><b>[6]</b></td><td></td><td>㉑</td></tr></table></li>
+    <li>的○の合計: ⑥＋△＝[5]。輪○の合計: ⑥＋△＋46＝[6]。</li>
+    <li>2つの式を見比べる。ちがいは 46 だけ。だから <b>[1]＝46</b>。</li>
+    <li>輪を入れた人数＝[6]＝46×6＝276人。</li>
+  </ol>
+  <div class="ans">答え：276(人)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> ゲームに参加した人数 <span class="type">B・6点｜集合算・全体の式</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ゲームに参加した人数は全部で</b>」→ 参加者＝的○＋輪○−両方○＋両方× に直して書く。的○は(2)の[1]＝46から <b>46×5＝230人</b>。式に㉑・⑥・④が入り、①が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2つの集合の全体＝A○＋B○−両方○＋両方×。両方○の人は2回数えているので1回引く。たとえば的○10人・輪○12人・両方○4人・両方×3人なら、全体は 10＋12−4＋3＝21人。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>的に当てた人数＝46×5＝230人。</li>
+    <li>参加者＝230＋276−⑥＋④＝506−②。これが㉑。</li>
+    <li>506＝㉑＋②＝<b>㉓</b>。①＝506÷23＝22。</li>
+    <li>参加者＝22×21＝<b>462</b>人。</li>
+    <li>確かめ。両方○＝132人、両方×＝88人。的○輪×＝230−132＝98人、的×輪○＝276−132＝144人。144−98＝46。合計 132＋98＋144＋88＝462。合っている。</li>
+  </ol>
+  <div class="ans">答え：462(人)</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜4</span> まとめ <span class="type">この2題で繰り返し出た入口</span></h2>
+  <ul>
+    <li>図形は「見る向きを変える」: 3(5)は真横と真上、3(6)は正面の図。立体のまま考えない。</li>
+    <li>比の問題は「同じ量を○でそろえる」: 3(3)は面積①④⑨、4は参加者㉑。</li>
+    <li>2種類しかないなら つるかめ算（3(4)）。差が1か所なら差で決める（4(2)の46人）。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="5-6-7"><h1 class="dtitle">大問5・6・7（2人の間の距離のグラフ・直角三角形の回転体・色つきカードの3けた）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">5〜7</span> 全体像（大問5・6・7） <span class="type">A 35点／B 16点／C 6点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+    <tr><td>5</td><td>図書館と駅・2人の間の距離のグラフ</td><td>A 6+6 ／ B 6</td><td>「2人の間の距離」のグラフ → 折れ目ごとに「だれが動いているか」を横に書く。1人なら その人の速さ、2人なら速さの和</td></tr>
+    <tr><td>6</td><td>直角三角形・台形の回転体</td><td>A 3+6+6 ／ B 6</td><td>「〜を軸として1回転」→ 軸から遠い点までの長さが半径。軸がななめなら垂線を引く。切り取った台形は「大きい立体−小さい立体」（相似比1:2＝体積比1:8）</td></tr>
+    <tr><td>7</td><td>赤・青・白のカードで3けたの整数</td><td>A 4+4 ／ B 4 ／ C 6</td><td>「同じ色には1〜4が1枚ずつ」→ 数字の並びと色の並びを分けて数える。「3の倍数」→ 各位の和が3の倍数</td></tr>
+  </table>
+  <p>取り方: <b>Aの7問（5(1)(2)・6(1)①②・6(2)①・7(1)①②）を先に確実に</b>。Bは 6(2)②（(1)②の答えに 7/8 をかけるだけ）→ 7(2)①（和が3の倍数になる組を表で数える）→ 5(3)（73分と85分の意味が読めたら）の順。7(2)② はCなので、残りの時間で手を付ける。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> Bくんの自転車の速さ <span class="type">A・6点｜2人の間の距離のグラフ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→資料問題】部品は「<b>15分後にBくんは駅から</b>」と折れ目「<b>15分・3300m</b>」。グラフの横に、0〜15分は「Aだけ」、15〜25分は「2人」と書く（図に置く）→ 1分に縮む長さで、Aの速さと2人の速さの和が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>向かい合って進む2人の間の距離は、1分に「<b>2人の速さの和</b>」だけ縮む。片方が止まっていれば、動いている人の速さの分だけ縮む。</li>
+    <li>グラフの折れ目は「だれかの動きが変わった時刻」。15分＝Bが駅を出る。25分＝Aが公園に着く。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>グラフの左半分に、区間ごとにだれが動いているかを書く。
+      <svg viewBox="0 0 360 230" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <g id="q5_1_axes" stroke="#222" stroke-width="1" fill="none">
+          <line x1="40" y1="180" x2="345" y2="180"/>
+          <line x1="40" y1="15" x2="40" y2="180"/>
+        </g>
+        <g id="q5_1_grid" stroke="#999" stroke-width="0.7" stroke-dasharray="3 3">
+          <line x1="40" y1="57" x2="93" y2="57"/><line x1="93" y1="57" x2="93" y2="180"/>
+          <line x1="40" y1="143" x2="128" y2="143"/><line x1="128" y1="143" x2="128" y2="180"/>
+        </g>
+        <polyline id="q5_1_graph" points="40,20 93,57 128,143 149,180 199,180 262,136 298,50 340,20" fill="none" stroke="#222" stroke-width="1.2"/>
+        <polyline id="q5_1_segA" points="40,20 93,57" fill="none" stroke="#d32f2f" stroke-width="3"/>
+        <polyline id="q5_1_segAB" points="93,57 128,143" fill="none" stroke="#1565c0" stroke-width="3"/>
+        <g id="q5_1_labels" font-size="10" fill="#222">
+          <text x="8" y="23">4290</text><text x="8" y="60">3300</text><text x="14" y="146">990</text>
+          <text x="38" y="194">0</text><text x="87" y="194">15</text><text x="122" y="194">25</text><text x="332" y="194">85(分)</text>
+          <text x="22" y="12" font-size="9">(m)</text>
+        </g>
+        <g id="q5_1_notes" font-size="11">
+          <text x="100" y="30" fill="#d32f2f">Aだけ: 990m÷15分＝66</text>
+          <text x="135" y="100" fill="#1565c0">2人: 2310m÷10分＝231</text>
+          <text x="150" y="215" fill="#222" font-size="10">15分にBが出発・25分にAが公園に着く</text>
+        </g>
+      </svg></li>
+    <li>0〜15分はAだけが歩く。(4290−3300)÷15＝66 → Aは分速66m。</li>
+    <li>15〜25分は2人が近づく。(3300−990)÷(25−15)＝231 → 2人の速さの和は分速231m。</li>
+    <li>Bの速さは <b>231−66＝165</b> → 分速165m。</li>
+    <li>落としやすい所: 231をそのままBの速さにしない。15〜25分はAも歩いている。</li>
+  </ol>
+  <div class="ans">答え：(分速)165(m)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 2人がそろって公園で休んでいた時間 <span class="type">A・6点｜到着時刻の差</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>公園で20分間休み</b>」と、グラフの「<b>25分で990m</b>」。Aは25分から45分まで公園にいる。Bは990mを分速165mで来る → Bが着く時刻を出し、45分との差を書く（直して書く）→ それがそろって休んだ時間。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2人が同じ場所にいる間、間の距離は0。グラフが横軸にぴったり重なっている区間が「<b>2人とも公園にいる</b>」時間。</li>
+    <li>たとえば 990m を分速165m で進むと 990÷165＝6分。残りの道のりを速さでわると、着くまでの時間が出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>時刻を1本の表にする。
+      <table>
+        <tr><th>時刻（分）</th><td>25</td><td><b>31</b></td><td><b>45</b></td></tr>
+        <tr><th>A</th><td>公園に着く</td><td>休み</td><td>公園を出る</td></tr>
+        <tr><th>B</th><td>あと990m</td><td>公園に着く</td><td>休み</td></tr>
+      </table></li>
+    <li>25分のとき、Bは公園まであと990m。990÷165＝6 → 25＋6＝31分にBが公園に着く。</li>
+    <li>Aが公園にいるのは 25分から 25＋20＝45分まで。</li>
+    <li>そろっていたのは 31分から45分。45−31＝<b>14分間</b>。</li>
+    <li>落としやすい所: Aが休む20分をそのまま答えにしない。Bが着くのは25分より6分あと。</li>
+  </ol>
+  <div class="ans">答え：14(分間)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> Bが公園を出た時刻と ア <span class="type">B・6点｜グラフの折れ目の意味</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は折れ目「<b>73</b>」と「<b>公園に着く前と同じ速さで図書館に向かい</b>」。73分＝Bが図書館に着く、とグラフに書く（図に置く）→ 自転車は片道分の26分だけなので、公園を出た時刻が決まる。73の意味が読めたら手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Aが駅に着くのは 4290÷66＋20＝85分。グラフの右はしの85と同じ。だから、その手前の折れ目<b>73はBが図書館に着いた時刻</b>。</li>
+    <li>Bは行きも帰りも分速165m。駅から図書館までの4290mを進むのに 4290÷165＝26分かかる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>グラフの右半分に、だれが動いているかと時刻を書く。
+      <svg viewBox="0 0 360 230" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <g id="q5_3_axes" stroke="#222" stroke-width="1" fill="none">
+          <line x1="40" y1="180" x2="345" y2="180"/>
+          <line x1="40" y1="15" x2="40" y2="180"/>
+        </g>
+        <g id="q5_3_grid" stroke="#999" stroke-width="0.7" stroke-dasharray="3 3">
+          <line x1="40" y1="136" x2="262" y2="136"/><line x1="262" y1="136" x2="262" y2="180"/>
+          <line x1="298" y1="50" x2="298" y2="180"/><line x1="340" y1="20" x2="340" y2="180"/>
+        </g>
+        <polyline id="q5_3_graph" points="40,20 93,57 128,143 149,180 199,180 262,136 298,50 340,20" fill="none" stroke="#222" stroke-width="1.2"/>
+        <polyline id="q5_3_segA" points="199,180 262,136" fill="none" stroke="#d32f2f" stroke-width="3"/>
+        <polyline id="q5_3_segAB" points="262,136 298,50" fill="none" stroke="#1565c0" stroke-width="3"/>
+        <g id="q5_3_labels" font-size="10" fill="#222">
+          <text x="8" y="23">4290</text>
+          <text x="38" y="194">0</text><text x="193" y="194">45</text><text x="292" y="194">73</text><text x="334" y="194">85</text>
+          <text x="8" y="139" fill="#d32f2f" font-weight="bold">ア</text>
+          <text x="254" y="194" fill="#d32f2f" font-weight="bold">63</text>
+        </g>
+        <g id="q5_3_notes" font-size="11">
+          <text x="146" y="126" fill="#d32f2f">Aだけ 66×18＝1188</text>
+          <text x="196" y="92" fill="#1565c0">2人: 離れる</text>
+          <text x="236" y="40" fill="#222" font-size="10">73: Bが図書館</text>
+          <text x="282" y="12" fill="#222" font-size="10">85: Aが駅</text>
+          <text x="60" y="215" fill="#222" font-size="10">45: Aが公園を出る　63: Bが公園を出る</text>
+        </g>
+      </svg></li>
+    <li>85分＝Aが駅に着く。73分＝Bが図書館に着く。グラフの横に書く。</li>
+    <li>Bが自転車に乗っていたのは全部で26分。出発の15分から着く73分までは 73−15＝58分。休んだのは 58−26＝<b>32分</b>。</li>
+    <li>Bは31分に公園に着いた（(2)）。出たのは 31＋32＝63分。</li>
+    <li>45分から63分までは、Aだけが駅へ歩く。2人の間は 66×(63−45)＝<b>1188</b>m。これがア。</li>
+    <li>落としやすい所: アは「Bが公園を出た瞬間の距離」。63分を出すまで数は決まらない。73分からAの速さだけでさかのぼると、2人とも動いている区間を見落とす。</li>
+  </ol>
+  <div class="ans">答え：1188</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)①</span> 直角三角形を辺ABのまわりに1回転 <span class="type">A・3点｜円すいの体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>辺ABを軸</b>」と「<b>円周率…3.14</b>」。軸ABに沿う15cmが高さ、軸から遠い辺BC＝20cmが半径、と図に書く（図に置く）→ 底面の半径20cm・高さ15cmの円すい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>直角三角形を、直角をはさむ辺を軸に回すと<b>円すい</b>。体積は 半径×半径×3.14×高さ×1/3。たとえば半径1cm・高さ3cmなら 1×1×3.14×3÷3＝3.14cm³。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>軸ABをたてに置き、Cを反対側にもうつして円すいの形を描く。
+      <svg viewBox="0 0 360 200" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <ellipse id="q6_1_base" cx="180" cy="150" rx="120" ry="18" fill="#dbe9ff" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+        <polygon id="q6_1_tri" points="180,60 180,150 300,150" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/>
+        <line id="q6_1_mirror" x1="180" y1="60" x2="60" y2="150" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+        <line id="q6_1_axis" x1="180" y1="40" x2="180" y2="175" stroke="#d32f2f" stroke-width="2"/>
+        <g font-size="12" fill="#222">
+          <text x="170" y="55">A</text><text x="166" y="162">B</text><text x="304" y="162">C</text>
+          <text x="192" y="110" fill="#d32f2f">高さ15</text>
+          <text x="222" y="146" fill="#d32f2f">半径20</text>
+          <text x="186" y="36" fill="#d32f2f" font-size="10">軸AB</text>
+        </g>
+      </svg></li>
+    <li>20×20×3.14×15×1/3＝<b>6280</b>。</li>
+    <li>落としやすい所: ×1/3 のわすれ。3.14をかける前に 20×20×15÷3＝2000 をまとめると、計算は 2000×3.14 だけで済む。</li>
+  </ol>
+  <div class="ans">答え：6280(cm³)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)②</span> 直角三角形を辺ACのまわりに1回転 <span class="type">A・6点｜ななめの軸→垂線が半径</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>辺ACを軸</b>」。軸がななめの辺 → Bから軸ACに垂線BFを引く（図に置く）→ <b>BFが半径</b>。上下2つの円すいが、高さ25cmを分けあう形になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>面積から高さを出す。三角形ABCの面積は 15×20÷2＝150cm²。底辺を25cmと見ると、高さBFは 150×2÷25＝<b>12cm</b>。</li>
+    <li>底面の円が同じ2つの円すいは、体積をまとめて 半径×半径×3.14×（高さの和）×1/3 で出せる。高さの和が軸の長さ25cm。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>軸ACを引き、Bから垂線BFをおろす。Bを軸の反対側にうつすと、2つの円すいを合わせた形が見える。
+      <svg viewBox="0 0 300 200" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <polygon id="q6_2_mirror" points="100,70 186.4,44.8 220,160" fill="#dbe9ff" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+        <polygon id="q6_2_tri" points="100,70 100,160 220,160" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/>
+        <line id="q6_2_axis" x1="84" y1="58" x2="236" y2="172" stroke="#d32f2f" stroke-width="2"/>
+        <line id="q6_2_bf" x1="100" y1="160" x2="143.2" y2="102.4" stroke="#d32f2f" stroke-width="2" stroke-dasharray="4 2"/>
+        <polyline id="q6_2_right" points="137,94 143.2,102.4 151.6,96.2" fill="none" stroke="#d32f2f" stroke-width="1"/>
+        <g font-size="12" fill="#222">
+          <text x="88" y="66">A</text><text x="86" y="172">B</text><text x="226" y="172">C</text>
+          <text x="148" y="98">F</text>
+          <text x="70" y="120">15</text><text x="150" y="178">20</text>
+          <text x="170" y="100">25</text>
+          <text x="126" y="152" fill="#d32f2f">BF＝12</text>
+          <text x="238" y="186" fill="#d32f2f" font-size="10">軸AC</text>
+        </g>
+      </svg></li>
+    <li>半径は BF＝12cm。150×2÷25＝12 で出す。</li>
+    <li>上の円すいと下の円すいの高さをたすと AC＝25cm。12×12×3.14×25×1/3＝<b>3768</b>。</li>
+    <li>落としやすい所: 半径を15や20にしない。軸がななめのときは、軸までの垂線の長さが半径。</li>
+  </ol>
+  <div class="ans">答え：3768(cm³)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)①</span> 台形DBCEを辺DBのまわりに1回転 <span class="type">A・6点｜大きい円すい−小さい円すい</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直角三角形ADEを切り取り</b>」と「<b>辺DBを軸</b>」。DBはABの一部 → 台形の回転体は「(1)①の円すい−ADEをADを軸に回した小さい円すい」と直して書く → 大小は相似比1:2。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>相似比1:2の立体の体積比は 1×1×1：2×2×2＝<b>1:8</b>。たとえば1辺1cmと2cmの立方体は 1cm³と8cm³。</li>
+    <li>D、EはAB、ACの真ん中の点。だから三角形ADEは三角形ABCの半分の大きさ（相似比1:2）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1)①の円すいの上に、小さい円すい（ADEの回転体）を重ねて描く。残った下の部分が台形の回転体。
+      <svg viewBox="0 0 360 200" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <ellipse id="q6_3_base" cx="180" cy="150" rx="120" ry="18" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+        <polygon id="q6_3_frustum" points="120,105 240,105 300,150 60,150" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+        <polygon id="q6_3_small" points="180,60 240,105 120,105" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/>
+        <ellipse id="q6_3_mid" cx="180" cy="105" rx="60" ry="9" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+        <line id="q6_3_axis" x1="180" y1="40" x2="180" y2="175" stroke="#d32f2f" stroke-width="2"/>
+        <g font-size="12" fill="#222">
+          <text x="170" y="55">A</text><text x="166" y="101">D</text><text x="244" y="101">E</text>
+          <text x="166" y="164">B</text><text x="304" y="162">C</text>
+          <text x="186" y="92" fill="#222" font-size="11">小: 1</text>
+          <text x="190" y="138" fill="#d32f2f" font-size="11">台形: 8−1＝7</text>
+        </g>
+      </svg></li>
+    <li>小さい円すい：大きい円すい＝1:8。台形の回転体はその差で、8−1＝7。</li>
+    <li>6280×7/8＝<b>5495</b>。</li>
+    <li>たしかめ。小さい円すいは半径10cm・高さ7.5cm。10×10×3.14×7.5÷3＝785。6280−785＝5495 で合う。</li>
+    <li>落としやすい所: 相似比1:2を体積比1:2のまま使わない。長さが半分なら、体積は 1/8。</li>
+  </ol>
+  <div class="ans">答え：5495(cm³)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)②</span> 台形DBCEを辺ECのまわりに1回転 <span class="type">B・6点｜(1)②の立体×7/8</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>辺ECを軸</b>」。ECはACの一部 → 「(1)②の立体−ADEをAEを軸に回した小さい立体」と直して書く → 相似比1:2は(2)①と同じ、<b>7/8をかけるだけ</b>。(1)②の3768が出ていれば式1本で取れる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>軸が辺の一部（EC）でも、台形は直線ACのまわりを回る。だからできる立体は「ABCの回転体から、ADEの回転体を取りのぞいたもの」。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1)②の2つの円すいの形の、Aに近いほうに小さい同じ形（ADEの回転体）を描く。
+      <svg viewBox="0 0 300 200" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+        <polygon id="q6_4_big" points="100,70 186.4,44.8 220,160 100,160" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+        <polygon id="q6_4_small" points="100,70 143.2,57.4 160,115 100,115" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/>
+        <line id="q6_4_axis" x1="84" y1="58" x2="236" y2="172" stroke="#d32f2f" stroke-width="2"/>
+        <g font-size="12" fill="#222">
+          <text x="88" y="66">A</text><text x="86" y="172">B</text><text x="226" y="172">C</text>
+          <text x="86" y="119">D</text><text x="162" y="112">E</text>
+          <text x="104" y="108" font-size="11">小: 1</text>
+          <text x="112" y="145" fill="#d32f2f" font-size="11">残り: 8−1＝7</text>
+          <text x="238" y="186" fill="#d32f2f" font-size="10">軸EC</text>
+        </g>
+      </svg></li>
+    <li>ADEの回転体：ABCの回転体＝1:8。台形の回転体は 8−1＝7。</li>
+    <li>3768×7/8＝<b>3297</b>。</li>
+    <li>落としやすい所: ECはACの半分だが、体積が半分になるのではない。引くのは小さい立体の分（1/8）だけ。</li>
+  </ol>
+  <div class="ans">答え：3297(cm³)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">7 (1)①</span> 123になるカードの並べ方 <span class="type">A・4点｜色だけを数える</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同じ色のカードには1、2、3、4</b>」（どの数字も赤・青・白の3枚ある）と「<b>123</b>」。数字の並びは決まっている → 数えるのは色だけ、と直して書く → 百の位3通り×十の位3通り×一の位3通り。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1のカードは 赤の1・青の1・白の1 の3枚。1枚えらぶ色の選び方は3通り。位ごとにえらぶなら<b>かけ算</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>百の位の1: 3色から1枚 → 3通り。</li>
+    <li>十の位の2: 3通り。一の位の3: 3通り。</li>
+    <li>3×3×3＝<b>27</b>。</li>
+    <li>落としやすい所: 「並べ方」を数字の並びと思って1通りにしない。色がちがえば、ちがう並べ方として数える。</li>
+  </ol>
+  <div class="ans">答え：27(通り)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">7 (1)②</span> 112になるカードの並べ方 <span class="type">A・4点｜同じ数字は色がちがう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>112</b>」（1が2枚）と「<b>それぞれ異なる数字が1つずつ</b>」。1は各色1枚ずつ → 2枚の1は色がちがう、と直して書く → 百の位3通り×十の位2通り×一の位3通り。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数字を2回使うとき、2枚目は1枚目と同じ色を使えない。3色 → 残り2色。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>百の位の1: 3通り。</li>
+    <li>十の位の1: 百の位で使った色はもう無い → 2通り。</li>
+    <li>一の位の2: 3通り。3×2×3＝<b>18</b>。</li>
+    <li>落としやすい所: ①と同じ27にしない。同じ数字が2回ある数は、2回目の色が1つへる。</li>
+  </ol>
+  <div class="ans">答え：18(通り)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">7 (2)①</span> 1〜4だけで作れる3けたの3の倍数の個数 <span class="type">B・4点｜各位の和で場合分け</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3の倍数</b>」と「<b>同じ数字を使ってもよい</b>」。3の倍数は「各位の数の和が3の倍数」に直して書く → 和が3・6・9・12になる組を、全部同じ／2つ同じ／全部ちがう に分けて表で数える。和に直せたら手を付ける価値がある。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3の倍数の見分け方: <b>各位の数の和が3の倍数</b>。たとえば123は 1＋2＋3＝6 → 3の倍数。</li>
+    <li>3つの数字の組から作れる3けたの数は、全部同じなら1個、2つ同じなら3個（ちがう数字の位置が3通り）、全部ちがうなら6個。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>数字の組を3つに分けて、和が3の倍数になる組だけ残す。
+      <table>
+        <tr><th>分け方</th><th>和が3の倍数になる組</th><th>作れる3けたの数</th></tr>
+        <tr><td>全部同じ</td><td>111・222・333・444（和 3・6・9・12）</td><td>1個ずつ → 4</td></tr>
+        <tr><td>2つ同じ</td><td>(1,1,4)（和6）・(4,4,1)（和9）</td><td>3個ずつ → 6</td></tr>
+        <tr><td>全部ちがう</td><td>(1,2,3)（和6）・(2,3,4)（和9）</td><td>6個ずつ → 12</td></tr>
+      </table></li>
+    <li>2つ同じの組は全部で12組。1組ずつ和を出す。(1,1,2)は4、(1,1,3)は5で消える。(2,2,1)・(2,2,3)・(2,2,4)は5・7・8で全部消える。残るのは <b>(1,1,4) と (4,4,1)</b> の2つだけ。</li>
+    <li>全部ちがう組は4つ。(1,2,4)は7、(1,3,4)は8 で消える。</li>
+    <li>4＋6＋12＝<b>22</b>。</li>
+  </ol>
+  <div class="ans">答え：22(個)</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">7 (2)②</span> 3の倍数になるカードの並べ方 <span class="type">C・6点｜数の個数×色の並べ方</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>カードの並べ方</b>」→ (2)①の22個を、全部同じ／2つ同じ／全部ちがう に分け直して書く。色の並べ方が<b>6・18・27通り</b>とちがうので、分けてからかけてたす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>全部同じ数字（111など）は、3枚の色が全部ちがう。色の並べ方は 3×2×1＝6通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>分け方ごとに「数の個数×色の並べ方」を表にする。
+      <table>
+        <tr><th>分け方</th><th>数の個数（(2)①）</th><th>色の並べ方</th><th>かけ算</th></tr>
+        <tr><td>全部同じ</td><td>4</td><td>3×2×1＝6</td><td>4×6＝24</td></tr>
+        <tr><td>2つ同じ</td><td>6</td><td>18（(1)②と同じ）</td><td>6×18＝108</td></tr>
+        <tr><td>全部ちがう</td><td>12</td><td>27（(1)①と同じ）</td><td>12×27＝324</td></tr>
+      </table></li>
+    <li>24＋108＋324＝<b>456</b>。</li>
+    <li>(2)①の22個に27をかけるだけだと、同じ数字をふくむ数を数えすぎる。分け方ごとに色の数がちがう。</li>
+  </ol>
+  <div class="ans">答え：456(通り)</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">5〜7</span> まとめ <span class="type">この3問で繰り返し出た入口</span></h2>
+  <ul>
+    <li>「2人の間の距離」のグラフは、折れ目ごとに「だれが動いているか」を横に書く。1人なら その人の速さ、2人なら速さの和。</li>
+    <li>回転体は「軸はどの直線か」「軸までの垂線が半径」。切り取った図形は 大きい立体−小さい立体（相似比1:2 → 体積比1:8）。</li>
+    <li>色つきカードは、数字の並びと色の並びを分けて数える。同じ数字が2回なら、2回目の色は1つへる。</li>
+  </ul>
+</section>
+</div>
