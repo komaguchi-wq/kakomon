@@ -12168,7 +12168,14 @@
        "6(3)": "12日"
       }
      },
-     "kaisetsu": "kaisetsu/sfc/2014-1/sansu.html"
+     "kaisetsu": "kaisetsu/sfc/2014-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2014-1/sansu/solved_2026-11-09_01.jpg",
+       "small": "2014-1/sansu/solved_2026-11-09_01_small.jpg",
+       "date": "2026-11-09"
+      }
+     ]
     },
     {
      "id": "shakai",
