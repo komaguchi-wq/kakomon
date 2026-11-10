@@ -1,0 +1,444 @@
+<!-- generated kakomon hiroo/2021-ms/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2-3">大問1・2・3（計算する箱と商・国旗のぬり分け・転がした容器の水）</a></li>
+<li><a href="#4">大問4（●を線で結ぶルール・引ける線の最大本数）</a></li></ul></nav>
+<div class="daimon" id="1-2-3"><h1 class="dtitle">大問1・2・3（計算する箱と商・国旗のぬり分け・転がした容器の水）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜3</span> この回の全体像（担当の大問） <span class="type">A 57点／B 9点／C 9点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1</td><td>2つの整数の和・差・商を表示する箱（和差算・商の範囲）</td><td>A 8+8+9</td><td>「商(整数)」→ あまりを切りすてた数。「何倍以上・何倍より小さい」に直す</td></tr>
+  <tr><td>2</td><td>5色で国旗をぬり分ける（場合の数）</td><td>A 8+8 / B 9</td><td>「隣り合う部分には同じ色をぬらない」→ 隣り合わない組を先に書き出す</td></tr>
+  <tr><td>3</td><td>転がした容器の水（正六角柱・L字の柱・相似）</td><td>A 8+8 / C 9</td><td>柱を転がすだけ → 真横から見た面の面積で考える。水面は床と平行</td></tr></table>
+  <p>取り方: <b>Aの7問（57点）を先に確実に</b>。大問4のA（16点）と合わせて73点。受験者平均は64.0点、合格者平均は78.3点。Bの2(3)は「隣り合わない組が2組だけ」と見えたら手を付ける。Cの3(3)は最後に回す。考え方を書く問い（1(3)・2(2)・2(3)・3(3)）は、式と理由を1行ずつ残す。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> ＋で8、−で2になる2つの整数 <span class="type">A・8点｜和差算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>＋を押すと計算結果が8</b>」「<b>−を押すと計算結果が2</b>」。「和が8、差が2」に直して書く → <b>線分図を2本</b>描けば、小さい数から決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>和差算。和から差を引くと、小さい数2つ分になる。たとえば和が10で差が4なら、10−4＝6 が小さい数2つ分。小さい数は3、大きい数は7。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>線分図を2本描く。大きい数は、小さい数より2だけ長い。
+<svg xmlns="http://www.w3.org/2000/svg" id="q1_1_fig" viewBox="0 0 370 135" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <text x="8" y="44">大きい数</text>
+  <text x="8" y="89">小さい数</text>
+  <line x1="80" y1="40" x2="260" y2="40" stroke="#222" stroke-width="2"/>
+  <line x1="80" y1="34" x2="80" y2="46" stroke="#222" stroke-width="1.5"/>
+  <line x1="260" y1="34" x2="260" y2="46" stroke="#222" stroke-width="1.5"/>
+  <line x1="80" y1="85" x2="190" y2="85" stroke="#222" stroke-width="2"/>
+  <line x1="80" y1="79" x2="80" y2="91" stroke="#222" stroke-width="1.5"/>
+  <line x1="190" y1="79" x2="190" y2="91" stroke="#222" stroke-width="1.5"/>
+  <line x1="190" y1="85" x2="260" y2="85" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="260" y1="46" x2="260" y2="91" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="225" y="78" text-anchor="middle" fill="#1565c0">差 2</text>
+  <path d="M 272 40 L 282 40 L 282 85 L 272 85" fill="none" stroke="#222" stroke-width="1.2"/>
+  <text x="290" y="67">合わせて 8</text>
+  <text x="80" y="122" fill="#d32f2f">8−2＝6 が、小さい数2つ分</text>
+</svg></li>
+    <li>和の8から、はみ出した2を引く。8−2＝6。これが<b>小さい数2つ分</b>。</li>
+    <li>小さい数は 6÷2＝3。大きい数は 3＋2＝5。</li>
+    <li>たしかめ。5＋3＝8。5−3＝2。合っている。</li>
+    <li>落としやすい所: 「2つのカードに書かれていた整数をそれぞれ」だから、3と5の両方を書く。</li>
+  </ol>
+  <div class="ans">答え：3・5</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 3といっしょに入れて÷で5になる整数 <span class="type">A・8点｜商の範囲（あまりのあるわり算）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>÷を押すと計算結果が5</b>」と、箱の説明の「<b>商(整数)</b>」。商は「あまりを切りすてた数」に直して書く → 3でわって商が5になる数を、<b>15から順にならべる</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3でわった商が5になる数は、3×5＝15 以上で、3×6＝18 より小さい。たとえば 17÷3＝5あまり2 だから、商は5。18÷3 は6になる。</li>
+    <li>この箱の÷は「大きい整数を小さい整数でわったときの商(整数)」。ある整数が3より小さいときは、3をその数でわることになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ある整数が3より大きいとき。3でわった商を、表にならべる。
+<table>
+<tr><th>ある整数</th><td>14</td><td><b>15</b></td><td><b>16</b></td><td><b>17</b></td><td>18</td></tr>
+<tr><th>÷3</th><td>4あまり2</td><td>5</td><td>5あまり1</td><td>5あまり2</td><td>6</td></tr>
+<tr><th>箱に出る数</th><td>4</td><td><b>5</b></td><td><b>5</b></td><td><b>5</b></td><td>6</td></tr>
+</table>
+    商が6になったら終わり。5になるのは <b>15・16・17</b> の3つ。</li>
+    <li>ある整数が3より小さいとき。考えられるのは1と2だけ。3÷1＝3。3÷2＝1あまり1。箱に出る数は3と1で、5にならない。</li>
+    <li>合わせて3通り。</li>
+    <li>落としやすい所: わり切れる15だけを答えて「1通り」にしてしまう。あまりが出る16と17も、箱には5と出る。</li>
+  </ol>
+  <div class="ans">答え：3通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> ＋で2021、÷で13になる2つの整数の組 <span class="type">A・9点｜商の範囲と和（倍数の見当）・記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>＋を押すと計算結果が2021</b>」「<b>÷を押すと計算結果が13</b>」。商13は「大きい数は小さい数の13倍以上で、14倍より小さい」に直して書く → <b>和の2021は、小さい数の14倍以上で15倍より小さい</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>商が13になるのは、わられる数が、わる数の13倍以上で14倍より小さいとき。わる数が10なら、130から139まで。140÷10 は14になる。</li>
+    <li>小さい数を①とする。大きい数は⑬以上で、⑭より小さい。2つをたすと、⑭以上で、⑮より小さい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小さい数を①とおく。大きい数は⑬以上で、⑭より小さい。</li>
+    <li>2つをたす。和は ⑬＋①＝⑭ 以上で、⑭＋①＝⑮ より小さい。この和が2021。</li>
+    <li>⑭は2021以下。2021÷14＝144.3… だから、①は<b>144まで</b>。</li>
+    <li>⑮は2021より大きい。2021÷15＝134.7… だから、①は<b>135から</b>。</li>
+    <li>両はしを、実際にわってたしかめる。
+<table>
+<tr><th>小さい数</th><td>134</td><td><b>135</b></td><td>…</td><td><b>144</b></td><td>145</td></tr>
+<tr><th>大きい数（2021−小さい数）</th><td>1887</td><td>1886</td><td>…</td><td>1877</td><td>1876</td></tr>
+<tr><th>大÷小</th><td>14あまり11</td><td>13あまり131</td><td>…</td><td>13あまり5</td><td>12あまり136</td></tr>
+<tr><th>箱に出る数</th><td>14</td><td><b>13</b></td><td>13</td><td><b>13</b></td><td>12</td></tr>
+</table></li>
+    <li>小さい数は135から144まで。144−135＋1＝10（通り）。小さい数が決まれば、大きい数は1つに決まる。</li>
+    <li>落としやすい所: 144−135＝9 で止めてしまう。両はしの135も144も数えるから、1をたす。考え方を書く問い。「和は⑭以上で、⑮より小さい」と2つのわり算を書く。</li>
+  </ol>
+  <div class="ans">答え：10通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 丸とまわりの2つの部分をぬる（図1） <span class="type">A・8点｜場合の数（ぬり分け・積の法則）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>隣り合う部分には同じ色をぬらない</b>」と「<b>2つの部分</b>」。丸とまわりは隣り合う → 図に「丸5通り・まわり4通り」と置く → <b>かけ算</b>で決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>順にぬるときは、通り数をかける。丸が赤のとき、まわりは青・黄・白・緑の4通り。丸の色は5通りあるから、4通りが5回分。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図1に、ぬる順と通り数を書きこむ。
+<svg xmlns="http://www.w3.org/2000/svg" id="q2_1_fig" viewBox="0 0 345 150" style="max-width:345px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <rect x="20" y="15" width="180" height="120" fill="#fff" stroke="#222" stroke-width="1.5"/>
+  <circle cx="110" cy="75" r="36" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+  <text x="110" y="80" text-anchor="middle">ア</text>
+  <text x="34" y="36">イ</text>
+  <text x="214" y="62">ア（丸）：5通り</text>
+  <text x="214" y="88" fill="#d32f2f">イ：ア以外の4通り</text>
+</svg></li>
+    <li>丸（ア）は5色のどれでもよい。5通り。</li>
+    <li>まわり（イ）は、アに使った色以外。4通り。</li>
+    <li><b>5×4＝20</b>（種類）。</li>
+    <li>落としやすい所: 「赤い丸に白」と「白い丸に赤」は別の旗。20を2でわらない。</li>
+  </ol>
+  <div class="ans">答え：20種類</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 横3段の旗をぬる（図2） <span class="type">A・8点｜場合の数（ぬり分け）・記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>隣り合う部分には同じ色をぬらない</b>」と「<b>用意した色はすべて使用しなくてもよい</b>」。上の段と下の段は隣り合わない →「<b>上と下は同じ色でもよい</b>」に直して図に置く → 5×4×4。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>隣り合うのは「上とまん中」「まん中と下」の2組だけ。上と下はくっついていないから、同じ色を使える。</li>
+    <li>問題の例のオーストリアの旗は、上の段と下の段が同じ色（この紙面では同じこさ）。同じ色を2か所に使う旗もある、という合図になっている。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図2に、上から順に通り数を書きこむ。
+<svg xmlns="http://www.w3.org/2000/svg" id="q2_2_fig" viewBox="0 0 345 150" style="max-width:345px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <rect x="20" y="15" width="180" height="120" fill="#fff" stroke="#222" stroke-width="1.5"/>
+  <rect x="20" y="95" width="180" height="40" fill="#ffe0b2" stroke="none"/>
+  <rect x="20" y="15" width="180" height="120" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="20" y1="55" x2="200" y2="55" stroke="#222" stroke-width="1.5"/>
+  <line x1="20" y1="95" x2="200" y2="95" stroke="#222" stroke-width="1.5"/>
+  <text x="110" y="40" text-anchor="middle">ア</text>
+  <text x="110" y="80" text-anchor="middle">イ</text>
+  <text x="110" y="120" text-anchor="middle">ウ</text>
+  <text x="212" y="40">ア：5通り</text>
+  <text x="212" y="80">イ：ア以外の4通り</text>
+  <text x="212" y="114" fill="#d32f2f">ウ：イ以外の4通り</text>
+  <text x="212" y="132" fill="#d32f2f">（アと同じ色も○）</text>
+</svg></li>
+    <li>上（ア）は5通り。まん中（イ）は、ア以外の4通り。</li>
+    <li>下（ウ）は、イ以外の<b>4通り</b>。アと同じ色も使える。</li>
+    <li>5×4×4＝80（種類）。</li>
+    <li>落としやすい所: 下を「残りの3通り」にして 5×4×3＝60 としてしまう。考え方を書く問い。「下は上と同じ色でもよい」と1行書く。</li>
+  </ol>
+  <div class="ans">答え：80種類</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 丸と4つの部分の旗をぬる（図3） <span class="type">B・9点｜場合の数（使う色の数で場合分け）・記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>5つの部分</b>」と「<b>隣り合う部分には同じ色をぬらない</b>」。図3に、隣り合わない組を書き出す → <b>上と下、左と右の2組だけ</b>。これが見えたら手を付ける。同じ色にする組の数（0組・1組・2組）で分ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>まん中の丸は、ほかの4つ全部と隣り合う。丸の色は、ほかのどこにも使えない。</li>
+    <li>同じ色にできるのは、くっついていない部分どうしだけ。同じ色の組が1組できるごとに、使う色が1色へる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図3の5つの部分に名前をつける。丸がア、上がイ、左がウ、下がエ、右がオ。隣り合わない組に同じ色をつけておく。
+<svg xmlns="http://www.w3.org/2000/svg" id="q2_3_fig" viewBox="0 0 270 205" style="max-width:300px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <rect x="20" y="15" width="200" height="45" fill="#dbe9ff"/>
+  <rect x="20" y="105" width="200" height="45" fill="#dbe9ff"/>
+  <rect x="20" y="60" width="200" height="45" fill="#ffe0b2"/>
+  <line x1="20" y1="60" x2="220" y2="60" stroke="#222" stroke-width="1.5"/>
+  <line x1="20" y1="105" x2="220" y2="105" stroke="#222" stroke-width="1.5"/>
+  <rect x="20" y="15" width="200" height="135" fill="none" stroke="#222" stroke-width="1.5"/>
+  <circle cx="120" cy="82.5" r="36" fill="#fff" stroke="#222" stroke-width="1.5"/>
+  <text x="120" y="87" text-anchor="middle">ア</text>
+  <text x="42" y="42" text-anchor="middle">イ</text>
+  <text x="50" y="87" text-anchor="middle">ウ</text>
+  <text x="42" y="133" text-anchor="middle">エ</text>
+  <text x="190" y="87" text-anchor="middle">オ</text>
+  <text x="20" y="172" fill="#d32f2f">同じ色にできる組（隣り合わない）</text>
+  <text x="20" y="192">イとエ（上と下）／ウとオ（左と右）</text>
+</svg></li>
+    <li>使う色の数で3つに分けて、表にする。
+<table>
+<tr><th>使う色</th><th>同じ色にする組</th><th>式</th><th>種類</th></tr>
+<tr><td>5色</td><td>なし</td><td>5×4×3×2×1</td><td>120</td></tr>
+<tr><td>4色</td><td>イとエだけ／ウとオだけ</td><td>5×4×3×2 が2回</td><td><b>240</b></td></tr>
+<tr><td>3色</td><td>イとエ、ウとオの両方</td><td>5×4×3</td><td>60</td></tr>
+</table>
+    2色ではぬれない。丸で1色、上下で1色、左右で1色がいる。ここで終わり。</li>
+    <li>5色のとき。5つとも色がちがう。ア→イ→ウ→エ→オの順に 5×4×3×2×1＝120。</li>
+    <li>4色のとき。イとエを同じ色にすると、ぬる場所は「ア・イとエ・ウ・オ」の4つ。5×4×3×2＝120。ウとオを同じ色にするときも120。合わせて 120×2＝240。</li>
+    <li>3色のとき。ぬる場所は「ア・イとエ・ウとオ」の3つ。5×4×3＝60。</li>
+    <li>たす。<b>120＋240＋60＝420</b>（種類）。</li>
+    <li>別の見方。ア→イ→エ→ウ→オの順にぬる。エがイと同じ色なら 5×4×1×3×3＝180。エがイとちがう色なら 5×4×3×2×2＝240。合わせて420で、同じになる。</li>
+  </ol>
+  <div class="ans">答え：420種類</div>
+  <div class="tip">コツ：ぬり分けは、式を書く前に「隣り合わない組」を図に書き出す。同じ色にできる場所が分かれば、場合分けの数が決まる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 正六角柱の水（水面の高さが1/4） <span class="type">A・8点｜正六角形の分割・面積の比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>正六角柱</b>」と「<b>水面の高さは容器の高さの1/4</b>」。奥行きはどこも同じ →「水の量の割合」は「真横から見た面積の割合」に直して書く → 正六角形を<b>小さい正三角形24個</b>に分けて数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>柱の形の体積は、底面積×高さ。図2の正六角形を底面と見ると、奥行きが高さになる。奥行きが同じなら、体積の比は面積の比と同じ。</li>
+    <li>正六角形は、合同な正三角形6個に分けられる。正三角形は、辺のまん中どうしを結ぶと、小さい正三角形4個に分かれる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図2の正六角形に、中心を通る線を3本引く。正三角形が6個できる。</li>
+    <li>中心の高さは、容器の高さの1/2。水面は1/4だから、そのちょうど半分。水面は、下の正三角形の辺のまん中を通る。</li>
+    <li>水面より下を、小さい正三角形に分ける。まん中の正三角形から3個（2・3・4）。左どなりと右どなりの正三角形のかどから1個ずつ（1と5）。
+<svg xmlns="http://www.w3.org/2000/svg" id="q3_1_fig" viewBox="0 0 370 262" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <polygon points="75,168.3 225,168.3 200,211.6 100,211.6" fill="#dbe9ff"/>
+  <line x1="100" y1="38.4" x2="200" y2="211.6" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="200" y1="38.4" x2="100" y2="211.6" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="50" y1="125" x2="250" y2="125" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="125" y1="168.3" x2="150" y2="211.6" stroke="#d32f2f" stroke-width="1.2"/>
+  <line x1="175" y1="168.3" x2="150" y2="211.6" stroke="#d32f2f" stroke-width="1.2"/>
+  <line x1="100" y1="211.6" x2="125" y2="168.3" stroke="#d32f2f" stroke-width="1.2"/>
+  <line x1="200" y1="211.6" x2="175" y2="168.3" stroke="#d32f2f" stroke-width="1.2"/>
+  <line x1="75" y1="168.3" x2="225" y2="168.3" stroke="#d32f2f" stroke-width="2"/>
+  <polygon points="100,38.4 200,38.4 250,125 200,211.6 100,211.6 50,125" fill="none" stroke="#222" stroke-width="1.8"/>
+  <circle cx="150" cy="125" r="2.5" fill="#222"/>
+  <text x="100" y="188" text-anchor="middle" fill="#d32f2f" font-size="12">1</text>
+  <text x="125" y="204" text-anchor="middle" fill="#d32f2f" font-size="12">2</text>
+  <text x="150" y="188" text-anchor="middle" fill="#d32f2f" font-size="12">3</text>
+  <text x="175" y="204" text-anchor="middle" fill="#d32f2f" font-size="12">4</text>
+  <text x="200" y="188" text-anchor="middle" fill="#d32f2f" font-size="12">5</text>
+  <text x="258" y="121">中心（高さ1/2）</text>
+  <text x="234" y="173" fill="#d32f2f">水面（高さ1/4）</text>
+  <text x="185" y="252" text-anchor="middle">水＝小さい正三角形5個／全体＝4×6＝24個</text>
+</svg></li>
+    <li>大きい正三角形1個は、小さい正三角形4個分。正六角形は 4×6＝24（個分）。</li>
+    <li>水の部分を数える。<b>小さい正三角形5個分</b>。水の量は容積の 5/24倍。</li>
+    <li>落としやすい所: 高さが1/4だから水も1/4、としてしまう。正六角形は下ほど幅がせまい。答えは1/4（＝6/24）より少し小さくなる。</li>
+  </ol>
+  <div class="ans">答え：5/24倍</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> L字の柱を転がしたときの水の量（図3・図4） <span class="type">A・8点｜水面は床と平行・平行四辺形と相似</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>水面は図の頂点A，頂点Cを含んでいます</b>」と、図3の「<b>70cm・60cm・40cm・20cm</b>」。図4に AB＝70−40＝30、AF＝60−20＝40、BC＝20 と直して書きこむ → 水面は床FBと平行だから、平行四辺形と相似で面積が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>水面はいつも床と平行。図4の床は、FとBを通る直線。</li>
+    <li>向かい合う辺が2組とも平行な四角形は、平行四辺形。向かい合う辺の長さは同じになる。</li>
+    <li>形が同じで辺の長さが2：1の三角形は、面積が 2×2：1×1＝4：1。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図3から長さを出す。AB＝70−40＝30cm。AF＝60−20＝40cm。BC＝20cm。図4に書きこむ。</li>
+    <li>左の水面がEFと交わる点をG、右の水面がABと交わる点をHとする。
+<svg xmlns="http://www.w3.org/2000/svg" id="q3_2_fig" viewBox="0 0 430 348" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <polygon points="48,204 120,300 248,204" fill="#dbe9ff"/>
+  <polygon points="284,252 320,300 384,252" fill="#dbe9ff"/>
+  <line x1="10" y1="300" x2="420" y2="300" stroke="#222" stroke-width="1.2"/>
+  <polygon points="24,172 216,28 384,252 320,300 248,204 120,300" fill="none" stroke="#222" stroke-width="1.8"/>
+  <line x1="48" y1="204" x2="248" y2="204" stroke="#1565c0" stroke-width="1.8"/>
+  <line x1="284" y1="252" x2="384" y2="252" stroke="#1565c0" stroke-width="1.8"/>
+  <line x1="48" y1="204" x2="120" y2="300" stroke="#d32f2f" stroke-width="2.5"/>
+  <path d="M 114 292 L 122 286 L 128 294" fill="none" stroke="#222" stroke-width="1"/>
+  <path d="M 314 292 L 322 286 L 328 294" fill="none" stroke="#222" stroke-width="1"/>
+  <text x="10" y="172">E</text>
+  <text x="216" y="20" text-anchor="middle">D</text>
+  <text x="392" y="257">C</text>
+  <text x="120" y="318" text-anchor="middle">F</text>
+  <text x="320" y="318" text-anchor="middle">B</text>
+  <text x="250" y="196" text-anchor="middle">A</text>
+  <text x="30" y="209" fill="#d32f2f">G</text>
+  <text x="287" y="246" fill="#d32f2f">H</text>
+  <text x="76" y="268" text-anchor="end" fill="#d32f2f">30cm</text>
+  <text x="174" y="272">40cm</text>
+  <text x="278" y="227">AB＝30cm</text>
+  <text x="358" y="292">20cm</text>
+  <text x="134" y="234" text-anchor="middle" fill="#d32f2f">600cm²</text>
+  <text x="330" y="270" text-anchor="middle" fill="#d32f2f" font-size="11">150cm²</text>
+  <text x="215" y="340" text-anchor="middle" fill="#1565c0">青い線が水面。床FBと平行</text>
+</svg></li>
+    <li>四角形GFBAを見る。GAとFBは平行（水面と床）。GFとABも平行（どちらもAFと直角）。平行四辺形だから、<b>GF＝AB＝30cm</b>。</li>
+    <li>三角形GFAは、角Fが直角。面積は 40×30÷2＝600cm²。</li>
+    <li>三角形HBCは、三角形GFAと形が同じ（3つの辺がそれぞれ平行）。BC：FA＝20：40＝1：2。面積は 600×1/4＝150cm²。</li>
+    <li>水の面は 600＋150＝<b>750cm²</b>。奥行きは100cm。750×100＝75000cm³。</li>
+    <li>落としやすい所: 左と右で水面の高さがちがう。Aが山になって、水は2つに分かれている。左はAの高さ、右はCの高さで別々に考える。</li>
+  </ol>
+  <div class="ans">答え：75000cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 3通りに転がした容器の辺の比 AF：BC（図5・図6） <span class="type">C・9点｜等しい面積の台形・相似・記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>①の高さと③の高さの比が1：3</b>」。AB＝1、EF＝3 に直して図5の面に置く → 3つの水の形を1つの図に重ねると、<b>面積の同じ台形と平行四辺形</b>が3つ見える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>面積が同じ台形（平行四辺形もふくむ）では、「上底＋下底」の比は、高さの比の逆になる。高さが3と4なら、「上底＋下底」は4と3。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>水の形を1つの図に重ねる。①は台形ABCG、②は平行四辺形EHCD、③は台形EFGD。水の量は同じだから、3つの面積は同じ。
+<svg xmlns="http://www.w3.org/2000/svg" id="q3_3_fig" viewBox="0 0 390 286" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <polygon points="25,165 25,205 345.7,205 328.3,165" fill="#dbe9ff"/>
+  <polygon points="198.3,45 198.3,165 328.3,165 276.3,45" fill="#ffe0b2"/>
+  <line x1="198.3" y1="165" x2="198.3" y2="205" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="198.3" y1="165" x2="328.3" y2="165" stroke="#222" stroke-width="1"/>
+  <polygon points="25,165 25,205 345.7,205 276.3,45 198.3,45 198.3,165" fill="none" stroke="#222" stroke-width="1.8"/>
+  <polygon points="198.3,45 267.7,205 345.7,205 276.3,45" fill="none" stroke="#d32f2f" stroke-width="2.2"/>
+  <text x="14" y="160" text-anchor="middle">A</text>
+  <text x="14" y="220" text-anchor="middle">B</text>
+  <text x="354" y="220" text-anchor="middle">C</text>
+  <text x="284" y="40" text-anchor="middle">D</text>
+  <text x="190" y="40" text-anchor="middle">E</text>
+  <text x="189" y="160" text-anchor="middle">F</text>
+  <text x="340" y="162" text-anchor="middle">G</text>
+  <text x="259" y="160" text-anchor="middle">I</text>
+  <text x="198" y="222" text-anchor="middle">J</text>
+  <text x="268" y="222" text-anchor="middle">H</text>
+  <text x="237" y="38" text-anchor="middle">3</text>
+  <text x="226" y="160" text-anchor="middle" fill="#d32f2f">2</text>
+  <text x="296" y="160" text-anchor="middle">3</text>
+  <text x="232" y="199" text-anchor="middle">8/3</text>
+  <text x="308" y="199" text-anchor="middle">3</text>
+  <text x="110" y="158" text-anchor="middle" fill="#d32f2f">20/3</text>
+  <text x="110" y="199" text-anchor="middle">20/3</text>
+  <text x="11" y="190" text-anchor="middle" fill="#1565c0">1</text>
+  <text x="188" y="110" text-anchor="middle" fill="#1565c0">3</text>
+  <text x="20" y="244" font-size="12" fill="#1565c0">青い数字＝高さ（AB＝1、EF＝3）</text>
+  <text x="20" y="261" font-size="12">ほかの数字＝横の長さ（ED＝3とおく）</text>
+  <text x="20" y="278" font-size="12" fill="#d32f2f">赤いわく＝②の平行四辺形EHCD</text>
+</svg></li>
+    <li>③と②をくらべる。高さは3と4。ED＝3 とおくと、②の「上底＋下底」は 3＋3＝6。③は 6×4/3＝8。FG＝8−3＝5 だから、<b>FI＝5−3＝2</b>。三角形EFIと三角形EJHは形が同じで、3：4。JH＝2×4/3＝8/3。</li>
+    <li>①と②をくらべる。高さは1と4。AG＋BC＝6×4＝24。ここから FI・IG・JH・HC を引く。AF＋BJ＝24−（2＋3＋8/3＋3）＝40/3。AFとBJは同じ長さだから、AF＝20/3。BC＝20/3＋8/3＋3＝37/3。AF：BC＝<b>20：37</b>。</li>
+  </ol>
+  <div class="ans">答え：20：37</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜3</span> まとめ</h2>
+  <ul>
+    <li>「商(整数)」は、あまりを切りすてた数。「何倍以上で、何倍より小さい」に直すと、当てはまる数を両はしから数えられる。</li>
+    <li>ぬり分けは、式の前に「隣り合わない組」を図に書き出す。同じ色にできるのは、その組だけ。</li>
+    <li>柱を転がす水の問題は、真横から見た面の面積で考える。水面は床と平行。長さは先に図に書きこむ。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4"><h1 class="dtitle">大問4（●を線で結ぶルール・引ける線の最大本数）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4</span> この回の全体像（担当の大問） <span class="type">A 16点／B 9点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>4 (1)</td><td>●を線で結ぶルール①〜③に合う図を選ぶ</td><td>A 8</td><td>ルールを1つずつ図に当てる（交わり → ●の方向の数 → 線1本ごとの途中の●）</td></tr>
+  <tr><td>4 (2)</td><td>5個の●に引ける線の最大本数と、その引き方</td><td>A 8</td><td>線1本＝4方向。3×5＝15方向を4で割る</td></tr>
+  <tr><td>4 (3)</td><td>2021個の●に引ける線の最大本数（考え方も書く）</td><td>B 9</td><td>(2)と同じ割り算。3×2021 を4で割る</td></tr>
+  </table>
+  <p>取り方: <b>(1)(2)のA 16点を先に確実に</b>。(2)は本数と図の両方が合って8点になる（解答用紙の配点に「(2)は完答」とある）。(3)はB。(2)で「線1本＝4方向」に気づけていれば、式2つで終わる。手を付ける価値がある。受験者平均 64.0・合格者平均 78.3。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> ルール通りに線が引かれている図 <span class="type">A・8点｜ルールの読み取り（記号選択）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品はルール①「<b>途中で1個の●を通過する</b>」とルール③「<b>3方向まで</b>」に丸。ア〜エに、ルール②→③→①の順で1つずつ当てる → 合わない所が1つでもある図を消すと、<b>残る1つ</b>が答え。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1本の線は「はしの●→途中の●→はしの●」の順に進む。途中の●は1個だけ。3個の●は同じでもよい。だから、輪の形の線もある（ルール①の下の例）。</li>
+    <li>●から生えている方向の数え方。線のはしが来ている●は1方向。線が通過する●は2方向。たとえば、1本が通過して、別の1本のはしが来ている●は 2＋1＝3方向。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>実物の入試問題では、線はカラー印刷（問題の最初の編集部注）。この紙面では、色のちがいが線のこさのちがいに見える。同じこさの所を1本の線として見る。下の図は、それを実線・破線・点線でかき直したもの。
+<svg id="q4_1_fig1" viewBox="0 0 360 358" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><text x="14" y="16" font-size="12" fill="#222" text-anchor="start" font-weight="bold">ア</text><g transform="translate(10,22)"><path d="M15,40 L95,28" fill="none" stroke="#222" stroke-width="2"/><path d="M95,28 C150,5 160,108 122,110 C100,111 90,92 90,75.3 C90,55 90,40 95,28" fill="none" stroke="#222" stroke-width="2"/><path d="M112,72 L32,84" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 3"/><path d="M32,84 C8,66 0,112 20,116 C40,120 44,98 32,84" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 3"/><circle cx="15" cy="40" r="4.5" fill="#222"/><circle cx="95" cy="28" r="4.5" fill="#222"/><circle cx="112" cy="72" r="4.5" fill="#222"/><circle cx="32" cy="84" r="4.5" fill="#222"/><circle cx="90" cy="75.3" r="7" fill="none" stroke="#d32f2f" stroke-width="1.6"/><text x="52" y="64" font-size="9" fill="#d32f2f" text-anchor="middle" font-weight="normal">ここで交わる</text></g><text x="90" y="159" font-size="10" fill="#d32f2f" text-anchor="middle" font-weight="normal">× ルール②に合わない</text><text x="194" y="16" font-size="12" fill="#222" text-anchor="start" font-weight="bold">イ</text><g transform="translate(190,22)"><path d="M100,26 L18,48 Q44,66 46,98" fill="none" stroke="#222" stroke-width="2"/><path d="M18,48 Q4,92 46,98 L124,74" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 3"/><path d="M100,26 L124,74 C154,76 144,20 100,26" fill="none" stroke="#2e7d32" stroke-width="2.6" stroke-dasharray="0.1 4.2" stroke-linecap="round"/><circle cx="18" cy="48" r="4.5" fill="#222"/><circle cx="100" cy="26" r="4.5" fill="#222"/><circle cx="124" cy="74" r="4.5" fill="#222"/><circle cx="46" cy="98" r="4.5" fill="#222"/></g><text x="270" y="159" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">○ ルールどおり（線は3本）</text><text x="14" y="186" font-size="12" fill="#222" text-anchor="start" font-weight="bold">ウ</text><g transform="translate(10,192)"><path d="M100,26 L18,48 L46,98 L124,74" fill="none" stroke="#222" stroke-width="2"/><path d="M100,26 L124,74 C154,76 144,20 100,26" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 3"/><circle cx="18" cy="48" r="4.5" fill="#222"/><circle cx="100" cy="26" r="4.5" fill="#222"/><circle cx="124" cy="74" r="4.5" fill="#222"/><circle cx="46" cy="98" r="4.5" fill="#222"/><circle cx="18" cy="48" r="8" fill="none" stroke="#d32f2f" stroke-width="1.6"/><circle cx="46" cy="98" r="8" fill="none" stroke="#d32f2f" stroke-width="1.6"/><text x="73" y="66" font-size="9" fill="#d32f2f" text-anchor="middle" font-weight="normal">途中に●が2個</text></g><text x="90" y="329" font-size="10" fill="#d32f2f" text-anchor="middle" font-weight="normal">× ルール①に合わない</text><text x="194" y="186" font-size="12" fill="#222" text-anchor="start" font-weight="bold">エ</text><g transform="translate(190,192)"><circle cx="28" cy="26" r="16" fill="none" stroke="#222" stroke-width="2"/><path d="M28,42 L52,96" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 3"/><circle cx="68" cy="103" r="17.46" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 3"/><path d="M126,82 C84,62 92,12 116,14 C146,16 142,62 126,82" fill="none" stroke="#2e7d32" stroke-width="2.6" stroke-dasharray="0.1 4.2" stroke-linecap="round"/><path d="M126,82 C112,98 116,120 128,120 C141,120 140,98 126,82" fill="none" stroke="#2e7d32" stroke-width="2.6" stroke-dasharray="0.1 4.2" stroke-linecap="round"/><circle cx="28" cy="42" r="4.5" fill="#222"/><circle cx="52" cy="96" r="4.5" fill="#222"/><circle cx="112" cy="38" r="4.5" fill="#222"/><circle cx="126" cy="82" r="4.5" fill="#222"/><circle cx="126" cy="82" r="8" fill="none" stroke="#d32f2f" stroke-width="1.6"/><text x="138" y="86" font-size="9" fill="#d32f2f" text-anchor="start" font-weight="normal">4方向</text></g><text x="270" y="329" font-size="10" fill="#d32f2f" text-anchor="middle" font-weight="normal">× ルール③に合わない</text><text x="180" y="351" font-size="9" fill="#1565c0" text-anchor="middle" font-weight="normal">線の種類（実線・破線・点線）が同じ＝1本の線。赤い丸＝ルールに合わない所</text></svg></li>
+    <li>ルール②から見る。●のない所で線が交わっている図をさがす。アは、輪の中の●から左下の●へ行く線が、大きな輪を横切っている。アは消える。</li>
+    <li>ルール③を見る。●ごとに、生えている方向を数える。エの右側には、2つの輪のつなぎ目になっている●がある。輪1つで2方向だから、2＋2＝<b>4方向</b>。エは消える。</li>
+    <li>ルール①を見る。線を1本ずつ指でなぞって、途中の●を数える。ウの長い線は、右上の●から、左の●と下の●を通って、右下の●で終わる。途中の●が<b>2個</b>ある。ウは消える。</li>
+    <li>残ったイをたしかめる。線は3本。どの線も途中の●は1個。4個の●は、どれも3方向。●のない所での交わりもない。</li>
+    <li>落としやすい所: ルール③だけ見て終わること。ウは、どの●も3方向以下。ルール③では消えない。ルール①は、線を1本ずつなぞって初めて見つかる。</li>
+  </ol>
+  <div class="ans">答え：イ</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 5個の●に引ける線の最大本数と引き方 <span class="type">A・8点｜条件整理（方向の数を数える）・作図</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3方向まで</b>」と「<b>本数が最大となるように</b>」。線1本を「4方向を使う」に直して書く → 5個の●で使えるのは 3×5＝15方向だから、<b>最大3本</b>と先に決まる。あとは3本を実際に引く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>線1本が使う方向は、いつも4。両はしで1方向ずつ、途中の●で2方向。1＋2＋1＝4。輪の形の線でも4になる。</li>
+    <li>「最大」を答えるときは、2つのことをする。1つ目は「これより多くは引けない」を数で言う。2つ目は、その本数を実際に引いて見せる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ルール①の例の線に、●ごとの方向の数を書きこむ。どの形も、たすと4になる。
+<svg id="q4_2_fig1" viewBox="0 0 360 112" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><path d="M20,36 L110,36" fill="none" stroke="#222" stroke-width="2"/><circle cx="20" cy="36" r="4.5" fill="#222"/><circle cx="65" cy="36" r="4.5" fill="#222"/><circle cx="110" cy="36" r="4.5" fill="#222"/><text x="20" y="58" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">1</text><text x="65" y="58" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">2</text><text x="110" y="58" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">1</text><text x="65" y="78" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">1＋2＋1＝4</text><ellipse cx="185" cy="36" rx="30" ry="18" fill="none" stroke="#222" stroke-width="2"/><circle cx="155" cy="36" r="4.5" fill="#222"/><circle cx="215" cy="36" r="4.5" fill="#222"/><text x="155" y="68" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">2</text><text x="215" y="68" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">2</text><text x="185" y="84" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">2＋2＝4</text><path d="M258,36 L298,36" fill="none" stroke="#222" stroke-width="2"/><ellipse cx="322" cy="36" rx="24" ry="16" fill="none" stroke="#222" stroke-width="2"/><circle cx="258" cy="36" r="4.5" fill="#222"/><circle cx="298" cy="36" r="4.5" fill="#222"/><text x="258" y="58" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">1</text><text x="298" y="60" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">3</text><text x="300" y="84" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">1＋3＝4</text><text x="180" y="106" font-size="9" fill="#1565c0" text-anchor="middle" font-weight="normal">赤い数＝その●から生えている方向の数。どの形でも線1本で4方向</text></svg></li>
+    <li>5個の●で使える方向を数える。1個につき3方向までだから、3×5＝15方向。</li>
+    <li>15方向を、線1本ぶんの4方向ずつに分ける。15÷4＝3 あまり 3。4本引くには 4×4＝16方向がいる。15方向では足りない。だから<b>最大3本</b>。</li>
+    <li>3本を実際に引く。5個の●を五角形のように順に結ぶと引きやすい。1本目は、左の●→左上の●→右上の●。2本目は、右上の●→右下の●→下の●。3本目は、下の●→左の●→右下の●。
+<svg id="q4_2_fig2" viewBox="0 0 360 262" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><path d="M61,127 L92,45 L253,89" fill="none" stroke="#d32f2f" stroke-width="2.6"/><path d="M253,89 L301,170 L113,207" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 3"/><path d="M113,207 L61,127 L301,170" fill="none" stroke="#2e7d32" stroke-width="2.6" stroke-dasharray="0.1 4.2" stroke-linecap="round"/><circle cx="92" cy="45" r="5.5" fill="#222"/><circle cx="253" cy="89" r="5.5" fill="#222"/><circle cx="61" cy="127" r="5.5" fill="#222"/><circle cx="301" cy="170" r="5.5" fill="#222"/><circle cx="113" cy="207" r="5.5" fill="#222"/><text x="165" y="56" font-size="10" fill="#d32f2f" text-anchor="middle" font-weight="normal">1本目</text><text x="213" y="205" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="normal">2本目</text><text x="190" y="140" font-size="10" fill="#2e7d32" text-anchor="middle" font-weight="normal">3本目</text><text x="80" y="34" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">2方向</text><text x="272" y="80" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">2方向</text><text x="30" y="124" font-size="10" fill="#222" text-anchor="middle" font-weight="bold">3方向</text><text x="332" y="176" font-size="10" fill="#222" text-anchor="middle" font-weight="bold">3方向</text><text x="100" y="228" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">2方向</text><text x="180" y="256" font-size="9" fill="#1565c0" text-anchor="middle" font-weight="normal">使った方向は 2＋2＋3＋3＋2＝12。残りは 15−12＝3方向で、4本目には足りない</text></svg></li>
+    <li>たしかめ。どの線も、両はしが●で、途中の●は1個。●ごとの方向は 2・2・3・3・2 で、3をこえていない。線どうしは●のない所で交わっていない。</li>
+    <li>落としやすい所: 本数だけ答えて、図をかかないこと。この問題は本数と図の両方で1問。引き方は1通りではない。ルールに合う3本ならどれでもよい。</li>
+  </ol>
+  <div class="ans">答え：3本／図…（例）解説の図2を参照のこと。（引き方の例は上の図の1本目〜3本目。解答タブの解説の図2にも、別の例が4つある）</div>
+  <div class="tip">コツ：「最大は何本」と聞かれたら、線を引き始める前に「1本で何をいくつ使うか」を数える。先に上限が分かると、3本引けた所で手を止められる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 2021個の●に引ける線の最大本数 <span class="type">B・9点｜条件整理（割り算で上限）・記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2021個の●</b>」と「<b>最大本数</b>」。(2)の「線1本＝4方向」をそのまま使う → 方向の合計 3×2021 を4で割ると決まる。(2)で 15÷4 の式が書けていれば手を付ける。<b>同じ式2つ</b>で終わる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>割り算のあまりは切り捨てる。15÷4＝3 あまり 3 のとき、あまった3方向では線1本（4方向）に足りない。だから3本。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(2)の数え方を表にする。●の数だけ入れかえる。
+<table><tr><th>●の数</th><th>使える方向（●の数×3）</th><th>4方向ずつに分ける</th><th>引ける本数</th></tr>
+<tr><td>5個</td><td>15</td><td>15÷4＝3 あまり 3</td><td>3本</td></tr>
+<tr><td>2021個</td><td>6063</td><td>6063÷4＝1515 あまり 3</td><td><b>1515本</b></td></tr></table></li>
+    <li>3×2021＝6063。6063÷4＝1515 あまり 3。あまりの3方向では、もう1本には足りない。最大は1515本。</li>
+    <li>たしかめ。本当に1515本引けるかを見る。(1)のイは、4個の●に3本引いて、12方向を全部使い切っていた。2021÷4＝505 あまり 1。イの形を505組作ると、3×505＝<b>1515本</b>になる。●は1個あまる。
+<svg id="q4_3_fig1" viewBox="0 0 360 132" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><g transform="translate(4,6) scale(0.72)"><path d="M100,26 L18,48 Q44,66 46,98" fill="none" stroke="#222" stroke-width="2"/><path d="M18,48 Q4,92 46,98 L124,74" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 3"/><path d="M100,26 L124,74 C154,76 144,20 100,26" fill="none" stroke="#2e7d32" stroke-width="2.6" stroke-dasharray="0.1 4.2" stroke-linecap="round"/><circle cx="18" cy="48" r="4.5" fill="#222"/><circle cx="100" cy="26" r="4.5" fill="#222"/><circle cx="124" cy="74" r="4.5" fill="#222"/><circle cx="46" cy="98" r="4.5" fill="#222"/></g><g transform="translate(112,6) scale(0.72)"><path d="M100,26 L18,48 Q44,66 46,98" fill="none" stroke="#222" stroke-width="2"/><path d="M18,48 Q4,92 46,98 L124,74" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 3"/><path d="M100,26 L124,74 C154,76 144,20 100,26" fill="none" stroke="#2e7d32" stroke-width="2.6" stroke-dasharray="0.1 4.2" stroke-linecap="round"/><circle cx="18" cy="48" r="4.5" fill="#222"/><circle cx="100" cy="26" r="4.5" fill="#222"/><circle cx="124" cy="74" r="4.5" fill="#222"/><circle cx="46" cy="98" r="4.5" fill="#222"/></g><text x="248" y="58" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">……</text><circle cx="318" cy="52" r="4" fill="#222"/><text x="318" y="74" font-size="9" fill="#222" text-anchor="middle" font-weight="normal">あまりの●1個</text><text x="56" y="100" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">4個で3本</text><text x="164" y="100" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">4個で3本</text><text x="252" y="100" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">（全部で505組）</text><text x="180" y="124" font-size="9" fill="#1565c0" text-anchor="middle" font-weight="normal">4個の組は12方向を使い切る。505組で 3×505＝1515本</text></svg></li>
+    <li>答案に書くのは次の3行。「●1個から3方向までなので、全部で 3×2021＝6063方向」「線1本は4方向を使う」「6063÷4＝1515 あまり 3 だから 1515本」。</li>
+  </ol>
+  <div class="ans">答え：1515本</div>
+  <div class="tip">コツ：大きい数（2021個）の問題は、小さい数（5個）で作った式の数字を入れかえる。(2)は(3)の練習になっている。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">4</span> まとめ</h2>
+  <ul>
+    <li>ルールがいくつもある問題は、ルールを1つ選んで全部の図に当てる。見つけやすいルール（交わり・方向の数）から先に使う。</li>
+    <li>「最大」は、先に数で上限を出す。1本が使う数（4方向）で、全部の数（●の数×3）を割る。そのあと実際に作る。</li>
+    <li>大きい数の小問は、前の小問の式の数字を入れかえる。</li>
+  </ul>
+</section>
+</div>
