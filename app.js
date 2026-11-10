@@ -505,7 +505,7 @@ function renderDetail() {
       html += `<h3 class="section-head">解いた解答用紙</h3>`;
       html += sub.solvedPages.map((p, i) => `
     <div class="page-item">
-      ${p.date ? `<div class="page-date">${p.date} 追加</div>` : ''}
+      ${p.date || p.note ? `<div class="page-date">${p.note ? p.note + '・' : ''}${p.date ? p.date + ' 追加' : ''}</div>` : ''}
       <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" alt="解いた解答用紙${i + 1}" loading="lazy">
     </div>`).join('');
     }
@@ -514,7 +514,7 @@ function renderDetail() {
       html += `<h3 class="section-head">解答メモ（計算用紙・書き込み）</h3>`;
       html += sub.memoPages.map((p, i) => `
     <div class="page-item">
-      ${p.date ? `<div class="page-date">${p.date} 追加</div>` : ''}
+      ${p.date || p.note ? `<div class="page-date">${p.note ? p.note + '・' : ''}${p.date ? p.date + ' 追加' : ''}</div>` : ''}
       <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" alt="解答メモ${i + 1}" loading="lazy">
     </div>`).join('');
     }
