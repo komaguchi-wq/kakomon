@@ -2626,7 +2626,14 @@
        }
       ]
      },
-     "kaisetsu": "kaisetsu/moshi/2026-09-27_gohan-1/sansu.html"
+     "kaisetsu": "kaisetsu/moshi/2026-09-27_gohan-1/sansu.html",
+     "memoPages": [
+      {
+       "full": "2026-09-27_gohan-1/sansu/memo_2026-09-29_01.jpg",
+       "small": "2026-09-27_gohan-1/sansu/memo_2026-09-29_01_small.jpg",
+       "date": "2026-09-29"
+      }
+     ]
     },
     {
      "id": "shakai",

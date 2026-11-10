@@ -509,6 +509,15 @@ function renderDetail() {
       <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" alt="解いた解答用紙${i + 1}" loading="lazy">
     </div>`).join('');
     }
+    // ★2026-11-10 解答メモ（計算用紙・問題用紙への書き込み）。解いた解答用紙と同じく原本のまま・印刷できる
+    if (sub.memoPages && sub.memoPages.length) {
+      html += `<h3 class="section-head">解答メモ（計算用紙・書き込み）</h3>`;
+      html += sub.memoPages.map((p, i) => `
+    <div class="page-item">
+      ${p.date ? `<div class="page-date">${p.date} 追加</div>` : ''}
+      <img src="${imgUrl(p.small)}" data-full="${imgUrl(p.full)}" alt="解答メモ${i + 1}" loading="lazy">
+    </div>`).join('');
+    }
   }
   stack.innerHTML = html;
   if (state.view === 'kaisetsu') loadKaisetsu();
@@ -657,6 +666,22 @@ function renderPrintButtons() {
     g.innerHTML = `<button class="print-btn" id="pr-e">🖨 解答一覧＋解説（A4縦）</button>`;
     $('#pr-e').addEventListener('click', (e) => printExpl(e.currentTarget));
   }
+  addSolvedPrintButtons(g);
+}
+
+// ★2026-11-10 解いた解答用紙・解答メモの印刷ボタン（どのタブでも、添付があるときだけ出す）
+function addSolvedPrintButtons(g) {
+  const sub = state.subject;
+  const solved = sub.solvedPages || [], memo = sub.memoPages || [];
+  const add = (id, text, pages) => {
+    const b = document.createElement('button');
+    b.className = 'print-btn print-btn-solved'; b.id = id; b.textContent = text;
+    b.addEventListener('click', (e) => printSolved(pages, e.currentTarget));
+    g.appendChild(b);
+  };
+  if (solved.length) add('pr-solved', `🖨 解いた解答用紙（${solved.length}枚）`, solved);
+  if (memo.length) add('pr-memo', `🖨 解答メモ（${memo.length}枚）`, memo);
+  if (solved.length && memo.length) add('pr-solved-memo', '🖨 解答用紙＋メモ', solved.concat(memo));
 }
 
 // ---- 解説タブ（★2026-09-20）----
@@ -1555,6 +1580,46 @@ function printSheets(pages) {
     .map((p) => `<div class="print-page solo"><img src="${imgUrl(p.full)}"></div>`)
     .join('');
   firePrint(container);
+}
+
+// ★2026-11-10 解いた解答用紙・解答メモ: 原本（赤採点・日付入り）をカラーのまま B4縦に1枚ずつ。
+// 横長の用紙は canvas で90°回して縦にそろえる（@page を途中で変えるのは iOS で効かないため・1画像=1ページ方式）
+async function printSolved(pages, btn) {
+  if (!pages || !pages.length) return;
+  const label = btn ? btn.textContent : '';
+  try {
+    setPageStyle('@media print { @page { size: B4 portrait; margin: 8mm; } }');
+    const container = $('#print-container');
+    container.innerHTML = '';
+    for (let i = 0; i < pages.length; i++) {
+      if (btn) btn.textContent = `準備中… ${i + 1}/${pages.length}`;
+      const src = imgUrl(pages[i].full);
+      let url = src;
+      try {
+        const im = await loadImage(src);
+        if (im.naturalWidth > im.naturalHeight) {
+          const c = document.createElement('canvas');
+          c.width = im.naturalHeight; c.height = im.naturalWidth;
+          const ctx = c.getContext('2d');
+          ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+          ctx.translate(c.width, 0); ctx.rotate(Math.PI / 2);
+          ctx.drawImage(im, 0, 0);
+          const u = c.toDataURL('image/jpeg', 0.9);
+          if (u && u.length > 1000) url = u;
+          c.width = 0; c.height = 0;   // iOS の canvas メモリを早めに解放
+        }
+      } catch (e) { console.warn('solved rotate failed, using original', e); }
+      const div = document.createElement('div');
+      div.className = 'print-page solo';
+      const img = document.createElement('img');
+      img.src = url;
+      div.appendChild(img);
+      container.appendChild(div);
+    }
+    await firePrint(container);
+  } finally {
+    if (btn) btn.textContent = label;
+  }
 }
 
 // 学校情報の印刷: 縦長ページはB4横2面付け、横長ページ（landscape:true）は1枚で1面
