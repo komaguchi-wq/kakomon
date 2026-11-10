@@ -1,0 +1,447 @@
+<!-- generated kakomon hiroo/2022-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（逆算・周期・平均・食塩水・平行四辺形の相似・立方体の中の三角すい・カードの整数）</a></li>
+<li><a href="#3-4-5">大問3・4・5（電球のボタンと平方数・和が2022の分数・立方体3つの立体の切断）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（逆算・周期・平均・食塩水・平行四辺形の相似・立方体の中の三角すい・カードの整数）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（大問1・2） <span class="type">A 46点／B 6点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1 (1)〜(3)</td><td>分数の逆算・1〜5のくり返しの和・平均・食塩水の蒸発</td><td>A 5+5+6+6</td><td>右はしの÷からもどす／1組＝5個・和15／平均は合計に直す／食塩の重さは変わらない</td></tr>
+  <tr><td>1 (4)(5)</td><td>平行四辺形の3等分点と五角形の面積・立方体の中の三角すい2つの重なり</td><td>B 6／A 6</td><td>平行→砂時計の相似で G・H はまん中／頂点を1つおきに結ぶ→重なりは正八面体</td></tr>
+  <tr><td>2</td><td>カード 3・4・5・6 で3けたの整数（全部・3の倍数・残りのカードで割り切れる）</td><td>A 6+6+6</td><td>位の□を3つ／各位の和／残りのカードで場合分けの表</td></tr>
+  </table>
+  <p>取り方: <b>Aの8問（46点）を先に確実に</b>。1(4) は「3等分」と「平行」が見えたら砂時計の相似で G・H の位置が決まるので、手を付ける価値がある。1(5) は理由が言えなくても「面の数」だけ答えればよいので、図を2つなぞって形を決める。受験者平均 59.2・合格者平均 72.5。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)①</span> かっこの中に□がある分数の逆算 <span class="type">A・5点｜逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>□</b>」が中かっこの中にあることと、右はしの「<b>÷1 1/3＝2/3</b>」。中かっこ全体を○と書いて、右はしからもどして書く → ○の値が先に決まり、□は最後のわり算1回で出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆算は、計算の順番と反対にもどす。÷のもどしは×、＋のもどしは−。たとえば ○÷2＝3 なら ○＝3×2＝6。</li>
+    <li>帯分数は仮分数にしてから計算する。1 1/3 は 4/3。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>中かっこ全体を○とおく。○÷4/3＝2/3 だから、○＝2/3×4/3＝8/9。</li>
+    <li>小かっこの中を先に数にする。2/3−1/4＝8/12−3/12＝5/12。</li>
+    <li>○の中身は「1/3＋5/12×□＝8/9」。1/3 を右に移す。5/12×□＝8/9−3/9＝5/9。</li>
+    <li>□＝5/9÷5/12＝5/9×12/5＝12/9＝4/3＝1 1/3。
+<pre class="fig">○÷4/3＝2/3        → ○＝8/9
+1/3＋5/12×□＝8/9   → 5/12×□＝5/9
+□＝5/9×12/5＝4/3＝1 1/3</pre></li>
+    <li>たしかめ。5/12×4/3＝5/9。1/3＋5/9＝8/9。8/9÷4/3＝8/9×3/4＝2/3。合っている。</li>
+    <li>落としやすい所: 小かっこの 2/3−1/4 を数にしないまま□にかけようとして止まる。かっこは先に1つの数にする。</li>
+  </ol>
+  <div class="ans">答え：1 1/3</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)②</span> 1〜5のくり返し 111番目までの和 <span class="type">A・5点｜周期</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1から5までの数がくり返し</b>」と「<b>111番目</b>」。1組（1,2,3,4,5）を表に書き、111÷5 の商とあまりに直して書く → 「何組ぶん＋はんぱ何個」で和が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>くり返しの問題は「何個で1組か」と「1組の和」を先に出す。ここでは5個で1組、和は 1＋2＋3＋4＋5＝15。</li>
+    <li>111÷5＝22 あまり1。22組ならんだあと、次の組の1個目まで、という意味になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1組を表に書く。
+<table><tr><th>番目</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+<tr><td>数</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr></table>
+1組の和は 15。</li>
+    <li>111÷5＝22 あまり1。22組と、はんぱが1個。</li>
+    <li>22組の和は 15×22＝330。</li>
+    <li>はんぱの1個は、組の1番目の数＝1。330＋1＝331。</li>
+    <li>落としやすい所: あまりの1を「1をたす」と思いこまず、組の1番目の数を見てたす。この問題は組の1番目がたまたま1。</li>
+  </ol>
+  <div class="ans">答え：331</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 6人の平均と7人の平均からAさんの身長 <span class="type">A・6点｜平均（合計に直す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>6人の身長の平均は142cm</b>」と「<b>7人の身長の平均は144cm</b>」。平均は「合計＝平均×人数」に直して書く → 7人の合計から6人の合計をひいた残りがAさんに決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>合計＝平均×人数。平均142cm が6人なら合計は 142×6＝852cm。</li>
+    <li>人が1人増えて平均が上がるとき、増えた人は平均より高い。差の分を全員にくばったと考えてもよい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>6人の合計を出す。142×6＝852。</li>
+    <li>7人の合計を出す。144×7＝1008。</li>
+    <li>ひき算でAさんが出る。1008−852＝156。
+<pre class="fig">6人 ├────── 852 ──────┤
+7人 ├────── 852 ──────┤ A ┤ ＝1008</pre></li>
+    <li>別の見方。平均が 2cm 上がったので、もとの6人に 2cm ずつくばった分 2×6＝12cm をAさんが出した。144＋12＝156。</li>
+    <li>落としやすい所: 「平均が2cm上がった」から 144＋2＝146 と答えてしまう。くばった相手は6人なので 2×6。</li>
+  </ol>
+  <div class="ans">答え：156cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 水を蒸発させて食塩を加えた食塩水 <span class="type">A・6点｜食塩水（蒸発＋食塩）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2％の食塩水100g</b>」「<b>35gの水を蒸発</b>」「<b>食塩5gを入れて</b>」。食塩の重さと全体の重さの2段の表に直して書く → 蒸発で減るのは水だけ、食塩を入れると両方増える、と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>濃度（％）＝食塩の重さ÷全体の重さ×100。2％の食塩水100g には食塩が 100×0.02＝2g。</li>
+    <li>水を蒸発させても食塩は減らない。食塩を入れると、食塩も全体も同じだけ増える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表を書く。
+<table><tr><th></th><th>はじめ</th><th>水35g蒸発</th><th>食塩5gを入れる</th></tr>
+<tr><td>食塩</td><td>2g</td><td>2g</td><td><b>7g</b></td></tr>
+<tr><td>全体</td><td>100g</td><td>65g</td><td><b>70g</b></td></tr></table></li>
+    <li>はじめの食塩は 100×0.02＝2g。</li>
+    <li>水を35g蒸発させる。食塩は2gのまま、全体は 100−35＝65g。</li>
+    <li>食塩を5g入れる。食塩は 2＋5＝7g、全体は 65＋5＝70g。</li>
+    <li>濃度は 7÷70×100＝10％。</li>
+    <li>落としやすい所: 食塩を入れたとき全体を 70g にし忘れて 7÷65 と計算する。表の「全体」の行も同じだけ増やす。</li>
+  </ol>
+  <div class="ans">答え：10％</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 対角線の3等分点と五角形の面積 <span class="type">B・6点｜平行線の相似・面積比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>対角線BDを3等分する点</b>」と「<b>面積が120cm²</b>」。BE・EF・FD に①①①を図に置く → AD∥BC の砂時計の相似で <b>G・H は辺のまん中</b>と決まり、五角形は △BCD から小さい三角形2つをひく形になる。「3等分」と「平行」がそろえば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>平行な2本の線にはさまれた砂時計の形は相似。向かい合う辺の比が同じになる。AD∥BC なら、△AED と △GEB は ED：EB の比で相似。</li>
+    <li>角を1つ共有する三角形の面積比は、その角をはさむ2辺の比のかけ算。BG が BC の 1/2、BE が BD の 1/3 なら、△BGE は △BCD の 1/2×1/3＝1/6。</li>
+    <li>平行四辺形は対角線で面積が半分になる。120÷2＝60。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>BD に ①①① を書きこむ。ED は②。AD∥BC だから △AED と △GEB は砂時計の相似で、比は ED：EB＝2：1。AD：GB も 2：1（図の四角の数字）なので、BG は AD の半分。AD＝BC だから、G は BC のまん中。
+<svg id="q1_4_fig1" viewBox="0 0 360 232" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><polygon points="100,40 130,140 310,40" fill="#dbe9ff" stroke="none"/><polygon points="145,190 130,140 40,190" fill="#ffe0b2" stroke="none"/><polygon points="100,40 40,190 250,190 310,40" fill="none" stroke="#222" stroke-width="1.5"/><line x1="40" y1="190" x2="310" y2="40" stroke="#222" stroke-width="1.5"/><line x1="100" y1="40" x2="145" y2="190" stroke="#222" stroke-width="1.5"/><line x1="100" y1="40" x2="280" y2="115" stroke="#222" stroke-width="1.5"/><text x="90" y="34" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">A</text><text x="28" y="195" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">B</text><text x="262" y="195" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">C</text><text x="322" y="34" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">D</text><text x="118" y="142" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">E</text><text x="226" y="84" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">F</text><text x="145" y="207" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">G</text><text x="292" y="119" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">H</text><text x="79" y="159" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="normal">①</text><text x="183" y="129" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="normal">①</text><text x="273" y="79" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="normal">①</text><rect x="198.5" y="21.5" width="13" height="13" fill="#fff" stroke="#d32f2f" stroke-width="1"/><text x="205" y="32" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal">2</text><rect x="85.5" y="173.5" width="13" height="13" fill="#fff" stroke="#d32f2f" stroke-width="1"/><text x="92" y="184" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal">1</text><rect x="191.5" y="173.5" width="13" height="13" fill="#fff" stroke="#d32f2f" stroke-width="1"/><text x="198" y="184" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal">1</text><text x="180" y="226" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="normal">AD∥BC → △AED と △GEB は相似（2：1）→ BG は AD の半分＝BC の半分</text></svg></li>
+    <li>H も同じ。AB∥DC だから △AFB と △HFD は砂時計の相似で、BF：FD＝2：1。DH は AB の半分で、H は CD のまん中。</li>
+    <li>五角形EGCHF ＝ △BCD − △BGE − △DHF。△BCD＝120÷2＝60。</li>
+    <li>△BGE は △BCD の 1/2×1/3＝1/6 だから、60÷6＝10。△DHF も DH が DC の 1/2、DF が DB の 1/3 なので 10。
+<svg id="q1_4_fig2" viewBox="0 0 360 232" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><polygon points="130,140 145,190 250,190 280,115 220,90" fill="#ffe0b2" stroke="none"/><polygon points="40,190 145,190 130,140" fill="#dbe9ff" stroke="none"/><polygon points="310,40 280,115 220,90" fill="#dbe9ff" stroke="none"/><polygon points="100,40 40,190 250,190 310,40" fill="none" stroke="#222" stroke-width="1.5"/><line x1="40" y1="190" x2="310" y2="40" stroke="#222" stroke-width="1.5"/><line x1="100" y1="40" x2="145" y2="190" stroke="#222" stroke-width="1.5"/><line x1="100" y1="40" x2="280" y2="115" stroke="#222" stroke-width="1.5"/><text x="90" y="34" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">A</text><text x="28" y="195" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">B</text><text x="262" y="195" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">C</text><text x="322" y="34" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">D</text><text x="118" y="142" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">E</text><text x="226" y="84" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">F</text><text x="145" y="207" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">G</text><text x="292" y="119" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">H</text><text x="210" y="150" font-size="15" fill="#d32f2f" text-anchor="middle" font-weight="bold">40</text><text x="105" y="178" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal">10</text><text x="270" y="87" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal">10</text><text x="180" y="226" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="normal">△BCD＝60。△BGE＝60×1/2×1/3＝10、△DHF も 10</text></svg></li>
+    <li>60−10−10＝40。</li>
+  </ol>
+  <div class="ans">答え：40cm²</div>
+  <div class="tip">コツ：「対角線の等分点＋平行四辺形」と見たら、まず砂時計の相似で辺のどこに交わるかを決める。位置が決まれば、面積は「角をはさむ2辺の比のかけ算」で出る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 立方体の中の三角すい2つの重なり <span class="type">A・6点｜立体の重なり（正八面体）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>三角すいB-DEG と三角すいA-CFH</b>」と「<b>重なった部分の立体の面の数</b>」。2つの三角すいを図になぞって置く → どちらも頂点を1つおきに結んだ形で、重なりは各面のまん中を頂点にした<b>正八面体</b>と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>立方体の8つの頂点を1つおきに4つ結ぶと、辺が全部「面の対角線」の三角すい（正四面体）になる。B・D・E・G がその1組、A・C・F・H がもう1組。</li>
+    <li>正八面体は、四角すい2つを底面で合わせた形。面は 4＋4＝8、頂点は6。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に2つの三角すいをなぞる。B-DEG の辺は BD・BE・BG・DE・DG・EG で、全部面の対角線。A-CFH も同じ。
+<svg id="q1_5_fig1" viewBox="0 0 360 252" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><line x1="70" y1="74" x2="210" y2="74" stroke="#222" stroke-width="1.3"/><line x1="210" y1="74" x2="210" y2="214" stroke="#222" stroke-width="1.3"/><line x1="210" y1="214" x2="70" y2="214" stroke="#222" stroke-width="1.3"/><line x1="70" y1="214" x2="70" y2="74" stroke="#222" stroke-width="1.3"/><line x1="210" y1="74" x2="285" y2="24" stroke="#222" stroke-width="1.3"/><line x1="285" y1="24" x2="285" y2="164" stroke="#222" stroke-width="1.3"/><line x1="285" y1="164" x2="210" y2="214" stroke="#222" stroke-width="1.3"/><line x1="70" y1="74" x2="145" y2="24" stroke="#222" stroke-width="1.3"/><line x1="145" y1="24" x2="285" y2="24" stroke="#222" stroke-width="1.3"/><line x1="70" y1="214" x2="145" y2="164" stroke="#222" stroke-width="1.3" stroke-dasharray="4 3"/><line x1="145" y1="164" x2="285" y2="164" stroke="#222" stroke-width="1.3" stroke-dasharray="4 3"/><line x1="145" y1="164" x2="145" y2="24" stroke="#222" stroke-width="1.3" stroke-dasharray="4 3"/><text x="60" y="78" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">A</text><text x="215" y="62" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">B</text><text x="295" y="22" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">C</text><text x="143" y="18" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">D</text><text x="60" y="220" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">E</text><text x="212" y="229" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">F</text><text x="295" y="172" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">G</text><text x="135" y="170" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">H</text><line x1="210" y1="74" x2="145" y2="24" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="5 3"/><line x1="210" y1="74" x2="70" y2="214" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="5 3"/><line x1="210" y1="74" x2="285" y2="164" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="5 3"/><line x1="145" y1="24" x2="70" y2="214" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="5 3"/><line x1="145" y1="24" x2="285" y2="164" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="5 3"/><line x1="70" y1="214" x2="285" y2="164" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="5 3"/><line x1="70" y1="74" x2="285" y2="24" stroke="#d32f2f" stroke-width="1.6"/><line x1="70" y1="74" x2="210" y2="214" stroke="#d32f2f" stroke-width="1.6"/><line x1="70" y1="74" x2="145" y2="164" stroke="#d32f2f" stroke-width="1.6"/><line x1="285" y1="24" x2="210" y2="214" stroke="#d32f2f" stroke-width="1.6"/><line x1="285" y1="24" x2="145" y2="164" stroke="#d32f2f" stroke-width="1.6"/><line x1="210" y1="214" x2="145" y2="164" stroke="#d32f2f" stroke-width="1.6"/><text x="300" y="209" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="normal">青＝B-DEG</text><text x="300" y="224" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal">赤＝A-CFH</text><text x="180" y="246" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">どちらも立方体の頂点を1つおきに結んだ三角すい</text></svg></li>
+    <li>上の面ABCDだけを見る。B-DEG がこの面で使うのは対角線BD、A-CFH が使うのは対角線AC。2本が交わる<b>まん中の1点</b>だけが両方に入る。</li>
+    <li>ほかの5つの面も同じ。だから重なった立体の頂点は、6つの面のまん中の6点。</li>
+    <li>6点を結ぶ。前・右・後ろ・左の面のまん中が正方形になり、上の面と下の面のまん中がとがった頂点。四角すい2つを合わせた正八面体で、面は 4＋4＝8。
+<svg id="q1_5_fig2" viewBox="0 0 360 252" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><line x1="70" y1="74" x2="210" y2="74" stroke="#222" stroke-width="1.3"/><line x1="210" y1="74" x2="210" y2="214" stroke="#222" stroke-width="1.3"/><line x1="210" y1="214" x2="70" y2="214" stroke="#222" stroke-width="1.3"/><line x1="70" y1="214" x2="70" y2="74" stroke="#222" stroke-width="1.3"/><line x1="210" y1="74" x2="285" y2="24" stroke="#222" stroke-width="1.3"/><line x1="285" y1="24" x2="285" y2="164" stroke="#222" stroke-width="1.3"/><line x1="285" y1="164" x2="210" y2="214" stroke="#222" stroke-width="1.3"/><line x1="70" y1="74" x2="145" y2="24" stroke="#222" stroke-width="1.3"/><line x1="145" y1="24" x2="285" y2="24" stroke="#222" stroke-width="1.3"/><line x1="70" y1="214" x2="145" y2="164" stroke="#222" stroke-width="1.3" stroke-dasharray="4 3"/><line x1="145" y1="164" x2="285" y2="164" stroke="#222" stroke-width="1.3" stroke-dasharray="4 3"/><line x1="145" y1="164" x2="145" y2="24" stroke="#222" stroke-width="1.3" stroke-dasharray="4 3"/><text x="60" y="78" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">A</text><text x="215" y="62" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">B</text><text x="295" y="22" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">C</text><text x="143" y="18" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">D</text><text x="60" y="220" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">E</text><text x="212" y="229" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">F</text><text x="295" y="172" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">G</text><text x="135" y="170" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">H</text><line x1="70" y1="74" x2="285" y2="24" stroke="#d32f2f" stroke-width="1" stroke-dasharray="3 3"/><line x1="210" y1="74" x2="145" y2="24" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 3"/><polygon points="140,144 248,119 215,94 108,119" fill="#ffe0b2" fill-opacity="0.8" stroke="#d32f2f" stroke-width="1.4"/><line x1="178" y1="49" x2="140" y2="144" stroke="#d32f2f" stroke-width="1.6"/><line x1="178" y1="189" x2="140" y2="144" stroke="#d32f2f" stroke-width="1.6"/><line x1="178" y1="49" x2="248" y2="119" stroke="#d32f2f" stroke-width="1.6"/><line x1="178" y1="189" x2="248" y2="119" stroke="#d32f2f" stroke-width="1.6"/><line x1="178" y1="49" x2="108" y2="119" stroke="#d32f2f" stroke-width="1.6"/><line x1="178" y1="189" x2="108" y2="119" stroke="#d32f2f" stroke-width="1.6"/><line x1="178" y1="49" x2="215" y2="94" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="4 3"/><line x1="178" y1="189" x2="215" y2="94" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="4 3"/><circle cx="140" cy="144" r="3" fill="#d32f2f"/><circle cx="215" cy="94" r="3" fill="#d32f2f"/><circle cx="108" cy="119" r="3" fill="#d32f2f"/><circle cx="248" cy="119" r="3" fill="#d32f2f"/><circle cx="178" cy="49" r="3" fill="#d32f2f"/><circle cx="178" cy="189" r="3" fill="#d32f2f"/><text x="186" y="42" font-size="10" fill="#d32f2f" text-anchor="start" font-weight="normal" stroke="#fff" stroke-width="3" paint-order="stroke">上の面のまん中</text><text x="182" y="203" font-size="10" fill="#d32f2f" text-anchor="start" font-weight="normal" stroke="#fff" stroke-width="3" paint-order="stroke">下の面のまん中</text><text x="180" y="246" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">6つの面のまん中を結ぶ → 上に4面・下に4面の正八面体</text></svg></li>
+    <li>落としやすい所: 「三角すいの面は4つ」から 4 と答える。重なった部分は、B-DEG の4面と A-CFH の4面に1枚ずつ囲まれるので 8。</li>
+  </ol>
+  <div class="ans">答え：8面</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 4枚のカードで作れる3けたの整数 <span class="type">A・6点｜順列（位の□）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>4枚のカード</b>」と「<b>3枚のカードを取り出して、3けたの整数</b>」。百・十・一の位の□を3つ図に置く → 使ったカードは次の位で使えないので、4×3×2 のかけ算に決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>位を順に決めるとき、通り数はかけ算。百の位で4通りに分かれ、それぞれ十の位で3通りに分かれる。樹形図の枝の数と同じ。</li>
+    <li>0 のカードが無いので、百の位に置けないカードは無い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>□□□ を書く。百の位は 3・4・5・6 のどれでもよく 4通り。</li>
+    <li>十の位は残り3枚から 3通り。一の位は残り2枚から 2通り。
+<pre class="fig">百  十  一
+4 × 3 × 2 ＝ 24</pre></li>
+    <li>落としやすい所: 「4枚から3枚を選ぶ」の4通りで止めてしまう。選んだあとの並べ方 3×2×1＝6 もかける（4×6＝24 でも同じ）。</li>
+  </ol>
+  <div class="ans">答え：24通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 3の倍数になる整数 <span class="type">A・6点｜倍数の見分け方（各位の和）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3の倍数であるもの</b>」。「各位の和が3の倍数」に直して書く → 並べ方は関係なく、<b>どの3枚を使うか</b>（残す1枚）だけで決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3の倍数の見分け方は、各位の数の和が3の倍数。456 は 4＋5＋6＝15 で3の倍数。</li>
+    <li>3枚の組が決まれば、並べ方は 3×2×1＝6 通りある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「残す1枚」で4通りに分けて、使う3枚の和を表にする。
+<table><tr><th>残すカード</th><th>使う3枚</th><th>各位の和</th><th>3の倍数か</th></tr>
+<tr><td>3</td><td>4・5・6</td><td>15</td><td><b>○</b></td></tr>
+<tr><td>4</td><td>3・5・6</td><td>14</td><td>×</td></tr>
+<tr><td>5</td><td>3・4・6</td><td>13</td><td>×</td></tr>
+<tr><td>6</td><td>3・4・5</td><td>12</td><td><b>○</b></td></tr></table></li>
+    <li>○の組は 2つ。それぞれ並べ方が 6通り。</li>
+    <li>2×6＝12。</li>
+    <li>落としやすい所: 「3のカードを使えば3の倍数」と思う。346 は 3＋4＋6＝13 で3の倍数ではない。和で見る。</li>
+  </ol>
+  <div class="ans">答え：12通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 残りのカードの数で割り切れる整数 <span class="type">A・6点｜場合分け（残りのカード）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>残りのカードに書かれた整数で割ったとき</b>」と「<b>割り切れるもの</b>」。残りのカードが 3・4・5・6 の4つの場合の表に直して書く → それぞれ「3・4・5・6 の倍数の見分け方」で数えるだけになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>倍数の見分け方。3の倍数＝各位の和が3の倍数。4の倍数＝下2けたが4の倍数（536 → 36）。5の倍数＝一の位が 0 か 5。6の倍数＝偶数で、かつ3の倍数。</li>
+    <li>残りが決まれば、使う3枚も決まる。(2) の表の「使う3枚」をそのまま使える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>残りのカードごとに表を書く。
+<table><tr><th>残り</th><th>使う3枚</th><th>見分け方</th><th>当てはまる整数</th><th>通り</th></tr>
+<tr><td>3</td><td>4・5・6</td><td>和15 → 全部3の倍数</td><td>456 465 546 564 645 654</td><td><b>6</b></td></tr>
+<tr><td>4</td><td>3・5・6</td><td>下2けたが 36 か 56</td><td>536 356</td><td><b>2</b></td></tr>
+<tr><td>5</td><td>3・4・6</td><td>一の位が 0 か 5 → 無い</td><td>なし</td><td>0</td></tr>
+<tr><td>6</td><td>3・4・5</td><td>和12 で3の倍数。偶数 → 一の位が4</td><td>354 534</td><td><b>2</b></td></tr></table></li>
+    <li>残り4のとき、3・5・6 でできる下2けたで 4 の倍数は 36 と 56 だけ。百の位は残った1枚に決まる。</li>
+    <li>残り6のとき、3・4・5 は和が12 なのでどれも3の倍数。あとは偶数、つまり一の位が 4 の2つ。</li>
+    <li>6＋2＋0＋2＝10。</li>
+    <li>落としやすい所: 残り5の行で「一の位が5の整数」を数えてしまう。残りが5のとき、5のカードは使えない。行ごとに「使う3枚」を先に書いてから数える。</li>
+  </ol>
+  <div class="ans">答え：10通り</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ（大問1・2で繰り返し出た入口）</h2>
+  <ul>
+    <li>数の問題は、まず「表」か「2段の線分図」に直す。くり返しは1組の表、食塩水は食塩と全体の2段、カードは残り1枚で場合分けの表。</li>
+    <li>「等分点＋平行」と見たら砂時計の相似。交点が辺のどこかを先に決めてから、面積は2辺の比のかけ算。</li>
+    <li>立体の重なりは、1つの面だけ取り出して「どこが共通か」を見る。面ごとに1点なら、面のまん中を結んだ正八面体。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（電球のボタンと平方数・和が2022の分数・立方体3つの立体の切断）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（大問3・4・5） <span class="type">A 18点／B 24点／C 6点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>3</td><td>200個の電球と「□の倍数の電球のボタンを押す」操作（約数の個数・平方数）</td><td>A 6+6／B 6</td><td>押される回数＝番号の約数の個数／奇数回で点灯＝平方数／忘れた操作の倍数だけ入れかわる</td></tr>
+  <tr><td>4</td><td>分子と分母の和が2022の分数（約分すると5・整数になる・整数部分が1）</td><td>A 6／B 6+6</td><td>和が決まっている→比の線分図／分母は2022の約数／ちょうど1とちょうど2の境目</td></tr>
+  <tr><td>5</td><td>立方体3つを重ねた立体を A・B・C で切る（切り口の図・体積）</td><td>B 6／C 6</td><td>線は面の上だけ・平行な面には平行な線／ななめに切った四角柱＝底面積×高さの平均</td></tr>
+  </table>
+  <p>取り方: <b>Aの3問（3(1)(2)・4(1)）を先に確実に</b>。Bの 3(3)・4(2)・4(3) は、前の小問で書いた表や線分図をそのまま使えるので進めやすい。5(1) は「位置は正確でなくても構いません」とあるので、平行の決まりで形をかくことに集中する。5(2) は後回しでよい。受験者平均 59.2・合格者平均 72.5。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 1〜10の電球で点灯しているもの <span class="type">A・6点｜約数の個数（書き出し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>点灯しているときに押すと消灯</b>」と「<b>2の倍数の番号が書かれた電球</b>」。電球1個ごとの「押される回数」に直して書く → 回数は番号の約数の個数と同じで、奇数回なら点灯と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>6番の電球が押されるのは、6が倍数になる操作のとき。操作1・2・3・6 の4回で、これは<b>6の約数</b>と同じ。</li>
+    <li>はじめは全部消灯。1回押すと点灯、2回で消灯にもどる。奇数回なら点灯、偶数回なら消灯で終わる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1から10まで、約数を書き出す表をつくる。
+<table><tr><th>番号</th><th>約数（押す操作）</th><th>押される回数</th><th>最後</th></tr>
+<tr><td>1</td><td>1</td><td>1回</td><td><b>点灯</b></td></tr>
+<tr><td>2</td><td>1・2</td><td>2回</td><td>消灯</td></tr>
+<tr><td>3</td><td>1・3</td><td>2回</td><td>消灯</td></tr>
+<tr><td>4</td><td>1・2・4</td><td>3回</td><td><b>点灯</b></td></tr>
+<tr><td>5</td><td>1・5</td><td>2回</td><td>消灯</td></tr>
+<tr><td>6</td><td>1・2・3・6</td><td>4回</td><td>消灯</td></tr>
+<tr><td>7</td><td>1・7</td><td>2回</td><td>消灯</td></tr>
+<tr><td>8</td><td>1・2・4・8</td><td>4回</td><td>消灯</td></tr>
+<tr><td>9</td><td>1・3・9</td><td>3回</td><td><b>点灯</b></td></tr>
+<tr><td>10</td><td>1・2・5・10</td><td>4回</td><td>消灯</td></tr></table></li>
+    <li>操作11より先は、10以下の電球を押さない。表は操作10までで足りる。</li>
+    <li>奇数回の番号は 1・4・9。点灯は3個。</li>
+    <li>落としやすい所: 操作を1から順に全部やって、途中のついた・消えたを追いかける。追うのは「電球1個が何回押されるか」だけでよい。</li>
+  </ol>
+  <div class="ans">答え：3個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 1〜100の電球で点灯しているもの <span class="type">A・6点｜約数が奇数個＝平方数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は (1) と変わった「<b>1から100の番号</b>」。(1) でついた 1・4・9 を「1×1・2×2・3×3」に直して書く → 点灯するのは<b>同じ数を2回かけた数（平方数）</b>だけと決まり、100までの平方数を数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>約数は、かけてその数になる2つで組になる。12 なら 1×12・2×6・3×4 で6個。組になるので、ふつうは偶数個。</li>
+    <li>平方数には、同じ数どうしの組がある。36 なら 1×36・2×18・3×12・4×9・6×6。6は1個と数えるので、約数は9個で<b>奇数個</b>になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1) でついた番号を見直す。1＝1×1、4＝2×2、9＝3×3。どれも平方数。</li>
+    <li>平方数は約数が奇数個。奇数回押されるので点灯する。平方数でない番号は偶数回で、消灯にもどる。</li>
+    <li>100までの平方数をならべる。1・4・9・16・25・36・49・64・81・100。1×1 から 10×10 までの<b>10個</b>。</li>
+    <li>落としやすい所: 100＝10×10 を入れ忘れて9個にする。「1から100」なので100番もふくむ。</li>
+  </ol>
+  <div class="ans">答え：10個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 忘れた操作番号をさがす <span class="type">B・6点｜平方数と倍数（入れかわる電球）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>その操作番号と同じ番号の電球は点灯しているはず</b>」と「<b>18個</b>」。前の文は「忘れた番号は平方数」に直して書く → 忘れなければ14個なので、<b>4個ふえる平方数</b>をさがすと決まる。(2) で「点灯＝平方数」と分かっていれば、表を書くだけで進む。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>操作を1つ忘れると、その番号の倍数の電球だけ、押される回数が1回へる。その電球は点灯と消灯が<b>入れかわる</b>。</li>
+    <li>平方数に平方数をかけると平方数になる。25×4＝100＝10×10。25の倍数のうち平方数は、25×1・25×4・25×9 … の形だけ見ればよい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>忘れなかった場合を先に出す。200までの平方数は 1×1 から 14×14＝196 まで。点灯は14個。</li>
+    <li>「点灯しているはず」の電球は平方数の番号。忘れた操作番号も平方数で、1・4・9・16・25・… のどれかになる。</li>
+    <li>忘れた番号の倍数だけが入れかわる。倍数のうち平方数の電球は消える。平方数でない電球はつく。14個が18個になったので、<b>つく数が消える数より4個多い</b>番号をさがす。</li>
+    <li>表にする。
+<table><tr><th>忘れた操作</th><th>200までの倍数</th><th>うち平方数（消える）</th><th>平方数でない（つく）</th><th>点灯の数</th></tr>
+<tr><td>1</td><td>200個</td><td>14個</td><td>186個</td><td>14−14＋186＝186</td></tr>
+<tr><td>4</td><td>50個</td><td>7個（4・16・36・64・100・144・196）</td><td>43個</td><td>14−7＋43＝50</td></tr>
+<tr><td>9</td><td>22個</td><td>4個（9・36・81・144）</td><td>18個</td><td>14−4＋18＝28</td></tr>
+<tr><td>16</td><td>12個</td><td>3個（16・64・144）</td><td>9個</td><td>14−3＋9＝20</td></tr>
+<tr><td><b>25</b></td><td>8個</td><td>2個（25・100）</td><td>6個</td><td>14−2＋6＝<b>18</b></td></tr>
+<tr><td>36</td><td>5個</td><td>2個（36・144）</td><td>3個</td><td>14−2＋3＝15</td></tr></table>
+49以上の平方数は、200までの倍数が4個以下。そのうち1個は自分自身で、消える。つく数が消える数より4個多くなることはないので、ここで終わり。</li>
+    <li>たしかめ。25の倍数は 25・50・75・100・125・150・175・200 の8個。25 と 100 が消えて、残りの6個がつく。14−2＋6＝18。合っている。</li>
+  </ol>
+  <div class="ans">答え：操作番号25</div>
+  <div class="tip">コツ：「同じ番号の電球は点灯しているはず」の1文は、忘れた番号を平方数だけにしぼるためにある。条件の文は、候補をしぼる部品として先に直して書く。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 約分すると5になる分数の分母 <span class="type">A・6点｜和が決まっている比（線分図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>分子と分母の和が2022</b>」と「<b>約分すると5</b>」。5は「分子：分母＝5：1」に直して線分図に置く → 和の⑥が2022に当たり、分母の①が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>約分して5になる分数は、5/1 と同じ大きさ。10/2 も 15/3 も、<b>分子が分母の5倍</b>。</li>
+    <li>和が決まっている2つの数は、比の合計で和をわると①が出る。たとえば和が12で 2：1 なら、①＝12÷3＝4。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>線分図をかく。分子は⑤、分母は①。
+<svg id="q4_1_fig1" viewBox="0 0 360 118" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><text x="60" y="39" font-size="12" fill="#222" text-anchor="end" font-weight="normal">分子</text><text x="60" y="79" font-size="12" fill="#222" text-anchor="end" font-weight="normal">分母</text><rect x="70" y="26" width="230" height="18" fill="#dbe9ff" stroke="#222" stroke-width="1.3"/><line x1="116" y1="26" x2="116" y2="44" stroke="#222" stroke-width="1"/><line x1="162" y1="26" x2="162" y2="44" stroke="#222" stroke-width="1"/><line x1="208" y1="26" x2="208" y2="44" stroke="#222" stroke-width="1"/><line x1="254" y1="26" x2="254" y2="44" stroke="#222" stroke-width="1"/><rect x="70" y="66" width="46" height="18" fill="#ffe0b2" stroke="#222" stroke-width="1.3"/><text x="185" y="20" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="normal">⑤</text><text x="93" y="62" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="normal">①</text><text x="128" y="80" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal">← 求める分母</text><text x="180" y="108" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="normal">⑤＋①＝⑥ が 2022 → ①＝2022÷6＝337</text></svg></li>
+    <li>⑤＋①＝⑥ が 2022。①＝2022÷6＝<b>337</b>。</li>
+    <li>分母は①なので 337。分子は 337×5＝1685。</li>
+    <li>たしかめ。1685＋337＝2022。1685÷337＝5。合っている。</li>
+    <li>落としやすい所: 2022÷5 としてしまう。和には分母の①も入っているので、6でわる。答えるのは分子の1685でなく分母。</li>
+  </ol>
+  <div class="ans">答え：337</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 約分すると整数になる分数の個数 <span class="type">B・6点｜約数（和が決まっている分数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>約分すると整数</b>」。(1) の5を□に変えて「分子は分母の□倍」に直して書く → 和の2022は分母の（□＋1）倍になり、<b>分母は2022の約数</b>と決まる。(1) の線分図がかけていれば、同じ図で進める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2022 を素数のかけ算に分ける。2022÷2＝1011。1011÷3＝337。337 は 2・3・5・7・11・13・17 のどれでもわり切れない素数。だから <b>2022＝2×3×337</b>。</li>
+    <li>約数は、2・3・337 をそれぞれ使うか使わないかで 2×2×2＝8個ある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1) では、2022 は分母337の6倍だった。分子が分母の□倍なら、和は分母の（□＋1）倍。分母は2022をわり切る数になる。</li>
+    <li>2022の約数を小さい順にならべて、表にする。
+<table><tr><th>分母（2022の約数）</th><th>分子（2022−分母）</th><th>約分すると</th></tr>
+<tr><td>1</td><td>2021</td><td>2021</td></tr>
+<tr><td>2</td><td>2020</td><td>1010</td></tr>
+<tr><td>3</td><td>2019</td><td>673</td></tr>
+<tr><td>6</td><td>2016</td><td>336</td></tr>
+<tr><td>337</td><td>1685</td><td>5</td></tr>
+<tr><td>674</td><td>1348</td><td>2</td></tr>
+<tr><td>1011</td><td>1011</td><td>1</td></tr>
+<tr><td>2022</td><td>0</td><td>作れない</td></tr></table></li>
+    <li>分母が2022だと分子が0になる。分子は1から2021までなので、これは外す。</li>
+    <li>8−1＝<b>7個</b>。1011/1011＝1 も整数なので数に入れる。</li>
+  </ol>
+  <div class="ans">答え：7個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 整数部分が1になる分数の個数 <span class="type">B・6点｜分数の大きさの境目</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>整数部分が1</b>」。「1以上で、2より小さい」に直して書く → <b>ちょうど1になる分数とちょうど2になる分数</b>を出せば、その間の個数で決まる。境目は (1) と同じ線分図で出せるので進める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>整数部分が1の数は、1・1 1/2・1 2/3 など。ちょうど1は入る。ちょうど2は整数部分が2なので入らない。</li>
+    <li>分子が1ふえると、分母は1へる。ならんだ分数は、右へ行くほど大きくなる。</li>
+    <li>○から△までの整数の個数は △−○＋1。3から5までなら 5−3＋1＝3個。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ちょうど1になるのは、分子と分母が同じとき。2022÷2＝1011 だから 1011/1011。</li>
+    <li>ちょうど2になるのは、分子：分母＝2：1 のとき。③＝2022 で ①＝674。分数は 1348/674。</li>
+    <li>境目のまわりを表にする。
+<table><tr><th>分数</th><th>大きさ</th><th>整数部分</th></tr>
+<tr><td>1010/1012</td><td>1より小さい</td><td>0</td></tr>
+<tr><td><b>1011/1011</b></td><td>ちょうど1</td><td>1</td></tr>
+<tr><td>1012/1010</td><td>1 2/1010</td><td>1</td></tr>
+<tr><td>…</td><td>…</td><td>1</td></tr>
+<tr><td><b>1347/675</b></td><td>1 672/675</td><td>1</td></tr>
+<tr><td>1348/674</td><td>ちょうど2</td><td>2</td></tr></table></li>
+    <li>整数部分が1なのは、分子が1011から1347まで。1347−1011＋1＝<b>337個</b>。</li>
+  </ol>
+  <div class="ans">答え：337個</div>
+  <div class="tip">コツ：はしの2つを確かめてから数える。1011/1011 は入れる。1348/674 は入れない。ひき算のあとの「＋1」も、はしを表に書いておけば落とさない。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> A・B・C を通る平面の切り口 <span class="type">B・6点｜立体の切断（切り口の作図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3つの頂点A，B，Cを通る平面</b>」と「<b>頂点以外を通る線の位置は正確でなくても構いません</b>」。A・B・C がのっている面に丸 → 切り口の線は面の上だけに引け、<b>平行な面には平行な線</b>で6本と決まる。形だけでよいので、平行の決まりを知っていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>切り口の線は、立体の<b>面の上にだけ</b>できる。同じ平面にある2点でも、結んだ線が立体の外を通るなら、その線は切り口にならない。</li>
+    <li>平行な2つの面を1つの平面で切ると、切り口の線は平行になる。立方体なら、上の面の線と底の面の線が平行。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>AとBは、どちらも奥の面にある。ところがAとBを結ぶ線は、左上の立方体が無い所を通る。立体の外を通るこの線は、切り口にならない。図には入れずに進める。</li>
+    <li>線が引ける面を決める。Aからは「上の面」と「上の立方体の左の面」。Bからは「段の面（左下の立方体の上の面）」と「左の面」。Cからは「底の面」と「右の面」。合わせて6本。奥の面はAとBの2点、前の面はCの1点でしか平面にふれない。</li>
+    <li>平行な面の線を平行にそろえる。上の面・段の面・底の面の3本が平行。左の面・上の立方体の左の面・右の面の3本も平行。</li>
+    <li>線どうしは辺の上で出会う。上の面の線と右の面の線は、上の面の右の辺で出会う（点P）。底の面の線と左の面の線は、底の面の左の辺で出会う（点Q）。段の面の線と上の立方体の左の面の線は、段の内側のかどの辺で出会う（点R）。
+<svg id="q5_1_fig1" viewBox="0 0 360 304" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><polygon points="144,37.2 252,46.8 276,258 60,238.8 48,133.2 156,142.8" fill="#ffe0b2" fill-opacity="0.55" stroke="none" stroke-width="1"/><line x1="84" y1="258" x2="276" y2="258" stroke="#222" stroke-width="1.2"/><line x1="276" y1="258" x2="276" y2="66" stroke="#222" stroke-width="1.2"/><line x1="276" y1="66" x2="180" y2="66" stroke="#222" stroke-width="1.2"/><line x1="180" y1="66" x2="180" y2="162" stroke="#222" stroke-width="1.2"/><line x1="180" y1="162" x2="84" y2="162" stroke="#222" stroke-width="1.2"/><line x1="84" y1="162" x2="84" y2="258" stroke="#222" stroke-width="1.2"/><line x1="180" y1="258" x2="180" y2="162" stroke="#222" stroke-width="1.2"/><line x1="180" y1="162" x2="276" y2="162" stroke="#222" stroke-width="1.2"/><line x1="180" y1="66" x2="144" y2="37.2" stroke="#222" stroke-width="1.2"/><line x1="144" y1="37.2" x2="240" y2="37.2" stroke="#222" stroke-width="1.2"/><line x1="240" y1="37.2" x2="276" y2="66" stroke="#222" stroke-width="1.2"/><line x1="144" y1="37.2" x2="144" y2="133.2" stroke="#222" stroke-width="1.2"/><line x1="144" y1="133.2" x2="180" y2="162" stroke="#222" stroke-width="1.2"/><line x1="48" y1="133.2" x2="144" y2="133.2" stroke="#222" stroke-width="1.2"/><line x1="48" y1="133.2" x2="84" y2="162" stroke="#222" stroke-width="1.2"/><line x1="48" y1="133.2" x2="48" y2="229.2" stroke="#222" stroke-width="1.2"/><line x1="48" y1="229.2" x2="84" y2="258" stroke="#222" stroke-width="1.2"/><line x1="48" y1="229.2" x2="240" y2="229.2" stroke="#222" stroke-width="0.96" stroke-dasharray="4 3"/><line x1="240" y1="229.2" x2="276" y2="258" stroke="#222" stroke-width="0.96" stroke-dasharray="4 3"/><line x1="240" y1="229.2" x2="240" y2="37.2" stroke="#222" stroke-width="0.96" stroke-dasharray="4 3"/><line x1="144" y1="229.2" x2="144" y2="133.2" stroke="#222" stroke-width="0.96" stroke-dasharray="4 3"/><line x1="144" y1="229.2" x2="180" y2="258" stroke="#222" stroke-width="0.96" stroke-dasharray="4 3"/><line x1="144" y1="133.2" x2="240" y2="133.2" stroke="#222" stroke-width="0.96" stroke-dasharray="4 3"/><line x1="240" y1="133.2" x2="276" y2="162" stroke="#222" stroke-width="0.96" stroke-dasharray="4 3"/><line x1="144" y1="37.2" x2="252" y2="46.8" stroke="#d32f2f" stroke-width="2.2"/><line x1="198.4" y1="37" x2="197.6" y2="47" stroke="#d32f2f" stroke-width="1.3"/><line x1="48" y1="133.2" x2="156" y2="142.8" stroke="#d32f2f" stroke-width="2.2"/><line x1="102.4" y1="133" x2="101.6" y2="143" stroke="#d32f2f" stroke-width="1.3"/><line x1="276" y1="258" x2="60" y2="238.8" stroke="#d32f2f" stroke-width="2.2"/><line x1="167.6" y1="253.4" x2="168.4" y2="243.4" stroke="#d32f2f" stroke-width="1.3"/><line x1="252" y1="46.8" x2="276" y2="258" stroke="#d32f2f" stroke-width="2.2"/><line x1="268.7" y1="149.8" x2="258.8" y2="151" stroke="#d32f2f" stroke-width="1.3"/><line x1="269.2" y1="153.8" x2="259.3" y2="155" stroke="#d32f2f" stroke-width="1.3"/><line x1="60" y1="238.8" x2="48" y2="133.2" stroke="#d32f2f" stroke-width="2.2"/><line x1="49.3" y1="188.6" x2="59.2" y2="187.4" stroke="#d32f2f" stroke-width="1.3"/><line x1="48.8" y1="184.6" x2="58.7" y2="183.4" stroke="#d32f2f" stroke-width="1.3"/><line x1="156" y1="142.8" x2="144" y2="37.2" stroke="#d32f2f" stroke-width="2.2"/><line x1="145.3" y1="92.6" x2="155.2" y2="91.4" stroke="#d32f2f" stroke-width="1.3"/><line x1="144.8" y1="88.6" x2="154.7" y2="87.4" stroke="#d32f2f" stroke-width="1.3"/><circle cx="144" cy="37.2" r="3.2" fill="#222"/><circle cx="48" cy="133.2" r="3.2" fill="#222"/><circle cx="276" cy="258" r="3.2" fill="#222"/><circle cx="252" cy="46.8" r="3" fill="#d32f2f"/><circle cx="60" cy="238.8" r="3" fill="#d32f2f"/><circle cx="156" cy="142.8" r="3" fill="#d32f2f"/><text x="134" y="33.2" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">A</text><text x="37" y="134.2" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">B</text><text x="287" y="268" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">C</text><text x="264" y="39.8" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="normal">P</text><text x="49" y="250.8" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="normal">Q</text><text x="157" y="159.8" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="normal">R</text><text x="12" y="52" font-size="10.5" fill="#d32f2f" text-anchor="start" font-weight="normal">｜の印の3本が平行</text><text x="12" y="67" font-size="10.5" fill="#d32f2f" text-anchor="start" font-weight="normal">‖の印の3本が平行</text><text x="180" y="285" font-size="10.5" fill="#222" text-anchor="middle" font-weight="normal">赤い線＝切り口。A→P→C→Q→B→R→A の六角形</text><text x="180" y="298" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">（P・Q・R は説明のためにつけた名前）</text></svg></li>
+    <li>A→P→C→Q→B→R→A の順に結ぶと、<b>六角形</b>になる。P・Q・R はどれも奥寄りにとる。正確には奥から2cm の所で、(2) で出す。</li>
+  </ol>
+  <div class="ans">答え：右の図（A→P→C→Q→B→R→A と結んだ六角形。上の図の赤い線。Pは上の面の右の辺、Qは底の面の左の辺、Rは段の内側のかどの辺の上で、どれも奥寄り）</div>
+  <div class="tip">コツ：「AとBは同じ面だから結ぶ」と直線を引くと、立体の外を通る線になる。L字の立体では、結ぶ前に、線が面からはみ出さないかを見る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 切ってできる大きい方の立体の体積 <span class="type">C・6点｜切断した立体の体積（高さの平均）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は「<b>1辺が6cm</b>」と「<b>体積が大きい方</b>」。切り口の点P・Q・R の位置を cm で図に置く → 下の直方体と上の立方体に分け、<b>底面積×高さの平均</b>で出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ななめに切った四角柱の体積は「底面積×4つの高さの平均」。同じ立体を逆さにして重ねると、直方体になる。高さが 4・0・2・6 なら、向かい合う 4＋2 と 0＋6 がどちらも6。重ねた直方体の高さは6で、<b>平均は3</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>点Pの位置を出す。奥の面で、BからAへは右に6cm、上に6cm。同じだけのばした点をTとする。Tは右の面を上にのばした所にあり、高さは18cm。TとCを結ぶ線は、奥に6cm進む間に18cm上がる。奥に1cmで3cm上がるので、高さ12cmの上の面とは<b>手前から4cm</b>の所で出会う。これがP。高さ6cmの所は手前から2cm。AからPへは、右に6cm進む間に手前へ2cm。平行な線も同じかたむきになる。Rは、Bから右に6cmで手前へ2cm。Qは、Cから左に12cmで奥へ4cm。QもRも手前から4cm。
+<svg id="q5_2_fig1" viewBox="0 0 360 356" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><line x1="84" y1="318" x2="252" y2="318" stroke="#222" stroke-width="1.1"/><line x1="252" y1="318" x2="252" y2="150" stroke="#222" stroke-width="1.1"/><line x1="252" y1="150" x2="168" y2="150" stroke="#222" stroke-width="1.1"/><line x1="168" y1="150" x2="168" y2="234" stroke="#222" stroke-width="1.1"/><line x1="168" y1="234" x2="84" y2="234" stroke="#222" stroke-width="1.1"/><line x1="84" y1="234" x2="84" y2="318" stroke="#222" stroke-width="1.1"/><line x1="168" y1="318" x2="168" y2="234" stroke="#222" stroke-width="1.1"/><line x1="168" y1="234" x2="252" y2="234" stroke="#222" stroke-width="1.1"/><line x1="168" y1="150" x2="136.8" y2="124.8" stroke="#222" stroke-width="1.1"/><line x1="136.8" y1="124.8" x2="220.8" y2="124.8" stroke="#222" stroke-width="1.1"/><line x1="220.8" y1="124.8" x2="252" y2="150" stroke="#222" stroke-width="1.1"/><line x1="136.8" y1="124.8" x2="136.8" y2="208.8" stroke="#222" stroke-width="1.1"/><line x1="136.8" y1="208.8" x2="168" y2="234" stroke="#222" stroke-width="1.1"/><line x1="52.8" y1="208.8" x2="136.8" y2="208.8" stroke="#222" stroke-width="1.1"/><line x1="52.8" y1="208.8" x2="84" y2="234" stroke="#222" stroke-width="1.1"/><line x1="52.8" y1="208.8" x2="52.8" y2="292.8" stroke="#222" stroke-width="1.1"/><line x1="52.8" y1="292.8" x2="84" y2="318" stroke="#222" stroke-width="1.1"/><line x1="52.8" y1="292.8" x2="220.8" y2="292.8" stroke="#222" stroke-width="0.8800000000000001" stroke-dasharray="4 3"/><line x1="220.8" y1="292.8" x2="252" y2="318" stroke="#222" stroke-width="0.8800000000000001" stroke-dasharray="4 3"/><line x1="220.8" y1="292.8" x2="220.8" y2="124.8" stroke="#222" stroke-width="0.8800000000000001" stroke-dasharray="4 3"/><line x1="136.8" y1="292.8" x2="136.8" y2="208.8" stroke="#222" stroke-width="0.8800000000000001" stroke-dasharray="4 3"/><line x1="136.8" y1="292.8" x2="168" y2="318" stroke="#222" stroke-width="0.8800000000000001" stroke-dasharray="4 3"/><line x1="136.8" y1="208.8" x2="220.8" y2="208.8" stroke="#222" stroke-width="0.8800000000000001" stroke-dasharray="4 3"/><line x1="220.8" y1="208.8" x2="252" y2="234" stroke="#222" stroke-width="0.8800000000000001" stroke-dasharray="4 3"/><line x1="52.8" y1="208.8" x2="220.8" y2="40.8" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 3"/><line x1="220.8" y1="124.8" x2="220.8" y2="40.8" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="3 3"/><line x1="220.8" y1="40.8" x2="231.2" y2="133.2" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 3"/><line x1="231.2" y1="133.2" x2="252" y2="318" stroke="#d32f2f" stroke-width="2.2"/><circle cx="136.8" cy="124.8" r="3.2" fill="#222"/><circle cx="52.8" cy="208.8" r="3.2" fill="#222"/><circle cx="252" cy="318" r="3.2" fill="#222"/><circle cx="220.8" cy="40.8" r="3" fill="#1565c0"/><circle cx="231.2" cy="133.2" r="3.2" fill="#d32f2f"/><text x="126.8" y="120.8" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">A</text><text x="41.8" y="209.8" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">B</text><text x="263" y="328" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">C</text><text x="230.8" y="41.8" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal">T</text><text x="242.2" y="136.2" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="normal">P</text><text x="215.8" y="86.8" font-size="10.5" fill="#1565c0" text-anchor="end" font-weight="normal">6cm</text><text x="88.8" y="160.8" font-size="10" fill="#1565c0" text-anchor="end" font-weight="normal">右6・上6</text><text x="172.8" y="76.8" font-size="10" fill="#1565c0" text-anchor="end" font-weight="normal">右6・上6</text><text x="262" y="150" font-size="10.5" fill="#d32f2f" text-anchor="start" font-weight="normal">T→C は</text><text x="262" y="164" font-size="10.5" fill="#d32f2f" text-anchor="start" font-weight="normal">奥に6cmで</text><text x="262" y="178" font-size="10.5" fill="#d32f2f" text-anchor="start" font-weight="normal">18cm上がる</text><text x="262" y="198" font-size="10.5" fill="#d32f2f" text-anchor="start" font-weight="normal">高さ12cm＝</text><text x="262" y="212" font-size="10.5" fill="#d32f2f" text-anchor="start" font-weight="normal">手前から4cm</text><text x="180" y="345" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">ABをのばした点T（高さ18cm）とCを結ぶ → 上の面の辺と出会う点がP</text></svg></li>
+    <li>前の面を底面にして、切り口までの長さを書きこむ。下の直方体（底面 12×6＝72）は 4・0・2・6 で平均3。72×3＝216。上の立方体（底面 6×6＝36）は 4・2・4・6 で平均4。36×4＝144。
+<svg id="q5_2_fig2" viewBox="0 0 360 286" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><polygon points="92,236 272,236 272,146 92,146" fill="#dbe9ff" fill-opacity="1" stroke="#222" stroke-width="1.4"/><polygon points="182,146 272,146 272,56 182,56" fill="#ffe0b2" fill-opacity="1" stroke="#222" stroke-width="1.4"/><circle cx="92" cy="236" r="3" fill="#d32f2f"/><text x="84" y="250" font-size="13" fill="#d32f2f" text-anchor="end" font-weight="bold">Q 4</text><circle cx="272" cy="236" r="3" fill="#d32f2f"/><text x="280" y="250" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold">C 0</text><circle cx="272" cy="146" r="3" fill="#d32f2f"/><text x="281" y="151" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold">2</text><circle cx="272" cy="56" r="3" fill="#d32f2f"/><text x="280" y="52" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold">P 4</text><circle cx="182" cy="56" r="3" fill="#d32f2f"/><text x="174" y="52" font-size="13" fill="#d32f2f" text-anchor="end" font-weight="bold">A 6</text><circle cx="182" cy="146" r="3" fill="#d32f2f"/><text x="175" y="139" font-size="13" fill="#d32f2f" text-anchor="end" font-weight="bold">R 4</text><circle cx="92" cy="146" r="3" fill="#d32f2f"/><text x="84" y="144" font-size="13" fill="#d32f2f" text-anchor="end" font-weight="bold">B 6</text><text x="182" y="187" font-size="11" fill="#222" text-anchor="middle" font-weight="normal">下の直方体　底面72cm²</text><text x="182" y="203" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="normal">平均3 → 72×3＝216</text><text x="227" y="97" font-size="11" fill="#222" text-anchor="middle" font-weight="normal">底面36cm²</text><text x="227" y="113" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="normal">平均4 → 144</text><text x="180" y="270" font-size="10" fill="#222" text-anchor="middle" font-weight="normal">前から見た図。赤い数字＝前の面から切り口までの長さ（cm）</text></svg></li>
+    <li>手前側の立体は 216＋144＝<b>360</b>。全体は 6×6×6×3＝648。奥側は 648−360＝288。大きい方は手前側の 360。</li>
+  </ol>
+  <div class="ans">答え：360cm³</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ（大問3・4・5で繰り返し出た入口）</h2>
+  <ul>
+    <li>「□の倍数を押す」は、電球の側から見ると「約数の個数だけ押される」。約数が奇数個になるのは平方数だけ。</li>
+    <li>和が決まっている分数は、比の線分図で①を出す。「5になる」「整数になる」「1以上2未満」と条件が変わっても、同じ図を使い回す。</li>
+    <li>切断は「線は面の上だけ」「平行な面には平行な線」。体積は四角柱に分けて、底面積×高さの平均。</li>
+  </ul>
+</section>
+</div>
