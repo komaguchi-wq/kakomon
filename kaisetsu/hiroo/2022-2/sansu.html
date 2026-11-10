@@ -1,0 +1,791 @@
+<!-- generated kakomon hiroo/2022-2/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（計算・周期・通過算・円の等積移動・三角すいの水・最短経路）</a></li>
+<li><a href="#3-4-5">大問3・4・5（面積比と相似・水道管の比・女王の駒）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（計算・周期・通過算・円の等積移動・三角すいの水・最短経路）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（大問1・2） <span class="type">A 40点／B 12点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1 (1)〜(3)</td><td>分数の四則計算・奇数の和・3/7 の周期・通過算</td><td>A 5+5+6+6</td><td>帯分数は仮分数に／「5から」は1+3を足す／周期6／道のりの差</td></tr>
+  <tr><td>1 (4)(5)</td><td>円周10等分の斜線部分・三角すいの水の体積</td><td>B 6／A 6</td><td>中心を通る直線で平行を見つける／空の部分が相似 1:2</td></tr>
+  <tr><td>2</td><td>5×5 の格子の最短経路（全部・Cを通る・Dを通らない）</td><td>A 6+6／B 6</td><td>交差点に「左＋下」を書く／通る点で切ってかけ算／通れない道に×</td></tr>
+  </table>
+  <p>取り方: <b>Aの7問（40点）を先に確実に</b>。1(4) は「等分の点→平行→等積移動」が見えたら手を付ける。2(3) は (2) と同じ切り方（AからC × CからB）で、後半だけ数え直す。受験者平均 63.9・合格者平均 72.5。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)①</span> 帯分数のわり算とひき算 <span class="type">A・5点｜四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>÷（　）</b>」が2か所。帯分数は<b>仮分数に直して書く</b> → 計算の順番は（かっこの中）→ ÷ → − に決まる。左右のかっこの答えに同じ 31 が出るのが、この式の仕かけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>帯分数は仮分数にしてから計算する。3 2/3 は 11/3、4 1/2 は 9/2。</li>
+    <li>分数のわり算は、わる数の分母と分子を入れかえてかける。11/3 ÷ 31/21 ＝ 11/3 × 21/31。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>左のかっこを計算する。分母は 3 と 7 だから 21 にそろえる。
+<pre class="fig">2 1/3 − 6/7 ＝ 7/3 − 6/7 ＝ 49/21 − 18/21 ＝ 31/21</pre></li>
+    <li>右のかっこを計算する。分母は 2 と 5 だから 10 にそろえる。
+<pre class="fig">4 1/2 − 1 2/5 ＝ 9/2 − 7/5 ＝ 45/10 − 14/10 ＝ 31/10</pre></li>
+    <li>前半と後半のわり算をする。わる数をひっくり返してかける。
+<pre class="fig">11/3 ÷ 31/21 ＝ 11/3 × 21/31 ＝ 77/31
+ 3/2 ÷ 31/10 ＝  3/2 × 10/31 ＝ 15/31</pre></li>
+    <li>最後にひく。<b>77/31 − 15/31</b> ＝ 62/31 ＝ 2。</li>
+    <li>落としやすい所: 77/31 と 15/31 を約分しようとして手が止まる。分母が同じ 31 のまま引けば、62/31＝2 と整数になる。</li>
+  </ol>
+  <div class="ans">答え：2</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)②</span> 5から順に奇数をたして117 <span class="type">A・5点｜奇数の和（平方数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>奇数を5から順に</b>」と「<b>117</b>」。1＋3 が抜けているので、117 に 1＋3 を足して「<b>1から順の奇数の和</b>」に直して書く → 121＝11×11 で、何番目の奇数までかが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1から順に奇数をたすと、和は（個数）×（個数）になる。1＋3＝4＝2×2、1＋3＋5＝9＝3×3。</li>
+    <li>N番目の奇数は 2×N−1。5番目の奇数なら 2×5−1＝9。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>5から始まる和に、1 と 3 を足して「1から」の形にする。117＋1＋3＝121。</li>
+    <li>121 を平方数で見る。<b>121＝11×11</b>。だから 1から 11番目の奇数までをたした形になる。</li>
+    <li>11番目の奇数は 2×11−1＝21。□は 21。</li>
+    <li>たしかめ。5 から 21 までの奇数は 9個。平均は（5＋21）÷2＝13。13×9＝117。合っている。</li>
+    <li>落としやすい所: 「5から」を見落として 117 をそのまま平方数にしようとしても、合う数がない。先に 1＋3 を足す。</li>
+  </ol>
+  <div class="ans">答え：21</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 3/7 の小数第2022位 <span class="type">A・6点｜周期算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3/7 を小数で</b>」と「<b>小数第2022位</b>」。3÷7 を筆算して、くり返す数字の組（周期）を表に書く → 2022 を周期の長さでわった<b>あまり</b>で決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>7でわる分数の小数は、6けたでくり返す。3÷7＝0.428571 428571…。</li>
+    <li>あまりが 0 のときは、周期のいちばん最後の数字。たとえば第6位・第12位は同じ数字。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3÷7 を筆算で 7けた目まで出す。0.4285714… 7けた目に 4 がもどる。周期は 6。</li>
+    <li>周期の表を書く。
+<table><tr><th>位</th><th>第1位</th><th>第2位</th><th>第3位</th><th>第4位</th><th>第5位</th><th>第6位</th></tr>
+<tr><td>数字</td><td>4</td><td>2</td><td>8</td><td>5</td><td>7</td><td><b>1</b></td></tr></table></li>
+    <li>2022÷6＝337 あまり 0。あまり 0 は第6位と同じ → 1。</li>
+    <li>落としやすい所: あまり 0 を「0番目」と思って第1位の 4 と答えてしまう。あまり 0＝周期の最後。</li>
+  </ol>
+  <div class="ans">答え：1</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 鉄橋とトンネルから列車の長さ <span class="type">A・6点｜通過算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>渡り始めてから渡り終わるまで</b>」と「<b>通り抜けるまで</b>」。どちらも走る道のりは「橋（トンネル）＋列車の長さ」に<b>直して線分図に書く</b> → 2本の差で列車の長さが消え、速さが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>通過算では、先頭が入ってから最後尾が出るまでに走る道のり＝（橋の長さ）＋（列車の長さ）。列車の長さの分だけ、よけいに走る。</li>
+    <li>同じ速さなら、時間の差と道のりの差から速さが出る。8秒で 320m なら、毎秒 40m。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>線分図を2本ならべる。どちらも「列車の長さ」が左はしに同じだけ付く。
+<svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><rect x="20" y="14" width="60" height="16" fill="#dbe9ff" stroke="#222"/>
+<text x="50.0" y="26.0" font-size="11" fill="#222" text-anchor="middle" font-weight="normal">列車</text>
+<rect x="80" y="14" width="195" height="16" fill="#ffe0b2" stroke="#222"/>
+<text x="177.5" y="26.0" font-size="11" fill="#222" text-anchor="middle" font-weight="normal">鉄橋 650m</text>
+<line x1="20" y1="44" x2="275" y2="44" stroke="#d32f2f" stroke-width="2"/>
+<line x1="20" y1="38" x2="20" y2="50" stroke="#d32f2f" stroke-width="2"/>
+<line x1="275" y1="38" x2="275" y2="50" stroke="#d32f2f" stroke-width="2"/>
+<text x="147.5" y="62.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal">20秒で（列車＋650）m</text>
+<rect x="20" y="84" width="60" height="16" fill="#dbe9ff" stroke="#222"/>
+<text x="50.0" y="96.0" font-size="11" fill="#222" text-anchor="middle" font-weight="normal">列車</text>
+<rect x="80" y="84" width="291" height="16" fill="#ffe0b2" stroke="#222"/>
+<text x="225.5" y="96.0" font-size="11" fill="#222" text-anchor="middle" font-weight="normal">トンネル 970m</text>
+<line x1="20" y1="114" x2="371" y2="114" stroke="#d32f2f" stroke-width="2"/>
+<line x1="20" y1="108" x2="20" y2="120" stroke="#d32f2f" stroke-width="2"/>
+<line x1="371" y1="108" x2="371" y2="120" stroke="#d32f2f" stroke-width="2"/>
+<text x="195.5" y="132.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="normal">28秒で（列車＋970）m</text>
+<line x1="275" y1="70" x2="371" y2="70" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="323.0" y="66.0" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="normal">差 320m＝8秒</text></svg></li>
+    <li>差を取る。時間の差は 28−20＝8秒。道のりの差は 970−650＝320m。列車の長さは消える。</li>
+    <li>速さは <b>320÷8＝毎秒 40m</b>。</li>
+    <li>鉄橋のほうで、20秒に走る道のりは 40×20＝800m。これが 650m＋列車の長さ。800−650＝150m。</li>
+    <li>たしかめ。トンネルは 40×28＝1120m。970＋150＝1120。合っている。</li>
+    <li>落としやすい所: 650÷20 で速さを出さない。20秒で走るのは 650m ではなく「650m＋列車」。</li>
+  </ol>
+  <div class="ans">答え：150m</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 円周10等分の斜線部分 <span class="type">B・6点｜等積移動（おうぎ形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>円周を10等分する点</b>」と「<b>斜線部分</b>」。斜線は「三角形＋弓形」に直して図に置く → 等分の点を結ぶと平行線ができ、三角形を中心へ動かせば<b>おうぎ形 1/10</b> に決まる。手を付ける合図は「中心を通る直線が引ける」こと。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>平行な2本の線の間では、同じ底辺の三角形は面積が同じ（等積移動）。高さが変わらないから。</li>
+    <li>10等分の点は中心角 36°ごと。となりあう2点と中心でできるおうぎ形は、円の 1/10。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に名前をつける。斜線のかどを、下から C、右上を E、右下を D。C の真上の点を A、E の反対側の点を B。A と C、B と E は、どちらも 5つ先の点（円のちょうど反対側）。だから、結ぶ直線は中心を通る。交わる点が中心 O。
+<svg viewBox="0 0 340 272" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><circle cx="150" cy="130" r="100" fill="none" stroke="#222" stroke-width="1.5"/>
+<path d="M150.0,230.0 L245.1,99.1 A100,100 0 0 1 245.1,160.9 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+<line x1="150.0" y1="30.0" x2="150.0" y2="230.0" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="54.9" y1="160.9" x2="245.1" y2="99.1" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="150" y1="130" x2="245.1" y2="160.9" stroke="#d32f2f" stroke-width="1.5"/>
+<line x1="150" y1="130" x2="245.1" y2="99.1" stroke="#d32f2f" stroke-width="1.5"/>
+<circle cx="150" cy="130" r="3" fill="#1565c0"/>
+<text x="140.0" y="124.0" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal">O</text>
+<text x="20.0" y="262.0" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold">ED は AC と平行 → △CDE＝△ODE</text>
+<circle cx="150.0" cy="30.0" r="3" fill="#222"/>
+<circle cx="208.8" cy="49.1" r="3" fill="#222"/>
+<circle cx="245.1" cy="99.1" r="3" fill="#222"/>
+<circle cx="245.1" cy="160.9" r="3" fill="#222"/>
+<circle cx="208.8" cy="210.9" r="3" fill="#222"/>
+<circle cx="150.0" cy="230.0" r="3" fill="#222"/>
+<circle cx="91.2" cy="210.9" r="3" fill="#222"/>
+<circle cx="54.9" cy="160.9" r="3" fill="#222"/>
+<circle cx="54.9" cy="99.1" r="3" fill="#222"/>
+<circle cx="91.2" cy="49.1" r="3" fill="#222"/>
+<text x="150.0" y="22.0" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">A</text>
+<text x="257.1" y="101.1" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">E</text>
+<text x="257.1" y="168.9" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">D</text>
+<text x="150.0" y="246.0" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">C</text>
+<text x="42.9" y="168.9" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">B</text>
+<text x="150.0" y="12.0" font-size="1" fill="#222" text-anchor="middle" font-weight="normal"></text></svg></li>
+    <li>E は A から2つ目、D は C から2つ目の点。O の高さをはさんで上下対称だから、ED はたての線になり、AC と平行。</li>
+    <li>三角形 CDE と三角形 ODE は、底辺 ED が同じで、C と O が同じ平行線の上にある → 面積が同じ。</li>
+    <li>斜線部分＝三角形 CDE ＋ 弓形（ED と弧の間）。三角形を ODE に取りかえると、<b>おうぎ形 ODE</b> になる。
+<svg viewBox="0 0 340 272" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><circle cx="150" cy="130" r="100" fill="none" stroke="#222" stroke-width="1.5"/>
+<path d="M150.0,230.0 L245.1,99.1 A100,100 0 0 1 245.1,160.9 Z" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M150,130 L245.1,99.1 A100,100 0 0 1 245.1,160.9 Z" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.5"/>
+<line x1="150.0" y1="30.0" x2="150.0" y2="230.0" stroke="#1565c0" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="150" cy="130" r="3" fill="#1565c0"/>
+<text x="140.0" y="124.0" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="normal">O</text>
+<text x="162.0" y="134.0" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal">36°</text>
+<text x="20.0" y="262.0" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold">△CDE を △ODE に取りかえる → おうぎ形ODE＝円の1/10</text>
+<circle cx="150.0" cy="30.0" r="3" fill="#222"/>
+<circle cx="208.8" cy="49.1" r="3" fill="#222"/>
+<circle cx="245.1" cy="99.1" r="3" fill="#222"/>
+<circle cx="245.1" cy="160.9" r="3" fill="#222"/>
+<circle cx="208.8" cy="210.9" r="3" fill="#222"/>
+<circle cx="150.0" cy="230.0" r="3" fill="#222"/>
+<circle cx="91.2" cy="210.9" r="3" fill="#222"/>
+<circle cx="54.9" cy="160.9" r="3" fill="#222"/>
+<circle cx="54.9" cy="99.1" r="3" fill="#222"/>
+<circle cx="91.2" cy="49.1" r="3" fill="#222"/>
+<text x="150.0" y="22.0" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">A</text>
+<text x="257.1" y="101.1" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">E</text>
+<text x="257.1" y="168.9" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">D</text>
+<text x="150.0" y="246.0" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">C</text>
+<text x="42.9" y="168.9" font-size="13" fill="#222" text-anchor="middle" font-weight="normal">B</text>
+<text x="150.0" y="12.0" font-size="1" fill="#222" text-anchor="middle" font-weight="normal"></text></svg></li>
+    <li>中心角は 360÷10＝36°だから、円の 1/10。10×10×3.14÷10＝31.4。</li>
+  </ol>
+  <div class="ans">答え：31.4cm²</div>
+  <div class="tip">コツ: 斜線部分の形が「三角形＋弓形」で、頂点の1つが円周上にあるときは、その頂点を中心 O に動かせないかを見る。動かせれば、おうぎ形の面積に変わる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 三角すいの容器に入った水 <span class="type">A・6点｜相似な立体の体積比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>底面積が15cm²で高さが8cm</b>」と「<b>水の深さが4cm</b>」。正面から見た三角形に 8 と 4 を書きこむ（図に置く）→ 水の入っていない上の三角すいが、全体と相似で<b>相似比 1:2</b> に決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角すいの体積＝底面積×高さ÷3。この容器は 15×8÷3＝40cm³。</li>
+    <li>相似な立体の体積の比は、相似比を3回かけたもの。相似比 1:2 なら体積比は 1×1×1 : 2×2×2＝1:8。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>正面から見た図を描く。水面は底面と平行だから、上の空の部分も三角すい。
+<svg viewBox="0 0 360 230" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><polygon points="95.0,110 205.0,110 260,200 40,200" fill="#dbe9ff"/>
+<polygon points="150,20 205.0,110 95.0,110" fill="#ffe0b2"/>
+<polygon points="150,20 260,200 40,200" fill="none" stroke="#222" stroke-width="1.5"/>
+<line x1="95.0" y1="110" x2="205.0" y2="110" stroke="#1565c0" stroke-width="1.5"/>
+<line x1="150" y1="20" x2="150" y2="200" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="156.0" y="69.0" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal">4</text>
+<text x="156.0" y="159.0" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="normal">4</text>
+<text x="20.0" y="20.0" font-size="12" fill="#222" text-anchor="start" font-weight="normal">高さ 8cm</text>
+<text x="150.0" y="218.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">底面積 15cm²</text>
+<text x="213.0" y="104.0" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="normal">空の部分（相似比 1:2）</text>
+<text x="245.0" y="159.0" font-size="12" fill="#1565c0" text-anchor="start" font-weight="normal">水</text></svg></li>
+    <li>空の部分の高さは 8−4＝4cm。全体の高さは 8cm。相似比は 4:8＝1:2。体積比は 1:8。</li>
+    <li>容器全体は 15×8÷3＝40cm³。</li>
+    <li>水は全体の（8−1）÷8＝<b>7/8</b>。40×7/8＝35。</li>
+    <li>落としやすい所: 水の部分を小さい三角すいだと思って 40×1/8＝5 と答えてしまう。相似な三角すいは上の「空の部分」で、水は残りの 7/8。</li>
+  </ol>
+  <div class="ans">答え：35cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 5×5 の格子の最短経路 <span class="type">A・6点｜最短経路（交差点に数を書く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>東西南北にはしる道</b>」と「<b>最短経路</b>」。図1 は横5マス・たて5マス。交差点ごとに「<b>左から来る数＋下から来る数</b>」を書きこむ（図に置く）→ B に書いた数が答えに決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>最短経路では、北か東にしか進まない。ある交差点に来る直前は、西どなりか南どなりの2つだけ。だから交差点の数は「左の数＋下の数」。</li>
+    <li>A と同じ横の辺・たての辺にある交差点は、行き方が1通りずつ。全部 1 と書く。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>左の辺と下の辺に 1 をならべる。内側は左下から順に、左と下をたして書く。
+<svg viewBox="0 0 300 275" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><line x1="40" y1="250" x2="250" y2="250" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="250" x2="40" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="208" x2="250" y2="208" stroke="#222" stroke-width="1"/>
+<line x1="82" y1="250" x2="82" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="166" x2="250" y2="166" stroke="#222" stroke-width="1"/>
+<line x1="124" y1="250" x2="124" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="124" x2="250" y2="124" stroke="#222" stroke-width="1"/>
+<line x1="166" y1="250" x2="166" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="82" x2="250" y2="82" stroke="#222" stroke-width="1"/>
+<line x1="208" y1="250" x2="208" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="40" x2="250" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="250" y1="250" x2="250" y2="40" stroke="#222" stroke-width="1"/>
+<rect x="31.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="116" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="74" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="32" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="73.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="73.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">2</text>
+<rect x="73.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">3</text>
+<rect x="73.5" y="116" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">4</text>
+<rect x="73.5" y="74" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">5</text>
+<rect x="73.5" y="32" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">6</text>
+<rect x="115.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="115.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">3</text>
+<rect x="115.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">6</text>
+<rect x="112.0" y="116" width="24" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">10</text>
+<rect x="112.0" y="74" width="24" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">15</text>
+<rect x="112.0" y="32" width="24" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">21</text>
+<rect x="157.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="157.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">4</text>
+<rect x="154.0" y="158" width="24" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">10</text>
+<rect x="154.0" y="116" width="24" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">20</text>
+<rect x="154.0" y="74" width="24" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">35</text>
+<rect x="154.0" y="32" width="24" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">56</text>
+<rect x="199.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="199.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">5</text>
+<rect x="196.0" y="158" width="24" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">15</text>
+<rect x="196.0" y="116" width="24" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">35</text>
+<rect x="196.0" y="74" width="24" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">70</text>
+<rect x="192.5" y="32" width="31" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">126</text>
+<rect x="241.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="241.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">6</text>
+<rect x="238.0" y="158" width="24" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">21</text>
+<rect x="238.0" y="116" width="24" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">56</text>
+<rect x="234.5" y="74" width="31" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">126</text>
+<rect x="234.5" y="32" width="31" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="44.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">252</text>
+<circle cx="40" cy="250" r="3.5" fill="#222"/>
+<text x="28.0" y="264.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">A</text>
+<circle cx="250" cy="40" r="11" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+<text x="268.0" y="30.0" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">B</text>
+<text x="40.0" y="16.0" font-size="12" fill="#222" text-anchor="start" font-weight="normal">交差点ごとに「左＋下」を書く</text></svg></li>
+    <li>いちばん右上の B は <b>252</b>。</li>
+    <li>落としやすい所: 数を書くのはマスではなく交差点。5×5 のマスなら交差点は 6×6。1 をならべる辺を1本ぬかすと、全部ずれる。</li>
+  </ol>
+  <div class="ans">答え：252通り</div>
+  <div class="tip">コツ: 別の見方として、右に5回・上に5回の合計10回の進み方のうち「どの5回を上にするか」を選ぶ計算でも出せる。10個から5個を選ぶ組み合わせ＝252。なれていれば速いが、(2)(3) では図に数を書く方法がそのまま使える。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> C地点を通る最短経路 <span class="type">A・6点｜最短経路（通る点で切る）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>C地点を通る</b>」。C で道を前半と後半に切り、「<b>AからC</b>」×「CからB」に直して書く → (1) で書いた図の数が、そのまま使える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「ある点を通る」行き方は、前半の行き方の数×後半の行き方の数。前半のどの行き方にも、後半の行き方が全部つながるから。</li>
+    <li>格子の形が同じなら、行き方の数も同じ。右3・上4 の行き方は、どこから数え始めても 35通り。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>C は A から右2・上1 の交差点。(1) の図で C に書いた数は 3。
+<svg viewBox="0 0 300 275" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><line x1="40" y1="250" x2="250" y2="250" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="250" x2="40" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="208" x2="250" y2="208" stroke="#222" stroke-width="1"/>
+<line x1="82" y1="250" x2="82" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="166" x2="250" y2="166" stroke="#222" stroke-width="1"/>
+<line x1="124" y1="250" x2="124" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="124" x2="250" y2="124" stroke="#222" stroke-width="1"/>
+<line x1="166" y1="250" x2="166" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="82" x2="250" y2="82" stroke="#222" stroke-width="1"/>
+<line x1="208" y1="250" x2="208" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="40" x2="250" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="250" y1="250" x2="250" y2="40" stroke="#222" stroke-width="1"/>
+<rect x="31.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="116" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="74" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="31.5" y="32" width="17" height="16" rx="3" fill="#fff"/>
+<text x="40.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="73.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="73.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">2</text>
+<rect x="73.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">3</text>
+<rect x="73.5" y="116" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">4</text>
+<rect x="73.5" y="74" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">5</text>
+<rect x="73.5" y="32" width="17" height="16" rx="3" fill="#fff"/>
+<text x="82.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">6</text>
+<rect x="115.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="115.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">3</text>
+<rect x="115.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">6</text>
+<rect x="112.0" y="116" width="24" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">10</text>
+<rect x="112.0" y="74" width="24" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">15</text>
+<rect x="112.0" y="32" width="24" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">21</text>
+<rect x="157.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="157.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">4</text>
+<rect x="154.0" y="158" width="24" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">10</text>
+<rect x="154.0" y="116" width="24" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">20</text>
+<rect x="154.0" y="74" width="24" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">35</text>
+<rect x="154.0" y="32" width="24" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">56</text>
+<rect x="199.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="199.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">5</text>
+<rect x="196.0" y="158" width="24" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">15</text>
+<rect x="196.0" y="116" width="24" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">35</text>
+<rect x="196.0" y="74" width="24" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">70</text>
+<rect x="192.5" y="32" width="31" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">126</text>
+<rect x="241.5" y="242" width="17" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="254.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="241.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">6</text>
+<rect x="238.0" y="158" width="24" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">21</text>
+<rect x="238.0" y="116" width="24" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">56</text>
+<rect x="234.5" y="74" width="31" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">126</text>
+<rect x="234.5" y="32" width="31" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="44.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">252</text>
+<circle cx="40" cy="250" r="3.5" fill="#222"/>
+<text x="28.0" y="264.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">A</text>
+<circle cx="250" cy="40" r="11" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+<text x="268.0" y="30.0" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">B</text>
+<circle cx="124" cy="208" r="11" fill="none" stroke="#1565c0" stroke-width="1.5"/>
+<text x="106.0" y="230.0" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">C</text>
+<circle cx="166" cy="82" r="11" fill="none" stroke="#1565c0" stroke-width="1.5"/>
+<text x="148.0" y="68.0" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">E</text>
+<text x="40.0" y="16.0" font-size="12" fill="#222" text-anchor="start" font-weight="normal">AからC＝3、AからE＝35</text></svg></li>
+    <li>C から B までは右3・上4。(1) の図で、A から右3・上4 の交差点 E に書いた数と同じ → 35。</li>
+    <li><b>3×35</b>＝105。</li>
+    <li>落としやすい所: C から B を一から数え直さなくてよい。「右3・上4」の形が同じ所（E）を (1) の図からさがす。</li>
+  </ol>
+  <div class="ans">答え：105通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> Cを通りDを通らない最短経路 <span class="type">B・6点｜最短経路（通れない道）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>D地点を通らない</b>」と「線の交点ではない<b>線上の点</b>」。D のある1本のたて道に×をつけ、C から B の数を書き直す（図に置く）→ (2) と同じ「AからC × CからB」で決まる。(2) の切り方が見えていれば手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>通れない道があるときは、その道からは数が来ない。交差点の数は「来られる方向だけの和」になる。</li>
+    <li>「通らない」は「全部−通る」でも出せる。たしかめに使える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>A から C は右2・上1 で 3通り（(2) と同じ）。</li>
+    <li>D は、C の右1 のたて道のうち、上1 と上2 の交差点の間にある。この1本に×をつける。×の上の交差点には、左からの 1 しか来ない。
+<svg viewBox="0 0 300 275" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif"><line x1="40" y1="250" x2="250" y2="250" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="250" x2="40" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="208" x2="250" y2="208" stroke="#222" stroke-width="1"/>
+<line x1="82" y1="250" x2="82" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="166" x2="250" y2="166" stroke="#222" stroke-width="1"/>
+<line x1="124" y1="250" x2="124" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="124" x2="250" y2="124" stroke="#222" stroke-width="1"/>
+<line x1="166" y1="250" x2="166" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="82" x2="250" y2="82" stroke="#222" stroke-width="1"/>
+<line x1="208" y1="250" x2="208" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="40" y1="40" x2="250" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="250" y1="250" x2="250" y2="40" stroke="#222" stroke-width="1"/>
+<line x1="166" y1="166" x2="166" y2="124" stroke="#d32f2f" stroke-width="4"/>
+<circle cx="166" cy="145.0" r="3.5" fill="#222"/>
+<text x="159.0" y="149.0" font-size="12" fill="#222" text-anchor="end" font-weight="normal">D</text>
+<text x="173.0" y="149.0" font-size="14" fill="#d32f2f" text-anchor="start" font-weight="bold">×</text>
+<rect x="115.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="115.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="115.5" y="116" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="115.5" y="74" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="115.5" y="32" width="17" height="16" rx="3" fill="#fff"/>
+<text x="124.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="157.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="157.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">2</text>
+<rect x="157.5" y="116" width="17" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="157.5" y="74" width="17" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">2</text>
+<rect x="157.5" y="32" width="17" height="16" rx="3" fill="#fff"/>
+<text x="166.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">3</text>
+<rect x="199.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="199.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">3</text>
+<rect x="199.5" y="116" width="17" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">4</text>
+<rect x="199.5" y="74" width="17" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">6</text>
+<rect x="199.5" y="32" width="17" height="16" rx="3" fill="#fff"/>
+<text x="208.0" y="44.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">9</text>
+<rect x="241.5" y="200" width="17" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="212.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">1</text>
+<rect x="241.5" y="158" width="17" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="170.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">4</text>
+<rect x="241.5" y="116" width="17" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="128.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">8</text>
+<rect x="238.0" y="74" width="24" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="86.0" font-size="12" fill="#222" text-anchor="middle" font-weight="normal">14</text>
+<rect x="238.0" y="32" width="24" height="16" rx="3" fill="#fff"/>
+<text x="250.0" y="44.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">23</text>
+<circle cx="40" cy="250" r="3.5" fill="#222"/>
+<text x="28.0" y="264.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">A</text>
+<circle cx="250" cy="40" r="11" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+<text x="268.0" y="30.0" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">B</text>
+<circle cx="124" cy="208" r="11" fill="none" stroke="#1565c0" stroke-width="1.5"/>
+<text x="106.0" y="230.0" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">C</text>
+<text x="40.0" y="16.0" font-size="12" fill="#222" text-anchor="start" font-weight="normal">D の道に×。CからBを数え直す</text></svg></li>
+    <li>C から順に「左＋下」をたしていく。×の道はたさない。B は 23。</li>
+    <li><b>3×23</b>＝69。</li>
+    <li>たしかめ（別の見方）。C から B は全部で 35。D を通る行き方は、C から×の下の交差点まで 2通り、×の上の交差点から B まで 6通りで 2×6＝12。35−12＝23。合っている。</li>
+  </ol>
+  <div class="ans">答え：69通り</div>
+  <div class="tip">コツ: 通れないのが「点」ではなく「道の途中」のときは、その道1本だけを消す。その道の上の交差点には、左からの数だけを書く。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ <span class="type">この2つの大問でくり返し出た入口</span></h2>
+  <ul>
+    <li>「5から」「深さ4cm」「Dを通らない」のように、ふつうの形から1か所だけ変えた条件が部品。その1か所を、1＋3 を足す／空の部分を相似にする／道に×をつける、の形に直してから計算する。</li>
+    <li>差を取る。通過算は、2本の線分図の差で「列車の長さ」が消える。2(3) は「全部 − Dを通る行き方」でたしかめられる。</li>
+    <li>図形は「中心を通る直線」と「平行」をさがす。見つかれば、三角形を動かしておうぎ形にできる。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（面積比と相似・水道管の比・女王の駒）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（大問3・4・5） <span class="type">A 21点／B 24点／C 3点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>3</td><td>三角形の外の点Pと3つの面積 → 辺の比・面積</td><td>A 6+6 / B 6</td><td>「面積が12・4・10」→ <b>同じ底辺の2つの三角形は、面積の比＝頂点までの長さの比</b>。(1)(2)(3)とも同じ道具</td></tr>
+  <tr><td>4</td><td>2:1・3:1・5:1に分かれる水道管</td><td>A 6 / B 6+6</td><td>「2:1に分かれる」→ ×2/3 と ×1/3 に直す。「すべて整数」→ <b>Aは3の倍数・Bは4の倍数・Cは6の倍数</b> が入る</td></tr>
+  <tr><td>5</td><td>女王の駒（たて・横・ななめ）を置く</td><td>A 3 / B 3+3 / C 3</td><td>「動ける範囲に入らない」→ 1行に1個まで。置いた駒の×印を先に書き、<b>残りが少ない行・列から決める</b></td></tr>
+  </table>
+  <p>取り方: <b>3(1)(2)・4(1)・5(1) のA 21点を先に確実に</b>。3(3)と4(2)(3)は手順が決まっているので時間があれば取れるB。5(2)は①だけ試し、②は1つ見つかればよい。③は後回し（受験者平均 63.9・合格者平均 72.5）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> BE:EC を求める <span class="type">A・6点｜同じ底辺→面積比＝長さの比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>三角形ABPの面積が12cm²</b>」「<b>三角形ACPの面積が10cm²</b>」。この2つを図に書きこむ（図に置く）→ どちらも<b>底辺がAP</b>。EはAPの上にあるので、BE:EC は 12:10 に決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>底辺が同じ2つの三角形は、面積の比＝高さの比。たとえば底辺6cmで面積が12と10なら、高さは4と10/3で、比は 12:10。</li>
+    <li>高さの比は、頂点から底辺の線に下ろした長さの比。B・E・Cが一直線にあり、EがAP（底辺の線）の上にあるなら、高さの比は BE:EC と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に 12 と 10 を書く。APを赤くなぞる。三角形ABP（青）と三角形ACP（オレンジ）は、どちらも底辺AP。
+<svg id="q3_1_fig" viewBox="0 0 345 310" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><polygon points="180.9,23.4 81.0,185.4 190.8,221.4" fill="#dbe9ff" stroke="none"/><polygon points="180.9,23.4 279.0,185.4 190.8,221.4" fill="#ffe0b2" stroke="none"/><line x1="14.4" y1="293.4" x2="180.9" y2="23.4" stroke="#222" stroke-width="1.6"/><line x1="180.9" y1="23.4" x2="328.1" y2="266.4" stroke="#222" stroke-width="1.6"/><line x1="81.0" y1="185.4" x2="279.0" y2="185.4" stroke="#222" stroke-width="1.6"/><line x1="180.9" y1="23.4" x2="190.8" y2="221.4" stroke="#222" stroke-width="1.6"/><line x1="81.0" y1="185.4" x2="328.1" y2="266.4" stroke="#222" stroke-width="1.6"/><line x1="279.0" y1="185.4" x2="14.4" y2="293.4" stroke="#222" stroke-width="1.6"/><text x="180.9" y="17.4" font-size="15" fill="#222" text-anchor="middle">A</text><text x="71.0" y="190.4" font-size="15" fill="#222" text-anchor="middle">B</text><text x="289.0" y="190.4" font-size="15" fill="#222" text-anchor="middle">C</text><text x="199.0" y="180.4" font-size="13" fill="#222" text-anchor="middle">E</text><text x="196.8" y="237.4" font-size="13" fill="#222" text-anchor="middle">P</text><text x="8.0" y="304.0" font-size="15" fill="#222" text-anchor="middle">D</text><text x="337.0" y="276.0" font-size="15" fill="#222" text-anchor="middle">F</text><text x="142.2" y="127.8" font-size="14" fill="#222" text-anchor="middle">12</text><text x="223.2" y="127.8" font-size="14" fill="#222" text-anchor="middle">10</text><text x="135.0" y="180.4" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">⑥</text><text x="234.0" y="180.4" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">⑤</text><line x1="180.9" y1="23.4" x2="190.8" y2="221.4" stroke="#d32f2f" stroke-width="2.4"/></svg></li>
+    <li>面積の比 12:10 が、そのまま高さの比。高さの比は BE:EC と同じ。</li>
+    <li><b>BE:EC＝12:10</b>＝6:5。</li>
+    <li>落としやすい所: 底辺を BC と見てしまうと動けない。P が三角形の外にあっても、「同じ底辺AP」の形は変わらない。</li>
+  </ol>
+  <div class="ans">答え：6:5</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> AF:CF を求める <span class="type">A・6点｜同じ底辺→面積比＝長さの比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>辺ACを延長した直線と直線BPを延長した直線の交点をF</b>」。Fは直線BPの上にある、と直して書く → (1)と同じ形。<b>底辺をBPにした三角形ABPと三角形CBP</b>の面積の比 12:4 が AF:CF になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)と同じ決まり。底辺が同じ2つの三角形は、面積の比＝高さの比。</li>
+    <li>A・F・Cが一直線で、Fが底辺の線（直線BP）の上にあるなら、AとCから直線BPまでの高さの比は AF:CF と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>直線BPを赤くなぞる。三角形ABP（12）と三角形CBP（4）は、どちらも底辺BP。青が三角形ABP、緑が三角形CBPで、BPのそばで重なっている。AとCから直線BPへの高さを点線で描く。
+<svg id="q3_2_fig" viewBox="0 0 345 310" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><polygon points="180.9,23.4 81.0,185.4 190.8,221.4" fill="#dbe9ff" stroke="none"/><polygon points="81.0,185.4 279.0,185.4 190.8,221.4" fill="#66bb6a" fill-opacity="0.45" stroke="none"/><line x1="14.4" y1="293.4" x2="180.9" y2="23.4" stroke="#222" stroke-width="1.6"/><line x1="180.9" y1="23.4" x2="328.1" y2="266.4" stroke="#222" stroke-width="1.6"/><line x1="81.0" y1="185.4" x2="279.0" y2="185.4" stroke="#222" stroke-width="1.6"/><line x1="180.9" y1="23.4" x2="190.8" y2="221.4" stroke="#222" stroke-width="1.6"/><line x1="81.0" y1="185.4" x2="328.1" y2="266.4" stroke="#222" stroke-width="1.6"/><line x1="279.0" y1="185.4" x2="14.4" y2="293.4" stroke="#222" stroke-width="1.6"/><text x="180.9" y="17.4" font-size="15" fill="#222" text-anchor="middle">A</text><text x="71.0" y="190.4" font-size="15" fill="#222" text-anchor="middle">B</text><text x="289.0" y="190.4" font-size="15" fill="#222" text-anchor="middle">C</text><text x="199.0" y="180.4" font-size="13" fill="#222" text-anchor="middle">E</text><text x="196.8" y="237.4" font-size="13" fill="#222" text-anchor="middle">P</text><text x="8.0" y="304.0" font-size="15" fill="#222" text-anchor="middle">D</text><text x="337.0" y="276.0" font-size="15" fill="#222" text-anchor="middle">F</text><line x1="81.0" y1="185.4" x2="328.1" y2="266.4" stroke="#d32f2f" stroke-width="2.4"/><line x1="180.9" y1="23.4" x2="123.2" y2="199.3" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="4 3"/><line x1="279.0" y1="185.4" x2="259.8" y2="244.0" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="4 3"/><text x="164.0" y="140.0" font-size="14" fill="#222" text-anchor="middle">12</text><text x="226.0" y="201.0" font-size="13" fill="#222" text-anchor="middle">4</text><text x="235.8" y="86.4" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">②</text><text x="311.4" y="217.8" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">①</text><text x="122.4" y="84.6" font-size="12" fill="#1565c0" text-anchor="middle">高さ</text><text x="242.0" y="226.0" font-size="12" fill="#1565c0" text-anchor="middle">高さ</text></svg></li>
+    <li>面積の比 <b>12:4＝3:1</b> が高さの比。Fは直線BPの上にあるので、AF:CF＝3:1。</li>
+    <li>AF:CF＝3:1 から、AC:CF＝(3−1):1＝2:1。これは (3) で使う。問題の図は長さが正確ではないので、見た目では確かめない。</li>
+    <li>落としやすい所: 「AF」は A から F まで全部の長さ。AC:CF と取りちがえない。</li>
+  </ol>
+  <div class="ans">答え：3:1</div>
+  <div class="tip">コツ：声の教育社の解説は「AE:EP＝9:2 を出してから、Cを通りAPに平行な線を引いて相似」で 3:1 を出している。同じ答えになるが、(1)と同じ「同じ底辺」の見方のほうが1行で出る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 三角形ADFの面積 <span class="type">B・6点｜辺の比から面積を広げる</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>辺ABを延長した直線と直線CPを延長した直線の交点をD</b>」と、求めるもの「<b>三角形ADFの面積</b>」。Dは直線CPの上、と直して書く → AD:BD は三角形ACPと三角形BCPの面積の比。三角形ABC（18cm²）を AB→AD、AC→AF の2方向に広げる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角形ABCの面積は、四角形ABPCから三角形BCPを引く。12＋10−4＝18cm²。</li>
+    <li>角Aが同じ2つの三角形は、角Aをはさむ2つの辺を何倍にのばしたかをかけると、面積が何倍かが出る。ABを2倍、ACを3倍にのばせば、面積は 2×3＝6倍。</li>
+    <li>B・D・Aが一直線で、Dが直線CPの上にあるなら、AD:BD＝（三角形ACPの面積）:（三角形BCPの面積）。(1)(2)と同じ決まり。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>三角形ABCの面積を出す。12＋10＝22、22−4＝18cm²。</li>
+    <li>AD:BD。底辺をCPにした三角形ACP（10）と三角形BCP（4）の比 10:4＝5:2。Dは直線CPの上にあるので AD:BD＝5:2。つまり AB:AD＝(5−2):5＝3:5。</li>
+    <li>AF:AC。(2)より AF:CF＝3:1 なので AC:AF＝2:3。</li>
+    <li>三角形ADF（オレンジ）は、三角形ABC（青・18）の AB を 5/3倍、AC を 3/2倍にのばした形。
+<svg id="q3_3_fig" viewBox="0 0 345 310" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block"><polygon points="180.9,23.4 14.4,293.4 328.1,266.4" fill="#ffe0b2" stroke="none"/><polygon points="180.9,23.4 81.0,185.4 279.0,185.4" fill="#dbe9ff" stroke="none"/><line x1="14.4" y1="293.4" x2="180.9" y2="23.4" stroke="#222" stroke-width="1.6"/><line x1="14.4" y1="293.4" x2="328.1" y2="266.4" stroke="#222" stroke-width="1.6"/><line x1="180.9" y1="23.4" x2="328.1" y2="266.4" stroke="#222" stroke-width="1.6"/><line x1="81.0" y1="185.4" x2="279.0" y2="185.4" stroke="#222" stroke-width="1.6"/><line x1="180.9" y1="23.4" x2="190.8" y2="221.4" stroke="#222" stroke-width="1.6"/><line x1="81.0" y1="185.4" x2="328.1" y2="266.4" stroke="#222" stroke-width="1.6"/><line x1="279.0" y1="185.4" x2="14.4" y2="293.4" stroke="#222" stroke-width="1.6"/><text x="180.9" y="17.4" font-size="15" fill="#222" text-anchor="middle">A</text><text x="71.0" y="190.4" font-size="15" fill="#222" text-anchor="middle">B</text><text x="289.0" y="190.4" font-size="15" fill="#222" text-anchor="middle">C</text><text x="199.0" y="180.4" font-size="13" fill="#222" text-anchor="middle">E</text><text x="196.8" y="237.4" font-size="13" fill="#222" text-anchor="middle">P</text><text x="8.0" y="304.0" font-size="15" fill="#222" text-anchor="middle">D</text><text x="337.0" y="276.0" font-size="15" fill="#222" text-anchor="middle">F</text><line x1="180.9" y1="23.4" x2="14.4" y2="293.4" stroke="#d32f2f" stroke-width="2.4"/><line x1="180.9" y1="23.4" x2="328.1" y2="266.4" stroke="#d32f2f" stroke-width="2.4"/><line x1="14.4" y1="293.4" x2="328.1" y2="266.4" stroke="#d32f2f" stroke-width="2.4"/><text x="108.0" y="86.4" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">③</text><text x="41.4" y="232.2" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">②</text><text x="235.8" y="86.4" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">②</text><text x="311.4" y="217.8" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">①</text><text x="150.0" y="140.0" font-size="14" fill="#222" text-anchor="middle">18</text></svg></li>
+    <li><b>18×5/3×3/2</b>＝18×5/2＝45cm²。</li>
+    <li>たしかめ。声の教育社の順でも、三角形ABF＝18×3/2＝27、三角形ADF＝27×5/3＝45 で同じ。</li>
+  </ol>
+  <div class="ans">答え：45cm²</div>
+  <div class="tip">コツ：手を付ける合図は「(2)で AF:CF が出ている」こと。AD:BD も同じ道具（同じ底辺CP）で出るので、残りはかけ算だけ。声の教育社は Bを通りAPに平行な線を引く相似で AD:BD＝5:2 を出しているが、答えは同じ。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 図3の水道管に12L <span class="type">A・6点｜比で分ける</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2つの出口にそれぞれ書いてある数の比に分かれて</b>」と「<b>一番左の出口から順に</b>」。A（2:1）は ×2/3 と ×1/3、C（5:1）は ×5/6 と ×1/6、B（3:1）は ×3/4 と ×1/4 に直して、図3の枝に書く → 上から順にかけるだけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>比 2:1 に分けるときは、全体を 2＋1＝3 とみる。12Lなら 12×2/3＝8L と 12×1/3＝4L。</li>
+    <li>図3では、Aの左の出口の下にC、右の出口の下にBがつながっている。左右を取りちがえない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図3の枝に、かける分数を書く。
+<svg id="q4_1_fig" viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg" style="max-width:320px;width:100%;height:auto;display:block"><line x1="160" y1="42" x2="90" y2="62" stroke="#222" stroke-width="1.5"/><line x1="160" y1="42" x2="230" y2="62" stroke="#222" stroke-width="1.5"/><line x1="90" y1="102" x2="45" y2="130" stroke="#222" stroke-width="1.5"/><line x1="90" y1="102" x2="135" y2="130" stroke="#222" stroke-width="1.5"/><line x1="230" y1="102" x2="195" y2="130" stroke="#222" stroke-width="1.5"/><line x1="230" y1="102" x2="265" y2="130" stroke="#222" stroke-width="1.5"/><text x="160" y="18" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">12L</text><text x="160" y="38" font-size="14" fill="#222" text-anchor="middle">A</text><text x="90" y="78" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">8L</text><text x="90" y="98" font-size="14" fill="#222" text-anchor="middle">C</text><text x="230" y="78" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">4L</text><text x="230" y="98" font-size="14" fill="#222" text-anchor="middle">B</text><text x="45" y="147" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">6 2/3</text><text x="135" y="147" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">1 1/3</text><text x="195" y="147" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">3</text><text x="265" y="147" font-size="14" fill="#d32f2f" text-anchor="middle" font-weight="bold">1</text><text x="118" y="45" font-size="12" fill="#1565c0" text-anchor="end">×2/3</text><text x="202" y="45" font-size="12" fill="#1565c0" text-anchor="start">×1/3</text><text x="58" y="112" font-size="12" fill="#1565c0" text-anchor="end">×5/6</text><text x="122" y="112" font-size="12" fill="#1565c0" text-anchor="start">×1/6</text><text x="201" y="112" font-size="12" fill="#1565c0" text-anchor="end">×3/4</text><text x="259" y="112" font-size="12" fill="#1565c0" text-anchor="start">×1/4</text><text x="160" y="178" font-size="12" fill="#222" text-anchor="middle">左の出口から順に 6 2/3L・1 1/3L・3L・1L</text></svg></li>
+    <li>A: 12×2/3＝8L（左）、12−8＝4L（右）。</li>
+    <li>左のC: <b>8×5/6</b>＝40/6＝20/3＝6 2/3L、8−6 2/3＝1 1/3L。</li>
+    <li>右のB: 4×3/4＝3L、4−3＝1L。</li>
+    <li>たしかめ。6 2/3＋1 1/3＋3＋1＝12。合っている。</li>
+    <li>落としやすい所: 答えは「一番左から順に」4つ。順番を入れかえると×になる。</li>
+  </ol>
+  <div class="ans">答え：6 2/3L・1 1/3L・3L・1L</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 図4で出口がすべて整数になる最少の量 <span class="type">B・6点｜分数の分母の最小公倍数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>すべて整数の値</b>」と「<b>最も少ない量</b>」。入れた量を1として、8つの出口を分数で書く（直して書く）→ <b>8つの分母の最小公倍数</b>が答え。その量なら、どの出口も整数になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>入れた量を1とすると、Aの左は 2/3、右は 1/3。そこから下へ ×5/6 や ×1/6 をかけていく。</li>
+    <li>「1の 5/12 が整数」なら、入れた量は12の倍数。8つ全部で整数にするなら、分母全部の公倍数。最も少ないのは最小公倍数。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図4に分数を書いていく。上から順に 1 → 2/3 と 1/3 → Cで ×5/6・×1/6 → 一番下で B（×3/4・×1/4）、A（×2/3・×1/3）、C（×5/6・×1/6）。
+<table><tr><th>出口（左から）</th><th>通る管</th><th>分数</th><th>216Lなら</th></tr>
+<tr><td>1</td><td>A左→C左→B左</td><td>2/3×5/6×3/4＝5/12</td><td>90L</td></tr>
+<tr><td>2</td><td>A左→C左→B右</td><td>2/3×5/6×1/4＝5/36</td><td>30L</td></tr>
+<tr><td>3</td><td>A左→C右→A左</td><td>2/3×1/6×2/3＝<b>2/27</b></td><td>16L</td></tr>
+<tr><td>4</td><td>A左→C右→A右</td><td>2/3×1/6×1/3＝1/27</td><td>8L</td></tr>
+<tr><td>5</td><td>A右→C左→B左</td><td>1/3×5/6×3/4＝<b>5/24</b></td><td>45L</td></tr>
+<tr><td>6</td><td>A右→C左→B右</td><td>1/3×5/6×1/4＝5/72</td><td>15L</td></tr>
+<tr><td>7</td><td>A右→C右→C左</td><td>1/3×1/6×5/6＝5/108</td><td>10L</td></tr>
+<tr><td>8</td><td>A右→C右→C右</td><td>1/3×1/6×1/6＝1/108</td><td>2L</td></tr></table></li>
+    <li>分母 12・36・27・24・72・108 の最小公倍数を連除法で出す。
+<pre class="fig">3 ) 12  36  27  24  72  108
+3 )  4  12   9   8  24   36
+3 )  4   4   3   8   8   12
+2 )  4   4   1   8   8    4
+2 )  2   2   1   4   4    2
+2 )  1   1   1   2   2    1
+     1   1   1   1   1    1   → 3×3×3×2×2×2＝216</pre></li>
+    <li>たしかめ。216L を入れると 90・30・16・8・45・15・10・2 で全部整数。たすと216。</li>
+  </ol>
+  <div class="ans">答え：216L</div>
+  <div class="tip">コツ：手を付ける合図は「分数を8つ書けば終わる」と見えること。分母は 27＝3×3×3 と 24・72＝2×2×2×… が出るので、3が3回・2が3回で216。約分を忘れると分母が大きくなりすぎる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 図5の( )にA・B・Cを入れて72L <span class="type">B・6点｜場合分け（倍数で消す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>72Lの水を流し入れ</b>」「<b>すべて整数の値</b>」。「整数になる」は、<b>Aに入る量は3の倍数・Bは4の倍数・Cは6の倍数</b> と直して書く → 上の( )を A・B・C で場合分けし、出てくる量の倍数を見れば決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Aは 2:1 に分けるので、入る量が3の倍数でないと出口が整数にならない。同じく Bは4の倍数、Cは6の倍数。たとえばAに8Lだと 16/3 と 8/3 で整数にならない。</li>
+    <li>一番上はCで決まっている。72×5/6＝60L（左）、72−60＝12L（右）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図5の( )に ❶〜❻ と番号を付け、上の2本の量 60L・12L を書く。
+<svg id="q4_3_fig" viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;width:100%;height:auto;display:block"><line x1="170" y1="25" x2="90" y2="46" stroke="#222" stroke-width="1.5"/><line x1="170" y1="25" x2="250" y2="46" stroke="#222" stroke-width="1.5"/><line x1="90" y1="65" x2="45" y2="91" stroke="#222" stroke-width="1.5"/><line x1="90" y1="65" x2="130" y2="91" stroke="#222" stroke-width="1.5"/><line x1="250" y1="65" x2="210" y2="91" stroke="#222" stroke-width="1.5"/><line x1="250" y1="65" x2="295" y2="91" stroke="#222" stroke-width="1.5"/><text x="170" y="20" font-size="14" fill="#222" text-anchor="middle">72L  C</text><text x="90" y="60" font-size="14" fill="#222" text-anchor="middle">60L ❶</text><text x="250" y="60" font-size="14" fill="#222" text-anchor="middle">12L ❹</text><text x="45" y="105" font-size="14" fill="#222" text-anchor="middle">ア ❷</text><text x="130" y="105" font-size="14" fill="#222" text-anchor="middle">イ ❸</text><text x="210" y="105" font-size="14" fill="#222" text-anchor="middle">キ ❺</text><text x="295" y="105" font-size="14" fill="#222" text-anchor="middle">ク ❻</text><text x="45" y="140" font-size="13" fill="#222" text-anchor="middle">ウ エ</text><line x1="45" y1="110" x2="31" y2="128" stroke="#222" stroke-width="1.2"/><line x1="45" y1="110" x2="59" y2="128" stroke="#222" stroke-width="1.2"/><text x="130" y="140" font-size="13" fill="#222" text-anchor="middle">オ カ</text><line x1="130" y1="110" x2="116" y2="128" stroke="#222" stroke-width="1.2"/><line x1="130" y1="110" x2="144" y2="128" stroke="#222" stroke-width="1.2"/><text x="210" y="140" font-size="13" fill="#222" text-anchor="middle">ケ コ</text><line x1="210" y1="110" x2="196" y2="128" stroke="#222" stroke-width="1.2"/><line x1="210" y1="110" x2="224" y2="128" stroke="#222" stroke-width="1.2"/><text x="295" y="140" font-size="13" fill="#222" text-anchor="middle">サ シ</text><line x1="295" y1="110" x2="281" y2="128" stroke="#222" stroke-width="1.2"/><line x1="295" y1="110" x2="309" y2="128" stroke="#222" stroke-width="1.2"/><text x="126" y="29" font-size="12" fill="#1565c0" text-anchor="end">×5/6</text><text x="214" y="29" font-size="12" fill="#1565c0" text-anchor="start">×1/6</text></svg></li>
+    <li>左の ❶ に 60L が入る。A・B・C それぞれで、出てくる2つの量と、その下に入れられる管を表にする。
+<table><tr><th>❶</th><th>ア・イ</th><th>ア・イは何の倍数か</th><th>❷❸</th></tr>
+<tr><td>A</td><td>40・20</td><td>4の倍数だけ → B</td><td>B・B ○</td></tr>
+<tr><td>B</td><td>45・15</td><td>3の倍数だけ → A</td><td>A・A ○</td></tr>
+<tr><td>C</td><td>50・10</td><td>3でも4でも6でも割れない</td><td>×</td></tr></table>
+左は <b>2通り</b>（❶❷❸＝A B B か B A A）。</li>
+    <li>右の ❹ に 12L が入る。同じ表を作る。
+<table><tr><th>❹</th><th>キ・ク</th><th>何の倍数か</th><th>❺❻</th></tr>
+<tr><td>A</td><td>8・4</td><td>4の倍数だけ → B</td><td>B・B ○</td></tr>
+<tr><td>B</td><td>9・3</td><td>3の倍数だけ → A</td><td>A・A ○</td></tr>
+<tr><td>C</td><td>10・2</td><td>割れない</td><td>×</td></tr></table>
+右も <b>2通り</b>。</li>
+    <li>左と右は別々に決められるので、2×2＝4通り。</li>
+    <li>たしかめ。❶=A, ❷❸=B なら 40→30・10、20→15・5 で全部整数。</li>
+  </ol>
+  <div class="ans">答え：4通り</div>
+  <div class="tip">コツ：手を付ける合図は「上の( )は3通りしかない」こと。1つずつ量を出して割れるか見るだけなので、(2)より先にやってもよい。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 5×5に置ける女王の駒の最大数 <span class="type">A・3点｜上限を決めてから例を作る</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>たて、よこ、ななめにどこまでも動ける</b>」と「<b>お互いが動ける範囲に入らない</b>」。「同じ行に2個は置けない」と直して書く → <b>5行だから最大でも5個</b>。あとは5個置ける例を1つ作れば答え。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1行（横一列）に2個あると、横に動いて相手に当たる。だから1行に1個まで。5行なら5個が上限。</li>
+    <li>置いたら、その駒のたて・横・ななめのマスに×を書く。次の駒は×のないマスだけ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>左上に1個目を置き、×を書く。2行目で置けるのは3列目から右。★（2行目・3列目）に2個目。
+<svg id="q5_1a_fig" viewBox="0 0 144 162" xmlns="http://www.w3.org/2000/svg" style="max-width:150px;width:100%;height:auto;display:block"><line x1="2" y1="2" x2="142" y2="2" stroke="#222" stroke-width="1"/><line x1="2" y1="2" x2="2" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="30" x2="142" y2="30" stroke="#222" stroke-width="1"/><line x1="30" y1="2" x2="30" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="58" x2="142" y2="58" stroke="#222" stroke-width="1"/><line x1="58" y1="2" x2="58" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="86" x2="142" y2="86" stroke="#222" stroke-width="1"/><line x1="86" y1="2" x2="86" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="114" x2="142" y2="114" stroke="#222" stroke-width="1"/><line x1="114" y1="2" x2="114" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="142" x2="142" y2="142" stroke="#222" stroke-width="1"/><line x1="142" y1="2" x2="142" y2="142" stroke="#222" stroke-width="1"/><text x="100.0" y="105.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="44.0" y="21.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="128.0" y="133.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="16.0" y="49.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="128.0" y="21.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="16.0" y="77.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="16.0" y="105.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="16.0" y="133.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="100.0" y="21.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="72.0" y="77.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="44.0" y="49.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="72.0" y="21.0" font-size="14" fill="#888" text-anchor="middle">×</text><text x="72.0" y="49.0" font-size="14" fill="#1565c0" text-anchor="middle">★</text><circle cx="16.0" cy="16.0" r="9.2" fill="#fff" stroke="#222" stroke-width="2"/><text x="72.0" y="158" font-size="12" fill="#222" text-anchor="middle">1個目のあと</text></svg></li>
+    <li>同じように×を書き足し、3行目・4行目・5行目に1個ずつ。1行下がるごとに2列右へずらす（右はしをこえたら左はしにもどる）と、うまく5個入る。
+<svg id="q5_1b_fig" viewBox="0 0 144 162" xmlns="http://www.w3.org/2000/svg" style="max-width:150px;width:100%;height:auto;display:block"><line x1="2" y1="2" x2="142" y2="2" stroke="#222" stroke-width="1"/><line x1="2" y1="2" x2="2" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="30" x2="142" y2="30" stroke="#222" stroke-width="1"/><line x1="30" y1="2" x2="30" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="58" x2="142" y2="58" stroke="#222" stroke-width="1"/><line x1="58" y1="2" x2="58" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="86" x2="142" y2="86" stroke="#222" stroke-width="1"/><line x1="86" y1="2" x2="86" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="114" x2="142" y2="114" stroke="#222" stroke-width="1"/><line x1="114" y1="2" x2="114" y2="142" stroke="#222" stroke-width="1"/><line x1="2" y1="142" x2="142" y2="142" stroke="#222" stroke-width="1"/><line x1="142" y1="2" x2="142" y2="142" stroke="#222" stroke-width="1"/><circle cx="16.0" cy="16.0" r="9.2" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="72.0" cy="44.0" r="9.2" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="128.0" cy="72.0" r="9.2" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="44.0" cy="100.0" r="9.2" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="100.0" cy="128.0" r="9.2" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><text x="72.0" y="158" font-size="12" fill="#222" text-anchor="middle">5個の例</text></svg></li>
+    <li>5個置けた。上限も5個なので、<b>最大は5個</b>。</li>
+    <li>落としやすい所: 例を1つ作っただけでは「最大」の理由にならない。「1行に1個まで」を一言そえると、確かめにもなる。</li>
+  </ol>
+  <div class="ans">答え：5個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)①</span> 図1（駒4個あり）に最大まで置く <span class="type">B・3点｜×を書いて残りの少ない行から</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>駒の数が最大となるように</b>」と図1の駒4個。4個のたて・横・ななめに×を書く（図に置く）→ 残りのマスは10個だけ。<b>残りが2つしかない2行目・8行目から</b>決めると、行き止まりが早く見つかる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>8×8なら1行に1個までで、最大8個。4個あるので、書き足せるのは最大4個。残りの行 2・4・6・8 に1個ずつ入れば最大。</li>
+    <li>行き止まり（置ける所がない）になったら、1つ前の駒を別のマスに動かす。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>4個の駒のたて・横・ななめに×。残り（黄色）は 2行目: 7・8列、4行目: 5・6・8列、6行目: 5・7・8列、8行目: 6・7列。
+<svg id="q5_2a_fig" viewBox="0 0 212 230" xmlns="http://www.w3.org/2000/svg" style="max-width:215px;width:100%;height:auto;display:block"><rect x="158" y="28" width="26" height="26" fill="#fff3c4"/><rect x="184" y="28" width="26" height="26" fill="#fff3c4"/><rect x="106" y="80" width="26" height="26" fill="#fff3c4"/><rect x="132" y="80" width="26" height="26" fill="#fff3c4"/><rect x="184" y="80" width="26" height="26" fill="#fff3c4"/><rect x="106" y="132" width="26" height="26" fill="#fff3c4"/><rect x="158" y="132" width="26" height="26" fill="#fff3c4"/><rect x="184" y="132" width="26" height="26" fill="#fff3c4"/><rect x="132" y="184" width="26" height="26" fill="#fff3c4"/><rect x="158" y="184" width="26" height="26" fill="#fff3c4"/><line x1="2" y1="2" x2="210" y2="2" stroke="#222" stroke-width="1"/><line x1="2" y1="2" x2="2" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="28" x2="210" y2="28" stroke="#222" stroke-width="1"/><line x1="28" y1="2" x2="28" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="54" x2="210" y2="54" stroke="#222" stroke-width="1"/><line x1="54" y1="2" x2="54" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="80" x2="210" y2="80" stroke="#222" stroke-width="1"/><line x1="80" y1="2" x2="80" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="106" x2="210" y2="106" stroke="#222" stroke-width="1"/><line x1="106" y1="2" x2="106" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="132" x2="210" y2="132" stroke="#222" stroke-width="1"/><line x1="132" y1="2" x2="132" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="158" x2="210" y2="158" stroke="#222" stroke-width="1"/><line x1="158" y1="2" x2="158" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="184" x2="210" y2="184" stroke="#222" stroke-width="1"/><line x1="184" y1="2" x2="184" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="210" x2="210" y2="210" stroke="#222" stroke-width="1"/><line x1="210" y1="2" x2="210" y2="210" stroke="#222" stroke-width="1"/><text x="93.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="171.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="171.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="145.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="119.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="150.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="171.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="145.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="145.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="119.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="197.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="119.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="150.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="197.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="150.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="145.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="171.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="119.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="197.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="119.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="197.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="171.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="145.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="145.0" y="150.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="119.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="150.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="197.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><circle cx="93.0" cy="15.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="67.0" cy="67.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="41.0" cy="119.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="15.0" cy="171.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><text x="106.0" y="226" font-size="12" fill="#222" text-anchor="middle">×＝置けないマス・黄色＝残り</text></svg></li>
+    <li>2行目を8列目にすると、4行目は5列目だけ（6列目はななめ）。すると6行目は 5・7・8列が全部消えて行き止まり。だから <b>2行目は7列目</b>。</li>
+    <li>2行目が7列目なら、4行目は 6か8（5列目はななめ）。6列目だと8行目の 6・7 が両方使えず行き止まり。だから4行目は8列目。</li>
+    <li>6行目は 5列目（7は使用済み・8も使用済み）。8行目は 6列目。ななめも当たっていない。
+<svg id="q5_2b_fig" viewBox="0 0 212 230" xmlns="http://www.w3.org/2000/svg" style="max-width:215px;width:100%;height:auto;display:block"><line x1="2" y1="2" x2="210" y2="2" stroke="#222" stroke-width="1"/><line x1="2" y1="2" x2="2" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="28" x2="210" y2="28" stroke="#222" stroke-width="1"/><line x1="28" y1="2" x2="28" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="54" x2="210" y2="54" stroke="#222" stroke-width="1"/><line x1="54" y1="2" x2="54" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="80" x2="210" y2="80" stroke="#222" stroke-width="1"/><line x1="80" y1="2" x2="80" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="106" x2="210" y2="106" stroke="#222" stroke-width="1"/><line x1="106" y1="2" x2="106" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="132" x2="210" y2="132" stroke="#222" stroke-width="1"/><line x1="132" y1="2" x2="132" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="158" x2="210" y2="158" stroke="#222" stroke-width="1"/><line x1="158" y1="2" x2="158" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="184" x2="210" y2="184" stroke="#222" stroke-width="1"/><line x1="184" y1="2" x2="184" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="210" x2="210" y2="210" stroke="#222" stroke-width="1"/><line x1="210" y1="2" x2="210" y2="210" stroke="#222" stroke-width="1"/><circle cx="93.0" cy="15.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="67.0" cy="67.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="41.0" cy="119.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="15.0" cy="171.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="171.0" cy="41.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="197.0" cy="93.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="119.0" cy="145.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="145.0" cy="197.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><text x="106.0" y="226" font-size="12" fill="#222" text-anchor="middle">赤＝書き足す4個</text></svg></li>
+    <li>たしかめ。8個の駒が、どの行・どの列にも1個ずつ。ななめは「行の差＝列の差」になる組がないか見る。</li>
+  </ol>
+  <div class="ans">答え：解説の図⑨を参照のこと。（上から 2行目・7列目、4行目・8列目、6行目・5列目、8行目・6列目に○を書き足す。全部で8個）</div>
+  <div class="tip">コツ：手を付ける合図は「×を書いたら残りが10マスしかない」こと。候補が2つの行から試せば、2回の行き止まりで決まる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)②</span> 図2（駒2個あり）に最大まで置く <span class="type">B・3点｜候補の少ない列から決める</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は図2の駒2個（4行目・1列目、8行目・2列目）と「<b>駒の数が最大</b>」。×を書く（図に置く）→ 残りの行 1・2・3・5・6・7 と列 3〜8 に1個ずつ入れば8個で最大。<b>候補が3つしかない3列目・4列目から</b>決める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>最大は8個（1行に1個まで）。書き足すのは6個。1つ見つかれば答え。置き方は3通りある。</li>
+    <li>×を書いたあと、「置ける行が少ない列」から決めると、行き止まりが早く分かる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2個の駒のたて・横・ななめに×を書く。3列目に置けるのは 1・3・5行目、4列目は 2・3・5行目だけ。
+<svg id="q5_2c_fig" viewBox="0 0 212 230" xmlns="http://www.w3.org/2000/svg" style="max-width:215px;width:100%;height:auto;display:block"><rect x="54" y="2" width="26" height="26" fill="#fff3c4"/><rect x="106" y="2" width="26" height="26" fill="#fff3c4"/><rect x="132" y="2" width="26" height="26" fill="#fff3c4"/><rect x="158" y="2" width="26" height="26" fill="#fff3c4"/><rect x="184" y="2" width="26" height="26" fill="#fff3c4"/><rect x="80" y="28" width="26" height="26" fill="#fff3c4"/><rect x="106" y="28" width="26" height="26" fill="#fff3c4"/><rect x="132" y="28" width="26" height="26" fill="#fff3c4"/><rect x="158" y="28" width="26" height="26" fill="#fff3c4"/><rect x="54" y="54" width="26" height="26" fill="#fff3c4"/><rect x="80" y="54" width="26" height="26" fill="#fff3c4"/><rect x="106" y="54" width="26" height="26" fill="#fff3c4"/><rect x="132" y="54" width="26" height="26" fill="#fff3c4"/><rect x="184" y="54" width="26" height="26" fill="#fff3c4"/><rect x="54" y="106" width="26" height="26" fill="#fff3c4"/><rect x="80" y="106" width="26" height="26" fill="#fff3c4"/><rect x="132" y="106" width="26" height="26" fill="#fff3c4"/><rect x="158" y="106" width="26" height="26" fill="#fff3c4"/><rect x="184" y="106" width="26" height="26" fill="#fff3c4"/><rect x="106" y="132" width="26" height="26" fill="#fff3c4"/><rect x="132" y="132" width="26" height="26" fill="#fff3c4"/><rect x="158" y="132" width="26" height="26" fill="#fff3c4"/><rect x="184" y="132" width="26" height="26" fill="#fff3c4"/><rect x="106" y="158" width="26" height="26" fill="#fff3c4"/><rect x="132" y="158" width="26" height="26" fill="#fff3c4"/><rect x="158" y="158" width="26" height="26" fill="#fff3c4"/><rect x="184" y="158" width="26" height="26" fill="#fff3c4"/><line x1="2" y1="2" x2="210" y2="2" stroke="#222" stroke-width="1"/><line x1="2" y1="2" x2="2" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="28" x2="210" y2="28" stroke="#222" stroke-width="1"/><line x1="28" y1="2" x2="28" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="54" x2="210" y2="54" stroke="#222" stroke-width="1"/><line x1="54" y1="2" x2="54" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="80" x2="210" y2="80" stroke="#222" stroke-width="1"/><line x1="80" y1="2" x2="80" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="106" x2="210" y2="106" stroke="#222" stroke-width="1"/><line x1="106" y1="2" x2="106" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="132" x2="210" y2="132" stroke="#222" stroke-width="1"/><line x1="132" y1="2" x2="132" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="158" x2="210" y2="158" stroke="#222" stroke-width="1"/><line x1="158" y1="2" x2="158" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="184" x2="210" y2="184" stroke="#222" stroke-width="1"/><line x1="184" y1="2" x2="184" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="210" x2="210" y2="210" stroke="#222" stroke-width="1"/><line x1="210" y1="2" x2="210" y2="210" stroke="#222" stroke-width="1"/><text x="67.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="171.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="145.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="145.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="197.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="150.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="119.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="197.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="119.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="197.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="150.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="150.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="72.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="171.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="98.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="119.0" y="124.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="171.0" y="202.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="15.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="93.0" y="20.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="46.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="41.0" y="176.0" font-size="13" fill="#888" text-anchor="middle">×</text><text x="67.0" y="150.0" font-size="13" fill="#888" text-anchor="middle">×</text><circle cx="15.0" cy="93.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="41.0" cy="197.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><text x="106.0" y="226" font-size="12" fill="#222" text-anchor="middle">×＝置けないマス・黄色＝残り</text></svg></li>
+    <li>3列目＝1行目、4列目＝5行目 と決めてみる。すると3行目は8列目だけが残る（5列目は1行目の駒とななめ、6列目は5行目の駒とななめ）。</li>
+    <li>残りは 2・6・7行目に 5・6・7列目。2行目は 5か6、6行目は 6か7、7行目は 5か7。2行目を6にすると、6行目は7、7行目は5 で、ななめも当たらない。</li>
+    <li>書き足した6個は 1行目・3列、2行目・6列、3行目・8列、5行目・4列、6行目・7列、7行目・5列。
+<svg id="q5_2d_fig" viewBox="0 0 212 230" xmlns="http://www.w3.org/2000/svg" style="max-width:215px;width:100%;height:auto;display:block"><line x1="2" y1="2" x2="210" y2="2" stroke="#222" stroke-width="1"/><line x1="2" y1="2" x2="2" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="28" x2="210" y2="28" stroke="#222" stroke-width="1"/><line x1="28" y1="2" x2="28" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="54" x2="210" y2="54" stroke="#222" stroke-width="1"/><line x1="54" y1="2" x2="54" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="80" x2="210" y2="80" stroke="#222" stroke-width="1"/><line x1="80" y1="2" x2="80" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="106" x2="210" y2="106" stroke="#222" stroke-width="1"/><line x1="106" y1="2" x2="106" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="132" x2="210" y2="132" stroke="#222" stroke-width="1"/><line x1="132" y1="2" x2="132" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="158" x2="210" y2="158" stroke="#222" stroke-width="1"/><line x1="158" y1="2" x2="158" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="184" x2="210" y2="184" stroke="#222" stroke-width="1"/><line x1="184" y1="2" x2="184" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="210" x2="210" y2="210" stroke="#222" stroke-width="1"/><line x1="210" y1="2" x2="210" y2="210" stroke="#222" stroke-width="1"/><circle cx="15.0" cy="93.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="41.0" cy="197.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="67.0" cy="15.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="145.0" cy="41.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="197.0" cy="67.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="93.0" cy="119.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="171.0" cy="145.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="119.0" cy="171.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><text x="106.0" y="226" font-size="12" fill="#222" text-anchor="middle">赤＝書き足す6個（例）</text></svg></li>
+    <li>たしかめ。どの行・列にも1個ずつ。「行の差＝列の差」の組がない。</li>
+  </ol>
+  <div class="ans">答え：解説の図⑩を参照のこと。（例: 1行目・3列目、2行目・6列目、3行目・8列目、5行目・4列目、6行目・7列目、7行目・5列目に○を書き足す。全部で8個）</div>
+  <div class="tip">コツ：手を付ける合図は「①で×を書く作業に慣れた」こと。2行目を5列目にすると7行目が7列目になり、6行目が置けなくなる。行き止まりは1回で済む。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)③</span> 図3（駒1個あり）に最大まで置く <span class="type">C・3点｜8個の置き方を1つ作る</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】本番では後回し。部品は図3の駒1個（8行目・1列目）と「<b>回転させたり裏返したりしても同じ置き方にならない</b>」。合図は「残りの行 1〜7、列 2〜8 に1個ずつで<b>8個</b>」。①②の答えと向きを変えても同じにならない形を1つ作る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>8×8に8個置く形は何通りもある。図3では左下が決まっているので、書き足すのは7個。置き方は4通りある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>例: 1行目・5列、2行目・2列、3行目・4列、4行目・7列、5行目・3列、6行目・8列、7行目・6列。
+<svg id="q5_2e_fig" viewBox="0 0 212 230" xmlns="http://www.w3.org/2000/svg" style="max-width:215px;width:100%;height:auto;display:block"><line x1="2" y1="2" x2="210" y2="2" stroke="#222" stroke-width="1"/><line x1="2" y1="2" x2="2" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="28" x2="210" y2="28" stroke="#222" stroke-width="1"/><line x1="28" y1="2" x2="28" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="54" x2="210" y2="54" stroke="#222" stroke-width="1"/><line x1="54" y1="2" x2="54" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="80" x2="210" y2="80" stroke="#222" stroke-width="1"/><line x1="80" y1="2" x2="80" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="106" x2="210" y2="106" stroke="#222" stroke-width="1"/><line x1="106" y1="2" x2="106" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="132" x2="210" y2="132" stroke="#222" stroke-width="1"/><line x1="132" y1="2" x2="132" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="158" x2="210" y2="158" stroke="#222" stroke-width="1"/><line x1="158" y1="2" x2="158" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="184" x2="210" y2="184" stroke="#222" stroke-width="1"/><line x1="184" y1="2" x2="184" y2="210" stroke="#222" stroke-width="1"/><line x1="2" y1="210" x2="210" y2="210" stroke="#222" stroke-width="1"/><line x1="210" y1="2" x2="210" y2="210" stroke="#222" stroke-width="1"/><circle cx="15.0" cy="197.0" r="8.6" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="119.0" cy="15.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="41.0" cy="41.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="93.0" cy="67.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="171.0" cy="93.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="67.0" cy="119.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="197.0" cy="145.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><circle cx="145.0" cy="171.0" r="8.6" fill="#fff" stroke="#d32f2f" stroke-width="2.5"/><text x="106.0" y="226" font-size="12" fill="#222" text-anchor="middle">赤＝書き足す7個（例）</text></svg></li>
+    <li>たしかめ。どの行・列にも1個ずつ。ななめは「行の差＝列の差」の組がない。</li>
+    <li>①②の答えの形を回したり裏返したりしても、この形とは重ならない。</li>
+  </ol>
+  <div class="ans">答え：解説の図⑪を参照のこと。（例: 1行目・5列目、2行目・2列目、3行目・4列目、4行目・7列目、5行目・3列目、6行目・8列目、7行目・6列目に○を書き足す。全部で8個）</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>大問3: 「同じ底辺の2つの三角形」を見つけるたびに、面積の比が長さの比になる。底辺の線の上にある点（E・F・D）がその印。</li>
+    <li>大問4: 比で分ける管は ×分数 に直す。「整数になる」は「何の倍数が入ればよいか」に直す。</li>
+    <li>大問5: 置ける上限（1行に1個）を先に言い、×を書いて候補の少ない行・列から決める。</li>
+  </ul>
+</section>
+</div>
