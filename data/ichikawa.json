@@ -8782,7 +8782,19 @@
        "5(3)": "24個"
       }
      },
-     "kaisetsu": "kaisetsu/ichikawa/2022-1/sansu.html"
+     "kaisetsu": "kaisetsu/ichikawa/2022-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2022-1/sansu/solved_2026-11-10_01.jpg",
+       "small": "2022-1/sansu/solved_2026-11-10_01_small.jpg",
+       "date": "2026-11-10"
+      },
+      {
+       "full": "2022-1/sansu/solved_2026-11-10_02.jpg",
+       "small": "2022-1/sansu/solved_2026-11-10_02_small.jpg",
+       "date": "2026-11-10"
+      }
+     ]
     },
     {
      "id": "shakai",
