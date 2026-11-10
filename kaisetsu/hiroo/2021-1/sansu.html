@@ -1,0 +1,624 @@
+<!-- generated kakomon hiroo/2021-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（計算・奇数の和・余り・食塩水・正八角形・直方体の切断の6題＋3人の仕事算）</a></li>
+<li><a href="#3-4-5">大問3・4・5（並べ替えた数の和《n》・長方形の対角線と面積比・正八面体の展開図と真上から見た図）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（計算・奇数の和・余り・食塩水・正八角形・直方体の切断の6題＋3人の仕事算）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">A 40点／B 12点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>1</td><td>分数と小数の計算・奇数の和・余りのたし算・食塩水の蒸発・円の中の正八角形・直方体の切断</td><td>A 5+5+6+6 ／ B 6+6</td><td>小数は分数に直す／前に1〜9の奇数をたす／余りだけたす／食塩は変わらない／DFと平行な直径／切り口は向かい合う面で平行</td></tr>
+  <tr><td>2</td><td>2人ずつ3組の仕事算。3人で・A君1人で・報酬の分け方</td><td>A 6+6+6</td><td>全体を10・12・15の最小公倍数60にする。3組をたすと3人の2倍</td></tr></table>
+  <p>取り方: <b>大問1の(1)〜(3)と大問2（合わせてA 40点）を先に確実に</b>。大問2は(1)の表ができれば(2)(3)まで続けて取れる。1 (4)(5)はB。(4)は「DFと平行な直径」、(5)は「切り口の4つ目の点」が見えたら進む。見えないときは大問2を先に片づけてからもどる。受験者平均63.0点・合格者平均74.1点。声の教育社の解説はこの回は省略なので、途中の式はこのカードのものを使う。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)①</span> 分数と小数のまじった計算 <span class="type">A・5点｜四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>0.25</b>」と「<b>0.125</b>」。分数の 1/4 と 1/8 に直して書く → かっこの中の「÷5/6×0.125」が約分だけで 1/20 になり、たし算が 1/4＋1/20 で済む。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>0.25＝1/4、0.125＝1/8。0.125 を8倍すると1になるので、1/8 と分かる。</li>
+    <li>かっこの中は、わり算・かけ算が先。たし算はそのあと。÷5/6 は ×6/5 と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小数を分数に書き直す。3 1/3 は仮分数の 10/3 にする。
+<pre class="fig">10/3 ×（ 1/4 ＋ 1/3 ÷ 5/6 × 1/8 ）</pre></li>
+    <li>かっこの中の、わり算・かけ算を先にする。1/3×6/5×1/8＝6/120＝<b>1/20</b>。</li>
+    <li>たし算をする。1/4＋1/20＝5/20＋1/20＝6/20＝3/10。</li>
+    <li>最後にかける。10/3×3/10＝<b>1</b>。</li>
+    <li>落としやすい所: かっこの中を左から順に「0.25＋1/3」とたしてしまう。たし算の右にある「÷」「×」に先に下線を引く。</li>
+  </ol>
+  <div class="ans">答え：1</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)②</span> 11からの奇数の和が600 <span class="type">A・5点｜奇数の和（平方数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>11＋13＋15＋17＋19＋…</b>」と「＝600」。前に 1＋3＋5＋7＋9＝25 をたして「1から始まる奇数の和＝625」に直して書く → <b>625＝25×25</b> なので、奇数は25個。□は25番目の奇数。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1から順に奇数をたすと、「個数×個数」になる。1＋3＝4＝2×2。1＋3＋5＝9＝3×3。1＋3＋5＋7＝16＝4×4。</li>
+    <li>□番目の奇数は「□×2−1」。3番目なら 3×2−1＝5。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>11より前の奇数をたす。1＋3＋5＋7＋9＝<b>25</b>。5個なので 5×5 とも合う。</li>
+    <li>両方に25をたす。1から□までの奇数の和は 600＋25＝625。
+<pre class="fig">1＋3＋5＋7＋9＋11＋13＋…＋□ ＝ 625 ＝ 25×25
+└─ 25 ─┘└──── 600 ────┘</pre></li>
+    <li>625＝25×25 なので、奇数は25個。25番目の奇数は 25×2−1＝<b>49</b>。</li>
+    <li>たしかめ。11から49までは 25−5＝20個。（11＋49）×20÷2＝600。合う。</li>
+    <li>落としやすい所: 個数の25をそのまま答えにする。聞かれているのは最後にたす数。</li>
+  </ol>
+  <div class="ans">答え：49</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 余りが7の数と9の数の和を13でわる <span class="type">A・6点｜余りのたし算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>13でわると7余る</b>」と「<b>13でわると9余る</b>」。余りだけを取り出して「7＋9＝16」に直して書く → 16は13より大きいので、16をもう一度13でわった余りが答え。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>13でわると7余る数は「13のまとまり＋7」。たとえば 20＝13＋7、33＝13×2＋7。</li>
+    <li>余りは、わる数より小さい。余りをたして13以上になったら、その中から13をもう1つ取り出す。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小さい数でためす。Aを20、Bを22にする。20＋22＝42。42÷13＝3 余り <b>3</b>。</li>
+    <li>ほかの数でも同じになるわけを、まとまりで書く。
+<pre class="fig">A   ＝ 13のまとまり ＋ 7
+B   ＝ 13のまとまり ＋ 9
+A＋B＝ 13のまとまり ＋ 16
+    ＝ 13のまとまり ＋ 13 ＋ 3</pre></li>
+    <li>余りだけをたして 7＋9＝16。16÷13＝1 余り <b>3</b>。</li>
+    <li>落としやすい所: 16をそのまま答えにする。余りは13より小さい数になる。</li>
+  </ol>
+  <div class="ans">答え：3</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 5％の食塩水200gを蒸発させて8％にする <span class="type">A・6点｜食塩水（蒸発）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>水を蒸発させる</b>」と「<b>8％</b>」。蒸発で減るのは水だけなので、「食塩10gが8％にあたる」に直して書く → あとの食塩水の重さが出る。200gとの差が蒸発させた水。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>食塩の重さ＝食塩水の重さ×濃さ。200×0.05＝10g。</li>
+    <li>水を蒸発させても、食塩は減らない。変わらないものを先に見つけると、式が1本で済む。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>はじめの食塩を出す。200×0.05＝<b>10g</b>。</li>
+    <li>はじめとあとを表にならべる。食塩の10gは同じ。
+<table><tr><th></th><th>食塩水</th><th>濃さ</th><th>食塩</th></tr>
+<tr><td>はじめ</td><td>200g</td><td>5％</td><td>10g</td></tr>
+<tr><td>あと</td><td><b>□g</b></td><td>8％</td><td>10g</td></tr></table></li>
+    <li>あとの食塩水の重さを出す。□×0.08＝10 なので、□＝10÷0.08＝<b>125g</b>。</li>
+    <li>蒸発させた水は 200−125＝75g。</li>
+    <li>たしかめ。10÷125＝0.08。8％で合う。</li>
+    <li>落としやすい所: 125gを答えにする。125gは残った食塩水の重さ。聞かれているのは「何gの水」を蒸発させるか。</li>
+  </ol>
+  <div class="ans">答え：75g</div>
+  <div class="tip">コツ：食塩が同じなら、食塩水の重さの比は濃さの逆の比になる。濃さが 5：8 なので、重さは 8：5。200gが8にあたるので、1あたり25g。差の3が 25×3＝75g。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 半径1cmの円に入った正八角形と三角形CDF <span class="type">B・6点｜等積変形</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>半径1cmの円O</b>」と「三角形CDF」。図が無いので、円・正八角形・中心Oを自分で図に置く → <b>DFと平行な直径CG</b>が見えたら、CをOに動かして半径2本の三角形にできる。見えないときは後回し。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正八角形の頂点は、円周を8等分する。中心Oのまわりの角は 360÷8＝45度ずつ。DからFまでは2つ分で<b>90度</b>。</li>
+    <li>三角形の頂点を、底辺と平行な線の上で動かしても、面積は変わらない。底辺も高さも同じままだから。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>円に正八角形をかく。頂点に、Aから順にHまで記号をつける。向きはどうかいても、答えは変わらない。三角形CDFをぬる。CとGを結ぶ。Cから4つ先がGなので、CGは中心Oを通る直径になる。
+<svg xmlns="http://www.w3.org/2000/svg" id="q1_4_fig1" viewBox="0 0 300 305" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+  <circle cx="150" cy="150" r="100" fill="none" stroke="#222"/>
+  <polygon points="50,150 79.3,220.7 220.7,220.7" fill="#ffe0b2"/>
+  <polygon points="150,50 79.3,79.3 50,150 79.3,220.7 150,250 220.7,220.7 250,150 220.7,79.3" fill="none" stroke="#222" stroke-width="1.5"/>
+  <polygon points="50,150 79.3,220.7 220.7,220.7" fill="none" stroke="#d32f2f" stroke-width="2"/>
+  <line x1="50" y1="150" x2="250" y2="150" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <circle cx="150" cy="150" r="3" fill="#222"/>
+  <text x="150" y="42" text-anchor="middle" fill="#222">A</text>
+  <text x="64" y="74" text-anchor="middle" fill="#222">B</text>
+  <text x="36" y="155" text-anchor="middle" fill="#222">C</text>
+  <text x="64" y="240" text-anchor="middle" fill="#222">D</text>
+  <text x="150" y="270" text-anchor="middle" fill="#222">E</text>
+  <text x="236" y="240" text-anchor="middle" fill="#222">F</text>
+  <text x="264" y="155" text-anchor="middle" fill="#222">G</text>
+  <text x="236" y="74" text-anchor="middle" fill="#222">H</text>
+  <text x="150" y="141" text-anchor="middle" fill="#222">O</text>
+  <text x="205" y="143" text-anchor="middle" fill="#1565c0" font-size="13">直径CG</text>
+  <text x="150" y="297" text-anchor="middle" fill="#1565c0" font-size="13">DF と CG は平行</text>
+</svg></li>
+    <li>直線OEで折ると、DとF、CとGがそれぞれ重なる。だからDFもCGもOEと垂直。2本は平行になる。</li>
+    <li>Cを、直径CGの上でOまで動かす。底辺DFはそのまま。高さも同じ。だから三角形CDFの面積は、<b>三角形ODF</b>と同じ。
+<svg xmlns="http://www.w3.org/2000/svg" id="q1_4_fig2" viewBox="0 0 300 305" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+  <defs><marker id="q1_4_arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1565c0"/></marker></defs>
+  <circle cx="150" cy="150" r="100" fill="none" stroke="#222"/>
+  <polygon points="150,150 79.3,220.7 220.7,220.7" fill="#ffe0b2"/>
+  <polygon points="150,50 79.3,79.3 50,150 79.3,220.7 150,250 220.7,220.7 250,150 220.7,79.3" fill="none" stroke="#222" stroke-width="1.5"/>
+  <polygon points="150,150 79.3,220.7 220.7,220.7" fill="none" stroke="#d32f2f" stroke-width="2"/>
+  <polyline points="141.5,158.5 150,167 158.5,158.5" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+  <line x1="56" y1="150" x2="140" y2="150" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#q1_4_arr)"/>
+  <circle cx="150" cy="150" r="3" fill="#222"/>
+  <text x="150" y="42" text-anchor="middle" fill="#222">A</text>
+  <text x="64" y="74" text-anchor="middle" fill="#222">B</text>
+  <text x="36" y="155" text-anchor="middle" fill="#222">C</text>
+  <text x="64" y="240" text-anchor="middle" fill="#222">D</text>
+  <text x="150" y="270" text-anchor="middle" fill="#222">E</text>
+  <text x="236" y="240" text-anchor="middle" fill="#222">F</text>
+  <text x="264" y="155" text-anchor="middle" fill="#222">G</text>
+  <text x="236" y="74" text-anchor="middle" fill="#222">H</text>
+  <text x="150" y="141" text-anchor="middle" fill="#222">O</text>
+  <text x="98" y="141" text-anchor="middle" fill="#1565c0" font-size="13">CをOへ</text>
+  <text x="96" y="186" text-anchor="middle" fill="#d32f2f" font-weight="bold">1cm</text>
+  <text x="206" y="186" text-anchor="middle" fill="#d32f2f" font-weight="bold">1cm</text>
+  <text x="150" y="297" text-anchor="middle" fill="#d32f2f" font-size="13">三角形ODF＝1×1÷2</text>
+</svg></li>
+    <li>三角形ODFを見る。ODとOFは半径で1cm。Oの角は 45×2＝<b>90度</b>。直角をはさむ2辺が1cmの直角三角形になる。</li>
+    <li>面積は 1×1÷2＝1/2cm²。</li>
+  </ol>
+  <div class="ans">答え：1/2cm²</div>
+  <div class="tip">コツ：円の中の正多角形は、中心Oと頂点を結ぶと「半径」と「中心の角」が使える。辺の長さが分からない三角形は、頂点を平行に動かしてOに集める。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 直方体を3点P・Q・Dを通る平面で切る <span class="type">B・6点｜立体の切断（高さの平均）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>BP＝4cm</b>」「<b>AQ＝3cm</b>」と、聞かれている「頂点Eを含む方」。下の面からの高さ PF＝1cm・QE＝2cm に直して図に書く → 切り口の4つ目の点の高さが決まれば、底面積×高さの平均で出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>立体を平面で切ると、向かい合う面にできる切り口の線は平行になる。前の面で「横に4cm進むと1cm下がる」なら、うしろの面でも同じ下がり方をする。</li>
+    <li>底面が長方形で上がななめの立体は、体積＝底面積×<b>高さの平均</b>。同じ立体をさかさまにして上に重ねると、直方体になる。その半分と考える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>高さを下の面から測り直す。PF＝5−4＝1cm。QE＝5−3＝2cm。Dは上の面のかどなので、DH＝5cm。</li>
+    <li>4つ目の点をさがす。前の面のQPは、横に4cm進むと 2−1＝1cm下がる。うしろの面でも、Dから横に4cm進むと1cm下がる。その点をRとする（Rは問題文に無い名前。この解説でつけた）。Rは辺CGの上で、Cから<b>1cm下</b>。RG＝5−1＝4cm。
+<svg xmlns="http://www.w3.org/2000/svg" id="q1_5_fig1" viewBox="0 0 350 345" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+  <polygon points="60,210 220,250 290,80 130,40" fill="#ffe0b2" fill-opacity="0.7"/>
+  <line x1="130" y1="40" x2="130" y2="240" stroke="#222" stroke-dasharray="4 4"/>
+  <line x1="60" y1="290" x2="130" y2="240" stroke="#222" stroke-dasharray="4 4"/>
+  <line x1="130" y1="240" x2="290" y2="240" stroke="#222" stroke-dasharray="4 4"/>
+  <polygon points="60,90 220,90 290,40 130,40" fill="none" stroke="#222" stroke-width="1.5"/>
+  <polyline points="60,90 60,290 220,290 290,240 290,40" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="220" y1="90" x2="220" y2="290" stroke="#222" stroke-width="1.5"/>
+  <line x1="60" y1="210" x2="220" y2="250" stroke="#d32f2f" stroke-width="2.5"/>
+  <line x1="220" y1="250" x2="290" y2="80" stroke="#d32f2f" stroke-width="2"/>
+  <line x1="290" y1="80" x2="130" y2="40" stroke="#d32f2f" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <line x1="130" y1="40" x2="60" y2="210" stroke="#d32f2f" stroke-width="2" stroke-dasharray="6 4"/>
+  <circle cx="60" cy="210" r="3.5" fill="#d32f2f"/><circle cx="220" cy="250" r="3.5" fill="#d32f2f"/>
+  <circle cx="290" cy="80" r="3.5" fill="#d32f2f"/><circle cx="130" cy="40" r="3.5" fill="#d32f2f"/>
+  <text x="46" y="88" text-anchor="middle" fill="#222">A</text>
+  <text x="208" y="84" text-anchor="middle" fill="#222">B</text>
+  <text x="300" y="36" text-anchor="middle" fill="#222">C</text>
+  <text x="120" y="34" text-anchor="middle" fill="#222">D</text>
+  <text x="46" y="302" text-anchor="middle" fill="#222">E</text>
+  <text x="224" y="308" text-anchor="middle" fill="#222">F</text>
+  <text x="302" y="250" text-anchor="middle" fill="#222">G</text>
+  <text x="118" y="236" text-anchor="middle" fill="#222">H</text>
+  <text x="46" y="216" text-anchor="middle" fill="#d32f2f" font-weight="bold">Q</text>
+  <text x="232" y="266" text-anchor="middle" fill="#d32f2f" font-weight="bold">P</text>
+  <text x="302" y="88" text-anchor="middle" fill="#d32f2f" font-weight="bold">R</text>
+  <text x="54" y="155" text-anchor="end" fill="#222" font-size="13">3cm</text>
+  <text x="214" y="175" text-anchor="end" fill="#222" font-size="13">4cm</text>
+  <text x="296" y="64" fill="#d32f2f" font-size="13" font-weight="bold">1cm</text>
+  <text x="140" y="306" text-anchor="middle" fill="#222" font-size="13">4cm</text>
+  <text x="175" y="335" text-anchor="middle" fill="#1565c0" font-size="13">QP と DR は平行（横に4cmで1cm下がる）</text>
+</svg></li>
+    <li>Eを含む方は、底面EFGHの上に立つ立体。4本の高さを図に書く。2cm・1cm・4cm・5cm。
+<svg xmlns="http://www.w3.org/2000/svg" id="q1_5_fig2" viewBox="0 0 350 345" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="14">
+  <polygon points="60,210 220,250 220,290 60,290" fill="#dbe9ff"/>
+  <polygon points="220,250 290,80 290,240 220,290" fill="#dbe9ff"/>
+  <polygon points="60,210 220,250 290,80 130,40" fill="#ffe0b2" fill-opacity="0.7"/>
+  <line x1="130" y1="40" x2="130" y2="240" stroke="#222" stroke-dasharray="4 4"/>
+  <line x1="60" y1="290" x2="130" y2="240" stroke="#222" stroke-dasharray="4 4"/>
+  <line x1="130" y1="240" x2="290" y2="240" stroke="#222" stroke-dasharray="4 4"/>
+  <polygon points="60,90 220,90 290,40 130,40" fill="none" stroke="#999" stroke-width="1"/>
+  <polyline points="60,90 60,210" fill="none" stroke="#999" stroke-width="1"/>
+  <line x1="220" y1="90" x2="220" y2="250" stroke="#999" stroke-width="1"/>
+  <line x1="290" y1="40" x2="290" y2="80" stroke="#999" stroke-width="1"/>
+  <polyline points="60,210 60,290 220,290 290,240 290,80" fill="none" stroke="#222" stroke-width="1.8"/>
+  <line x1="220" y1="250" x2="220" y2="290" stroke="#222" stroke-width="1.8"/>
+  <line x1="60" y1="210" x2="220" y2="250" stroke="#d32f2f" stroke-width="2"/>
+  <line x1="220" y1="250" x2="290" y2="80" stroke="#d32f2f" stroke-width="2"/>
+  <line x1="290" y1="80" x2="130" y2="40" stroke="#d32f2f" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="130" y1="40" x2="60" y2="210" stroke="#d32f2f" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="46" y="88" text-anchor="middle" fill="#999">A</text>
+  <text x="208" y="84" text-anchor="middle" fill="#999">B</text>
+  <text x="300" y="36" text-anchor="middle" fill="#999">C</text>
+  <text x="120" y="34" text-anchor="middle" fill="#222">D</text>
+  <text x="46" y="302" text-anchor="middle" fill="#222">E</text>
+  <text x="224" y="308" text-anchor="middle" fill="#222">F</text>
+  <text x="302" y="250" text-anchor="middle" fill="#222">G</text>
+  <text x="118" y="236" text-anchor="middle" fill="#222">H</text>
+  <text x="46" y="216" text-anchor="middle" fill="#222">Q</text>
+  <text x="233" y="268" text-anchor="middle" fill="#222">P</text>
+  <text x="302" y="78" text-anchor="middle" fill="#222">R</text>
+  <text x="54" y="258" text-anchor="end" fill="#d32f2f" font-weight="bold">2cm</text>
+  <text x="214" y="278" text-anchor="end" fill="#d32f2f" font-weight="bold">1cm</text>
+  <text x="296" y="165" fill="#d32f2f" font-weight="bold">4cm</text>
+  <text x="136" y="150" fill="#d32f2f" font-weight="bold">5cm</text>
+  <text x="175" y="335" text-anchor="middle" fill="#d32f2f" font-size="13">高さの平均＝（2＋1＋4＋5）÷4＝3cm</text>
+</svg></li>
+    <li>高さの平均は（2＋1＋4＋5）÷4＝<b>3cm</b>。底面積は 4×3＝12cm²。体積は 12×3＝36cm³。</li>
+    <li>たしかめ。上の立体の高さは、上の面から測って 3cm・4cm・1cm・0cm。平均は2cm。体積は 12×2＝24cm³。36＋24＝60。直方体全体の 4×3×5＝60 と合う。</li>
+  </ol>
+  <div class="ans">答え：36cm³</div>
+  <div class="tip">コツ：高さの平均が使えるわけ。向かい合うかどの高さをたすと、2＋4＝6、1＋5＝6 で同じになる。同じ立体をさかさまにして重ねると、高さ6cmの直方体（4×3×6＝72cm³）になる。その半分が36cm³。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 3人でするとかかる時間 <span class="type">A・6点｜仕事算（2人ずつ3組）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「10時間」「12時間」「15時間」の3つ。全体の仕事を、3つの数の<b>最小公倍数60</b>に直して書く → 1時間分は AとB＝6、BとC＝5、CとA＝4。<b>3つたすと3人の2倍</b>になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>仕事算は、全体の仕事を「かかる時間の最小公倍数」にする。1時間分の仕事が整数で出る。60÷10＝6 のように。</li>
+    <li>AとB、BとC、CとA をたすと、A・B・Cが2回ずつ出てくる。だから、たした数の半分が3人の1時間分。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>全体の仕事を60として、2人組が1時間でする仕事を表に書く。
+<table><tr><th>組</th><th>かかる時間</th><th>1時間分の仕事</th></tr>
+<tr><td>AとB</td><td>10時間</td><td>60÷10＝6</td></tr>
+<tr><td>BとC</td><td>12時間</td><td>60÷12＝5</td></tr>
+<tr><td>CとA</td><td>15時間</td><td>60÷15＝4</td></tr>
+<tr><td>3組の合計</td><td></td><td><b>15</b>（A・B・Cが2回ずつ）</td></tr></table></li>
+    <li>3人の1時間分を出す。15÷2＝<b>7.5</b>。</li>
+    <li>かかる時間は 60÷7.5＝8時間。</li>
+    <li>たしかめ。7.5×8＝60。合う。</li>
+    <li>落としやすい所: 合計の15をそのまま3人の1時間分にして、60÷15＝4時間とする。15は3人の2倍。2でわってから使う。</li>
+  </ol>
+  <div class="ans">答え：8時間</div>
+  <div class="tip">コツ：7.5 の小数をさけたいときは、全体の仕事を2倍の120にする。2人組の1時間分は 12・10・8。合計30の半分で、3人の1時間分は15。120÷15＝8時間で同じ答えになる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> A君1人でするとかかる時間 <span class="type">A・6点｜仕事算（1人分を取り出す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は(1)と変わった「<b>A君1人ですると</b>」と、はじめの文の「<b>B君とC君の2人ですると12時間</b>」。「3人の1時間分7.5 − BとCの1時間分5」に直して書く → Aの1時間分2.5だけが残る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3人の1時間分から、BとCの1時間分をひくと、Aの分だけが残る。7.5−5＝2.5。</li>
+    <li>かかる時間＝全体の仕事÷1時間分の仕事。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1)の表から数を取り出す。3人で7.5。BとCで5。</li>
+    <li>Aの1時間分は 7.5−5＝<b>2.5</b>。</li>
+    <li>Aが1人でかかる時間は 60÷2.5＝24時間。</li>
+    <li>たしかめ。同じようにBは 7.5−4＝3.5。Cは 7.5−6＝1.5。AとBで 2.5＋3.5＝6。CとAで 1.5＋2.5＝4。表と合う。</li>
+    <li>落としやすい所: 「AとBで6だからAは3」と半分にする。AとBの仕事の速さが同じとは書かれていない。</li>
+  </ol>
+  <div class="ans">答え：24時間</div>
+  <div class="tip">コツ：全体の仕事を120にした場合は、3人の1時間分が15、BとCの1時間分が10。Aは 15−10＝5。120÷5＝24時間で同じ答えになる。同じようにBは 15−8＝7、Cは 15−12＝3。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 36,000円を仕事の量に応じて分ける <span class="type">A・6点｜仕事算（比で分ける）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「36,000円」と「<b>仕事をした量に応じて</b>」。3人が働く時間は同じなので、Aの分を「1時間分の比 2.5：7.5＝1：3」に直して書く → Aは<b>全体の1/3</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ時間だけ働くとき、仕事をした量の比は、1時間分の仕事の比と同じ。Aは2.5、3人では7.5。</li>
+    <li>「量に応じて分ける」は、全体の金額×（その人の仕事÷全体の仕事）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3人でするので、(1)より全員が8時間働く。Aの仕事は 2.5×8＝<b>20</b>。全体は60。</li>
+    <li>Aの仕事は全体の 20÷60＝<b>1/3</b>。</li>
+    <li>Aの報酬は 36000×1/3＝12000円。</li>
+    <li>たしかめ。Bの仕事は 3.5×8＝28 で 16800円。Cの仕事は 1.5×8＝12 で 7200円。12000＋16800＋7200＝36000。合う。</li>
+    <li>落としやすい所: (2)の24時間のような「かかる時間」の比で分ける。時間が長い人ほど、1時間分の仕事は少ない。分けるのは仕事の量の比。</li>
+  </ol>
+  <div class="ans">答え：12000円</div>
+  <div class="tip">コツ：1時間分の仕事の比は A：B：C＝2.5：3.5：1.5＝5：7：3。Aは全体15のうちの5で、1/3。答えは3等分と同じ金額になるが、理由はちがう。Aの仕事がちょうど全体の1/3だったから。BとCは同じ金額にならない。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ <span class="type">この回で使った入口</span></h2>
+  <ul>
+    <li>計算と数の問題は、<b>形を直してから</b>始める。小数は分数に。11からの奇数の和は「1から」に。余りは余りだけをたす。</li>
+    <li>図形の2題は<b>平行</b>が入口。正八角形はDFと平行な直径で頂点をOへ動かす。切断は向かい合う面の切り口が平行。</li>
+    <li>仕事算は全体を最小公倍数に。2人ずつ3組をたした数は<b>3人の2倍</b>。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（並べ替えた数の和《n》・長方形の対角線と面積比・正八面体の展開図と真上から見た図）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">A 18点／B 30点／C 0点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>難易度・配点</th><th>入口の合図</th></tr>
+  <tr><td>3</td><td>位の数字を並べ替えた数の和《n》</td><td>A 6 ／ B 6+6</td><td>例の《211》＝444＝111×4 → 位ごとの合計×111。同じ数字が何個あるかで分ける</td></tr>
+  <tr><td>4</td><td>長方形の対角線と三角形の面積比</td><td>A 6 ／ B 6+6</td><td>対角線の両側は高さが同じ → 面積を図に書きこみ、面積の比＝底辺の比</td></tr>
+  <tr><td>5</td><td>正八面体の展開図・真上から見た図</td><td>A 6 ／ B 6</td><td>展開図に頂点の記号を書きこむ。ふれない面どうしは平行</td></tr></table>
+  <p>取り方: <b>Aの3問（18点）を先に確実に</b>。Bは5問（30点）。4(2)は(1)の63を図に書けば引き算1回で出る。3(2)(3)は場合分けの表が作れたら数えるだけ。5(2)は(1)の「ふれない面」が真上に来ると分かれば図がかける。受験者平均63.0点・合格者平均74.1点。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 《123》を求める <span class="type">A・6点｜並べ替えた数の和（位ごとにたす）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>並べ替えてできるすべての数の和</b>」と例の「《12》＝12＋21」。123の並べ替え6個をたてにそろえて書く → <b>位ごとにたす</b>と《123》が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3つの数字が全部ちがうとき、並べ替えは 3×2×1＝<b>6個</b>。123なら 123、132、213、231、312、321。</li>
+    <li>6個をたてに並べると、どの位にも 1、2、3 が2回ずつ出る。位ごとの合計は (1＋2＋3)×2＝12 で、どの位も同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>百の位が1のもの、2のもの、3のものの順に、6個をたてに書く。
+<pre class="fig">   123
+   132
+   213
+   231
+   312
+ ＋321
+ ─────
+  1332</pre></li>
+    <li>一の位をたす。3＋2＋3＋1＋2＋1＝12。十の位も百の位も、同じ12になる。</li>
+    <li>12×100＋12×10＋12×1＝12×111＝<b>1332</b>。</li>
+    <li>落としやすい所: 6個のうち1個を書きもらす。百の位ごとに2個ずつ、と数えながら書く。</li>
+  </ol>
+  <div class="ans">答え：1332</div>
+  <div class="tip">コツ：「位ごとの合計×111」の形は、(2)(3)でそのまま使う。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 《n》＝777 となる n の個数 <span class="type">B・6点｜並べ替えた数の和（同じ数字の個数で場合分け）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「《n》＝<b>777</b>」と例の「《<b>211</b>》＝112＋121＋211＝444」。777を 111×7 に直して書く → 同じ数字が何個あるかで分けた表で数える。例の 444＝111×(2＋1＋1) に気づけたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数字があると、並べ替えの個数がへる。211は 112、121、211 の3個。11は1個だけ。</li>
+    <li>2つだけ同じ数字の3けた（211など）は、並べ替えが3個。たてに並べると、どの位にも3つの数字が1回ずつ出る。和は <b>111×(数字の和)</b>。《211》＝111×4＝444。</li>
+    <li>3つともちがう3けたは、(1)と同じ。和は <b>222×(数字の和)</b>。《123》＝222×6＝1332。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>n のけた数を決める。《n》には n 自身が入っている。4けた以上だと和は1000より大きい。2けたは、いちばん大きくても 98＋89＝187。1けたは n そのもので、9まで。だから n は3けた。</li>
+    <li>777＝111×7 と書く。3けたの数を、同じ数字の個数で3つに分けて表にする。
+<table><tr><th>数字の形</th><th>並べ替えの個数</th><th>《n》</th><th>777になるのは</th><th>n の個数</th></tr>
+<tr><td>3つとも同じ</td><td>1個</td><td>n そのもの</td><td>n＝777</td><td>1個</td></tr>
+<tr><td>2つだけ同じ</td><td>3個</td><td>111×(数字の和)</td><td><b>数字の和が7</b></td><td>3組×3個＝9個</td></tr>
+<tr><td>3つともちがう</td><td>6個</td><td>222×(数字の和)</td><td>777÷222 はわり切れない</td><td>0個</td></tr></table></li>
+    <li>「2つだけ同じ」の行を数える。同じ数字が1なら、残りは 7−1−1＝5。同じ数字が2なら残りは3。同じ数字が3なら残りは1。同じ数字が4だと 4＋4＝8 で7をこえるので終わり。</li>
+    <li>3組とも、並べ替えが3個ずつある。115・151・511、223・232・322、133・313・331 の9個。</li>
+    <li>合わせて 1＋9＝<b>10個</b>。</li>
+    <li>たしかめ。《223》＝223＋232＋322＝777。合っている。</li>
+  </ol>
+  <div class="ans">答え：10個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 《n》＝1332 となる n の個数 <span class="type">B・6点｜並べ替えた数の和（場合分けの表・0は使えない）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「《n》＝<b>1332</b>」と、ただし書きの「<b>0を含まない</b>」。1332を 222×6 と 111×12 の2通りに直して書く → (2)と同じ表で数える。1332は(1)の答えなので、123の並べ替え6個がまず入る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(2)の表と同じ。3つともちがう3けたの和は 222×(数字の和)。2つだけ同じなら 111×(数字の和)。</li>
+    <li>4けたで数字が全部同じでない数には、2以上の数字が1つはある。それを千の位に置いた数は<b>2000より大きい</b>。1112なら、並べ替えの中に2111が入る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>n のけた数を決める。2けたは最大でも187。4けたの1111は《n》＝1111 で、1332ではない。ほかの4けたは2000より大きい数が入るので、和が1332をこえる。5けた以上は10000より大きい。だから n は3けた。</li>
+    <li>(2)と同じ表を作る。
+<table><tr><th>数字の形</th><th>《n》</th><th>1332になるのは</th><th>n の個数</th></tr>
+<tr><td>3つともちがう</td><td>222×(数字の和)</td><td><b>数字の和が6</b> → 1・2・3 だけ</td><td>6個</td></tr>
+<tr><td>2つだけ同じ</td><td>111×(数字の和)</td><td><b>数字の和が12</b> → 下の表で3組</td><td>3組×3個＝9個</td></tr>
+<tr><td>3つとも同じ</td><td>n そのもの</td><td>3けたの数は1332にならない</td><td>0個</td></tr></table></li>
+    <li>3つともちがう数字で和が6。いちばん小さい組の 1＋2＋3 がちょうど6。ほかの組は6をこえる。123の並べ替えの6個。</li>
+    <li>2つだけ同じで和が12。同じ数字を1から順に入れて、残りの数字を出す。
+<table><tr><th>同じ数字</th><td>1</td><td><b>2</b></td><td><b>3</b></td><td>4</td><td><b>5</b></td><td>6</td></tr>
+<tr><th>残りの数字</th><td>10</td><td><b>8</b></td><td><b>6</b></td><td>4</td><td><b>2</b></td><td>0</td></tr>
+<tr><th>使えるか</th><td>×（1けたでない）</td><td>○</td><td>○</td><td>×（3つとも同じ）</td><td>○</td><td>×（0は使えない）</td></tr></table>
+    同じ数字が7以上だと 7＋7＝14 で12をこえるので終わり。</li>
+    <li>使えるのは 2・2・8、3・3・6、5・5・2 の3組。並べ替えが3個ずつで9個。</li>
+    <li>合わせて 6＋9＝<b>15個</b>。</li>
+  </ol>
+  <div class="ans">答え：15個</div>
+  <div class="tip">コツ：4・4・4 と 6・6・0 は数えない。4・4・4 は「3つとも同じ」の行で、《444》＝444。6・6・0 は「0を含まない」に合わない。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 三角形ABEと面積の等しい三角形 <span class="type">A・6点｜長方形の対角線と等積（底辺が同じ・高さが同じ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「長方形ABCDの<b>対角線AC</b>上に点E」と「三角形ABEと<b>面積の等しい</b>三角形」。BとDから対角線ACまでの高さを図に置く → 底辺AEが同じで高さも同じ、三角形AEDに決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>長方形を対角線で切ると、同じ形で同じ大きさの三角形が2つできる。三角形ABCと三角形CDA。だから、BからACまでの高さと、DからACまでの高さは<b>同じ長さ</b>。</li>
+    <li>底辺が同じで高さが同じ三角形は、形がちがっても面積が同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>BEを引く。三角形ABEの底辺をAEと見る。高さは、BからACにおろした線。
+<svg id="q4_1_fig" viewBox="0 0 480 330" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="50,40 50,280 126,88" fill="#dbe9ff" stroke="none"/>
+<polygon points="50,40 126,88 430,40" fill="#ffe0b2" stroke="none"/>
+<rect x="50" y="40" width="380" height="240" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="50" y1="40" x2="430" y2="280" stroke="#222" stroke-width="1.5"/>
+<line x1="126" y1="88" x2="430" y2="40" stroke="#222" stroke-width="1.5"/>
+<line x1="50" y1="280" x2="126" y2="88" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="50" y1="40" x2="126" y2="88" stroke="#d32f2f" stroke-width="4"/>
+<line x1="50" y1="280" x2="158.4" y2="108.4" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="430" y1="40" x2="321.6" y2="211.6" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="4 3"/>
+<polyline points="166,113.2 161.2,120.9 153.6,116" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<polyline points="329.3,216.4 334.1,208.8 326.4,204" fill="none" stroke="#d32f2f" stroke-width="1.2"/>
+<g font-size="17" font-family="sans-serif" fill="#222"><text x="36" y="36">A</text><text x="34" y="296">B</text><text x="436" y="296">C</text><text x="436" y="36">D</text><text x="107" y="103">E</text></g>
+<g font-size="14" font-family="sans-serif" fill="#d32f2f" text-anchor="middle"><text x="128" y="216">高さ</text><text x="398" y="128">高さ</text><text x="108" y="58">底辺</text></g>
+<g font-size="14" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="240" y="318">底辺AEが同じ。高さも同じ長さ。だから面積が同じ。</text></g>
+</svg>
+    大問4の図は、(2)(3)で分かる長さの比に合わせてかき直してある。問題の図とは、E・F・Gの位置が少しちがって見える。どの線の上にあるかは、問題の図と同じ。</li>
+    <li>ACの反対側で、同じ底辺AEを使う三角形をさがす。三角形AEDが見つかる。高さは、DからACにおろした線。</li>
+    <li>2つの高さは同じ長さ。だから 三角形ABE＝<b>三角形AED</b>＝63cm²。</li>
+    <li>落としやすい所: 見た目の形がちがうので、等しいと思えない。底辺AEに色をつけて、高さだけをくらべる。</li>
+  </ol>
+  <div class="ans">答え：三角形AED</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> AE：EG を求める <span class="type">B・6点｜高さが同じ三角形（面積の比＝底辺の比）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「三角形AEDの面積は<b>63cm²</b>」「三角形ABGの面積は<b>105cm²</b>」。(1)で分かった 三角形ABE＝63 を図に置く → 105−63 で三角形EBGが出て、面積の比がそのまま AE：EG に決まる。引き算1回なので手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>頂点が同じで、底辺が同じ直線の上にある2つの三角形は、高さが同じ。面積の比は<b>底辺の比と同じ</b>になる。底辺が3cmと2cmなら、面積も 3：2。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に面積を書きこむ。三角形ABEは(1)から63。三角形ABGは105。
+<svg id="q4_2_fig" viewBox="0 0 480 330" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="50,40 50,280 126,88" fill="#dbe9ff" stroke="none"/>
+<polygon points="126,88 50,280 176.7,120" fill="#ffe0b2" stroke="none"/>
+<rect x="50" y="40" width="380" height="240" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="50" y1="40" x2="430" y2="280" stroke="#222" stroke-width="1.5"/>
+<line x1="126" y1="88" x2="430" y2="40" stroke="#222" stroke-width="1.5"/>
+<line x1="50" y1="280" x2="212.9" y2="74.3" stroke="#222" stroke-width="1.5"/>
+<line x1="50" y1="280" x2="126" y2="88" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<g font-size="17" font-family="sans-serif" fill="#222"><text x="36" y="36">A</text><text x="34" y="296">B</text><text x="436" y="296">C</text><text x="436" y="36">D</text><text x="107" y="103">E</text><text x="204" y="65">F</text><text x="180" y="143">G</text></g>
+<g font-size="16" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="75" y="142">63</text></g>
+<g font-size="17" font-family="sans-serif" fill="#d32f2f" font-weight="bold" text-anchor="middle"><text x="118" y="170">42</text></g>
+<g font-size="15" font-family="sans-serif" fill="#d32f2f" text-anchor="middle"><text x="97" y="58">③</text><text x="160" y="97">②</text></g>
+<g font-size="14" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="240" y="318">105−63＝42。AE：EG＝63：42＝3：2</text></g>
+</svg></li>
+    <li>三角形EBG＝105−63＝<b>42cm²</b>。</li>
+    <li>三角形ABEと三角形EBGは、頂点Bが同じ。底辺のAEとEGは、どちらもACの上にある。高さが同じ。</li>
+    <li>AE：EG＝63：42＝<b>3：2</b>。</li>
+  </ol>
+  <div class="ans">答え：3：2</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 三角形FBDの面積 <span class="type">B・6点｜面積の比と底辺の比（2回使う）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「三角形EGFの面積は<b>12cm²</b>」と、求める「<b>三角形FBD</b>」。12と(2)の42を図に置く → 三角形EGDから EF：FD が出て、三角形EBFの何倍かで決まる。面積を図に書きこめたら手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)と同じ考え方。BとDは、ACまでの高さが同じ。底辺EGが同じなので、<b>三角形EGD＝三角形EBG</b>。</li>
+    <li>高さが同じ三角形は、面積の比＝底辺の比。逆に、面積の比から底辺の比も出せる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>GとDを結ぶ。三角形EGD＝三角形EBG＝42cm²。底辺EGが同じで、高さも同じ。</li>
+    <li>三角形EGDは、GFで2つに分かれている。三角形FGD＝42−12＝30cm²。
+<svg id="q4_3_figa" viewBox="0 0 480 344" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="126,88 50,280 176.7,120" fill="#dbe9ff" stroke="none"/>
+<polygon points="126,88 176.7,120 212.9,74.3" fill="#ffe0b2" stroke="none"/>
+<polygon points="212.9,74.3 176.7,120 430,40" fill="#c8e6c9" stroke="none"/>
+<rect x="50" y="40" width="380" height="240" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="50" y1="40" x2="430" y2="280" stroke="#222" stroke-width="1.5"/>
+<line x1="126" y1="88" x2="430" y2="40" stroke="#222" stroke-width="1.5"/>
+<line x1="50" y1="280" x2="212.9" y2="74.3" stroke="#222" stroke-width="1.5"/>
+<line x1="50" y1="280" x2="126" y2="88" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="176.7" y1="120" x2="430" y2="40" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<g font-size="17" font-family="sans-serif" fill="#222"><text x="36" y="36">A</text><text x="34" y="296">B</text><text x="436" y="296">C</text><text x="436" y="36">D</text><text x="107" y="103">E</text><text x="204" y="65">F</text><text x="180" y="143">G</text></g>
+<g font-size="16" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="118" y="170">42</text><text x="172" y="100" font-size="14">12</text></g>
+<g font-size="17" font-family="sans-serif" fill="#d32f2f" font-weight="bold" text-anchor="middle"><text x="272" y="86">30</text></g>
+<g font-size="14" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="240" y="312">三角形EGD＝三角形EBG＝42。42−12＝30</text><text x="240" y="332" fill="#d32f2f">EF：FD＝12：30＝2：5</text></g>
+</svg></li>
+    <li>三角形EGFと三角形FGDは、頂点Gが同じ。底辺のEFとFDは、どちらもEDの上にある。EF：FD＝12：30＝<b>2：5</b>。</li>
+    <li>次は頂点Bから見る。BとDを結ぶ。三角形EBF＝三角形EBG＋三角形EGF＝42＋12＝54cm²。
+<svg id="q4_3_figb" viewBox="0 0 480 344" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="126,88 50,280 212.9,74.3" fill="#dbe9ff" stroke="none"/>
+<polygon points="212.9,74.3 50,280 430,40" fill="#ffe0b2" stroke="none"/>
+<rect x="50" y="40" width="380" height="240" fill="none" stroke="#222" stroke-width="2"/>
+<line x1="50" y1="40" x2="430" y2="280" stroke="#999" stroke-width="1"/>
+<line x1="50" y1="280" x2="430" y2="40" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="50" y1="280" x2="126" y2="88" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="126" y1="88" x2="430" y2="40" stroke="#222" stroke-width="2"/>
+<line x1="50" y1="280" x2="212.9" y2="74.3" stroke="#222" stroke-width="2"/>
+<g font-size="17" font-family="sans-serif" fill="#222"><text x="36" y="36">A</text><text x="34" y="296">B</text><text x="436" y="296">C</text><text x="436" y="36">D</text><text x="107" y="103">E</text><text x="204" y="65">F</text><text x="180" y="143">G</text></g>
+<g font-size="16" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="124" y="160">54</text></g>
+<g font-size="18" font-family="sans-serif" fill="#d32f2f" font-weight="bold" text-anchor="middle"><text x="224" y="140">135</text></g>
+<g font-size="15" font-family="sans-serif" fill="#d32f2f" text-anchor="middle"><text x="166" y="72">②</text><text x="338" y="78">⑤</text></g>
+<g font-size="14" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="240" y="312">三角形EBF＝42＋12＝54</text><text x="240" y="332" fill="#d32f2f">EF：FD＝2：5 なので 54×5/2＝135</text></g>
+</svg></li>
+    <li>三角形EBFと三角形FBDは、頂点Bが同じ。底辺はEFとFD。面積の比も 2：5 になる。</li>
+    <li>三角形FBD＝54×5/2＝<b>135cm²</b>。</li>
+    <li>別の道でたしかめ。三角形EGFと三角形EBGは、頂点Eが同じ。底辺の比は FG：GB＝12：42＝2：7。頂点Dから見ると、三角形FGDと三角形GBDも 2：7。三角形GBD＝30×7/2＝105。30＋105＝135。合っている。</li>
+  </ol>
+  <div class="ans">答え：135cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 面アと点も辺もふれない面 <span class="type">A・6点｜正八面体の展開図（頂点の記号を書きこむ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は資料の正体「<b>正八面体の展開図と見取り図</b>」と聞かれ方「<b>点も辺もふれない</b>面」。展開図の頂点に見取り図の A〜F を書きこむ → 面アと同じ記号を1つも持たない面が答えに決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正八面体の頂点は6個。向かい合う頂点が3組ある。見取り図では AとF、BとD、CとE。向かい合う頂点どうしは、辺でつながっていない。</li>
+    <li>展開図で、辺でくっついた三角形2枚（ひし形）を見る。ひし形の<b>はなれた2つの頂点は、向かい合う頂点</b>になる。面ABCと面ACDのひし形なら、はなれているのはBとD。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>面アを見取り図の面ABCと決める。上の頂点にA、左下にB、右下にCと書く。どの面に決めても、同じように進められる。</li>
+    <li>アと②のひし形を見る。はなれた頂点は、Bと②の右上。②の右上は、Bの向かいのD。</li>
+    <li>②と③のひし形では、Aと③の右下がはなれている。③の右下はF。③と④のひし形では、Cと④の右上がはなれている。④の右上はE。
+<svg id="q5_1_fig" viewBox="0 0 380 300" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="40,190 120,190 80,120.7" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+<polygon points="80,120.7 160,120.7 120,190" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<polygon points="120,190 200,190 160,120.7" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<polygon points="160,120.7 240,120.7 200,190" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/>
+<polygon points="200,190 280,190 240,120.7" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<polygon points="240,120.7 320,120.7 280,190" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<polygon points="240,120.7 320,120.7 280,51.4" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<polygon points="40,190 120,190 80,259.3" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<g font-size="16" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="80" y="172.9">ア</text><text x="120" y="149.8">②</text><text x="160" y="172.9">③</text><text x="200" y="149.8">④</text><text x="240" y="172.9">⑤</text><text x="280" y="149.8">⑥</text><text x="280" y="103.6">①</text><text x="80" y="219.1">⑦</text></g>
+<g font-size="17" font-family="sans-serif" fill="#1565c0" font-weight="bold" text-anchor="middle"><text x="80" y="112.7">A</text><text x="27" y="196">B</text><text x="132" y="209">C</text><text x="280" y="210">B</text><text x="333" y="126.7">A</text></g>
+<g font-size="17" font-family="sans-serif" fill="#d32f2f" font-weight="bold" text-anchor="middle"><text x="160" y="112.7">D</text><text x="200" y="210">F</text><text x="228" y="114.7">E</text><text x="280" y="43.4">D</text><text x="80" y="279.3">F</text></g>
+</svg></li>
+    <li>④の頂点は D・F・E。A・B・C が1つも無い。<b>④は面アと点も辺もふれない</b>。</li>
+    <li>残りも同じやり方で書きこんで確かめる。⑤は F・E・B、⑥は E・A・B、①は E・A・D、⑦は B・C・F。どれも A・B・C のどれかを持っている。</li>
+    <li>落としやすい所: 展開図でアから遠くに見える①や⑥を選ぶ。組み立てると、⑥は辺ABで面アとくっつく。記号を書いて確かめる。</li>
+  </ol>
+  <div class="ans">答え：④</div>
+  <div class="tip">コツ：三角形が一列に並んだ帯では、3つ先の面が「ふれない面」になる（ア→②→③→④）。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 面DEFを地面に置いて真上から見た図 <span class="type">B・6点｜正八面体を面で置いた見え方（上下の正三角形を重ねる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→条件文】部品は「<b>面DEFが地面とぴったり重なる</b>」と「<b>枠だけ</b>かきなさい」。真上に来る面ABCを見取り図に置く → 上の正三角形と下の正三角形を重ねてかくと、外側の枠が決まる。(1)の「ふれない面」が使えるので手を付ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>(1)と同じ考え方。面DEFと点も辺もふれない面は、D・E・F を持たない面ABC。この2つの面は<b>平行</b>。面DEFを地面に置くと、面ABCが真上で水平になる。会話の広子さんの考え（面アを地面に置くと、真上からは面イも見える）は、このこと。</li>
+    <li>正八面体にはへこんだ所がない。真上から見た枠は、6つの頂点をいちばん外側で結んだ形になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>真上から見ると、上の面ABCも下の面DEFも、同じ大きさの正三角形に見える。2つの三角形の中心は重なる。</li>
+    <li>向きを決める。AはDとEに辺でつながっている。Fにはつながっていない。ADとAEは同じ長さなので、真上から見たAは、DとEのちょうど間に来る。</li>
+    <li>同じように、BはEとFの間。CはDとFの間。上の三角形は、下の三角形をさかさまにした向きになる。
+<svg id="q5_2_figa" viewBox="0 0 380 344" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="190,65 94.7,230 285.3,230" fill="#dbe9ff" stroke="none"/>
+<polygon points="190,65 285.3,230 285.3,120" fill="#ffe0b2" stroke="none"/>
+<polygon points="285.3,120 94.7,120 190,285" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="5 4"/>
+<polygon points="190,65 94.7,230 285.3,230" fill="none" stroke="#1565c0" stroke-width="2"/>
+<polygon points="190,65 285.3,120 285.3,230 190,285 94.7,230 94.7,120" fill="none" stroke="#d32f2f" stroke-width="3.5"/>
+<g font-size="18" font-family="sans-serif" fill="#1565c0" font-weight="bold" text-anchor="middle"><text x="190" y="55">A</text><text x="80.7" y="242">B</text><text x="299.3" y="242">C</text></g>
+<g font-size="18" font-family="sans-serif" fill="#222" font-weight="bold" text-anchor="middle"><text x="299.3" y="118">D</text><text x="80.7" y="118">E</text><text x="190" y="307">F</text></g>
+<g font-size="13" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="338" y="172">横の面</text><text x="338" y="189">ACD</text><text x="190" y="205" fill="#1565c0">上の面ABC</text></g>
+<g font-size="13" font-family="sans-serif" fill="#222" text-anchor="middle"><text x="190" y="332">青＝上の面ABC　点線＝下の面DEF　赤＝外側の枠</text></g>
+</svg></li>
+    <li>6つの頂点を外側で順に結ぶ。A−D、D−C、C−F、F−B、B−E、E−A。どれも正八面体の辺。星形のへこみに見える所は、横の面（面ACDなど）がうめている。</li>
+    <li>6つの頂点は、中心から同じ長さの所に、同じ間かくで並ぶ。枠は<b>正六角形</b>。重なっている頂点は無い。
+<svg id="q5_2_figb" viewBox="0 0 300 300" style="max-width:240px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+<polygon points="150,50 236.6,100 236.6,200 150,250 63.4,200 63.4,100" fill="none" stroke="#d32f2f" stroke-width="3.5"/>
+<g font-size="18" font-family="sans-serif" fill="#222" font-weight="bold" text-anchor="middle"><text x="150" y="40">A</text><text x="49.4" y="212">B</text><text x="250.6" y="212">C</text><text x="250.6" y="98">D</text><text x="49.4" y="98">E</text><text x="150" y="272">F</text></g>
+</svg></li>
+    <li>回る向きを確かめる。見取り図の面ABCを外から見ると、A→B→C は左回り。かいた図でも A→B→C は左回りになっている。</li>
+  </ol>
+  <div class="ans">答え：右の図（上でかいた正六角形。頂点は時計回りに A・D・C・F・B・E）</div>
+  <div class="tip">コツ：図ウは上の面だけを見た形。図エは上の面と下の面だけを重ねた形。図オは頂点を真上にして置いたときの形。横の面まで考えると正六角形になる。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ <span class="type">この回で繰り返し出た入口</span></h2>
+  <ul>
+    <li>新しい記号の問題は、例を自分で計算し直して決まりを見つける。《211》＝444＝111×4 が(2)(3)の入口。</li>
+    <li>面積の問題は、分かった面積を図に書きこむ。高さが同じ三角形は、面積の比＝底辺の比。</li>
+    <li>立体の展開図は、頂点の記号を書きこんで確かめる。同じ記号を持たない面どうしが、ふれない面。</li>
+  </ul>
+</section>
+</div>
