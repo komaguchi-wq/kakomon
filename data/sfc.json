@@ -11098,7 +11098,14 @@
        "6(3)": "解説の図⑤を参照のこと。"
       }
      },
-     "kaisetsu": "kaisetsu/sfc/2015-1/sansu.html"
+     "kaisetsu": "kaisetsu/sfc/2015-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2015-1/sansu/solved_2026-11-13_01.jpg",
+       "small": "2015-1/sansu/solved_2026-11-13_01_small.jpg",
+       "date": "2026-11-13"
+      }
+     ]
     },
     {
      "id": "shakai",
@@ -11662,7 +11669,14 @@
        "4 問5": "水素…7.0L・酸素…1.5L"
       }
      },
-     "kaisetsu": "kaisetsu/sfc/2015-1/rika.html"
+     "kaisetsu": "kaisetsu/sfc/2015-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2015-1/rika/solved_2026-11-13_01.jpg",
+       "small": "2015-1/rika/solved_2026-11-13_01_small.jpg",
+       "date": "2026-11-13"
+      }
+     ]
     },
     {
      "id": "kokugo",
