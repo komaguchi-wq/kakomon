@@ -10618,7 +10618,15 @@
        "gokakusha": 34.1
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2023-1/rika.html"
+     "kaisetsu": "kaisetsu/hiroo/2023-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2023-1/rika/solved_2026-11-17_01.jpg",
+       "small": "2023-1/rika/solved_2026-11-17_01_small.jpg",
+       "date": "2026-11-17",
+       "note": "広尾 2023-1 理科 解答用紙（評点32/50・○16 ×9・氏名マスク・裏白除去・GAS 1回目に確定）"
+      }
+     ]
     },
     {
      "id": "kokugo",
