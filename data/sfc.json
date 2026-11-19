@@ -4921,7 +4921,15 @@
        "7 問6": "4→1→3→2"
       }
      },
-     "kaisetsu": "kaisetsu/sfc/2022-1/shakai.html"
+     "kaisetsu": "kaisetsu/sfc/2022-1/shakai.html",
+     "solvedPages": [
+      {
+       "full": "2022-1/shakai/solved_2026-11-19_01.jpg",
+       "small": "2022-1/shakai/solved_2026-11-19_01_small.jpg",
+       "date": "2026-11-19",
+       "note": "SFC 2022 社会 解答用紙（評点39/50・番号/氏名らん白塗り・裏白除去）"
+      }
+     ]
     },
     {
      "id": "rika",
