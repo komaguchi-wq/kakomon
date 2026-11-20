@@ -3800,7 +3800,15 @@
        "gokakusha": 63.4
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2025-2/sansu.html"
+     "kaisetsu": "kaisetsu/hiroo/2025-2/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2025-2/sansu/solved_2026-11-20_01.jpg",
+       "small": "2025-2/sansu/solved_2026-11-20_01_small.jpg",
+       "date": "2026-11-20",
+       "note": "広尾 2025 第2回 算数 解答用紙（評点53/100・番号/氏名らん空欄・裏白除去）"
+      }
+     ]
     },
     {
      "id": "shakai",

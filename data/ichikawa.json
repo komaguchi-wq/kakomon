@@ -9367,7 +9367,15 @@
        "gokakusha": null
       }
      },
-     "kaisetsu": "kaisetsu/ichikawa/2022-1/rika.html"
+     "kaisetsu": "kaisetsu/ichikawa/2022-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2022-1/rika/solved_2026-11-20_01.jpg",
+       "small": "2022-1/rika/solved_2026-11-20_01_small.jpg",
+       "date": "2026-11-20",
+       "note": "市川 2022 第1回 理科 解答用紙（評点72/100・氏名らん白塗り・裏白除去）"
+      }
+     ]
     },
     {
      "id": "kokugo",
