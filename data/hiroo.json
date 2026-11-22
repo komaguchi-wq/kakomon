@@ -8243,7 +8243,7 @@
    "year": 2023,
    "round": "ms",
    "label": "2023年度 医進・サイエンス回",
-   "roundNote": "国語の問題文は未収録",
+   "roundNote": "",
    "ansOnly": false,
    "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo-02",
    "imgBaseLocal": "../kakomon-img-hiroo-02",
@@ -8998,7 +8998,36 @@
      "minutes": 30,
      "maxScore": 50,
      "rtl": true,
-     "questionPages": [],
+     "questionPages": [
+      {
+       "full": "2023-ms/kokugo/q_01.jpg",
+       "small": "2023-ms/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2023-ms/kokugo/q_02.jpg",
+       "small": "2023-ms/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2023-ms/kokugo/q_03.jpg",
+       "small": "2023-ms/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2023-ms/kokugo/q_04.jpg",
+       "small": "2023-ms/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2023-ms/kokugo/q_05.jpg",
+       "small": "2023-ms/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2023-ms/kokugo/q_06.jpg",
+       "small": "2023-ms/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2023-ms/kokugo/q_07.jpg",
+       "small": "2023-ms/kokugo/q_07_small.jpg"
+      }
+     ],
      "sheetPages": [
       {
        "full": "2023-ms/kokugo/sheet_1.jpg",
@@ -9098,7 +9127,7 @@
    "year": 2023,
    "round": "2",
    "label": "2023年度 第2回",
-   "roundNote": "国語の問題文は未収録",
+   "roundNote": "",
    "ansOnly": false,
    "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo-02",
    "imgBaseLocal": "../kakomon-img-hiroo-02",
@@ -9851,7 +9880,60 @@
      "minutes": 50,
      "maxScore": 100,
      "rtl": true,
-     "questionPages": [],
+     "questionPages": [
+      {
+       "full": "2023-2/kokugo/q_01.jpg",
+       "small": "2023-2/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_02.jpg",
+       "small": "2023-2/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_03.jpg",
+       "small": "2023-2/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_04.jpg",
+       "small": "2023-2/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_05.jpg",
+       "small": "2023-2/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_06.jpg",
+       "small": "2023-2/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_07.jpg",
+       "small": "2023-2/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_08.jpg",
+       "small": "2023-2/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_09.jpg",
+       "small": "2023-2/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_10.jpg",
+       "small": "2023-2/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_11.jpg",
+       "small": "2023-2/kokugo/q_11_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_12.jpg",
+       "small": "2023-2/kokugo/q_12_small.jpg"
+      },
+      {
+       "full": "2023-2/kokugo/q_13.jpg",
+       "small": "2023-2/kokugo/q_13_small.jpg"
+      }
+     ],
      "sheetPages": [
       {
        "full": "2023-2/kokugo/sheet_1.jpg",
@@ -9957,7 +10039,7 @@
    "year": 2023,
    "round": "1",
    "label": "2023年度 第1回",
-   "roundNote": "国語の問題文は未収録",
+   "roundNote": "",
    "ansOnly": true,
    "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo-02",
    "imgBaseLocal": "../kakomon-img-hiroo-02",
@@ -10650,7 +10732,56 @@
      "minutes": 50,
      "maxScore": 100,
      "rtl": true,
-     "questionPages": [],
+     "questionPages": [
+      {
+       "full": "2023-1/kokugo/q_01.jpg",
+       "small": "2023-1/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_02.jpg",
+       "small": "2023-1/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_03.jpg",
+       "small": "2023-1/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_04.jpg",
+       "small": "2023-1/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_05.jpg",
+       "small": "2023-1/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_06.jpg",
+       "small": "2023-1/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_07.jpg",
+       "small": "2023-1/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_08.jpg",
+       "small": "2023-1/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_09.jpg",
+       "small": "2023-1/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_10.jpg",
+       "small": "2023-1/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_11.jpg",
+       "small": "2023-1/kokugo/q_11_small.jpg"
+      },
+      {
+       "full": "2023-1/kokugo/q_12.jpg",
+       "small": "2023-1/kokugo/q_12_small.jpg"
+      }
+     ],
      "sheetPages": [
       {
        "full": "2023-1/kokugo/sheet_1.jpg",
@@ -10754,7 +10885,7 @@
    "year": 2022,
    "round": "ms",
    "label": "2022年度 医進・サイエンス回",
-   "roundNote": "国語の問題文は未収録",
+   "roundNote": "",
    "ansOnly": false,
    "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo-02",
    "imgBaseLocal": "../kakomon-img-hiroo-02",
@@ -11515,7 +11646,32 @@
      "minutes": 30,
      "maxScore": 50,
      "rtl": true,
-     "questionPages": [],
+     "questionPages": [
+      {
+       "full": "2022-ms/kokugo/q_01.jpg",
+       "small": "2022-ms/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2022-ms/kokugo/q_02.jpg",
+       "small": "2022-ms/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2022-ms/kokugo/q_03.jpg",
+       "small": "2022-ms/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2022-ms/kokugo/q_04.jpg",
+       "small": "2022-ms/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2022-ms/kokugo/q_05.jpg",
+       "small": "2022-ms/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2022-ms/kokugo/q_06.jpg",
+       "small": "2022-ms/kokugo/q_06_small.jpg"
+      }
+     ],
      "sheetPages": [
       {
        "full": "2022-ms/kokugo/sheet_1.jpg",
@@ -11605,7 +11761,7 @@
    "year": 2022,
    "round": "2",
    "label": "2022年度 第2回",
-   "roundNote": "国語の問題文は未収録",
+   "roundNote": "",
    "ansOnly": false,
    "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo-02",
    "imgBaseLocal": "../kakomon-img-hiroo-02",
@@ -12386,7 +12542,56 @@
      "minutes": 50,
      "maxScore": 100,
      "rtl": true,
-     "questionPages": [],
+     "questionPages": [
+      {
+       "full": "2022-2/kokugo/q_01.jpg",
+       "small": "2022-2/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_02.jpg",
+       "small": "2022-2/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_03.jpg",
+       "small": "2022-2/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_04.jpg",
+       "small": "2022-2/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_05.jpg",
+       "small": "2022-2/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_06.jpg",
+       "small": "2022-2/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_07.jpg",
+       "small": "2022-2/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_08.jpg",
+       "small": "2022-2/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_09.jpg",
+       "small": "2022-2/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_10.jpg",
+       "small": "2022-2/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_11.jpg",
+       "small": "2022-2/kokugo/q_11_small.jpg"
+      },
+      {
+       "full": "2022-2/kokugo/q_12.jpg",
+       "small": "2022-2/kokugo/q_12_small.jpg"
+      }
+     ],
      "sheetPages": [
       {
        "full": "2022-2/kokugo/sheet_1.jpg",
@@ -12502,7 +12707,7 @@
    "year": 2022,
    "round": "1",
    "label": "2022年度 第1回",
-   "roundNote": "国語の問題文は未収録",
+   "roundNote": "",
    "ansOnly": true,
    "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo-02",
    "imgBaseLocal": "../kakomon-img-hiroo-02",
@@ -13209,7 +13414,48 @@
      "minutes": 50,
      "maxScore": 100,
      "rtl": true,
-     "questionPages": [],
+     "questionPages": [
+      {
+       "full": "2022-1/kokugo/q_01.jpg",
+       "small": "2022-1/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2022-1/kokugo/q_02.jpg",
+       "small": "2022-1/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2022-1/kokugo/q_03.jpg",
+       "small": "2022-1/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2022-1/kokugo/q_04.jpg",
+       "small": "2022-1/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2022-1/kokugo/q_05.jpg",
+       "small": "2022-1/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2022-1/kokugo/q_06.jpg",
+       "small": "2022-1/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2022-1/kokugo/q_07.jpg",
+       "small": "2022-1/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2022-1/kokugo/q_08.jpg",
+       "small": "2022-1/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2022-1/kokugo/q_09.jpg",
+       "small": "2022-1/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2022-1/kokugo/q_10.jpg",
+       "small": "2022-1/kokugo/q_10_small.jpg"
+      }
+     ],
      "sheetPages": [
       {
        "full": "2022-1/kokugo/sheet_1.jpg",
@@ -13311,7 +13557,7 @@
    "year": 2021,
    "round": "ms",
    "label": "2021年度 医進・サイエンス回",
-   "roundNote": "国語の問題文は未収録",
+   "roundNote": "",
    "ansOnly": false,
    "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo-02",
    "imgBaseLocal": "../kakomon-img-hiroo-02",
@@ -14104,7 +14350,32 @@
      "minutes": 30,
      "maxScore": 50,
      "rtl": true,
-     "questionPages": [],
+     "questionPages": [
+      {
+       "full": "2021-ms/kokugo/q_01.jpg",
+       "small": "2021-ms/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2021-ms/kokugo/q_02.jpg",
+       "small": "2021-ms/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2021-ms/kokugo/q_03.jpg",
+       "small": "2021-ms/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2021-ms/kokugo/q_04.jpg",
+       "small": "2021-ms/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2021-ms/kokugo/q_05.jpg",
+       "small": "2021-ms/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2021-ms/kokugo/q_06.jpg",
+       "small": "2021-ms/kokugo/q_06_small.jpg"
+      }
+     ],
      "sheetPages": [
       {
        "full": "2021-ms/kokugo/sheet_1.jpg",
@@ -14190,7 +14461,7 @@
    "year": 2021,
    "round": "2",
    "label": "2021年度 第2回",
-   "roundNote": "国語の問題文は未収録",
+   "roundNote": "",
    "ansOnly": false,
    "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo-02",
    "imgBaseLocal": "../kakomon-img-hiroo-02",
@@ -14887,7 +15158,48 @@
      "minutes": 50,
      "maxScore": 100,
      "rtl": true,
-     "questionPages": [],
+     "questionPages": [
+      {
+       "full": "2021-2/kokugo/q_01.jpg",
+       "small": "2021-2/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2021-2/kokugo/q_02.jpg",
+       "small": "2021-2/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2021-2/kokugo/q_03.jpg",
+       "small": "2021-2/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2021-2/kokugo/q_04.jpg",
+       "small": "2021-2/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2021-2/kokugo/q_05.jpg",
+       "small": "2021-2/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2021-2/kokugo/q_06.jpg",
+       "small": "2021-2/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2021-2/kokugo/q_07.jpg",
+       "small": "2021-2/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2021-2/kokugo/q_08.jpg",
+       "small": "2021-2/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2021-2/kokugo/q_09.jpg",
+       "small": "2021-2/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2021-2/kokugo/q_10.jpg",
+       "small": "2021-2/kokugo/q_10_small.jpg"
+      }
+     ],
      "sheetPages": [
       {
        "full": "2021-2/kokugo/sheet_1.jpg",
@@ -14981,7 +15293,7 @@
    "year": 2021,
    "round": "1",
    "label": "2021年度 第1回",
-   "roundNote": "国語の問題文は未収録",
+   "roundNote": "",
    "ansOnly": true,
    "imgBaseProd": "https://komaguchi-wq.github.io/kakomon-img-hiroo-02",
    "imgBaseLocal": "../kakomon-img-hiroo-02",
@@ -15650,7 +15962,52 @@
      "minutes": 50,
      "maxScore": 100,
      "rtl": true,
-     "questionPages": [],
+     "questionPages": [
+      {
+       "full": "2021-1/kokugo/q_01.jpg",
+       "small": "2021-1/kokugo/q_01_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_02.jpg",
+       "small": "2021-1/kokugo/q_02_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_03.jpg",
+       "small": "2021-1/kokugo/q_03_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_04.jpg",
+       "small": "2021-1/kokugo/q_04_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_05.jpg",
+       "small": "2021-1/kokugo/q_05_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_06.jpg",
+       "small": "2021-1/kokugo/q_06_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_07.jpg",
+       "small": "2021-1/kokugo/q_07_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_08.jpg",
+       "small": "2021-1/kokugo/q_08_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_09.jpg",
+       "small": "2021-1/kokugo/q_09_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_10.jpg",
+       "small": "2021-1/kokugo/q_10_small.jpg"
+      },
+      {
+       "full": "2021-1/kokugo/q_11.jpg",
+       "small": "2021-1/kokugo/q_11_small.jpg"
+      }
+     ],
      "sheetPages": [
       {
        "full": "2021-1/kokugo/sheet_1.jpg",
