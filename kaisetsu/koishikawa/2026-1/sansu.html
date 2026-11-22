@@ -1,0 +1,795 @@
+<!-- generated kakomon koishikawa/2026-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1">大問1（小問集合8題・計算のくふう／面積／三進数／濃度）</a></li>
+<li><a href="#2-3-4">大問2・3・4（円の転がり／おしゃべりで速さが変わる仕事算／カレンダーの9マス）</a></li>
+<li><a href="#5">大問5（円形に並ぶ6人・条件の整理）</a></li></ul></nav>
+<div class="daimon" id="1"><h1 class="dtitle">大問1（小問集合8題・計算のくふう／面積／三進数／濃度）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1</span> この回の全体像（担当の大問） <span class="type">40点（5点×8）</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)(2)</td><td>□を求める逆算／小数のかけ算</td><td>5+5</td><td>外側から順にもどす／「2.5」「1.25」「0.25」がならぶ</td></tr>
+    <tr><td>1 (3)(4)</td><td>分数の和（分けて消す）／小数のたし算</td><td>5+5</td><td>分母が「3×7」「7×11」…／足して111.111になる組</td></tr>
+    <tr><td>1 (5)</td><td>時間のひき算</td><td>5</td><td>「□＝17時間25分12秒−5時間33分49秒」に直す</td></tr>
+    <tr><td>1 (6)</td><td>斜線部分の面積</td><td>5</td><td>対角線で2つの三角形に分ける</td></tr>
+    <tr><td>1 (7)</td><td>数字の列と英語の語</td><td>5</td><td>使う数字は0・1・2だけ → 三進数</td></tr>
+    <tr><td>1 (8)</td><td>食塩水の濃さ（てんびん）</td><td>5</td><td>「Aのこさの2倍」「25以下の整数」</td></tr>
+  </table>
+  <p>8問とも5点。(1)〜(5)は計算で、<b>くふうの合図を見つけてから手を動かす</b>と速い。(6)〜(8)は1つずつ型がちがう。(7)は<b>「0・1・2しか出てこない」</b>ことに気づけば一気に進む。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> □を求める逆算（分数） <span class="type">5点｜逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>÷1/28＝4 1/5</b>」と、すぐ計算できる「<b>1/7×1/4</b>」。1/7×1/4＝1/28 に直して書く → 外側から「÷の逆は×」「＋の逆は−」と1つずつもどせば□が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆算は、<b>□からいちばん遠い計算から順にもどす</b>。たとえば (□＋2)×3＝15 なら、まず15÷3＝5、次に5−2＝3。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>先に計算できる所を出す。1/7×1/4＝1/28。</li>
+    <li>いちばん外の「÷1/28」をもどす。{　}の中は 4 1/5×1/28＝21/5×1/28＝<b>3/20</b>。</li>
+    <li>「1/28＋」をもどす。3/20−1/28＝21/140−5/140＝16/140＝4/35。これが 1/5×(1 2/3−□)。</li>
+    <li>「1/5×」をもどす。4/35÷1/5＝4/7。これが 1 2/3−□。</li>
+    <li>□＝1 2/3−4/7＝1 14/21−12/21＝<b>1 2/21</b>。</li>
+    <li>落としやすい所。「1 2/3−□＝4/7」から□を出すときは、ひき算。4/7＋1 2/3 とたさない。</li>
+  </ol>
+  <div class="ans">答え：1 2/21</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 25×2.5＋32×1.25−10×0.25−9×10 <span class="type">5点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2.5</b>」「<b>1.25</b>」「<b>0.25</b>」。1.25＝0.5×2.5、0.25＝0.1×2.5、10＝4×2.5 に直して書く → 全部が「□×2.5」の形になり、<b>□だけ先に計算</b>できる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数をかけているものは、まとめられる。3×2.5＋5×2.5＝(3＋5)×2.5＝<b>8×2.5</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>4つの項を「□×2.5」に書きかえる。
+      <table>
+        <tr><th>もとの式</th><th>書きかえ</th><th>□</th></tr>
+        <tr><td>25×2.5</td><td>25×2.5</td><td>25</td></tr>
+        <tr><td>32×1.25</td><td>32×0.5×2.5</td><td>16</td></tr>
+        <tr><td>10×0.25</td><td>10×0.1×2.5</td><td>1</td></tr>
+        <tr><td>9×10</td><td>9×4×2.5</td><td>36</td></tr>
+      </table>
+    </li>
+    <li>□だけを計算する。25＋16−1−36＝<b>4</b>。</li>
+    <li>最後に×2.5。4×2.5＝10。</li>
+    <li>落としやすい所。「9×10」も2.5でまとめられる。ここを別に計算すると、まとめた意味がうすくなる。</li>
+  </ol>
+  <div class="ans">答え：10</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 4/21＋4/77＋4/165＋4/285＋4/437 <span class="type">5点｜分数の和（分けて消す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は分母「<b>21</b>」「<b>77</b>」…と分子の「<b>4</b>」。分母を 3×7、7×11、11×15… に直して書く → となりの数の差がどれも4。だから <b>1/3−1/7 のような「ひき算」に分けられて</b>、まん中が消える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1/3−1/7＝7/21−3/21＝4/21。差が4の2数なら、<b>4/(小さい数×大きい数)＝1/小さい数−1/大きい数</b>。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>分母を2つの数のかけ算に直す。21＝3×7、77＝7×11、165＝11×15、285＝15×19、437＝19×23。</li>
+    <li>1つずつ、ひき算に分ける。
+<pre class="fig">4/21 ＝1/3 −1/7
+4/77 ＝1/7 −1/11
+4/165＝1/11−1/15
+4/285＝1/15−1/19
+4/437＝1/19−1/23</pre></li>
+    <li>たてにたすと、−1/7と＋1/7のように消し合う。残るのは最初と最後だけ。</li>
+    <li>1/3−1/23＝23/69−3/69＝<b>20/69</b>。</li>
+    <li>落としやすい所。分子が4で、差も4。差と分子が同じだから、そのまま分けられる。差と分子がちがう問題では、そのままでは分けられない。たとえば 1/21 は (1/3−1/7)÷4 になる。</li>
+  </ol>
+  <div class="ans">答え：20/69</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 34.5678＋45.6789＋65.4321＋76.5432 <span class="type">5点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>34.5678</b>」と「<b>76.5432</b>」。小数部分をたすと 0.5678＋0.5432＝1.111 → <b>1つ目と4つ目、2つ目と3つ目を組にする</b>。どちらの組も111.111になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>たし算は順番を入れかえてよい。くり上がりがそろう組を先にたすと、きれいな数が出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1つ目と4つ目を組にする。34.5678＋76.5432＝<b>111.111</b>。</li>
+    <li>2つ目と3つ目を組にする。45.6789＋65.4321＝<b>111.111</b>。</li>
+    <li>2組をたす。111.111＋111.111＝222.222。</li>
+    <li>落としやすい所。4つを左から順にたすと、くり上がりが毎回出る。組をつくってからたす。</li>
+  </ol>
+  <div class="ans">答え：222.222</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 17時間25分12秒−□＝5時間33分49秒 <span class="type">5点｜単位の計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>17時間25分12秒−□</b>」。□＝17時間25分12秒−5時間33分49秒 に直して書く → 秒も分もひけないので、<b>1分＝60秒・1時間＝60分</b>をくずしてからひく。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「ひかれる数−□＝答え」なら、□＝ひかれる数−答え。たとえば 10−□＝3 なら、□＝10−3＝7。</li>
+    <li>時間のくり下がりは、10ではなく<b>60</b>をもらう。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>上下にならべて、くずす。
+      <table>
+        <tr><th></th><th>時間</th><th>分</th><th>秒</th></tr>
+        <tr><td>はじめ</td><td>17</td><td>25</td><td>12</td></tr>
+        <tr><td>1分くずす</td><td>17</td><td>24</td><td>72</td></tr>
+        <tr><td>1時間くずす</td><td>16</td><td>84</td><td>72</td></tr>
+        <tr><td>ひく数</td><td>5</td><td>33</td><td>49</td></tr>
+        <tr><td>□</td><td><b>11</b></td><td><b>51</b></td><td><b>23</b></td></tr>
+      </table>
+    </li>
+    <li>秒は 72−49＝23。分は 84−33＝51。時間は 16−5＝11。</li>
+    <li>たしかめ。5時間33分49秒＋11時間51分23秒＝16時間84分72秒＝17時間25分12秒。合っている。</li>
+  </ol>
+  <div class="ans">答え：11時間51分23秒</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (6)</span> 2つの直角三角形と斜線部分 <span class="type">5点｜面積（三角形に分ける）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>4cm</b>」と「<b>3cm</b>」、それに2つの直角の印。斜線部分の右上と左下の頂点を結ぶ線を図に置く → 底辺4cmの三角形と底辺3cmの三角形に分かれ、<b>高さは直角の辺（9cmと12cm）</b>がそのまま使える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三角形の高さは、底辺をのばした線までの垂直な長さ。三角形の外に出てもよい。</li>
+    <li>直角の印があれば、その2辺はたがいに垂直。片方が底辺なら、もう片方が<b>高さ</b>になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>声教の解説にならって点に名前をつける。斜線部分の右上をA、左はしをB、左下のかどをC、右はしをD。上の直角のかどをP、右下の直角のかどをQ。AとCを結ぶ。</li>
+    <li>三角形ABCを見る。底辺BC＝4cm。BとCはQと同じ横の線の上にある。だから高さはAQ＝9cm。面積は 4×9÷2＝<b>18cm²</b>。
+<svg viewBox="0 0 390 270" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <polygon points="20,230 92,230 308,68" fill="#dbe9ff"/>
+  <polygon points="92,230 359.8,83.1 308,68" fill="#ffe0b2" opacity="0.45"/>
+  <polyline points="92,230 152.5,22.6 359.8,83.1" fill="none" stroke="#222" stroke-width="1.5"/>
+  <polyline points="20,230 308,230 308,68" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="20" y1="230" x2="308" y2="68" stroke="#222" stroke-width="1.5"/>
+  <line x1="92" y1="230" x2="359.8" y2="83.1" stroke="#222" stroke-width="1.5"/>
+  <line x1="92" y1="230" x2="308" y2="68" stroke="#1565c0" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="20" y1="230" x2="92" y2="230" stroke="#d32f2f" stroke-width="3.5"/>
+  <line x1="308" y1="230" x2="308" y2="68" stroke="#d32f2f" stroke-width="3.5"/>
+  <polyline points="298,230 298,220 308,220" fill="none" stroke="#222"/>
+  <polyline points="149.7,32.2 159.3,35.0 162.1,25.4" fill="none" stroke="#222"/>
+  <text x="300" y="60" font-weight="bold">A</text>
+  <text x="8" y="250" font-weight="bold">B</text>
+  <text x="86" y="250" font-weight="bold">C</text>
+  <text x="364" y="88" font-weight="bold">D</text>
+  <text x="140" y="16">P</text>
+  <text x="312" y="248">Q</text>
+  <text x="38" y="250" fill="#d32f2f" font-weight="bold">4cm</text>
+  <text x="314" y="155" fill="#d32f2f" font-weight="bold">高さ9cm</text>
+  <text x="185" y="250">12cm</text>
+  <text x="120" y="200" fill="#1565c0">三角形ABC</text>
+</svg></li>
+    <li>三角形ACDを見る。底辺AD＝3cm。ADはPAをのばした線の上にある。CPはPAに垂直だから、高さはCP＝12cm。面積は 3×12÷2＝18cm²。
+<svg viewBox="0 0 390 270" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <polygon points="20,230 92,230 308,68" fill="#dbe9ff" opacity="0.45"/>
+  <polygon points="92,230 359.8,83.1 308,68" fill="#ffe0b2"/>
+  <polyline points="92,230 152.5,22.6 359.8,83.1" fill="none" stroke="#222" stroke-width="1.5"/>
+  <polyline points="20,230 308,230 308,68" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="20" y1="230" x2="308" y2="68" stroke="#222" stroke-width="1.5"/>
+  <line x1="92" y1="230" x2="359.8" y2="83.1" stroke="#222" stroke-width="1.5"/>
+  <line x1="92" y1="230" x2="308" y2="68" stroke="#1565c0" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="308" y1="68" x2="359.8" y2="83.1" stroke="#d32f2f" stroke-width="3.5"/>
+  <line x1="92" y1="230" x2="152.5" y2="22.6" stroke="#d32f2f" stroke-width="3.5"/>
+  <polyline points="298,230 298,220 308,220" fill="none" stroke="#222"/>
+  <polyline points="149.7,32.2 159.3,35.0 162.1,25.4" fill="none" stroke="#222"/>
+  <text x="300" y="60" font-weight="bold">A</text>
+  <text x="8" y="250" font-weight="bold">B</text>
+  <text x="86" y="250" font-weight="bold">C</text>
+  <text x="364" y="88" font-weight="bold">D</text>
+  <text x="140" y="16">P</text>
+  <text x="330" y="66" fill="#d32f2f" font-weight="bold">3cm</text>
+  <text x="62" y="120" fill="#d32f2f" font-weight="bold">高さ12cm</text>
+  <text x="225" y="40">9cm</text>
+  <text x="205" y="150" fill="#1565c0">三角形ACD</text>
+</svg></li>
+    <li>2つをたす。18＋18＝36cm²。</li>
+    <li>落としやすい所。12cmは2本ある。三角形ACDの高さは、下の12cmではなく、<b>Pから左下にのびる12cm</b>。</li>
+  </ol>
+  <div class="ans">答え：36</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (7)</span> 「MATH」「CLUB」を表す数字の列 <span class="type">5点｜N進数（三進数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>111・001・202・022</b>」に出てくる数字。0・1・2しか使っていないことに丸 → <b>三進数</b>と見て、十進数に直して書く。MATH なら 13・1・20・8 で、アルファベットの何番目かと同じになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>三進数は、右から<b>1の位・3の位・9の位</b>。たとえば 202 は 9×2＋3×0＋1×2＝20。</li>
+    <li>アルファベットはAから順に1番、2番…。Mは13番目、Hは8番目。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>MATH で決まりをたしかめる。
+      <table>
+        <tr><th>数字の列</th><th>十進数</th><th>何番目の文字</th></tr>
+        <tr><td>111</td><td>9＋3＋1＝13</td><td>M</td></tr>
+        <tr><td>001</td><td>1</td><td>A</td></tr>
+        <tr><td>202</td><td>9×2＋1×2＝20</td><td>T</td></tr>
+        <tr><td>022</td><td>3×2＋1×2＝8</td><td>H</td></tr>
+      </table>
+      CLUB（010・110・210・002 → 3・12・21・2）も同じ決まりで合う。</li>
+    <li>求める列を直す。
+      <table>
+        <tr><th>数字の列</th><th>十進数</th><th>何番目の文字</th></tr>
+        <tr><td>102</td><td>9＋1×2＝11</td><td>K</td></tr>
+        <tr><td>112</td><td>9＋3＋1×2＝14</td><td>N</td></tr>
+        <tr><td>120</td><td>9＋3×2＝15</td><td>O</td></tr>
+        <tr><td>212</td><td>9×2＋3＋1×2＝23</td><td>W</td></tr>
+      </table>
+    </li>
+    <li>ならべると <b>KNOW</b>。</li>
+    <li>落としやすい所。文字の番号を数えるとき、指で1つずれやすい。Kは11番目（Jの次）、Wは23番目（うしろから数えて Z・Y・X・W の4番目）と2通りでたしかめる。</li>
+  </ol>
+  <div class="ans">答え：KNOW</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (8)</span> こさが2倍になる食塩水の混ぜ合わせ <span class="type">5点｜濃度（てんびん）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>Cのこさは食塩水Aのこさの2倍</b>」と「<b>25以下の整数</b>」。x＝①、z＝② に直して、てんびん図に置く → x：y：z の比が出る。25以下の整数という条件で、数が1つに決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>てんびん図では、<b>うでの長さの比は、重さの比の逆</b>になる。250g と 450g なら、うでの長さは 450：250＝9：5。</li>
+    <li>うでの長さは、こさの差。左のうで＝z−x、右のうで＝y−z。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>てんびん図を描く。左はしに x％（250g）、右はしに y％（450g）、支点が z％。
+<svg viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <line x1="30" y1="60" x2="330" y2="60" stroke="#222" stroke-width="2"/>
+  <polygon points="223,60 213,80 233,80" fill="#222"/>
+  <line x1="30" y1="60" x2="30" y2="95" stroke="#222"/>
+  <line x1="330" y1="60" x2="330" y2="95" stroke="#222"/>
+  <rect x="5" y="95" width="50" height="22" fill="#dbe9ff" stroke="#222"/>
+  <rect x="300" y="95" width="56" height="22" fill="#ffe0b2" stroke="#222"/>
+  <text x="11" y="111">250g</text>
+  <text x="308" y="111">450g</text>
+  <text x="15" y="50">x％＝①</text>
+  <text x="196" y="40" fill="#d32f2f" font-weight="bold">z％＝②</text>
+  <text x="300" y="50">y％</text>
+  <text x="105" y="78" fill="#1565c0">ア＝①</text>
+  <text x="255" y="78" fill="#1565c0">イ＝5/9</text>
+  <text x="70" y="140">うでの長さの比＝重さの逆比（450：250＝9：5）</text>
+</svg></li>
+    <li>x＝①、z＝② とおく。左のうでアは ②−①＝①。</li>
+    <li>250×ア＝450×イ。250×①＝450×イ だから、イ＝250÷450＝<b>5/9</b>（①を1とした長さ）。</li>
+    <li>y＝②＋5/9＝23/9。x：y：z＝1：23/9：2＝<b>9：23：18</b>。</li>
+    <li>どれも25以下の整数にする。9、23、18 をそのまま使える。2倍すると 46 になって25をこえる。だから x＝9、y＝23、z＝18。</li>
+    <li>Cは 250＋450＝700g で、こさ18％。食塩は 700×0.18＝126g。</li>
+    <li>たしかめ。Aの食塩 250×0.09＝22.5g、Bの食塩 450×0.23＝103.5g。合わせて126g。合っている。</li>
+  </ol>
+  <div class="ans">答え：126</div>
+</section>
+</div>
+<div class="daimon" id="2-3-4"><h1 class="dtitle">大問2・3・4（円の転がり／おしゃべりで速さが変わる仕事算／カレンダーの9マス）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">2〜4</span> この回の全体像（担当の大問） <span class="type">45点（大問2・3 各5点×3／大問4 4+5+6点）</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>2</td><td>円周と面積・円の転がり</td><td>5+5+5</td><td>「アはイの2倍」→ 半径1cm。転がる問題は中心の通り道を「まっすぐ・かど・弧」に分ける</td></tr>
+    <tr><td>3</td><td>仕事算（3人だと速さがおそくなる）</td><td>5+5+5</td><td>「12時間」「8時間」→ 仕事全体を24にする</td></tr>
+    <tr><td>4</td><td>カレンダーを3×3で囲む</td><td>4+5（完答）+6</td><td>9マスの和＝まん中×9。右下＝まん中＋8</td></tr>
+  </table>
+  <p>取り方: どの大問も (1) の答えを (2)(3) で使う形。<b>(1) を確実に出してから次へ進む</b>。4 (2) は曜日をすべて書く完答。4 (3) は考え方も書く問題で、(2) の候補と「まん中×9」をそのまま使う。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 円周が面積の2倍になる円の半径 <span class="type">5点｜円周と面積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>アはイの2倍</b>」。円周と面積を、半径を□にした式に直して書く → 両方に「□×3.14」が入っているので、残りを比べると<b>半径が決まる</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円周＝半径×2×3.14。面積＝半径×半径×3.14。</li>
+    <li>半径1cmなら、円周6.28cm・面積3.14cm²。円周は面積の2倍。半径2cmなら、円周も面積も12.56。同じになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>半径を□cmとする。円周は □×2×3.14。面積は □×□×3.14。</li>
+    <li>「円周＝面積×2」を式にする。
+<pre class="fig">□×2×3.14 ＝ □×□×3.14×2</pre></li>
+    <li>両側から同じ「□×3.14」をとる。左に2、右に□×2が残る。
+<pre class="fig">2 ＝ □×2　→　□＝1</pre></li>
+    <li>たしかめ。半径1cmで円周6.28、面積3.14。6.28は3.14の2倍。合っている。</li>
+    <li>落としやすい所は「2倍」をかける側。<b>面積のほうに×2</b>をつける。</li>
+  </ol>
+  <div class="ans">答え：1cm</div>
+  <div class="tip">コツ：この半径1cmの円を (2)(3) で転がす。円周の半分は 1×2×3.14÷2＝3.14cm。これがABの長さになる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 半円がへこんだ図形の上を転がる円の中心 <span class="type">5点｜図形の転がり（中心の通り道）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>半径8cmの半円をくりぬいた</b>」と「<b>ABは(1)の円の円周の半分</b>」。図にAB＝3.14cm、BM＝8cmを書きこむ（図に置く）→ 中心の通り道を「まっすぐ・かど・半円」に分けて長さをたす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円が辺にそって転がると、中心は辺から半径1cmはなれた所を、辺と同じ長さだけ進む。</li>
+    <li>外に出っぱったかど（BとC）では、円はかどを中心に回る。中心は半径1cmのおうぎ形の弧をえがく。半円のはしは、辺ADに垂直に下りている。だから中心角は90°。</li>
+    <li>へこんだ半円の内側を転がるとき、中心は半径の分だけ内側を通る。半径は 8−1＝7cm になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>中心の通り道（赤）を描いて、ア〜オに分ける。
+<svg viewBox="0 0 360 230" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><path d="M46.0,44.0 L83.7,44.0 A96,96 0 0 0 275.7,44.0 L313.4,44.0 L313.4,164.2 L46.0,164.2 Z" fill="#f5f5f5" stroke="#222" stroke-width="1.5"/><line x1="83.7" y1="44" x2="275.7" y2="44" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/><circle cx="179.7" cy="44" r="2.5" fill="#222"/><circle cx="83.7" cy="44" r="2.5" fill="#222"/><circle cx="275.7" cy="44" r="2.5" fill="#222"/><text x="42.0" y="58.0" font-size="12" fill="#222" text-anchor="end">A</text><text x="79.7" y="60.0" font-size="12" fill="#222" text-anchor="end">B</text><text x="279.7" y="60.0" font-size="12" fill="#222" text-anchor="start">C</text><text x="317.4" y="58.0" font-size="12" fill="#222" text-anchor="start">D</text><text x="317.4" y="178.2" font-size="12" fill="#222" text-anchor="start">E</text><text x="179.7" y="38.0" font-size="12" fill="#222" text-anchor="middle">M</text><line x1="179.7" y1="44" x2="179.7" y2="140.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/><text x="184.7" y="72" font-size="11" fill="#1565c0">8cm</text><circle cx="46.0" cy="32.0" r="12" fill="none" stroke="#1565c0" stroke-width="1.2"/><circle cx="179.7" cy="128.0" r="12" fill="none" stroke="#1565c0" stroke-width="1.2"/><circle cx="313.4" cy="32.0" r="12" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="3,2"/><path d="M46.0,32.0 L83.7,32.0 A12,12 0 0 1 95.7,44 A84,84 0 0 0 263.7,44 A12,12 0 0 1 275.7,32.0 L313.4,32.0" fill="none" stroke="#d32f2f" stroke-width="2.6"/><text x="70.8" y="22.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">ア</text><text x="99.7" y="34.0" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold">イ</text><text x="231.7" y="104.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">ウ</text><text x="259.7" y="34.0" font-size="12" fill="#d32f2f" text-anchor="end" font-weight="bold">エ</text><text x="288.5" y="22.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">オ</text><text x="20.0" y="196.0" font-size="11" fill="#222" text-anchor="start" font-weight="normal">ア・オ（まっすぐ）＝3.14cm　イ・エ（かど）＝1.57cm</text><text x="20.0" y="214.0" font-size="11" fill="#222" text-anchor="start" font-weight="normal">ウ＝半径 8−1＝7cm の半円＝21.98cm</text></svg></li>
+    <li>MはADの真ん中なので、図は左右対称。CDもABと同じ3.14cm。</li>
+    <li>アとオはまっすぐ。長さはABと同じで、どちらも 1×2×3.14÷2＝3.14cm。</li>
+    <li>イとエはかどのまわり。半径1cm・中心角90°の弧で、どちらも 1×2×3.14÷4＝1.57cm。</li>
+    <li>ウは半径7cmの半円の弧。7×2×3.14÷2＝21.98cm。</li>
+    <li>全部たす。3.14×2＋1.57×2＋21.98＝<b>31.4cm</b>。</li>
+    <li>落としやすい所は2つ。BとCのかどの弧（イ・エ）を数え落とすこと。ウの半径を8cmのまま計算すること。</li>
+  </ol>
+  <div class="ans">答え：31.4cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 1周の通り道が80cmのときのDE <span class="type">5点｜図形の転がり（1周の長さからもどす）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1周だけ</b>」と「<b>80cm</b>」。(2) の31.4cmに残りの通り道を足すと80cm → 分からないのは<b>たての2本（DEと同じ長さ）だけ</b>。80からほかをひいて2でわる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>長方形のかどは4つとも90°。1周すると、(2) のほかに、かどのまわりの弧が4つ増える。</li>
+    <li>下の辺の通り道はADと同じ長さ。たての2本は、どちらもDEと同じ長さ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1周の通り道を描いて、ア〜シに分ける。灰色が (2) の部分。
+<svg viewBox="0 0 360 250" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><path d="M46.0,44.0 L83.7,44.0 A96,96 0 0 0 275.7,44.0 L313.4,44.0 L313.4,164.2 L46.0,164.2 Z" fill="#f5f5f5" stroke="#222" stroke-width="1.5"/><line x1="83.7" y1="44" x2="275.7" y2="44" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/><circle cx="179.7" cy="44" r="2.5" fill="#222"/><circle cx="83.7" cy="44" r="2.5" fill="#222"/><circle cx="275.7" cy="44" r="2.5" fill="#222"/><text x="50.0" y="58.0" font-size="12" fill="#222" text-anchor="start">A</text><text x="79.7" y="60.0" font-size="12" fill="#222" text-anchor="end">B</text><text x="279.7" y="60.0" font-size="12" fill="#222" text-anchor="start">C</text><text x="309.4" y="58.0" font-size="12" fill="#222" text-anchor="end">D</text><text x="309.4" y="160.2" font-size="12" fill="#222" text-anchor="end">E</text><text x="179.7" y="38.0" font-size="12" fill="#222" text-anchor="middle">M</text><line x1="179.7" y1="44" x2="179.7" y2="140.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4,3"/><text x="184.7" y="72" font-size="11" fill="#1565c0">8cm</text><path d="M46.0,32.0 L83.7,32.0 A12,12 0 0 1 95.7,44 A84,84 0 0 0 263.7,44 A12,12 0 0 1 275.7,32.0 L313.4,32.0 A12,12 0 0 1 325.4,44 L325.4,164.2 A12,12 0 0 1 313.4,176.2 L46.0,176.2 A12,12 0 0 1 34.0,164.2 L34.0,44 A12,12 0 0 1 46.0,32.0" fill="none" stroke="#d32f2f" stroke-width="2.4"/><path d="M46.0,32.0 L83.7,32.0 A12,12 0 0 1 95.7,44 A84,84 0 0 0 263.7,44 A12,12 0 0 1 275.7,32.0 L313.4,32.0" fill="none" stroke="#9e9e9e" stroke-width="2.4"/><text x="329.4" y="104.1" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold">キ</text><text x="30.0" y="104.1" font-size="12" fill="#d32f2f" text-anchor="end" font-weight="bold">サ</text><text x="179.7" y="192.2" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">ケ＝AD＝22.28cm</text><text x="327.4" y="30.0" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold">カ</text><text x="327.4" y="188.2" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold">ク</text><text x="32.0" y="188.2" font-size="11" fill="#d32f2f" text-anchor="end" font-weight="bold">コ</text><text x="32.0" y="30.0" font-size="11" fill="#d32f2f" text-anchor="end" font-weight="bold">シ</text><text x="179.7" y="157.0" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">灰色＝(2) の 31.4cm</text><text x="20.0" y="218.0" font-size="11" fill="#222" text-anchor="start" font-weight="normal">カ・ク・コ・シ（4つのかど）＝1.57×4＝6.28cm</text><text x="20.0" y="236.0" font-size="11" fill="#222" text-anchor="start" font-weight="normal">キ＋サ＝80−59.96＝20.04cm → キ＝DE</text></svg></li>
+    <li>ADの長さを出す。AM＝AB＋BM＝3.14＋8＝11.14cm。ADはその2倍で22.28cm。ケも22.28cm。</li>
+    <li>残りのかど カ・ク・コ・シ は、どれもイと同じ1.57cm。1.57×4＝6.28cm。</li>
+    <li>キとサ以外をたす。31.4＋6.28＋22.28＝59.96cm。</li>
+    <li>キ＋サ＝80−59.96＝20.04cm。キはDEと同じ長さ。20.04÷2＝<b>10.02cm</b>。</li>
+    <li>落としやすい所はAのかど（シ）。(2) はAの真上から始めたので、Aのまわりの弧はまだ数えていない。</li>
+  </ol>
+  <div class="ans">答え：10.02cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> Bさん1人でかかる時間 <span class="type">5点｜仕事算（全体を公倍数にする）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1人で行うと12時間</b>」と「<b>2人で行うと8時間</b>」。仕事全体を12と8の最小公倍数の<b>24に直して書く</b> → 1時間の仕事が A＝2、A＋B＝3 と整数で出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1時間の仕事＝全体÷かかる時間。全体を24にすると、12時間なら1時間に2、8時間なら1時間に3。</li>
+    <li>全体は、かかる時間の公倍数にしておく。すると1時間の仕事が分数にならない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>全体を24とする。A1人は、1時間に 24÷12＝2。</li>
+    <li>AとBの2人は、1時間に 24÷8＝3。</li>
+    <li>Bの分は 3−2＝1。B1人なら 24÷1＝<b>24時間</b>。</li>
+    <li>落としやすい所は、12時間と8時間の差の4時間を答えること。ひくのは時間ではなく、1時間の仕事の量。</li>
+  </ol>
+  <div class="ans">答え：24時間</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 2人で7時間のあと、残りをAさん1人で <span class="type">5点｜仕事算（残りの仕事）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2人で7時間</b>」と「<b>残りの仕事をAさん1人で</b>」。(1) の「2人で1時間に3」をそのまま使う → 終わった分をひいて、残りを<b>Aの1時間の仕事2でわる</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>残りにかかる時間＝残りの仕事÷1時間の仕事。残りが6で1時間に2なら、3時間。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2人で7時間。3×7＝21の仕事が終わる。</li>
+    <li>残りは 24−21＝3。</li>
+    <li>Aは1時間に2。3÷2＝<b>1.5時間</b>。</li>
+    <li>落としやすい所は、7時間をたして8.5時間と答えること。聞かれているのは「あと何時間」。</li>
+  </ol>
+  <div class="ans">答え：1.5時間</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 3人だとおそくなる・AとBだけ15分休けい <span class="type">5点｜仕事算（速さが変わる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1/3倍</b>」「1/5倍」と「<b>AさんとBさんのみ15分間休憩</b>」。3人の1時間の仕事を、おそくなった速さに直して書く → 時間帯を「3人・Cだけ・3人」の3つに分けて表にする。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>速さが1/3倍になると、1時間の仕事も1/3倍になる。Aは1時間に2だったので、2×1/3＝2/3。</li>
+    <li>休けいの15分に働くのはCだけ。おしゃべりの相手がいないので、Cは1人で行うときの速さで計算する。</li>
+    <li>15分は 15/60時間＝1/4時間。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Cの1時間の仕事を出す。24÷15＝8/5。</li>
+    <li>3人のときの1時間の仕事を、1人ずつ直してたす。
+<pre class="fig">A　2×1/3＝2/3
+B　1×1/5＝1/5
+C　8/5×1/3＝8/15
+3人　2/3＋1/5＋8/15＝7/5</pre></li>
+    <li>時間帯ごとに表にする。最後の行は、残りが0になったら終わり。
+<table>
+  <tr><th>だれが</th><th>時間</th><th>進む仕事</th><th>残り</th></tr>
+  <tr><td>3人</td><td>15時間</td><td>7/5×15＝21</td><td>24−21＝3</td></tr>
+  <tr><td>Cだけ</td><td>15分＝15/60時間</td><td>8/5×15/60＝2/5</td><td>3−2/5＝13/5</td></tr>
+  <tr><td>3人</td><td>13/5÷7/5＝13/7時間</td><td>13/5</td><td>0</td></tr>
+</table></li>
+    <li>時間をたす。15＋15/60＋13/7＝15＋7/28＋52/28＝15＋59/28＝<b>17 3/28時間</b>。</li>
+    <li>落としやすい所は、休けいの15分の間のCの仕事2/5をひき忘れること。15分そのものも合計の時間に入れる。</li>
+  </ol>
+  <div class="ans">答え：17 3/28時間</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 左上が10の9マスの和 <span class="type">4点｜カレンダー（まん中×9）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1番左上のマス</b>」が「10」。カレンダーは右へ1、下へ7ふえる → 10の右下ななめが<b>まん中＝18</b>。9マスの和はまん中×9で出せる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>カレンダーは、右へ1マスで1ふえる。下へ1マスで7ふえる。</li>
+    <li>3×3の9マスは、まん中をはさんで向かい合う2マスの和が、まん中の2倍。10と26、11と25、12と24、17と19。どれも36＝18×2。だから9マスの和は、まん中×9。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1日が日曜日の31日の月で、9マスを囲んでみる（青が9マス、オレンジがまん中）。
+<table><tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr><tr><td>8</td><td>9</td><td style="background:#dbe9ff">10</td><td style="background:#dbe9ff">11</td><td style="background:#dbe9ff">12</td><td>13</td><td>14</td></tr><tr><td>15</td><td>16</td><td style="background:#dbe9ff">17</td><td style="background:#ffe0b2"><b>18</b></td><td style="background:#dbe9ff">19</td><td>20</td><td>21</td></tr><tr><td>22</td><td>23</td><td style="background:#dbe9ff">24</td><td style="background:#dbe9ff">25</td><td style="background:#dbe9ff">26</td><td>27</td><td>28</td></tr><tr><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td><td></td></tr></table></li>
+    <li>まん中は 10＋1＋7＝18。</li>
+    <li>9マスの和は 18×9＝<b>162</b>。</li>
+    <li>たしかめ。10＋11＋12＋17＋18＋19＋24＋25＋26＝162。左上が10で囲めるなら、曜日がちがっても同じ162になる。</li>
+  </ol>
+  <div class="ans">答え：162</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 9マスの和の最大値が207のときの1日の曜日 <span class="type">5点（完答）｜カレンダー（最大値から曜日）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>和の最大値が207</b>」。207÷9＝23に直して書く → 23がまん中になれる一番大きい数。23の右下は31なので、<b>31日まである月で、23日が月〜金</b>と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>まん中のマスは、左右にもマスが必要。だから日曜日と土曜日の列の数は、まん中になれない。</li>
+    <li>1日から22日あとが23日。22日は3週間と1日。だから23日の曜日は、1日の曜日の1つあと。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1) と同じで、9マスの和はまん中×9。まん中は 207÷9＝23。</li>
+    <li>23の右下は 23＋8＝31。だから31日まである月。24以上はまん中になれない。右下が32以上になるから。</li>
+    <li>23日は月・火・水・木・金のどれか。1日はその1つ前の曜日。
+<table>
+  <tr><th>23日の曜日</th><td>月</td><td>火</td><td>水</td><td>木</td><td>金</td></tr>
+  <tr><th>1日の曜日</th><td>日</td><td>月</td><td>火</td><td>水</td><td>木</td></tr>
+</table></li>
+    <li>1日の曜日は <b>日・月・火・水・木</b> の5つ。</li>
+    <li>落としやすい所は、表の上の行（23日の曜日）をそのまま答えること。聞かれているのは1日の曜日。</li>
+  </ol>
+  <div class="ans">答え：日・月・火・水・木曜日</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 和が右下の5倍・土曜日に素数2つ <span class="type">6点｜カレンダー（条件の整理・考え方も書く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>右下のマスに書かれた数の5倍</b>」と「<b>土曜日の列に素数が2つ</b>」。まん中をA、右下をA＋8に直して書く → A×9＝(A＋8)×5 でまん中が出る。最後に土曜日の列で1つにしぼる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>右下＝まん中＋1＋7＝まん中＋8。</li>
+    <li>素数は、1とその数のほかに約数がない数。31までなら 2、3、5、7、11、13、17、19、23、29、31。</li>
+    <li>10日は1日の9日あと。9日は1週間と2日。だから10日の曜日は、1日の曜日の2つあと。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>まん中をAとする。9マスの和はA×9。右下はA＋8。
+<pre class="fig">A×9 ＝ (A＋8)×5 ＝ A×5＋40
+A×4 ＝ 40　→　A＝10</pre></li>
+    <li>10がまん中なので、10日は月〜金のどれか。1日は2つ前で、土・日・月・火・水のどれか。</li>
+    <li>(2) の候補は 日・月・火・水・木。両方に入るのは <b>日・月・火・水</b> の4つ。</li>
+    <li>4つの場合で、土曜日の列を書き出して素数に丸をつける（31日まで）。
+<table>
+  <tr><th>1日の曜日</th><th>土曜日の列</th><th>素数</th></tr>
+  <tr><td>日</td><td>7、14、21、28</td><td>7 の1つ</td></tr>
+  <tr><td>月</td><td>6、13、20、27</td><td>13 の1つ</td></tr>
+  <tr><td>火</td><td>5、12、19、26</td><td><b>5と19 の2つ</b></td></tr>
+  <tr><td>水</td><td>4、11、18、25</td><td>11 の1つ</td></tr>
+</table></li>
+    <li>素数が2つになるのは、1日が火曜日のときだけ。</li>
+    <li>落としやすい所は、(2) の「31日まで」と「1日の候補」を使わずに考え直すこと。(2) の結果がそのまま条件になる。</li>
+  </ol>
+  <div class="ans">答え：火曜日</div>
+  <div class="tip">コツ：考え方は「まん中が10 → 1日の候補を(2)と重ねる → 土曜日の列の素数」の順に書く。声教の解説は、日曜始まりの表で曜日ごとに素数を書き出し、最初の土曜日を2日か5日にしぼっている。どちらでも火曜日になる。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">2〜4</span> まとめ</h2>
+  <ul>
+    <li>円の転がりは、中心の通り道を「まっすぐ・かど（90°の弧）・へこみの弧（半径をへらす）」に分けてたす。</li>
+    <li>仕事算は全体を公倍数にする。速さが変わる問題は、時間帯ごとに「進む仕事・残り」の表にする。</li>
+    <li>カレンダーの3×3は「まん中×9」と「右下＝まん中＋8」。曜日は「何日あとか÷7のあまり」でずらす。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="5"><h1 class="dtitle">大問5（円形に並ぶ6人・条件の整理）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">5</span> この回の全体像（担当の大問） <span class="type">15点</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>5</td><td>先生を囲んで円形に並ぶ6人（条件の整理）</td><td>5+5+5（(1)は完答）</td><td>「先生の方を向いて」「右隣」→ 向きから左右を決め、席の図に名前を書きこむ</td></tr>
+  </table>
+  <p>3問とも、6つの席の図に名前を書きこんで決める。(1)で作る場合分けの図が、(2)ではそのまま「①と④を外した書き出し」になる。(3)は<b>(2)で決まった図を見るだけ</b>で答えが出る。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 条件①〜④に1つ足して1通りに決める <span class="type">5点（完答）｜条件の整理</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>先生の方を向いて</b>」と「<b>Aさんから見て右隣</b>」。Aは図の上で下を向く。だから右隣を「図の左上」に直して書く → D、その向かいのBが決まり、Cの席は3つにしぼれる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>席は等間隔に並んでいる。だから距離は「何席はなれているか」でくらべられる。となりは1席、1つとばしは2席、ちょうど向こう側は3席。</li>
+    <li>図の上にいる人は、図を見る自分とさかさまに立っている。だから左右も逆になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aを上に書く。③より、Dは図の左上。①より、BはDの向かいの右下。残りの席をア・イ・ウとする。
+      <svg viewBox="0 0 360 170" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+      <circle cx="110" cy="80" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="93" y="70" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="110" y="84" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="110.0" cy="36.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="110.0" y="41.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="148.1" cy="58.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="148.1" y="63.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">ウ</text>
+      <circle cx="148.1" cy="102.0" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+      <text x="148.1" y="107.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#d32f2f">B</text>
+      <circle cx="110.0" cy="124.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="110.0" y="129.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">イ</text>
+      <circle cx="71.9" cy="102.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="71.9" y="107.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">ア</text>
+      <circle cx="71.9" cy="58.0" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+      <text x="71.9" y="63.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#d32f2f">D</text>
+      <text x="185" y="40" font-size="12" fill="#222">Aは下（先生）を向く</text>
+      <text x="185" y="58" font-size="12" fill="#d32f2f">→ Aの右手は図の左</text>
+      <text x="185" y="76" font-size="12" fill="#d32f2f">→ Dは左上</text>
+      <text x="185" y="94" font-size="12" fill="#222">BはDの向かい＝右下</text>
+      <text x="185" y="112" font-size="12" fill="#1565c0">Cはア・イ・ウのどれか</text>
+      </svg></li>
+    <li>Cをア・イ・ウに置いてみる。②より、EはCから見てDと同じ席数だけはなれた所。残りの席がF。最後に④（AとCが、AとEより近い）で確かめる。
+      <svg viewBox="0 0 360 170" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+      <circle cx="60" cy="72" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="43" y="62" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="60" y="76" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="60.0" cy="28.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="60.0" y="33.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="98.1" cy="50.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="98.1" y="55.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="98.1" cy="94.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="98.1" y="99.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">B</text>
+      <circle cx="60.0" cy="116.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="60.0" y="121.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">E</text>
+      <circle cx="21.9" cy="94.0" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+      <text x="21.9" y="99.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#d32f2f">C</text>
+      <circle cx="21.9" cy="50.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="21.9" y="55.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="60" y="147" text-anchor="middle" font-size="12" fill="#222">Cがア：④ ○</text>
+      <circle cx="180" cy="72" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="163" y="62" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="180" y="76" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="180.0" cy="28.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="180.0" y="33.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="218.1" cy="50.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="218.1" y="55.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">E</text>
+      <circle cx="218.1" cy="94.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="218.1" y="99.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">B</text>
+      <circle cx="180.0" cy="116.0" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+      <text x="180.0" y="121.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#d32f2f">C</text>
+      <circle cx="141.9" cy="94.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="141.9" y="99.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="141.9" cy="50.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="141.9" y="55.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="180" y="147" text-anchor="middle" font-size="12" fill="#d32f2f">Cがイ：④ ×</text>
+      <circle cx="300" cy="72" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="283" y="62" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="300" y="76" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="300.0" cy="28.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="300.0" y="33.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="338.1" cy="50.0" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+      <text x="338.1" y="55.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#d32f2f">C</text>
+      <circle cx="338.1" cy="94.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="338.1" y="99.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">B</text>
+      <circle cx="300.0" cy="116.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="300.0" y="121.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">E</text>
+      <circle cx="261.9" cy="94.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="261.9" y="99.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="261.9" cy="50.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="261.9" y="55.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="300" y="147" text-anchor="middle" font-size="12" fill="#222">Cがウ：④ ○</text>
+      <line x1="160" y1="24" x2="200" y2="126" stroke="#d32f2f" stroke-width="2"/><line x1="200" y1="24" x2="160" y2="126" stroke="#d32f2f" stroke-width="2"/>
+      <text x="60" y="160" text-anchor="middle" font-size="12" fill="#1565c0">並び1</text><text x="300" y="160" text-anchor="middle" font-size="12" fill="#1565c0">並び2</text>
+      </svg>
+      <table>
+        <tr><th>Cの席</th><th>Eの席</th><th>④ Aまで（C・E）</th><th>結果</th></tr>
+        <tr><td>ア</td><td>イ</td><td>2席・3席</td><td>○ 並び1</td></tr>
+        <tr><td>イ</td><td>ウ</td><td>3席・1席</td><td>×</td></tr>
+        <tr><td>ウ</td><td>イ</td><td>1席・3席</td><td>○ 並び2</td></tr>
+      </table>
+      ①〜④に合う並び方は<b>並び1と並び2の2通り</b>。</li>
+    <li>⑤〜⑨を、2つの並びに1つずつ当てる。片方だけに合う条件なら、1通りに決まる。
+      <table>
+        <tr><th>条件</th><th>並び1</th><th>並び2</th><th>1通りに決まるか</th></tr>
+        <tr><td>⑤ AとBの距離＝AとFの距離</td><td>×（2席と1席）</td><td>○（2席と2席）</td><td><b>決まる</b></td></tr>
+        <tr><td>⑥ BはEの隣</td><td>○</td><td>○</td><td>決まらない</td></tr>
+        <tr><td>⑦ AとCの間に少なくとも1人</td><td>○</td><td>×（となり）</td><td><b>決まる</b></td></tr>
+        <tr><td>⑧ CはFのちょうど向こう側</td><td>○</td><td>○</td><td>決まらない</td></tr>
+        <tr><td>⑨ CとEの距離がCとAの距離より短い</td><td>○（1席と2席）</td><td>×（2席と1席）</td><td><b>決まる</b></td></tr>
+      </table></li>
+    <li>落としやすい所は「完答」。⑤だけで止めずに、⑥〜⑨も全部ためしてから書く。</li>
+  </ol>
+  <div class="ans">答え：⑤・⑦・⑨</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> ①を①'に変えて1通りに決まる人 <span class="type">5点｜条件の整理（全部書き出す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>①'〜③が成り立つ</b>」と「<b>ただ1通り</b>」。④は使わないので、(1)の④に×をつけて消す（直して書く）。②③だけで並びを全部書き出し、Bの向こう側に1回しか出てこない人をさがす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>①'で並び方が1通りに決まるのは、□の人がBの向こう側に来る並びが<b>1つしかない</b>とき。2つ以上あれば決まらない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>③より、Aが上、Dが左上。①が無いので、Bの席はまだ決まらない。残りの4席は、右上ウ・右下エ・下イ・左下アとする。</li>
+    <li>Cを4つの席に置き、②でEの席を決める。BとFは残りの2席に入れかえて2通り。
+      <table>
+        <tr><th>Cの席</th><th>Eの席</th><th>BとF</th></tr>
+        <tr><td>ア（Dのとなり）</td><td>イ</td><td>2通り</td></tr>
+        <tr><td>イ（Dから2席）</td><td>ウ</td><td>2通り</td></tr>
+        <tr><td>ウ（Dから2席）</td><td>イ</td><td>2通り</td></tr>
+        <tr><td>エ（Dの向かい）</td><td>なし</td><td>―</td></tr>
+      </table>
+      Cがエだと、Dから3席はなれた席はD自身しかない。だからEが置けない。並び方は<b>全部で6通り</b>。</li>
+    <li>6通りそれぞれで、Bの向こう側にいる人を見る。
+      <svg viewBox="0 0 360 300" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+      <circle cx="60" cy="70" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="43" y="60" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="60" y="74" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="60.0" cy="26.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="60.0" y="31.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="98.1" cy="48.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="98.1" y="53.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="98.1" cy="92.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="98.1" y="97.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">B</text>
+      <circle cx="60.0" cy="114.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="60.0" y="119.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">E</text>
+      <circle cx="21.9" cy="92.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="21.9" y="97.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">C</text>
+      <circle cx="21.9" cy="48.0" r="13" fill="#c8e6c9" stroke="#222" stroke-width="1.2"/>
+      <text x="21.9" y="53.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="60" y="145" text-anchor="middle" font-size="12" fill="#222">Cがア：向こうはD</text>
+      <circle cx="180" cy="70" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="163" y="60" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="180" y="74" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="180.0" cy="26.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="180.0" y="31.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="218.1" cy="48.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="218.1" y="53.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">B</text>
+      <circle cx="218.1" cy="92.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="218.1" y="97.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="180.0" cy="114.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="180.0" y="119.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">E</text>
+      <circle cx="141.9" cy="92.0" r="13" fill="#c8e6c9" stroke="#222" stroke-width="1.2"/>
+      <text x="141.9" y="97.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">C</text>
+      <circle cx="141.9" cy="48.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="141.9" y="53.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="180" y="145" text-anchor="middle" font-size="12" fill="#222">Cがア：向こうはC</text>
+      <circle cx="300" cy="70" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="283" y="60" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="300" y="74" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="300.0" cy="26.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="300.0" y="31.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="338.1" cy="48.0" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+      <text x="338.1" y="53.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#d32f2f">E</text>
+      <circle cx="338.1" cy="92.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="338.1" y="97.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="300.0" cy="114.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="300.0" y="119.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">C</text>
+      <circle cx="261.9" cy="92.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="261.9" y="97.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">B</text>
+      <circle cx="261.9" cy="48.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="261.9" y="53.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="300" y="145" text-anchor="middle" font-size="12" fill="#d32f2f">Cがイ：向こうはE</text>
+      <circle cx="60" cy="220" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="43" y="210" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="60" y="224" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="60.0" cy="176.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="60.0" y="181.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="98.1" cy="198.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="98.1" y="203.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">E</text>
+      <circle cx="98.1" cy="242.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="98.1" y="247.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">B</text>
+      <circle cx="60.0" cy="264.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="60.0" y="269.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">C</text>
+      <circle cx="21.9" cy="242.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="21.9" y="247.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="21.9" cy="198.0" r="13" fill="#c8e6c9" stroke="#222" stroke-width="1.2"/>
+      <text x="21.9" y="203.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="60" y="295" text-anchor="middle" font-size="12" fill="#222">Cがイ：向こうはD</text>
+      <circle cx="180" cy="220" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="163" y="210" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="180" y="224" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="180.0" cy="176.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="180.0" y="181.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="218.1" cy="198.0" r="13" fill="#c8e6c9" stroke="#222" stroke-width="1.2"/>
+      <text x="218.1" y="203.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">C</text>
+      <circle cx="218.1" cy="242.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="218.1" y="247.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="180.0" cy="264.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="180.0" y="269.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">E</text>
+      <circle cx="141.9" cy="242.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="141.9" y="247.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">B</text>
+      <circle cx="141.9" cy="198.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="141.9" y="203.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="180" y="295" text-anchor="middle" font-size="12" fill="#222">Cがウ：向こうはC</text>
+      <circle cx="300" cy="220" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="283" y="210" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="300" y="224" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="300.0" cy="176.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="300.0" y="181.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="338.1" cy="198.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="338.1" y="203.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">C</text>
+      <circle cx="338.1" cy="242.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="338.1" y="247.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">B</text>
+      <circle cx="300.0" cy="264.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="300.0" y="269.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">E</text>
+      <circle cx="261.9" cy="242.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="261.9" y="247.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="261.9" cy="198.0" r="13" fill="#c8e6c9" stroke="#222" stroke-width="1.2"/>
+      <text x="261.9" y="203.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="300" y="295" text-anchor="middle" font-size="12" fill="#222">Cがウ：向こうはD</text>
+      </svg></li>
+    <li>数える。Dは3回、Cは2回、<b>Eは1回</b>。1回しか出ないEなら、並び方が1通りに決まる。</li>
+  </ol>
+  <div class="ans">答え：E</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> (2)で決まった並びでBはだれの左隣か <span class="type">5点｜向きと左右</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>(2)で決まった6人の並び方</b>」と「<b>左隣</b>」。(2)の図をそのまま使う。Bのとなりの2人が、先生の方を向いたときの左手側を見る → Bが左に来る人が答え。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>図の下にいる人は、図を見る自分と同じ向きで先生を見ている。だから左右も同じ。上の人は左右が逆になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(2)で決まった並びを書く。上から時計回りに A、E、F、C、B、D。Bのとなりは、下のCと左上のD。
+      <svg viewBox="0 0 360 170" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+      <circle cx="110" cy="80" r="44" fill="none" stroke="#999" stroke-width="1"/>
+      <rect x="93" y="70" width="34" height="20" fill="#fff" stroke="#222"/>
+      <text x="110" y="84" text-anchor="middle" font-size="11" fill="#222">先生</text>
+      <circle cx="110.0" cy="36.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="110.0" y="41.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">A</text>
+      <circle cx="148.1" cy="58.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="148.1" y="63.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">E</text>
+      <circle cx="148.1" cy="102.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="148.1" y="107.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">F</text>
+      <circle cx="110.0" cy="124.0" r="13" fill="#dbe9ff" stroke="#1565c0" stroke-width="2"/>
+      <text x="110.0" y="129.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">C</text>
+      <circle cx="71.9" cy="102.0" r="13" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+      <text x="71.9" y="107.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#d32f2f">B</text>
+      <circle cx="71.9" cy="58.0" r="13" fill="#fff" stroke="#222" stroke-width="1.2"/>
+      <text x="71.9" y="63.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">D</text>
+      <text x="178" y="40" font-size="12" fill="#222">Cは図の下で上（先生）を向く</text>
+      <text x="185" y="58" font-size="12" fill="#1565c0">→ 図を見る自分と左右が同じ</text>
+      <text x="185" y="76" font-size="12" fill="#d32f2f">→ Cの左隣＝図の左下＝B</text>
+      <text x="185" y="100" font-size="12" fill="#222">Dから見ると Bは右隣</text>
+      </svg></li>
+    <li>Cは図の下にいる。左手側は図の左下。そこにいるのはB。だからBは<b>Cから見て左隣</b>。</li>
+    <li>たしかめ。③の「Aの右隣がD」は、図で時計と反対回りに1つ進んだ席。Dから同じ回り方で1つ進むとB。だからBはDの右隣で、左隣ではない。</li>
+  </ol>
+  <div class="ans">答え：C</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">5</span> まとめ</h2>
+  <ul>
+    <li>「右隣・左隣」は、その人が先生の方を向いたときの手の側で決める。図の下の人は自分と同じ、上の人は逆。</li>
+    <li>等間隔の円の距離は「何席はなれているか」に直してくらべる。</li>
+    <li>「1通りに決まる」問題は、合う並びを全部書き出し、条件が片方だけに合うかを表で見る。</li>
+  </ul>
+</section>
+</div>
