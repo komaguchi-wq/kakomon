@@ -4565,7 +4565,14 @@
        "gokakusha": 63.0
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2025-2/kokugo.html"
+     "kaisetsu": "kaisetsu/hiroo/2025-2/kokugo.html",
+     "solvedPages": [
+      {
+       "full": "2025-2/kokugo/solved_2026-11-22_01.jpg",
+       "small": "2025-2/kokugo/solved_2026-11-22_01_small.jpg",
+       "date": "2026-11-22"
+      }
+     ]
     }
    ]
   },

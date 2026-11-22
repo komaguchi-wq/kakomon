@@ -9594,7 +9594,14 @@
        "gokakusha": null
       }
      },
-     "kaisetsu": "kaisetsu/ichikawa/2022-1/kokugo.html"
+     "kaisetsu": "kaisetsu/ichikawa/2022-1/kokugo.html",
+     "solvedPages": [
+      {
+       "full": "2022-1/kokugo/solved_2026-11-22_01.jpg",
+       "small": "2022-1/kokugo/solved_2026-11-22_01_small.jpg",
+       "date": "2026-11-22"
+      }
+     ]
     }
    ]
   }
