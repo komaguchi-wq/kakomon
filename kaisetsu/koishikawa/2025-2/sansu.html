@@ -1,0 +1,579 @@
+<!-- generated kakomon koishikawa/2025-2/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（計算・日付・カード／比・折り返し・円すい台・売買・8ずつの位）</a></li>
+<li><a href="#3-4-5">大問3・4・5（仕切りのある水そうと濃度／正十二角形の三角形／正四角すいの体積比と切断）</a></li>
+<li><a href="#6">大問6（1か月20日の新しいカレンダー・通し番号で行き来する）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（計算・日付・カード／比・折り返し・円すい台・売買・8ずつの位）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">40点（4点×10）</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)〜(3)</td><td>四則計算／小数の和／分数の和（分けて消す）</td><td>4+4+4</td><td>小数を分数に直す／同じだけ増える列／分母が「1×3」「2×4」…</td></tr>
+    <tr><td>1 (4)</td><td>30番目の金曜日</td><td>4</td><td>最初の金曜日を出して、7日ずつ進める</td></tr>
+    <tr><td>1 (5)</td><td>カードで作る3けたの数の50番目</td><td>4</td><td>百の位ごとに何個あるかを数える</td></tr>
+    <tr><td>2 (1)</td><td>星の時間と地球の時間</td><td>4</td><td>「1分＝75秒」→ 星は地球の0.8倍</td></tr>
+    <tr><td>2 (2)</td><td>対角線で折った重なり</td><td>4</td><td>重なりは二等辺三角形</td></tr>
+    <tr><td>2 (3)</td><td>円すい台の表面積</td><td>4</td><td>上と下の半径が3cmと6cm → 頂点までのばす</td></tr>
+    <tr><td>2 (4)</td><td>売買損益（20個がくさった）</td><td>4</td><td>仕入れ値を1個1とおく</td></tr>
+    <tr><td>2 (5)</td><td>512・64・8・1・1/8・1/64 の位</td><td>4</td><td>大きい位から順にわっていく</td></tr>
+  </table>
+  <p>10問とも4点。どれも1問で完結する小問なので、<b>合図を見つけてから手を動かす</b>と速い。2 (2)(3)の図形は、<b>図に長さを書きこむ</b>ところから始める。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 小数と分数がまざった四則計算 <span class="type">4点｜四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1−0.2</b>」と「<b>1−0.75</b>」。かっこの中を先に計算し、0.8＝4/5、0.25＝1/4 と<b>分数に直して書く</b> → 2つの{　}がそれぞれ整数の3になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>小数と分数がまざったら、分数にそろえる。0.8＝4/5、0.25＝1/4。</li>
+    <li>計算の順番は、かっこの中 → ×と÷ → ＋と−。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>前の{　}。1 1/4×4/5＝5/4×4/5＝1。5/6÷5/12＝5/6×12/5＝2。たすと <b>3</b>。</li>
+    <li>後ろの{　}。1/2÷1/4×1/6＝1/2×4×1/6＝1/3。2 2/3＋1/3＝8/3＋1/3＝<b>3</b>。</li>
+    <li>3×3＝9。</li>
+    <li>落としやすい所。後ろの{　}は「÷1/4」を先にすませてから「×1/6」。2 2/3＋1/2 を先にたさない。</li>
+  </ol>
+  <div class="ans">答え：9</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 11.22＋22.33＋…＋77.88 <span class="type">4点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は最初の「<b>11.22</b>」と最後の「<b>77.88</b>」。どれも前の数より 11.11 ずつ大きい → <b>はしとはしを組にする</b>。(はじめ＋おわり)×個数÷2 で出せる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じだけ増える数の列は、前と後ろから1つずつ組にすると、どの組も同じ和になる。1＋2＋3＋4＋5 なら (1＋5)×5÷2＝15。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>はじめとおわりをたす。11.22＋77.88＝<b>89.1</b>。</li>
+    <li>数は7個。89.1×7÷2＝623.7÷2＝311.85。</li>
+    <li>たしかめ。まん中の44.55が平均になる。44.55×7＝311.85 で同じ。</li>
+    <li>落としやすい所。個数は7個。差の11.11で数えまちがえないように、数を指で数える。</li>
+  </ol>
+  <div class="ans">答え：311.85</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 1/(1×3)＋1/(2×4)＋…＋1/(10×12) <span class="type">4点｜分数の和（分けて消す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は分母の「<b>1×3</b>」「<b>2×4</b>」。かける2つの数の差がどれも2 → 1/1−1/3 のような<b>ひき算に分けて、最後に×1/2</b>。まん中がつぎつぎに消える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1/1−1/3＝3/3−1/3＝2/3。これは 1/(1×3) の2倍。だから 1/(1×3)＝(1/1−1/3)×1/2。</li>
+    <li>差が2の2数なら、どれも同じ形にできる。1/(N×(N＋2))＝(1/N−1/(N＋2))×1/2。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1つずつひき算に分ける。×1/2 は最後にまとめてかける。
+<pre class="fig">1/(1×3)  → 1/1 −1/3
+1/(2×4)  → 1/2 −1/4
+1/(3×5)  → 1/3 −1/5
+  …
+1/(9×11) → 1/9 −1/11
+1/(10×12)→ 1/10−1/12</pre></li>
+    <li>−1/3 と ＋1/3 のように、2つ下の行と消し合う。残るのは <b>＋1/1、＋1/2、−1/11、−1/12</b> の4つ。</li>
+    <li>分母を132にそろえる。132/132＋66/132−12/132−11/132＝175/132。</li>
+    <li>×1/2 をかける。175/132×1/2＝175/264。</li>
+    <li>落としやすい所。差が2なので、消えるのは「となり」ではなく「2つ先」。だから最初の2つと最後の2つが残る。</li>
+  </ol>
+  <div class="ans">答え：175/264</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 2025年の30番目の金曜日 <span class="type">4点｜周期算（日付）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1月1日は水曜日</b>」と「<b>30番目の金曜日</b>」。最初の金曜日＝1月3日に直して書く → そこから7日ずつ29回進める。<b>1月206日</b>の形にしてから、月の日数をひいていく。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ曜日は7日ごとに来る。1番目が3日なら、2番目は3＋7＝10日。</li>
+    <li>月の日数。1月31日・2月28日（2025年はうるう年ではない）・3月31日・4月30日・5月31日・6月30日。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1月1日が水曜日。木曜が2日、金曜が3日。最初の金曜日は <b>1月3日</b>。</li>
+    <li>30番目までは、7日ずつ29回進む。3＋7×(30−1)＝206。30番目の金曜日は「1月206日」。</li>
+    <li>月の日数をひいていく。
+      <table>
+        <tr><th>ひく月</th><th>ひく日数</th><th>残り</th></tr>
+        <tr><td>1月</td><td>31</td><td>175（2月175日）</td></tr>
+        <tr><td>2月</td><td>28</td><td>147</td></tr>
+        <tr><td>3月</td><td>31</td><td>116</td></tr>
+        <tr><td>4月</td><td>30</td><td>86</td></tr>
+        <tr><td>5月</td><td>31</td><td>55</td></tr>
+        <tr><td>6月</td><td>30</td><td><b>25（7月25日）</b></td></tr>
+      </table>
+      残りが次の月の日数より小さくなったら終わり。</li>
+    <li>落としやすい所。「7×30」と30回進めると、1つ先の金曜日になる。1番目から30番目までの間は29回。</li>
+  </ol>
+  <div class="ans">答え：7月25日</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 7枚のカードで作る3けたの数の50番目 <span class="type">4点｜場合の数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>0, 1, 1, 2, 2, 3, 4</b>」と「<b>50番目</b>」。1と2は2枚ずつ、0・3・4は1枚ずつと書きぬく → <b>百の位ごとに何個あるか</b>を数えて、50番目がどの百の位に入るかを決める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>百の位に0は置けない。</li>
+    <li>同じ数字のカードが2枚あるときだけ、その数字を2回使える。3は1枚なので「33□」は作れない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>百の位が1の数を、十の位ごとに数える。一の位には、残ったカードの数字が入る。
+      <table>
+        <tr><th>上2けた</th><th>残りのカード</th><th>一の位に入る数字</th><th>個数</th></tr>
+        <tr><td>10□</td><td>1,2,2,3,4</td><td>1,2,3,4</td><td>4</td></tr>
+        <tr><td>11□</td><td>0,2,2,3,4</td><td>0,2,3,4</td><td>4</td></tr>
+        <tr><td>12□</td><td>0,1,2,3,4</td><td>0,1,2,3,4</td><td>5</td></tr>
+        <tr><td>13□</td><td>0,1,2,2,4</td><td>0,1,2,4</td><td>4</td></tr>
+        <tr><td>14□</td><td>0,1,2,2,3</td><td>0,1,2,3</td><td>4</td></tr>
+      </table>
+      合わせて 4＋4＋5＋4＋4＝<b>21個</b>。</li>
+    <li>百の位が2の数も、1と2の役が入れかわるだけ。同じく21個。</li>
+    <li>ここまでで 21×2＝42個。50番目は、百の位が3の数の中で 50−42＝<b>8番目</b>。</li>
+    <li>百の位が3の数を小さい順に書く。301, 302, 304, 310, 311, 312, 314, 320。8番目は320。</li>
+    <li>落としやすい所。303 と 300 は作れない。3と0のカードは1枚ずつしかない。</li>
+  </ol>
+  <div class="ans">答え：320</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> ある星の1分は地球の75秒 <span class="type">4点｜正比例</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ある星の時間の1分は、地球における75秒</b>」。地球の60秒のあいだに星では 60÷75＝0.8分 → <b>星の時間＝地球の時間×0.8</b> に直して書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>星の1分のほうが長い。だから、同じ時間がたったとき、星の時間のほうが少なく数えられる。</li>
+    <li>0.2時間を分に直すと、60×0.2＝12分。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>地球の60秒＝星の 60÷75＝<b>0.8分</b>。星の時間は地球の0.8倍。</li>
+    <li>地球の24時間は、星では 24×0.8＝19.2時間。</li>
+    <li>0.2時間＝60×0.2＝12分。答えは19時間12分。</li>
+    <li>落としやすい所。75÷60＝1.25 をかけると30時間になる。星の1分が長いのだから、星の時間は24時間より少ないはず。</li>
+  </ol>
+  <div class="ans">答え：19時間12分</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 長方形を対角線で折った重なり <span class="type">4点｜相似・面積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>対角線で折って重ねた</b>」と「<b>対角線の長さは13cm</b>」。重なりは EB＝ED の<b>二等辺三角形</b> → 底辺13cm、Eから下ろした垂線は対角線のまん中に届く。あとは高さを相似で出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>折り返した角は、もとの角と同じ大きさ。辺ADと辺BCは平行なので、重なりの三角形は2つの角が等しくなる。</li>
+    <li>二等辺三角形の頂点から底辺に下ろした垂線は、底辺をちょうど半分に分ける。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>長方形ABCDを対角線BDで折る。Cが動いた先をC′、BC′とADが交わる点をEとする。重なりは三角形EBD。Eから対角線に垂線EFを下ろす。
+  <svg viewBox="0 0 330 260" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+    <polygon points="30,230 139,120 294,120" fill="#dbe9ff"/>
+    <polyline points="139,120 216,43 294,120" fill="none" stroke="#222" stroke-width="1.6"/>
+    <polyline points="139,120 30,120 30,230" fill="none" stroke="#222" stroke-width="1.6"/>
+    <line x1="30" y1="230" x2="139" y2="120" stroke="#222" stroke-width="1.6"/>
+    <polyline points="30,230 294,230 294,120" fill="none" stroke="#999" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <line x1="139" y1="120" x2="294" y2="120" stroke="#222" stroke-width="1.6" stroke-dasharray="4 3"/>
+    <line x1="30" y1="230" x2="294" y2="120" stroke="#d32f2f" stroke-width="2"/>
+    <line x1="139" y1="120" x2="162" y2="175" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="5 3"/>
+    <circle cx="162" cy="175" r="3" fill="#1565c0"/>
+    <text x="18" y="116">A</text><text x="134" y="112">E</text><text x="300" y="118">D</text>
+    <text x="18" y="246">B</text><text x="300" y="246">C</text><text x="212" y="36">C′</text>
+    <text x="150" y="196" fill="#1565c0">F</text>
+    <text x="2" y="180">5cm</text><text x="150" y="250">12cm</text>
+    <text x="215" y="178" fill="#d32f2f">13cm</text>
+    <text x="160" y="140" fill="#1565c0" font-size="12">EB＝ED</text>
+  </svg></li>
+    <li>三角形ABDと三角形FEDは、形が同じ（相似）。どちらも直角があり、角Dが共通。だから EF：FD＝AB：AD＝<b>5：12</b>。</li>
+    <li>FはBDのまん中。FB＝FDも12にあたる。BD全体は 12＋12＝24 にあたり、これが13cm。EF＝13×5/24＝65/24cm。</li>
+    <li>三角形EBDの面積＝底辺13×高さ65/24÷2＝845/48＝<b>17 29/48</b>cm²。</li>
+    <li>落としやすい所。EF：FD の 5：12 の「12」はFDだけ。BD全体は24と数える。</li>
+  </ol>
+  <div class="ans">答え：17 29/48cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 円すい台の表面積 <span class="type">4点｜相似・表面積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は上の半径「<b>3cm</b>」と下の半径「<b>6cm</b>」。3：6＝1：2 → 側面を<b>上にのばして大きい円すいにする</b>。のばした部分も5cmで、大きい円すいの母線は10cmと図に書きこむ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円すいの側面積＝母線×底面の半径×3.14。母線10cm・半径6cmなら 10×6×3.14。</li>
+    <li>円すい台の側面積は、大きい円すいの側面積から、上にのせた小さい円すいの側面積をひく。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2つの円の面積をたす。3×3×3.14＋6×6×3.14＝(9＋36)×3.14＝<b>45×3.14</b>。</li>
+    <li>母線をのばして頂点Eをつくる。三角形EADと三角形EBCは相似で、相似比は 3：6＝1：2。EA：AB＝1：1 だから EA＝5cm、EB＝10cm。
+  <svg viewBox="0 75 300 210" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+    <polygon points="80,260 140,180 200,180 200,260" fill="#dbe9ff"/>
+    <polygon points="140,180 200,100 200,180" fill="#ffe0b2"/>
+    <line x1="80" y1="260" x2="140" y2="180" stroke="#222" stroke-width="1.8"/>
+    <line x1="140" y1="180" x2="200" y2="100" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="5 3"/>
+    <line x1="200" y1="100" x2="200" y2="260" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5 3"/>
+    <line x1="140" y1="180" x2="200" y2="180" stroke="#222" stroke-width="1.6"/>
+    <line x1="80" y1="260" x2="200" y2="260" stroke="#222" stroke-width="1.6"/>
+    <text x="196" y="92">E</text><text x="126" y="178">A</text><text x="206" y="184">D</text>
+    <text x="66" y="274">B</text><text x="206" y="270">C</text>
+    <text x="158" y="174">3cm</text><text x="128" y="276">6cm</text>
+    <text x="206" y="226">4cm</text>
+    <text x="72" y="222">5cm</text>
+    <text x="122" y="134" fill="#d32f2f">5cm</text>
+    <text x="18" y="160" fill="#d32f2f" font-size="12">EB＝5＋5＝10cm</text>
+  </svg></li>
+    <li>側面積。10×6×3.14−5×3×3.14＝(60−15)×3.14＝<b>45×3.14</b>。</li>
+    <li>表面積＝45×3.14＋45×3.14＝90×3.14＝282.6cm²。</li>
+    <li>落としやすい所。高さの4cmは使わない。側面積で使うのは母線の長さ。</li>
+  </ol>
+  <div class="ans">答え：282.6cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (4)</span> 20個がくさっても損得なし <span class="type">4点｜売買損益</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>20個が腐っていた</b>」と「<b>売り上げの合計と仕入れ値の合計は同じ</b>」。仕入れ値を1個1とおく → 80個の売り上げが100。定価は 100÷80 で出せる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>値段がわからないときは、1個の仕入れ値を「1」とおくと、割合のまま計算できる。</li>
+    <li>定価が仕入れ値の1.25倍なら、利益は0.25倍。つまり25%の利益。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>仕入れ値を1個あたり1とする。100個で、仕入れ値の合計は <b>100</b>。</li>
+    <li>売れたのは 100−20＝80個。売り上げの合計も100。定価は 100÷80＝<b>1.25</b>。</li>
+    <li>1.25−1＝0.25。仕入れ値の25%の利益をみこんだことになる。</li>
+    <li>落としやすい所。くさった20個は、20%の損ではない。売れた80個で100を取りもどす、と考える。</li>
+  </ol>
+  <div class="ans">答え：25%</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (5)</span> 784 23/32 を512・64・8・1・1/8・1/64 で表す <span class="type">4点｜数の性質</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は式の「<b>×512</b>」「×64」「×8」と「<b>いずれかが1つずつ</b>」。512＝8×64、64＝8×8 と<b>どれも8倍ずつ</b> → 大きい位から順に「わって、あまりを次へ」。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>位が8倍ずつになっていて、どの□も7以下。だから大きい位から、入るだけ入れていけば1通りに決まる。10倍ずつの位（千・百・十）と同じ考え方。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>大きい位からわっていく。
+      <table>
+        <tr><th>わられる数</th><th>わる数</th><th>商（□）</th><th>あまり</th></tr>
+        <tr><td>784 23/32</td><td>512</td><td>ア＝1</td><td>272 23/32</td></tr>
+        <tr><td>272 23/32</td><td>64</td><td>イ＝4</td><td>16 23/32</td></tr>
+        <tr><td>16 23/32</td><td>8</td><td>ウ＝2</td><td>23/32</td></tr>
+        <tr><td>23/32</td><td>1</td><td>エ＝0</td><td>23/32</td></tr>
+        <tr><td>23/32</td><td>1/8</td><td>オ＝5</td><td>3/32</td></tr>
+        <tr><td>3/32</td><td>1/64</td><td>カ＝6</td><td>0</td></tr>
+      </table>
+      あまりが0になったら終わり。</li>
+    <li>使ったのは 1, 4, 2, 0, 5, 6。使わなかったのは <b>3と7</b>。</li>
+    <li>3×7＝21。</li>
+    <li>落としやすい所。23/32÷1/8 は 23/32×8＝23/4＝5 3/4。商は5で、あまりは 3/4×1/8＝3/32。</li>
+  </ol>
+  <div class="ans">答え：21</div>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（仕切りのある水そうと濃度／正十二角形の三角形／正四角すいの体積比と切断）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">45点（大問3 4点×3／大問4 5点×3／大問5 5+8+5点）</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>3</td><td>仕切りのある水そう＋こさ</td><td>4+4+4</td><td>「仕切りの高さ」→ 部屋ごとの容積を書き、どの部屋から満水になるかを時間の表にする</td></tr>
+    <tr><td>4</td><td>正十二角形の頂点で作る三角形</td><td>5+5+5</td><td>頂点の間の「辺の数」を3つ書く。3つの和はいつも12</td></tr>
+    <tr><td>5</td><td>正四角すいの体積比・切断</td><td>5+8（考え方6・答え2）+5</td><td>「OP：PA＝3：1」「OQ：QC＝1：1」→ 長さの比を辺に書き、平面OAC・平面OBDで切って考える</td></tr>
+  </table>
+  <p>取り方: どの大問も前の小問の結果を次で使う。<b>3 (1)・4 (1)・5 (1) を先に確実に出す</b>。5 (2) は考え方も書く問題。平行な線と相似の三角形の組を、図に書いて説明する。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> イの部屋が満水になる時間 <span class="type">4点｜水の深さと体積（仕切り）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>底面積の比は5：10：6</b>」と2つの仕切りの高さ「8cm」「5cm」。比から3つの底面積を出し、部屋ごとの容積を図に書きこむ（図に置く）→ <b>アとウのどちらが先にあふれるか</b>が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>部屋は仕切りの高さまでで満水になる。そのあと入る水は、低いほうの仕切りをこえてとなりへ流れる。</li>
+    <li>1mL＝1cm³。毎分200mLは、毎分200cm³と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>底面積を出す。全体420cm²を5：10：6に分ける。ア＝420×5/21＝100cm²。イ＝200cm²。ウ＝120cm²。</li>
+    <li>容積を出して図に書く。ア＝100×8＝800cm³。イ＝200×5＝1000cm³。ウ＝120×5＝600cm³。
+<svg viewBox="0 0 360 250" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><rect x="40.0" y="88.0" width="65.0" height="112.0" fill="#dbe9ff"/><rect x="105.0" y="130.0" width="130.0" height="70.0" fill="#ffe0b2"/><rect x="235.0" y="130.0" width="78.0" height="70.0" fill="#ffe0b2"/><line x1="40.0" y1="60.0" x2="40.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="313.0" y1="60.0" x2="313.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="40.0" y1="200.0" x2="313.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="105.0" y1="88.0" x2="105.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="235.0" y1="130.0" x2="235.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="72.5" y1="38.0" x2="72.5" y2="84.0" stroke="#1565c0" stroke-width="1.5"/><polygon points="68.5,79 76.5,79 72.5,86" fill="#1565c0"/><text x="72.5" y="34.0" font-size="11" fill="#1565c0" text-anchor="middle">A 水 毎分200</text><line x1="274.0" y1="38.0" x2="274.0" y2="126.0" stroke="#1565c0" stroke-width="1.5"/><polygon points="270.0,121 278.0,121 274.0,128" fill="#1565c0"/><text x="274.0" y="34.0" font-size="11" fill="#1565c0" text-anchor="middle">B 25% 毎分200</text><text x="34.0" y="92.0" font-size="11" fill="#222" text-anchor="end">8cm</text><line x1="36.0" y1="88.0" x2="40.0" y2="88.0" stroke="#222" stroke-width="1"/><text x="34.0" y="64.0" font-size="11" fill="#222" text-anchor="end">10cm</text><text x="319.0" y="134.0" font-size="11" fill="#222" text-anchor="start">5cm</text><line x1="313.0" y1="130.0" x2="317.0" y2="130.0" stroke="#222" stroke-width="1"/><text x="72.5" y="170.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">ア</text><text x="72.5" y="186.0" font-size="10" fill="#222" text-anchor="middle">100cm²</text><text x="170.0" y="170.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">イ</text><text x="170.0" y="186.0" font-size="10" fill="#222" text-anchor="middle">200cm²</text><text x="274.0" y="170.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">ウ</text><text x="274.0" y="186.0" font-size="10" fill="#222" text-anchor="middle">120cm²</text><text x="72.5" y="216.0" font-size="11" fill="#222" text-anchor="middle">800cm³</text><text x="170.0" y="216.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">1000cm³</text><text x="274.0" y="216.0" font-size="11" fill="#222" text-anchor="middle">600cm³</text><text x="180.0" y="240.0" font-size="11" fill="#222" text-anchor="middle">仕切りの高さまでが満水。あふれた分はイに入る</text></svg></li>
+    <li>アは毎分200でAから入る。800÷200＝4分で満水になる。ウはBから入る。600÷200＝3分で満水になる。</li>
+    <li>時間の表にする。
+<table><tr><th>時間</th><th>イに入るもの</th><th>イの量</th></tr>
+<tr><td>0〜3分</td><td>なし</td><td>0</td></tr>
+<tr><td>3〜4分</td><td>Bの分（ウからあふれる）毎分200</td><td>200cm³</td></tr>
+<tr><td>4分〜</td><td>AとBの両方 毎分400</td><td><b>あと800cm³</b></td></tr></table>
+終わりの条件は「イが1000cm³になったら」。</li>
+    <li>あと (1000−200)÷(200＋200)＝2分。4＋2＝<b>6分後</b>。</li>
+    <li>落としやすい所は、3〜4分の1分間。Bの水だけがイに入っている。</li>
+  </ol>
+  <div class="ans">答え：6分後</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 満水のイのこさ <span class="type">4点｜濃度</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>200mLの中に50gの物質がとけている</b>」。毎分200mLのBから、毎分50gの物質が出ると直して書く → イに<b>Bの水よう液が何分入ったか</b>で物質の重さが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Aはただの水。物質を運ぶのはBだけ。</li>
+    <li>この問題のこさは「物質の重さ÷水よう液の量」で出す。200mLに50gなら、50÷200＝0.25で25%。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1)の表を見る。イにBの水よう液が入るのは、3分から6分までの3分間。</li>
+    <li>入ったBの量は 200×3＝600cm³。物質は 600×0.25＝150g。</li>
+    <li>イの水よう液は全部で1000cm³。こさは 150÷1000×100＝<b>15%</b>。</li>
+  </ol>
+  <div class="ans">答え：15%</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 穴をあけた部屋エのこさ <span class="type">4点｜濃度（流れ出る水よう液）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>毎分100mLの水よう液が流れ出る</b>」と「<b>バケツにためておいた水よう液のこさは10%</b>」。バケツの物質の重さを出して、Bから出た物質の合計からひく（−に直して書く）→ エに残った物質が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>アはもう満水。Aの水はアからあふれて、全部エに入る。</li>
+    <li>Bから出た物質は、エに残るか、バケツに出るかのどちらか。だから「エの物質＝Bの物質の合計−バケツの物質」。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>エの底面積は 200＋120＝320cm²。6分後の水位は5cm。8cmまで、あと 320×3＝960cm³。
+<svg viewBox="0 0 360 270" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><rect x="40.0" y="88.0" width="65.0" height="112.0" fill="#dbe9ff"/><rect x="105.0" y="130.0" width="208.0" height="70.0" fill="#ffe0b2"/><rect x="105.0" y="88.0" width="208.0" height="42.0" fill="#c8e6c9"/><line x1="40.0" y1="60.0" x2="40.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="313.0" y1="60.0" x2="313.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="40.0" y1="200.0" x2="203.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="215.0" y1="200.0" x2="313.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="203.0" y1="200.0" x2="203.0" y2="214.0" stroke="#222" stroke-width="1.5"/><line x1="215.0" y1="200.0" x2="215.0" y2="214.0" stroke="#222" stroke-width="1.5"/><line x1="209.0" y1="216.0" x2="209.0" y2="230.0" stroke="#1565c0" stroke-width="1.5"/><polygon points="205.0,226 213.0,226 209.0,233" fill="#1565c0"/><text x="219.0" y="230.0" font-size="11" fill="#1565c0" text-anchor="start">毎分100mL 出る</text><line x1="105.0" y1="88.0" x2="105.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="235.0" y1="130.0" x2="235.0" y2="200.0" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/><line x1="72.5" y1="38.0" x2="72.5" y2="84.0" stroke="#1565c0" stroke-width="1.5"/><polygon points="68.5,79 76.5,79 72.5,86" fill="#1565c0"/><text x="72.5" y="34.0" font-size="11" fill="#1565c0" text-anchor="middle">A 水 毎分200</text><line x1="274.0" y1="38.0" x2="274.0" y2="84.0" stroke="#1565c0" stroke-width="1.5"/><polygon points="270.0,79 278.0,79 274.0,86" fill="#1565c0"/><text x="274.0" y="34.0" font-size="11" fill="#1565c0" text-anchor="middle">B 25% 毎分200</text><text x="34.0" y="92.0" font-size="11" fill="#222" text-anchor="end">8cm</text><line x1="36.0" y1="88.0" x2="40.0" y2="88.0" stroke="#222" stroke-width="1"/><text x="34.0" y="64.0" font-size="11" fill="#222" text-anchor="end">10cm</text><text x="319.0" y="134.0" font-size="11" fill="#222" text-anchor="start">5cm</text><line x1="313.0" y1="130.0" x2="317.0" y2="130.0" stroke="#222" stroke-width="1"/><text x="72.5" y="160.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">ア</text><text x="72.5" y="176.0" font-size="10" fill="#222" text-anchor="middle">満水</text><text x="169.0" y="160.0" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">エ 320cm²</text><text x="189.0" y="116.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">あと3cm＝960cm³</text><text x="154.0" y="182.0" font-size="10" fill="#222" text-anchor="middle">6分後に5cmまで</text><text x="40.0" y="252.0" font-size="11" fill="#222" text-anchor="start">エに入る＝200＋200＝400、出る＝100 → 毎分300ふえる</text></svg></li>
+    <li>エは毎分 400−100＝300cm³ ずつふえる。960÷300＝3.2分。</li>
+    <li>バケツには 100×3.2＝320cm³。こさ10%だから、物質は 320×0.1＝32g。</li>
+    <li>Bは全部で 6＋3.2＝9.2分出ていた。量は 200×9.2＝1840cm³。物質は 1840×0.25＝460g。</li>
+    <li>エの物質は 460−32＝428g。エの水よう液は 320×8＝2560cm³。</li>
+    <li>こさは 428÷2560×100＝16.71…%。小数第2位を四捨五入して<b>16.7%</b>。</li>
+    <li>落としやすい所は、ウとイに先に入っていた物質。Bの合計9.2分で数えれば、全部入っている。</li>
+  </ol>
+  <div class="ans">答え：16.7%</div>
+  <div class="tip">コツ：流れ出る水よう液のこさは、時間とともに変わる。だから問題がバケツのこさを教えている。「全体の物質−出ていった物質」で考えると、とちゅうのこさを追わなくてすむ。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 正十二角形の頂点でできる正三角形 <span class="type">5点｜場合の数（図形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>正三角形</b>」。12個の頂点を3つに等しく分けると、<b>辺4本分ずつはなれた頂点</b>を結ぶ形に直して書ける → Aから始めて、ずらして数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>12÷3＝4。頂点の間がどれも辺4本分なら、3つの辺の長さが同じになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aから辺4本分ずつ進んで結ぶ。AEI。</li>
+    <li>1つずつずらす。BFJ、CGK、DHL。次のEIAは、AEIと同じ三角形にもどる。</li>
+    <li>全部で<b>4通り</b>。</li>
+  </ol>
+  <div class="ans">答え：4通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 正十二角形の頂点でできる直角三角形 <span class="type">5点｜場合の数（円周角）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直角三角形</b>」。正十二角形の頂点は1つの円の上にある。直角三角形は<b>円の直径を1辺にもつ</b>と直して書く → 直径の本数×残りの頂点の数。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>円の直径を1辺にして、円の上にもう1点をとる。その点の角は、いつも90°になる。</li>
+    <li>反対に、円の上の3点でできる直角三角形の長い辺（斜辺）は、いつも直径。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>直径になる対角線を数える。AG、BH、CI、DJ、EK、FLの6本。
+<svg viewBox="0 0 360 220" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><polygon points="110.0,30.0 70.0,40.7 40.7,70.0 30.0,110.0 40.7,150.0 70.0,179.3 110.0,190.0 150.0,179.3 179.3,150.0 190.0,110.0 179.3,70.0 150.0,40.7" fill="none" stroke="#222" stroke-width="1.2"/><text x="110.0" y="23.0" font-size="11" fill="#222" text-anchor="middle">A</text><text x="64.5" y="35.2" font-size="11" fill="#222" text-anchor="middle">B</text><text x="31.2" y="68.5" font-size="11" fill="#222" text-anchor="middle">C</text><text x="19.0" y="114.0" font-size="11" fill="#222" text-anchor="middle">D</text><text x="31.2" y="159.5" font-size="11" fill="#222" text-anchor="middle">E</text><text x="64.5" y="192.8" font-size="11" fill="#222" text-anchor="middle">F</text><text x="110.0" y="205.0" font-size="11" fill="#222" text-anchor="middle">G</text><text x="155.5" y="192.8" font-size="11" fill="#222" text-anchor="middle">H</text><text x="188.8" y="159.5" font-size="11" fill="#222" text-anchor="middle">I</text><text x="201.0" y="114.0" font-size="11" fill="#222" text-anchor="middle">J</text><text x="188.8" y="68.5" font-size="11" fill="#222" text-anchor="middle">K</text><text x="155.5" y="35.2" font-size="11" fill="#222" text-anchor="middle">L</text><circle cx="110" cy="110" r="80" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="4,3"/><line x1="110.0" y1="30.0" x2="110.0" y2="190.0" stroke="#d32f2f" stroke-width="2.4"/><line x1="110.0" y1="30.0" x2="40.7" y2="70.0" stroke="#222" stroke-width="1.8"/><line x1="40.7" y1="70.0" x2="110.0" y2="190.0" stroke="#222" stroke-width="1.8"/><polyline points="48.5,65.5 53.0,73.3 45.2,77.8" fill="none" stroke="#d32f2f" stroke-width="1.4"/><circle cx="110" cy="110" r="2.5" fill="#222"/><text x="215.0" y="50.0" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold">AG＝円の直径</text><text x="215.0" y="72.0" font-size="11" fill="#222" text-anchor="start">残りの10点のどれを</text><text x="215.0" y="88.0" font-size="11" fill="#222" text-anchor="start">選んでも直角三角形</text><text x="215.0" y="118.0" font-size="11" fill="#222" text-anchor="start">直径は AG・BH・CI・</text><text x="215.0" y="134.0" font-size="11" fill="#222" text-anchor="start">DJ・EK・FL の6本</text><text x="215.0" y="164.0" font-size="12" fill="#d32f2f" text-anchor="start" font-weight="bold">10×6＝60通り</text></svg></li>
+    <li>AGを辺にする三角形は、残りの10個の頂点のどれを選んでもよい。10通り。</li>
+    <li>ほかの直径も同じ。10×6＝<b>60通り</b>。</li>
+    <li>1つの直角三角形に直径は1本だけ。だから同じ三角形を2回数えていない。</li>
+  </ol>
+  <div class="ans">答え：60通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 正十二角形の頂点でできる鋭角三角形 <span class="type">5点｜場合の数（辺の数で分ける）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>最も大きい角の大きさが90°未満</b>」。頂点の間にある正十二角形の辺の数を3つ書く（直して書く）→ 辺6本分が直角だから、<b>3つとも6より小さい組</b>だけを数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正十二角形の辺1本分の弧に向かい合う角は、180÷12＝15°。辺4本分なら60°、辺6本分なら90°。</li>
+    <li>3つの辺の数をたすと、いつも12になる。12個の辺を3つに分けているから。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>和が12で、どれも5以下の組を書き出す。（5,5,2）（5,4,3）（4,4,4）の3つ。（6をふくむと直角、7以上だと鈍角になる。）
+<svg viewBox="0 0 360 170" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><polygon points="60.0,32.0 40.0,37.4 25.4,52.0 20.0,72.0 25.4,92.0 40.0,106.6 60.0,112.0 80.0,106.6 94.6,92.0 100.0,72.0 94.6,52.0 80.0,37.4" fill="none" stroke="#222" stroke-width="1.2"/><text x="60.0" y="25.0" font-size="9" fill="#222" text-anchor="middle">A</text><text x="34.5" y="31.8" font-size="9" fill="#222" text-anchor="middle">B</text><text x="15.8" y="50.5" font-size="9" fill="#222" text-anchor="middle">C</text><text x="9.0" y="76.0" font-size="9" fill="#222" text-anchor="middle">D</text><text x="15.8" y="101.5" font-size="9" fill="#222" text-anchor="middle">E</text><text x="34.5" y="120.2" font-size="9" fill="#222" text-anchor="middle">F</text><text x="60.0" y="127.0" font-size="9" fill="#222" text-anchor="middle">G</text><text x="85.5" y="120.2" font-size="9" fill="#222" text-anchor="middle">H</text><text x="104.2" y="101.5" font-size="9" fill="#222" text-anchor="middle">I</text><text x="111.0" y="76.0" font-size="9" fill="#222" text-anchor="middle">J</text><text x="104.2" y="50.5" font-size="9" fill="#222" text-anchor="middle">K</text><text x="85.5" y="31.8" font-size="9" fill="#222" text-anchor="middle">L</text><polygon points="60.0,32.0 40.0,106.6 80.0,106.6" fill="#ffe0b2" fill-opacity="0.6" stroke="#d32f2f" stroke-width="2"/><text x="36.0" y="69.6" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold">5</text><text x="60.0" y="100.8" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold">2</text><text x="84.0" y="69.6" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold">5</text><text x="60.0" y="144.0" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">(5,2,5)</text><text x="60.0" y="159.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">12通り</text><polygon points="180.0,32.0 160.0,37.4 145.4,52.0 140.0,72.0 145.4,92.0 160.0,106.6 180.0,112.0 200.0,106.6 214.6,92.0 220.0,72.0 214.6,52.0 200.0,37.4" fill="none" stroke="#222" stroke-width="1.2"/><text x="180.0" y="25.0" font-size="9" fill="#222" text-anchor="middle">A</text><text x="154.5" y="31.8" font-size="9" fill="#222" text-anchor="middle">B</text><text x="135.8" y="50.5" font-size="9" fill="#222" text-anchor="middle">C</text><text x="129.0" y="76.0" font-size="9" fill="#222" text-anchor="middle">D</text><text x="135.8" y="101.5" font-size="9" fill="#222" text-anchor="middle">E</text><text x="154.5" y="120.2" font-size="9" fill="#222" text-anchor="middle">F</text><text x="180.0" y="127.0" font-size="9" fill="#222" text-anchor="middle">G</text><text x="205.5" y="120.2" font-size="9" fill="#222" text-anchor="middle">H</text><text x="224.2" y="101.5" font-size="9" fill="#222" text-anchor="middle">I</text><text x="231.0" y="76.0" font-size="9" fill="#222" text-anchor="middle">J</text><text x="224.2" y="50.5" font-size="9" fill="#222" text-anchor="middle">K</text><text x="205.5" y="31.8" font-size="9" fill="#222" text-anchor="middle">L</text><polygon points="180.0,32.0 140.0,72.0 200.0,106.6" fill="#ffe0b2" fill-opacity="0.6" stroke="#d32f2f" stroke-width="2"/><text x="157.0" y="52.0" font-size="9" fill="#1565c0" text-anchor="middle" font-weight="bold">3</text><text x="167.6" y="97.5" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold">4</text><text x="204.0" y="69.6" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold">5</text><text x="180.0" y="144.0" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">(3,4,5)</text><text x="180.0" y="159.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">24通り</text><polygon points="300.0,32.0 280.0,37.4 265.4,52.0 260.0,72.0 265.4,92.0 280.0,106.6 300.0,112.0 320.0,106.6 334.6,92.0 340.0,72.0 334.6,52.0 320.0,37.4" fill="none" stroke="#222" stroke-width="1.2"/><text x="300.0" y="25.0" font-size="9" fill="#222" text-anchor="middle">A</text><text x="274.5" y="31.8" font-size="9" fill="#222" text-anchor="middle">B</text><text x="255.8" y="50.5" font-size="9" fill="#222" text-anchor="middle">C</text><text x="249.0" y="76.0" font-size="9" fill="#222" text-anchor="middle">D</text><text x="255.8" y="101.5" font-size="9" fill="#222" text-anchor="middle">E</text><text x="274.5" y="120.2" font-size="9" fill="#222" text-anchor="middle">F</text><text x="300.0" y="127.0" font-size="9" fill="#222" text-anchor="middle">G</text><text x="325.5" y="120.2" font-size="9" fill="#222" text-anchor="middle">H</text><text x="344.2" y="101.5" font-size="9" fill="#222" text-anchor="middle">I</text><text x="351.0" y="76.0" font-size="9" fill="#222" text-anchor="middle">J</text><text x="344.2" y="50.5" font-size="9" fill="#222" text-anchor="middle">K</text><text x="325.5" y="31.8" font-size="9" fill="#222" text-anchor="middle">L</text><polygon points="300.0,32.0 265.4,92.0 334.6,92.0" fill="#ffe0b2" fill-opacity="0.6" stroke="#d32f2f" stroke-width="2"/><text x="274.0" y="63.6" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold">4</text><text x="300.0" y="100.8" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold">4</text><text x="326.0" y="63.6" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="bold">4</text><text x="300.0" y="144.0" font-size="11" fill="#222" text-anchor="middle" font-weight="bold">(4,4,4)</text><text x="300.0" y="159.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">4通り</text></svg></li>
+    <li>（5,2,5）はAFHの形。回すと頂点ごとに1つずつ、12通り。</li>
+    <li>（3,4,5）はADHの形。うら返したAJFの形もあるので、12＋12＝24通り。</li>
+    <li>（4,4,4）は正三角形。(1)より4通り。</li>
+    <li>全部で 12＋24＋4＝<b>40通り</b>。</li>
+    <li>たしかめ。三角形は全部で220通り。直角60、鋭角40、鈍角120。60＋40＋120＝220。</li>
+  </ol>
+  <div class="ans">答え：40通り</div>
+  <div class="tip">コツ：正多角形の頂点で作る三角形は、角度でなく「間の辺の数」で書く。角の大きさは、向かい合う辺の数×15°で出る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 三角すいOPBQと三角すいOABCの体積比 <span class="type">5点｜立体の体積比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>OP：PA＝3：1</b>」と「<b>OQ：QC＝1：1</b>」。OAとOCを同じ長さ4にそろえて、OP＝3、OQ＝2と辺に書く（図に置く）→ Oから出る3本の辺の長さの比で体積の比が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>頂点Oが共通で、Oから出る3本の辺が重なっている三角すいどうし。体積の比は（3本の辺の長さのかけ算）の比になる。</li>
+    <li>たとえば、3本とも半分にすると、体積は 1/2×1/2×1/2＝1/8。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>正四角すいなので、OA＝OB＝OC。どれも4とする。OP＝3、OB＝4、OQ＝2。</li>
+    <li>体積の比を式にする。
+<pre class="fig">OPBQ：OABC ＝ (3×4×2)：(4×4×4)
+            ＝ 24：64 ＝ 3：8</pre></li>
+    <li>三角すいOPBQは、三角すいOABCの<b>3/8倍</b>。</li>
+    <li>落としやすい所は、OBの長さ。OBは切っていないので、そのまま4を使う。</li>
+  </ol>
+  <div class="ans">答え：3/8倍</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)考え方・答え</span> OE：EH（考え方も書く） <span class="type">8点（考え方6点・答え2点）｜相似（平行線）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直線OHと直線PQが交わる点をE</b>」。O・P・Q・Hは全部、三角形OACの上にある。<b>平面OACで切った三角形</b>を平らに描く（図に置く）→ QとHがどちらも真ん中の点なので、QHがOAと平行になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Hは正方形ABCDの対角線の交点。だから対角線ACの真ん中。</li>
+    <li>三角形の2つの辺の真ん中どうしを結ぶと、のこりの辺と平行で、長さは半分になる。</li>
+    <li>平行な2本の線をはさむ「ちょうちょ形」の2つの三角形は相似。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>三角形OACを描き、OA＝OC＝4として、OP＝3、PA＝1、OQ＝QC＝2を書きこむ。
+<svg viewBox="0 0 360 252" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><polygon points="180,30 40,200 320,200" fill="none" stroke="#222" stroke-width="1.5"/><line x1="180.0" y1="30.0" x2="180.0" y2="200.0" stroke="#222" stroke-width="1.2" stroke-dasharray="4,3"/><polygon points="180,30 75.0,157.5 180.0,132.0" fill="#dbe9ff"/><polygon points="180,200 250.0,115.0 180.0,132.0" fill="#ffe0b2"/><line x1="75.0" y1="157.5" x2="250.0" y2="115.0" stroke="#222" stroke-width="1.5"/><line x1="250.0" y1="115.0" x2="180.0" y2="200.0" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="5,3"/><line x1="180.0" y1="30.0" x2="40.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="180.0" y1="30.0" x2="180.0" y2="200.0" stroke="#222" stroke-width="1.2" stroke-dasharray="4,3"/><polyline points="180,191 189,191 189,200" fill="none" stroke="#222" stroke-width="1"/><circle cx="180.0" cy="30.0" r="2.5" fill="#222"/><text x="180.0" y="26.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">O</text><circle cx="40.0" cy="200.0" r="2.5" fill="#222"/><text x="30.0" y="208.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">A</text><circle cx="320.0" cy="200.0" r="2.5" fill="#222"/><text x="330.0" y="208.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">C</text><circle cx="180.0" cy="200.0" r="2.5" fill="#222"/><text x="180.0" y="220.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">H</text><circle cx="75.0" cy="157.5" r="2.5" fill="#222"/><text x="63.0" y="161.5" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">P</text><circle cx="250.0" cy="115.0" r="2.5" fill="#222"/><text x="262.0" y="119.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">Q</text><circle cx="180.0" cy="132.0" r="2.5" fill="#222"/><text x="166.0" y="126.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">E</text><text x="111.5" y="93.8" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">3</text><text x="45.5" y="178.8" font-size="12" fill="#222" text-anchor="middle">1</text><text x="227.0" y="72.5" font-size="12" fill="#222" text-anchor="middle">2</text><text x="297.0" y="157.5" font-size="12" fill="#222" text-anchor="middle">2</text><text x="231.0" y="169.5" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">2</text><text x="180.0" y="240.0" font-size="11" fill="#1565c0" text-anchor="middle">QH は OA と平行で、長さは OA の半分</text></svg></li>
+    <li>三角形OACで、QはOCの真ん中、HはACの真ん中。だからQHはOAと平行。QH＝4×1/2＝2。</li>
+    <li>OPとHQは平行。三角形OPEと三角形HQEは、ちょうちょ形の相似。</li>
+    <li>相似比は OP：HQ＝3：2。だから <b>OE：EH＝3：2</b>。</li>
+  </ol>
+  <div class="ans">答え：3：2（考え方は解説を参照）</div>
+  <div class="tip">コツ：考え方らんには、①平面OACで切った図 ②QHがOAと平行で長さ2になる理由 ③相似な三角形OPEとHQE ④相似比3：2、の4つを順に書く。図に長さの比を書きこむと、説明が短くすむ。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 平面PBQと辺ODの交点R <span class="type">5点｜立体の切断（相似）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3点P，B，Qを通る平面</b>」と「<b>辺ODとの交点をR</b>」。平面PBQは直線PQの上の点E（(2)）も通る。<b>平面OBDで切った三角形</b>を描き、BからEを通る直線をのばす（図に置く）→ その線とODの交点がR。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>平面の上の2点を結ぶ直線は、その平面の上にある。B・E・Rは一直線にならぶ。</li>
+    <li>相似の組が見えないときは、平行な線を1本足して「ちょうちょ形」を作る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>三角形OBDを描く。HはBDの真ん中。OH上に、(2)のOE：EH＝3：2を書く。</li>
+    <li>Oを通ってBDと平行な線を引く。直線BEをのばして、その線と交わる点をSとする。
+<svg viewBox="0 0 360 246" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><polygon points="200,40 80,200 320,200" fill="none" stroke="#222" stroke-width="1.5"/><polygon points="20.0,40.0 200,40 148.6,108.6" fill="#dbe9ff"/><polygon points="320,200 80,200 148.6,108.6" fill="#ffe0b2" fill-opacity="0.7"/><line x1="20.0" y1="40.0" x2="200.0" y2="40.0" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="5,3"/><line x1="320.0" y1="200.0" x2="20.0" y2="40.0" stroke="#d32f2f" stroke-width="1.8"/><line x1="200.0" y1="40.0" x2="200.0" y2="200.0" stroke="#222" stroke-width="1.2" stroke-dasharray="4,3"/><line x1="200.0" y1="40.0" x2="80.0" y2="200.0" stroke="#222" stroke-width="1.5"/><line x1="80.0" y1="200.0" x2="320.0" y2="200.0" stroke="#222" stroke-width="1.5"/><polyline points="200,191 209,191 209,200" fill="none" stroke="#222" stroke-width="1"/><circle cx="200.0" cy="40.0" r="2.5" fill="#222"/><text x="208.0" y="36.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">O</text><circle cx="80.0" cy="200.0" r="2.5" fill="#222"/><text x="70.0" y="208.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">D</text><circle cx="320.0" cy="200.0" r="2.5" fill="#222"/><text x="330.0" y="208.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">B</text><circle cx="200.0" cy="200.0" r="2.5" fill="#222"/><text x="200.0" y="220.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">H</text><circle cx="200.0" cy="136.0" r="2.5" fill="#222"/><text x="212.0" y="140.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">E</text><circle cx="20.0" cy="40.0" r="2.5" fill="#222"/><text x="10.0" y="44.0" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">S</text><circle cx="148.6" cy="108.6" r="2.5" fill="#222"/><text x="136.6" y="112.6" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">R</text><text x="214.0" y="92.0" font-size="12" fill="#222" text-anchor="middle">③</text><text x="214.0" y="172.0" font-size="12" fill="#222" text-anchor="middle">②</text><text x="110.0" y="32.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">SO＝3</text><text x="140.0" y="216.0" font-size="12" fill="#222" text-anchor="middle">2</text><text x="260.0" y="216.0" font-size="12" fill="#222" text-anchor="middle">2</text><text x="200.0" y="236.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">BD＝2＋2＝4</text></svg></li>
+    <li>三角形SEOと三角形BEHは、ちょうちょ形の相似。相似比はOE：HE＝3：2。SO＝3、BH＝2とおける。</li>
+    <li>BDはBHの2倍。BD＝2×2＝4。</li>
+    <li>三角形SROと三角形BRDも、ちょうちょ形の相似。相似比はSO：BD＝3：4。だから <b>OR：RD＝3：4</b>。</li>
+  </ol>
+  <div class="ans">答え：3：4</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ</h2>
+  <ul>
+    <li>仕切りの水そうは、部屋ごとの容積を書き、どの部屋から満水になるかを時間の表にする。こさは「物質の重さ」で追う。</li>
+    <li>正多角形の頂点の三角形は、間の「辺の数」3つで分ける。直角は直径、鋭角はどれも半分より少ない組。</li>
+    <li>立体の中の点は、その点をふくむ平面で切って平らな三角形にする。平行線を足して「ちょうちょ形」の相似を作る。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="6"><h1 class="dtitle">大問6（1か月20日の新しいカレンダー・通し番号で行き来する）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">6</span> この回の全体像（大問6） <span class="type">15点</span></h2>
+  <table><tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+  <tr><td>(1)</td><td>旧暦の日付を新暦に直す</td><td>5点</td><td>「5日間で1週」「4週で次の月」＝新暦は1か月20日</td></tr>
+  <tr><td>(2)</td><td>新暦で月×日＝90の日を旧暦に直す</td><td>5点（完答）</td><td>新暦は19月5日まで。日は1〜20日</td></tr>
+  <tr><td>(3)</td><td>どの月にも祝日がある「各位の数の和」</td><td>5点</td><td>短い19月と、和が小さい1月・10月</td></tr></table>
+  <p>どの小問も、<b>1月1日から数えて何日目か（通し番号）</b>を間に置くと、旧暦と新暦を行き来できる。新暦は「20日で1か月」なので、通し番号を20でわるだけで月と日が出る。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)</span> 旧暦の7月28日は新暦の何月何日 <span class="type">5点｜暦（通し番号）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>5日間で1週</b>」と「<b>4週で次の月</b>」。5×4＝20を「新暦は1か月20日」に直して書く → 旧暦の日付を1月1日からの通し番号にして、20でわれば決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>旧暦（今のカレンダー）の各月の日数。1年365日なので2月は28日。1・3・5・7・8・10・12月が31日、4・6・9・11月が30日。</li>
+    <li>新暦は、どの月も20日ずつ。たとえば通し番号45日目は、45÷20＝2あまり5。2か月分が終わって5日目なので、3月5日。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>旧暦の7月28日が、1月1日から数えて何日目かを出す。1〜6月の日数をたし、7月の28日をたす。
+<pre class="fig">31＋28＋31＋30＋31＋30＋28＝209（日目）</pre></li>
+    <li>209を20でわる。
+<pre class="fig">209÷20＝10あまり9</pre></li>
+    <li>10か月分（1〜10月）が終わって、9日目。だから新暦の<b>11月9日</b>。</li>
+    <li>落としやすい所は、あまりの9を見て「10月9日」としてしまうこと。わった答えの10は「終わった月の数」なので、その次の月になる。</li>
+  </ol>
+  <div class="ans">答え：11月9日</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)</span> 新暦で月と日の積が90の日を旧暦に <span class="type">5点（完答）｜暦（書き出し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>月と日の積が90</b>」と「<b>すべて</b>」。新暦の日は1〜20日、月は365÷20から19月まで、と範囲を書く → かけて90になる組をその範囲で全部書き出せば決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>365÷20＝18あまり5。18か月分が20日ずつで、残りの5日が19月。だから新暦は19月5日まで。</li>
+    <li>新暦の通し番号は「20×（月−1）＋日」。たとえば3月5日なら 20×2＋5＝45日目。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>90の約数を小さいほうから見て、「月×日＝90」の組をさがす。日は20以下、月は19以下。
+<pre class="fig">90 ＝ 5×18 ＝ 6×15 ＝ 9×10 ＝ 10×9 ＝ 15×6 ＝ 18×5</pre>
+      1×90、2×45、3×30 は日が20をこえるので使えない。30×3、45×2、90×1 は月が19をこえる。全部で<b>6回</b>。</li>
+    <li>それぞれを通し番号にする。新暦の5月18日なら 20×4＋18＝98日目。</li>
+    <li>通し番号から旧暦の月の日数を順に引いていく。98−31−28−31＝8。3月までを引いて8日残るので、旧暦の4月8日。</li>
+    <li>ほかの5つも同じように引く。
+      <table><tr><th>新暦</th><th>通し番号</th><th>旧暦の月の日数を引く</th><th>旧暦</th></tr>
+      <tr><td>5月18日</td><td>20×4＋18＝98</td><td>98−31−28−31＝8</td><td>4月8日</td></tr>
+      <tr><td>6月15日</td><td>20×5＋15＝115</td><td>115−31−28−31＝25</td><td>4月25日</td></tr>
+      <tr><td>9月10日</td><td>20×8＋10＝170</td><td>170−31−28−31−30−31＝19</td><td>6月19日</td></tr>
+      <tr><td>10月9日</td><td>20×9＋9＝189</td><td>189−31−28−31−30−31−30＝8</td><td>7月8日</td></tr>
+      <tr><td>15月6日</td><td>20×14＋6＝286</td><td>286−31−28−31−30−31−30−31−31−30＝13</td><td>10月13日</td></tr>
+      <tr><td>18月5日</td><td>20×17＋5＝345</td><td>345−（1〜11月の日数334）＝11</td><td>12月11日</td></tr></table>
+      引いた残りが、次の月の日数より小さくなったら止める。</li>
+    <li>落としやすい所は、新暦に13月〜19月があることを忘れて、15月6日と18月5日を書き落とすこと。完答なので、1つ落とすと点にならない。</li>
+  </ol>
+  <div class="ans">答え：4月8日・4月25日・6月19日・7月8日・10月13日・12月11日</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (3)</span> どの月にも祝日がある「各位の数の和」 <span class="type">5点｜暦（いちばん苦しい月から決める）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>月と日の各位の数の和</b>」と「<b>月に1回以上</b>」。19月は5日までしかない → 19月で作れる和から候補を出し、和が大きくなりにくい1月・10月で残りを消せば決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「各位の数の和」は、月と日を数字ごとにばらしてたしたもの。たとえば12月11日なら 1＋2＋1＋1＝5。</li>
+    <li>「どの月にも」と言われたら、いちばん条件がきびしい月から調べる。そこで候補がぐっと少なくなる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>19月は1日〜5日だけ。作れる和を書き出す。
+      <table><tr><th>19月の日</th><td>1日</td><td>2日</td><td>3日</td><td>4日</td><td>5日</td></tr>
+      <tr><th>各位の数の和</th><td>1＋9＋1＝11</td><td>1＋9＋2＝12</td><td>1＋9＋3＝13</td><td>1＋9＋4＝14</td><td>1＋9＋5＝15</td></tr></table>
+      19月に祝日があるには、決める数は11〜15のどれか。</li>
+    <li>次に、和が大きくなりにくい1月を見る。日は1〜20日なので、日の各位の数の和がいちばん大きいのは19日の 1＋9＝10。1月の和は最大で 1＋1＋9＝<b>11</b>。</li>
+    <li>10月も月の各位の数の和は 1＋0＝1 で、1月と同じ。最大は10月19日の11。</li>
+    <li>12〜15にすると、1月と10月に祝日が1回もない。だから決める数は11だけ。</li>
+    <li>確かめ。11にすると、どの月にもある。2月なら9日（2＋9＝11）、9月なら2日、18月なら2日、19月なら1日。落としやすい所は、19月が5日までしかないことを見落とすこと。</li>
+  </ol>
+  <div class="ans">答え：11</div>
+</section>
+</div>

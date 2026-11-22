@@ -1,0 +1,730 @@
+<!-- generated kakomon koishikawa/2025-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（小問集合10題・計算のくふう／整数／四角形の数／回転体／糸の通過／濃度／数列）</a></li>
+<li><a href="#3-4-5">大問3・4・5（栓のある水そうの仕事算／立方体の中の正四面体・正八面体／となりへ光が伝わる電球の周期）</a></li>
+<li><a href="#6">大問6（0と1の三角形・1だけの段と2倍のくり返し）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（小問集合10題・計算のくふう／整数／四角形の数／回転体／糸の通過／濃度／数列）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">40点（4点×10）</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)〜(3)</td><td>四則計算・計算のくふう・分数のひき算</td><td>4+4+4</td><td>「16」「1.6」「0.32」がならぶ／分母が3〜7</td></tr>
+    <tr><td>1 (4)</td><td>2つのあまりの条件をみたす数</td><td>4</td><td>「7で割ると2あまり」「5で割ると3あまる」</td></tr>
+    <tr><td>1 (5)</td><td>図の中の四角形の数</td><td>4</td><td>横線4本・縦線4本</td></tr>
+    <tr><td>2 (1)(2)</td><td>集まり（割合）／回転体の体積</td><td>4+4</td><td>「バスと電車利用」／軸の左右に図形がある</td></tr>
+    <tr><td>2 (3)</td><td>糸が通過した部分の面積</td><td>4</td><td>正六角形のかどで糸が折れる</td></tr>
+    <tr><td>2 (4)(5)</td><td>食塩水の濃さ／黒くぬる数の列</td><td>4+4</td><td>最後の濃さから食塩の重さ／見える数の差</td></tr>
+  </table>
+  <p>10問とも4点。大問1は計算と数え方で、<b>手を動かす前にくふうの合図をさがす</b>と速い。大問2は1問ずつ型がちがう。(2)(3)は<b>図を描き足してから計算する</b>と、まちがいが減る。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 45−2÷(125＋25/4)×(45×45＋15×15)＝10 5/□ <span class="type">4点｜四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>(125＋25/4)</b>」と答えの形「<b>10 5/□</b>」。かっこの中を先に出し、÷は「逆数をかける」に直して書く → 2250 と約分でき、□は分母と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>計算の順は「かっこの中 → ×と÷ → ＋と−」。45−2÷… は、45−2 を先にしない。</li>
+    <li>分数でわるのは、逆数をかけるのと同じ。2÷525/4 は 2×4/525。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1つめのかっこ。125＋25/4＝500/4＋25/4＝<b>525/4</b>。</li>
+    <li>2つめのかっこ。45×45＝2025、15×15＝225。たして 2250。</li>
+    <li>かけ算とわり算をまとめる。2×4/525×2250＝240/7。</li>
+    <li>45−240/7＝315/7−240/7＝75/7＝10 5/7。だから □＝7。</li>
+    <li>落としやすい所。答えは「10 5/7」でなく、□に入る <b>7</b> だけを書く。</li>
+  </ol>
+  <div class="ans">答え：7</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 16×4.02＋1.6×29.1−0.32×34 <span class="type">4点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>16</b>」「<b>1.6</b>」「<b>0.32</b>」。1.6＝16×0.1、0.32＝16×0.02 に直して書く → 3つとも「16×□」になり、<b>□だけ先に計算</b>できる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数をかけているものは、まとめられる。16×3＋16×2＝16×(3＋2)＝16×5。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2つめと3つめを「16×□」に書きかえる。
+      <table>
+        <tr><th>もとの式</th><th>書きかえ</th><th>□</th></tr>
+        <tr><td>16×4.02</td><td>16×4.02</td><td>4.02</td></tr>
+        <tr><td>1.6×29.1</td><td>16×0.1×29.1</td><td>2.91</td></tr>
+        <tr><td>0.32×34</td><td>16×0.02×34</td><td>0.68</td></tr>
+      </table>
+    </li>
+    <li>□だけを計算する。4.02＋2.91−0.68＝<b>6.25</b>。</li>
+    <li>最後に×16。16×6.25＝100。</li>
+    <li>落としやすい所。3つめはひき算。0.68 をたさない。</li>
+  </ol>
+  <div class="ans">答え：100</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 1/3×1/4−1/3×1/4×1/5−… <span class="type">4点｜分数の計算（通分）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は分母の「<b>3・4・5・6・7</b>」。どの項もこの数のかけ算でできている → 分母を <b>3×4×5×6×7＝2520</b> にそろえて書く。分子は「かけていない数」のかけ算で出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>分母をそろえるとき、かけていない数を分子にかける。1/3×1/4 は、5×6×7 がかかっていないので 210/2520。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>4つの項を、分母2520で書く。
+      <table>
+        <tr><th>項</th><th>かけていない数</th><th>分母2520のとき</th></tr>
+        <tr><td>1/3×1/4</td><td>5×6×7</td><td>210/2520</td></tr>
+        <tr><td>1/3×1/4×1/5</td><td>6×7</td><td>42/2520</td></tr>
+        <tr><td>…×1/6</td><td>7</td><td>7/2520</td></tr>
+        <tr><td>…×1/7</td><td>なし</td><td>1/2520</td></tr>
+      </table>
+    </li>
+    <li>分子だけ計算する。210−42−7−1＝<b>160</b>。</li>
+    <li>160/2520 を約分する。40でわって <b>4/63</b>。</li>
+    <li>落としやすい所。約分は一度で終わらせなくてよい。10でわり、次に4でわっても同じ答えになる。</li>
+  </ol>
+  <div class="ans">答え：4/63</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 7で割ると2、5で割ると3あまる300以下の最大の数 <span class="type">4点｜整数の性質（あまり）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>7で割ると2あまり</b>」「<b>5で割ると3あまる</b>」と「300以下」。両方を小さい順に書き出して、最初に同じになる数をさがす → そこから <b>35ずつ</b>ふえる数の列になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2つの条件に合う数は、7と5の最小公倍数ごとに出てくる。7と5の最小公倍数は35。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小さい順に書き出す。
+<pre class="fig">7で割ると2あまる：2, 9, 16, 23, …
+5で割ると3あまる：3, 8, 13, 18, 23, …</pre></li>
+    <li>最初に同じになるのは <b>23</b>。このあとは 23, 58, 93, … と35ずつふえる。</li>
+    <li>300をこえないところまで進む。(300−23)÷35＝7 あまり 32。35を7回たせる。</li>
+    <li>23＋35×7＝268。たしかめ。268÷7＝38 あまり 2。268÷5＝53 あまり 3。合っている。</li>
+  </ol>
+  <div class="ans">答え：268</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 3×3のマス目の中の四角形の数 <span class="type">4点｜場合の数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>四角形</b>」と図の線の数。横線4本・縦線4本と図に書きこみ、四角形を「<b>横線2本＋縦線2本</b>」に直して書く → 選び方のかけ算で数えられる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>4本から2本を選ぶ選び方は 4×3÷2＝6通り。AとB、AとC、AとD、BとC、BとD、CとD。</li>
+    <li>横線2本と縦線2本を決めると、囲まれた四角形が1つだけ決まる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>横線をA〜D、縦線をア〜エと名前をつける。たとえばB・C・イ・エを選ぶと、ぬった四角形になる。
+<svg id="q1_5_fig" viewBox="0 0 250 215" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;width:100%;height:auto;display:block">
+<rect x="110" y="90" width="100" height="50" fill="#ffe0b2"/>
+<g stroke="#222" stroke-width="1.5">
+<line x1="60" y1="40" x2="210" y2="40"/><line x1="60" y1="90" x2="210" y2="90"/><line x1="60" y1="140" x2="210" y2="140"/><line x1="60" y1="190" x2="210" y2="190"/>
+<line x1="60" y1="40" x2="60" y2="190"/><line x1="110" y1="40" x2="110" y2="190"/><line x1="160" y1="40" x2="160" y2="190"/><line x1="210" y1="40" x2="210" y2="190"/>
+</g>
+<g stroke="#d32f2f" stroke-width="3"><line x1="60" y1="90" x2="210" y2="90"/><line x1="60" y1="140" x2="210" y2="140"/><line x1="110" y1="40" x2="110" y2="190"/><line x1="210" y1="40" x2="210" y2="190"/></g>
+<g font-size="14" fill="#222" text-anchor="middle"><text x="60" y="28">ア</text><text x="110" y="28">イ</text><text x="160" y="28">ウ</text><text x="210" y="28">エ</text>
+<text x="42" y="45">A</text><text x="42" y="95">B</text><text x="42" y="145">C</text><text x="42" y="195">D</text></g>
+<text x="160" y="120" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">B・C・イ・エ</text>
+</svg></li>
+    <li>横線の選び方は6通り。縦線の選び方も6通り。</li>
+    <li>組み合わせると 6×6＝<b>36</b>個。</li>
+    <li>たしかめ。大きさ別に数える。1×1が9、1×2と2×1が6ずつ、2×2が4、1×3と3×1が3ずつ、2×3と3×2が2ずつ、3×3が1。たすと36。</li>
+  </ol>
+  <div class="ans">答え：36</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> バス15%・電車30%・両方5% <span class="type">4点｜集まり（割合）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>バスと電車利用が全体の5%</b>」と「<b>90人はそれ以外</b>」。両方使う人は15%にも30%にも入っている → どちらかを使う人は 15＋30−5 に直して書く。残りの%が90人にあたる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2つの集まりが重なるとき、「どちらか」は 2つの合計から重なりを1回ひく。重なりは2回数えているから。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表にまとめる。
+      <table>
+        <tr><th>バスか電車を使う</th><th>それ以外</th><th>全体</th></tr>
+        <tr><td>15＋30−5＝40%</td><td>100−40＝<b>60%</b></td><td>100%</td></tr>
+        <tr><td></td><td>90人</td><td>□人</td></tr>
+      </table>
+    </li>
+    <li>全体の60%が90人。全体×0.6＝90。</li>
+    <li>全体＝90÷0.6＝150人。</li>
+    <li>落としやすい所。15＋30＝45% のまま進めると、5%を2回数えてしまう。</li>
+  </ol>
+  <div class="ans">答え：150人</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 軸の左右に図形がある回転体 <span class="type">4点｜回転体の体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>lを軸に1回転</b>」と、軸の<b>左にも図形がある</b>こと。左の長方形を軸で折り返して右に重ねて書く → いちばん外側の線だけが立体の形を決める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>軸の左側の図形も、1回転すると右側と同じ所を通る。だから左右を重ねて、外側の線だけ見ればよい。</li>
+    <li>円すい台（上が切れた円すい）は「大きい円すい−小さい円すい」で出せる。円すいの体積は 底面積×高さ×1/3。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>ほうがん紙の目盛りを読む。左の長方形は横4cm・縦10cm。右の図形は上の辺の右はしが軸から8cm、下の辺の右はしが軸から6cm。長方形を右へ折り返して重ねる。
+<svg id="q2_2_fig1" viewBox="0 0 300 245" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;width:100%;height:auto;display:block">
+<rect x="40" y="20" width="80" height="200" fill="#ffe0b2" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<polygon points="40,100 120,20 200,20 80,140 160,220 80,220 40,180" fill="#dbe9ff" fill-opacity="0.8" stroke="#222" stroke-width="1.5"/>
+<line x1="40" y1="5" x2="40" y2="238" stroke="#222" stroke-width="2"/>
+<text x="30" y="14" font-size="13" fill="#222" font-style="italic">l</text>
+<text x="46" y="238" font-size="11" fill="#1565c0">左の長方形を右へ</text>
+<text x="215" y="24" font-size="11" fill="#222">8cm</text>
+<text x="165" y="224" font-size="11" fill="#222">6cm</text>
+<text x="80" y="14" font-size="11" fill="#1565c0" text-anchor="middle">4cm</text>
+</svg></li>
+    <li>外側の線をなぞる。上・中・下の3つに分かれる。
+<svg id="q2_2_fig2" viewBox="0 0 300 245" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;width:100%;height:auto;display:block">
+<polygon points="40,20 200,20 120,100 120,180 160,220 40,220" fill="#dbe9ff" stroke="#d32f2f" stroke-width="2.5"/>
+<line x1="40" y1="100" x2="120" y2="100" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="40" y1="180" x2="120" y2="180" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="40" y1="5" x2="40" y2="238" stroke="#222" stroke-width="2"/>
+<text x="30" y="14" font-size="13" fill="#222" font-style="italic">l</text>
+<g font-size="11" fill="#222"><text x="8" y="64">4cm</text><text x="8" y="144">4cm</text><text x="8" y="204">2cm</text></g>
+<g font-size="11" fill="#d32f2f" font-weight="bold"><text x="205" y="24">半径8</text><text x="128" y="96">半径4</text><text x="166" y="224">半径6</text></g>
+<g font-size="11" fill="#1565c0" text-anchor="middle"><text x="95" y="52">上</text><text x="80" y="145">中</text><text x="78" y="207">下</text></g>
+</svg></li>
+    <li>中（半径4・高さ4の円柱）。4×4×3.14×4＝<b>64×3.14</b>。</li>
+    <li>上（半径8から4へ細くなる円すい台）。半径8・高さ8の円すいから、半径4・高さ4の円すいをひく。512/3×3.14−64/3×3.14＝448/3×3.14。</li>
+    <li>下（半径4から6へ太くなる円すい台）。半径6・高さ6の円すいから、半径4・高さ4の円すいをひく。72×3.14−64/3×3.14＝152/3×3.14。</li>
+    <li>たす。64＋448/3＋152/3＝<b>264</b>。264×3.14＝828.96cm³。</li>
+    <li>落としやすい所。3.14は最後に1回だけかける。途中でかけると計算が長くなる。</li>
+  </ol>
+  <div class="ans">答え：828.96cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 正六角形に糸を巻きつける <span class="type">4点｜図形の移動（おうぎ形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>12cmの糸</b>」と「<b>1辺2cmの正六角形</b>」。かどに当たるたびに、回る中心が次のかどに移る → 半径が2cmずつ短くなるおうぎ形を、12・10・8・6・4・2 と図に書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正六角形の外角は 360÷6＝60度。糸が1つのかどのまわりで回るのは60度。</li>
+    <li>中心角60度のおうぎ形は、円の 60/360＝1/6。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>糸の通った所を描く。Aを中心に半径12cmで60度回る。次のかどに当たると、残りは10cm。これをくり返す。
+<svg id="q2_3_fig" viewBox="-105 -72 288 216" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;height:auto;display:block">
+<path d="M13.0,-22.5 L169.0,-22.5 A156.0,156.0 0 0 1 91.0,112.6 Z" fill="#dbe9ff" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><path d="M26.0,-0.0 L91.0,112.6 A130.0,130.0 0 0 1 -39.0,112.6 Z" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><path d="M13.0,22.5 L-39.0,112.6 A104.0,104.0 0 0 1 -91.0,22.5 Z" fill="#dbe9ff" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><path d="M-13.0,22.5 L-91.0,22.5 A78.0,78.0 0 0 1 -52.0,-45.0 Z" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><path d="M-26.0,-0.0 L-52.0,-45.0 A52.0,52.0 0 0 1 0.0,-45.0 Z" fill="#dbe9ff" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/><path d="M-13.0,-22.5 L0.0,-45.0 A26.0,26.0 0 0 1 13.0,-22.5 Z" fill="#ffe0b2" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+<polygon points="13.0,-22.5 26.0,-0.0 13.0,22.5 -13.0,22.5 -26.0,-0.0 -13.0,-22.5" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<line x1="13.0" y1="-22.5" x2="169.0" y2="-22.5" stroke="#222" stroke-width="2"/>
+<text x="21.0" y="-27.5" font-size="13" text-anchor="start" fill="#222">A</text>
+<text x="96.8" y="29.8" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold">12cm</text><text x="26.0" y="84.6" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold">10cm</text><text x="-42.8" y="58.8" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold">8cm</text><text x="-54.9" y="2.3" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold">6cm</text><text x="-26.0" y="-28.2" font-size="10" text-anchor="middle" fill="#d32f2f" font-weight="bold">4cm</text><text x="1.0" y="-26.6" font-size="8" text-anchor="middle" fill="#d32f2f" font-weight="bold">2cm</text>
+</svg></li>
+    <li>おうぎ形は6個。半径は 12, 10, 8, 6, 4, 2cm。6回目で糸のはしがAにもどる。</li>
+    <li>まとめて計算する。(12×12＋10×10＋8×8＋6×6＋4×4＋2×2)×3.14×1/6。</li>
+    <li>かっこの中は 144＋100＋64＋36＋16＋4＝<b>364</b>。364×3.14×1/6＝190 37/75cm²。</li>
+    <li>落としやすい所。半径はかどごとに2cmへる。6回でちょうど12cmを使い切る。</li>
+  </ol>
+  <div class="ans">答え：190 37/75cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (4)</span> 3%・5%を混ぜ、8%を加えて5.75% <span class="type">4点｜濃度（てんびん）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>500gの食塩水</b>」「<b>容器Cの食塩水300g</b>」「<b>5.75%</b>」。最後の食塩水800gの食塩の重さを出す → Cの分をひけば、A・Bを混ぜた500gの濃さが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>食塩の重さ＝食塩水の重さ×濃さ。800gの5.75%なら 800×0.0575。</li>
+    <li>2つの食塩水を混ぜるとき、てんびんのうでの長さの比と、重さの比は逆になる。うでが7:3なら、重さは3:7。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>食塩の重さを表にする。
+      <table>
+        <tr><th></th><th>食塩水</th><th>濃さ</th><th>食塩</th></tr>
+        <tr><td>最後</td><td>800g</td><td>5.75%</td><td>46g</td></tr>
+        <tr><td>C</td><td>300g</td><td>8%</td><td>24g</td></tr>
+        <tr><td>A＋B</td><td>500g</td><td><b>4.4%</b></td><td>46−24＝22g</td></tr>
+      </table>
+    </li>
+    <li>22÷500×100＝4.4%。AとBを混ぜると4.4%になる。</li>
+    <li>てんびんを書く。
+<pre class="fig">3%(A)──ア──4.4%──イ──5%(B)
+ア＝4.4−3＝1.4   イ＝5−4.4＝0.6
+ア：イ＝7：3 → 重さは A：B＝3：7</pre></li>
+    <li>Aの重さ＝500×3/(3＋7)＝<b>150g</b>。</li>
+    <li>落としやすい所。てんびんの比は逆になる。Aのうでが長いので、Aのほうが軽い。</li>
+  </ol>
+  <div class="ans">答え：150g</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (5)</span> 黒くぬりつぶす規則と見える数の和 <span class="type">4点｜規則性（数列）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は並び「<b>①●③●●⑥●●●⑩</b>」と「<b>㊿まで繰り返す</b>」。見える数だけ書き出す → 1, 3, 6, 10 で、<b>差が2, 3, 4</b>とふえる。この続きを50まで書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>黒が1個、2個、3個…とふえるので、見える数どうしの差も1ずつふえる。1＋2＝3、1＋2＋3＝6 のように、1からのたし算の答えが見える数になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>差を1ずつふやして書き出す。50をこえたら終わり。
+<pre class="fig">見える数：1, 3, 6, 10, 15, 21, 28, 36, 45
+差      ：  2  3  4  5  6  7  8  9
+次は45＋10＝55 → 50をこえるので終わり</pre></li>
+    <li>見える数は9個。全部たす。1＋3＋6＋10＋15＋21＋28＋36＋45＝<b>165</b>。</li>
+    <li>落としやすい所。45のあとの●は㊿までぬって終わる。55は並びに入らない。</li>
+  </ol>
+  <div class="ans">答え：165</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ</h2>
+  <ul>
+    <li>計算は、<b>同じ数・同じ分母をさがしてそろえる</b>と短くなる（1 (2)(3)）。</li>
+    <li>図形は、<b>描き足した図</b>で形を決めてから式を立てる（2 (2) 折り返し、2 (3) おうぎ形6個）。</li>
+    <li>3.14は最後に1回。半径の2乗をたしてからかける（2 (2)(3)）。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（栓のある水そうの仕事算／立方体の中の正四面体・正八面体／となりへ光が伝わる電球の周期）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">42点（大問3 各4点×3／大問4・5 各5点×3）</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>3</td><td>蛇口と栓がある水そう（仕事算）</td><td>4+4+4</td><td>「5Lずつ」「30分」→ まず水そうの量150Lを出す</td></tr>
+    <tr><td>4</td><td>立方体・直方体の中の正四面体と正八面体</td><td>5+5+5</td><td>「対角線」「交点」→ 立体を箱の中に置く。(1)(3) は箱から引く</td></tr>
+    <tr><td>5</td><td>となりへ1秒おくれで光が伝わる電球</td><td>5+5+5</td><td>「1秒後に自動的に」→ ◎からの歩数を電球に書く</td></tr>
+  </table>
+  <p>取り方: 大問3は (1) の150Lを (2)(3) でそのまま使う。<b>最初に150Lを余白に書く</b>。大問4は (1) と (3) が「箱から三角すいを引く」、(2) が「面のまん中を結ぶ」。大問5は (1) で書いた「歩数＝光り始める秒」を (2)(3) でも使う。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 1分間に3Lの蛇口でいっぱいになる時間 <span class="type">4点｜仕事算（水そうの量）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1分間に5Lずつ入れると30分でいっぱい</b>」。この文を水そうの量に直して書く → <b>5×30＝150L</b>。あとは150Lを1分間の量でわるだけ。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>水そうの量＝1分間に入る量×かかった時間。1分間に5Lで30分なら、5×30＝150L。</li>
+    <li>かかる時間＝水そうの量÷1分間に入る量。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>水そうの量を出して、余白に書く。
+<pre class="fig">水そう＝5×30＝150L</pre></li>
+    <li>1分間に3Lずつ入れる。150÷3＝<b>50分</b>。</li>
+    <li>たしかめ。3×50＝150L。合っている。</li>
+  </ol>
+  <div class="ans">答え：50分</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 入れながら栓から流れ出るとき <span class="type">4点｜仕事算（入る量−出る量）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>10L</b>の水が出る蛇口」と「<b>2.5Lの水が流れ出る栓</b>」。流れ出るのは「減る」なので、1分間にたまる量に直して書く → <b>10−2.5＝7.5L</b>。これで150Lをわる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>入れる水と出ていく水が同時にあるとき、1分間にたまるのは「入る量−出る量」。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1分間にたまる量を出す。
+<pre class="fig">10−2.5＝7.5L（1分間にたまる量）</pre></li>
+    <li>(1) の150Lをわる。150÷7.5＝<b>20分</b>。</li>
+    <li>たしかめ。7.5×20＝150L。合っている。</li>
+  </ol>
+  <div class="ans">答え：20分</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> 栓が抜けていたことに気が付いた時間 <span class="type">4点｜仕事算（全体の水から引く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>水をため始めてから50分</b>」と「途中で…栓が抜けている」。蛇口は50分ずっと出ていたので、入れた水を <b>5×50＝250L</b> に直して書く → 150Lより多い分が、栓から出た水。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>入れた水は、水そうにたまった水と、栓から出た水に分かれる。入れた水−たまった水＝出た水。</li>
+    <li>栓から出た水÷2.5L＝栓が抜けていた時間。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>蛇口から入れた水を出す。5×50＝250L。</li>
+    <li>水そうには150Lたまった。残りが栓から出た水になる。
+<svg viewBox="0 0 300 136" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><text x="10.0" y="22.0" font-size="12" fill="#222" text-anchor="start">蛇口から入れた水 5×50＝250L</text><rect x="10" y="30" width="275" height="24" fill="#dbe9ff" stroke="#222"/><rect x="10" y="78" width="165" height="24" fill="#c8e6c9" stroke="#222"/><rect x="175" y="78" width="110" height="24" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.8"/><text x="92.5" y="95.0" font-size="12" fill="#222" text-anchor="middle">水そう 150L</text><text x="230.0" y="95.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">栓から 100L</text><text x="230.0" y="124.0" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">100÷2.5＝40分</text></svg>
+<pre class="fig">250−150＝100L（栓から出た水）</pre></li>
+    <li>栓からは1分間に2.5L出る。100÷2.5＝40分。栓は最初から40分間抜けていた。</li>
+    <li>気が付いたのは、入れ始めてから<b>40分後</b>。たしかめ。最初の40分は1分間に 5−2.5＝2.5L ずつで100L。残り10分は5Lずつで50L。合わせて150L。合っている。</li>
+  </ol>
+  <div class="ans">答え：40分後</div>
+  <div class="tip">コツ：「全部5Lずつ入っていたら250L。実際は150L。」と考えると、つるかめ算と同じ式になる。栓が抜けていた1分ごとに2.5L少なくなるので、100÷2.5＝40分。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> ACを1辺とする正四面体の体積 <span class="type">5点｜立体の体積（箱から引く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直線ACの長さを1辺とする正四面体</b>」。ACは上の面の対角線。立方体のかどを1つおきに結ぶと、6本の辺がすべて面の対角線になる（図に置く）→ <b>立方体から、かどの三角すい4つを引く</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>立方体の面の対角線は、どれも同じ長さ。だから対角線だけでできた四面体は、6本の辺が全部等しい正四面体になる。</li>
+    <li>三角すいの体積＝底面積×高さ÷3。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>A・C・F・Hを結ぶ。6本の辺 AC・AF・AH・CF・CH・FH は、どれも面の対角線。これが正四面体（赤）。
+<svg viewBox="0 0 330 290" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><polygon points="135.0,185.0 135.0,35.0 60.0,230.0" fill="#ffe0b2" fill-opacity="0.9" stroke="none"/><polygon points="135.0,185.0 60.0,230.0 285.0,185.0" fill="#ffe0b2" fill-opacity="0.9" stroke="none"/><line x1="135.0" y1="35.0" x2="60.0" y2="80.0" stroke="#888" stroke-width="1.1"/><line x1="60.0" y1="80.0" x2="210.0" y2="80.0" stroke="#888" stroke-width="1.1"/><line x1="210.0" y1="80.0" x2="285.0" y2="35.0" stroke="#888" stroke-width="1.1"/><line x1="285.0" y1="35.0" x2="135.0" y2="35.0" stroke="#888" stroke-width="1.1"/><line x1="60.0" y1="80.0" x2="60.0" y2="230.0" stroke="#888" stroke-width="1.1"/><line x1="210.0" y1="80.0" x2="210.0" y2="230.0" stroke="#888" stroke-width="1.1"/><line x1="285.0" y1="35.0" x2="285.0" y2="185.0" stroke="#888" stroke-width="1.1"/><line x1="60.0" y1="230.0" x2="210.0" y2="230.0" stroke="#888" stroke-width="1.1"/><line x1="210.0" y1="230.0" x2="285.0" y2="185.0" stroke="#888" stroke-width="1.1"/><line x1="135.0" y1="35.0" x2="135.0" y2="185.0" stroke="#888" stroke-width="1.0" stroke-dasharray="3,3"/><line x1="135.0" y1="185.0" x2="60.0" y2="230.0" stroke="#888" stroke-width="1.0" stroke-dasharray="3,3"/><line x1="135.0" y1="185.0" x2="285.0" y2="185.0" stroke="#888" stroke-width="1.0" stroke-dasharray="3,3"/><line x1="135.0" y1="35.0" x2="210.0" y2="80.0" stroke="#d32f2f" stroke-width="2.4"/><line x1="135.0" y1="35.0" x2="60.0" y2="230.0" stroke="#d32f2f" stroke-width="2.4"/><line x1="210.0" y1="80.0" x2="60.0" y2="230.0" stroke="#d32f2f" stroke-width="2.4"/><line x1="210.0" y1="80.0" x2="285.0" y2="185.0" stroke="#d32f2f" stroke-width="2.4"/><line x1="60.0" y1="230.0" x2="285.0" y2="185.0" stroke="#d32f2f" stroke-width="2.4"/><line x1="135.0" y1="35.0" x2="285.0" y2="185.0" stroke="#d32f2f" stroke-width="2.0" stroke-dasharray="5,3"/><text x="50.0" y="84.0" font-size="13" fill="#222" text-anchor="middle">B</text><text x="229.0" y="89.0" font-size="13" fill="#222" text-anchor="middle">C</text><text x="131.0" y="29.0" font-size="13" fill="#222" text-anchor="middle">A</text><text x="293.0" y="31.0" font-size="13" fill="#222" text-anchor="middle">D</text><text x="50.0" y="242.0" font-size="13" fill="#222" text-anchor="middle">F</text><text x="210.0" y="246.0" font-size="13" fill="#222" text-anchor="middle">G</text><text x="125.0" y="199.0" font-size="13" fill="#222" text-anchor="middle">E</text><text x="295.0" y="191.0" font-size="13" fill="#222" text-anchor="middle">H</text><text x="135.0" y="262.0" font-size="12" fill="#222" text-anchor="middle">3cm</text><text x="20.0" y="280.0" font-size="11" fill="#e65100" text-anchor="start">オレンジ＝取りのぞく三角すい（Eのかど）</text></svg></li>
+    <li>立方体の体積を出す。3×3×3＝27cm³。</li>
+    <li>まわりに残るのは、B・D・E・Gのかどの三角すい4つ。どれも同じ形。直角をはさむ辺が3cm・3cm・3cm。
+<pre class="fig">3×3÷2×3÷3＝4.5cm³（1つ分）</pre></li>
+    <li>立方体から4つ分を引く。27−4.5×4＝<b>9cm³</b>。</li>
+    <li>落としやすい所は三角すいの「÷3」。かど1つは立方体の 1/6 になる。27÷6＝4.5 で、たしかめに使える。</li>
+  </ol>
+  <div class="ans">答え：9cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> PQを1辺とする正八面体の体積 <span class="type">5点｜立体の体積（四角すい2つ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直線ACと直線BDの交点をP</b>」「直線CHと直線GDの交点をQ」。どちらも面の対角線の交点＝<b>面のまん中</b>と直して書く → 6つの面のまん中を結ぶと、PQを1辺とする正八面体になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正八面体は、同じ四角すいを2つ、底どうしで重ねた形。</li>
+    <li>正方形の面積は、対角線×対角線÷2 でも出せる。たとえば対角線が3cmなら 3×3÷2＝4.5cm²。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>6つの面のまん中を結ぶ（赤）。まん中の高さで切った正方形（青）が、2つの四角すいの底になる。
+<svg viewBox="0 0 330 272" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><line x1="135.0" y1="35.0" x2="60.0" y2="80.0" stroke="#888" stroke-width="1.1"/><line x1="60.0" y1="80.0" x2="210.0" y2="80.0" stroke="#888" stroke-width="1.1"/><line x1="210.0" y1="80.0" x2="285.0" y2="35.0" stroke="#888" stroke-width="1.1"/><line x1="285.0" y1="35.0" x2="135.0" y2="35.0" stroke="#888" stroke-width="1.1"/><line x1="60.0" y1="80.0" x2="60.0" y2="230.0" stroke="#888" stroke-width="1.1"/><line x1="210.0" y1="80.0" x2="210.0" y2="230.0" stroke="#888" stroke-width="1.1"/><line x1="285.0" y1="35.0" x2="285.0" y2="185.0" stroke="#888" stroke-width="1.1"/><line x1="60.0" y1="230.0" x2="210.0" y2="230.0" stroke="#888" stroke-width="1.1"/><line x1="210.0" y1="230.0" x2="285.0" y2="185.0" stroke="#888" stroke-width="1.1"/><line x1="135.0" y1="35.0" x2="135.0" y2="185.0" stroke="#888" stroke-width="1.0" stroke-dasharray="3,3"/><line x1="135.0" y1="185.0" x2="60.0" y2="230.0" stroke="#888" stroke-width="1.0" stroke-dasharray="3,3"/><line x1="135.0" y1="185.0" x2="285.0" y2="185.0" stroke="#888" stroke-width="1.0" stroke-dasharray="3,3"/><polygon points="135.0,155.0 247.5,132.5 210.0,110.0 97.5,132.5" fill="#dbe9ff" fill-opacity="1.0" stroke="#1565c0"/><line x1="172.5" y1="57.5" x2="135.0" y2="155.0" stroke="#d32f2f" stroke-width="2.2"/><line x1="172.5" y1="207.5" x2="135.0" y2="155.0" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="5,3"/><line x1="172.5" y1="57.5" x2="247.5" y2="132.5" stroke="#d32f2f" stroke-width="2.2"/><line x1="172.5" y1="207.5" x2="247.5" y2="132.5" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="5,3"/><line x1="172.5" y1="57.5" x2="210.0" y2="110.0" stroke="#d32f2f" stroke-width="2.2"/><line x1="172.5" y1="207.5" x2="210.0" y2="110.0" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="5,3"/><line x1="172.5" y1="57.5" x2="97.5" y2="132.5" stroke="#d32f2f" stroke-width="2.2"/><line x1="172.5" y1="207.5" x2="97.5" y2="132.5" stroke="#d32f2f" stroke-width="1.6" stroke-dasharray="5,3"/><line x1="172.5" y1="57.5" x2="247.5" y2="132.5" stroke="#d32f2f" stroke-width="3.2"/><line x1="172.5" y1="57.5" x2="172.5" y2="132.5" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="3,2"/><text x="176.5" y="120.5" font-size="11" fill="#1565c0" text-anchor="start">1.5cm</text><circle cx="172.5" cy="57.5" r="3" fill="#d32f2f"/><circle cx="247.5" cy="132.5" r="3" fill="#d32f2f"/><text x="172.5" y="50.5" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">P</text><text x="259.5" y="136.5" font-size="13" fill="#d32f2f" text-anchor="middle" font-weight="bold">Q</text><text x="131.0" y="29.0" font-size="13" fill="#888" text-anchor="middle">A</text><text x="50.0" y="84.0" font-size="13" fill="#888" text-anchor="middle">B</text><text x="218.0" y="94.0" font-size="13" fill="#888" text-anchor="middle">C</text><text x="293.0" y="31.0" font-size="13" fill="#888" text-anchor="middle">D</text><text x="50.0" y="242.0" font-size="13" fill="#888" text-anchor="middle">F</text><text x="210.0" y="246.0" font-size="13" fill="#888" text-anchor="middle">G</text><text x="295.0" y="191.0" font-size="13" fill="#888" text-anchor="middle">H</text><text x="125.0" y="199.0" font-size="13" fill="#888" text-anchor="middle">E</text><text x="135.0" y="262.0" font-size="12" fill="#222" text-anchor="middle">3cm</text></svg></li>
+    <li>青い正方形の対角線は、立方体の1辺と同じ3cm。面積は 3×3÷2＝4.5cm²。</li>
+    <li>四角すい1つの高さは、立方体の高さの半分。3÷2＝1.5cm。</li>
+    <li>四角すい2つ分。4.5×1.5÷3×2＝<b>4.5cm³</b>。</li>
+    <li>たしかめ。この正八面体は立方体のちょうど 1/6。27÷6＝4.5。合っている。落としやすい所は、底の正方形の1辺を3cmとしてしまうこと。3cmなのは対角線。</li>
+  </ol>
+  <div class="ans">答え：4.5cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 三角形BDGと合同な三角形だけでできた四面体 <span class="type">5点｜立体の体積（箱から引く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>三角形BDGと合同な三角形のみ</b>」。BD・BG・DGは3つのちがう面の対角線。(1) と同じく、かどを1つおきに結ぶ形と見る（図に置く）→ 4つ目の頂点は <b>E</b>。直方体から三角すい4つを引く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>直方体の向かい合う面の対角線は、同じ長さ。だからB・D・G・Eを結ぶと、4つの面がどれも同じ3辺の三角形になる。</li>
+    <li>直方体のかどの三角すいは、どれも直方体の 1/6。60cm³の箱なら、1つ10cm³。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>B・D・G・Eを結ぶ（赤）。BE＝DG、DE＝BG、EG＝BD。4つの面がどれも三角形BDG（青）と合同になる。
+<svg viewBox="0 0 330 250" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><line x1="94.0" y1="43.6" x2="40.0" y2="76.0" stroke="#888" stroke-width="1.1"/><line x1="40.0" y1="76.0" x2="220.0" y2="76.0" stroke="#888" stroke-width="1.1"/><line x1="220.0" y1="76.0" x2="274.0" y2="43.6" stroke="#888" stroke-width="1.1"/><line x1="274.0" y1="43.6" x2="94.0" y2="43.6" stroke="#888" stroke-width="1.1"/><line x1="40.0" y1="76.0" x2="40.0" y2="220.0" stroke="#888" stroke-width="1.1"/><line x1="220.0" y1="76.0" x2="220.0" y2="220.0" stroke="#888" stroke-width="1.1"/><line x1="274.0" y1="43.6" x2="274.0" y2="187.6" stroke="#888" stroke-width="1.1"/><line x1="40.0" y1="220.0" x2="220.0" y2="220.0" stroke="#888" stroke-width="1.1"/><line x1="220.0" y1="220.0" x2="274.0" y2="187.6" stroke="#888" stroke-width="1.1"/><line x1="94.0" y1="43.6" x2="94.0" y2="187.6" stroke="#888" stroke-width="1.0" stroke-dasharray="3,3"/><line x1="94.0" y1="187.6" x2="40.0" y2="220.0" stroke="#888" stroke-width="1.0" stroke-dasharray="3,3"/><line x1="94.0" y1="187.6" x2="274.0" y2="187.6" stroke="#888" stroke-width="1.0" stroke-dasharray="3,3"/><polygon points="40.0,76.0 274.0,43.6 220.0,220.0" fill="#dbe9ff" fill-opacity="0.8" stroke="none"/><line x1="40.0" y1="76.0" x2="274.0" y2="43.6" stroke="#d32f2f" stroke-width="2.4"/><line x1="40.0" y1="76.0" x2="220.0" y2="220.0" stroke="#d32f2f" stroke-width="2.4"/><line x1="274.0" y1="43.6" x2="220.0" y2="220.0" stroke="#d32f2f" stroke-width="2.4"/><line x1="40.0" y1="76.0" x2="94.0" y2="187.6" stroke="#d32f2f" stroke-width="2.4"/><line x1="274.0" y1="43.6" x2="94.0" y2="187.6" stroke="#d32f2f" stroke-width="2.4"/><line x1="94.0" y1="187.6" x2="220.0" y2="220.0" stroke="#d32f2f" stroke-width="2.0" stroke-dasharray="5,3"/><text x="30.0" y="80.0" font-size="13" fill="#222" text-anchor="middle">B</text><text x="207.0" y="90.0" font-size="13" fill="#222" text-anchor="middle">C</text><text x="90.0" y="37.6" font-size="13" fill="#222" text-anchor="middle">A</text><text x="282.0" y="39.6" font-size="13" fill="#222" text-anchor="middle">D</text><text x="30.0" y="232.0" font-size="13" fill="#222" text-anchor="middle">F</text><text x="220.0" y="236.0" font-size="13" fill="#222" text-anchor="middle">G</text><text x="84.0" y="201.6" font-size="13" fill="#222" text-anchor="middle">E</text><text x="284.0" y="193.6" font-size="13" fill="#222" text-anchor="middle">H</text><text x="130.0" y="250.0" font-size="12" fill="#222" text-anchor="middle">5cm</text><text x="26.0" y="150.0" font-size="12" fill="#222" text-anchor="end">4cm</text><text x="53.0" y="53.8" font-size="12" fill="#222" text-anchor="end">3cm</text></svg></li>
+    <li>直方体の体積を出す。3×5×4＝60cm³。</li>
+    <li>まわりに残るのは、A・C・F・Hのかどの三角すい4つ。直角をはさむ辺が3cm・5cm・4cm。
+<pre class="fig">3×5÷2×4÷3＝10cm³（1つ分）</pre></li>
+    <li>直方体から4つ分を引く。60−10×4＝<b>20cm³</b>。</li>
+    <li>落としやすい所は4つ目の頂点。B・D・Gのどれとも同じ辺に並ばないかどが E になる。</li>
+  </ol>
+  <div class="ans">答え：20cm³</div>
+  <div class="tip">コツ：(1) と (3) はどちらも「かどを1つおきに結んだ四面体＝箱−かど4つ＝箱の 1/3」。27の1/3が9、60の1/3が20。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 3秒後に青く光っている電球の数 <span class="type">5点｜周期（光り始める秒）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>隣り合う電球が点灯し始めた1秒後</b>に自動的に点灯」。◎から上下左右に何歩かを、電球に書きこむ（図に置く）→ <b>歩数＝光り始める秒</b>。3秒後に青いのは、ちょうど光り始めた歩数3の電球。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1つの電球は「青1秒 → 赤2秒 → 消える1秒」で、4秒ごとに同じことをくり返す。</li>
+    <li>光り始めてから0秒・4秒・8秒…のときが青。1・2秒（5・6秒…）が赤。3秒（7秒…）が消えている。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「隣り合う」は上下左右と考える。スイッチを入れて◎が青く光ったときを0秒とする。◎からの歩数を書く。
+<svg viewBox="0 0 360 210" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="30" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="40.0" y="34.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="80" cy="30" r="16.0" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.2"/><text x="80.0" y="34.5" font-size="12" fill="#222" text-anchor="middle">3</text><circle cx="120" cy="30" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="120.0" y="34.5" font-size="12" fill="#222" text-anchor="middle">2</text><circle cx="160" cy="30" r="16.0" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.2"/><text x="160.0" y="34.5" font-size="12" fill="#222" text-anchor="middle">3</text><circle cx="200" cy="30" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="200.0" y="34.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="40" cy="70" r="16.0" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.2"/><text x="40.0" y="74.5" font-size="12" fill="#222" text-anchor="middle">3</text><circle cx="80" cy="70" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="80.0" y="74.5" font-size="12" fill="#222" text-anchor="middle">2</text><circle cx="120" cy="70" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="120.0" y="74.5" font-size="12" fill="#222" text-anchor="middle">1</text><circle cx="160" cy="70" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="160.0" y="74.5" font-size="12" fill="#222" text-anchor="middle">2</text><circle cx="200" cy="70" r="16.0" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.2"/><text x="200.0" y="74.5" font-size="12" fill="#222" text-anchor="middle">3</text><circle cx="40" cy="110" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="40.0" y="114.5" font-size="12" fill="#222" text-anchor="middle">2</text><circle cx="80" cy="110" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="80.0" y="114.5" font-size="12" fill="#222" text-anchor="middle">1</text><circle cx="120" cy="110" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="120.0" y="114.5" font-size="12" fill="#222" text-anchor="middle">0</text><circle cx="160" cy="110" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="160.0" y="114.5" font-size="12" fill="#222" text-anchor="middle">1</text><circle cx="200" cy="110" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="200.0" y="114.5" font-size="12" fill="#222" text-anchor="middle">2</text><circle cx="40" cy="150" r="16.0" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.2"/><text x="40.0" y="154.5" font-size="12" fill="#222" text-anchor="middle">3</text><circle cx="80" cy="150" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="80.0" y="154.5" font-size="12" fill="#222" text-anchor="middle">2</text><circle cx="120" cy="150" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="120.0" y="154.5" font-size="12" fill="#222" text-anchor="middle">1</text><circle cx="160" cy="150" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="160.0" y="154.5" font-size="12" fill="#222" text-anchor="middle">2</text><circle cx="200" cy="150" r="16.0" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.2"/><text x="200.0" y="154.5" font-size="12" fill="#222" text-anchor="middle">3</text><circle cx="40" cy="190" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="40.0" y="194.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="80" cy="190" r="16.0" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.2"/><text x="80.0" y="194.5" font-size="12" fill="#222" text-anchor="middle">3</text><circle cx="120" cy="190" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="120.0" y="194.5" font-size="12" fill="#222" text-anchor="middle">2</text><circle cx="160" cy="190" r="16.0" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.2"/><text x="160.0" y="194.5" font-size="12" fill="#222" text-anchor="middle">3</text><circle cx="200" cy="190" r="16.0" fill="#ffffff" stroke="#222" stroke-width="1.2"/><text x="200.0" y="194.5" font-size="12" fill="#222" text-anchor="middle">4</text><text x="240.0" y="60.0" font-size="12" fill="#222" text-anchor="start">数＝◎からの歩数</text><text x="240.0" y="80.0" font-size="12" fill="#222" text-anchor="start">＝光り始める秒</text><text x="240.0" y="110.0" font-size="12" fill="#d32f2f" text-anchor="start">オレンジ＝歩数3</text><text x="240.0" y="128.0" font-size="12" fill="#d32f2f" text-anchor="start">（8個）</text></svg></li>
+    <li>3秒後の電球を歩数ごとに見る。
+<table>
+<tr><th>歩数</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><th>光り始めて何秒</th><td>3</td><td>2</td><td>1</td><td>0</td><td>まだ</td></tr>
+<tr><th>3秒後の色</th><td>消</td><td>赤</td><td>赤</td><td><b>青</b></td><td>消</td></tr>
+</table></li>
+    <li>青いのは歩数3の電球だけ。図で数えると<b>8個</b>。</li>
+  </ol>
+  <div class="ans">答え：8個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 赤い電球が16個になる間かく <span class="type">5点｜周期（くり返しの間かく）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>赤く光っている電球が16個</b>」と「何秒おき」。(1) の図の歩数ごとの個数を表にする（直して書く）→ 赤は2秒続くので、となりの2つの歩数が赤。<b>8個＋8個＝16個</b>になる組をさがす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>どの電球も4秒ごとに同じ光り方をくり返す。だから全体の光り方も、すべて光り始めたあとは4秒ごとに同じになる。</li>
+    <li>歩数が4ちがう電球（歩数0と4）は、両方が光り始めたあとは同じ色になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1) の図から、歩数ごとの個数を書く。
+<table>
+<tr><th>歩数</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><th>個数</th><td>1</td><td>4</td><td><b>8</b></td><td><b>8</b></td><td>4</td></tr>
+</table></li>
+    <li>赤は「光り始めて1秒・2秒」。だから、ある時刻に赤いのは、となり合う2つの歩数の電球。歩数0と4は同じ色なので、組は「0と1（と4）」「1と2」「2と3」「3と4（と0）」の4つ。個数は 9・12・16・13。16個になるのは、歩数2と歩数3が同時に赤のときだけ。</li>
+    <li>歩数3が光り始めて1秒、歩数2が光り始めて2秒。これは4秒後。4秒後の赤は 8＋8＝16個。
+<table>
+<tr><th>何秒後</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+<tr><th>赤の個数</th><td>5</td><td>12</td><td><b>16</b></td><td>13</td><td>9</td><td>12</td><td><b>16</b></td></tr>
+</table></li>
+    <li>3秒後と7秒後の光り方は同じ。そこから先は4秒ごとに同じ光り方になる。だから16個になるのは4秒後、8秒後、12秒後…の<b>4秒おき</b>。</li>
+  </ol>
+  <div class="ans">答え：4秒おき</div>
+  <div class="tip">コツ：声の教育社の解説は、0〜7秒後の図を全部かいて「3秒後と7秒後が同じ」を見つけている。歩数の表を作ると、図をかく枚数が少なくてすむ。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 縦15列・横9列で20秒後に青い電球の数 <span class="type">5点｜周期（歩数と4の倍数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「縦に15列，横に9列」と「<b>20秒後</b>」。青は光り始めて0・4・8…秒なので、20秒後に青いのは歩数が「20−4の倍数」の電球に直して書く → 歩数 <b>0・4・8・12・16・20</b> の電球を数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>電球の光り方は4秒ごとのくり返し。20秒後に青いのは、光り始めてから0秒、4秒、8秒…たった電球。</li>
+    <li>◎からの歩数＝横に何歩＋縦に何歩。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>◎は横9列のまん中、縦15列のまん中にある。横は左右に4歩まで、縦は上下に7歩まで。いちばん遠いかどでも 4＋7＝11歩。歩数12・16・20の電球はない。</li>
+    <li>残りは歩数0・4・8。図に書きこんで数える。
+<svg viewBox="0 0 360 340" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="16" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="16" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="16" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="16" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="86.0" y="20.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="108" cy="16" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="16" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="130.0" y="20.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="152" cy="16" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="16" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="16" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="38" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="38" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="38" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="64.0" y="42.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="86" cy="38" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="38" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="38" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="38" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="152.0" y="42.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="174" cy="38" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="38" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="60" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="60" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="42.0" y="64.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="64" cy="60" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="60" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="60" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="60" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="60" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="60" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="174.0" y="64.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="196" cy="60" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="82" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="20.0" y="86.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="42" cy="82" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="82" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="82" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="82" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="108.0" y="86.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="130" cy="82" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="82" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="82" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="82" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="196.0" y="86.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="20" cy="104" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="104" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="104" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="104" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="86.0" y="108.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="108" cy="104" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="104" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="130.0" y="108.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="152" cy="104" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="104" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="104" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="126" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="126" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="126" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="64.0" y="130.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="86" cy="126" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="126" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="126" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="126" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="152.0" y="130.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="174" cy="126" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="126" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="148" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="148" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="42.0" y="152.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="64" cy="148" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="148" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="148" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="148" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="148" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="148" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="174.0" y="152.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="196" cy="148" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="170" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="20.0" y="174.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="42" cy="170" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="170" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="170" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="170" r="8.8" fill="#d32f2f" stroke="#d32f2f" stroke-width="1.2"/><circle cx="130" cy="170" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="170" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="170" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="170" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="196.0" y="174.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="20" cy="192" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="192" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="42.0" y="196.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="64" cy="192" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="192" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="192" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="192" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="192" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="192" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="174.0" y="196.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="196" cy="192" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="214" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="214" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="214" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="64.0" y="218.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="86" cy="214" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="214" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="214" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="214" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="152.0" y="218.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="174" cy="214" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="214" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="236" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="236" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="236" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="236" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="86.0" y="240.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="108" cy="236" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="236" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="130.0" y="240.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="152" cy="236" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="236" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="236" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="258" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="20.0" y="262.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="42" cy="258" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="258" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="258" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="258" r="8.8" fill="#90caf9" stroke="#1565c0" stroke-width="1.2"/><text x="108.0" y="262.5" font-size="12" fill="#222" text-anchor="middle">4</text><circle cx="130" cy="258" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="258" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="258" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="258" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="196.0" y="262.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="20" cy="280" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="280" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="42.0" y="284.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="64" cy="280" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="280" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="280" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="280" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="280" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="280" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="174.0" y="284.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="196" cy="280" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="302" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="302" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="302" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="64.0" y="306.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="86" cy="302" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="108" cy="302" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="302" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="152" cy="302" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="152.0" y="306.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="174" cy="302" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="302" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="20" cy="324" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="42" cy="324" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="64" cy="324" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="86" cy="324" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="86.0" y="328.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="108" cy="324" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="130" cy="324" r="8.8" fill="#ffcc80" stroke="#e65100" stroke-width="1.2"/><text x="130.0" y="328.5" font-size="12" fill="#222" text-anchor="middle">8</text><circle cx="152" cy="324" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="174" cy="324" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="196" cy="324" r="8.8" fill="#eeeeee" stroke="#bbbbbb" stroke-width="1.2"/><circle cx="225" cy="40" r="7" fill="#d32f2f"/><text x="237.0" y="44.0" font-size="12" fill="#222" text-anchor="start">歩数0 → 1個</text><circle cx="225" cy="66" r="7" fill="#90caf9" stroke="#1565c0"/><text x="237.0" y="70.0" font-size="12" fill="#222" text-anchor="start">歩数4 → 16個</text><circle cx="225" cy="92" r="7" fill="#ffcc80" stroke="#e65100"/><text x="237.0" y="96.0" font-size="12" fill="#222" text-anchor="start">歩数8 → 16個</text><text x="218.0" y="126.0" font-size="11" fill="#222" text-anchor="start">いちばん遠いかどは</text><text x="218.0" y="142.0" font-size="11" fill="#222" text-anchor="start">4＋7＝11歩</text><text x="218.0" y="158.0" font-size="11" fill="#222" text-anchor="start">→ 歩数12・16・20はない</text></svg></li>
+    <li>歩数0は◎の1個。歩数4は、ひし形がはみ出さずに全部入るので16個。</li>
+    <li>歩数8は、横の歩数が1〜4（縦は7〜4）のものだけ。右上・右下・左上・左下に4個ずつで16個。</li>
+    <li>合わせて 1＋16＋16＝<b>33個</b>。</li>
+  </ol>
+  <div class="ans">答え：33個</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ</h2>
+  <ul>
+    <li>仕事算は、最初に<b>全体の量（150L）</b>を数で出す。途中で変わる問題は「入れた水−たまった水＝出た水」。</li>
+    <li>立方体・直方体のかどを1つおきに結んだ四面体は「箱−かど4つ」。正八面体は面のまん中を結んだ形で、四角すい2つ。</li>
+    <li>となりへ伝わる電球は、◎からの<b>歩数＝光り始める秒</b>を書いてから、4秒のくり返しで色を決める。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="6"><h1 class="dtitle">大問6（0と1の三角形・1だけの段と2倍のくり返し）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">6</span> この回の全体像（大問6） <span class="type">18点（5点＋考え方6点・答え2点＋5点）</span></h2>
+  <table><tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+  <tr><td>(1)</td><td>1と0の個数から段を出す</td><td>5点</td><td>1段目は1個、2段目は2個…「数の個数＝段の番号」</td></tr>
+  <tr><td>(2)</td><td>32段目の1の個数（考え方も書く）</td><td>考え方6点＋答え2点</td><td>1だけが並ぶ段が「1, 2, 4, 8」と2倍ずつ</td></tr>
+  <tr><td>(3)</td><td>23段目までで1がいちばん多い段</td><td>5点</td><td>17段目から先は「1〜16段目が左右に2つ」</td></tr></table>
+  <p>どの小問も、まず<b>9段目まで書かれた三角形をじっくり見る</b>ところから始まる。(2)の答えは考え方の配点が大きいので、見つけたきまりを文で書く。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)</span> 1が512個・0が511個の段 <span class="type">5点｜数列（段と個数）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1が512個</b>」「<b>0が511個</b>」。2つをたして、その段に並ぶ数の個数に直して書く → 個数がそのまま段の番号になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>図を見ると、1段目は1個、2段目は2個、3段目は3個の数が並んでいる。9段目も9個。どの段も、並ぶ数の個数は段の番号と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1と0の個数をたす。<pre class="fig">512＋511＝1023（個）</pre></li>
+    <li>1023個並ぶのは、<b>1023段目</b>。</li>
+    <li>落としやすい所は、1だけ・0だけで考えてしまうこと。聞かれているのは「両方そろった段」なので、合わせた個数で決める。</li>
+  </ol>
+  <div class="ans">答え：1023段目</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)考え方・答え</span> 32段目に並ぶ1の個数 <span class="type">考え方6点＋答え2点｜数列（きまりを見つける）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>32段目</b>」と「考え方も含めて」。9段目までの図で、<b>1だけが並ぶ段</b>（1・2・4・8段目）に丸をつける → 2倍ずつ出てくると分かり、32段目もその仲間と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>並べ方のきまり。両はしはいつも1。それ以外は、すぐ上の左と右の2つを見る。同じ数（1と1、0と0）なら0。ちがう数（1と0）なら1。</li>
+    <li>たとえば4段目「1 1 1 1」の下は、真ん中がどれも「1と1」なので0。5段目は「1 0 0 0 1」になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図から、1だけが並ぶ段を書き出す。
+      <table><tr><th>1だけが並ぶ段</th><td>1段目</td><td>2段目</td><td>4段目</td><td>8段目</td></tr>
+      <tr><th>1の個数</th><td>1個</td><td>2個</td><td>4個</td><td>8個</td></tr></table></li>
+    <li>段の番号が、1→2→4→8と<b>2倍ずつ</b>ふえている。このあとも 8×2＝16段目、16×2＝32段目と続く。</li>
+    <li>なぜ続くのか。8段目が全部1だと、9段目は両はしの1以外が0になる。そこから9〜16段目は、1〜8段目と同じ形が左右に2つ並ぶ。だから16段目は8段目が2つで、全部1になる。32段目も同じ。</li>
+    <li>32段目は全部1。並ぶ数の個数は段の番号と同じなので、1は<b>32個</b>。</li>
+    <li>落としやすい所は、考え方を答えだけで終えること。「1だけの段が1, 2, 4, 8段目と2倍ずつ現れる。だから32段目も1だけ」と書く。</li>
+  </ol>
+  <div class="model">考え方（解答一覧は「解説を参照」）：両はしは1、上の2つが同じなら0、ちがえば1になる。1だけが並ぶ段は1段目、2段目、4段目、8段目と2倍ずつ現れるので、16段目、32段目も1だけが並ぶ。32段目には数が32個並ぶので、1は32個。</div>
+  <div class="ans">答え：32個</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (3)</span> 23段目までで1がいちばん多い段 <span class="type">5点｜数列（同じ形のくり返し）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>23段目まで</b>」と「<b>1が1番多く</b>」。(2)の16段目（1が16個）を図に置き、17〜23段目は1〜7段目が左右に2つの形に直して書く → 16個をこえる段があるかで決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>全部1の段（4段目、8段目、16段目）のすぐ下からは、それまでの三角形と同じ形が左右に2つ並び、間は0で埋まる。たとえば5〜8段目は、1〜4段目が左右に2つ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>16段目までを図にする。●が1、○が0。9〜16段目は、1〜8段目（青い枠）が左右に2つ並んだ形。
+      <svg viewBox="0 0 400 345" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" id="q6_3_tri">
+        <polygon points="220.0,5.0 302.0,158.0 138.0,158.0" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <polygon points="140.0,157.0 222.0,310.0 58.0,310.0" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <polygon points="300.0,157.0 382.0,310.0 218.0,310.0" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <rect x="59.0" y="292.0" width="322.0" height="18" rx="4" fill="none" stroke="#d32f2f" stroke-width="2"/>
+        <circle cx="220.0" cy="16.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="210.0" cy="35.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="230.0" cy="35.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="200.0" cy="54.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="220.0" cy="54.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="240.0" cy="54.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="190.0" cy="73.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="210.0" cy="73.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="230.0" cy="73.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="250.0" cy="73.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="180.0" cy="92.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="200.0" cy="92.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="220.0" cy="92.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="240.0" cy="92.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="260.0" cy="92.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="170.0" cy="111.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="190.0" cy="111.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="210.0" cy="111.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="230.0" cy="111.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="250.0" cy="111.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="270.0" cy="111.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="160.0" cy="130.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="180.0" cy="130.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="200.0" cy="130.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="220.0" cy="130.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="240.0" cy="130.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="260.0" cy="130.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="280.0" cy="130.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="150.0" cy="149.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="170.0" cy="149.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="190.0" cy="149.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="210.0" cy="149.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="230.0" cy="149.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="250.0" cy="149.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="270.0" cy="149.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="290.0" cy="149.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="140.0" cy="168.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="160.0" cy="168.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="180.0" cy="168.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="200.0" cy="168.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="220.0" cy="168.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="240.0" cy="168.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="260.0" cy="168.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="280.0" cy="168.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="300.0" cy="168.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="130.0" cy="187.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="150.0" cy="187.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="170.0" cy="187.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="190.0" cy="187.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="210.0" cy="187.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="230.0" cy="187.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="250.0" cy="187.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="270.0" cy="187.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="290.0" cy="187.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="310.0" cy="187.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="120.0" cy="206.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="140.0" cy="206.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="160.0" cy="206.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="180.0" cy="206.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="200.0" cy="206.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="220.0" cy="206.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="240.0" cy="206.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="260.0" cy="206.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="280.0" cy="206.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="300.0" cy="206.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="320.0" cy="206.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="110.0" cy="225.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="130.0" cy="225.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="150.0" cy="225.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="170.0" cy="225.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="190.0" cy="225.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="210.0" cy="225.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="230.0" cy="225.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="250.0" cy="225.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="270.0" cy="225.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="290.0" cy="225.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="310.0" cy="225.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="330.0" cy="225.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="100.0" cy="244.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="120.0" cy="244.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="140.0" cy="244.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="160.0" cy="244.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="180.0" cy="244.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="200.0" cy="244.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="220.0" cy="244.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="240.0" cy="244.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="260.0" cy="244.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="280.0" cy="244.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="300.0" cy="244.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="320.0" cy="244.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="340.0" cy="244.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="90.0" cy="263.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="110.0" cy="263.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="130.0" cy="263.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="150.0" cy="263.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="170.0" cy="263.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="190.0" cy="263.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="210.0" cy="263.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="230.0" cy="263.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="250.0" cy="263.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="270.0" cy="263.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="290.0" cy="263.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="310.0" cy="263.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="330.0" cy="263.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="350.0" cy="263.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="80.0" cy="282.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="100.0" cy="282.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="120.0" cy="282.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="140.0" cy="282.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="160.0" cy="282.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="180.0" cy="282.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="200.0" cy="282.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="220.0" cy="282.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="240.0" cy="282.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="260.0" cy="282.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="280.0" cy="282.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="300.0" cy="282.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="320.0" cy="282.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="340.0" cy="282.0" r="6" fill="#fff" stroke="#222" stroke-width="1"/>
+        <circle cx="360.0" cy="282.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="70.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="90.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="110.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="130.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="150.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="170.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="190.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="210.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="230.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="250.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="270.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="290.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="310.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="330.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="350.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <circle cx="370.0" cy="301.0" r="6" fill="#222" stroke="#222" stroke-width="1"/>
+        <text x="4" y="20.0" font-size="13" fill="#222">1段目</text>
+        <text x="4" y="77.0" font-size="13" fill="#222">4段目</text>
+        <text x="4" y="153.0" font-size="13" fill="#222">8段目</text>
+        <text x="4" y="305.0" font-size="13" fill="#d32f2f">16段目</text>
+        <text x="220" y="329.0" font-size="13" fill="#d32f2f" text-anchor="middle">16段目は全部1（1が16個）</text>
+      </svg></li>
+    <li>16段目までで1がいちばん多いのは、全部1の<b>16段目（16個）</b>。ほかの段は、8段目より上なら8個以下。9〜15段目も「1〜7段目が2つ」なので、多くても4×2＝8個。</li>
+    <li>17〜23段目は、1〜7段目が左右に2つ並んだ形。1の個数は、1〜7段目の個数の2倍になる。
+      <table><tr><th>段</th><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td></tr>
+      <tr><th>もとの段</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+      <tr><th>1の個数</th><td>1×2＝2</td><td>2×2＝4</td><td>2×2＝4</td><td>4×2＝8</td><td>2×2＝4</td><td>4×2＝8</td><td>4×2＝8</td></tr></table>
+      どれも16個に届かない。</li>
+    <li>23段目まででいちばん多いのは、16段目。落としやすい所は、いちばん下の23段目がいちばん多いと思いこむこと。数が多い段でも、間に0がたくさん入る。</li>
+  </ol>
+  <div class="ans">答え：16段目</div>
+</section>
+</div>

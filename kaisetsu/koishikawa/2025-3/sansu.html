@@ -1,0 +1,678 @@
+<!-- generated kakomon koishikawa/2025-3/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1">大問1（小問集合5題・逆算／円周率のくふう／分数の積／最大公約数／数の並び）</a></li>
+<li><a href="#2-3">大問2・3（速さ・平行移動・回転体・日直・金額の割り振り／長方形と45°）</a></li>
+<li><a href="#4">大問4（3つの2けたの数・和と差の6個から元の数をもどす）</a></li>
+<li><a href="#5-6">大問5・6（帯の周期・下のけたが同じになる数）</a></li></ul></nav>
+<div class="daimon" id="1"><h1 class="dtitle">大問1（小問集合5題・逆算／円周率のくふう／分数の積／最大公約数／数の並び）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1</span> この回の全体像（大問1） <span class="type">20点（4点×5）</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)</td><td>□を求める逆算</td><td>4</td><td>□がかっこの中・小数と帯分数がまざる</td></tr>
+    <tr><td>1 (2)</td><td>計算のくふう（3.1415）</td><td>4</td><td>3.1415 の2倍・3倍・4倍・半分が並ぶ</td></tr>
+    <tr><td>1 (3)</td><td>分数のかけ算の消し合い</td><td>4</td><td>「1−1/n」と「1＋1/n」が2025まで続く</td></tr>
+    <tr><td>1 (4)</td><td>最大公約数</td><td>4</td><td>「できるだけ多くの袋」「どの袋にも等しく」</td></tr>
+    <tr><td>1 (5)</td><td>数の並びのきまり</td><td>4</td><td>差が 2, 6, 18, 54 と3倍ずつ</td></tr>
+  </table>
+  <p>5問とも4点。どれも<b>くふうの合図</b>を見つけてから手を動かすと、筆算が短くなる。(5)は11番目まで書き出しても間に合うが、<b>3の何乗＋2</b>の形に気づくと速い。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 4.71−(4 3/7−□)÷2 4/7＝3.21 <span class="type">4点｜□を求める逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>4.71−</b>」と「<b>＝3.21</b>」。□をふくむかっこ全体を1つのかたまりと見て、外側から順にもどす → まず<b>かっこ÷2 4/7 が 1.5</b>と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>A−B＝C なら、B＝A−C。たとえば 10−□＝3 なら、□＝10−3＝7。</li>
+    <li>B÷D＝E なら、B＝E×D。わり算はかけ算でもどす。</li>
+    <li>小数と分数がまざったら、分数にそろえる。1.5＝3/2。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>外側からもどす。かっこ÷2 4/7 の部分は、4.71−3.21＝1.5。</li>
+    <li>かっこの中は、1.5×2 4/7。分数にすると 3/2×18/7＝27/7（＝3 6/7）。</li>
+    <li>4 3/7−□＝27/7。4 3/7＝31/7 なので、□＝31/7−27/7＝<b>4/7</b>。</li>
+    <li>たしかめ。4 3/7−4/7＝3 6/7。3 6/7÷2 4/7＝27/7×7/18＝1.5。4.71−1.5＝3.21 で合う。</li>
+    <li>落としやすい所。2 4/7 を仮分数にするとき、2×7＋4＝18 をまちがえやすい。</li>
+  </ol>
+  <div class="ans">答え：4/7</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> 3.1415＋9.4245÷2−1.57075＋12.566×3 <span class="type">4点｜計算のくふう（同じ数でまとめる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>9.4245</b>」「<b>1.57075</b>」「<b>12.566</b>」。それぞれ 3.1415×□ に直して書く → 3倍・半分・4倍と分かり、<b>3.1415×14</b> の1回の筆算で出せる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数をかけているものは、まとめられる。5×2＋5×3＝5×(2＋3)＝5×5。</li>
+    <li>3.1415 は円周率に近い数。この数の倍数が並ぶ問題はよく出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>どの数も 3.1415 の何倍かを書き出す。
+      <table>
+        <tr><th>式の中の数</th><th>3.1415 の何倍か</th></tr>
+        <tr><td>3.1415</td><td>1倍</td></tr>
+        <tr><td>9.4245÷2</td><td>9.4245＝3.1415×3。それを÷2 で 1.5倍</td></tr>
+        <tr><td>1.57075</td><td>3.1415÷2 で 0.5倍（ひく）</td></tr>
+        <tr><td>12.566×3</td><td>12.566＝3.1415×4。それを×3 で 12倍</td></tr>
+      </table>
+    </li>
+    <li>倍の数をまとめる。1＋1.5−0.5＋12＝<b>14</b>。</li>
+    <li>3.1415×14＝43.981。</li>
+    <li>たしかめ。そのまま計算すると 3.1415＋4.71225−1.57075＋37.698＝43.981 で同じ。</li>
+    <li>落としやすい所。−1.57075 の分を、ひくのを忘れてたしてしまう。</li>
+  </ol>
+  <div class="ans">答え：43.981</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> (1−1/2)×(1＋1/2)×…×(1＋1/2025) <span class="type">4点｜分数のかけ算（消し合い）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1−1/2</b>」「<b>1＋1/2</b>」の形。かっこを 1/2、3/2、2/3、4/3 … と分数に直して書く → となりどうしで分子と分母が<b>消し合い、はしだけ残る</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1−1/3＝2/3、1＋1/3＝4/3。分母はそのままで、分子が1小さいか1大きいかになる。</li>
+    <li>2/3×3/4＝2/4。前の分母と次の分子が同じなら、約分で消える。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「1−」の組と「1＋」の組に分けて、分数に直す。かけ算は順番を入れかえてよい。
+      <table>
+        <tr><th>組</th><th>分数に直す</th><th>消し合ったあと</th></tr>
+        <tr><td>1−1/○</td><td>1/2×2/3×3/4×…×2024/2025</td><td>1/2025</td></tr>
+        <tr><td>1＋1/○</td><td>3/2×4/3×5/4×…×2026/2025</td><td>2026/2</td></tr>
+      </table>
+    </li>
+    <li>「1−」の組は、最初の分子1と最後の分母2025だけが残る。</li>
+    <li>「1＋」の組は、最初の分母2と最後の分子2026だけが残る。2026/2＝1013。</li>
+    <li>2つをかける。1/2025×1013＝<b>1013/2025</b>。</li>
+    <li>たしかめ。2までなら 1/2×3/2＝3/4。はしの式でも 1/2×3/2 で同じになる。</li>
+  </ol>
+  <div class="ans">答え：1013/2025</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 赤球714個・白球255個・青球408個を袋に分ける <span class="type">4点｜最大公約数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>できるだけ多くの袋</b>」と「<b>どの袋にも等しく</b>」。袋の数＝714・255・408 の<b>最大公約数</b>と直して書く → 連除法で袋の数を出し、1袋の中身をたす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>12個と18個を、あまりなく同じ数ずつ分けるなら、袋の数は12と18の公約数。いちばん多いのは最大公約数の6袋。</li>
+    <li>連除法で、3つの数を同時にわれる数でわっていく。かけ合わせたものが最大公約数。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>連除法を書く。3つとも3でわれて、そのあと17でわれる。
+<pre class="fig"> 3 ) 714  255  408
+17 ) 238   85  136
+      14    5    8</pre></li>
+    <li>最大公約数は 3×17＝51。袋は51袋。</li>
+    <li>1袋に入るのは、連除法のいちばん下の数。赤14個、白5個、青8個。</li>
+    <li>あわせて 14＋5＋8＝<b>27個</b>。</li>
+    <li>たしかめ。球は全部で 714＋255＋408＝1377個。1377÷51＝27 で同じ。</li>
+  </ol>
+  <div class="ans">答え：27</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 3, 5, 11, 29, 83, … の11番目 <span class="type">4点｜数の並び（差が3倍ずつ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3, 5, 11, 29, 83</b>」と「<b>11番目</b>」。となりとの差を書く → 2, 6, 18, 54 と3倍ずつ。さらに各数から2をひくと<b>1, 3, 9, 27, 81</b>になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>きまりが見えないときは、となりとの差を書く。差がかけ算でふえていたら、もとの数も「○の何回かけ算＋いくつ」の形になりやすい。</li>
+    <li>3を1回もかけないものを1とすると、1, 3, 9, 27, 81, 243 … と3倍ずつふえる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表にして、2をひいた数を書く。
+      <table>
+        <tr><th>番目</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+        <tr><th>数</th><td>3</td><td>5</td><td>11</td><td>29</td><td>83</td></tr>
+        <tr><th>2をひく</th><td>1</td><td>3</td><td>9</td><td>27</td><td>81</td></tr>
+      </table>
+    </li>
+    <li>2をひいた数は、□番目なら 3 を (□−1) 回かけた数。11番目は3を10回かけた数。</li>
+    <li>3を10回かけると、81×81×9＝<b>59049</b>。</li>
+    <li>2をたしもどす。59049＋2＝59051。</li>
+    <li>たしかめ。6番目は 243＋2＝245。83＋162（54の3倍）＝245 で、差のきまりとも合う。</li>
+  </ol>
+  <div class="ans">答え：59051</div>
+  <div class="tip">コツ：差のきまりだけで11番目まで書き出しても出せる。そのときは差を 2, 6, 18, 54, 162, 486, 1458, 4374, 13122, 39366 と10個たす。数が大きくなるので、たし算のまちがいに気をつける。</div>
+</section>
+</div>
+<div class="daimon" id="2-3"><h1 class="dtitle">大問2・3（速さ・平行移動・回転体・日直・金額の割り振り／長方形と45°）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">2〜3</span> この回の全体像（大問2・3） <span class="type">32点（4点×8）</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>2 (1)</td><td>走ってから歩く（時間の差15分）</td><td>4</td><td>15分ぶん歩いた道のりを先にひく</td></tr>
+    <tr><td>2 (2)</td><td>平行移動した直角三角形</td><td>4</td><td>三角形CGHは三角形CABの縮図</td></tr>
+    <tr><td>2 (3)</td><td>軸の両側にある図形の回転体</td><td>4</td><td>左側を軸の右へ折り返して重ねる</td></tr>
+    <tr><td>2 (4)</td><td>日直の3度目（夏休みあり）</td><td>4</td><td>3番・28番・53番の当番日をさがす</td></tr>
+    <tr><td>2 (5)①②</td><td>数字を割り振った金額</td><td>4+4</td><td>6と77から、5000円の2つの数字を決める</td></tr>
+    <tr><td>3 (1)(2)</td><td>長方形の中の45°</td><td>4+4</td><td>Cから辺EDに垂直な線を引く</td></tr>
+  </table>
+  <p>8問とも4点。第3回は声の教育社の解説が省略されているので、この解説は問題から解いたもの。どの問も<b>図や表に数を書きこむ</b>と、次にやることが見える。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 走ったあと歩く（歩きが15分長い） <span class="type">4点｜速さ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>15分長く</b>」と2つの速さ。歩いた時間から15分を切りはなして書く（直して書く）→ 残りは走る時間と歩く時間が<b>同じ</b>になり、速さの和でわれば走った時間が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ時間だけ走って歩くと、1時間で進むのは 7.6＋4.8＝12.4km。2人が向かい合って進むときの「速さの和」と同じ考え方。</li>
+    <li>15分は 1/4 時間。時速4.8kmで15分歩くと、4.8÷4＝1.2km。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>時間の線分図を書く。歩く時間は、走る時間より15分長い。
+<pre class="fig">走る  ├────□────┤
+歩く  ├────□────┤15分┤</pre></li>
+    <li>歩きのおまけの15分で進んだ道のりは 4.8÷4＝<b>1.2km</b>。10.5−1.2＝9.3km。</li>
+    <li>残りの9.3kmは、同じ時間□だけ走って歩いた道のり。9.3÷12.4＝0.75時間＝45分。これが走った時間。</li>
+    <li>歩いた時間は 45＋15＝60分。全体は 45＋60＝105分＝1時間45分。</li>
+    <li>たしかめ。7.6×3/4＝5.7km。4.8×1＝4.8km。たすと10.5km で合う。落としやすい所は、答えが「全体」の時間であること。45分で止めない。</li>
+  </ol>
+  <div class="ans">答え：1時間45分</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 平行移動した直角三角形 <span class="type">4点｜相似と面積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>平行移動</b>」と「<b>三角形CGHの面積が6cm²</b>」。平行移動だからDEとABは平行 → 三角形CGHは三角形CABの<b>縮図</b>。面積が1/9なので、辺は1/3になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>平行移動では、もとの辺と動かした辺が平行になる。だからDEとABは平行。</li>
+    <li>縮図の面積は、辺の比を2回かけた比になる。辺が1/3なら、面積は 1/3×1/3＝1/9。</li>
+    <li>平行四辺形の面積は、底辺×高さ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>三角形ABCの面積は 12×9÷2＝54cm²。三角形CGHは6cm²で、54の1/9。辺は1/3になる。CH＝9×1/3＝3cm。だから <b>HB＝6cm</b>。</li>
+    <li>求める2つの三角形は、平行四辺形ABEDから四角形ABHGをとった残り。図に書いて確かめる。
+<svg viewBox="0 0 360 210" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <line x1="5" y1="22.5" x2="350" y2="22.5" stroke="#222" stroke-width="1.2"/>
+  <line x1="5" y1="186.5" x2="350" y2="186.5" stroke="#222" stroke-width="1.2"/>
+  <polygon points="26.5,22.5 130,22.5 167.2,86.8" fill="#ffe0b2" stroke="none"/>
+  <polygon points="121,186.5 198.7,141.5 224,186.5" fill="#ffe0b2" stroke="none"/>
+  <polygon points="26.5,22.5 167.2,86.8 198.7,141.5 121,186.5" fill="#dbe9ff" stroke="none"/>
+  <polygon points="167.2,86.8 237.5,119 198.7,141.5" fill="#f8c8c8" stroke="none"/>
+  <polygon points="26.5,22.5 121,186.5 237.5,119" fill="none" stroke="#222" stroke-width="1.5"/>
+  <polygon points="130,22.5 224,186.5 341.5,119" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="121" y1="186.5" x2="198.7" y2="141.5" stroke="#d32f2f" stroke-width="3"/>
+  <text x="20" y="16" font-size="13" fill="#222">A</text>
+  <text x="125" y="16" font-size="13" fill="#222">D</text>
+  <text x="114" y="203" font-size="13" fill="#222">B</text>
+  <text x="219" y="203" font-size="13" fill="#222">E</text>
+  <text x="242" y="122" font-size="13" fill="#222">C</text>
+  <text x="346" y="122" font-size="13" fill="#222">F</text>
+  <text x="150" y="99" font-size="13" fill="#222">G</text>
+  <text x="203" y="150" font-size="13" fill="#222">H</text>
+  <text x="352" y="18" font-size="12" font-style="italic" fill="#222">l</text>
+  <text x="350" y="182" font-size="12" font-style="italic" fill="#222">m</text>
+  <text x="52" y="110" font-size="12" fill="#222">12</text>
+  <text x="140" y="155" font-size="12" fill="#d32f2f">6</text>
+  <text x="214" y="125" font-size="11" fill="#222">3</text>
+  <text x="62" y="36" font-size="11" fill="#222">ADG</text>
+  <text x="185" y="180" font-size="11" fill="#222">BHE</text>
+  <text x="100" y="120" font-size="11" fill="#1565c0">ABHG</text>
+</svg></li>
+    <li>平行四辺形ABEDの底辺はAB＝12cm。高さはABとDEのあいだの長さ。HBはABに垂直なので、高さは<b>HB＝6cm</b>。面積は 12×6＝72cm²。</li>
+    <li>四角形ABHGは、三角形ABCから三角形CGHをとった形。54−6＝48cm²。</li>
+    <li>求める面積の和は 72−48＝24cm²。</li>
+  </ol>
+  <div class="ans">答え：24cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 軸の両側にある図形を回転 <span class="type">4点｜回転体</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>lを軸として回転</b>」と、図形が軸の<b>左右両方</b>にあること。左側を軸の右へ折り返して図に置く → 外側にはみ出した線だけが立体の形を決める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>軸の左右にまたがる図形を回すと、左側と右側の立体が重なる。重なった所は1回だけ数える。だから左側を右へ折り返し、外側の線だけを使う。</li>
+    <li>円すいの体積は、底面積×高さ×1/3。円周率は3で計算する。</li>
+    <li>底面が同じ円すいを2つ上下にくっつけた立体は、高さをたして1つの円すいと同じ式で出せる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>左側の辺BAを軸の右へ折り返す。B'は軸から3cm、A'は軸から1cm。CDと交わる点をPとする。
+<svg viewBox="0 0 400 190" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="100,40 370,40 130,160 40,160" fill="#e6e6e6" stroke="#222" stroke-width="1.2"/>
+  <polygon points="130,160 220,160 202,124" fill="#ffe0b2" stroke="none"/>
+  <line x1="130" y1="10" x2="130" y2="180" stroke="#222" stroke-width="1.2"/>
+  <line x1="220" y1="160" x2="160" y2="40" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <polyline points="130,160 220,160 202,124 370,40 130,40" fill="none" stroke="#d32f2f" stroke-width="2.5"/>
+  <line x1="202" y1="124" x2="202" y2="160" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="202" cy="124" r="3" fill="#d32f2f"/>
+  <text x="94" y="33" font-size="13" fill="#222">A</text>
+  <text x="372" y="35" font-size="13" fill="#222">D</text>
+  <text x="32" y="176" font-size="13" fill="#222">B</text>
+  <text x="112" y="178" font-size="13" fill="#222">C</text>
+  <text x="155" y="33" font-size="13" fill="#1565c0">A'</text>
+  <text x="222" y="176" font-size="13" fill="#1565c0">B'</text>
+  <text x="207" y="110" font-size="13" fill="#d32f2f">P</text>
+  <text x="136" y="18" font-size="12" font-style="italic" fill="#222">l</text>
+  <text x="181" y="151" font-size="10" fill="#1565c0">1.2</text>
+  <text x="240" y="54" font-size="12" fill="#222">8cm</text>
+  <text x="168" y="176" font-size="11" fill="#222">3cm</text>
+</svg>
+    赤い線が、立体の半分の切り口のふち。軸の右の大きな三角形と、Pより下でB'側にはみ出したオレンジの三角形CB'Pでできている。</li>
+    <li>Pの高さを出す。いちばん下では、CDは軸の上、B'A'は軸から3cm。すき間は3cm。1cm上がるごとに、CDは右へ2cm、B'A'は左へ0.5cm動く。すき間は1cmで 2.5cm へる。3÷2.5＝<b>1.2cm</b>。Pの軸からの長さは 2×1.2＝2.4cm。</li>
+    <li>大きな三角形を回すと、半径8cm・高さ4cmの円すい。8×8×3×4×1/3＝256cm³。</li>
+    <li>B'A'をのばすと、高さ6cmで軸にとどく（4cmで2cm寄るので、3cm寄るのは6cm）。半径3cm・高さ6cmの円すいは 3×3×3×6×1/3＝54cm³。</li>
+    <li>軸の上の点Cと、高さ6cmの点を、Pと結ぶ。この三角形を回すと、半径2.4cmの円すいが上下に2つできる。高さの合計は6cm。2.4×2.4×3×6×1/3＝34.56cm³。54cm³の円すいからこれをとると、オレンジの三角形を回した立体が残る。54−34.56＝19.44cm³。</li>
+    <li>合わせて 256＋19.44＝<b>275.44cm³</b>。分数にすると 275 11/25cm³。落としやすい所は、左側の立体をそのままたすこと。重なりを2回数えてしまう。</li>
+  </ol>
+  <div class="ans">答え：275 11/25cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (4)</span> 日直の3度目（夏休みは止まる） <span class="type">4点｜日暦算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>25人</b>」「<b>出席番号は3番</b>」「<b>8月1日から9月2日まで</b>」は停止。3度目は 3＋25＋25＝<b>53番目の当番日</b>と直して書く → 平日を数えて53日目をさがす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>25人で1周するので、3番の人は3日目、28日目、53日目に当番になる。</li>
+    <li>月をまたぐ曜日は「日数÷7のあまり」だけ進む。31日の月なら、次の月の1日は曜日が3つ進む。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>7月の平日を週ごとに数える。1日（火）〜4日が4日。そのあと5日ずつ3週で15日。28日（月）〜31日が4日。合計 <b>23日</b>。</li>
+    <li>8月1日は、7月1日の火曜から3つ進んで金曜。9月1日は、さらに3つ進んで月曜。だから再開する9月3日は水曜。</li>
+    <li>9月に入ってからの当番を表にする。
+<table>
+  <tr><th>何日目の当番</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th></tr>
+  <tr><th>日付</th><td>9/3（水）</td><td>9/4（木）</td><td>9/5（金）</td><td>9/8（月）</td><td><b>9/9（火）</b></td></tr>
+</table>
+    28日目の9月9日が2度目。</li>
+    <li>3度目の53日目は、そこから平日25日あと。平日25日はちょうど5週間＝35日。9月9日＋35日＝10月14日。曜日は同じ火曜日。</li>
+    <li>落としやすい所は、1度目が「3日目」であること。25日目や26日目から数えない。</li>
+  </ol>
+  <div class="ans">答え：10月14日火曜日</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (5)①②</span> 数字を割り振った金額 <span class="type">4点+4点｜条件の整理</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>6を宣言すると6000円</b>」「<b>77を宣言すると15000円</b>」。6＝2×3、77＝7×11 に直して書き、金額を<b>1000＋5000</b>、<b>5000＋10000</b>に分ける → 5000円の2つの数字が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2つの数字の金額をたした分がもらえる。6000円になる組み合わせは、3つの金額のうち 1000円＋5000円 だけ。</li>
+    <li>宣言した数をかけ算に分けると、使う数字が分かる。45＝5×9、21＝3×7。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>6000円＝1000円＋5000円。だから2と3は、1000円と5000円に1つずつ。</li>
+    <li>15000円＝5000円＋10000円。だから7と11は、5000円と10000円に1つずつ。</li>
+    <li>5000円には、2か3の1つと、7か11の1つが入る。これで5000円は満員。残りの5と9は、1000円と10000円に1つずつ入る。
+<table>
+  <tr><th>金額</th><th>1000円</th><th>5000円</th><th>10000円</th></tr>
+  <tr><th>入る数字</th><td>2か3 ／ 5か9</td><td>2か3 ／ 7か11</td><td>7か11 ／ 5か9</td></tr>
+</table></li>
+    <li>①45＝5×9。5と9は1000円と10000円に1つずつ。どちらがどちらでも <b>11000円</b>。</li>
+    <li>②21＝3×7。3は1000円か5000円。7は5000円か10000円。組み合わせを全部書く。
+<table>
+  <tr><th>3の金額</th><th>7の金額</th><th>もらえる金額</th></tr>
+  <tr><td>5000円</td><td>10000円</td><td>15000円</td></tr>
+  <tr><td>1000円</td><td>10000円</td><td><b>11000円</b></td></tr>
+  <tr><td>1000円</td><td>5000円</td><td>6000円</td></tr>
+  <tr><td>5000円</td><td>5000円</td><td>10000円まで</td></tr>
+</table>
+    3と7がどちらも5000円のときは、2つたしても10000円。11000円より低い。いちばん高いのは15000円。2番目は11000円。</li>
+    <li>落としやすい所は、②で「21を宣言したときの金額」を1つに決めようとすること。決まらないから「2番目に高い」と聞いている。</li>
+  </ol>
+  <div class="ans">答え：①11000円　②11000円</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)(2)</span> 長方形の中の45° <span class="type">4点+4点｜相似（3：4：5）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>角DECが45°</b>」と三角形AEDの「6cm・8cm・10cm」。Cから辺EDに<b>垂直な線</b>を引いて図に置く → 45°の直角二等辺三角形と、3：4：5の三角形に分かれる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>45°と直角がある三角形は直角二等辺三角形。直角をはさむ2辺の長さが同じになる。</li>
+    <li>ABとDCは平行。だから角AEDと角EDCは錯角で同じ大きさ。</li>
+    <li>角の大きさが同じ直角三角形は縮図の関係。三角形AEDは 6：8：10＝3：4：5。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Cから辺EDに垂直な線CGを引く。
+<svg viewBox="0 0 300 230" style="max-width:320px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <rect x="40" y="20" width="208" height="185.7" fill="none" stroke="#222" stroke-width="1.5"/>
+  <polygon points="40,176 158.9,86.9 248,205.7" fill="#dbe9ff" stroke="none"/>
+  <polygon points="158.9,86.9 248,20 248,205.7" fill="#ffe0b2" stroke="none"/>
+  <line x1="40" y1="176" x2="248" y2="20" stroke="#222" stroke-width="1.5"/>
+  <line x1="40" y1="176" x2="248" y2="205.7" stroke="#222" stroke-width="1.5"/>
+  <line x1="158.9" y1="86.9" x2="248" y2="205.7" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <polyline points="152.5,91.7 157.3,98.1 163.7,93.3" fill="none" stroke="#1565c0" stroke-width="1"/>
+  <text x="30" y="16" font-size="13" fill="#222">A</text>
+  <text x="252" y="16" font-size="13" fill="#222">D</text>
+  <text x="28" y="218" font-size="13" fill="#222">B</text>
+  <text x="252" y="220" font-size="13" fill="#222">C</text>
+  <text x="26" y="180" font-size="13" fill="#222">E</text>
+  <text x="146" y="80" font-size="13" fill="#1565c0">G</text>
+  <text x="60" y="171" font-size="11" fill="#222">45°</text>
+  <text x="138" y="14" font-size="11" fill="#222">8</text>
+  <text x="26" y="100" font-size="11" fill="#222">6</text>
+  <text x="90" y="125" font-size="12" fill="#d32f2f">④</text>
+  <text x="200" y="48" font-size="12" fill="#d32f2f">③</text>
+  <text x="210" y="140" font-size="12" fill="#d32f2f">④</text>
+</svg></li>
+    <li>三角形EGCは角Eが45°の直角三角形。だから <b>EG＝GC</b>。</li>
+    <li>三角形DGCの角Dは、角AEDと同じ（錯角）。だから三角形DGCは三角形EADの縮図で、DG：GC＝AE：AD＝3：4。</li>
+    <li>GCを④とおく。EGも④、DGは③。ED＝④＋③＝⑦＝10cm。①＝10/7cm。GC＝40/7cm。</li>
+    <li>(1)三角形CDEは、底辺ED＝10cm、高さGC＝40/7cm。10×40/7÷2＝200/7＝<b>28 4/7cm²</b>。</li>
+    <li>(2)三角形CDEを、底辺DC・高さADで見直す。高さADは長方形のたての長さと同じ。だから三角形CDEは長方形のちょうど半分。28 4/7×2＝<b>57 1/7cm²</b>。</li>
+    <li>たしかめ。DCは縮図の5にあたり、⑤＝50/7cm。8×50/7＝400/7＝57 1/7 で同じ。</li>
+  </ol>
+  <div class="ans">答え：(1)28 4/7cm²　(2)57 1/7cm²</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">2〜3</span> まとめ</h2>
+  <ul>
+    <li>「15分長い」「6000円」のような条件は、すぐ使える形（1.2kmをひく／1000＋5000）に直して書く。</li>
+    <li>図形は、平行の線から縮図を見つける。2 (2)はDEとAB、3はABとDCが平行。</li>
+    <li>45°を見たら、垂直な線を1本引いて直角二等辺三角形を作る。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="4"><h1 class="dtitle">大問4（3つの2けたの数・和と差の6個から元の数をもどす）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">4</span> この回の全体像（大問4） <span class="type">16点</span></h2>
+  <table><tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+  <tr><td>(1)あ・い・う</td><td>6個の数の合計と、A・Bが何個分か</td><td>2点×3</td><td>和3つ・差3つを全部たすと、Cが消える</td></tr>
+  <tr><td>(1)え・お・か</td><td>A＋Bを決めて、AとBを出す</td><td>2点×3</td><td>6個の中でいちばん大きい98＝A＋B</td></tr>
+  <tr><td>(2)</td><td>Cを出す</td><td>4点</td><td>2番目に大きい76＝A＋C</td></tr></table>
+  <p>問題文の手順どおりに空らんをうめれば、(2)まで一本道で進む。カギは<b>6個を全部たすとCが消えて「Aが4個、Bが2個」になる</b>こと。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)あ・い・う</span> 6個の数の合計は、Aが何個・Bが何個分か <span class="type">2点×3｜和と差（消去算）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3つの数から2つを選び、和と差</b>」。6個を「A＋B、A＋C、B＋C、A−B、A−C、B−C」と式に直して書く → 全部たすと<b>Cが消えて、AとBの個数</b>が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>大きい順にA、B、Cなので、差は「大きい方−小さい方」。A−B、A−C、B−C の3つになる。</li>
+    <li>たして0になる組は消える。たとえば「＋C」と「−C」が1つずつあれば、Cは無くなる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>6個の数をたす。
+<pre class="fig">98＋76＋50＋48＋28＋22＝322</pre>これが あ＝<b>322</b>。</li>
+    <li>6個の式で、A・B・Cがそれぞれ何個あるかを表にする。＋は1個ふえる、−は1個へる。
+<table><tr><th>6個の式</th><th>A</th><th>B</th><th>C</th></tr>
+<tr><td>A＋B</td><td>＋1</td><td>＋1</td><td></td></tr>
+<tr><td>A＋C</td><td>＋1</td><td></td><td>＋1</td></tr>
+<tr><td>B＋C</td><td></td><td>＋1</td><td>＋1</td></tr>
+<tr><td>A−B</td><td>＋1</td><td>−1</td><td></td></tr>
+<tr><td>A−C</td><td>＋1</td><td></td><td>−1</td></tr>
+<tr><td>B−C</td><td></td><td>＋1</td><td>−1</td></tr>
+<tr><td>合計</td><td><b>4個</b></td><td><b>2個</b></td><td>0個</td></tr></table></li>
+    <li>Cは＋2個と−2個で消える。だから合計の322は、Aが い＝4 個、Bが う＝2 個分。</li>
+    <li>落としやすい所は、差の向き。B−C を C−B と書くと、Bの個数がずれる。</li>
+  </ol>
+  <div class="ans">答え：あ 322　い 4　う 2</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)え・お・か</span> A＋Bを決めて、AとBを出す <span class="type">2点×3｜和と差（消去算）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>大きい順にA，B，C</b>」。いちばん大きい2つの和が6個の中で最大 → <b>A＋B＝98</b>と決まる。322から（A＋B）2組分をひけば、Aが2個分だけ残る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>差より和のほうが大きい。たとえば A＋C は A−C より、Cの2個分大きい。</li>
+    <li>和の中では、大きい2つをたした A＋B がいちばん大きい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>6個のうちいちばん大きい98が A＋B。え＝<b>98</b>。</li>
+    <li>「Aが4個、Bが2個」を「（A＋B）が2組と、Aが2個」に分けて線分図にする。
+<svg viewBox="0 0 360 130" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <text x="4" y="16" font-size="12" fill="#222">合計 322</text>
+  <rect id="q4_1_ab1" x="10" y="26" width="98" height="28" fill="#dbe9ff" stroke="#222"/>
+  <rect id="q4_1_ab2" x="108" y="26" width="98" height="28" fill="#dbe9ff" stroke="#222"/>
+  <rect id="q4_1_a1" x="206" y="26" width="72" height="28" fill="#ffe0b2" stroke="#222"/>
+  <rect id="q4_1_a2" x="278" y="26" width="72" height="28" fill="#ffe0b2" stroke="#222"/>
+  <text x="59" y="45" font-size="13" text-anchor="middle" fill="#222">A＋B</text>
+  <text x="157" y="45" font-size="13" text-anchor="middle" fill="#222">A＋B</text>
+  <text x="242" y="45" font-size="13" text-anchor="middle" fill="#222">A</text>
+  <text x="314" y="45" font-size="13" text-anchor="middle" fill="#222">A</text>
+  <path d="M10,62 L10,70 L206,70 L206,62" fill="none" stroke="#1565c0" stroke-dasharray="4,3"/>
+  <text x="108" y="88" font-size="12" text-anchor="middle" fill="#1565c0">98×2＝196</text>
+  <path d="M206,62 L206,70 L350,70 L350,62" fill="none" stroke="#d32f2f"/>
+  <text x="278" y="88" font-size="12" text-anchor="middle" fill="#d32f2f">322−196＝126</text>
+  <text x="278" y="112" font-size="13" text-anchor="middle" fill="#d32f2f" font-weight="bold">A＝126÷2＝63</text>
+</svg></li>
+    <li>Aの2個分が126。だから A＝126÷2＝<b>63</b>。これが お。</li>
+    <li>B＝98−63＝35。これが か。大きい順になっていて、どちらも2けたなので合う。</li>
+  </ol>
+  <div class="ans">答え：え 98　お 63　か 35</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> Cの数を出す <span class="type">4点｜和と差（確かめ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は(1)で出た「<b>A＝63、B＝35</b>」。A＋Bの次に大きいのはA＋C → 2番目の<b>76＝A＋C</b>と決まり、Cが出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>A＋C は、A＋B の次に大きい。B＋C より大きいのは A が B より大きいから。差の3つは、どれも A＋C より小さい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>98（A＋B）と28（A−B＝63−35）を消す。残りは 76、50、48、22。</li>
+    <li>残りでいちばん大きい76が A＋C。C＝76−63＝<b>13</b>。</li>
+    <li>確かめ。残りの3つの式に入れる。
+<pre class="fig">B＋C＝35＋13＝48
+A−C＝63−13＝50
+B−C＝35−13＝22</pre>48・50・22がそろう。合っている。</li>
+  </ol>
+  <div class="ans">答え：13</div>
+</section>
+</div>
+<div class="daimon" id="5-6"><h1 class="dtitle">大問5・6（帯の周期・下のけたが同じになる数）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">5〜6</span> この回の全体像（大問5・6） <span class="type">32点</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+  <tr><td>5</td><td>3本の帯が1秒に1コマ進む（周期）</td><td>(1)〜(3) 各4点（(1)は完答）／(4) 8点</td><td>「2秒後」の例で、何秒後が何番目のコマかを決める</td></tr>
+  <tr><td>6</td><td>2回かけても下のけたが変わらない数</td><td>各4点（(1)は①②それぞれ完答）</td><td>「下◯けた」→ 一の位から1けたずつ決める</td></tr></table>
+  <p>大問5は、帯ごとに<b>6・4・5コマで1周</b>する周期の問題。(2)(3)は条件に合う秒をならべて、間かくを見つける。大問6は(1)①→②→(2)と、前の答えを使って<b>下の位から順に</b>決めていく。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 100秒後の帯A・B・C <span class="type">4点（完答）｜周期（あまり）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は例の「<b>2秒後</b>」と「<b>最後までいったら最初に戻る</b>」。2秒後がAの△・Bの△・Cの○ → 「◯秒後＝◯番目のコマ」と直して書く。100をコマの数でわったあまりで決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ並びをくり返すときは、1周のコマ数でわったあまりを見る。Aは6コマで1周。8秒後は 8÷6＝1あまり2 で、2番目と同じ。</li>
+    <li>あまりが0のときは、1周の最後のコマ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>帯の下に、何秒後にそのコマが出るかを書く。2秒後は2番目になり、問題の例と合う。
+      <svg viewBox="0 0 360 275" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif">
+        <text x="10" y="18" font-size="12" fill="#222">コマの下に「何秒後に出るか」を書く</text>
+        <text x="10" y="52" font-size="15" fill="#222">A</text>
+        <g font-size="15" fill="#222" text-anchor="middle">
+          <rect x="30" y="32" width="216" height="30" fill="none" stroke="#222"/>
+          <rect x="66" y="32" width="36" height="30" fill="#ffe0b2" stroke="none"/>
+          <rect x="30" y="32" width="216" height="30" fill="none" stroke="#222"/>
+          <text x="48" y="53">○</text><text x="84" y="53">△</text><rect x="113" y="39" width="14" height="14" fill="none" stroke="#222" stroke-width="1.3"/><text x="156" y="53">×</text><text x="192" y="53">△</text><rect x="221" y="39" width="14" height="14" fill="none" stroke="#222" stroke-width="1.3"/>
+        </g>
+        <g font-size="11" fill="#1565c0" text-anchor="middle">
+          <text x="48" y="76">1</text><text x="84" y="76">2</text><text x="120" y="76">3</text><text x="156" y="76">4</text><text x="192" y="76">5</text><text x="228" y="76">6</text>
+          <text x="48" y="89">7</text><text x="84" y="89">8</text><text x="120" y="89">9</text><text x="156" y="89">10</text><text x="192" y="89">11</text><text x="228" y="89">12</text>
+        </g>
+        <text x="256" y="52" font-size="11" fill="#1565c0">6コマで1周</text>
+        <text x="10" y="132" font-size="15" fill="#222">B</text>
+        <g font-size="15" fill="#222" text-anchor="middle">
+          <rect x="66" y="112" width="36" height="30" fill="#ffe0b2" stroke="none"/>
+          <rect x="30" y="112" width="144" height="30" fill="none" stroke="#222"/>
+          <text x="48" y="133">○</text><text x="84" y="133">△</text><rect x="113" y="119" width="14" height="14" fill="none" stroke="#222" stroke-width="1.3"/><text x="156" y="133">×</text>
+        </g>
+        <g font-size="11" fill="#1565c0" text-anchor="middle">
+          <text x="48" y="156">1</text><text x="84" y="156">2</text><text x="120" y="156">3</text><text x="156" y="156">4</text>
+          <text x="48" y="169">5</text><text x="84" y="169">6</text><text x="120" y="169">7</text><text x="156" y="169">8</text>
+        </g>
+        <text x="184" y="132" font-size="11" fill="#1565c0">4コマで1周</text>
+        <text x="10" y="212" font-size="15" fill="#222">C</text>
+        <g font-size="15" fill="#222" text-anchor="middle">
+          <rect x="66" y="192" width="36" height="30" fill="#ffe0b2" stroke="none"/>
+          <rect x="30" y="192" width="180" height="30" fill="none" stroke="#222"/>
+          <text x="48" y="213">△</text><text x="84" y="213">○</text><rect x="113" y="199" width="14" height="14" fill="none" stroke="#222" stroke-width="1.3"/><rect x="149" y="199" width="14" height="14" fill="none" stroke="#222" stroke-width="1.3"/><text x="192" y="213">△</text>
+        </g>
+        <g font-size="11" fill="#1565c0" text-anchor="middle">
+          <text x="48" y="236">1</text><text x="84" y="236">2</text><text x="120" y="236">3</text><text x="156" y="236">4</text><text x="192" y="236">5</text>
+          <text x="48" y="249">6</text><text x="84" y="249">7</text><text x="120" y="249">8</text><text x="156" y="249">9</text><text x="192" y="249">10</text>
+        </g>
+        <text x="220" y="212" font-size="11" fill="#1565c0">5コマで1周</text>
+        <text x="10" y="269" font-size="12" fill="#d32f2f">2秒後＝2番目（A△・B△・C○）。問題の例と同じ</text>
+      </svg></li>
+    <li>1周のコマ数は、A＝6、B＝4、C＝5。</li>
+    <li>100をそれぞれでわる。
+      <table><tr><th>帯</th><th>わり算</th><th>何番目</th><th>出るもの</th></tr>
+      <tr><td>A</td><td>100÷6＝16あまり4</td><td>4番目</td><td><b>×</b></td></tr>
+      <tr><td>B</td><td>100÷4＝25あまり0</td><td>最後（4番目）</td><td><b>×</b></td></tr>
+      <tr><td>C</td><td>100÷5＝20あまり0</td><td>最後（5番目）</td><td><b>△</b></td></tr></table></li>
+    <li>落としやすい所は、あまり0を「1番目」としてしまうこと。わり切れたら、1周の最後のコマになる。</li>
+  </ol>
+  <div class="ans">答え：A×・B×・C△</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> Aが△・Bが○になる3回目 <span class="type">4点｜周期（共通の秒をさがす）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>A △ と B ○</b>」と「<b>3回目</b>」。Aの△が出る秒、Bの○が出る秒をそれぞれ書き出す → 両方にある最初の秒と、そのくり返しの間かくで決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Aは6秒、Bは4秒で同じ並びにもどる。両方がそろってもどるのは、6と4の最小公倍数の12秒ごと。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aの△は2番目と5番目。出る秒は 2, 5, 8, 11, 14, 17, … と3秒ごと。</li>
+    <li>Bの○は1番目。出る秒は 1, 5, 9, 13, 17, … と4秒ごと。
+      <table><tr><th>Aが△</th><td>2</td><td><b>5</b></td><td>8</td><td>11</td><td>14</td><td><b>17</b></td></tr>
+      <tr><th>Bが○</th><td>1</td><td><b>5</b></td><td>9</td><td>13</td><td><b>17</b></td><td></td></tr></table></li>
+    <li>両方にあるのは5秒後、17秒後。間は12秒で、6と4の最小公倍数と同じ。</li>
+    <li>3回目は 17＋12＝<b>29秒後</b>。</li>
+    <li>確かめ。29÷6＝4あまり5 → Aは5番目の△。29÷4＝7あまり1 → Bは1番目の○。合っている。</li>
+  </ol>
+  <div class="ans">答え：29秒後</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> A・B・Cが全部○になる2回目 <span class="type">4点｜周期（3つの周期をそろえる）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>A ○・B ○・C ○</b>」と「<b>2回目</b>」。先にAとBだけそろう秒を書き出し、その中からCも○の秒をさがす → 3本の周期6・4・5の最小公倍数60秒ごとにくり返す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3本とも同じ並びにもどるのは、6・4・5の最小公倍数の60秒ごと。</li>
+    <li>Cの○は2番目。5でわって2あまる秒に出る（2, 7, 12, 17, …）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aの○は1番目で、1, 7, 13, 19, 25, … と6秒ごと。Bの○も1番目で、1, 5, 9, 13, … と4秒ごと。</li>
+    <li>AとBがそろって○になるのは 1秒後から12秒ごと。1, 13, 25, 37, 49, …</li>
+    <li>この中から、5でわって2あまる数をさがす。
+      <table><tr><th>AとBが○</th><td>1</td><td>13</td><td>25</td><td><b>37</b></td></tr>
+      <tr><th>5でわったあまり</th><td>1</td><td>3</td><td>0</td><td><b>2</b></td></tr></table></li>
+    <li>1回目は37秒後。次は60秒後なので、2回目は 37＋60＝<b>97秒後</b>。</li>
+    <li>落としやすい所は、1回目の37秒後で答えてしまうこと。聞かれているのは「2回目」。</li>
+  </ol>
+  <div class="ans">答え：97秒後</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (4)</span> Aが○・Bが△にならないわけ <span class="type">8点｜周期（偶数・奇数で示す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>A ○ と B △</b>」と「<b>ならないことを示しなさい</b>」。Aの○の秒とBの△の秒を書き出し、偶数か奇数かに丸 → いつも片方が奇数、片方が偶数なので、同じ秒にならないと決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>奇数に偶数をたしても、奇数のまま。1に6をたし続けると 7, 13, 19 と奇数が続く。</li>
+    <li>ある秒は、偶数か奇数のどちらか一方。両方にはならない。</li>
+  </ul>
+  <h3 class="h-read">✍️ 答案の組み立て</h3>
+  <ol>
+    <li>Aの○は1番目。出るのは 1, 7, 13, 19, … 秒後。1から6ずつふえるので、いつも<b>奇数</b>秒後。</li>
+    <li>Bの△は2番目。出るのは 2, 6, 10, 14, … 秒後。2から4ずつふえるので、いつも<b>偶数</b>秒後。</li>
+    <li>奇数の秒と偶数の秒は同じにならない。だから、Aが○でBが△になる秒はない。</li>
+    <li>答案には「Aの○は奇数秒後」「Bの△は偶数秒後」「だから同じ秒にならない」の3つを書く。</li>
+  </ol>
+  <div class="model">模範解答：（例）帯Aの○が出てくるのは奇数秒後，帯Bの△が出てくるのは偶数秒後だから。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)①</span> B×Bの下1けたがBになるB <span class="type">4点（完答）｜数の性質（一の位）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>B×Bの下1けたがB</b>」と「<b>すべて</b>」。Bは0〜9の10個しかない → 全部かけて、一の位を表に書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「下1けた」は一の位のこと。たとえば 6×6＝36 の下1けたは6。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>0から9まで、2回かけた数と一の位をならべる。
+      <table><tr><th>B</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+      <tr><th>B×B</th><td>0</td><td>1</td><td>4</td><td>9</td><td>16</td><td>25</td><td>36</td><td>49</td><td>64</td><td>81</td></tr>
+      <tr><th>一の位がBと同じ</th><td><b>○</b></td><td><b>○</b></td><td></td><td></td><td></td><td><b>○</b></td><td><b>○</b></td><td></td><td></td><td></td></tr></table></li>
+    <li>当てはまるのは 0, 1, 5, 6 の4つ。</li>
+    <li>落としやすい所は、0と1を書き忘れること。「すべて」なので、1けたの数は0から全部調べる。</li>
+  </ol>
+  <div class="ans">答え：0・1・5・6</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)②</span> AB×ABの下2けたがABになる2けたの数 <span class="type">4点（完答）｜数の性質（十の位を決める）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>下2けたがAB</b>」と、①の答え。一の位Bは<b>0・1・5・6</b>にしぼれる（①を使う）→ Bごとに十の位を計算して、Aと同じになるかを見る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>かけ算の答えの一の位は、かける数どうしの一の位だけで決まる。だから AB×AB の一の位がBになるには、①のBでないとだめ。</li>
+    <li>十の位の数を変えても、一の位は変わらない。下の位から1けたずつ決められる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Bが0のとき。A0×A0 は下2けたが00になる。Aも0になり、2けたの数にならない。</li>
+    <li>Bが1のとき。21×21＝441、31×31＝961。下2けたの十の位は、Aを2倍した数の一の位になる。Aと同じになるのはA＝0だけで、2けたにならない。</li>
+    <li>Bが5のとき。15×15＝225、35×35＝1225。Aが何でも、下2けたは25。だからA＝2の<b>25</b>だけ。</li>
+    <li>Bが6のとき。十の位を表にする。
+      <table><tr><th>AB</th><td>16</td><td>26</td><td>36</td><td>46</td><td>56</td><td>66</td><td>76</td><td>86</td><td>96</td></tr>
+      <tr><th>AB×AB</th><td>256</td><td>676</td><td>1296</td><td>2116</td><td>3136</td><td>4356</td><td>5776</td><td>7396</td><td>9216</td></tr>
+      <tr><th>下2けた</th><td>56</td><td>76</td><td>96</td><td>16</td><td>36</td><td>56</td><td><b>76</b></td><td>96</td><td>16</td></tr></table>
+      下2けたがABと同じなのは<b>76</b>だけ。</li>
+    <li>確かめ。25×25＝625、76×76＝5776。どちらも下2けたがもとの数。</li>
+  </ol>
+  <div class="ans">答え：25・76</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)</span> ABCD×ABCDの下4けたがABCDになる4けたの数 <span class="type">4点｜数の性質（下の位から決める）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>下4けたがABCD</b>」と(1)②の答え。下2けたCDは<b>25か76</b>に決まる → 百の位、千の位の順に、1けたずつ足して調べる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2回かけた数の下2けたは、もとの数の下2けただけで決まる。だから下4けたがABCDなら、下2けたもCDのまま。CDは(1)②の25か76。</li>
+    <li>百の位の数Bを変えると、答えの百の位が変わる。下2けたは変わらない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>まず下3けたBCDを決める。B25 の形を調べる。125×125＝15625、325×325＝105625。Bが何でも下3けたは625。だから B＝6 の<b>625</b>。</li>
+    <li>B76 の形を調べる。百の位の数を表にする。
+      <table><tr><th>B76</th><td>176</td><td>276</td><td><b>376</b></td><td>476</td><td>576</td></tr>
+      <tr><th>2回かけた数</th><td>30976</td><td>76176</td><td><b>141376</b></td><td>226576</td><td>331776</td></tr>
+      <tr><th>下3けた</th><td>976</td><td>176</td><td><b>376</b></td><td>576</td><td>776</td></tr></table>
+      百の位は2ずつふえる。0〜9のうち、下3けたがもとの数と同じなのは<b>376</b>だけ。</li>
+    <li>次に千の位Aを決める。A625 の形は、1625×1625＝2640625 のように、Aが何でも下4けたが0625。A＝0 になり、4けたにならない。</li>
+    <li>A376 の形。千の位も2ずつふえる。1376×1376＝1893376 で千の位は3。9376 なら千の位は9になる。
+<pre class="fig">9376×9376＝87909376</pre>
+      下4けたがもとの数と同じになるのは <b>9376</b>。</li>
+    <li>落としやすい所は、0625 を答えに入れること。千の位Aが0だと4けたの数にならない。</li>
+  </ol>
+  <div class="ans">答え：9376</div>
+</section>
+</div>
