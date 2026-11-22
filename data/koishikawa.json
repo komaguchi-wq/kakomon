@@ -2594,7 +2594,8 @@
        "6(2)": "780m",
        "6(3)": "分速80m"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/koishikawa/2024-3/sansu.html"
     },
     {
      "id": "kokugo",
@@ -2768,7 +2769,8 @@
        "四 問8ウ": "○",
        "四 問8エ": "○"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/koishikawa/2024-3/kokugo.html"
     }
    ]
   },
@@ -3082,7 +3084,8 @@
        "四 問7": "エゴ",
        "四 問8": "ウ"
       }
-     }
+     },
+     "kaisetsu": "kaisetsu/koishikawa/2024-2/kokugo.html"
     }
    ]
   },

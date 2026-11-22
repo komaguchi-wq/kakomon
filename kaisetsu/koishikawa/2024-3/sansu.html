@@ -1,0 +1,584 @@
+<!-- generated kakomon koishikawa/2024-3/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（計算・数の性質・割合・平面図形・回転体・場合の数）</a></li>
+<li><a href="#3-4-5">大問3・4・5（4人の仕事算／かぎの形に並ぶ奇数の表／切りかえて使う印刷機の比）</a></li>
+<li><a href="#6">大問6（動く列の長さ1.2km・先頭と最後尾の行き来）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（計算・数の性質・割合・平面図形・回転体・場合の数）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">36点（大問1・2 各4点×9）</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+  <tr><td>1 (1)(2)</td><td>計算・逆算</td><td>4+4</td><td>「13÷25」「1.69÷3.25」は 0.52 と同じ数</td></tr>
+  <tr><td>1 (3)</td><td>四捨五入して8になる商</td><td>4</td><td>「小数第一位で四捨五入」→ 7.5以上8.5未満</td></tr>
+  <tr><td>1 (4)</td><td>約数が8個の整数</td><td>4</td><td>小さい数から約数を数える</td></tr>
+  <tr><td>1 (5)</td><td>残りの割合（本のページ）</td><td>4</td><td>4日目の「30ページ」から後ろにもどる</td></tr>
+  <tr><td>2 (1)</td><td>正六角形と正方形の角</td><td>4</td><td>中心Aと頂点を結ぶと二等辺三角形</td></tr>
+  <tr><td>2 (2)</td><td>正八面体の回転体</td><td>4</td><td>真上から見た正方形と2つの円</td></tr>
+  <tr><td>2 (3)</td><td>カードの並べ方</td><td>4</td><td>「両端にこない」→ 小数点の場所は3つ</td></tr>
+  <tr><td>2 (4)</td><td>同じ金額の値引き</td><td>4</td><td>値引きした額を2通りに表す</td></tr>
+  </table>
+  <p>どれも1問4点の小問。この回は声教の解説が省略されているので、解き方は問題から組み立てたもの（答えは解答一覧と一致）。<b>1 (3) は「または」の読み方</b>で答えが変わるので、カードの説明を先に読んでおく。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 小数と分数のまじった計算 <span class="type">4点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>0.52</b>」と「<b>13÷25</b>」。13÷25 は 0.52 に直して書く → 0.52 が2回出てくるので、<b>0.52 でくくって1回のかけ算にする</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数をかけた式はまとめられる。3×2＋3×5 は 3×(2＋5) と同じ。</li>
+    <li>2/5＝0.4、0.375＝3/8、7/8＝0.875。よく出る分数と小数の組。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>13÷25 を小数にする。13÷25＝0.52。</li>
+    <li>引く2つを先にたして、0.52 でくくる。
+<pre class="fig">0.52×2/5＋0.52×0.375
+＝0.52×(0.4＋0.375)
+＝0.52×0.775＝0.403</pre></li>
+    <li>7/8 から引く。0.875−0.403＝0.472。</li>
+    <li>分数にもどす。0.472＝472/1000＝59/125。</li>
+  </ol>
+  <div class="ans">答え：59/125</div>
+  <div class="tip">コツ：答えは分数で書くので、最後は約分まで。472と1000は8でわれる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> □をふくむ逆算 <span class="type">4点｜逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は右の「<b>1.69÷3.25</b>」。これも 0.52＝78/150 に直して書く → 右側が <b>221/150</b> にまとまり、「÷1/221」とちょうど打ち消し合う。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>□÷1/221 は □×221 と同じ。だから「□＝右側÷221」でもどせる。</li>
+    <li>1.69÷3.25 は、両方を100倍して 169÷325。13でわると 13÷25＝0.52。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>右側を計算する。
+<pre class="fig">1.69÷3.25＝0.52＝78/150
+143/150＋78/150＝221/150</pre></li>
+    <li>かっこの中を出す。221/150×1/221＝1/150。</li>
+    <li>□＝1/150＋9/650。分母を1950にそろえる。13/1950＋27/1950＝40/1950。</li>
+    <li>約分する。40/1950＝4/195。</li>
+  </ol>
+  <div class="ans">答え：4/195</div>
+  <div class="tip">コツ：150＝2×3×5×5、650＝2×5×5×13。共通の50に、残りの3と13をかけて1950。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 21でわって四捨五入すると8 <span class="type">4点｜四捨五入の範囲</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>小数第一位で四捨五入</b>」して8。商が <b>7.5以上8.5未満</b> と直して書く → 整数は 21×7.5 以上 21×8.5 未満の範囲に決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>小数第一位を四捨五入して8になる数は、7.5以上8.5未満。7.5は8になり、8.5は9になる。</li>
+    <li>連続する整数の和は「(はじめ＋おわり)×個数÷2」。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「商が8」は、わり切れてちょうど8になる数。168÷21＝8 の168だけ。168は四捨五入しても8なので、あとの条件に入っている。だから、小数まで出した商を四捨五入して8になる整数を全部さがす。</li>
+    <li>範囲を21倍する。
+<pre class="fig">商　 7.5以上　8.5未満
+×21　157.5以上 178.5未満
+整数 158 〜 178</pre></li>
+    <li>個数は 178−158＋1＝21個。</li>
+    <li>和は (158＋178)×21÷2＝336×21÷2＝3528。</li>
+  </ol>
+  <div class="ans">答え：3528</div>
+  <div class="tip">コツ：あまりを出すわり算で「商が8」と読むと、168〜188も入ってしまう。それだと解答一覧の3528と合わない。「商が8」はちょうど8の168だけと読む。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 約数が8個の整数の3番目 <span class="type">4点｜約数の個数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>約数の個数が8つ</b>」と「<b>小さい方から3番目</b>」。素数の積の形 <b>□×□×□×△ や □×△×○</b> に直して書く → 小さい数から順に3つ並べれば決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>約数の個数は「素数のかけ算の形」で決まる。24＝2×2×2×3 なら、(3＋1)×(1＋1)＝8個。</li>
+    <li>8個になる形は3つ。同じ素数を7回かける形、同じ素数3回に別の素数をかける形（2×2×2×△ など）、ちがう素数3つの積。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>形ごとに、小さい数を書き出す。
+<table><tr><th>形</th><th>小さい順</th></tr>
+<tr><td>2を7回かける</td><td>128</td></tr>
+<tr><td>2×2×2×△ など</td><td>24、40、54</td></tr>
+<tr><td>ちがう素数3つ</td><td>30、42、66</td></tr></table></li>
+    <li>全部まとめて小さい順にならべる。24、30、40、42 …。</li>
+    <li>3番目は40。たしかめ。40の約数は 1、2、4、5、8、10、20、40 の8個。</li>
+  </ol>
+  <div class="ans">答え：40</div>
+  <div class="tip">コツ：形を1つだけ考えると30を見落とす。3つの形を表にしてから、まとめてならべる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 4日で読んだ本のページ数 <span class="type">4点｜残りの割合（逆算）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は最後の「<b>30ページ</b>」と、2日目・3日目の「<b>残りの</b>」。3日目は残りの1/4 なので、30ページは残りの3/4 と直して書く → <b>後ろの日からもどして</b>全体が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「残りの2/3より5ページ少なく読む」と、のこるのは「残りの1/3より5ページ多い」量。読んだ量と残った量は、いつも足すと1になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3日目の前の残りを出す。30ページが残りの 1−1/4＝3/4。30÷3/4＝40ページ。</li>
+    <li>2日目の前の残りを出す。残りの1/3より5多い量が40。1/3にあたるのは 40−5＝35。残りは 35×3＝105ページ。</li>
+    <li>全体を出す。1日目のあとに残るのは「全体の5/8より20少ない」量。全体の5/8は 105＋20＝125。全体は 125÷5/8＝200ページ。</li>
+    <li>たしかめ。1日目 95、2日目 65、3日目 10、4日目 30。合計200。</li>
+  </ol>
+  <div class="ans">答え：200</div>
+  <div class="tip">コツ：「より多く読む」をもどすときは、残りの側では「より少ない」に向きが変わる。線分図で残りの側を書くと向きを取りちがえない。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 正六角形と正方形の角ア <span class="type">4点｜二等辺三角形の角</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1辺の長さが等しい</b>」と「<b>対称の中心</b>」。中心Aから正六角形の頂点までも1辺と同じ長さ → Aと右上の頂点を結んで、<b>二等辺三角形を図に置く</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正六角形は、中心から6つの正三角形に分けられる。だから中心から頂点までの長さは1辺と同じ。</li>
+    <li>正六角形の1つの角は120度。正方形の角は90度。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>正六角形の右上の頂点をP、正方形の右上の頂点をQとする。AとPを結ぶ。AP＝PQ＝1辺。三角形APQは二等辺三角形。
+<svg viewBox="0 0 300 230" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="120,50 189.3,90 189.3,170 120,210 50.7,170 50.7,90" fill="none" stroke="#222" stroke-width="1.5"/>
+  <rect x="189.3" y="90" width="80" height="80" fill="none" stroke="#222" stroke-width="1.5"/>
+  <polygon id="q2_1_tri" points="120,130 189.3,90 269.3,90" fill="#dbe9ff" stroke="none"/>
+  <line x1="120" y1="130" x2="269.3" y2="90" stroke="#222" stroke-width="1.5"/>
+  <line x1="120" y1="130" x2="189.3" y2="90" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <circle cx="120" cy="130" r="3" fill="#222"/>
+  <text x="104" y="135" font-size="14" fill="#222">A</text>
+  <text x="182" y="83" font-size="14" fill="#222">P</text>
+  <text x="272" y="85" font-size="14" fill="#222">Q</text>
+  <text x="138" y="104" font-size="12" fill="#1565c0">1辺</text>
+  <text x="222" y="84" font-size="12" fill="#222">1辺</text>
+  <text x="193" y="104" font-size="11" fill="#1565c0">150°</text>
+  <text x="240" y="104" font-size="11" fill="#d32f2f">15°</text>
+  <path d="M189.3,126 A15,15 0 0 0 203.8,107.5" fill="none" stroke="#d32f2f" stroke-width="1.5"/>
+  <text x="198" y="138" font-size="13" fill="#d32f2f">ア</text>
+  <circle cx="189.3" cy="111.4" r="2.5" fill="#222"/>
+  <text x="173" y="127" font-size="13" fill="#222">R</text>
+</svg></li>
+    <li>角APQを出す。Pの正六角形の角120度は、APで 120÷2＝60度ずつに分かれる。だから角APQ＝60＋90＝150度。</li>
+    <li>二等辺三角形の底角は (180−150)÷2＝15度。線AQは、正方形の上の辺PQから15度下がっている。</li>
+    <li>たての辺と線AQが交わる点をRとする。アは三角形PRQの、Rの外側の角。外側の角は、はなれた2つの角の和と同じ。Pの角は90度、Qの角は15度なので、ア＝90＋15＝<b>105度</b>。</li>
+  </ol>
+  <div class="ans">答え：105度</div>
+  <div class="tip">コツ：中心がある正多角形では、中心と頂点を結ぶ線が等しい長さの辺になる。等しい辺が2本並んだら二等辺三角形を見る。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 正八面体の三角形を回転させた立体 <span class="type">4点｜回転体の体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>BD＝6cm</b>」と「<b>直線AFを軸</b>」。真上から見た正方形BCDEに直して書く → いちばん遠いBと、いちばん近い<b>辺BCのまん中</b>の2つの円で、穴のあいた円すいになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正八面体は、正方形BCDEの上下に同じ四角すいをつけた形。中心をOとすると、OA＝OB＝OD＝3cm。</li>
+    <li>円すいの体積は「半径×半径×3.14×高さ÷3」。半径×半径だけ分かれば、半径そのものはいらない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>真上から見る。軸AFは中心Oに重なる。三角形ABCの点のうち、軸からいちばん遠いのはBとC（3cm）。いちばん近いのは辺BCのまん中M。
+<svg viewBox="0 0 240 240" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="120" cy="120" r="80" fill="#ffe0b2" stroke="#222" stroke-width="1.2"/>
+  <circle cx="120" cy="120" r="56.6" fill="#fff" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <polygon points="40,120 120,200 200,120 120,40" fill="none" stroke="#222" stroke-width="1.5"/>
+  <line x1="120" y1="120" x2="40" y2="120" stroke="#d32f2f" stroke-width="2"/>
+  <line x1="120" y1="120" x2="80" y2="160" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <circle cx="120" cy="120" r="2.5" fill="#222"/>
+  <circle cx="80" cy="160" r="2.5" fill="#1565c0"/>
+  <text x="124" y="116" font-size="13" fill="#222">O</text>
+  <text x="22" y="125" font-size="13" fill="#222">B</text>
+  <text x="114" y="217" font-size="13" fill="#222">C</text>
+  <text x="205" y="125" font-size="13" fill="#222">D</text>
+  <text x="114" y="34" font-size="13" fill="#222">E</text>
+  <text x="66" y="175" font-size="13" fill="#1565c0">M</text>
+  <text x="72" y="114" font-size="12" fill="#d32f2f">3cm</text>
+</svg></li>
+    <li>外の円の半径×半径は 3×3＝9。正方形BCDEの面積は 6×6÷2＝18。内の円の半径OMは正方形の1辺の半分なので、半径×半径＝1辺×1辺÷4＝18÷4＝4.5。</li>
+    <li>高さはどちらもOA＝3cm。できる立体は「大きい円すい − 小さい円すい」。
+<pre class="fig">9×3.14×3÷3−4.5×3.14×3÷3
+＝(9−4.5)×3.14
+＝4.5×3.14＝14.13</pre></li>
+  </ol>
+  <div class="ans">答え：14.13cm³</div>
+  <div class="tip">コツ：回転させる図形の中に軸が通っていないときは、軸に「いちばん近い点」をさがす。そこが穴のふちになる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 4つの数字と小数点のカード <span class="type">4点｜場合の数（ならべ方）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>小数点のカードが両端にこない</b>」。5か所のうち小数点の場所は<b>まん中の3か所</b>と直して書く → 小数点を先に置き、残り4枚のならべ方をかける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ちがう4枚を一列にならべる方法は 4×3×2×1＝24通り。</li>
+    <li>0のカードが無いので、先頭が0になる心配はない。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小数点を置ける場所を書く。
+<pre class="fig">□ . □ □ □
+□ □ . □ □
+□ □ □ . □　→ 3か所</pre></li>
+    <li>どの場所でも、残りの□に1〜4を入れる方法は24通り。</li>
+    <li>3×24＝72通り。</li>
+  </ol>
+  <div class="ans">答え：72通り</div>
+  <div class="tip">コツ：条件のついたカードを先に置くと、残りは自由にならべるだけになる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (4)</span> 同じ金額だけ値引きした2つの商品 <span class="type">4点｜割合と比（差一定）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同じ金額だけ値引き</b>」。値引き額は、高い方の 1−4/7＝3/7、安い方の 1−1/3＝2/3 と直して書く → <b>3/7と2/3が同じ金額</b>なので、元の値段の比が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「最初の値段の4/7になった」なら、値引きしたのは最初の値段の3/7。</li>
+    <li>高い方の3/7と安い方の2/3が等しいとき、比は「かける数の逆」で出す。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>値引き額を2通りに書く。
+<pre class="fig">高い方×3/7＝値引き額＝安い方×2/3</pre></li>
+    <li>比をそろえる。3/7と2/3の分子を6にそろえると 6/14 と 6/9。高い方：安い方＝14：9。</li>
+    <li>合計4600円を23でわる。1あたり200円。高い方は2800円、安い方は1800円。</li>
+    <li>値引き額は 2800×3/7＝1200円。値引き後は 1600円と600円。合計2200円。</li>
+  </ol>
+  <div class="ans">答え：2200円</div>
+  <div class="tip">コツ：値引き後の合計は 4600−1200×2 でも出る。値引きが2つ分あることを忘れない。</div>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（4人の仕事算／かぎの形に並ぶ奇数の表／切りかえて使う印刷機の比）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（担当の大問） <span class="type">46点（大問3 各5点×3／大問4 4+4+6+2／大問5 各5点×3）</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>3</td><td>A君・B君・C君（あとからD君）の仕事算</td><td>5+5+5（(3)は完答）</td><td>「8日行ったあと…10日」→ A君の10日分を全体のどれだけかに直す</td></tr>
+    <tr><td>4</td><td>かぎの形に並ぶ奇数の表</td><td>4+4+6+2</td><td>1行目の 1, 7, 17, 31, 49 → n×n 番目の奇数</td></tr>
+    <tr><td>5</td><td>10分ずつ切りかえる3台の印刷機</td><td>5+5+5</td><td>①②③は同じ量 → 時間の帯にして同じ部分を消す</td></tr>
+  </table>
+  <p>取り方: 大問3は (1) で出た24日を使い、<b>全体の仕事量を120</b>とおいて (2)(3) を解く。大問4は (1) で見つけた「1行目＝n×n番目の奇数」を (2)(3) でもそのまま使う。大問5は (1)(2) の比を (3) で枚数にもどす。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> B君だけでかかる日数 <span class="type">5点｜仕事算（全体のどれだけか）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は③の「<b>8日行ったあと，A君が行うと10日かかる</b>」。A君の10日分を、全体のどれだけかに直して書く → 10/15＝2/3。残りの<b>1/3がB君の8日分</b>と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1人で15日かかる仕事なら、1日にするのは全体の1/15。10日なら 10/15＝2/3 になる。</li>
+    <li>全体の1/3に8日かかるなら、全体には 8×3 日かかる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>③のA君の10日分を出す。A君は1日に全体の1/15。10日で 10/15＝2/3。</li>
+    <li>残りを出す。1−2/3＝1/3。これがB君の8日分になる。</li>
+    <li>B君だけなら、8日の3倍。8×3＝<b>24日</b>。</li>
+    <li>落としやすい所は、②（B君とC君の15日）をここで使ってしまうこと。(1)で使うのは①と③だけ。</li>
+  </ol>
+  <div class="ans">答え：24日</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> A君とC君で6日のあと、B君が何日目で終わるか <span class="type">5点｜仕事算（全体を公倍数でおく）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>A君とC君で6日</b>」と「<b>何日目</b>」。全体を15と24の最小公倍数120に直して書く → 1日の量はA君8・C君3。「何日目」なので、わり算の余りが出たら1日たす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>全体を、かかる日数の公倍数でおくと、1日の量が整数になる。120÷15＝8、120÷24＝5。</li>
+    <li>「何日目」は、少しだけ仕事をする日も1日に数える。10日と少しなら11日目。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>全体を120として、1日の量を表にする。C君は「B君とC君」からB君を引いて出す。
+      <table><tr><th></th><th>かかる日数</th><th>1日の量</th></tr>
+      <tr><th>A君</th><td>15日</td><td>120÷15＝8</td></tr>
+      <tr><th>B君</th><td>24日</td><td>120÷24＝5</td></tr>
+      <tr><th>B君＋C君</th><td>15日</td><td>120÷15＝8</td></tr>
+      <tr><th>C君</th><td></td><td><b>8−5＝3</b></td></tr></table></li>
+    <li>A君とC君の6日分を出す。（8＋3）×6＝66。</li>
+    <li>残りを出す。120−66＝54。</li>
+    <li>B君は1日に5。54÷5＝10あまり4。10日で50まで進み、11日目に残りの4を終える。答えは<b>11日目</b>。</li>
+  </ol>
+  <div class="ans">答え：11日目</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> D君だけでかかる日数のはば <span class="type">5点（完答）｜仕事算（はばを出す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>4日経ったところで</b>」と「<b>7日目で無事に終わりました</b>」。「7日目で終わる」を2つに直して書く → 6日目まででは終わらない、7日目までには終わる。この2つでD君の1日の量のはばが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>「7日目で終わる」は、6日目が終わったときにはまだ残りがあり、7日目の中で終わること。</li>
+    <li>D君だけでかかる日数は 120÷（D君の1日の量）。1日の量が大きいほど、日数は少なくなる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>3人の1日の量は 8＋5＋3＝16。4日で 16×4＝64。残りは 120−64＝56。
+<svg viewBox="0 0 300 128" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><text x="10.0" y="18.0" font-size="12" fill="#222" text-anchor="start">仕事全体＝120</text><rect x="10" y="28" width="149.3" height="26" fill="#dbe9ff" stroke="#222"/><rect x="159.3" y="28" width="130.7" height="26" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.8"/><text x="84.7" y="46.0" font-size="11" fill="#222" text-anchor="middle">4日で 16×4＝64</text><text x="224.7" y="46.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">残り 56</text><line x1="159.3" y1="62" x2="159.3" y2="120" stroke="#1565c0" stroke-dasharray="4 3"/><line x1="290.0" y1="62" x2="290.0" y2="120" stroke="#1565c0" stroke-dasharray="4 3"/><text x="224.7" y="82.0" font-size="11" fill="#1565c0" text-anchor="middle">5・6日目の2日では</text><text x="224.7" y="97.0" font-size="11" fill="#1565c0" text-anchor="middle">まだ終わらない</text><text x="224.7" y="116.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">7日目までの3日で終わる</text><text x="84.7" y="82.0" font-size="11" fill="#222" text-anchor="middle">A＋B＋C</text><text x="84.7" y="97.0" font-size="11" fill="#222" text-anchor="middle">1日16</text></svg></li>
+    <li>5日目と6日目の2日では終わらない。4人の1日の量は、56÷2＝28 より小さい。D君の1日の量は 28−16＝<b>12より小さい</b>。</li>
+    <li>7日目までの3日で終わる。4人の1日の量は、56÷3＝18 2/3 以上。D君の1日の量は 18 2/3−16＝<b>2 2/3以上</b>。</li>
+    <li>D君だけでかかる日数にもどす。
+      <table><tr><th></th><th>D君の1日の量</th><th>D君だけの日数</th></tr>
+      <tr><th>多いほうのはし</th><td>12より小さい</td><td>120÷12＝10日より多い → <b>11日以上</b></td></tr>
+      <tr><th>少ないほうのはし</th><td>2 2/3以上</td><td>120÷2 2/3＝45日以下 → <b>45日以下</b></td></tr></table></li>
+    <li>確かめ。D君が45日なら1日の量は2 2/3。4人で18 2/3。3日で56になり、7日目でちょうど終わる。D君が10日なら1日12。4人で28。2日で56になり、6日目で終わってしまう。</li>
+    <li>落としやすい所は、10日を答えに入れること。10日だと6日目で終わるので「7日目で終わる」に当てはまらない。</li>
+  </ol>
+  <div class="ans">答え：ア11・イ45</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 20行目の19列目の数 <span class="type">4点｜数表（かぎの形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>20行目の19列目</b>」。表は奇数がかぎの形に並ぶ。列の19は行の20より小さい → 20行目を右へ進む所。だから<b>20行目の1列目の数</b>を先に出す。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1行目の数は 1, 7, 17, 31, 49。これは 1番目、4番目、9番目、16番目、25番目の奇数。1行目のn列目は、n×n番目の奇数になる。</li>
+    <li>□番目の奇数は、□×2−1。たとえば25番目の奇数は 25×2−1＝49。</li>
+    <li>次のかぎは、前のかぎの終わり（1行目の数）＋2から始まる。1行目4列目の31の次は、5行目1列目の33。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>表の数を小さい順にたどって、かぎの形を書く。
+<svg viewBox="0 0 320 220" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><text x="66.0" y="20.0" font-size="11" fill="#222" text-anchor="middle">1列</text><text x="118.0" y="20.0" font-size="11" fill="#222" text-anchor="middle">2列</text><text x="170.0" y="20.0" font-size="11" fill="#222" text-anchor="middle">3列</text><text x="222.0" y="20.0" font-size="11" fill="#222" text-anchor="middle">4列</text><text x="274.0" y="20.0" font-size="11" fill="#222" text-anchor="middle">5列</text><text x="22.0" y="49.0" font-size="11" fill="#222" text-anchor="middle">1行</text><text x="22.0" y="79.0" font-size="11" fill="#222" text-anchor="middle">2行</text><text x="22.0" y="109.0" font-size="11" fill="#222" text-anchor="middle">3行</text><text x="22.0" y="139.0" font-size="11" fill="#222" text-anchor="middle">4行</text><text x="22.0" y="169.0" font-size="11" fill="#222" text-anchor="middle">5行</text><rect x="40" y="30" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="66.0" y="49.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">1</text><rect x="92" y="30" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="118.0" y="49.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">7</text><rect x="144" y="30" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="170.0" y="49.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">17</text><rect x="196" y="30" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="222.0" y="49.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">31</text><rect x="248" y="30" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="274.0" y="49.0" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">49</text><rect x="40" y="60" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="66.0" y="79.0" font-size="12" fill="#222" text-anchor="middle">3</text><rect x="92" y="60" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="118.0" y="79.0" font-size="12" fill="#222" text-anchor="middle">5</text><rect x="144" y="60" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="170.0" y="79.0" font-size="12" fill="#222" text-anchor="middle">15</text><rect x="196" y="60" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="222.0" y="79.0" font-size="12" fill="#222" text-anchor="middle">29</text><rect x="248" y="60" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="274.0" y="79.0" font-size="12" fill="#222" text-anchor="middle">47</text><rect x="40" y="90" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="66.0" y="109.0" font-size="12" fill="#222" text-anchor="middle">9</text><rect x="92" y="90" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="118.0" y="109.0" font-size="12" fill="#222" text-anchor="middle">11</text><rect x="144" y="90" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="170.0" y="109.0" font-size="12" fill="#222" text-anchor="middle">13</text><rect x="196" y="90" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="222.0" y="109.0" font-size="12" fill="#222" text-anchor="middle">27</text><rect x="248" y="90" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="274.0" y="109.0" font-size="12" fill="#222" text-anchor="middle">45</text><rect x="40" y="120" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="66.0" y="139.0" font-size="12" fill="#222" text-anchor="middle">19</text><rect x="92" y="120" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="118.0" y="139.0" font-size="12" fill="#222" text-anchor="middle">21</text><rect x="144" y="120" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="170.0" y="139.0" font-size="12" fill="#222" text-anchor="middle">23</text><rect x="196" y="120" width="52" height="30" fill="#ffe0b2" stroke="#222" stroke-width="0.8"/><text x="222.0" y="139.0" font-size="12" fill="#222" text-anchor="middle">25</text><rect x="248" y="120" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="274.0" y="139.0" font-size="12" fill="#222" text-anchor="middle">43</text><rect x="40" y="150" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="66.0" y="169.0" font-size="12" fill="#222" text-anchor="middle">33</text><rect x="92" y="150" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="118.0" y="169.0" font-size="12" fill="#222" text-anchor="middle">35</text><rect x="144" y="150" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="170.0" y="169.0" font-size="12" fill="#222" text-anchor="middle">37</text><rect x="196" y="150" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="222.0" y="169.0" font-size="12" fill="#222" text-anchor="middle">39</text><rect x="248" y="150" width="52" height="30" fill="#dbe9ff" stroke="#222" stroke-width="0.8"/><text x="274.0" y="169.0" font-size="12" fill="#222" text-anchor="middle">41</text><polyline points="48.0,174.0 292.0,174.0 292.0,33.0" fill="none" stroke="#d32f2f" stroke-width="2"/><polygon points="288.0,39.0 296.0,39.0 292.0,31.0" fill="#d32f2f"/><text x="40.0" y="200.0" font-size="11" fill="#222" text-anchor="start">かぎの形ごとに、左下から右へ、かどで上へ進む。</text><text x="40.0" y="218.0" font-size="11" fill="#d32f2f" text-anchor="start">1行目の赤い数＝1×1, 2×2, 3×3…番目の奇数</text></svg></li>
+    <li>20行目は20番目のかぎ。その1つ前のかぎは、1行目19列目で終わる。19×19＝361番目の奇数。361×2−1＝721。</li>
+    <li>20行目1列目は 721＋2＝<b>723</b>。</li>
+    <li>右へ1列進むごとに2ずつ増える。19列目は1列目から18列右。723＋2×18＝<b>759</b>。</li>
+    <li>確かめ。同じやり方で5行目4列目を出す。1行目4列目は31。5行目1列目は33。3列右で 33＋2×3＝39。表と同じ。</li>
+  </ol>
+  <div class="ans">答え：759</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 20行目の24列目の数 <span class="type">4点｜数表（かぎの形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>20行目の24列目</b>」。今度は列の24が行の20より大きい → 24列目を上から下へたどる所。だから<b>1行目24列目の数</b>から下がる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1行目のn列目は n×n 番目の奇数（4 (1)）。</li>
+    <li>たての部分は、上へ行くほど大きい。1行下がるごとに2ずつ減る。1行目5列目49、2行目5列目47。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1行目24列目を出す。24×24＝576番目の奇数。576×2−1＝<b>1151</b>。</li>
+    <li>20行目は1行目から19行下。1151−2×19＝<b>1113</b>。</li>
+    <li>確かめ。下の角から上がっても同じになる。24行目24列目は 1151−2×23＝1105。そこから4行上がって 1105＋2×4＝1113。</li>
+  </ol>
+  <div class="ans">答え：1113</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)考え方・答え</span> 1531は何行目の何列目か <span class="type">8点（考え方6点・答え2点）｜数表（かぎの形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1531</b>」と「考え方を含めて」。1531を「何番目の奇数か」に直して書く → (1531＋1)÷2＝766番目。766を<b>27×27と28×28ではさむ</b>と、何番目のかぎにあるかが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1行目のn列目は n×n 番目の奇数。だからn番目のかぎには、(n−1)×(n−1) 番目のあとから n×n 番目までの奇数が入る。</li>
+    <li>□番目の奇数が分かっているときは、反対に (数＋1)÷2 で何番目かが出る。1531なら (1531＋1)÷2＝766。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>1531が何番目の奇数かを出す。(1531＋1)÷2＝766番目。</li>
+    <li>かけ算の表ではさむ。27×27＝729、28×28＝784。729＜766≦784 なので、1531は<b>28番目のかぎ</b>にある。</li>
+    <li>28番目のかぎの3つのかどを出す。
+      <table><tr><th>かど</th><th>数</th></tr>
+      <tr><th>28行目1列目</th><td>729×2−1＝1457 の次で 1459</td></tr>
+      <tr><th>28行目28列目</th><td>1459＋2×27＝1513</td></tr>
+      <tr><th>1行目28列目</th><td>784×2−1＝1567</td></tr></table></li>
+    <li>1531は1513より大きく、1567より小さい。だから28列目を上がるたての部分にある。
+<svg viewBox="0 0 330 194" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><line x1="50" y1="150" x2="230" y2="150" stroke="#222" stroke-width="2"/><line x1="230" y1="150" x2="230" y2="22" stroke="#222" stroke-width="2"/><polygon points="225,30 235,30 230,20" fill="#222"/><circle cx="50" cy="150" r="4" fill="#222"/><circle cx="230" cy="150" r="4" fill="#222"/><circle cx="230" cy="22" r="4" fill="#222"/><text x="50.0" y="172.0" font-size="11" fill="#222" text-anchor="middle">28行目1列目</text><text x="50.0" y="186.0" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">1459</text><text x="230.0" y="172.0" font-size="11" fill="#222" text-anchor="middle">28行目28列目</text><text x="230.0" y="186.0" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">1513</text><text x="242.0" y="26.0" font-size="11" fill="#222" text-anchor="start">1行目28列目</text><text x="242.0" y="42.0" font-size="12" fill="#222" text-anchor="start" font-weight="bold">1567</text><circle cx="230" cy="106.7" r="6" fill="none" stroke="#d32f2f" stroke-width="2.2"/><text x="242.0" y="110.7" font-size="13" fill="#d32f2f" text-anchor="start" font-weight="bold">1531</text><text x="242.0" y="126.7" font-size="11" fill="#d32f2f" text-anchor="start">19行目</text><line x1="216" y1="150" x2="216" y2="106.7" stroke="#1565c0" stroke-dasharray="4 3"/><text x="210.0" y="132.3" font-size="11" fill="#1565c0" text-anchor="end">上へ9行（＋18）</text><text x="140.0" y="168.0" font-size="11" fill="#1565c0" text-anchor="middle">右へ27列（＋54）</text></svg></li>
+    <li>1531−1513＝18。1行上がるごとに2増えるので、18÷2＝9行上。28−9＝<b>19行目</b>。</li>
+    <li>確かめ。上から数える。1567−1531＝36。36÷2＝18行下。1＋18＝19行目。同じになった。</li>
+    <li>落としやすい所は、よこの部分かたての部分かを確かめずに決めること。28行目28列目の1513とくらべてから進む。</li>
+  </ol>
+  <div class="model">考え方（解答一覧は「解説を参照」）：1531は (1531＋1)÷2＝766番目の奇数。1行目のn列目は n×n 番目の奇数なので、27×27＝729、28×28＝784 より、1531は28行目の1列目から28列目、28列目の27行目から1行目へと並ぶ28番目のかぎにある。28行目1列目は 729×2−1＋2＝1459、28行目28列目は 1459＋2×27＝1513。1531は1513より大きいので28列目を上がる所にあり、(1531−1513)÷2＝9 より、28−9＝19行目。</div>
+  <div class="ans">答え：19行目の28列目</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> BとCの1分間の枚数の比 <span class="type">5点｜仕事算（同じ部分を消す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は①の「<b>Cの印刷機を4分</b>」と②の「<b>20分後に完了</b>」。①②を時間の帯にして図に置く → どちらもA10分で始まる。残りの<b>B10分＋C4分＝C10分</b>が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>①②③は、どれも同じ量の印刷。同じ部分を両方から消しても、残りどうしは同じ枚数になる。</li>
+    <li>同じ枚数に、Bは10分、Cは6分かかるとき、1分間の枚数の比はかかる時間の逆の比。10：6 の逆で 6：10。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>①②③を時間の帯にする。②はA10分のあとC10分で、ちょうど20分。Bは使っていない。
+<svg viewBox="0 0 320 150" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><text x="18.0" y="37.0" font-size="13" fill="#222" text-anchor="middle">①</text><rect x="36.0" y="20" width="100.0" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1"/><text x="86.0" y="36.0" font-size="11" fill="#222" text-anchor="middle">A10分</text><rect x="136.0" y="20" width="100.0" height="24" fill="#c8e6c9" stroke="#222" stroke-width="1"/><text x="186.0" y="36.0" font-size="11" fill="#222" text-anchor="middle">B10分</text><rect x="236.0" y="20" width="40.0" height="24" fill="#ffe0b2" stroke="#d32f2f" stroke-width="1.8"/><text x="256.0" y="36.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">C4分</text><text x="18.0" y="73.0" font-size="13" fill="#222" text-anchor="middle">②</text><rect x="36.0" y="56" width="100.0" height="24" fill="#dbe9ff" stroke="#222" stroke-width="1"/><text x="86.0" y="72.0" font-size="11" fill="#222" text-anchor="middle">A10分</text><rect x="136.0" y="56" width="100.0" height="24" fill="#ffe0b2" stroke="#222" stroke-width="1"/><text x="186.0" y="72.0" font-size="11" fill="#222" text-anchor="middle">C10分</text><text x="18.0" y="109.0" font-size="13" fill="#222" text-anchor="middle">③</text><rect x="36.0" y="92" width="100.0" height="24" fill="#c8e6c9" stroke="#222" stroke-width="1"/><text x="86.0" y="108.0" font-size="11" fill="#222" text-anchor="middle">B10分</text><rect x="136.0" y="92" width="100.0" height="24" fill="#ffe0b2" stroke="#222" stroke-width="1"/><text x="186.0" y="108.0" font-size="11" fill="#222" text-anchor="middle">C10分</text><rect x="236.0" y="92" width="25.0" height="24" fill="#dbe9ff" stroke="#d32f2f" stroke-width="1.8"/><text x="248.5" y="108.0" font-size="11" fill="#d32f2f" text-anchor="middle" font-weight="bold">A</text><text x="265.0" y="108.0" font-size="11" fill="#d32f2f" text-anchor="start" font-weight="bold">2分30秒</text><line x1="36" y1="14" x2="36" y2="128" stroke="#1565c0" stroke-dasharray="3 3"/><text x="36.0" y="142.0" font-size="10" fill="#1565c0" text-anchor="middle">0分</text><line x1="136" y1="14" x2="136" y2="128" stroke="#1565c0" stroke-dasharray="3 3"/><text x="136.0" y="142.0" font-size="10" fill="#1565c0" text-anchor="middle">10分</text><line x1="236" y1="14" x2="236" y2="128" stroke="#1565c0" stroke-dasharray="3 3"/><text x="236.0" y="142.0" font-size="10" fill="#1565c0" text-anchor="middle">20分</text></svg></li>
+    <li>①と②から、同じA10分を消す。B10分＋C4分＝C10分。</li>
+    <li>両方からC4分を消す。<b>B10分＝C6分</b>。</li>
+    <li>同じ枚数にかかる時間はB10分、C6分。1分間の枚数の比は逆にして 6：10＝<b>3：5</b>。</li>
+    <li>確かめ。Bを1分3枚、Cを1分5枚とする。B10分で30枚、C6分で30枚。同じになった。</li>
+  </ol>
+  <div class="ans">答え：3：5</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> AとCの1分間の枚数の比 <span class="type">5点｜仕事算（同じ部分を消す）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は③の「<b>Aの印刷機を2分30秒</b>」。2分30秒は2.5分に直して書く。②と③をくらべて、同じ<b>C10分を消す</b> → A10分＝B10分＋A2.5分。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>2分30秒は 2＋30/60＝2.5分。</li>
+    <li>A：B と B：C が分かったら、Bの数をそろえると A：B：C がつながる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>②と③は同じ量。A10分＋C10分＝B10分＋C10分＋A2.5分。</li>
+    <li>両方から、同じC10分を消す。A10分＝B10分＋A2.5分。</li>
+    <li>両方から、A2.5分を消す。<b>A7.5分＝B10分</b>。</li>
+    <li>1分間の枚数の比は、かかる時間の逆の比。A：B＝10：7.5＝4：3。</li>
+    <li>(1)のB：C＝3：5 とBの3がそろっている。A：B：C＝4：3：5。だから A：C＝<b>4：5</b>。</li>
+    <li>確かめ。1分にA4枚、B3枚、C5枚とする。①は 40＋30＋20＝90。②は 40＋50＝90。③は 30＋50＋10＝90。全部同じになった。</li>
+  </ol>
+  <div class="ans">答え：4：5</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 印刷したすべての枚数 <span class="type">5点｜比を枚数にもどす</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>①の印刷でCが印刷した枚数が200枚</b>」。①でCは4分動いた → Cの1分間を <b>200÷4＝50枚</b> に直して書く。比の5が50枚と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>比の1つ分が分かれば、ほかの比も枚数にもどせる。比の5が50枚なら、1つ分は10枚。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Cの1分間は 200÷4＝50枚。A：B：C＝4：3：5 の1つ分は 50÷5＝10枚。</li>
+    <li>1分間の枚数は、A40枚、B30枚、C50枚。</li>
+    <li>いちばん式が短い②で全部の枚数を出す。40×10＋50×10＝<b>900枚</b>。</li>
+    <li>確かめ。①は 400＋300＋200＝900枚。③は 300＋500＋40×2.5＝900枚。同じになった。</li>
+  </ol>
+  <div class="ans">答え：900枚</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ</h2>
+  <ul>
+    <li>仕事算は、日数が出そろったら<b>全体を公倍数</b>でおく。1日の量が整数になり、表で整理できる。</li>
+    <li>「何日目」「7日目で終わる」は、余りや「まだ終わらない日」を式に直してから計算する。</li>
+    <li>同じ量を別の順で終える問題は、時間の帯を並べて<b>同じ部分を消す</b>。残った時間の逆の比が、1分間の量の比。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="6"><h1 class="dtitle">大問6（動く列の長さ1.2km・先頭と最後尾の行き来）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">6</span> この回の全体像（大問6） <span class="type">18点（大問6 各6点×3）</span></h2>
+  <table><tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+  <tr><td>(1)</td><td>最後尾まで走ってもどる時間</td><td>6点</td><td>「5分で先頭」「20分で最後尾」から、列の速さとAさんの速さを先に出す</td></tr>
+  <tr><td>(2)</td><td>けがをしたBさんの位置</td><td>6点</td><td>「待つ」と「歩く」を合わせて15分。どちらも列との間が縮む</td></tr>
+  <tr><td>(3)</td><td>16分でもどるときのBさんの速さ</td><td>6点</td><td>Bさんに会う時刻は(2)と同じ。残りの道のりと時間で決まる</td></tr></table>
+  <p>列そのものが動いているので、地面の上の速さではなく<b>列との間が1分でどれだけ縮むか</b>で考える。最初に列の速さ（分速60m）とAさんの速さ（分速300m）を出せば、3問とも同じ道具で解ける。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)</span> 行きと同じ速さで最後尾にもどる時間 <span class="type">6点｜動く列（通過算・旅人算）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1.2km先の先頭まで</b>」「5分」と、待つと「<b>20分で最後尾</b>」。1.2km＝1200mに直して書く → 列の速さとAさんの速さが出て、もどりは近づく速さで割るだけになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ向きに進むとき、間が1分で縮む長さは「速さの差」。向かい合って進むときは「速さの和」。</li>
+    <li>立って待つ人を列が通りすぎる時間は、列の長さ÷列の速さ。1200mの列が20分で通りすぎたら、列は1分で60m進む。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>列の長さは1.2km＝1200m。まず列の速さを出す。Aさんが立っていると、20分で列全体が通りすぎる。
+<pre class="fig">列の速さ　1200÷20＝60（m/分）</pre></li>
+    <li>行きは、Aさんが列と同じ向きに走って、1200mの差を5分でうめた。1分で縮むのは 1200÷5＝240m。これは速さの差。
+<pre class="fig">Aさん－列＝240　→　Aさん＝240＋60＝300（m/分）</pre>
+<svg viewBox="0 0 360 200" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="q6_1_arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d32f2f"/></marker>
+  <marker id="q6_1_arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1565c0"/></marker></defs>
+  <text x="10" y="16" font-size="13" fill="#222">行き（同じ向き）</text>
+  <text x="60" y="38" font-size="12" fill="#d32f2f">Aさん 分速300m</text>
+  <line x1="44" y1="46" x2="316" y2="46" stroke="#d32f2f" stroke-width="2" marker-end="url(#q6_1_arr)"/>
+  <rect x="40" y="54" width="280" height="16" fill="#dbe9ff" stroke="#222"/>
+  <text x="180" y="67" font-size="12" fill="#222" text-anchor="middle">列 1200m（分速60mで右へ）</text>
+  <text x="40" y="88" font-size="12" fill="#222" text-anchor="middle">最後尾</text>
+  <text x="320" y="88" font-size="12" fill="#222" text-anchor="middle">先頭</text>
+  <text x="10" y="116" font-size="13" fill="#222">もどり（向かい合う）</text>
+  <text x="200" y="138" font-size="12" fill="#d32f2f">Aさん 300m</text>
+  <line x1="316" y1="146" x2="140" y2="146" stroke="#d32f2f" stroke-width="2" marker-end="url(#q6_1_arr)"/>
+  <text x="44" y="138" font-size="12" fill="#1565c0">最後尾 60m</text>
+  <line x1="44" y1="146" x2="110" y2="146" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#q6_1_arb)"/>
+  <rect x="40" y="154" width="280" height="16" fill="#dbe9ff" stroke="#222"/>
+  <text x="40" y="188" font-size="12" fill="#222" text-anchor="middle">最後尾</text>
+  <text x="320" y="188" font-size="12" fill="#222" text-anchor="middle">先頭</text>
+</svg></li>
+    <li>もどりは、Aさんが後ろへ300m、最後尾が前へ60m。向かい合うので、1分で 300＋60＝360m 縮む。
+<pre class="fig">1200÷360＝10/3（分）＝3と1/3分</pre></li>
+    <li>1/3分は 60×1/3＝20秒。だから<b>3分20秒</b>。</li>
+    <li>落としやすい所は、もどりも「1200÷300＝4分」としてしまうこと。最後尾のほうからも近づいてくるので、速さはたし算になる。</li>
+  </ol>
+  <div class="ans">答え：3分20秒</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)</span> 待ってから15分で最後尾、Bさんの位置 <span class="type">6点｜動く列（つるかめ算）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>行きの半分の速さ</b>」と「<b>到着するまで15分</b>」。300÷2＝150に直して書き、15分を「待つ時間」と「歩く時間」に分ける → 1分で縮む長さが2種類のつるかめ算になる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>Aさんが立って待つ間も、列は1分に60m進むので、最後尾は60mずつ近づく。</li>
+    <li>Bさんを連れて後ろへ歩くと、最後尾と向かい合う。1分で縮むのは 150＋60＝210m。</li>
+    <li>2種類の「1分あたり」が合わせて何分かで決まっていたら、つるかめ算。全部が片方だったとして、ちがいで割る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>15分の間に、Aさんと最後尾の間の1200mがちょうど0になる。1分で縮む長さを表にする。
+      <table><tr><th></th><th>待つ（立っている）</th><th>Bさんと歩く</th></tr>
+      <tr><th>1分で縮む長さ</th><td>60m</td><td>150＋60＝210m</td></tr>
+      <tr><th>時間</th><td>□分</td><td>15－□分</td></tr></table>
+      合わせて1200m縮めば終わり。</li>
+    <li>15分ずっと歩いたとすると、210×15＝3150m 縮む。本当は1200mなので、3150－1200＝1950m 多すぎる。</li>
+    <li>歩く1分を待つ1分にかえるたびに、210－60＝150m 減る。
+<pre class="fig">待った時間＝1950÷150＝13（分）
+歩いた時間＝15－13＝2（分）</pre></li>
+    <li>Bさんは列の中にいて、13分でAさんのところまで来た。列は13分で 60×13＝<b>780m</b> 進む。だからBさんは先頭から780mのところにいた。
+<svg viewBox="0 0 360 120" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="q6_2_arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d32f2f"/></marker>
+  <marker id="q6_2_arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1565c0"/></marker></defs>
+  <text x="10" y="16" font-size="13" fill="#222">待ち始めて13分後</text>
+  <rect x="30" y="50" width="112" height="16" fill="#ffe0b2" stroke="#222"/>
+  <rect x="142" y="50" width="188" height="16" fill="#dbe9ff" stroke="#222"/>
+  <text x="86" y="63" font-size="12" fill="#222" text-anchor="middle">420m</text>
+  <text x="236" y="63" font-size="12" fill="#d32f2f" text-anchor="middle">780m</text>
+  <text x="30" y="84" font-size="12" fill="#222" text-anchor="middle">最後尾</text>
+  <text x="330" y="84" font-size="12" fill="#222" text-anchor="middle">先頭</text>
+  <circle cx="142" cy="58" r="5" fill="#d32f2f"/>
+  <text x="142" y="84" font-size="12" fill="#d32f2f" text-anchor="middle">A・B</text>
+  <line x1="138" y1="40" x2="90" y2="40" stroke="#d32f2f" stroke-width="2" marker-end="url(#q6_2_arr)"/>
+  <text x="96" y="34" font-size="11" fill="#d32f2f">分速150m</text>
+  <line x1="34" y1="40" x2="72" y2="40" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#q6_2_arb)"/>
+  <text x="30" y="34" font-size="11" fill="#1565c0">60m</text>
+  <text x="180" y="108" font-size="11" fill="#222" text-anchor="middle">残り420m を 1分に210m ずつ縮める → 2分</text>
+</svg></li>
+    <li>確かめ。残りは 1200－780＝420m。1分に210m縮むので、420÷210＝2分。13＋2＝15分で合う。</li>
+  </ol>
+  <div class="ans">答え：780m</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (3)</span> 16分でもどるときのBさんの速さ <span class="type">6点｜動く列（速さの和）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>待ち始めてから16分</b>」。Bさんの場所は(2)と同じなので、会うのは13分後のまま → 残り「16－13＝3分」で420mを縮める、と直して書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>向かい合って進むとき、1分で縮む長さは2人の速さの和。和が分かれば、片方の速さをひくともう片方が出る。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Bさんは先頭から780mにいる。Aさんのところに来るのは、(2)と同じく 780÷60＝13分後。</li>
+    <li>そのとき最後尾までは 1200－780＝420m。使える時間は 16－13＝3分。</li>
+    <li>1分で縮める長さは 420÷3＝140m。これはBさんたちの速さと列の速さの和。
+<pre class="fig">Bさんの速さ＝140－60＝80（m/分）</pre></li>
+    <li>確かめ。80＋60＝140m ずつ縮めて、420÷140＝3分。13＋3＝16分で合う。</li>
+    <li>落としやすい所は、420÷3＝<b>140をそのまま答える</b>こと。140は最後尾の60mをふくんだ「縮む速さ」なので、60をひく。</li>
+  </ol>
+  <div class="ans">答え：分速80m</div>
+</section>
+</div>
