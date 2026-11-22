@@ -22,6 +22,12 @@
   "yearsLabel": "2021〜2026年度・18回分"
  },
  {
+  "id": "koishikawa",
+  "name": "広尾学園小石川中学校",
+  "yearsLabel": "2023〜2026年度・12回分",
+  "shortName": "広尾小石川"
+ },
+ {
   "id": "ichikawa",
   "name": "市川中学校",
   "yearsLabel": "2022〜2026年度・10回分"
