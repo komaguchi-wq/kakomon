@@ -1,0 +1,602 @@
+<!-- generated kakomon koishikawa/2026-2/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1">大問1（小問集合8題・計算のくふう／正六角形の面積／売買損益／グラフ／立体の体積）</a></li>
+<li><a href="#2-3-4">大問2・3・4（3つのグラフの読みかえ／3つのダイヤルの周期／切り取りブロックの水位と濃度）</a></li>
+<li><a href="#5">大問5（さいころの目の積と約数の個数・場合の数）</a></li></ul></nav>
+<div class="daimon" id="1"><h1 class="dtitle">大問1（小問集合8題・計算のくふう／正六角形の面積／売買損益／グラフ／立体の体積）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1</span> この回の全体像（担当の大問） <span class="type">40点（5点×8）</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)</td><td>計算のくふう</td><td>5</td><td>「2026」は1013×2、「2025」は405×5</td></tr>
+    <tr><td>1 (2)(3)</td><td>□を求める逆算／分数のかけわり</td><td>5+5</td><td>外側から順にもどす／帯分数を仮分数に直す</td></tr>
+    <tr><td>1 (4)</td><td>小数の計算のくふう</td><td>5</td><td>「24×26」と「25×25」は1しかちがわない</td></tr>
+    <tr><td>1 (5)</td><td>正六角形の中の斜線部分</td><td>5</td><td>点対称 → 半分だけ考えて2倍</td></tr>
+    <tr><td>1 (6)</td><td>売買損益（定価の何割増し）</td><td>5</td><td>総仕入れ値を100とおく</td></tr>
+    <tr><td>1 (7)</td><td>道のりのグラフと平均の速さ</td><td>5</td><td>「平均の速さ毎分70m」→ 進んだ道のりは1400m</td></tr>
+    <tr><td>1 (8)</td><td>3方向から見た図と体積</td><td>5</td><td>円を4等分した柱体の、積んだ個数を数える</td></tr>
+  </table>
+  <p>8問とも5点。(1)〜(4)は計算で、<b>くふうの合図を見つけてから手を動かす</b>と速い。(5)〜(8)は1問ずつ型がちがう。(7)は<b>行って、もどって、また進む</b>ことに気づけば、あとは引き算と割り算だけ。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> 2026×0.25−2025÷2/3＋3 1/2×1013＋2.5×405 <span class="type">5点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2026</b>」と「<b>2025</b>」。2026＝1013×2、2025＝405×5 に直して書く → 式が「1013×□」と「405×□」の2つの組にまとまり、<b>□だけ先に計算</b>できる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数をかけているものは、まとめられる。1013×0.5＋1013×3.5＝1013×(0.5＋3.5)＝<b>1013×4</b>。</li>
+    <li>÷2/3 は ×3/2（×1.5）と同じ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>わり算をかけ算に、帯分数を小数に直す。2025÷2/3＝2025×1.5。3 1/2＝3.5。</li>
+    <li>1013の組を作る。2026×0.25＝1013×2×0.25＝1013×0.5。これと 1013×3.5 をまとめて、1013×4＝<b>4052</b>。</li>
+    <li>405の組を作る。2025×1.5＝405×5×1.5＝405×7.5。これから 405×2.5 をひくので、405×(7.5−2.5)＝405×5＝2025。</li>
+    <li>4052−2025＝<b>2027</b>。</li>
+    <li>落としやすい所。405の組は「−405×7.5」と「＋405×2.5」。まとめるときは 7.5−2.5 のひき算になる。</li>
+  </ol>
+  <div class="ans">答え：2027</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> □を求める逆算（小数と分数） <span class="type">5点｜逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1.125</b>」と「<b>0.75</b>」。1.125＝9/8、0.75＝3/4 に直して書く → 先に「1.125＋17/120」を1つの分数にしてから、<b>かっこの外から順にもどす</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>逆算は、□からいちばん遠い計算から順にもどす。たとえば 10−(□＋2)＝3 なら、まずかっこの中は 10−3＝7、次に □＝7−2＝5。</li>
+    <li>0.125＝1/8、0.75＝3/4。よく出る小数は分数に直してから計算する。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>かっこの前を計算する。9/8＋17/120＝135/120＋17/120＝152/120＝<b>19/15</b>。</li>
+    <li>「19/15−（かっこ）＝7/12」をもどす。かっこの中は 19/15−7/12＝76/60−35/60＝41/60。</li>
+    <li>「7/20＋」をもどす。□×0.75＝41/60−7/20＝41/60−21/60＝20/60＝1/3。</li>
+    <li>「×0.75」をもどす。□＝1/3÷3/4＝1/3×4/3＝<b>4/9</b>。</li>
+    <li>落としやすい所。2つ目のステップは「ひかれる数−答え」でかっこの中が出る。19/15に7/12をたさない。</li>
+  </ol>
+  <div class="ans">答え：4/9</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 143÷5 1/2×(2 6/7−43/91)÷3 7/9 <span class="type">5点｜分数の四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>143</b>」と「<b>91</b>」。143＝11×13、91＝7×13 に直して書く → 5 1/2＝11/2 の11と、91の13が<b>約分で消える</b>と見通せる。かけわりは最後にまとめて約分する。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>帯分数は仮分数に直す。5 1/2＝11/2、2 6/7＝20/7、3 7/9＝34/9。</li>
+    <li>÷分数は、ひっくり返してかける。÷11/2＝×2/11。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>かっこの中を先に計算する。20/7＝260/91。260/91−43/91＝217/91。217＝7×31 だから、約分して <b>31/13</b>。</li>
+    <li>かっこの外を「×」の形にする。143×2/11＝26。</li>
+    <li>26×31/13×9/34。26と13を約分して2、2と34を約分して1と17。残りは 31×9/17＝279/17。</li>
+    <li>帯分数に直す。279÷17＝16 あまり 7。答えは <b>16 7/17</b>。</li>
+    <li>落としやすい所。217/91 は13ではなく、7で約分できる（217＝7×31、91＝7×13）。</li>
+  </ol>
+  <div class="ans">答え：16 7/17</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 3.3×2.5＋0.66×5＋121×0.45＋24×26−25×25 <span class="type">5点｜計算のくふう</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>24×26</b>」と「<b>25×25</b>」。24×26＝624、25×25＝625 で、<b>差はちょうど1</b> → 最後は「前の3つの和−1」になる。前の3つは小数のまま計算して66。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>25をはさんで1ずつずれた2数のかけ算は、25×25より1小さい。24×26＝624、25×25＝625。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>前の3つを1つずつ計算する。3.3×2.5＝8.25。0.66×5＝3.3。121×0.45＝54.45。</li>
+    <li>3つをたす。8.25＋3.3＋54.45＝<b>66</b>。</li>
+    <li>後ろの2つ。624−625 は、ひけない分の1を前からひく。66−(625−624)＝66−1＝<b>65</b>。</li>
+    <li>落としやすい所。左から順に計算して「66＋624−625」を一気にやると、けた数の大きい数でまちがえやすい。差の1だけを使う。</li>
+  </ol>
+  <div class="ans">答え：65</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> 正六角形の中の斜線部分 <span class="type">5点｜辺の比と面積の比</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>各辺の真ん中</b>」と「<b>頂点B，E</b>」。図は<b>点対称</b>だから、BEより上の3つの三角形だけ求めて2倍する。正六角形を1とおき、中心Oで6つの正三角形（各1/6）に分けて書く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正六角形は、中心Oと頂点を結ぶと合同な正三角形6つに分かれる。1つは正六角形の1/6。</li>
+    <li>平行な2本の線の間で、底辺が同じ三角形は面積が同じ。頂点を平行な線の上ですべらせても面積は変わらない（等積変形）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>点に名前をつける。ABの真ん中P、BCの真ん中Q、AFの真ん中S、CDの真ん中R。QSとBEの交わる点をT。BEより上の斜線は、三角形㋐・㋑・㋒の3つ。
+      <svg viewBox="0 0 360 340" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+        <defs><pattern id="q1_5_h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#dbe9ff"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1565c0" stroke-width="1"/></pattern></defs>
+        <polygon points="67.4,105 123.7,72.5 95.55,121.25" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+        <polygon points="95.55,121.25 67.4,170 123.7,137.5" fill="#ffe0b2" stroke="#222" stroke-width="1"/>
+        <polygon points="123.7,137.5 236.3,72.5 180,170" fill="#c8e6c9" stroke="#222" stroke-width="1"/>
+        <polygon points="292.6,235 236.3,267.5 264.45,218.75" fill="url(#q1_5_h)" stroke="#222" stroke-width="1"/>
+        <polygon points="264.45,218.75 292.6,170 236.3,202.5" fill="url(#q1_5_h)" stroke="#222" stroke-width="1"/>
+        <polygon points="236.3,202.5 123.7,267.5 180,170" fill="url(#q1_5_h)" stroke="#222" stroke-width="1"/>
+        <polygon points="180,40 67.4,105 67.4,235 180,300 292.6,235 292.6,105" fill="none" stroke="#222" stroke-width="2"/>
+        <polyline points="123.7,72.5 67.4,170 236.3,72.5 123.7,267.5 292.6,170 236.3,267.5" fill="none" stroke="#222" stroke-width="1.5"/>
+        <line x1="67.4" y1="105" x2="292.6" y2="235" stroke="#222" stroke-width="1.5"/>
+        <line x1="123.7" y1="72.5" x2="123.7" y2="137.5" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <line x1="180" y1="40" x2="123.7" y2="137.5" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <line x1="180" y1="40" x2="180" y2="170" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <g font-size="15" fill="#222" font-family="sans-serif">
+          <text x="174" y="32">A</text><text x="48" y="104">B</text><text x="48" y="246">C</text><text x="174" y="320">D</text><text x="300" y="246">E</text><text x="300" y="104">F</text>
+          <text x="112" y="64">P</text><text x="50" y="176">Q</text><text x="236" y="64">S</text><text x="112" y="288">R</text><text x="156" y="186">O</text><text x="112" y="153">T</text>
+        </g>
+        <g font-size="13" fill="#d32f2f" font-family="sans-serif" font-weight="bold">
+          <text x="86" y="104">㋐</text><text x="82" y="146">㋑</text><text x="170" y="128">㋒</text>
+        </g>
+        <circle cx="180" cy="170" r="2.5" fill="#222"/><circle cx="123.7" cy="137.5" r="2.5" fill="#222"/>
+      </svg>
+    </li>
+    <li>㋐と㋑。四角形PBQTは4辺の長さが同じ「ひし形」。ひし形を対角線で4つに分けたうちの2つだから、㋐＋㋑＝<b>三角形PBTの面積</b>。</li>
+    <li>㋒（三角形TSO）。AFとBEは平行。頂点SをAまですべらせると、㋒は三角形ATOと同じ面積になる。</li>
+    <li>正六角形を1とする。正三角形ABOは1/6。ひし形PBQTの角Bは120度で、対角線BTがそれを60度ずつに分ける。だから三角形PBTは正三角形で、BTはBP（ABの半分）と同じ長さ。BOはABと同じ長さなので、TはBOの真ん中。三角形ATO＝1/6×1/2＝<b>1/12</b>。三角形ABTも1/12。</li>
+    <li>PはABの真ん中。三角形PBT＝三角形ABT×1/2＝1/12×1/2＝1/24。</li>
+    <li>BEより上の3つの和は 1/24＋1/12＝1/8。点対称で下にも同じだけあるので、1/8×2＝<b>1/4</b>（倍）。</li>
+    <li>落としやすい所。Tは「BOの真ん中」。QSとBEの交わる点を、BEの真ん中（中心O）とまちがえない。</li>
+  </ol>
+  <div class="ans">答え：1/4</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (6)</span> はじめに見込んだ利益の割合 <span class="type">5点｜売買損益</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>総仕入れ値に対して17%の利益</b>」と「<b>75%</b>」「<b>25%</b>」。総仕入れ値を100とおいて「総売り上げ117」に直して書く → 定価で売った分と1割引きの分に<b>売り上げを比で分ける</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>個数も値段も分からないときは、総仕入れ値を100とおくと、利益や売り上げが数で書ける。</li>
+    <li>売り上げ＝1個の値段×個数。だから売り上げの比は、(値段の比)×(個数の比)。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>総仕入れ値を100。利益は 100×0.17＝17。総売り上げは 100＋17＝<b>117</b>。</li>
+    <li>2つの売り方を表にして、売り上げの比を出す。
+      <table>
+        <tr><th></th><th>定価で売った分</th><th>10%引きで売った分</th></tr>
+        <tr><td>1個の値段の比</td><td>100→10</td><td>100−10＝90→9</td></tr>
+        <tr><td>個数の比</td><td>75%→3</td><td>25%→1</td></tr>
+        <tr><td>売り上げの比</td><td>10×3＝<b>30</b></td><td>9×1＝<b>9</b></td></tr>
+      </table>
+      値段の比は 100：90＝10：9。売り上げの比は 30：9＝10：3。</li>
+    <li>定価で売った分の売り上げ。117×10/(10＋3)＝<b>90</b>。</li>
+    <li>定価で売ったのは仕入れた個数の75%。その分の仕入れ値は 100×0.75＝75。</li>
+    <li>同じ個数で、仕入れ値75が売り上げ90になった。定価は仕入れ値の 90÷75＝1.2（倍）。</li>
+    <li>見込んだ利益は 1.2−1＝0.2（倍）。つまり <b>20%</b>。</li>
+    <li>落としやすい所。「17%」は総仕入れ値に対する利益。1個あたりの定価の割合と取りちがえない。</li>
+  </ol>
+  <div class="ans">答え：20</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (7)</span> 道のりのグラフの x <span class="type">5点｜グラフ・速さ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】正体は「<b>家からの道のり</b>」のグラフ（m・分）。5分から10分は下がる＝<b>家の方へもどっている</b>。部品「<b>平均の速さが毎分70m</b>」を「20分で進んだ道のり1400m」に直して書く → 1000mとの差が「もどった分の2倍」。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>平均の速さ＝進んだ道のりの合計÷かかった時間。だから、進んだ道のりの合計＝平均の速さ×時間。</li>
+    <li>家からの道のりのグラフで、線が下がるときは家の方へ歩いている。平らなときは止まっている。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>進んだ道のりの合計を出す。70×20＝<b>1400</b>（m）。</li>
+    <li>動きを線分図に書く。100mの地点と x mの地点の間を□mとする。
+      <svg viewBox="0 0 360 150" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="q1_7_ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#222"/></marker>
+        <marker id="q1_7_ar2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#d32f2f"/></marker></defs>
+        <line x1="30" y1="50" x2="330" y2="50" stroke="#222" stroke-width="2"/>
+        <line x1="30" y1="42" x2="30" y2="58" stroke="#222" stroke-width="2"/><line x1="330" y1="42" x2="330" y2="58" stroke="#222" stroke-width="2"/>
+        <line x1="60" y1="44" x2="60" y2="56" stroke="#222" stroke-width="1.5"/><line x1="120" y1="44" x2="120" y2="56" stroke="#222" stroke-width="1.5"/>
+        <g font-size="13" fill="#222" font-family="sans-serif">
+          <text x="14" y="38">家</text><text x="318" y="38">学校</text>
+          <text x="32" y="72">100m</text><text x="82" y="72" fill="#d32f2f">□m</text><text x="160" y="36">1000m</text>
+          <text x="112" y="38">x m</text>
+          <text x="134" y="92">0〜5分</text><text x="134" y="114">5〜10分（もどる）</text><text x="200" y="136">15〜20分</text>
+        </g>
+        <path d="M30,22 Q180,6 330,22" fill="none" stroke="#222" stroke-width="1"/>
+        <line x1="30" y1="88" x2="118" y2="88" stroke="#222" stroke-width="1.8" marker-end="url(#q1_7_ar)"/>
+        <line x1="120" y1="110" x2="62" y2="110" stroke="#d32f2f" stroke-width="1.8" marker-end="url(#q1_7_ar2)"/>
+        <line x1="60" y1="132" x2="190" y2="132" stroke="#222" stroke-width="1.8"/>
+        <line x1="270" y1="132" x2="328" y2="132" stroke="#222" stroke-width="1.8" marker-end="url(#q1_7_ar)"/>
+      </svg>
+    </li>
+    <li>3本の矢印をたす。(100＋□)＋□＋(1000−100)＝1000＋□×2。</li>
+    <li>これが1400m。□×2＝1400−1000＝400。□＝<b>200</b>（m）。</li>
+    <li>x＝100＋200＝<b>300</b>。</li>
+    <li>落としやすい所。グラフの最後の1000mを「進んだ道のり」としない。もどった分があるので、進んだ合計は1000mより長い。</li>
+  </ol>
+  <div class="ans">答え：300</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (8)</span> 3方向から見た図と立体の体積 <span class="type">5点｜構成・体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】正体は真上・正面・真横の3つの図。部品は「<b>記号○がついた辺はすべて2cm</b>」と図①の<b>円を4つに分ける線</b>。柱体＝半径2cm・高さ2cmの円柱を4等分したもの、と1行で書く → 図②③で<b>4つの柱がそれぞれ何個積んであるか</b>を数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>柱体の体積＝底面積×高さ。円柱を4等分した1個は、円柱の体積÷4。</li>
+    <li>見取り図の問題では、真上から見た図に「その場所に何個積んであるか」を書きこむと数えやすい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図①は円を十字に4つに分けた形。○の辺が2cmだから、半径2cm。図②③の1段の高さも○で2cm。柱体1個は、半径2cm・高さ2cmの円柱の1/4。</li>
+    <li>図②（正面）を見る。右の列は4段、左の列は3段。左の列は2段目の上に実線があるので、手前の柱は2段で、奥が3段。右の列は1段目の上に実線があるので、手前は1段で、奥が4段。図③（真横）の「手前2段・奥4段」とも合う。</li>
+    <li>真上から見た図に、積んだ個数を書きこむ。
+      <svg viewBox="0 0 300 230" style="max-width:300px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+        <path d="M150,110 L150,30 A80,80 0 0,1 230,110 Z" fill="#ffe0b2" stroke="#222" stroke-width="1.5"/>
+        <path d="M150,110 L70,110 A80,80 0 0,1 150,30 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+        <path d="M150,110 L150,190 A80,80 0 0,1 70,110 Z" fill="#c8e6c9" stroke="#222" stroke-width="1.5"/>
+        <path d="M150,110 L230,110 A80,80 0 0,1 150,190 Z" fill="#ffffff" stroke="#222" stroke-width="1.5"/>
+        <g font-size="22" fill="#d32f2f" font-family="sans-serif" font-weight="bold">
+          <text x="174" y="88">4</text><text x="112" y="88">3</text><text x="112" y="152">2</text><text x="174" y="152">1</text>
+        </g>
+        <g font-size="12" fill="#222" font-family="sans-serif">
+          <text x="128" y="16">奥</text><text x="108" y="218">手前（②の方向）</text><text x="236" y="114">←③</text>
+          <text x="192" y="105" fill="#1565c0">2cm</text>
+        </g>
+      </svg>
+      数字は真上から見た位置に積んだ個数。</li>
+    <li>個数をたす。4＋3＋2＋1＝<b>10</b>（個）。段ごとに見ると、下から4個・3個・2個・1個。</li>
+    <li>柱体1個の体積。2×2×3.14×2÷4＝<b>6.28</b>（cm³）。</li>
+    <li>立体の体積。6.28×10＝62.8（cm³）。</li>
+    <li>落としやすい所。図②③の点線は「つなぎ目」も表す。点線で区切られた所はどれも1個として数える。</li>
+  </ol>
+  <div class="ans">答え：62.8</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1</span> まとめ</h2>
+  <ul>
+    <li>計算は<b>数を分解して同じかけ算の組を作る</b>（2026＝1013×2、143＝11×13）。手を動かす前に合図を見る。</li>
+    <li>割合は「総仕入れ値＝100」、速さは「平均の速さ×時間＝進んだ合計」と、まず1つの数に直す。</li>
+    <li>図形は点対称・平行を見つけて、半分だけ求めて2倍／頂点をすべらせて同じ面積にする。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="2-3-4"><h1 class="dtitle">大問2・3・4（3つのグラフの読みかえ／3つのダイヤルの周期／切り取りブロックの水位と濃度）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">2〜4</span> この回の全体像（担当の大問） <span class="type">45点（大問2・3 各5点×3・3 (2)は完答／大問4 4+6+5点）</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>2</td><td>国語・算数・社会の点数のグラフ</td><td>5+5+5</td><td>「横軸を〇〇の点数」→ どのグラフのどちらの目盛りに何の点数があるかを先に表にする</td></tr>
+    <tr><td>3</td><td>正十四角形のダイヤル3つ（周期）</td><td>5+5（完答）+5</td><td>「1回に3だけ」「2だけ」「5だけ」→ 進む数の差と、14でひとまわりを使う</td></tr>
+    <tr><td>4</td><td>角を切り取ったブロックの水位・食塩水</td><td>4+6+5</td><td>「上昇した高さの1/3」→ 体積も1/3。切り取った2cmの立方体の8cm³が差になる</td></tr>
+  </table>
+  <p>取り方: どの大問も (1) の結果を (2)(3) で使う。大問2は<b>はじめに5人の点数の表を作る</b>と、3問とも表から答えられる。大問4は (1) のAの体積12cm³が (2)(3) の土台になる。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> 出席番号と国語の点数のグラフ3 <span class="type">5点｜グラフの読み取り</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は軸の正体。グラフ1は「<b>横軸を国語の点数</b>」、グラフ3は「<b>縦軸を国語の点数</b>」。グラフ1の点①〜⑤の横の目盛りを読み、表に書き出す（正体を1行）→ 5人の国語の点数が決まる。</div>
+  <h3>📚 前提知識（あれば答え合わせに使う）</h3>
+  <ul>
+    <li>点の横の位置は横軸の値、たての位置は縦軸の値。グラフ1の点①が横6・たて5なら、出席番号1の人は国語6点・算数5点。</li>
+    <li>点にはそれぞれ①〜⑤の番号がついている。だから、線のつながり方を考えなくても、番号で人が分かる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>グラフ1から国語（横）、グラフ2から社会（たて）を読む。算数は両方のグラフにあるので、読みまちがえの確かめに使う。
+      <table>
+        <tr><th>出席番号</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+        <tr><th>国語（グラフ1の横）</th><td>6</td><td>6</td><td>2</td><td>1</td><td>10</td></tr>
+        <tr><th>算数（グラフ1のたて）</th><td>5</td><td>3</td><td>1</td><td>10</td><td>5</td></tr>
+        <tr><th>算数（グラフ2の横）</th><td>5</td><td>3</td><td>1</td><td>10</td><td>5</td></tr>
+        <tr><th>社会（グラフ2のたて）</th><td>3</td><td>8</td><td>10</td><td>10</td><td>9</td></tr>
+      </table>
+    </li>
+    <li>算数の2行が全部同じ。読みまちがいはない。</li>
+    <li>グラフ3に（1番, 6点）（2番, 6点）（3番, 2点）（4番, 1点）（5番, <b>10点</b>）の点を打つ。問題にある1番の点（6点）と合っている。</li>
+    <li>点を出席番号の順に直線でつなぐ。
+<svg viewBox="0 0 330 290" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><line x1="92" y1="250" x2="92" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="144" y1="250" x2="144" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="196" y1="250" x2="196" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="248" y1="250" x2="248" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="300" y1="250" x2="300" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="230" x2="300" y2="230" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="210" x2="300" y2="210" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="190" x2="300" y2="190" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="170" x2="300" y2="170" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="150" x2="300" y2="150" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="130" x2="300" y2="130" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="110" x2="300" y2="110" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="90" x2="300" y2="90" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="70" x2="300" y2="70" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="50" x2="300" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="250" x2="306" y2="250" stroke="#222" stroke-width="1.5"/><line x1="40" y1="250" x2="40" y2="44" stroke="#222" stroke-width="1.5"/><text x="35" y="154" font-size="11" fill="#222" text-anchor="end">5</text><text x="35" y="54" font-size="11" fill="#222" text-anchor="end">10</text><text x="92" y="265" font-size="11" fill="#222" text-anchor="middle">1</text><text x="144" y="265" font-size="11" fill="#222" text-anchor="middle">2</text><text x="196" y="265" font-size="11" fill="#222" text-anchor="middle">3</text><text x="248" y="265" font-size="11" fill="#222" text-anchor="middle">4</text><text x="300" y="265" font-size="11" fill="#222" text-anchor="middle">5</text><text x="35" y="265" font-size="11" fill="#222" text-anchor="end">0</text><text x="300" y="280" font-size="11" fill="#222" text-anchor="end">出席番号（番）</text><text x="36" y="38" font-size="11" fill="#222" text-anchor="start">国語の点数（点）</text><polyline points="92,130 144,130 196,210 248,230 300,50" fill="none" stroke="#d32f2f" stroke-width="2.5"/><circle cx="92" cy="130" r="4" fill="#d32f2f"/><text x="99" y="122" font-size="11" fill="#d32f2f">6点</text><circle cx="144" cy="130" r="4" fill="#d32f2f"/><text x="151" y="122" font-size="11" fill="#d32f2f">6点</text><circle cx="196" cy="210" r="4" fill="#d32f2f"/><text x="168" y="226" font-size="11" fill="#d32f2f">2点</text><circle cx="248" cy="230" r="4" fill="#d32f2f"/><text x="255" y="246" font-size="11" fill="#d32f2f">1点</text><circle cx="300" cy="50" r="4" fill="#d32f2f"/><text x="292" y="44" font-size="11" fill="#d32f2f" text-anchor="end">10点</text></svg></li>
+  </ol>
+  <div class="ans">答え：解説の図2を参照のこと。（グラフ3は 1番6点・2番6点・3番2点・4番1点・5番10点 の5点を順に直線でつないだ折れ線）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 社会と国語の点数のグラフ4 <span class="type">5点｜グラフの読みかえ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品はグラフ4の軸「<b>横軸を社会の点数</b>，<b>縦軸を国語の点数</b>」。(1) の表から（社会, 国語）の組に直して書く → 5つの点の場所が決まる。問題にある②（8, 6）で向きを確かめてから打つ。</div>
+  <h3>📚 前提知識（あれば答え合わせに使う）</h3>
+  <ul>
+    <li>グラフ4の点は（横＝社会, たて＝国語）。グラフ1・2の点とは、横とたてに入る教科がちがう。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>(1) の表から、出席番号ごとに（社会, 国語）を書き出す。
+<pre class="fig">① (3, 6)   ② (8, 6)   ③ (10, 2)
+④ (10, 1)  ⑤ (9, 10)</pre></li>
+    <li>問題にかかれた②は、横8・たて6。表の②と同じ。向きは合っている。</li>
+    <li>①〜⑤の点を打ち、<b>①→②→③→④→⑤の順</b>に直線でつなぐ。③と④は横が同じ10なので、たてにならぶ。
+<svg viewBox="0 0 330 290" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><line x1="66" y1="250" x2="66" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="92" y1="250" x2="92" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="118" y1="250" x2="118" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="144" y1="250" x2="144" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="170" y1="250" x2="170" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="196" y1="250" x2="196" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="222" y1="250" x2="222" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="248" y1="250" x2="248" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="274" y1="250" x2="274" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="300" y1="250" x2="300" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="230" x2="300" y2="230" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="210" x2="300" y2="210" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="190" x2="300" y2="190" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="170" x2="300" y2="170" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="150" x2="300" y2="150" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="130" x2="300" y2="130" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="110" x2="300" y2="110" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="90" x2="300" y2="90" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="70" x2="300" y2="70" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="50" x2="300" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="250" x2="306" y2="250" stroke="#222" stroke-width="1.5"/><line x1="40" y1="250" x2="40" y2="44" stroke="#222" stroke-width="1.5"/><text x="35" y="154" font-size="11" fill="#222" text-anchor="end">5</text><text x="35" y="54" font-size="11" fill="#222" text-anchor="end">10</text><text x="170" y="265" font-size="11" fill="#222" text-anchor="middle">5</text><text x="300" y="265" font-size="11" fill="#222" text-anchor="middle">10</text><text x="35" y="265" font-size="11" fill="#222" text-anchor="end">0</text><text x="300" y="280" font-size="11" fill="#222" text-anchor="end">社会の点数（点）</text><text x="36" y="38" font-size="11" fill="#222" text-anchor="start">国語の点数（点）</text><polyline points="118,130 248,130 300,210 300,230 274,50" fill="none" stroke="#d32f2f" stroke-width="2.5"/><circle cx="118" cy="130" r="4" fill="#d32f2f"/><text x="112" y="122" font-size="13" fill="#d32f2f">①</text><circle cx="248" cy="130" r="4" fill="#d32f2f"/><text x="228" y="124" font-size="13" fill="#d32f2f">②</text><circle cx="300" cy="210" r="4" fill="#d32f2f"/><text x="308" y="214" font-size="13" fill="#d32f2f">③</text><circle cx="300" cy="230" r="4" fill="#d32f2f"/><text x="308" y="240" font-size="13" fill="#d32f2f">④</text><circle cx="274" cy="50" r="4" fill="#d32f2f"/><text x="252" y="54" font-size="13" fill="#d32f2f">⑤</text></svg></li>
+    <li>落としやすい所は、⑤から①にもどる線を引いてしまうこと。グラフ1・2も⑤で止まっている。</li>
+  </ol>
+  <div class="ans">答え：解説の図3を参照のこと。（グラフ4は ①(3, 6) ②(8, 6) ③(10, 2) ④(10, 1) ⑤(9, 10) を①〜⑤の順に直線でつないだ折れ線）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 平均点を表す点P <span class="type">5点｜平均</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>社会の平均点と国語の平均点を表す点P</b>」。グラフ4の横は社会、たては国語なので、（社会の平均, 国語の平均）に直して書く → (1) の表の行をたして5でわれば<b>点の場所が決まる</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>平均＝合計÷人数。3点・5点・7点の平均は、15÷3＝5点。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>社会の行をたす。3＋8＋10＋10＋9＝40。40÷5＝8点。</li>
+    <li>国語の行をたす。6＋6＋2＋1＋10＝25。25÷5＝5点。</li>
+    <li>グラフ4の（横8, たて5）に点Pを打つ。②（8, 6）の1目盛り下になる。
+<svg viewBox="0 0 330 290" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg"><line x1="66" y1="250" x2="66" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="92" y1="250" x2="92" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="118" y1="250" x2="118" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="144" y1="250" x2="144" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="170" y1="250" x2="170" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="196" y1="250" x2="196" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="222" y1="250" x2="222" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="248" y1="250" x2="248" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="274" y1="250" x2="274" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="300" y1="250" x2="300" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="230" x2="300" y2="230" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="210" x2="300" y2="210" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="190" x2="300" y2="190" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="170" x2="300" y2="170" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="150" x2="300" y2="150" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="130" x2="300" y2="130" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="110" x2="300" y2="110" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="90" x2="300" y2="90" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="70" x2="300" y2="70" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="50" x2="300" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="2,3"/><line x1="40" y1="250" x2="306" y2="250" stroke="#222" stroke-width="1.5"/><line x1="40" y1="250" x2="40" y2="44" stroke="#222" stroke-width="1.5"/><text x="35" y="154" font-size="11" fill="#222" text-anchor="end">5</text><text x="35" y="54" font-size="11" fill="#222" text-anchor="end">10</text><text x="170" y="265" font-size="11" fill="#222" text-anchor="middle">5</text><text x="248" y="265" font-size="11" fill="#222" text-anchor="middle">8</text><text x="300" y="265" font-size="11" fill="#222" text-anchor="middle">10</text><text x="35" y="265" font-size="11" fill="#222" text-anchor="end">0</text><text x="300" y="280" font-size="11" fill="#222" text-anchor="end">社会の点数（点）</text><text x="36" y="38" font-size="11" fill="#222" text-anchor="start">国語の点数（点）</text><line x1="248" y1="250" x2="248" y2="150" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,3"/><line x1="40" y1="150" x2="248" y2="150" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,3"/><text x="44" y="145" font-size="11" fill="#1565c0">国語の平均 5点</text><circle cx="248" cy="130" r="3.5" fill="#222"/><text x="255" y="126" font-size="12" fill="#222">②</text><circle cx="248" cy="150" r="4.5" fill="#d32f2f"/><text x="256" y="155" font-size="14" font-weight="bold" fill="#d32f2f">P</text><text x="242" y="210" font-size="11" fill="#1565c0" text-anchor="end">社会の平均 8点</text></svg></li>
+  </ol>
+  <div class="ans">答え：解説の図4を参照のこと。（点Pは グラフ4の 社会8点・国語5点 の位置）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> 同じ回数ずつ回して3つそろう回数 <span class="type">5点｜周期（進む数の差）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同じ回数ずつ回して</b>」と「1回に3だけ」「2だけ」「5だけ」。1回ごとの<b>進む数の差</b>に直して書く → 差が14（ひとまわり）になれば同じ番号になる。2つずつ比べて、そろう回数の公倍数をさがす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ダイヤルは14でひとまわり。14進むと、☆の枠には元と同じ番号が来る。</li>
+    <li>2つのダイヤルの番号が同じになるのは、進んだ数の差が14、28、…のとき。たとえば差0から、1回に1ずつ差が開くなら、14回で差が14になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>AとBを比べる。1回に 3−2＝1 ずつ差が開く。14÷1＝14。<b>14回ごと</b>にそろう。</li>
+    <li>AとCを比べる。1回に 5−3＝2 ずつ差が開く。14÷2＝7。7回ごとにそろう。</li>
+    <li>3つともそろうのは、14回ごとと7回ごとが重なるとき。14と7の最小公倍数は14。</li>
+    <li>たしかめ。14回でAは42、Bは28、Cは70進む。どれも14の倍数。3つとも1にもどる。</li>
+  </ol>
+  <div class="ans">答え：14回</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> 状態あでAの1と並ぶBとCの番号 <span class="type">5点（完答）｜周期（もどして考える）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>ダイヤルAを3回，ダイヤルBを2回，ダイヤルCを1回</b>」。進んだ数に直して書く（A 9・B 4・C 5）→ そろったあとから<b>もどして考える</b>と、AとBのずれは 9−4、AとCのずれは 9−5 で決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>☆の枠の番号がそろうと、まわりの頂点の番号も全部そろう。3つとも同じ向きに1〜14がならんでいるから。</li>
+    <li>2つのダイヤルのずれは、どの頂点で見ても同じ。☆の枠でBがAより5大きければ、Aの1の横にはBの 1＋5＝6 がある。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>状態あから進んだ数を出す。Aは 3×3＝9。Bは 2×2＝4。Cは 5×1＝5。そのあとで3つがそろった。</li>
+    <li>そろうまでに、AはBより 9−4＝5 多く進んだ。だから状態あでは、Bの番号がAより<b>5大きい</b>。</li>
+    <li>同じように、AはCより 9−5＝4 多く進んだ。状態あでは、Cの番号がAより4大きい。
+      <table>
+        <tr><th>状態あ</th><th>Aの番号</th><th>横にあるBの番号</th><th>横にあるCの番号</th></tr>
+        <tr><td>ずれ</td><td>□</td><td>□＋5</td><td>□＋4</td></tr>
+        <tr><td>Aの1の頂点</td><td>1</td><td><b>6</b></td><td><b>5</b></td></tr>
+      </table>
+    </li>
+    <li>たしかめ。Aの1・Bの6・Cの5が☆にあるとする。Aを9、Bを4、Cを5進めると、10・10・10。そろっている。</li>
+  </ol>
+  <div class="ans">答え：B6・C5</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> Cだけ時計回りにしたときの合計最小 <span class="type">5点｜周期（調べ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>回す方向を時計回りに変えました</b>」と「回す回数の合計が最小」。Cの☆の番号は1回に5ずつ<b>へる</b>と直して書く → A・B・Cの番号の表を作り、そろう番号ごとに回数の合計を比べる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>時計回りに回すと、☆の枠の番号は5ずつへる。1の次は 1−5 を14でもどして10。</li>
+    <li>Bは1回に2ずつ進む。1から始めると 1, 3, 5, …, 13 の奇数だけが来る。だから、そろう番号は奇数にしぼれる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>☆の枠の番号を、回数ごとに書く（Aは14回、Bは7回でもとの1にもどる）。
+<pre class="fig">回数 0  1  2  3  4  5  6  7
+A    1  4  7 10 13  2  5  8
+B    1  3  5  7  9 11 13  1
+C    1 10  5 14  9  4 13  8
+回数 8  9 10 11 12 13 14
+A   11 14  3  6  9 12  1
+C    3 12  7  2 11  6  1</pre></li>
+    <li>奇数ごとに、はじめてその番号になる回数を表から読む。0回は使えない（どのダイヤルも1回以上）。
+      <table>
+        <tr><th>そろえる番号</th><th>A</th><th>B</th><th>C</th><th>合計</th></tr>
+        <tr><td>1</td><td>14</td><td>7</td><td>14</td><td>35</td></tr>
+        <tr><td>3</td><td>10</td><td>1</td><td>8</td><td>19</td></tr>
+        <tr><td><b>5</b></td><td>6</td><td>2</td><td>2</td><td><b>10</b></td></tr>
+        <tr><td>7</td><td>2</td><td>3</td><td>10</td><td>15</td></tr>
+        <tr><td>9</td><td>12</td><td>4</td><td>4</td><td>20</td></tr>
+        <tr><td>11</td><td>8</td><td>5</td><td>12</td><td>25</td></tr>
+        <tr><td>13</td><td>4</td><td>6</td><td>6</td><td>16</td></tr>
+      </table>
+    </li>
+    <li>合計がいちばん小さいのは10回。そのときの番号は5。</li>
+    <li>たしかめ。Aを6回で 1＋18＝19 → 5。Bを2回で 1＋4＝5。Cを2回で 1−10 → 14をたして5。そろっている。</li>
+  </ol>
+  <div class="ans">答え：5</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> ブロックAを入れたときの水位の上がり方 <span class="type">4点｜水位と体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>1辺2cmの立方体が切り取られた</b>」と「上昇した高さの<b>1/3</b>」。水位が1/3なら体積も1/3と直して書く → Aの 1−1/3＝2/3 が 2×2×2＝8cm³ になり、Aの体積が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>水位の上がる高さ＝入れた物の体積÷底面積。同じ容器なら、上がる高さと体積は比例する。高さが1/3なら、体積も1/3。</li>
+    <li>容器の底面積は 5×4＝20cm²。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Bの体積は、Aの体積の1/3。BはAから2cmの立方体をとったもの。</li>
+    <li>AとBの差は、切り取った立方体。2×2×2＝8cm³。これがAの 1−1/3＝2/3 にあたる。
+<pre class="fig">A    ├────┼────┼────┤ 1
+B    ├────┤              1/3
+差         ├─────────┤ 2/3 ＝ 8cm³</pre></li>
+    <li>Aの体積は 8÷2/3＝<b>12cm³</b>。</li>
+    <li>水位は 12÷20＝0.6cm 上がる。</li>
+    <li>たしかめ。Bは 12−8＝4cm³。4÷20＝0.2cm。0.6cmの1/3になっている。</li>
+  </ol>
+  <div class="ans">答え：0.6cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 13/27cm上がったときのブロックの個数 <span class="type">6点｜比のくり返し（考え方も書く）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>体積の比，各辺の比</b>が同じ」と「<b>13/27cm上昇</b>」。切り取られたブロックは、1つ前の切り取られたブロックの2/3倍と直して書く → 体積を順にたし、13/27cm分の体積になる所で個数が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>CとDの体積の比はAとBと同じ 3：1。DはCの1/3、Cから切り取った立方体EはCの2/3。</li>
+    <li>Aを1とすると、Bは1/3、Cは2/3。DはCの1/3なので 2/3×1/3＝2/9。これはBの2/3倍。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aの体積を1として、切り取られたブロックの体積を表にする。どれも1つ前の2/3倍になる。
+      <table>
+        <tr><th>ブロック</th><th>B</th><th>D</th><th>F</th><th>H</th></tr>
+        <tr><th>Aを1とした体積</th><td>1/3</td><td>2/9</td><td>4/27</td><td>8/81</td></tr>
+        <tr><th>体積（cm³）</th><td>4</td><td>8/3</td><td>16/9</td><td>32/27</td></tr>
+        <tr><th>ここまでの和</th><td>27/81</td><td>45/81</td><td>57/81</td><td><b>65/81</b></td></tr>
+      </table>
+    </li>
+    <li>上がった水位は13/27cm。(1) でAは0.6cm上げた。水位は体積に比例するので、入れたブロックの体積の和はAの 13/27÷0.6＝<b>65/81倍</b>。</li>
+    <li>表の和が65/81になるのは、B・D・F・Hまで入れたとき。はじめから入っていたBもふくめて4個。</li>
+    <li>たしかめ。cm³でたすと 4＋8/3＋16/9＋32/27＝260/27cm³。20×13/27＝260/27cm³ と同じ。</li>
+  </ol>
+  <div class="ans">答え：4個</div>
+  <div class="tip">コツ：「考え方も含めて」の問題。答案には「Aを1とした体積の表」「13/27÷0.6＝65/81」「1/3＋2/9＋4/27＋8/81＝65/81」の3つを書く。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (3)</span> 20%の食塩水に氷を入れたときのこさ <span class="type">5点｜濃度</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>容器に入っていた水と同じ重さ</b>」と「(2)で容器に入れたブロックB，D，F，…と<b>同じ体積の氷</b>」。水140g、氷は (2) の体積の和をgに直して書く → 食塩の重さは変わらないので、こさが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>こさ（%）＝食塩の重さ÷食塩水の重さ×100。100gの中に食塩20gなら20%。</li>
+    <li>氷がとけても食塩はふえない。食塩水の重さだけがふえる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>はじめの水は 20×7＝140cm³。1cm³＝1gなので140g。これを20%の食塩水140gにかえる。</li>
+    <li>食塩は 140×0.2＝<b>28g</b>。</li>
+    <li>氷の体積は (2) のブロックの和と同じ。20×13/27＝260/27cm³。重さは260/27g。</li>
+    <li>とけたあとの食塩水は 140＋260/27＝4040/27g。</li>
+    <li>こさは 28÷4040/27×100＝1890/101＝18.71…%。小数第2位を四捨五入して18.7%。</li>
+    <li>たしかめ。260/27はおよそ9.6g。28÷149.6×100 はおよそ18.7%。</li>
+  </ol>
+  <div class="ans">答え：18.7%</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">2〜4</span> まとめ</h2>
+  <ul>
+    <li>グラフがいくつも出たら、まず「横軸を〇〇」「縦軸を〇〇」を見て、全員の点数の表を1つ作る。</li>
+    <li>回るダイヤルは、進む数の差と「14でひとまわり」で考える。そろったあとからもどすと、ずれが出る。</li>
+    <li>水位の上がり方は体積に比例する。「高さの1/3」は「体積の1/3」に直して使う。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="5"><h1 class="dtitle">大問5（さいころの目の積と約数の個数・場合の数）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">5</span> この回の全体像（担当の大問） <span class="type">15点（5点×3）</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>5 (1)</td><td>2個の目の積・約数が6個</td><td>5</td><td>6個＝「□×□×△」の形の数</td></tr>
+    <tr><td>5 (2)</td><td>2個の目の積・約数が4個</td><td>5</td><td>4個＝「□×△」か「□×□×□」の形の数</td></tr>
+    <tr><td>5 (3)</td><td>3個の目の積・約数が6個</td><td>5</td><td>(1)の形に「□を5個かけた数」が加わる・同じ目をふくむ組は3通り</td></tr>
+  </table>
+  <p>3問とも、<b>「約数の個数」を「素数のかけ算の形」に直す</b>のが入口。形が決まったら、さいころの目で作れる積を表に書き出す。最後に、目の出方（AとBの入れかえ）を数え落とさない。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)</span> 2個のさいころ・目の積の約数が6個 <span class="type">5点｜約数の個数・場合の数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>約数の個数が6個</b>」と「目の出方」。6個を「<b>□×□×△</b>」の形の数に直して書く → 目の積は36まで、使う素数は2・3・5だけ。当てはまる積を表にして、目の出方を数える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>12の約数は 1、2、3、4、6、12 の6個。12＝<b>2×2×3</b>。2の使い方が「0個・1個・2個」の3通り、3の使い方が「0個・1個」の2通り。3×2＝6個になる。</li>
+    <li>だから「□×□×△」（□と△はちがう素数）の形の数は、約数が6個。□を5個かけた数（2×2×2×2×2＝32）も6個になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>さいころの目は1〜6。目の積をばらすと、出てくる素数は2・3・5だけ。積はいちばん大きくても 6×6＝36。</li>
+    <li>36までで「□×□×△」の形の数を書き出し、2つの目に分ける。
+      <table>
+        <tr><th>形</th><th>目の積</th><th>（A，B）の組</th></tr>
+        <tr><td>2×2×3</td><td>12</td><td>（2，6）（3，4）</td></tr>
+        <tr><td>3×3×2</td><td>18</td><td>（3，6）</td></tr>
+        <tr><td>2×2×5</td><td>20</td><td>（4，5）</td></tr>
+      </table>
+      ほかの組み合わせは36をこえる（3×3×5＝45 など）。32は2つの目では作れない。</li>
+    <li>組は全部で4つ。どれもAとBがちがう目なので、入れかえて<b>2通りずつ</b>。2×4＝8（通り）。</li>
+    <li>落としやすい所。（2，6）と（6，2）は別の目の出方。組の数4をそのまま答えにしない。</li>
+  </ol>
+  <div class="ans">答え：8通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)</span> 2個のさいころ・目の積の約数が4個 <span class="type">5点｜約数の個数・場合の数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>約数の個数が4個</b>」。4個は「<b>□×△</b>」か「□×□×□」の2つの形に直して書く → (1)と同じ表を作る。片方の目が1でも積は作れる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>6＝2×3 の約数は 1、2、3、6 の4個。「□×△」（ちがう素数2つ）は約数が<b>4個</b>。</li>
+    <li>8＝2×2×2 の約数は 1、2、4、8 の4個。「□×□×□」も4個になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>素数は2・3・5、積は36まで。2つの形の数を書き出し、2つの目に分ける。
+      <table>
+        <tr><th>形</th><th>目の積</th><th>（A，B）の組</th></tr>
+        <tr><td>2×3</td><td>6</td><td>（1，6）（2，3）</td></tr>
+        <tr><td>2×5</td><td>10</td><td>（2，5）</td></tr>
+        <tr><td>3×5</td><td>15</td><td>（3，5）</td></tr>
+        <tr><td>2×2×2</td><td>8</td><td>（2，4）</td></tr>
+      </table>
+      3×3×3＝27 は2つの目では作れない。</li>
+    <li>組は全部で5つ。どれもちがう目なので、入れかえて2通りずつ。2×5＝<b>10（通り）</b>。</li>
+    <li>落としやすい所。積6の（1，6）を落としやすい。1の目も表に入れて考える。</li>
+  </ol>
+  <div class="ans">答え：10通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (3)</span> 3個のさいころ・目の積の約数が6個 <span class="type">5点｜約数の個数・場合の数</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は(1)から変わった「<b>AからCの3つのさいころ</b>」に丸。積は216までに広がる → 「□×□×△」に加えて「<b>□×□×□×□×□</b>」（32）も表に入れ、同じ目をふくむ組とふくまない組で数え方を分ける。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3つの目がすべてちがう組（1，2，6）は、ならべ方が 3×2×1＝6通り。</li>
+    <li>2つが同じ組（2，2，3）は、ちがう目をどこに置くかだけ。<b>3通り</b>になる。（2，2，3）（2，3，2）（3，2，2）。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>素数は2・3・5。積は 6×6×6＝216 まで。「□×□×△」は12・18・20・45・50・75。「□を5個」は32。</li>
+    <li>それぞれを3つの目に分けて表にする。同じ目をふくむ組に印をつける。
+      <table>
+        <tr><th>形</th><th>目の積</th><th>ちがう目3つ（6通りずつ）</th><th>同じ目をふくむ（3通りずつ）</th></tr>
+        <tr><td>2×2×3</td><td>12</td><td>（1，2，6）（1，3，4）</td><td>（2，2，3）</td></tr>
+        <tr><td>3×3×2</td><td>18</td><td>（1，3，6）</td><td>（2，3，3）</td></tr>
+        <tr><td>2×2×5</td><td>20</td><td>（1，4，5）</td><td>（2，2，5）</td></tr>
+        <tr><td>3×3×5</td><td>45</td><td></td><td>（3，3，5）</td></tr>
+        <tr><td>5×5×2</td><td>50</td><td></td><td>（2，5，5）</td></tr>
+        <tr><td>5×5×3</td><td>75</td><td></td><td>（3，5，5）</td></tr>
+        <tr><td>2×2×2×2×2</td><td>32</td><td></td><td>（2，4，4）</td></tr>
+      </table>
+    </li>
+    <li>同じ目をふくむ組は7つで、3×7＝21（通り）。ちがう目3つの組は4つで、6×4＝24（通り）。</li>
+    <li>合わせて 21＋24＝<b>45（通り）</b>。</li>
+    <li>落としやすい所。2つの目では作れなかった32が、（2，4，4）で作れる。(1)の表を写すだけだと3通り足りなくなる。</li>
+  </ol>
+  <div class="ans">答え：45通り</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">5</span> まとめ</h2>
+  <ul>
+    <li>約数の個数は、素数のかけ算の形で決まる。6個＝□×□×△（か□を5個）、4個＝□×△（か□×□×□）。</li>
+    <li>さいころの目の積は、素数2・3・5だけでできる。積の上限（36・216）を先に書く。</li>
+    <li>組を書いたあとで、ならべ方を数える。ちがう目2つは2通り、3つは6通り、2つが同じなら3通り。</li>
+  </ul>
+</section>
+</div>
