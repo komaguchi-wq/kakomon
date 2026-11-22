@@ -1,0 +1,731 @@
+<!-- generated kakomon koishikawa/2023-1/sansu kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（計算・計算のくふう・分数の和・カードの並べ方・曜日／回転体・おうぎ形・和が3の倍数・平均・売買損益）</a></li>
+<li><a href="#3-4-5">大問3・4・5（容器の水の深さ・新幹線の停車とすれ違い・正八面体の展開図）</a></li>
+<li><a href="#6">大問6（6ずつ増える数の列・会話文の考え方A）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（計算・計算のくふう・分数の和・カードの並べ方・曜日／回転体・おうぎ形・和が3の倍数・平均・売買損益）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（大問1・2） <span class="type">配点 45点（20＋25）</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>1 (1)</td><td>分数・小数のまざった計算</td><td>4</td><td>「÷1/6」は×6、「0.625」は5/8</td></tr>
+    <tr><td>1 (2)</td><td>□が4つある逆算</td><td>4</td><td>「すべて同じ数」→ □をまとめて15×□</td></tr>
+    <tr><td>1 (3)</td><td>分母がばらばらの分数の和</td><td>4</td><td>5つの分母の最小公倍数1080で通分</td></tr>
+    <tr><td>1 (4)</td><td>カードで3けたの整数</td><td>4</td><td>「9が2枚」→ 9の使い方で分ける</td></tr>
+    <tr><td>1 (5)</td><td>2年前の曜日</td><td>4</td><td>間の日数を7で割ったあまり</td></tr>
+    <tr><td>2 (1)</td><td>回転体の体積</td><td>5</td><td>くぼみは回すと「ぬける輪」</td></tr>
+    <tr><td>2 (2)</td><td>長方形とおうぎ形の面積</td><td>5</td><td>AB＝BC＝CD＝2 → 合同と45°</td></tr>
+    <tr><td>2 (3)</td><td>和が3の倍数になる選び方</td><td>5</td><td>3で割ったあまりでグループ分け</td></tr>
+    <tr><td>2 (4)</td><td>平均がいちばん低いとき</td><td>5</td><td>平均は合計に直す・「100点が満点」</td></tr>
+    <tr><td>2 (5)</td><td>値下げの売買損益</td><td>5</td><td>目標の売り上げから残り80個の値段</td></tr>
+  </table>
+  <p>大問1は4点ずつ、大問2は5点ずつ。大問1は<b>計算の順番</b>と<b>分け方</b>を決めれば手が止まらない。大問2は、どの問も<b>条件の言葉を図や表、合計の数に直す</b>ところから始まる。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (1)</span> {1 1/6＋(1 1/2−1 1/24)÷1/6−3 1/12}÷0.625 <span class="type">4点｜四則計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>÷1/6</b>」と「<b>0.625</b>」。÷1/6 は×6に、0.625は5/8に直して書く → 分数だけの式になり、<b>小かっこから順に</b>計算できる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>分数でわるのは、ひっくり返してかけるのと同じ。÷1/6 は ×6。</li>
+    <li>0.625＝625/1000＝5/8。0.125＝1/8 の5つ分と見ると速い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小かっこを先に計算する。1 12/24−1 1/24＝<b>11/24</b>。</li>
+    <li>11/24×6＝11/4。式は次の形になる。
+<pre class="fig">(7/6 ＋ 11/4 − 37/12) ÷ 5/8</pre></li>
+    <li>分母を12にそろえる。14/12＋33/12−37/12＝10/12。</li>
+    <li>10/12×8/5＝4/3。帯分数にすると 1 1/3。</li>
+    <li>落としやすい所。÷1/6（×6）は、たし算やひき算より先に計算する。11/24 に6をかける前に 7/6 とたしてしまうと合わない。</li>
+  </ol>
+  <div class="ans">答え：1 1/3</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (2)</span> {8×□＋2×(7×□−2×□)−3×□}÷55/9＝81/77 <span class="type">4点｜計算のくふう（逆算）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>すべて同じ数が入ります</b>」。□を1つのまとまりと見て、何こ分あるかを数えて書く → <b>15×□</b> にまとまり、あとは後ろからもどすだけになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数の「何こ分」は、たしひきできる。7×□−2×□ は、□が7こから2こへった5こ分。</li>
+    <li>A÷B＝C なら、A＝C×B。わり算はかけ算でもどす。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>小かっこの中をまとめる。7×□−2×□＝5×□。</li>
+    <li>2×(5×□)＝10×□。全体は 8×□＋10×□−3×□＝<b>15×□</b>。</li>
+    <li>15×□÷55/9＝81/77 をもどす。15×□＝81/77×55/9＝45/7。</li>
+    <li>□＝45/7÷15＝3/7。</li>
+    <li>たしかめ。15×3/7＝45/7。45/7÷55/9＝45/7×9/55＝81/77 で合う。</li>
+  </ol>
+  <div class="ans">答え：3/7</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (3)</span> 1/4＋1/10＋1/18＋1/40＋1/54 <span class="type">4点｜分数の和</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は分母の「<b>4, 10, 18, 40, 54</b>」。5つの最小公倍数を出して書く → <b>1080</b>で通分すれば、分子のたし算1回で終わる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>最小公倍数は、数を素数のかけ算に分けて、それぞれ一番多い個数をかける。40＝2×2×2×5、54＝2×3×3×3。だから 2×2×2×3×3×3×5＝1080。</li>
+    <li>答えは約分しきる。分子と分母を同じ数でわれるだけわる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>それぞれを1080を分母にした分数に直す。
+<pre class="fig">1/4＝270/1080   1/10＝108/1080   1/18＝60/1080
+1/40＝27/1080   1/54＝20/1080</pre></li>
+    <li>分子をたす。270＋108＋60＋27＋20＝<b>485</b>。</li>
+    <li>485/1080 を5でわって約分する。97/216。97は素数なので、これ以上約分できない。</li>
+  </ol>
+  <div class="ans">答え：97/216</div>
+  <div class="tip">別の見方：分母は 1×4、2×5、3×6、5×8、6×9 と「差が3の2数のかけ算」。1/(1×4)＝(1/1−1/4)÷3 のように分ける方法もある。ただ、消し合うのは 1/5 と 1/6 だけなので、ここでは通分のほうが速い。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (4)</span> 9が2枚あるカードで3けたの整数 <span class="type">4点｜場合の数（並べ方）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>9が2枚</b>」。9を何枚使うかで分けて表に書く → 0枚・1枚のときは<b>1〜9のちがう3枚</b>の並べ方、2枚のときは「99○」の形だけ数えればよい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>ちがう9枚から3枚を1列に並べる数は、百の位9通り、十の位8通り、一の位7通り。9×8×7＝504通り。</li>
+    <li>同じ9のカード2枚は、入れかえても同じ整数になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>9の使い方で分ける。
+      <table>
+        <tr><th>9を使う枚数</th><th>どんな並べ方か</th><th>個数</th></tr>
+        <tr><td>0枚か1枚</td><td>1〜9のちがう3枚を並べる</td><td>9×8×7＝504</td></tr>
+        <tr><td>2枚</td><td>「99○」「9○9」「○99」。○は1〜8の8通り</td><td>8×3＝24</td></tr>
+      </table>
+    </li>
+    <li>合わせて 504＋24＝<b>528</b>個。</li>
+    <li>落としやすい所。9を2枚使う並べ方を忘れて504で止まる。「同じカードが2枚」は、それだけの場合を別に数える合図。</li>
+  </ol>
+  <div class="ans">答え：528</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 (5)</span> うるう年の2月3日が金曜日、2年前の6月12日は <span class="type">4点｜周期算（曜日）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>うるう年の2月3日</b>」と「<b>2年前の6月12日</b>」。2つの日の間の日数を出して書く → <b>7で割ったあまり</b>の分だけ、曜日が前にずれる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>うるう年は4年に1回。うるう年の前の年は、うるう年ではない。だから365日。</li>
+    <li>2月29日は2月3日より後。この年のうるう日は、今回の日数に入らない。</li>
+    <li>7日ごとに同じ曜日にもどる。601日前なら、601÷7のあまりの6日分だけずれる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>2年前の6月12日から、この年の2月2日までを3つに分けて表にする。
+      <table>
+        <tr><th>区切り</th><th>日数</th></tr>
+        <tr><td>2年前の6月12日〜12月31日</td><td>(30−12＋1)＋31＋31＋30＋31＋30＋31＝203</td></tr>
+        <tr><td>前の年の1年間（うるう年でない）</td><td>365</td></tr>
+        <tr><td>この年の1月1日〜2月2日</td><td>31＋2＝33</td></tr>
+      </table>
+    </li>
+    <li>合計 203＋365＋33＝<b>601</b>日。2年前の6月12日は、2月3日の601日前。</li>
+    <li>601÷7＝85あまり6。金曜日から6つ前にもどる。金→木→水→火→月→日→<b>土</b>。</li>
+    <li>落としやすい所。6月12日をふくめるので、6月の分は 30−12 ではなく 30−12＋1＝19日。</li>
+  </ol>
+  <div class="ans">答え：土</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (1)</span> くぼみのある図形を軸あで1回転 <span class="type">5点｜回転体の体積</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>軸あ</b>」と、上下2つの<b>くぼみ</b>。くぼみは軸から2cm〜4cmの所にある → 回すと「ぬける輪」に直して書く。大きな円柱から、2つの輪をぬけばよい。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>長方形を、1辺を軸にして回すと円柱になる。軸からはなれた長方形を回すと、真ん中がぬけた輪の形になる。</li>
+    <li>輪の体積は「外側の円柱−内側の円柱」。円周率は最後にまとめてかけると計算が軽い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に半径と高さを書きこむ。全体の横は 2×3＝6cm、高さは10cm。
+<svg viewBox="0 0 360 330" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <rect x="112" y="30" width="52" height="156" fill="#ffe0b2"/>
+  <rect x="112" y="238" width="52" height="52" fill="#ffe0b2"/>
+  <polygon points="60,290 112,290 112,238 164,238 164,290 216,290 216,30 164,30 164,186 112,186 112,30 60,30" fill="#dbe9ff" fill-opacity="0.5" stroke="#222" stroke-width="2"/>
+  <line x1="60" y1="12" x2="60" y2="318" stroke="#222" stroke-width="1.5"/>
+  <text x="66" y="22" fill="#222">軸あ</text>
+  <text x="120" y="112" fill="#d32f2f">高さ6</text>
+  <text x="120" y="269" fill="#d32f2f">高さ2</text>
+  <line x1="60" y1="306" x2="216" y2="306" stroke="#1565c0" stroke-dasharray="4 3"/>
+  <text x="122" y="322" fill="#1565c0">半径6</text>
+  <line x1="60" y1="210" x2="164" y2="210" stroke="#1565c0" stroke-dasharray="4 3"/>
+  <text x="66" y="206" fill="#1565c0" font-size="11">半径4</text>
+  <line x1="60" y1="225" x2="112" y2="225" stroke="#1565c0" stroke-dasharray="4 3"/>
+  <text x="66" y="221" fill="#1565c0" font-size="11">半径2</text>
+  <text x="222" y="165" fill="#222">高さ10</text>
+  <text x="226" y="60" fill="#d32f2f" font-size="12">くぼみ（オレンジ）は</text>
+  <text x="226" y="76" fill="#d32f2f" font-size="12">回すと「ぬける輪」</text>
+  <text x="226" y="92" fill="#d32f2f" font-size="12">内側の半径2</text>
+  <text x="226" y="108" fill="#d32f2f" font-size="12">外側の半径4</text>
+</svg></li>
+    <li>全体の円柱。6×6×3.14×10＝<b>360×3.14</b>。</li>
+    <li>2つのくぼみは、どちらも内側の半径2・外側の半径4。高さを上下つなげると 6＋2＝8cm の輪1つと同じ。</li>
+    <li>ぬける輪。4×4×3.14×8−2×2×3.14×8＝128×3.14−32×3.14＝96×3.14。</li>
+    <li>残り。360×3.14−96×3.14＝264×3.14＝<b>828.96</b>cm³。</li>
+    <li>落としやすい所。くぼみを「半径2の円柱」とすると、軸のそばの部分までぬいてしまう。くぼみは軸からはなれているので輪になる。</li>
+  </ol>
+  <div class="ans">答え：828.96cm³</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (2)</span> 長方形とおうぎ形、AB＝BCの斜線部分 <span class="type">5点｜面積（おうぎ形）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>AB＝BC</b>」と「<b>2cm</b>」。おうぎ形の半径CDも2cmなので、図に AB＝BC＝CD＝2 と書く → 三角形ABEとDCEが<b>合同</b>になり、Eは真ん中、角ACBは45°と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>直角をはさむ2辺が同じ長さの三角形は、直角二等辺三角形。残りの2つの角は45°ずつ。</li>
+    <li>おうぎ形の面積は 半径×半径×3.14×(中心角÷360)。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>図に点の名前と長さを書く。ADとBCが交わる点をE、おうぎ形の上の端をFとする。
+<svg viewBox="0 0 380 260" style="max-width:360px;width:100%;height:auto;display:block" font-family="sans-serif" font-size="13">
+  <polygon points="100,230 220,230 220,170" fill="#c8e6c9"/>
+  <polygon points="340,110 220,110 220,170" fill="#c8e6c9"/>
+  <polygon points="100,230 220,170 220,110" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+  <path d="M220,110 L340,110 A120,120 0 0 0 304.85,25.15 Z" fill="#ffe0b2" stroke="#d32f2f" stroke-width="2"/>
+  <polyline points="220,110 20,110 20,230 220,230" fill="none" stroke="#222" stroke-width="2"/>
+  <line x1="220" y1="110" x2="220" y2="230" stroke="#222" stroke-width="2"/>
+  <line x1="220" y1="110" x2="340" y2="110" stroke="#222" stroke-width="2"/>
+  <path d="M220,230 A120,120 0 0 0 304.85,25.15" fill="none" stroke="#222" stroke-width="2"/>
+  <line x1="100" y1="230" x2="304.85" y2="25.15" stroke="#222" stroke-width="1.5"/>
+  <line x1="100" y1="230" x2="340" y2="110" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <circle cx="220" cy="170" r="3" fill="#1565c0"/>
+  <text x="94" y="250">A</text><text x="214" y="250">B</text>
+  <text x="204" y="104">C</text><text x="346" y="114">D</text>
+  <text x="226" y="176" fill="#1565c0">E</text><text x="308" y="22">F</text>
+  <text x="150" y="246" fill="#222" font-size="12">2cm</text>
+  <text x="226" y="210" fill="#222" font-size="12">BE＝1</text>
+  <text x="226" y="148" fill="#222" font-size="12">CE＝1</text>
+  <text x="255" y="126" fill="#222" font-size="12">CD＝2</text>
+  <text x="252" y="102" fill="#d32f2f" font-size="12">45°</text>
+  <text x="30" y="175" fill="#222" font-size="12">たて2cm</text>
+</svg></li>
+    <li>三角形ABEとDCE（緑）は、AB＝DC＝2、直角どうし、向かい合う角どうしが同じ。合同なので CE＝BE＝2÷2＝1cm。</li>
+    <li>斜線の三角形AEC。底辺CE＝1、高さはAからBCまでの2。1×2÷2＝<b>1</b>cm²。</li>
+    <li>三角形ABCは直角二等辺三角形。角ACB＝45°。角DCF＝180−45−90＝45°。</li>
+    <li>おうぎ形CDF。2×2×3.14×45/360＝1.57cm²。</li>
+    <li>合わせて 1＋1.57＝<b>2.57</b>cm²。</li>
+  </ol>
+  <div class="ans">答え：2.57cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (3)</span> 1〜9から3つ選んで和が3の倍数 <span class="type">5点｜場合の数（組み合わせ）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>和が3の倍数</b>」。1〜9を3で割ったあまり（0・1・2）で3つのグループに分けて書く → <b>同じグループから3つ</b>か、<b>3グループから1つずつ</b>の2通りだけになる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>たし算の和を3で割ったあまりは、それぞれのあまりをたして考えればよい。4＋5＝9 なら、あまり1＋あまり2＝3 で割り切れる。</li>
+    <li>3つのあまりの和が3の倍数になるのは、0＋0＋0、1＋1＋1、2＋2＋2、0＋1＋2 だけ。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>グループ分けを書く。
+      <table>
+        <tr><th>3で割ったあまり</th><th>数</th></tr>
+        <tr><td>0</td><td>3, 6, 9</td></tr>
+        <tr><td>1</td><td>1, 4, 7</td></tr>
+        <tr><td>2</td><td>2, 5, 8</td></tr>
+      </table>
+    </li>
+    <li>同じグループから3つ全部。各グループ1通りで、3グループで3通り。</li>
+    <li>3グループから1つずつ。3×3×3＝<b>27</b>通り。</li>
+    <li>合わせて 3＋27＝<b>30</b>通り。</li>
+    <li>たしかめ。声の教育社の解説は、和が6・9・12・15・18・21・24のときを全部書き出している。1＋3＋7＋8＋7＋3＋1＝30通りで同じになる。</li>
+  </ol>
+  <div class="ans">答え：30通り</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (4)</span> A・B・Cの平均点がいちばん低くなるとき <span class="type">5点｜平均</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>100点が満点</b>」と「<b>E君よりもA君のほうが点数が高い</b>」。平均は全部、合計に直して書く → B＋CはD＝100点のとき、AはEとほぼ半分ずつのときに<b>いちばん小さい</b>。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>合計＝平均×人数。5人の平均71点なら、合計は 71×5＝355点。</li>
+    <li>点数は整数。151点を2人で分けて A＞E にするなら、A は 75.5 より大きい整数＝76点が最小。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>合計を書き出す。5人は 355点。B・C・Dは 68×3＝204点。A・Eは 355−204＝151点。</li>
+    <li>B＋Cを小さくする。Dを満点の100点にする。B＋C＝204−100＝104点。</li>
+    <li>Aを小さくする。151÷2＝75.5。AのほうがEより高いので、Aは<b>76</b>点、Eは75点。</li>
+    <li>A＋B＋C＝76＋104＝180点。平均は 180÷3＝<b>60</b>点。</li>
+    <li>落としやすい所。Aを75.5点にすると、Eも75.5点で同じ点になってしまう。「A君のほうが点数が高い」は、Aを半分より上の整数にする合図。</li>
+  </ol>
+  <div class="ans">答え：60点</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 (5)</span> 3割5分の利益の値段から、利益2割にする値下げ <span class="type">5点｜売買損益</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>3割5分</b>」「20個しか売れなかった」「<b>利益が2割</b>」。割合を1.35倍・1.2倍に直して書く → 目標の売り上げから、すでに売れた20個分を引けば、残り80個の値段が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>3割5分＝0.35。原価の3割5分の利益をのせた値段は、原価×1.35。</li>
+    <li>全体で「利益2割」なら、売り上げの合計が 仕入れの合計×1.2 になればよい。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>「3200円で100個仕入れた」は、1個3200円で100個と読む（声の教育社の解説もこの読み方で計算している）。仕入れの合計は 3200×100＝320000円。</li>
+    <li>はじめの値段は 3200×1.35＝<b>4320</b>円。20個の売り上げは 4320×20＝86400円。</li>
+    <li>目標の売り上げは 320000×1.2＝384000円。残り80個で 384000−86400＝297600円を売り上げる。</li>
+    <li>1個あたり 297600÷80＝3720円。値下げは 4320−3720＝<b>600</b>円。</li>
+    <li>落としやすい所。「利益2割」を残りの80個だけで考えると合わない。全体の売り上げで考える。</li>
+  </ol>
+  <div class="ans">答え：600円</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ</h2>
+  <ul>
+    <li>同じものが2つある（9が2枚・□がすべて同じ）→ それだけの場合を分ける、まとめて何こ分と数える。</li>
+    <li>「最も低く」「最も小さく」→ 合計に直してから、ほかの人を満点や半分ずつに寄せる。</li>
+    <li>図形は、等しい長さを図に全部書きこむ。合同や45°が見えて、面積の式が立つ。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4-5"><h1 class="dtitle">大問3・4・5（容器の水の深さ・新幹線の停車とすれ違い・正八面体の展開図）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜5</span> この回の全体像（大問3・4・5） <span class="type">配点 39点（15＋12＋12）</span></h2>
+  <table>
+    <tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>3</td><td>底面積のちがう3つの円柱の容器に水を移す</td><td>5＋5＋5</td><td>「BはAの3/4倍」「CはBの2/3倍」→ 底面積を ④③② の比にする</td></tr>
+    <tr><td>4</td><td>新幹線が4分停車して、すれ違う場所がずれる</td><td>6＋6</td><td>「4分停車」→ 新幹線は予定より4分おくれる。速さの比は 320：160＝2：1</td></tr>
+    <tr><td>5</td><td>正八面体の展開図（平行な面・数字の向き）</td><td>2×3＋3＋3</td><td>展開図の頂点に記号をつけ、組み立てると重なる頂点をさがす</td></tr>
+  </table>
+  <p>3は比を1回作れば3問とも同じ形で解ける。4は「4分おくれ」を道のりに直すのが入口。5は(1)で使った<b>頂点の記号づけ</b>が(2)でもそのまま使える。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (1)</span> Aの水をすべてBに入れたときの深さ <span class="type">5点｜比と水の深さ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>BはAの3/4倍</b>」「CはBの2/3倍」。分数のままでは比べにくいので、<b>底面積の比 A：B：C＝④：③：②</b> に直して書く → 水の体積も④×36 の形で出せる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>水の体積＝底面積×深さ。体積が同じなら、深さは底面積でわって出す。</li>
+    <li>底面積が分からなくても、比の数（④や③）を使えば計算できる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Cの底面積はAの何倍かを出す。3/4×2/3＝1/2 で、Aの1/2倍。</li>
+    <li>A：B：C＝1：3/4：1/2。4倍して整数にすると <b>4：3：2</b>。底面積を ④、③、② とする。</li>
+    <li>Aの水の体積は ④×36＝144。これを底面積③のBに入れる。
+<svg viewBox="0 0 360 200" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="40" width="120" height="140" fill="none" stroke="#222" stroke-width="2"/>
+  <rect x="20" y="88" width="120" height="92" fill="#dbe9ff"/>
+  <rect x="20" y="40" width="120" height="140" fill="none" stroke="#222" stroke-width="2"/>
+  <text x="80" y="140" font-size="15" text-anchor="middle" fill="#222">④×36＝144</text>
+  <text x="80" y="30" font-size="14" text-anchor="middle" fill="#222">A（底面積④）</text>
+  <text x="150" y="138" font-size="13" fill="#222">36cm</text>
+  <line x1="190" y1="110" x2="215" y2="110" stroke="#1565c0" stroke-width="2"/>
+  <polygon points="215,104 225,110 215,116" fill="#1565c0"/>
+  <rect x="235" y="40" width="90" height="140" fill="#ffffff" stroke="#222" stroke-width="2"/>
+  <rect x="235" y="57" width="90" height="123" fill="#dbe9ff"/>
+  <rect x="235" y="40" width="90" height="140" fill="none" stroke="#222" stroke-width="2"/>
+  <text x="280" y="30" font-size="14" text-anchor="middle" fill="#222">B（底面積③）</text>
+  <text x="280" y="125" font-size="15" text-anchor="middle" fill="#d32f2f">144÷3</text>
+  <text x="280" y="145" font-size="15" text-anchor="middle" fill="#d32f2f">＝48</text>
+</svg></li>
+    <li>深さは 144÷3＝48(cm)。底面積が小さいBのほうが深くなるので、36cmより大きくて合っている。</li>
+  </ol>
+  <div class="ans">答え：48cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (2)</span> BとCに同じ量ずつ入れたときの深さの差 <span class="type">5点｜比と水の深さ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>同じ量ずつ</b>」と「深さの<b>差</b>」。144を2つに分けて 72ずつにする → 72÷③ と 72÷② を出してから引く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ量の水なら、底面積が小さい容器ほど深くなる。底面積が③と②なら、Cのほうが深い。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>Aの水は144（(1)と同じ）。同じ量ずつなので、144÷2＝72 ずつ入れる。</li>
+    <li>Bの深さは 72÷3＝24(cm)。Cの深さは 72÷2＝36(cm)。</li>
+    <li>差は 36−24＝<b>12(cm)</b>。</li>
+  </ol>
+  <div class="ans">答え：12cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 (3)</span> BとCの深さを同じにする <span class="type">5点｜比と水の深さ</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2つの容器の深さを同じに</b>」。深さが同じなら、BとCを<b>底面積⑤の1つの容器</b>とみて書く → 144÷5 で深さが出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>深さをそろえて1cmずつ水を入れると、Bに③、Cに②、合わせて⑤ずつ入る。だから、BとCを合わせた1つの容器と考えられる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>BとCを横にならべて、1つの容器として図に書く。
+<svg viewBox="0 0 360 205" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <rect x="60" y="80" width="150" height="90" fill="#dbe9ff"/>
+  <rect x="210" y="80" width="100" height="90" fill="#c8e6c9"/>
+  <rect x="60" y="30" width="150" height="140" fill="none" stroke="#222" stroke-width="2"/>
+  <rect x="210" y="30" width="100" height="140" fill="none" stroke="#222" stroke-width="2"/>
+  <line x1="40" y1="80" x2="330" y2="80" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="135" y="22" font-size="14" text-anchor="middle" fill="#222">B（底面積③）</text>
+  <text x="260" y="22" font-size="14" text-anchor="middle" fill="#222">C（底面積②）</text>
+  <text x="185" y="195" font-size="14" text-anchor="middle" fill="#222">BとCを合わせて底面積⑤・水144</text>
+  <text x="20" y="130" font-size="14" fill="#d32f2f">□cm</text>
+  <line x1="50" y1="80" x2="50" y2="170" stroke="#d32f2f" stroke-width="1.5"/>
+</svg></li>
+    <li>深さ1cmあたりに入る水は ③×1＋②×1＝⑤。</li>
+    <li>水は全部で144。深さは 144÷5＝<b>28.8(cm)</b>。</li>
+    <li>たしかめ。Bに ③×28.8＝86.4、Cに ②×28.8＝57.6。合わせて144で合っている。</li>
+  </ol>
+  <div class="ans">答え：28.8cm</div>
+  <div class="tip">コツ：(1)〜(3)は全部「水の体積144」を、どの底面積でわるかのちがいだけ。最初に ④：③：② と144を書いておくと、3問とも1行で終わる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (1)</span> 停車中にすれ違う場所がC駅から一番はなれるとき <span class="type">6点｜速さと比（ダイヤグラム）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>停車している間に</b>すれ違う」と「C駅と<b>1番離れた</b>」。一番はなれるのは、4分停車が終わる<b>ちょうどその時</b>に特急電車が来るとき → ダイヤグラムに停車の横線を書いてから考える。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ時間に進む道のりの比は、速さの比と同じ。新幹線と特急電車は 320：160＝2：1。</li>
+    <li>時速160kmで4分進むと、160×4/60＝32/3(km)。分は60でわって時間に直す。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>たて＝道のり、横＝時間のグラフを書く。新幹線がPで止まり、4分後に動き出す。そのとき特急電車がちょうどPに来る。
+<svg viewBox="0 0 360 250" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="20" x2="40" y2="235" stroke="#222" stroke-width="1.5"/>
+  <line x1="40" y1="235" x2="350" y2="235" stroke="#222" stroke-width="1.5"/>
+  <text x="34" y="34" font-size="13" text-anchor="end" fill="#222">B駅</text>
+  <text x="34" y="234" font-size="13" text-anchor="end" fill="#222">A駅</text>
+  <text x="34" y="101" font-size="13" text-anchor="end" fill="#222">C駅</text>
+  <text x="34" y="89" font-size="13" text-anchor="end" fill="#1565c0">Q</text>
+  <text x="34" y="126" font-size="13" text-anchor="end" fill="#d32f2f">P</text>
+  <line x1="40" y1="96.7" x2="200" y2="96.7" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="40" y1="84.2" x2="170" y2="84.2" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="40" y1="121.7" x2="170" y2="121.7" stroke="#d32f2f" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="40" y1="30" x2="320" y2="146.7" stroke="#222" stroke-width="2"/>
+  <text x="120" y="52" font-size="13" fill="#222">特急電車（時速160km）</text>
+  <polyline points="40,230 170,121.7 260,121.7 330,63.4" fill="none" stroke="#222" stroke-width="2.5"/>
+  <line x1="170" y1="121.7" x2="200" y2="96.7" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="70" y="215" font-size="13" fill="#222">新幹線（時速320km）</text>
+  <line x1="170" y1="84.2" x2="170" y2="121.7" stroke="#1565c0" stroke-width="1" stroke-dasharray="2 3"/>
+  <text x="215" y="140" font-size="13" text-anchor="middle" fill="#d32f2f">4分停車</text>
+  <circle cx="260" cy="121.7" r="4" fill="#d32f2f"/>
+  <text x="236" y="166" font-size="12" fill="#d32f2f">すれ違い</text>
+</svg></li>
+    <li>新幹線が止まったとき、特急電車はQにいる。そこから4分でPまで来る。QP＝160×4/60＝32/3(km)。</li>
+    <li>もし止まらなければ、新幹線はPからCへ、特急電車はQからCへ、同じ時間で進んでC駅で会うはずだった（青い破線）。同じ時間なので、PC：QC＝320：160＝2：1。</li>
+    <li>QPを 2：1 に分けた大きいほうがPC。32/3×2/3＝64/9＝<b>7 1/9(km)</b>。</li>
+  </ol>
+  <div class="ans">答え：7 1/9km</div>
+  <div class="tip">コツ：「C駅で会う予定」があるときは、止まらなかった場合の線（予定の線）も破線で書く。予定の線と実際の線を見くらべると、同じ時間に進んだ所が比で出せる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 (2)</span> 折り返した特急電車を新幹線が追いこす <span class="type">6点｜速さと比（ダイヤグラム）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「4分停車」と「<b>8分後に</b>…<b>ちょうど真ん中</b>で追い越し」。新幹線は予定より4分おくれて<b>C駅を通るのは折り返しの4分後</b>に直して書く → 残りの4分で進んだ道のりがBC間の半分。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>予定では新幹線と特急電車はC駅で会う。新幹線が4分止まると、C駅に着くのも4分おそくなる。</li>
+    <li>同じ時間で進む道のりの比は、速さの比 2：1。だから AC：BC＝2：1。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>特急電車がC駅で折り返した時を0分として、グラフに書く。
+<svg viewBox="0 0 360 250" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="20" x2="40" y2="235" stroke="#222" stroke-width="1.5"/>
+  <line x1="40" y1="235" x2="350" y2="235" stroke="#222" stroke-width="1.5"/>
+  <text x="34" y="34" font-size="13" text-anchor="end" fill="#222">B駅</text>
+  <text x="34" y="234" font-size="13" text-anchor="end" fill="#222">A駅</text>
+  <text x="34" y="101" font-size="13" text-anchor="end" fill="#222">C駅</text>
+  <text x="34" y="68" font-size="12" text-anchor="end" fill="#d32f2f">真ん中</text>
+  <line x1="40" y1="30" x2="350" y2="30" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="40" y1="96.7" x2="350" y2="96.7" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="40" y1="63.3" x2="280" y2="63.3" stroke="#d32f2f" stroke-width="1" stroke-dasharray="3 3"/>
+  <polyline points="40,30 200,96.7 320,46.7" fill="none" stroke="#222" stroke-width="2"/>
+  <text x="112" y="50" font-size="13" fill="#222">特急電車</text>
+  <polyline points="40,230 110,171.7 150,171.7 296,50" fill="none" stroke="#222" stroke-width="2.5"/>
+  <text x="48" y="150" font-size="13" fill="#222">新幹線（4分停車）</text>
+  <line x1="200" y1="96.7" x2="200" y2="235" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="240" y1="96.7" x2="240" y2="235" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="280" y1="63.3" x2="280" y2="235" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="200" y="250" font-size="12" text-anchor="middle" fill="#1565c0">0分</text>
+  <text x="240" y="250" font-size="12" text-anchor="middle" fill="#1565c0">4分</text>
+  <text x="280" y="250" font-size="12" text-anchor="middle" fill="#1565c0">8分</text>
+  <circle cx="240" cy="96.7" r="3.5" fill="#1565c0"/>
+  <circle cx="280" cy="63.3" r="4" fill="#d32f2f"/>
+  <text x="288" y="78" font-size="12" fill="#d32f2f">追い越し</text>
+</svg></li>
+    <li>新幹線は4分おくれなので、C駅を通るのは4分のとき。追い越しは8分のとき。新幹線がC駅から走ったのは 8−4＝4(分)。</li>
+    <li>その道のりは 320×4/60＝64/3(km)。ここがBC間のちょうど真ん中。</li>
+    <li>BC間は 64/3×2＝128/3(km)。AC：BC＝2：1 なので、AB間はBC間の3つ分。128/3×3＝<b>128(km)</b>。</li>
+    <li>たしかめ。特急電車は8分で 160×8/60＝64/3(km) 進む。新幹線の 64/3km と同じ場所で合っている。</li>
+  </ol>
+  <div class="ans">答え：128km</div>
+  <div class="tip">コツ：「8分後」が何から8分なのかを、グラフの横軸に0分として書きこむ。(1)の4分停車が、ここでは「C駅を通るのが4分おくれる」という形で使われている。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (1)ア・イ・ウ</span> 正八面体の展開図で平行な面 <span class="type">各2点｜立体図形（展開図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>正八面体</b>」と「<b>平行な面</b>」。展開図の頂点に記号をつけて、組み立てると<b>重なる頂点</b>と、一番遠い頂点を書き出す → 平行な面は、3つの頂点が全部「一番遠い頂点」でできた面。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>正八面体の頂点は6個。どの頂点にも、ちょうど反対側に「一番遠い頂点」が1つある。</li>
+    <li>平行な面どうしは、同じ頂点を1つも持たない。面の3つの頂点を、それぞれ反対側の頂点に取りかえると、平行な面になる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>声教の解説と同じ記号を、展開図の頂点に書きこむ。
+<svg viewBox="0 0 300 290" style="max-width:340px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#222" stroke-width="1.8">
+    <polygon points="20,200 60,130.7 100,200"/>
+    <polygon points="60,130.7 140,130.7 100,200"/>
+    <polygon points="100,200 140,130.7 180,200"/>
+    <polygon points="140,130.7 220,130.7 180,200"/>
+    <polygon points="180,200 220,130.7 260,200"/>
+    <polygon points="140,130.7 180,61.4 220,130.7"/>
+    <polygon points="180,61.4 260,61.4 220,130.7"/>
+    <polygon points="20,200 100,200 60,269.3"/>
+  </g>
+  <polygon points="180,61.4 260,61.4 220,130.7" fill="#ffe0b2" opacity="0.8"/>
+  <polygon points="100,200 140,130.7 180,200" fill="#ffe0b2" opacity="0.8"/>
+  <g font-size="15" text-anchor="middle" fill="#222">
+    <text x="220" y="90">ア</text><text x="180" y="113">ウ</text><text x="180" y="159">1</text>
+    <text x="220" y="183">イ</text><text x="140" y="183">2</text><text x="100" y="159">3</text>
+    <text x="60" y="183">4</text><text x="60" y="229">5</text>
+  </g>
+  <g font-size="13" text-anchor="middle" fill="#1565c0">
+    <text x="180" y="54">E</text><text x="268" y="56">D</text>
+    <text x="55" y="124">G</text><text x="140" y="124">F</text><text x="230" y="126">M</text>
+    <text x="12" y="210">H</text><text x="100" y="216">J</text><text x="180" y="216">K</text><text x="270" y="210">L</text>
+    <text x="60" y="285">I</text>
+  </g>
+</svg></li>
+    <li>組み立てたときの「一番遠い頂点」の組を表にする。重なる頂点は1つにまとめる。
+<table>
+<tr><th>頂点</th><th>一番遠い頂点</th></tr>
+<tr><td>M</td><td>J</td></tr>
+<tr><td>F</td><td>D・H・L（3つが重なって1つの頂点）</td></tr>
+<tr><td>E・G（重なる）</td><td>I・K（重なる）</td></tr>
+</table></li>
+    <li>ア（面DEM）。D→F、E→I・K、M→J と取りかえる。展開図でF・J・Kを頂点にもつ面は「2」。だから<b>アと平行なのは2</b>。</li>
+    <li>イ（面MKL）。M→J、K→E・G 側、L→F。F・G・Jの面は「3」。ウ（面EFM）。E→I・K 側、F→H、M→J。H・I・Jの面は「5」。</li>
+  </ol>
+  <div class="ans">答え：ア 2、イ 3、ウ 5</div>
+  <div class="tip">コツ：展開図で三角形が一直線に4つならんだ帯は、両はしの面が平行になる。アとFJK（2）、イとFGJ（3）はこの帯で確かめられる。帯にならないウは、頂点の表で決める。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">5 (2)数字・向き</span> 組み立てた正八面体のA・B・Cの数字と向き <span class="type">数字3点・向き3点（完答）｜立体図形（展開図）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は図3に見えている「<b>5</b>」の面と、「<b>向きも考えて</b>」。展開図の頂点に記号をつけ、図3には「5」の面の3つの頂点から書き入れる → 面の数字が決まったら、<b>数字の上がどの頂点を向くか</b>で向きを決める。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>組み立てても、数字と頂点の位置の関係は変わらない。展開図で「数字の上がVの頂点を向く」なら、組み立てた図でも上はVを向く。</li>
+    <li>(1)と同じく、正八面体の頂点は6個。展開図の10個の記号のうち、重なるものを1つにまとめる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>展開図2に声教と同じ記号をつける。組み立てると、SとQ、UとW、TとPとXが重なる。矢印は数字の上が向いている向き。
+<svg viewBox="0 0 300 290" style="max-width:340px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#222" stroke-width="1.8">
+    <polygon points="20,200 60,130.7 100,200"/>
+    <polygon points="60,130.7 140,130.7 100,200"/>
+    <polygon points="100,200 140,130.7 180,200"/>
+    <polygon points="140,130.7 220,130.7 180,200"/>
+    <polygon points="180,200 220,130.7 260,200"/>
+    <polygon points="140,130.7 180,61.4 220,130.7"/>
+    <polygon points="180,61.4 260,61.4 220,130.7"/>
+    <polygon points="20,200 100,200 60,269.3"/>
+  </g>
+  <polygon points="20,200 60,130.7 100,200" fill="#dbe9ff"/>
+  <polygon points="20,200 100,200 60,269.3" fill="#dbe9ff"/>
+  <polygon points="180,61.4 260,61.4 220,130.7" fill="#dbe9ff"/>
+  <polygon points="180,200 220,130.7 260,200" fill="#ffe0b2"/>
+  <g fill="none" stroke="#222" stroke-width="1.8">
+    <polygon points="20,200 60,130.7 100,200"/>
+    <polygon points="20,200 100,200 60,269.3"/>
+    <polygon points="180,61.4 260,61.4 220,130.7"/>
+    <polygon points="180,200 220,130.7 260,200"/>
+  </g>
+  <g font-size="18" text-anchor="middle" fill="#222" font-weight="bold">
+    <text x="0" y="0" transform="translate(60,177) rotate(120)" dy="6">7</text>
+    <text x="0" y="0" transform="translate(60,223) rotate(60)" dy="6">8</text>
+    <text x="220" y="91">1</text>
+    <text x="220" y="184">5</text>
+  </g>
+  <g stroke="#d32f2f" stroke-width="1.8" fill="#d32f2f">
+    <line x1="68" y1="182" x2="86" y2="192"/><polygon points="92,196 81,195 86,187"/>
+    <line x1="69" y1="218" x2="85" y2="209"/><polygon points="91,205 85,214 80,206"/>
+    <line x1="232" y1="88" x2="232" y2="72"/><polygon points="232,66 227,75 237,75"/>
+    <line x1="232" y1="182" x2="232" y2="160"/><polygon points="232,153 227,162 237,162"/>
+  </g>
+  <g font-size="13" text-anchor="middle" fill="#1565c0">
+    <text x="180" y="54">Q</text><text x="268" y="56">P</text>
+    <text x="55" y="124">S</text><text x="140" y="124">R</text><text x="230" y="126">Y</text>
+    <text x="12" y="210">T</text><text x="100" y="216">V</text><text x="180" y="216">W</text><text x="270" y="210">X</text>
+    <text x="60" y="285">U</text>
+  </g>
+</svg></li>
+    <li>図3の「5」の面は面WXY。数字の上はYを向く。図3の5は上下が逆さまだから、Yは一番下の頂点。WとXは「5」の上の辺の両はしになる。ここから残りの頂点も入れると、上がV、左がS（Q）、右がU（W）、手前がT（P・X）、おくがR。</li>
+    <li>Aは面PQY＝「1」。Bは面VST＝「7」。Cは面VTU＝「8」。</li>
+    <li>向き。展開図で7と8の上は、どちらも<b>Vを向く</b>。図3でVは一番上だから、7も8もふつうの向き。1は下がYを向く。Yは一番下だから、1もふつうの向き。
+<svg viewBox="0 0 360 345" style="max-width:300px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="180,20 40,170 220,200" fill="#dbe9ff"/>
+  <polygon points="180,20 220,200 330,165" fill="#c8e6c9"/>
+  <polygon points="180,320 40,170 220,200" fill="#ffe0b2"/>
+  <polygon points="180,320 220,200 330,165" fill="#eeeeee"/>
+  <g fill="none" stroke="#222" stroke-width="2">
+    <line x1="180" y1="20" x2="40" y2="170"/><line x1="180" y1="20" x2="330" y2="165"/>
+    <line x1="180" y1="20" x2="220" y2="200"/><line x1="40" y1="170" x2="220" y2="200"/>
+    <line x1="220" y1="200" x2="330" y2="165"/><line x1="40" y1="170" x2="180" y2="320"/>
+    <line x1="330" y1="165" x2="180" y2="320"/><line x1="220" y1="200" x2="180" y2="320"/>
+  </g>
+  <g font-size="24" text-anchor="middle" fill="#d32f2f" font-weight="bold">
+    <text x="148" y="140">7</text>
+    <text x="245" y="140">8</text>
+    <text x="150" y="240">1</text>
+  </g>
+  <text x="0" y="0" font-size="22" text-anchor="middle" fill="#222" transform="translate(255,222) rotate(180)" dy="8">5</text>
+  <g font-size="13" fill="#555" text-anchor="middle">
+    <text x="100" y="160">B</text><text x="282" y="150">C</text><text x="108" y="230">A</text>
+  </g>
+  <g font-size="14" fill="#1565c0" text-anchor="middle">
+    <text x="180" y="14">V</text><text x="24" y="175">S</text><text x="344" y="170">U</text>
+    <text x="228" y="218">T</text><text x="180" y="338">Y</text>
+  </g>
+</svg></li>
+  </ol>
+  <div class="ans">答え：解説の図⑤を参照のこと。（Aに1、Bに7、Cに8。3つともふつうの上向きで書く）</div>
+  <div class="tip">コツ：向きは「数字の上がどの頂点を向くか」の1語で展開図から立体へ運ぶ。数字の形を頭の中で回すより、まちがえにくい。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">3〜5</span> まとめ</h2>
+  <ul>
+    <li>倍の言い方（3/4倍・2/3倍）は、すぐに整数の比 ④：③：② に直して書く。</li>
+    <li>「予定ではC駅で会う」ときは、予定の線と実際の線をグラフに両方書き、同じ時間に進んだ道のりを速さの比で分ける。</li>
+    <li>正八面体の展開図は、頂点に記号をつけて重なる頂点をまとめる。平行な面も数字の向きも、この記号で決まる。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="6"><h1 class="dtitle">大問6（6ずつ増える数の列・会話文の考え方A）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">6</span> この回の全体像（大問6） <span class="type">配点 16点（4＋4＋8）</span></h2>
+  <table>
+    <tr><th>小問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+    <tr><td>6 (1)</td><td>6つの数の和</td><td>4点</td><td>はしとはしをたすと同じ数になる</td></tr>
+    <tr><td>6 (2)</td><td>2023番目の数（考え方も書く）</td><td>4点</td><td>「11を5＋6と表して」→ □番目は 5＋6×□</td></tr>
+    <tr><td>6 (3)</td><td>和が7900になるのは何番目までか</td><td>8点</td><td>(2)の式で最後の数を表し、和の式を作る</td></tr>
+  </table>
+  <p>会話文の「考え方A」が、そのまま(2)(3)の道具になる。<b>(2)で作った「□番目＝5＋6×□」を(3)でも使う</b>。(2)は答えだけでなく、考え方Aをどう使ったかを文と式で書く問題。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (1)</span> 11から41までの6つの数の和 <span class="type">4点｜等差数列の和</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>11 , 17 , 23 , 29 , 35 , 41</b>」の6つ。はしとはしを組にすると <b>11＋41＝52</b> になる → 52が3組で和が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数ずつ増える列は、前から1つ目と後ろから1つ目をたしても、前から2つ目と後ろから2つ目をたしても同じ数になる。たとえば 11＋41＝52、17＋35＝52。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>はしから順に組にする。
+<pre class="fig">11＋41＝52
+17＋35＝52
+23＋29＝52</pre></li>
+    <li>52が<b>3組</b>ある。52×3＝156。</li>
+    <li>たしかめ。前から順にたすと 28→51→80→115→156。同じになる。</li>
+  </ol>
+  <div class="ans">答え：156</div>
+  <div class="tip">コツ：前から順にたしても出る。ただ、組にするやり方を(1)で使っておくと、(3)の和の式にそのままつながる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (2)</span> 2023番目の数 <span class="type">4点｜等差数列の□番目</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>6ずつ足されている</b>」と「<b>11を5＋6と表して</b>」。11を 5＋6 に直して書く → □番目の数は <b>5＋6×□</b> と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>1番目は11。2番目は11に6を1回たす。3番目は11に6を2回たす。6をたす回数は、番号より1つ少ない。</li>
+    <li>11を 5＋6 と見ると、1番目は「5に6を1回」、2番目は「5に6を2回」。6をたす回数と番号が同じになる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>考え方Aの列を、11を 5＋6 に直して書きかえる。
+<svg viewBox="0 0 360 150" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <g font-family="sans-serif" font-size="13" fill="#222">
+    <text x="4" y="24">1番目</text>
+    <rect x="56" y="10" width="40" height="20" fill="#ffe0b2" stroke="#222"/><text x="72" y="25">5</text>
+    <rect x="96" y="10" width="36" height="20" fill="#dbe9ff" stroke="#222"/><text x="110" y="25">6</text>
+    <text x="4" y="58">2番目</text>
+    <rect x="56" y="44" width="40" height="20" fill="#ffe0b2" stroke="#222"/><text x="72" y="59">5</text>
+    <rect x="96" y="44" width="36" height="20" fill="#dbe9ff" stroke="#222"/><text x="110" y="59">6</text>
+    <rect x="132" y="44" width="36" height="20" fill="#dbe9ff" stroke="#222"/><text x="146" y="59">6</text>
+    <text x="4" y="92">3番目</text>
+    <rect x="56" y="78" width="40" height="20" fill="#ffe0b2" stroke="#222"/><text x="72" y="93">5</text>
+    <rect x="96" y="78" width="36" height="20" fill="#dbe9ff" stroke="#222"/><text x="110" y="93">6</text>
+    <rect x="132" y="78" width="36" height="20" fill="#dbe9ff" stroke="#222"/><text x="146" y="93">6</text>
+    <rect x="168" y="78" width="36" height="20" fill="#dbe9ff" stroke="#222"/><text x="182" y="93">6</text>
+    <text x="4" y="134">□番目</text>
+    <rect x="56" y="120" width="40" height="20" fill="#ffe0b2" stroke="#222"/><text x="72" y="135">5</text>
+    <rect x="96" y="120" width="36" height="20" fill="#dbe9ff" stroke="#222"/><text x="110" y="135">6</text>
+    <text x="140" y="135">……</text>
+    <rect x="176" y="120" width="36" height="20" fill="#dbe9ff" stroke="#222"/><text x="190" y="135">6</text>
+    <text x="222" y="135" fill="#d32f2f">6が□こ</text>
+    <text x="142" y="25">＝11</text><text x="178" y="59">＝17</text><text x="214" y="93">＝23</text>
+  </g>
+</svg></li>
+    <li>6の数は、番号と同じ。だから □番目の数は「5＋6×□」。</li>
+    <li>2023番目は、5に6を<b>2023回</b>たした数。
+<pre class="fig">5＋6×2023＝5＋12138＝12143</pre></li>
+    <li>別の見方（石川さんの考え方）。11に6を 2023−1＝2022回たす。11＋6×2022＝12143。同じになる。</li>
+  </ol>
+  <div class="ans">答え：12143</div>
+  <div class="tip">コツ：解答らんには「どう利用したか」も書く。たとえば「11を5＋6と表すと、□番目の数は5に6を□回たした数になる。2023番目は 5＋6×2023＝12143」と、式の意味を1文そえる。11から始めるときは、6をたす回数が番号より1少ない点で数え落としやすい。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">6 (3)</span> 和が7900になるのは何番目までか <span class="type">8点｜等差数列の和の逆算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>和が7900</b>」と、(2)の「□番目＝5＋6×□」。最後の数を 5＋6×□ に直して書き、(1)の組にするやり方で和の式を作る → <b>8×□＋3×□×□＝7900</b> になる□をさがす。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>同じ数ずつ増える列の和は「（はじめの数＋最後の数）×こ数÷2」。(1)なら (11＋41)×6÷2＝156。</li>
+    <li>□×□ をふくむ式は、だいたいの大きさで□の見当をつけてから、数を入れてたしかめる。</li>
+  </ul>
+  <h3 class="h-read">🔍 整理して解く</h3>
+  <ol>
+    <li>□番目までの和を式にする。はじめは11、最後は 5＋6×□、こ数は□。
+<pre class="fig">（11＋5＋6×□）×□÷2
+＝（16＋6×□）×□÷2
+＝8×□＋3×□×□</pre></li>
+    <li>見当をつける。3×□×□ が7900に近いとすると、□×□ はおよそ 7900÷3＝2633。50×50＝2500 なので、□は50くらい。</li>
+    <li>□＝50 を入れる。8×50＝400。3×50×50＝7500。400＋7500＝<b>7900</b>。7900と合う。</li>
+    <li>たしかめ。50番目は 5＋6×50＝305。（11＋305）×50÷2＝316×25＝7900。</li>
+  </ol>
+  <div class="ans">答え：50番目</div>
+  <div class="tip">コツ：□が大きくなると和も大きくなるので、合う□は1つだけ。49なら 8×49＋3×49×49＝7595 で足りない。見当→代入→たしかめ の順で進めると、計算が少なくてすむ。</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">6</span> まとめ</h2>
+  <ul>
+    <li>はじめの数を「5＋6」のように直すと、<b>□番目＝5＋6×□</b> と番号がそのまま式に入る。</li>
+    <li>和は、はしとはしを組にする。（はじめ＋最後）×こ数÷2。</li>
+    <li>和から番号をもどすときは、和の式を作り、見当をつけて数を入れる。</li>
+  </ul>
+</section>
+</div>
