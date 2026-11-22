@@ -1,0 +1,342 @@
+<!-- generated kakomon koishikawa/2024-1/rika kaisetsu (scripts/kaisetsu/kakomon/assemble.py) -->
+<nav class="toc"><b>目次</b><ul><li><a href="#1-2">大問1・2（表面張力と1円玉の計算・もやもや＝密度のちがい）</a></li>
+<li><a href="#3-4">大問3・4（特定外来生物・台風）</a></li></ul></nav>
+<div class="daimon" id="1-2"><h1 class="dtitle">大問1・2（表面張力と1円玉の計算・もやもや＝密度のちがい）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">1〜2</span> この回の全体像（担当の大問） <span class="type">25点・11問</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+  <tr><td>1</td><td>水面ができる仕組み（1円玉が浮く・宇宙で水が球になる）</td><td>2+2+2+3+2+2＝13点</td><td>問題文にある式（浮力・球の体積・球の表面積）をそのまま使う</td></tr>
+  <tr><td>2</td><td>食塩・片栗粉・砂糖の実験（ろ過・ヨウ素液・もやもや）</td><td>2+2+2+4+2＝12点</td><td>結果ごとに「何があって、何がないか」を1行で書く</td></tr></table>
+  <p>大問1は計算が6問続くが、使う式は<b>どれも問題文に書いてある</b>。式を余白に写してから数を入れれば、知らない知識はいらない。大問2は、結果を読み比べて「もやもや＝密度のちがう液が混ざるとき」と気づけば問3〜問5がつながる。</p>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 問1</span> コップの底面積 <span class="type">2点｜体積の計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>最大で300cm³</b>」と「<b>高さが10cm</b>」。円柱の体積＝底面積×高さ、に直して書く → 300÷10で底面積が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>円柱の体積＝底面積×高さ。底面積がわからないときは「体積÷高さ」で戻せる。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>底面積を□cm²とすると、□×10＝300。</li>
+    <li>□＝300÷10＝<b>30</b>（cm²）。単位はcm²（面積）で答える。</li>
+  </ol>
+  <div class="ans">答え：30cm²</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 問2</span> 1円玉の密度 <span class="type">2点｜密度の計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>直径は2cm</b>」と「<b>小数第2位を四捨五入</b>」に丸。直径は÷2で半径1cmに直して書く → 底面積×厚み＝体積、1g÷体積で密度が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>密度＝1cm³あたりの質量＝質量÷体積（問題文の※にある決まり）。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>半径は2÷2＝1cm。底面積は1×1×3.14＝3.14cm²。</li>
+    <li>体積は3.14×0.12＝<b>0.3768</b>cm³。</li>
+    <li>1÷0.3768＝2.65…。小数第2位を四捨五入して2.7g。</li>
+  </ol>
+  <div class="ans">答え：2.7g</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 問3</span> 1円玉が沈んだ深さ <span class="type">2点｜力のつり合い</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>重さ（質量×10）</b>」と、表面張力の力「<b>7とします</b>」。1円玉に下向き10・上向き7の矢印を図に置く → 残り3が浮力と決まり、押しのけた体積が出る。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>浮いて止まっている物体は、下向きの力＝上向きの力の合計。ここでは「重さ＝浮力＋表面張力の力」と問題文に書いてある。</li>
+    <li>浮力＝（水の密度）×（押しのけた水の体積）×10。これも問題文の式をそのまま使う。</li>
+  </ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>1円玉の重さは1×10＝10。表面張力の力が7なので、浮力は10−7＝<b>3</b>。
+      <svg viewBox="0 0 320 170" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="70" width="280" height="90" fill="#dbe9ff" stroke="none"/>
+        <line x1="20" y1="70" x2="300" y2="70" stroke="#222" stroke-width="2"/>
+        <rect x="120" y="62" width="80" height="14" fill="#fff" stroke="#222" stroke-width="2"/>
+        <text x="160" y="56" font-size="13" text-anchor="middle" fill="#222">1円玉</text>
+        <line x1="160" y1="76" x2="160" y2="140" stroke="#222" stroke-width="2.5"/>
+        <polygon points="153,132 167,132 160,146" fill="#222"/>
+        <text x="172" y="128" font-size="14" fill="#222">重さ 10</text>
+        <line x1="130" y1="62" x2="130" y2="22" stroke="#1565c0" stroke-width="2.5"/>
+        <polygon points="123,30 137,30 130,16" fill="#1565c0"/>
+        <text x="118" y="36" font-size="13" text-anchor="end" fill="#1565c0">表面張力 7</text>
+        <line x1="190" y1="62" x2="190" y2="22" stroke="#d32f2f" stroke-width="2.5"/>
+        <polygon points="183,30 197,30 190,16" fill="#d32f2f"/>
+        <text x="202" y="36" font-size="13" fill="#d32f2f">浮力 3</text>
+        <text x="28" y="150" font-size="12" fill="#222">水</text>
+      </svg>
+    </li>
+    <li>押しのけた水の体積を□cm³とすると、1×□×10＝3 → □＝0.3cm³。</li>
+    <li>沈んだ深さ＝体積÷底面積＝0.3÷3.14＝0.0955…cm。mmに直すと×10で0.95…mm → 小数第2位を四捨五入して<b>1.0mm</b>。</li>
+    <li>落としやすい所: 答えの単位はmm。cmのまま「0.1」と書かないこと、問2の2.7はこの計算では使わないこと。</li>
+  </ol>
+  <div class="ans">答え：1.0mm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 問4</span> 1円玉と同じ形の水がちょうど水面まで沈む理由 <span class="type">3点｜記述（40字程度）</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>問3の結果を参考にして</b>」と「<b>40字程度</b>」。問3と同じく下向き＝重さ、上向き＝浮力の2本を図に置く → 水の重さと浮力が同じ大きさになる位置で止まる、と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>浮力＝（水の密度1）×（沈んだ部分の体積）×10。全部沈むと、沈んだ体積＝その水の体積になる。</li></ul>
+  <h3 class="h-read">✍️ 答案の組み立て</h3>
+  <ol>
+    <li>要素A（下向き）: 1円玉と同じ形状の水の重さ＝1×（1円玉の体積）×10。</li>
+    <li>要素B（上向き）: 水面の高さまで沈むと、浮力も1×（1円玉の体積）×10。</li>
+    <li>要素C（結論）: AとBが<b>つりあう</b>から、そこで止まる。答案は「重さ」と「浮力」の2語を入れて「つりあうから」で結ぶ。</li>
+  </ol>
+  <div class="model">模範解答：1円玉と同じ形状の水の重さと，その水が受ける浮力の大きさがつりあうから。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 問5</span> 宇宙で球になった水の半径 <span class="type">2点｜体積の計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>半径3cm，高さ4cm</b>」と球の体積の式「<b>×4÷3</b>」。水の形が変わっても体積は同じ、と1行に直して書く → 円柱の体積＝球の体積の式で半径が決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>形が変わっても、水の量（体積）は変わらない。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>コップの水の体積は3×3×3.14×4＝<b>36×3.14</b>cm³。3.14はかけ算せずに残しておく。</li>
+    <li>球の半径を□cmとすると、□×□×□×3.14×4÷3＝36×3.14。</li>
+    <li>□×□×□＝36÷4×3＝27。27＝3×3×3なので□＝3cm。</li>
+  </ol>
+  <div class="ans">答え：3cm</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">1 問6</span> 球とコップの水の表面積の比 <span class="type">2点｜表面積の計算</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>コップに入っていたときの水の表面積</b>」と「<b>小数第3位を四捨五入</b>」。コップの水は上の面・底の面・側面の3つに分けて図に置く → 3つの合計と球の表面積の比で決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>円柱の表面積＝円2つ＋側面。側面は広げると長方形で、横＝円周（直径×3.14）、縦＝高さ。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>球の表面積は半径3cm（問5）なので3×3×3.14×4＝<b>36×3.14</b>cm²。</li>
+    <li>コップの水の表面積は、円2つ3×3×3.14×2と、側面3×2×3.14×4の合計＝42×3.14cm²。
+      <svg viewBox="0 0 320 190" style="max-width:360px;width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+        <path d="M70,40 L70,150 A60,16 0 0 0 190,150 L190,40" fill="#dbe9ff" stroke="#222" stroke-width="2"/>
+        <ellipse cx="130" cy="40" rx="60" ry="16" fill="#ffe0b2" stroke="#222" stroke-width="2"/>
+        <path d="M70,150 A60,16 0 0 1 190,150" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <line x1="130" y1="40" x2="190" y2="40" stroke="#222" stroke-width="1.5"/>
+        <text x="150" y="35" font-size="12" fill="#222">3cm</text>
+        <text x="198" y="100" font-size="12" fill="#222">4cm</text>
+        <text x="200" y="36" font-size="12" fill="#222">上の面 3×3×3.14</text>
+        <text x="200" y="166" font-size="12" fill="#222">底の面 3×3×3.14</text>
+        <text x="86" y="108" font-size="12" fill="#222">側面</text>
+        <text x="72" y="124" font-size="11" fill="#222">6×3.14×4</text>
+        <text x="20" y="186" font-size="12" fill="#d32f2f">合計 18×3.14＋24×3.14＝42×3.14</text>
+      </svg>
+    </li>
+    <li>（36×3.14）÷（42×3.14）＝36÷42＝0.857…。小数第3位を四捨五入して<b>0.86倍</b>。</li>
+    <li>落としやすい所: 上の面だけ（空気にふれている面だけ）で比べない。この問題はコップにふれている底と側面も水の表面に数える。</li>
+  </ol>
+  <div class="ans">答え：0.86倍</div>
+</section>
+
+<section class="card card-fact">
+  <h2><span class="qid">2 問1</span> 顕微鏡で見た食塩と片栗粉の粒 <span class="type">2点（完答）｜知識問題</span></h2>
+  <div class="fact">食塩の粒は立方体のような形、片栗粉の粒は白くて丸みを帯びた形。市販のものでは食塩の粒の方が片栗粉より大きいので、エ・オはどちらも合わない。「すべて選び」でも当てはまるのはアの1つだけ。</div>
+  <div class="ans">答え：ア</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 問2</span> ろ紙を通って水にとけ出したもの <span class="type">2点｜実験の読み取り</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は【結果1−3】の「<b>もやもやしたもの</b>」と【結果1−4】の「<b>褐色が薄まるだけ</b>」。結果ごとに「何かとけ出した」「でんぷんは無い」と1行で書く → 残るのは食塩と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>ヨウ素液はでんぷんがあると青紫色になる。片栗粉の主な成分はでんぷん。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>結果1−3のもやもや → ろ液には食塩か片栗粉か、その両方がとけ出した。</li>
+    <li>結果1−4でヨウ素液の色が変わらない → ろ液に<b>でんぷん（片栗粉）は無い</b>。</li>
+    <li>水とヨウ素液のほかにとけていたのは食塩。ろ紙の上に残った片栗粉が、結果1−5で青紫色になったこととも合う。</li>
+  </ol>
+  <div class="ans">答え：食塩</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 問3</span> もやもやが出なかったビーカーの中身 <span class="type">2点｜実験の読み取り</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【条件文】部品は「<b>2つは10gの食塩</b>」に丸＝食塩水Aと食塩水Bは同じもの、と直して書く → 同じ液どうしを足しても変化は出ない、と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>もやもやは、ちがう液どうしが混ざるときに見える（水を加えたグループで、水どうしだけ変化が出なかったことと同じ考え方）。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>どちらも100mLの水に10gの食塩 → 食塩水Aと食塩水Bは<b>同じもの</b>。</li>
+    <li>食塩水Bを、水・砂糖水・食塩水Aに加える。中身がちがう水と砂糖水ではもやもやが出て、同じ食塩水Aだけ出ない。</li>
+  </ol>
+  <div class="ans">答え：食塩水A</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 問4</span> 実験2までで分かること <span class="type">4点｜記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】部品は【結果2−2】の「<b>液の表面付近</b>」と「<b>液の底の方</b>」。5％はうすく軽い、15％はこく重い、と直して書く → もやもやは密度のちがう液が混ざるときに出る、と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>同じ体積なら、こい食塩水ほど重い（密度が大きい）。重い液は下へ、軽い液は上へ動く。</li></ul>
+  <h3 class="h-read">✍️ 答案の組み立て</h3>
+  <ol>
+    <li>要素A（実験2−1）: とけているものがちがう液を加えると、もやもやが出る。</li>
+    <li>要素B（実験2−2）: こさがちがう食塩水を加えても出る。こい（重い）ものは底、うすい（軽い）ものは表面付近。</li>
+    <li>要素C（まとめ）: AとBに共通するのは「<b>密度のちがう</b>ものどうしを混ぜた」こと。答案はこの言葉を入れて、「もやもやしたものが見えること」で結ぶ。</li>
+  </ol>
+  <div class="model">模範解答：密度のちがうものどうしを混ぜたときにもやもやしたものが見えること。</div>
+  <div class="tip">コツ：もやもやが見えるのは、光の曲がり方（屈折）が液の密度によってちがうから（声教の解説）。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">2 問5</span> 実験2と異なる現象 <span class="type">2点｜原因の見分け</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【素材文】設問の部品は「<b>【実験2】とは異なる現象</b>」。ア〜オそれぞれに「密度の差でもやもや」かどうかを3語で書く → 一つだけ原因がちがうものが決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>あたためられた空気はぼう張して軽くなり、冷やされた水は重くなる。どちらも周りとの密度の差ができる。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>ア 紅茶が水にとけ出す、イ・エ あたためられた空気が軽くなる、ウ 氷で冷えた水が重くなる → どれも<b>密度の差</b>でもやもやが見える。</li>
+    <li>オは、急に圧力が下がって気体のアルコールが液体に変わり、ボトルの中が白くくもる現象 → 密度の差とは原因がちがう。</li>
+  </ol>
+  <div class="ans">答え：オ</div>
+</section>
+
+<section class="card card-summary">
+  <h2><span class="qid">1〜2</span> まとめ <span class="type">この回の入口</span></h2>
+  <ul>
+    <li>問題文に式が書いてある計算は、式を余白に写してから数を入れる（大問1の問3・問5・問6）。</li>
+    <li>3.14はかけ算せずに残すと、最後の比や割り算で消えて計算が軽くなる。</li>
+    <li>実験の結果は「何があって、何がないか」「同じものか、ちがうものか」を1行で書いてから設問に進む。</li>
+  </ul>
+</section>
+</div>
+<div class="daimon" id="3-4"><h1 class="dtitle">大問3・4（特定外来生物・台風）</h1>
+<section class="card card-overview">
+  <h2><span class="qid">3〜4</span> この回の全体像（担当の大問） <span class="type">25点・10問</span></h2>
+  <table><tr><th>大問</th><th>題材</th><th>配点</th><th>入口の合図</th></tr>
+  <tr><td>3</td><td>特定外来生物（アメリカザリガニ・ブラックバス）</td><td>2+3+3+2+3＝13点</td><td>問3・問4は問題文に書かれた「食べる」「捕食する」の関係をたどる</td></tr>
+  <tr><td>4</td><td>台風（発生数の表・断面図・南半球のサイクロン）</td><td>2+2+2+3+3＝12点</td><td>表は「平均」の行、問2〜4は本文の「上昇気流」と「時計回り」</td></tr></table>
+  <p>どちらも、知識より<b>問題文と資料に書いてあること</b>から決まる問が多い。記述は、問題文の言葉をそのまま答えに使うと短くまとまる。</p>
+</section>
+
+<section class="card card-fact">
+  <h2><span class="qid">3 問1</span> アカミミガメ・アメリカザリガニと同じなかま <span class="type">2点｜知識問題</span></h2>
+  <div class="fact">アカミミガメはは虫類なので、同じは虫類のヤモリ・ヘビ。アメリカザリガニは足にふしがある節足動物なので、ムカデ・バッタ・オキアミ。両方そろうのはア。カエルは両生類、ドジョウは魚類、ミミズは節足動物でない（環形動物）。</div>
+  <div class="ans">答え：ア</div>
+</section>
+
+<section class="card card-fact">
+  <h2><span class="qid">3 問2</span> 特定外来生物に指定されている生物 <span class="type">3点（完答）｜知識問題</span></h2>
+  <div class="fact">ウシガエル（アメリカ・カナダ原産）とアライグマ（北アメリカ原産）。セイヨウタンポポは外来種だが特定外来生物ではない（生態系被害防止外来種リストにのっている）。「すべて選び」なので2つとも書いて得点。</div>
+  <div class="ans">答え：う）・く）</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 問3</span> ヤゴやメダカにとっての水生植物 <span class="type">3点｜記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【素材文】部品は「<b>水生植物を食べている</b>」と「<b>ヤゴやメダカ類が減少</b>」の2つに丸。ザリガニがヤゴを直接食べた話ではない → 植物が無くなると困る理由＝<b>かくれ場所</b>と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>水草のしげみは、小さな生き物が天敵から身をかくしたり、生活や産卵をしたりする場所になる。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>問題文の流れは「ザリガニが植物を食べる → 植物が減る → ヤゴ・メダカが減る」。</li>
+    <li>植物が減るとヤゴ・メダカが減るのは、<b>天敵に見つかって食べられやすくなる</b>から。だから水生植物の役割は「天敵から身をかくす場所」。</li>
+    <li>答えは役割を聞かれているので「〜場所になる。」の形で1文にする。</li>
+  </ol>
+  <div class="ans">答え：天敵から身をかくす場所になる。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">3 問4 動物・理由</span> どちらから先に駆除するか <span class="type">2点＋3点｜記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【素材文】部品は「<b>アメリカザリガニを捕食する</b>」。「バス → ザリガニを食べる」と矢印で余白に書く（3語で書く）→ バスを先に消すと、ザリガニを食べる者がいなくなると決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>食べる・食べられるの関係では、食べる側がいなくなると、食べられる側の数は増える。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>ブラックバスから先に駆除すると、ザリガニは<b>捕食されなくなって増え</b>、そのあとの駆除が大変になる。</li>
+    <li>ザリガニから先に駆除すると、バスはエサをとりにくくなって数が減り、駆除しやすくなる。</li>
+    <li>だから先はアメリカザリガニ。理由は「バスを先に駆除すると、ザリガニが増える」の向きで書く。</li>
+  </ol>
+  <div class="ans">答え：動物 アメリカザリガニ／理由 ブラックバスを先に駆除してしまうと，ブラックバスに捕食されなくなったアメリカザリガニが増えてしまうから。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 問1(1つ目)・問1(2つ目)</span> 表から読みとる台風の特徴 <span class="type">2点×2｜資料問題・記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【資料問題】正体は「<b>2010年から2022年</b>」の各月の発生数。13年分を1つずつ見ずに、いちばん下の「<b>平均</b>」の行だけを見る → 大きい月と小さい月で2つの特徴が決まる。</div>
+  <h3>📚 前提知識（あれば答え合わせに使う）</h3>
+  <ul><li>台風は熱帯の海であたためられた湿った空気から生まれるので、海水温の高い夏〜秋に多い。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>平均の行で大きいのは<b>8月5.2・9月5.1</b>。夏に多い。</li>
+    <li>小さいのは2月1.0、1月と12月の1.2。冬に少ない。</li>
+    <li>「二つ述べ」なので、多い方と少ない方を別の文にする。</li>
+  </ol>
+  <div class="ans">答え：夏の台風発生数が多い。／冬の台風発生数が少ない。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 問2</span> 台風の説明で誤っているもの <span class="type">2点｜誤っているもの</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【素材文】聞かれ方「<b>誤っているもの</b>」に線。イの「<b>その中心では猛烈な嵐</b>」に丸 → 台風の中心＝目なので、ここが誤り。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>台風の中心は<b>台風の目</b>。まわりにくらべて風が弱く、晴れていることも多い。強い風雨はそのまわりの雲の壁（問3の文のアイウォール）。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>イの前半「上昇気流を発達させることで勢力を増す」は正しい。切れるのは後半の「中心では猛烈な嵐」。</li>
+    <li>ア（貿易風・偏西風で進む）、ウ（気団の勢力で進路が変わる）、エ（地球の自転の影響）は、台風の進路の説明として正しい。</li>
+  </ol>
+  <div class="ans">答え：イ</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 問3</span> 台風の断面図に風の流れをかく <span class="type">3点｜作図</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【まざり型→素材文】本文の部品「<b>上昇気流</b>」と問3の「<b>らせん状</b>」に丸。図2の上に「下から吹きこむ → 雲の中を上る → 上で外へ」の3本を置く。</div>
+  <h3>📚 前提知識</h3>
+  <ul>
+    <li>台風（低気圧）には、地表付近でまわりから中心へ風が<b>ふきこむ</b>。北半球では上空から見て反時計回り。</li>
+    <li>ふきこんだ空気は上昇して積乱雲をつくり、上空で外へ流れ出す。</li>
+  </ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>① 地表付近に、外側から中心へ向かう矢印をかく。外側の積乱雲の中にも、下から上への矢印。</li>
+    <li>② 中心のまわりでは、風がアイウォール（雲の壁）にそって<b>らせん状に上昇</b>する。うずを巻きながら上へ向かう線をかく。
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210" style="max-width:360px;width:100%;height:auto;display:block" role="img" aria-label="台風の断面と風の流れ">
+<defs><marker id="q4_3_ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d32f2f"/></marker></defs>
+<path d="M40,48 H150 V170 H118 V66 H40 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+<path d="M320,48 H210 V170 H242 V66 H320 Z" fill="#dbe9ff" stroke="#222" stroke-width="1.5"/>
+<rect x="66" y="112" width="44" height="58" rx="10" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<rect x="250" y="112" width="44" height="58" rx="10" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<line x1="10" y1="184" x2="350" y2="184" stroke="#222" stroke-width="1.5"/>
+<text x="318" y="200" font-size="11" fill="#222">地表</text>
+<path d="M20,178 Q90,182 150,176" fill="none" stroke="#d32f2f" stroke-width="2" marker-end="url(#q4_3_ar)"/>
+<path d="M340,178 Q270,182 210,176" fill="none" stroke="#d32f2f" stroke-width="2" marker-end="url(#q4_3_ar)"/>
+<path d="M88,166 V122" stroke="#d32f2f" stroke-width="2" marker-end="url(#q4_3_ar)"/>
+<path d="M272,166 V122" stroke="#d32f2f" stroke-width="2" marker-end="url(#q4_3_ar)"/>
+<ellipse cx="180" cy="160" rx="16" ry="4" fill="none" stroke="#d32f2f" stroke-width="1.6"/><ellipse cx="180" cy="140" rx="16" ry="4" fill="none" stroke="#d32f2f" stroke-width="1.6"/><ellipse cx="180" cy="120" rx="16" ry="4" fill="none" stroke="#d32f2f" stroke-width="1.6"/><ellipse cx="180" cy="100" rx="16" ry="4" fill="none" stroke="#d32f2f" stroke-width="1.6"/><ellipse cx="180" cy="80" rx="16" ry="4" fill="none" stroke="#d32f2f" stroke-width="1.6"/><ellipse cx="180" cy="60" rx="16" ry="4" fill="none" stroke="#d32f2f" stroke-width="1.6"/><path d="M180,56 V32" stroke="#d32f2f" stroke-width="2" marker-end="url(#q4_3_ar)"/>
+<path d="M150,30 Q100,20 40,26" fill="none" stroke="#d32f2f" stroke-width="2" marker-end="url(#q4_3_ar)"/>
+<path d="M210,30 Q260,20 320,26" fill="none" stroke="#d32f2f" stroke-width="2" marker-end="url(#q4_3_ar)"/>
+<text x="180" y="14" font-size="12" fill="#d32f2f" text-anchor="middle">③</text><text x="220" y="104" font-size="12" fill="#d32f2f">②</text><text x="20" y="200" font-size="12" fill="#d32f2f">①</text><text x="330" y="168" font-size="12" fill="#d32f2f">①</text>
+</svg></li>
+    <li>③ 上空まで上った空気は、雲の上で外へ向かってふき出す。この①→②→③が一つながりになっていれば、風の流れが表せる。</li>
+  </ol>
+  <div class="ans">答え：右の図（地表付近で中心へふきこみ，雲の壁にそってらせん状に上昇し，上空で外へふき出す矢印）</div>
+  <div class="tip">コツ：声教の解説では、中心付近は空気が少なくなるので上空から空気が流れこみ（下降気流）、雲のほとんどない「目」ができると説明している。</div>
+</section>
+
+<section class="card">
+  <h2><span class="qid">4 問4</span> サイクロンが時計回りのわけ <span class="type">3点｜記述</span></h2>
+  <h3 class="h-hint">👀 まず見るところ</h3>
+  <div class="hint">【素材文】部品は場所「<b>ニュージーランド近海</b>」とうずの向き「<b>時計回り</b>」に丸。ニュージーランドは南半球 → 北半球の台風と向きが逆になる理由は「南半球だから」と決まる。</div>
+  <h3>📚 前提知識</h3>
+  <ul><li>地球の自転の影響で、低気圧には北半球では上空から見て反時計回り、<b>南半球では時計回り</b>に風がふきこむ。</li></ul>
+  <h3 class="h-read">🔍 こう読み解く</h3>
+  <ol>
+    <li>図1の台風第7号は日本付近＝北半球で、反時計回り。</li>
+    <li>図3のガブリエルはニュージーランド近海＝南半球なので、うずの向きが逆の時計回りになる。</li>
+    <li>「簡潔に」なので、場所の理由だけを1文で書く。</li>
+  </ol>
+  <div class="ans">答え：図3のサイクロンは南半球に位置しているから。</div>
+</section>
+</div>
