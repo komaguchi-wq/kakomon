@@ -12876,7 +12876,21 @@
        "gokakusha": 72.5
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2022-1/sansu.html"
+     "kaisetsu": "kaisetsu/hiroo/2022-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2022-1/sansu/solved_2026-11-26_01.jpg",
+       "small": "2022-1/sansu/solved_2026-11-26_01_small.jpg",
+       "date": "2026-11-26"
+      }
+     ],
+     "memoPages": [
+      {
+       "full": "2022-1/sansu/memo_2026-11-26_01.jpg",
+       "small": "2022-1/sansu/memo_2026-11-26_01_small.jpg",
+       "date": "2026-11-26"
+      }
+     ]
     },
     {
      "id": "shakai",
@@ -13176,7 +13190,14 @@
        "gokakusha": 31.9
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2022-1/shakai.html"
+     "kaisetsu": "kaisetsu/hiroo/2022-1/shakai.html",
+     "solvedPages": [
+      {
+       "full": "2022-1/shakai/solved_2026-11-26_01.jpg",
+       "small": "2022-1/shakai/solved_2026-11-26_01_small.jpg",
+       "date": "2026-11-26"
+      }
+     ]
     },
     {
      "id": "rika",
@@ -13418,7 +13439,14 @@
        "gokakusha": 24.4
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2022-1/rika.html"
+     "kaisetsu": "kaisetsu/hiroo/2022-1/rika.html",
+     "solvedPages": [
+      {
+       "full": "2022-1/rika/solved_2026-11-26_01.jpg",
+       "small": "2022-1/rika/solved_2026-11-26_01_small.jpg",
+       "date": "2026-11-26"
+      }
+     ]
     },
     {
      "id": "kokugo",
@@ -13561,7 +13589,14 @@
        "四 問6": "子どもの健全な知的発達のために，親自身がスマホやタブレットによる認知能力の低下という弊害を理解した上で，子どものそれらの利用の仕方を毅然とした態度で管理するべきである。"
       }
      },
-     "kaisetsu": "kaisetsu/hiroo/2022-1/kokugo.html"
+     "kaisetsu": "kaisetsu/hiroo/2022-1/kokugo.html",
+     "solvedPages": [
+      {
+       "full": "2022-1/kokugo/solved_2026-11-26_01.jpg",
+       "small": "2022-1/kokugo/solved_2026-11-26_01_small.jpg",
+       "date": "2026-11-26"
+      }
+     ]
     }
    ]
   },
