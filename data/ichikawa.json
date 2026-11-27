@@ -5003,7 +5003,35 @@
        "5(3)": "C×4→A×16→B×2"
       }
      },
-     "kaisetsu": "kaisetsu/ichikawa/2024-1/sansu.html"
+     "kaisetsu": "kaisetsu/ichikawa/2024-1/sansu.html",
+     "solvedPages": [
+      {
+       "full": "2024-1/sansu/solved_2026-11-27_01.jpg",
+       "small": "2024-1/sansu/solved_2026-11-27_01_small.jpg",
+       "date": "2026-11-27",
+       "note": "市川 2024 第1回 算数 解答用紙（評点40/100・裏白除去）"
+      },
+      {
+       "full": "2024-1/sansu/solved_2026-11-27_02.jpg",
+       "small": "2024-1/sansu/solved_2026-11-27_02_small.jpg",
+       "date": "2026-11-27",
+       "note": "市川 2024 第1回 算数 解答用紙（評点40/100・裏白除去）"
+      }
+     ],
+     "memoPages": [
+      {
+       "full": "2024-1/sansu/memo_2026-11-27_01.jpg",
+       "small": "2024-1/sansu/memo_2026-11-27_01_small.jpg",
+       "date": "2026-11-27",
+       "note": "市川 2024 第1回 算数 計算用紙"
+      },
+      {
+       "full": "2024-1/sansu/memo_2026-11-27_02.jpg",
+       "small": "2024-1/sansu/memo_2026-11-27_02_small.jpg",
+       "date": "2026-11-27",
+       "note": "市川 2024 第1回 算数 計算用紙"
+      }
+     ]
     },
     {
      "id": "shakai",
